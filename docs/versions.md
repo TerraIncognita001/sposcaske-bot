@@ -5,6 +5,29 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.02 = THE BOT WRITES AND SHOOTS BY THE MAKET: WRITER, DIRECTOR, MATERIAL FINDER, ONE VOICE, Andrii, Nov 13-14 2026
+  (he sent the five references again: 'ти маєш знайти спільне між всіма 5 референсами та макетом ... записати код
+  для бота, щоб всі його відео які він згенерує були максимально схожі до цих референсів', with five points: the
+  script and its hook, the effects of the maket (candle flicker, red word, the zoom on what is spoken of, the fire
+  flash), the extra material (the author's photo, the score ...), the sound ('дуже важливо щоб на початку всіх
+  відео був звук який я тобі скинув') and a chosen voice, the genre). What all five and the maket share, with the
+  numbers of the 58 videos: `docs/GENRE.md` (new; also the genre, its topics and the feelings it aims at). ONE
+  format for every topic: the maket. New: `prompts/writer.txt` (the 13 slots made universal: S2 "This is <Title>,
+  painted by ..." or "In <time>, a <role> named <Name> ..."; hook frames ranked by the views they held; the punch
+  word; optional X / M sentences; the evidence pictures) and `prompts/look.txt`; `writer.py` (topic from
+  `data/backlog.json`, 20 public-domain seeds -> facts and the lead picture from Wikipedia -> Gemini vision lists
+  what is visible with boxes -> the script, gated by `tools/script_check.py`, three rounds -> `scripts/<id>.json`;
+  needs the secret GEMINI_API_KEY and has NOT run live yet: no key in this repo); `director.py` (script -> story:
+  the hook's jump cuts and glide out to the red word, the card and the portrait in S2, and THE PICTURE-WORD RULE
+  as a mechanism: a cue is written for every word that names a thing the camera is not on; shows that hold for
+  one line; two short triad sentences share a caption; caption lines of 3-9 words); `sources.py`: `find_portrait`
+  (Wikidata P18), `find_commons`, `wikipedia`, a face crop for the portrait card, an evidence picture that cannot
+  be found is dropped with its cues. `bot.py`: runs the director on `scripts/<id>.json`, `--write`, and three new
+  conformance checks: the first 1.5 s match Andrii's sound in both channels (correlation >= 0.97), the red word,
+  the portrait shot. `render.py`: a line may carry its own `names`. `format.json`: `voice.chosen` = Kokoro blend
+  am_onyx 0.65 + am_michael 0.35, speed 0.95, 94 Hz, the maket's voice, the only engine in the chain. Workflow:
+  inputs `write`, story `_selftest` (the finders against the live APIs: portraits of Cabanel, Tartini, Matejko
+  found, the Fallen Angel page gave 20 fact sentences and a public-domain lead picture).
 - v1.01 = THE FIRST BOT RUN: DRY RUN IN GITHUB ACTIONS + SEVERAL PICTURES IN ONE VIDEO, Andrii, Nov 13 2026 (he sent
   the reference's video about Tartini's dream, 111 s, nine pictures: 'повністю відтвори це відео за макетом ...
   відтвори це використовуючи драй ран через бота'; 'залиши початок як є' = the approved opening stays). New:

@@ -1,10 +1,11 @@
-# sposcaske-bot — maket (v1.00)
+# sposcaske-bot — maket (v1.02)
 
 An autonomous YouTube Shorts bot in the measured format of TikTok's @doom.lore: narrated dark art-history videos
 made from one public-domain painting. This folder is the maket (template + prototype), not yet the bot.
 
 | read | what |
 |---|---|
+| `docs/GENRE.md` | the genre (topics, telling, feelings) and what the five references and the maket share, point by point, with the file that enforces each |
 | `docs/versions.md` | the version history (v1.00 = the approved maket); the rules of the vX.YY system are in `CLAUDE.md` |
 | `docs/BUILD_PROMPT.md` | the build prompt: architecture, modules, rules, copy map from ww2-bot, acceptance, milestones, decisions for the owner |
 | `docs/FORMAT.md` + `format.json` | the format, measured on the references (script formula, camera grammar, captions, sound) |

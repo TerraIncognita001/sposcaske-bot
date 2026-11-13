@@ -83,7 +83,7 @@ jobs:
           [ "${{ inputs.write }}" = "true" ] && cp scripts/*.json /tmp/p/ 2>/dev/null || true
           if [ "${{ inputs.pictures_only }}" = "true" ]; then mkdir -p /tmp/p/img && cp work/img/* /tmp/p/img/ 2>/dev/null || true; fi
           cp work/final_work/timeline.json /tmp/p/ 2>/dev/null || true
-          [ -n "$(ls -A /tmp/p)" ] || exit 0
+          [ -n "$(find /tmp/p -type f | head -1)" ] || exit 0
           cd /tmp/p && git init -q -b preview && git add . \
             && git -c user.name=bot -c user.email=bot@users.noreply.github.com commit -qm "dry run ${GITHUB_RUN_ID}: ${{ inputs.story }}" \
             && git push -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" preview
