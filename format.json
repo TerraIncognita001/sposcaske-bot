@@ -348,8 +348,9 @@
    "over_voice_db": 10
   },
   "shutter": {
-   "over_voice_db": 6,
-   "gap_s": 0.07
+   "over_voice_db": 3,
+   "gap_s": 0.07,
+   "_note": "v1.02: 6 -> 3 dB: the click plus the voice that starts on it overshot to +0.2 dBFS after AAC"
   },
   "music": {
    "start_after_ident_start_s": 0.3,

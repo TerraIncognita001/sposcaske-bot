@@ -731,6 +731,14 @@ def render(story_path, out_path):
         ff.stdin.write(canvas.tobytes())
     ff.stdin.close()
     ff.wait()
+    err = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(out_path), "-af", "ebur128=peak=true", "-f", "null", "-"], capture_output=True, text=True).stderr
+    pk = [float(x) for x in re.findall(r"Peak:\s+(-?[\d.]+) dBFS", err)]
+    if pk and pk[-1] > -0.5:                                           # v1.02: AAC overshoots on the shutter click; pull the whole track under -0.7 dBFS
+        tmp = Path(str(out_path) + ".tmp.mp4")
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(out_path), "-c:v", "copy", "-af", f"volume={-0.9 - pk[-1]:.2f}dB", "-c:a", "aac", "-b:a", "192k",
+                        "-movflags", "+faststart", str(tmp)], check=True)
+        tmp.replace(out_path)
+        print(f"true peak was {pk[-1]:.1f} dBFS: track lowered by {0.9 + pk[-1]:.1f} dB")
     (work / "timeline.json").write_text(json.dumps({"total": total, "stage": [sw, sh], "y_off": y_off, "events": ev, "focus_audit": audit, "lines": [
         {"t0": round(a_, 2), "t1": round(b_, 2), "beat": ln["beat"], "say": ln["say"]} for ln, (a_, b_) in zip(story["lines"], marks)]}, indent=1))
     words = sum(len(ln["say"].split()) for ln in story["lines"])
