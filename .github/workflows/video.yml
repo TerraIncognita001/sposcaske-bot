@@ -1,13 +1,17 @@
 name: video
-# One run = one video (v1.01: dry runs only; the upload is not built yet).
+# One run = one video (v1.02: dry runs only; the upload is not built yet).
 # A dry run puts the video, its metadata and the report on the "preview" branch and the log on the "logs" branch
 # (both overwritten every time), exactly as the warehouse ww2-bot does.
 on:
   workflow_dispatch:
     inputs:
       story:
-        description: "Story id (the file name in stories/ without .json)"
-        required: true
+        description: "Script or story id (the file name in scripts/ or stories/ without .json). Empty + write = the next topic"
+        required: false
+      write:
+        description: "Let the bot write the script itself first (writer.py, needs the secret GEMINI_API_KEY)"
+        type: boolean
+        default: false
       dry_run:
         description: "Test only: make the video, do NOT upload (it goes to the preview branch)"
         type: boolean
@@ -58,19 +62,25 @@ jobs:
         if: ${{ inputs.pictures_only }}
         run: |
           set -o pipefail
-          python sources.py "stories/${{ inputs.story }}.json" work 2>&1 | tee run.log
+          mkdir -p work
+          if [ "${{ inputs.story }}" = "_selftest" ]; then python sources.py --selftest 2>&1 | tee run.log; exit 0; fi
+          if [ -f "scripts/${{ inputs.story }}.json" ]; then python director.py "scripts/${{ inputs.story }}.json" work/directed.json; S=work/directed.json; else S="stories/${{ inputs.story }}.json"; fi
+          python sources.py "$S" work 2>&1 | tee run.log
       - name: make the video
         if: ${{ !inputs.pictures_only }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           set -o pipefail
-          python bot.py --story "${{ inputs.story }}" ${{ inputs.dry_run && '--dry-run' || '' }} 2>&1 | tee run.log
+          python bot.py ${{ inputs.story && format('--story "{0}"', inputs.story) || '' }} ${{ inputs.write && '--write' || '' }} ${{ inputs.dry_run && '--dry-run' || '' }} 2>&1 | tee run.log
       - name: preview for review           # the video (or the pictures) go to the "preview" branch (overwritten)
         if: ${{ !cancelled() }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           rm -rf /tmp/p && mkdir -p /tmp/p
-          cp work/final.mp4 work/metadata.json work/report.json work/sources.json /tmp/p/ 2>/dev/null || true
+          cp work/final.mp4 work/metadata.json work/report.json work/sources.json work/directed.json /tmp/p/ 2>/dev/null || true
+          [ "${{ inputs.write }}" = "true" ] && cp scripts/*.json /tmp/p/ 2>/dev/null || true
           if [ "${{ inputs.pictures_only }}" = "true" ]; then mkdir -p /tmp/p/img && cp work/img/* /tmp/p/img/ 2>/dev/null || true; fi
           cp work/final_work/timeline.json /tmp/p/ 2>/dev/null || true
           [ -n "$(ls -A /tmp/p)" ] || exit 0

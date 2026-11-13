@@ -1,0 +1,23 @@
+{"_about": "Seed topics (v1.02): public-domain pictures only (the maker died before 1955) and old legends with public-domain pictures. writer.py takes the first one that is not in data/used.json. Order = priority.",
+ "topics": [
+  {"id": "fallen-angel-cabanel", "kind": "artwork", "wikipedia": "The Fallen Angel (painting)", "person": "Alexandre Cabanel"},
+  {"id": "stanczyk-matejko", "kind": "artwork", "wikipedia": "Stańczyk (painting)", "person": "Jan Matejko"},
+  {"id": "lucifer-von-stuck", "kind": "artwork", "wikipedia": "Lucifer (Stuck)", "person": "Franz von Stuck"},
+  {"id": "nightmare-fuseli", "kind": "artwork", "wikipedia": "The Nightmare", "person": "Henry Fuseli"},
+  {"id": "ivan-the-terrible-repin", "kind": "artwork", "wikipedia": "Ivan the Terrible and His Son Ivan", "person": "Ilya Repin"},
+  {"id": "saturn-goya", "kind": "artwork", "wikipedia": "Saturn Devouring His Son", "person": "Francisco Goya"},
+  {"id": "paganini-devil", "kind": "story", "wikipedia": "Niccolò Paganini", "person": "Niccolò Paganini"},
+  {"id": "ambassadors-holbein", "kind": "artwork", "wikipedia": "The Ambassadors (Holbein)", "person": "Hans Holbein the Younger"},
+  {"id": "lady-jane-grey-delaroche", "kind": "artwork", "wikipedia": "The Execution of Lady Jane Grey", "person": "Paul Delaroche"},
+  {"id": "dancing-plague-1518", "kind": "story", "wikipedia": "Dancing plague of 1518", "person": "Paracelsus"},
+  {"id": "death-of-marat-david", "kind": "artwork", "wikipedia": "The Death of Marat", "person": "Jacques-Louis David"},
+  {"id": "judith-caravaggio", "kind": "artwork", "wikipedia": "Judith Beheading Holofernes (Caravaggio)", "person": "Caravaggio"},
+  {"id": "codex-gigas", "kind": "story", "wikipedia": "Codex Gigas", "person": null},
+  {"id": "triumph-of-death-bruegel", "kind": "artwork", "wikipedia": "The Triumph of Death", "person": "Pieter Bruegel the Elder"},
+  {"id": "dante-and-virgil-bouguereau", "kind": "artwork", "wikipedia": "Dante and Virgil", "person": "William-Adolphe Bouguereau"},
+  {"id": "ophelia-millais", "kind": "artwork", "wikipedia": "Ophelia (painting)", "person": "John Everett Millais"},
+  {"id": "witches-sabbath-goya", "kind": "artwork", "wikipedia": "Witches' Sabbath (The Great He-Goat)", "person": "Francisco Goya"},
+  {"id": "pied-piper-hamelin", "kind": "story", "wikipedia": "Pied Piper of Hamelin", "person": null},
+  {"id": "raft-of-the-medusa", "kind": "artwork", "wikipedia": "The Raft of the Medusa", "person": "Théodore Géricault"},
+  {"id": "anatomy-lesson-rembrandt", "kind": "artwork", "wikipedia": "The Anatomy Lesson of Dr. Nicolaes Tulp", "person": "Rembrandt"}
+ ]}

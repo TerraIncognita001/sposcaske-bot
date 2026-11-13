@@ -43,7 +43,11 @@ def check(sents, title="", punch=None):
     if punch:
         rule("S1 ends on the punch word (the red word on screen)", re.sub(r"\W", "", sents[0].split()[-1]).lower() == punch.lower(), sents[0].split()[-1])
     # S2 ident
-    rule("S2 is 'This is <Title>, painted / drawn / engraved / carved by <Artist> [in <year>].'", re.match(r"^This is .+, (painted|drawn|engraved|carved|sculpted|made) by .+\.$", sents[1]) is not None, sents[1])
+    # v1.02: two idents, both name WHO and WHEN in the second sentence (5 of 5 references; the card + portrait play over it)
+    ident_a = re.match(r"^This is .+, (painted|drawn|engraved|carved|sculpted|made|written|composed) by .+\.$", sents[1])
+    ident_b = re.match(r"^In (the |about |around )?[\w' -]{2,40}, an? .{3,60} (named|called) [A-Z].+\.$", sents[1])
+    rule("S2 names who and when: 'This is <Title>, painted by <Artist> in <year>.' or 'In <time>, a <role> named <Name> ...'", bool(ident_a or ident_b), sents[1])
+    rule("S2 is 9-20 words", 9 <= wc[1] <= 20, f"{wc[1]}")
     # turn, detail, triad
     it = find(TURN, 2)
     rule("a TURN sentence 'But look closely / at <detail>.' in the first half", it is not None and it <= n // 2, sents[it] if it is not None else "missing")

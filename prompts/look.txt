@@ -1,0 +1,14 @@
+You are shown one old picture. List what is REALLY visible in it, for a camera that will move over it.
+Return JSON only:
+{"things": [{"name": "<short_snake_case>", "box": [x0, y0, x1, y1], "words": ["<the plain words a narrator would use for it>"]}],
+ "summary": "<two sentences: who is in the picture, what happens>"}
+Rules:
+- box = left, top, right, bottom as fractions of the picture (0-1), tight around the thing.
+- 8 to 14 things: every person (whole figure), each main person again as upper body and as face, the hands when
+  they do something, every animal or group of animals, every object that matters (weapon, instrument, book, bones,
+  door, candle), and one wide box that holds the main action.
+- for a person give boxes from wide to tight with different names (for example "daniel", "daniel_top",
+  "daniel_face") and the same words.
+- words are lower-case single words: the role or name ("angel", "devil", "daniel", "woman"), the object ("spear",
+  "violin", "hands", "eyes"). No adjectives.
+- do not list anything you cannot see. Do not read meaning into the picture.

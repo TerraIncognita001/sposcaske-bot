@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
-"""bot.py — one run = one video (v1.01: the dry-run path only).
+"""bot.py — one run = one video (v1.02: the dry-run path only).
 
     python bot.py --story <id> --dry-run          -> work/final.mp4, work/metadata.json, work/report.json
+    python bot.py --write --dry-run               the bot writes the next topic of data/backlog.json itself first
 
-Steps: the script gate (tools/script_check.py) -> the pictures (sources.py) -> the render with its picture-word
-audit (render.py) -> conformance to the format (length, frame, loudness) -> the metadata the upload would use.
+Steps: [writer.py: topic -> scripts/<id>.json] -> director.py: script -> story (the maket's camera, red word, card,
+portrait) -> the script gate (tools/script_check.py) -> the pictures (sources.py: download, find, licence) -> the
+render with its picture-word audit (render.py) -> conformance to the maket (frame, length, loudness, the opening
+sound, the red word, the portrait) -> the metadata the upload would use. A hand-made stories/<id>.json is used when
+there is no scripts/<id>.json.
 Exit codes as in the warehouse: 0 = a video was made, 3 = this story cannot make a good video (the workflow may try
 another), 1 = a bug. Uploading is not built yet: without --dry-run the bot refuses.
 """
@@ -26,6 +30,12 @@ def conform(mp4, story, work):
     lufs = float(re.findall(r"I:\s+(-?[\d.]+) LUFS", err)[-1])
     peak = float(re.findall(r"Peak:\s+(-?[\d.]+) dBFS", err)[-1])
     tl = json.loads((work / "final_work" / "timeline.json").read_text())
+    import numpy as np                                                 # v1.02: every video opens with THE sound (Andrii's file)
+    dec = lambda f, t: np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-i", str(f), "-t", str(t), "-ac", "2", "-ar", "44100", "-f", "f32le", "-"],
+                                                    capture_output=True).stdout, np.float32).reshape(-1, 2)
+    head, ref = dec(mp4, 1.5), dec(ROOT / F["audio"]["stinger"]["file"], 1.5)
+    k = min(len(head), len(ref))
+    intro = float(min(np.corrcoef(head[:k, c], ref[:k, c])[0, 1] for c in (0, 1))) if k > 40000 else 0.0
     dur, size = float(pr["format"]["duration"]), int(pr["format"]["size"])
     audit = tl["focus_audit"]
     rows = [("frame 1080x1920", v["width"] == F["canvas"]["w"] and v["height"] == F["canvas"]["h"], f"{v['width']}x{v['height']}"),
@@ -35,6 +45,9 @@ def conform(mp4, story, work):
             ("true peak under 0 dBFS", peak <= 0.0, f"{peak:.1f} dBFS"),
             ("stereo sound (the opening sound is wide)", a["channels"] == 2, f"{a['channels']} ch"),
             ("voice starts after the opening sound", abs(tl["events"]["voice_start"] - F["timing"]["lead_in_s"]) < 0.05, f"{tl['events']['voice_start']:.2f} s"),
+            ("opens with the owner's sound, in stereo, untouched", intro >= 0.97, f"correlation {intro:.3f}"),
+            ("the red punch word is on screen after the hook", bool(story.get("hook_title")) and tl["events"]["title_off"] > tl["events"]["title_on"], str(story.get("hook_title"))),
+            ("the portrait card of the person named in the ident", len(tl["events"]["image_shots"]) >= 1, f"{len(tl['events']['image_shots'])} shot"),
             ("every named thing is in the frame", all(x["ok"] for x in audit), f"{sum(x['ok'] for x in audit)} of {len(audit)}"),
             ("file under 95 MB (the preview branch takes 100)", size < 95e6, f"{size / 1e6:.1f} MB")]
     return rows, {"seconds": round(dur, 1), "lufs": lufs, "peak_dbfs": peak, "mb": round(size / 1e6, 1)}
@@ -51,7 +64,8 @@ def metadata(story, report):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--story", required=True)
+    ap.add_argument("--story")
+    ap.add_argument("--write", action="store_true", help="write the next topic with writer.py first (needs GEMINI_API_KEY)")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--work", default="work")
     a = ap.parse_args()
@@ -60,9 +74,24 @@ def main():
         return 1
     t0, work = time.time(), (ROOT / a.work)
     work.mkdir(exist_ok=True)
-    path = ROOT / "stories" / f"{a.story}.json"
-    if not path.exists():
-        print(f"no such story: {path}")
+    if a.write:
+        import writer
+        topic = writer.next_topic(a.story)
+        script = topic and writer.write(topic, work)
+        if not script:
+            print("the writer has no script for this run")
+            return 3
+        a.story = topic["id"]
+        (ROOT / "scripts" / f"{a.story}.json").write_text(json.dumps(script, indent=1, ensure_ascii=False), encoding="utf-8")
+    spath, path = ROOT / "scripts" / f"{a.story}.json", ROOT / "stories" / f"{a.story}.json"
+    if spath.exists():                                                  # the director shoots every script the same way
+        import director
+        story = director.build(json.loads(spath.read_text(encoding="utf-8")))
+        path = work / "directed.json"
+        path.write_text(json.dumps(story, indent=1, ensure_ascii=False), encoding="utf-8")
+        print(f"== directed: {len(story['lines'])} caption lines, {sum(1 for l in story['lines'] if l.get('cam'))} with camera cues")
+    elif not path.exists():
+        print(f"no such story or script: {a.story}")
         return 3
     story = json.loads(path.read_text(encoding="utf-8"))
     print(f"== story {story['id']}: {story['artwork']['title']} ({story['artwork']['artist']}, {story['artwork']['year']})")
@@ -80,6 +109,8 @@ def main():
 
     import sources
     story, report, bad = sources.resolve(path, work)
+    for f_ in json.loads((work / "sources.json").read_text(encoding="utf-8")).get("found", []):
+        print("found   ", f_)
     for r in report:
         print(f"picture {r['key']:10s} {r.get('from', '-'):22s} licence: {r.get('licence_on_commons') or r.get('licence_in_story')}")
     if bad:

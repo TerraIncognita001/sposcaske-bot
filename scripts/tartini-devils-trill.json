@@ -1,0 +1,484 @@
+{
+ "id": "tartini-devils-trill",
+ "kind": "story",
+ "priority": 10,
+ "subject": {
+  "title": "Tartini's Dream",
+  "creator": "Louis-Léopold Boilly",
+  "year": 1824,
+  "collection": "lithograph; this impression: Musée Carnavalet, Paris",
+  "wikidata": null
+ },
+ "lead": {
+  "commons": "Le songe de Tartini. (IFF 19), G.5884.jpg",
+  "width_px": 3840,
+  "crop": [
+   0.1,
+   0.02,
+   0.9,
+   0.76
+  ],
+  "license": "CC0",
+  "credit": "Louis-Léopold Boilly, Le Songe de Tartini (lithograph, 1824) — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Giuseppe Tartini",
+  "commons": "Giuseppe Tartini.jpg",
+  "width_px": 2200,
+  "crop": [
+   0.14,
+   0.1,
+   0.86,
+   0.66
+  ],
+  "license": "Public domain",
+  "credit": "Carlo Calcinotto, portrait of Giuseppe Tartini (engraving, 18th century) — Wikimedia Commons"
+ },
+ "evidence": [
+  {
+   "key": "print",
+   "commons": "Giuseppe Tartini.jpg",
+   "width_px": 2200,
+   "license": "Public domain",
+   "credit": "Carlo Calcinotto, portrait of Giuseppe Tartini (engraving, 18th century) — Wikimedia Commons",
+   "words": [],
+   "look": [
+    {
+     "name": "face",
+     "box": [
+      0.28,
+      0.13,
+      0.68,
+      0.45
+     ],
+     "words": []
+    },
+    {
+     "name": "violin",
+     "box": [
+      0.08,
+      0.67,
+      0.92,
+      0.83
+     ],
+     "words": [
+      "violin",
+      "music"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "lalande",
+   "commons": "Jérôme Lalande.jpg",
+   "width_px": 1446,
+   "crop": [
+    0.16,
+    0.2,
+    0.84,
+    0.62
+   ],
+   "license": "Public domain",
+   "credit": "Portrait of Jérôme Lalande — Wikimedia Commons",
+   "words": [
+    "astronomer",
+    "lalande"
+   ]
+  },
+  {
+   "key": "score",
+   "commons": "IMSLP361282-PMLP346890-Tartini vn son g Devis Trill-6.jpg",
+   "width_px": 2096,
+   "license": "Public domain",
+   "credit": "Giuseppe Tartini, Violin Sonata in G minor 'The Devil's Trill' (score page) — Wikimedia Commons / IMSLP",
+   "words": [],
+   "look": [
+    {
+     "name": "left",
+     "box": [
+      0.0,
+      0.0,
+      0.6,
+      1.0
+     ],
+     "words": [
+      "note"
+     ]
+    },
+    {
+     "name": "right",
+     "box": [
+      0.4,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "words": []
+    },
+    {
+     "name": "title",
+     "box": [
+      0.6,
+      0.0,
+      1.0,
+      0.36
+     ],
+     "words": [
+      "sonata"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "marshall",
+   "commons": "Marshall Der Traum des Tartini.jpg",
+   "width_px": 3000,
+   "crop": [
+    0.01,
+    0.0,
+    0.99,
+    0.87
+   ],
+   "license": "Public domain",
+   "credit": "James Marshall, Tartini's Dream (1868) — Wikimedia Commons",
+   "words": []
+  }
+ ],
+ "look": [
+  {
+   "name": "devil",
+   "box": [
+    0.496,
+    0.027,
+    0.968,
+    0.951
+   ],
+   "words": [
+    "devil"
+   ]
+  },
+  {
+   "name": "devil_play",
+   "box": [
+    0.45,
+    0.078,
+    0.818,
+    0.582
+   ],
+   "words": [
+    "violin",
+    "devil",
+    "sonata",
+    "music"
+   ]
+  },
+  {
+   "name": "devil_head",
+   "box": [
+    0.623,
+    0.109,
+    0.784,
+    0.366
+   ],
+   "words": [
+    "devil"
+   ]
+  },
+  {
+   "name": "violin",
+   "box": [
+    0.461,
+    0.294,
+    0.749,
+    0.428
+   ],
+   "words": [
+    "violin",
+    "music"
+   ]
+  },
+  {
+   "name": "sleeper_top",
+   "box": [
+    0.128,
+    0.232,
+    0.53,
+    0.664
+   ],
+   "words": [
+    "tartini",
+    "sleeper"
+   ]
+  },
+  {
+   "name": "sleeper_face",
+   "box": [
+    0.22,
+    0.274,
+    0.369,
+    0.469
+   ],
+   "words": [
+    "man",
+    "tartini"
+   ]
+  },
+  {
+   "name": "sleeper",
+   "box": [
+    0.048,
+    0.212,
+    0.542,
+    0.951
+   ],
+   "words": [
+    "tartini",
+    "sleeper"
+   ]
+  },
+  {
+   "name": "hands",
+   "box": [
+    0.404,
+    0.397,
+    0.53,
+    0.602
+   ],
+   "words": [
+    "hands"
+   ]
+  },
+  {
+   "name": "table",
+   "box": [
+    0.025,
+    0.469,
+    0.266,
+    0.674
+   ],
+   "words": [
+    "note"
+   ]
+  },
+  {
+   "name": "reach",
+   "box": [
+    0.381,
+    0.078,
+    0.933,
+    0.797
+   ],
+   "words": []
+  }
+ ],
+ "punch": "DEVIL",
+ "sentences": [
+  {
+   "slot": "S1",
+   "text": "What if the most beautiful music a man ever heard was played by the devil?",
+   "show": [
+    {
+     "on": "played",
+     "to": "devil_head"
+    }
+   ]
+  },
+  {
+   "slot": "S2",
+   "text": "In 1713, a violinist named Giuseppe Tartini had a dream he could never forget.",
+   "source": 2
+  },
+  {
+   "slot": "S3",
+   "text": "Tartini lies asleep in his bed, and at his feet sits the devil, playing a violin."
+  },
+  {
+   "slot": "S4",
+   "text": "But look at the sleeper's hands."
+  },
+  {
+   "slot": "S5",
+   "text": "They are open, and reaching out."
+  },
+  {
+   "slot": "S6",
+   "text": "He doesn't scream.",
+   "show": [
+    {
+     "on": "scream",
+     "to": "sleeper_face"
+    }
+   ]
+  },
+  {
+   "slot": "S6",
+   "text": "He doesn't hide."
+  },
+  {
+   "slot": "S6",
+   "text": "He simply listens.",
+   "show": [
+    {
+     "on": "listens",
+     "to": "sleeper_top"
+    }
+   ]
+  },
+  {
+   "slot": "S7",
+   "text": "According to Tartini's own account, written down by the astronomer Jérôme Lalande, he dreamed the devil became his servant.",
+   "source": 1,
+   "show": [
+    {
+     "on": "tartini's",
+     "to": "print:face"
+    }
+   ]
+  },
+  {
+   "slot": "X",
+   "text": "He handed the devil his violin, and the devil played a sonata so beautiful that Tartini woke up breathless.",
+   "source": 1,
+   "show": [
+    {
+     "on": "handed",
+     "to": "reach"
+    }
+   ]
+  },
+  {
+   "slot": "S8",
+   "text": "He should have remembered every note.",
+   "show": [
+    {
+     "on": "every",
+     "to": "table"
+    }
+   ]
+  },
+  {
+   "slot": "S9",
+   "text": "But when he grabbed his violin, the music was gone.",
+   "source": 1,
+   "show": [
+    {
+     "on": "grabbed",
+     "to": "print:violin"
+    }
+   ]
+  },
+  {
+   "slot": "X",
+   "text": "What he managed to write became the Devil's Trill Sonata.",
+   "source": 2,
+   "show": [
+    {
+     "on": "write",
+     "to": "score:left"
+    },
+    {
+     "on": "devil's",
+     "to": "score:title"
+    }
+   ]
+  },
+  {
+   "slot": "S10",
+   "text": "And here's the disturbing part."
+  },
+  {
+   "slot": "S11",
+   "text": "It is his most famous work, yet Tartini said it fell far short.",
+   "source": 1
+  },
+  {
+   "slot": "X",
+   "text": "He said he would have broken his violin.",
+   "source": 1,
+   "show": [
+    {
+     "on": "said",
+     "to": "print:face"
+    },
+    {
+     "on": "broken",
+     "to": "print:violin"
+    }
+   ]
+  },
+  {
+   "slot": "X",
+   "text": "He would have given up music forever, if he could have lived without it.",
+   "source": 1
+  },
+  {
+   "slot": "S12",
+   "text": "As if every note afterwards only reminded him of that night.",
+   "show": [
+    {
+     "on": "every",
+     "to": "score:left"
+    },
+    {
+     "on": "reminded",
+     "to": "sleeper_top"
+    }
+   ]
+  },
+  {
+   "slot": "M",
+   "text": "Maybe it was only a dream.",
+   "show": [
+    {
+     "on": "only",
+     "to": "marshall:full"
+    }
+   ]
+  },
+  {
+   "slot": "M",
+   "text": "Maybe it was the best concert nobody else will ever hear."
+  },
+  {
+   "slot": "M",
+   "text": "So look at his hands one more time."
+  },
+  {
+   "slot": "S13",
+   "text": "So is he begging the devil to stop, or begging him to play on?"
+  }
+ ],
+ "pronounce": {
+  "Jérôme Lalande": "Zhay-rome Lah-lahnd",
+  "1713": "seventeen thirteen",
+  "Giuseppe": "Joo-zep-peh"
+ },
+ "meta": {
+  "title": "The devil played for him in a dream. He never got over it.",
+  "description": "Giuseppe Tartini (1692–1770) told the astronomer Jérôme Lalande that his Violin Sonata in G minor, the \"Devil's Trill\", came from a dream he had in 1713, in which the devil played his violin. Lalande printed the account in his Voyage d'un François en Italie (1769). The lead picture is Le Songe de Tartini, a lithograph by Louis-Léopold Boilly from 1824.",
+  "tags": [
+   "art history",
+   "classical music",
+   "Tartini",
+   "Devil's Trill"
+  ],
+  "question": "Begging the devil to stop, or begging him to play on?"
+ },
+ "sources": [
+  {
+   "claim": "Tartini's account of the dream (the devil as his servant, the violin handed over, the sonata, waking breathless, the piece 'so inferior' to what he heard, he would have broken his violin and given up music if he could have lived without it), recorded by Jérôme Lalande",
+   "url": "https://en.wikipedia.org/wiki/Violin_Sonata_in_G_minor_(Tartini)",
+   "note": "quoting Lalande, Voyage d'un François en Italie (1769)"
+  },
+  {
+   "claim": "Giuseppe Tartini, violinist and composer, 1692–1770; the Devil's Trill is his best-known work",
+   "url": "https://en.wikipedia.org/wiki/Giuseppe_Tartini",
+   "note": ""
+  },
+  {
+   "claim": "Le Songe de Tartini, lithograph by Louis-Léopold Boilly, signed and dated 1824",
+   "url": "https://commons.wikimedia.org/wiki/File:Le_songe_de_Tartini._(IFF_19),_G.5884.jpg",
+   "note": "the signature 'L. Boilly 1824' is in the lower left corner of the print"
+  }
+ ]
+}

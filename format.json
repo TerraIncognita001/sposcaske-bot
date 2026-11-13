@@ -55,7 +55,6 @@
    ]
   },
   "chain_ours": [
-   "azure",
    "kokoro"
   ],
   "azure": {
@@ -93,6 +92,14 @@
     96
    ],
    "_why": "owner, pass 4: lower and rougher than the reference's 106-113 Hz"
+  },
+  "chosen": {
+   "engine": "Kokoro-82M (offline, free, no key, the same on every machine)",
+   "voice": "am_onyx:0.65+am_michael:0.35",
+   "speed": 0.95,
+   "finish": "voice.rough (chest shelf, less air, light saturation)",
+   "f0_hz": 94,
+   "why": "v1.02: THE voice of every video. It is the voice of the approved maket (demos 4-7): lower and rougher than the reference's 106 Hz, as the owner asked. Azure and Edge are out: one needs a key and a card, the other answers 403."
   }
  },
  "camera": {

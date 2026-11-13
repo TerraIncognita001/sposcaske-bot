@@ -313,7 +313,8 @@ def focus_audit(story, marks, rects, ev, cams, track):
     shots = {s_[2] for s_ in ev["image_shots"]}
     for ln, (t0, t1) in zip(story["lines"], marks):
         for w, tw in word_times(ln["say"], t0, t1):
-            allowed = names.get(w) or names.get(w.split("'")[0])
+            own = {k.lower(): v for k, v in ln.get("names", {}).items()}     # v1.02: a line may name its own framings
+            allowed = own.get(w) or own.get(w.split("'")[0]) or names.get(w) or names.get(w.split("'")[0])
             if not allowed:
                 continue
             ok, seen = False, ""
