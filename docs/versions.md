@@ -28,6 +28,11 @@ tried and rolled back.
   am_onyx 0.65 + am_michael 0.35, speed 0.95, 94 Hz, the maket's voice, the only engine in the chain. Workflow:
   inputs `write`, story `_selftest` (the finders against the live APIs: portraits of Cabanel, Tartini, Matejko
   found, the Fallen Angel page gave 20 fact sentences and a public-domain lead picture).
+  DRY RUN of `scripts/tartini-devils-trill.json` through the director (run 43527854302): 91.9 s, 220 words, 147 wpm,
+  29 camera cues written by the director, picture-word audit 42 of 42, the opening sound 0.995, red word DEVIL, the
+  portrait card of Tartini, -16.6 LUFS, true peak -1.0 dBFS, 71 MB; 12 of 12 checks. The run before it failed one
+  check (true peak +0.2 dBFS: the shutter click with the voice starting on it overshoots in AAC): the click is 3 dB
+  lower now and `render.py` lowers the whole track when the encoded peak is above -0.5 dBFS.
 - v1.01 = THE FIRST BOT RUN: DRY RUN IN GITHUB ACTIONS + SEVERAL PICTURES IN ONE VIDEO, Andrii, Nov 13 2026 (he sent
   the reference's video about Tartini's dream, 111 s, nine pictures: 'повністю відтвори це відео за макетом ...
   відтвори це використовуючи драй ран через бота'; 'залиши початок як є' = the approved opening stays). New:
