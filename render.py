@@ -181,7 +181,7 @@ class Camera:
                 elif "pan" in cam:                                     # constant-zoom travel to the end of the line
                     a, b = (self.rect(n) for n in cam["pan"])
                     w = max(a[2], b[2])
-                    out.append(dict(t=ts - 0.05, dur=max(0.8, t1 - ts), frm=self.clamp((a[0], a[1], w)), to=self.clamp((b[0], b[1], w))))
+                    out.append(dict(t=ts - (C["focus_rule"]["cut_lead_s"] if "scene" in cam else 0.05), dur=max(0.8, t1 - ts), frm=self.clamp((a[0], a[1], w)), to=self.clamp((b[0], b[1], w))))
                 elif "to" in cam:
                     cut, card = cam.get("how") == "cut", cam["to"] == "card"
                     R = C["focus_rule"]
@@ -662,6 +662,9 @@ def render(story_path, out_path):
         print(f"FOCUS FAIL {a_['t']:6.2f}s  '{a_['word']}' in \"{a_['line']}\"  shown: {a_['shown']}")
     if bad and os.environ.get("ALLOW_FOCUS_FAIL") != "1":
         raise SystemExit(f"{len(bad)} of {len(audit)} named things are not in the frame when they are named: fix the cam cues")
+    if os.environ.get("AUDIT_ONLY") == "1":                            # the cues checked without rendering a frame
+        print(f"audit only: {total:.1f} s, {sum(a_['ok'] for a_ in audit)}/{len(audit)} named things in frame, scenes {[(round(t_, 1), k_) for t_, k_ in track]}")
+        return
     stars, parts, finish = starfield(sw, sh), Particles(sw, sh), Finish(sw, sh)
     caps, delay = [], T["caption_delay_s"]
     for i, (ln, (t0, t1)) in enumerate(zip(story["lines"], marks)):

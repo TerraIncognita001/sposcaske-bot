@@ -21,42 +21,92 @@
     0.9,
     0.76
    ],
-   "license": "Public domain",
+   "license": "CC0",
    "credit": "Louis-Léopold Boilly, Le Songe de Tartini (lithograph, 1824) — Wikimedia Commons"
   },
   "portrait": {
    "commons": "Louis-Léopold Boilly, Self-Portrait, 1832, NGA 157137.jpg",
    "width_px": 2000,
-   "license": "Public domain",
-   "credit": "Louis-Léopold Boilly, Self-Portrait (1832), National Gallery of Art — Wikimedia Commons"
+   "license": "CC0",
+   "credit": "Louis-Léopold Boilly, Self-Portrait (lithograph of five heads, 1832; one head shown), National Gallery of Art — Wikimedia Commons",
+   "crop": [
+    0.3,
+    0.45,
+    0.66,
+    0.9
+   ]
   },
   "tartini": {
    "commons": "Giuseppe Tartini.jpg",
    "width_px": 2200,
    "license": "Public domain",
-   "credit": "Portrait of Giuseppe Tartini (18th-century engraving) — Wikimedia Commons",
-   "focus": {}
+   "credit": "Carlo Calcinotto, portrait of Giuseppe Tartini (engraving, 18th century) — Wikimedia Commons",
+   "focus": {
+    "face": [
+     0.28,
+     0.13,
+     0.68,
+     0.45
+    ],
+    "violin": [
+     0.08,
+     0.67,
+     0.92,
+     0.83
+    ]
+   }
   },
   "lalande": {
    "commons": "Jérôme Lalande.jpg",
    "width_px": 1446,
    "license": "Public domain",
    "credit": "Portrait of Jérôme Lalande — Wikimedia Commons",
-   "focus": {}
+   "focus": {},
+   "crop": [
+    0.16,
+    0.2,
+    0.84,
+    0.62
+   ]
   },
   "sheet": {
    "commons": "IMSLP361282-PMLP346890-Tartini vn son g Devis Trill-6.jpg",
    "width_px": 2096,
    "license": "Public domain",
    "credit": "Giuseppe Tartini, Violin Sonata in G minor 'The Devil's Trill' (score page) — Wikimedia Commons / IMSLP",
-   "focus": {}
+   "focus": {
+    "left": [
+     0.0,
+     0.0,
+     0.6,
+     1.0
+    ],
+    "right": [
+     0.4,
+     0.0,
+     1.0,
+     1.0
+    ],
+    "title": [
+     0.6,
+     0.0,
+     1.0,
+     0.36
+    ]
+   }
   },
   "marshall": {
    "commons": "Marshall Der Traum des Tartini.jpg",
    "width_px": 3000,
    "license": "Public domain",
    "credit": "James Marshall, Tartini's Dream (1868) — Wikimedia Commons",
-   "focus": {}
+   "focus": {},
+   "crop": [
+    0.01,
+    0.0,
+    0.99,
+    0.87
+   ]
   }
  },
  "focus": {
@@ -131,7 +181,10 @@
   "music": [
    "violin",
    "devil_play",
-   "sheet:full"
+   "sheet:full",
+   "sheet:left",
+   "sheet:right",
+   "tartini:violin"
   ],
   "man": [
    "sleeper_face",
@@ -154,7 +207,7 @@
    "violin",
    "devil_play",
    "reach",
-   "tartini:full"
+   "tartini:violin"
   ],
   "sleeper": [
    "hands",
@@ -165,6 +218,7 @@
    "hands"
   ],
   "tartini": [
+   "tartini:face",
    "tartini:full",
    "sleeper_face",
    "sleeper_top",
@@ -173,6 +227,7 @@
    "card"
   ],
   "tartini's": [
+   "tartini:face",
    "tartini:full",
    "full",
    "card"
@@ -185,13 +240,19 @@
   ],
   "note": [
    "table",
+   "sheet:left",
+   "sheet:right",
    "sheet:full"
   ],
   "sonata": [
+   "sheet:title",
+   "sheet:right",
    "sheet:full",
    "devil_play"
   ],
   "devil's": [
+   "sheet:title",
+   "sheet:right",
    "sheet:full"
   ],
   "louis": [
@@ -199,6 +260,16 @@
   ],
   "boilly": [
    "portrait"
+  ],
+  "dream": [
+   "marshall:full",
+   "full",
+   "card"
+  ],
+  "dream,": [
+   "marshall:full",
+   "full",
+   "card"
   ]
  },
  "hook_title": "DEVIL",
@@ -314,6 +385,7 @@
    "say": "According to Tartini's own account,",
    "cam": {
     "scene": "tartini",
+    "to": "face",
     "on": "Tartini"
    }
   },
@@ -372,24 +444,32 @@
    "say": "But when he grabbed his violin,",
    "cam": {
     "scene": "tartini",
+    "to": "violin",
     "on": "grabbed"
    }
   },
   {
    "beat": "backstory",
-   "say": "the music was gone.",
+   "say": "the music was gone."
+  },
+  {
+   "beat": "backstory",
+   "say": "What he managed to write",
    "cam": {
     "scene": "sheet",
-    "on": "music"
+    "pan": [
+     "left",
+     "right"
+    ]
    }
   },
   {
    "beat": "backstory",
-   "say": "What he managed to write"
-  },
-  {
-   "beat": "backstory",
-   "say": "became the Devil's Trill Sonata."
+   "say": "became the Devil's Trill Sonata.",
+   "cam": {
+    "to": "title",
+    "on": "the"
+   }
   },
   {
    "beat": "reveal",
@@ -418,10 +498,16 @@
   {
    "beat": "reveal",
    "say": "He said he would have broken his violin.",
-   "cam": {
-    "scene": "tartini",
-    "on": "broken"
-   }
+   "cam": [
+    {
+     "scene": "tartini",
+     "to": "face"
+    },
+    {
+     "to": "violin",
+     "on": "broken"
+    }
+   ]
   },
   {
    "beat": "reveal",
@@ -436,6 +522,7 @@
    "say": "As if every note afterwards",
    "cam": {
     "scene": "sheet",
+    "to": "left",
     "on": "every"
    }
   },
