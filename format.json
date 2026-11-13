@@ -1,0 +1,423 @@
+{
+ "_about": "Machine-readable twin of docs/FORMAT.md. Measured on @doom.lore references unless a key ends with _ours. Sizes are fractions of the STAGE (hs = stage height, ws = stage width).",
+ "canvas": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30,
+  "background": "#000000",
+  "stage_aspect_min": 1.25,
+  "stage_aspect_max": 1.45,
+  "stage_center_y": 0.5
+ },
+ "length": {
+  "words_min": 100,
+  "words_max": 380,
+  "words_typical": [
+   120,
+   260
+  ],
+  "seconds_min": 45,
+  "seconds_max": 150,
+  "wpm_overall": [
+   140,
+   160
+  ]
+ },
+ "timing": {
+  "lead_in_s": 1.65,
+  "tail_s": 0.35,
+  "pause_clause_s": 0.22,
+  "pause_sentence_s": 0.6,
+  "pause_reveal_s": [
+   0.9,
+   1.3
+  ],
+  "pause_before_question_s": 0.8,
+  "fade_in_s": 0.5,
+  "pause_after_hook_s": 0.65,
+  "caption_delay_s": 0.1,
+  "end_black_frames": 2,
+  "pause_sentence_inner_s": 0.32
+ },
+ "voice": {
+  "target": {
+   "f0_median_hz": [
+    106,
+    113
+   ],
+   "f0_p10_p90_hz": [
+    95,
+    123
+   ],
+   "articulation_wpm": [
+    150,
+    200
+   ]
+  },
+  "chain_ours": [
+   "azure",
+   "kokoro"
+  ],
+  "azure": {
+   "voice": "en-US-AndrewNeural",
+   "alternates": [
+    "en-US-ChristopherNeural",
+    "en-US-BrianNeural",
+    "en-US-DavisNeural"
+   ],
+   "rate": "-4%",
+   "pitch": "-2Hz"
+  },
+  "kokoro": {
+   "voice": "am_onyx:0.65+am_michael:0.35",
+   "alternates": [
+    "am_michael",
+    "am_echo"
+   ],
+   "speed": 0.95,
+   "lang": "en-us"
+  },
+  "chain_filters": "highpass=f=80,lowpass=f=8500,deesser=i=0.6",
+  "rough": {
+   "low_shelf_hz": 180,
+   "low_shelf_db": 4.0,
+   "high_shelf_hz": 6000,
+   "high_shelf_db": -3.0,
+   "drive": 2.2,
+   "bias": 0.12,
+   "mix": 0.6
+  },
+  "target_ours": {
+   "f0_median_hz": [
+    88,
+    96
+   ],
+   "_why": "owner, pass 4: lower and rougher than the reference's 106-113 Hz"
+  }
+ },
+ "camera": {
+  "hold": {
+   "min_s": 1.0,
+   "median_s": 1.75,
+   "drift_pct_per_s": 2.4,
+   "drift_range": [
+    1.4,
+    3.5
+   ]
+  },
+  "glide": {
+   "median_s": 1.9,
+   "min_s": 0.8,
+   "max_s": 3.0,
+   "ease": {
+    "cosine": 0.6,
+    "linear": 0.4
+   },
+   "max_speed_stage_widths_per_s": 0.6
+  },
+  "jump": {
+   "hook_detail_s": [
+    0.9,
+    1.1
+   ],
+   "max_per_video": 12
+  },
+  "zoom": {
+   "detail": [
+    1.5,
+    3.0
+   ],
+   "extreme": [
+    3.0,
+    5.0
+   ],
+   "max": 5.0,
+   "min_source_px_per_output_px": 1.0,
+   "full_view_push": {
+    "from": 1.0,
+    "to": 1.3,
+    "pct_per_s": [
+     1.5,
+     2.0
+    ]
+   }
+  },
+  "focus_margin": 0.12,
+  "events_per_minute": [
+   21,
+   31
+  ],
+  "ident_card": {
+   "zoom": 0.62,
+   "glide_s": 1.8,
+   "flash_s": 0.25,
+   "portrait_s": [
+    2.0,
+    3.5
+   ],
+   "hold_full_before_shrink_s": 1.0,
+   "portrait_card_height_frac_hs": 0.9,
+   "portrait_end_scale_over_cover": 1.2,
+   "portrait_center_y": 0.4
+  },
+  "legend": {
+   "shot_s": [
+    2.0,
+    6.0
+   ],
+   "push_pct_per_s": [
+    1.6,
+    3.0
+   ],
+   "pan_pct_per_s": [
+    1.0,
+    2.0
+   ],
+   "fade_black_s": 0.5,
+   "fade_share": 0.17
+  },
+  "static_until_voice": true,
+  "focus_rule": {
+   "box_inside_min": 0.7,
+   "box_share_of_frame_min": 0.12,
+   "cut_lead_s": 0.1,
+   "glide_lead_s": 0.45
+  }
+ },
+ "overlays": {
+  "starfield": {
+   "stars": 100,
+   "radius_px": [
+    0.6,
+    2.2
+   ],
+   "tint_share": 0.15,
+   "tint": "#8f7dff",
+   "twinkle": 0.25
+  },
+  "particles": {
+   "_measured": "v1 0.55-1.60 s (static picture): ~10 specks in view, straight tracks 80-200 px/s at 1080p in all directions, mean drift up 14 px/s, sharp dots 2-5 px (+100..175 levels) and a few large soft ones",
+   "enabled": true,
+   "count": 14,
+   "soft_count": 3,
+   "radius_px": [
+    1.2,
+    2.6
+   ],
+   "soft_radius_px": [
+    9,
+    16
+   ],
+   "opacity": [
+    0.55,
+    0.95
+   ],
+   "soft_opacity": [
+    0.1,
+    0.2
+   ],
+   "speed_px_s": [
+    70,
+    190
+   ]
+  },
+  "vignette": {
+   "_measured": "v1 against the clean source picture: luminance falls to 0.87-0.89 of the centre from 40 % of the radius outward",
+   "painting": 0.42,
+   "legend": 0.75,
+   "start_r": 0.22
+  },
+  "title_word": {
+   "_measured": "v1 MISS: 73.8% x 54.2% of the frame, centre (0.49,0.478), RGB 243/15/16, static, 5.38-6.29 s; v4 ANGER: 65% x 55.7%, background dimmed; v5 FOREVER (pixel font): 86.8% x 28%",
+   "font": "Gloock.ttf",
+   "pixel_font": "Silkscreen-Bold.ttf",
+   "color": "#f30f10",
+   "height_frac_hs": 0.54,
+   "width_frac_ws": 0.72,
+   "width_per_letter_max": 0.19,
+   "center": [
+    0.49,
+    0.478
+   ],
+   "rough_px": 0,
+   "on_before_hook_end_s": 0.1,
+   "off_after_ident_start_s": 0.2,
+   "dim_background": 0.0,
+   "bold_frac_ws": 0
+  },
+  "transitions": {
+   "burn": {
+    "_measured": "v1 6.29-6.46 s: red tint -> orange -> yellow-white -> orange -> clear (4 frames at 24 fps); also v2 6.62, v5 10.38",
+    "start_after_ident_start_s": 0.19,
+    "dur_s": 0.22
+   },
+   "white_flash": {
+    "_measured": "v1 10.79 s: one full-white frame, gone in 0.17 s; with a camera-shutter double click",
+    "decay_s": 0.17
+   }
+  },
+  "grade": {
+   "_measured": "v1 against the source: luminance x0.84, contrast x1.08, saturation x0.96 (sources differ, so only half of it is applied)",
+   "gain": 0.93,
+   "contrast": 1.05
+  },
+  "flicker": {
+   "grain_luma": 2.4,
+   "grain_chroma": 1.3,
+   "_note": "fine grain only; the light itself is overlays.candle"
+  },
+  "candle": {
+   "_about": "owner, pass 6: 'as if a candle burns at the side and the lighting changes from it; lighter, in a warm tone'",
+   "pos": [
+    -0.12,
+    0.58
+   ],
+   "reach": 0.55,
+   "warm_bgr": [
+    0.45,
+    0.85,
+    1.2
+   ],
+   "glow": 0.06,
+   "amp": 0.08,
+   "tremble": 0.7,
+   "memory": 0.8,
+   "sway": 0.45,
+   "sway_hz": 0.9
+  }
+ },
+ "captions": {
+  "style": "boxed",
+  "boxed": {
+   "font": "Inter-Medium.ttf",
+   "size_frac_hs": 0.026,
+   "color": "#ffffff",
+   "box_color": "#000000",
+   "box_opacity": 0.58,
+   "pad_x_frac_ws": 0.041,
+   "pad_y_frac_hs": 0.012,
+   "line_pitch_frac_hs": 0.036,
+   "center_y_frac_hs": 0.863,
+   "max_chars_per_line": 44,
+   "max_lines": 2,
+   "max_words": 9,
+   "delay_s": 0.1,
+   "lowercase": true,
+   "strip_punctuation": true,
+   "keep_proper_nouns": true
+  },
+  "bare": {
+   "font": "Poppins-SemiBold.ttf",
+   "size_frac_hs": 0.0315,
+   "color_said": "#ffffff",
+   "color_coming": "#9a9a9a",
+   "shadow": 0.8,
+   "center_y_frac_hs": 0.85
+  },
+  "word": {
+   "font": "Inter-SemiBold.ttf",
+   "size_frac_hs": 0.044,
+   "outline_frac_hs": 0.0035,
+   "center_y_frac_hs": 0.865
+  }
+ },
+ "audio": {
+  "_measured": "v1: stinger 0-1.5 s (+30 dB over the bed), voice from 1.62 s, noise riser 3.0-5.42 s cut dead as the red word appears, bed silent 5.45-6.1 s, slam at 6.2 s, music from 6.4 s at -40.8 dB RMS (voice -26.2), shutter double click at 10.79 s",
+  "stinger": {
+   "file": "assets/sfx/intro.mp3",
+   "peak": 0.89,
+   "dur_s": 1.55,
+   "over_voice_db": 8,
+   "lowpass_hz": 1100,
+   "_note": "the owner's file, in STEREO, sample for sample with one gain (peak 0.89); dur_s / over_voice_db / lowpass_hz belong to the synthesized fallback only"
+  },
+  "riser": {
+   "dur_s": 2.4,
+   "rise_db": 25,
+   "end_under_voice_db": 4
+  },
+  "impact": {
+   "after_ident_start_s": 0.07,
+   "over_voice_db": 10
+  },
+  "shutter": {
+   "over_voice_db": 6,
+   "gap_s": 0.07
+  },
+  "music": {
+   "start_after_ident_start_s": 0.3,
+   "under_voice_db": 14,
+   "fade_in_s": 0.4,
+   "moods": [
+    "dark",
+    "ambient",
+    "humming",
+    "choir"
+   ],
+   "no_beat": true
+  },
+  "accents": [
+   "turn",
+   "reveal"
+  ],
+  "accent_under_voice_db": 4,
+  "mix": {
+   "lufs": -16,
+   "true_peak_db": -1.5,
+   "lra": 11,
+   "aac_kbps": 192,
+   "sample_rate": 44100
+  }
+ },
+ "script": {
+  "beats_painting": [
+   "hook",
+   "ident",
+   "surface",
+   "turn",
+   "details",
+   "context",
+   "reveal",
+   "reframe",
+   "question"
+  ],
+  "beats_legend": [
+   "hook",
+   "story",
+   "reveal",
+   "honesty",
+   "reframe",
+   "question"
+  ],
+  "hook_words": [
+   12,
+   20
+  ],
+  "caption_chunk_words": [
+   3,
+   9
+  ],
+  "ident_template": "This is {title}, painted by {artist}{year_clause}.",
+  "turn_phrases": [
+   "But look closely.",
+   "But look at {detail}.",
+   "Now look at {detail}."
+  ],
+  "reveal_phrases": [
+   "And here's the disturbing part.",
+   "That's what makes this painting so unsettling.",
+   "And that is the part most people never notice."
+  ],
+  "closers": [
+   "either_or_question",
+   "open_question",
+   "aphorism"
+  ]
+ },
+ "metadata_ours": {
+  "title_max_chars": 60,
+  "category_id": 27,
+  "hashtags": 3,
+  "educational_line": "Educational content: this video explores the history, symbolism and details of a historical artwork."
+ }
+}

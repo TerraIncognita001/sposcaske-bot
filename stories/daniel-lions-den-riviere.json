@@ -1,0 +1,127 @@
+{
+  "schema": 1,
+  "id": "daniel-lions-den-riviere",
+  "template": "painting",
+  "priority": 10,
+  "artwork": {
+    "title": "Daniel in the Lions' Den",
+    "artist": "Briton Rivière",
+    "year": 1872,
+    "artist_died": 1920,
+    "collection": "Walker Art Gallery, Liverpool",
+    "wikidata": null
+  },
+  "images": {
+    "main": {
+      "file": "demo/assets/daniel.jpg",
+      "commons": null,
+      "license": "Public domain",
+      "credit": "Briton Rivière, Daniel in the Lions' Den (1872), Walker Art Gallery — Wikimedia Commons"
+    },
+    "portrait": {
+      "file": "demo/assets/riviere_portrait.jpg",
+      "crop": [
+        0.17,
+        0.16,
+        0.83,
+        0.84
+      ],
+      "commons": "Philip Hermogenes Calderon - Briton Rivière.jpg",
+      "license": "Public domain",
+      "credit": "Philip Hermogenes Calderon, Briton Rivière (1881) — Wikimedia Commons"
+    }
+  },
+  "focus": {
+    "lions_left": [0.1, 0.42, 0.5, 0.8],
+    "right_group": [0.5, 0.26, 0.88, 0.72],
+    "lion_left": [0.07, 0.47, 0.2, 0.68],
+    "big_lion": [0.5, 0.4, 0.64, 0.57],
+    "faces": [0.5, 0.4, 0.73, 0.71],
+    "pack": [0.06, 0.38, 0.74, 0.84],
+    "daniel": [0.73, 0.24, 0.86, 0.94],
+    "daniel_top": [0.72, 0.22, 0.88, 0.66],
+    "daniel_lions": [0.44, 0.24, 0.9, 0.94],
+    "hands": [0.77, 0.52, 0.85, 0.63],
+    "bones": [0.05, 0.82, 0.36, 0.98]
+  },
+  "names": {
+    "man": ["daniel_top"],
+    "daniel": ["daniel_top", "daniel", "daniel_lions", "full", "card"],
+    "calm": ["daniel_top", "daniel", "daniel_lions"],
+    "step": ["daniel_top", "daniel"],
+    "lions": ["faces", "pack", "lions_left", "right_group", "big_lion", "daniel_lions", "full"],
+    "eaten": ["faces", "lions_left", "right_group", "pack", "big_lion"],
+    "snarling": ["faces", "big_lion", "right_group"],
+    "bones": ["bones"],
+    "floor": ["bones"],
+    "hands": ["hands"],
+    "back": ["hands", "daniel"],
+    "pit": ["full", "pack", "daniel_lions"],
+    "briton": ["portrait"],
+    "rivière": ["portrait"]
+  },
+  "hook_title": "CALM",
+  "lines": [
+    {"beat": "hook", "say": "This man is about to be eaten alive,", "cam": [{"to": "daniel_top", "how": "cut"}, {"to": "faces", "how": "cut", "on": "eaten"}]},
+    {"beat": "hook", "say": "and somehow he is completely calm.", "cam": [{"to": "daniel_top", "how": "cut", "on": "he"}, {"to": "daniel_lions", "on": "completely"}]},
+    {"beat": "ident", "say": "This is Daniel in the Lions' Den,", "cam": [{"to": "full", "how": "cut", "at": 0.14}, {"to": "card", "at": 0.5}]},
+    {"beat": "ident", "say": "painted by Briton Rivière in 1872.", "cam": {"image": "portrait", "on": "Briton"}},
+    {"beat": "setup", "say": "Daniel stands in a stone pit,", "cam": {"to": "full", "how": "cut", "push": true}},
+    {"beat": "setup", "say": "surrounded by lions,", "cam": {"to": "faces", "on": "surrounded"}},
+    {"beat": "setup", "say": "with old bones scattered across the floor.", "cam": {"to": "bones", "on": "bones"}},
+    {"beat": "turn", "say": "But look at his hands.", "cam": {"to": "hands", "on": "his"}, "accent": true},
+    {"beat": "detail", "say": "They're tied behind his back."},
+    {"beat": "triad", "say": "He can't fight. He can't run.", "cam": {"to": "daniel_top"}},
+    {"beat": "triad", "say": "He can only stand there.", "cam": {"to": "daniel"}},
+    {"beat": "backstory", "say": "According to the Book of Daniel,", "cam": {"to": "full", "how": "cut", "push": true}},
+    {"beat": "backstory", "say": "he was sentenced to this pit"},
+    {"beat": "backstory", "say": "because he would not stop praying."},
+    {"beat": "backstory", "say": "Nobody survives a night in a lions' den.", "cam": {"to": "pack", "on": "night"}},
+    {"beat": "backstory", "say": "But at sunrise, the king found him alive.", "cam": {"to": "daniel_top", "on": "sunrise"}},
+    {"beat": "reveal", "say": "And here's the unsettling part.", "cam": {"to": "full", "how": "cut", "push": true}, "accent": true, "pause_before": 0.4},
+    {"beat": "reveal", "say": "The lions are snarling,", "cam": {"to": "faces", "how": "cut"}},
+    {"beat": "reveal", "say": "yet Daniel hasn't moved a step.", "cam": {"to": "daniel_top", "how": "cut", "on": "Daniel"}},
+    {"beat": "reveal", "say": "As if he already knows how this night ends."},
+    {"beat": "question", "say": "So is he waiting to die,", "cam": {"to": "daniel_lions"}, "pause_before": 0.2},
+    {"beat": "question", "say": "or does he know something the lions don't?"}
+  ],
+  "pronounce": {
+    "Rivière": "Riv-ee-air",
+    "1872": "eighteen seventy-two"
+  },
+  "music": {
+    "mood": [
+      "dark",
+      "ambient",
+      "humming"
+    ],
+    "file": null
+  },
+  "meta": {
+    "title": "He is about to be eaten alive. Why is he calm?",
+    "description": "Daniel in the Lions' Den was painted by the British artist Briton Rivière in 1872 and hangs in the Walker Art Gallery, Liverpool. It shows the prophet Daniel, hands bound, facing the lions after being thrown into their den for continuing to pray (Book of Daniel, chapter 6).",
+    "tags": [
+      "art history",
+      "painting",
+      "Briton Riviere"
+    ],
+    "question": "Waiting to die, or does he know something the lions don't?"
+  },
+  "sources": [
+    {
+      "claim": "Title, artist, date 1872, Walker Art Gallery",
+      "url": "https://commons.wikimedia.org/wiki/Category:Daniel_in_the_Lions%27_Den_by_Briton_Rivi%C3%A8re",
+      "note": "signature 'Briton Riviere 1872' is visible bottom left of the canvas"
+    },
+    {
+      "claim": "Daniel is thrown to the lions for praying despite the decree; at first light the king finds him alive",
+      "url": "https://en.wikipedia.org/wiki/Daniel_in_the_lions%27_den",
+      "note": "Book of Daniel 6"
+    },
+    {
+      "claim": "Portrait of the painter",
+      "url": "https://commons.wikimedia.org/wiki/File:Philip_Hermogenes_Calderon_-_Briton_Rivi%C3%A8re.jpg",
+      "note": "painted 1881 by P. H. Calderon (d. 1898), public domain"
+    }
+  ]
+}

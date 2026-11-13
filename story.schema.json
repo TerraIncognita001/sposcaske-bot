@@ -1,0 +1,389 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "lore-bot story, schema 1",
+  "type": "object",
+  "required": [
+    "schema",
+    "id",
+    "template",
+    "artwork",
+    "images",
+    "focus",
+    "lines",
+    "meta",
+    "sources"
+  ],
+  "properties": {
+    "schema": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "template": {
+      "enum": [
+        "painting",
+        "legend"
+      ]
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "artwork": {
+      "type": "object",
+      "required": [
+        "title",
+        "artist"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "artist": {
+          "type": "string"
+        },
+        "year": {
+          "type": [
+            "integer",
+            "string",
+            "null"
+          ]
+        },
+        "artist_died": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "collection": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "wikidata": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^Q[0-9]+$"
+        }
+      }
+    },
+    "images": {
+      "type": "object",
+      "required": [
+        "main"
+      ],
+      "additionalProperties": {
+        "$ref": "#/$defs/image"
+      }
+    },
+    "focus": {
+      "type": "object",
+      "description": "Named boxes on the main image: [x0, y0, x1, y1] in 0-1, tight around the thing. 'full' and 'card' are built in.",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "minItems": 4,
+        "maxItems": 4
+      }
+    },
+    "lines": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "object",
+        "required": [
+          "beat",
+          "say"
+        ],
+        "properties": {
+          "beat": {
+            "enum": [
+              "hook",
+              "ident",
+              "setup",
+              "turn",
+              "detail",
+              "triad",
+              "backstory",
+              "reveal",
+              "question",
+              "surface",
+              "details",
+              "context",
+              "story",
+              "honesty",
+              "reframe"
+            ]
+          },
+          "say": {
+            "type": "string",
+            "description": "one clause, 1-9 words, shown as one caption"
+          },
+          "cam": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "to": {
+                    "type": "string"
+                  },
+                  "how": {
+                    "enum": [
+                      "glide",
+                      "cut"
+                    ]
+                  },
+                  "push": {
+                    "type": "boolean"
+                  },
+                  "at": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "description": "when the cue fires, as a fraction of the line's duration"
+                  },
+                  "seq": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "maxItems": 4
+                  },
+                  "pan": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  },
+                  "image": {
+                    "type": "string",
+                    "description": "cut to another image (the painter's portrait card) until the next line"
+                  },
+                  "on": {
+                    "type": "string",
+                    "description": "the word of this line that names the thing: the cue fires as that word is spoken (cuts 0.1 s before it, glides start 0.45 s before it and must land within 1 s, else they become a cut)"
+                  }
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "to": {
+                      "type": "string"
+                    },
+                    "how": {
+                      "enum": [
+                        "glide",
+                        "cut"
+                      ]
+                    },
+                    "push": {
+                      "type": "boolean"
+                    },
+                    "at": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1,
+                      "description": "when the cue fires, as a fraction of the line's duration"
+                    },
+                    "seq": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 1,
+                      "maxItems": 4
+                    },
+                    "pan": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 2,
+                      "maxItems": 2
+                    },
+                    "image": {
+                      "type": "string",
+                      "description": "cut to another image (the painter's portrait card) until the next line"
+                    },
+                    "on": {
+                      "type": "string",
+                      "description": "the word of this line that names the thing: the cue fires as that word is spoken (cuts 0.1 s before it, glides start 0.45 s before it and must land within 1 s, else they become a cut)"
+                    }
+                  }
+                },
+                "minItems": 1,
+                "maxItems": 3
+              }
+            ]
+          },
+          "accent": {
+            "type": "boolean"
+          },
+          "pause_before": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 2
+          },
+          "pause": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 2
+          }
+        }
+      }
+    },
+    "pronounce": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "hook_title": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 12,
+      "description": "the punch word: the last word of the hook, shown in giant red letters from the end of the hook until the title card"
+    },
+    "music": {
+      "type": "object",
+      "properties": {
+        "mood": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "file": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "required": [
+        "title",
+        "description"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "maxLength": 60
+        },
+        "description": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5
+        },
+        "question": {
+          "type": "string"
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "claim",
+          "url"
+        ],
+        "properties": {
+          "claim": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "quote": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "names": {
+      "type": "object",
+      "description": "THE PICTURE-WORD RULE, checked by the renderer: spoken word (lower case) -> the framings that are allowed while it is said: focus names, 'full', 'card' or an image key. A render fails when a listed word is spoken and none of its framings is on screen within a second.",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "minItems": 1
+      }
+    }
+  },
+  "$defs": {
+    "image": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "commons": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "license": {
+          "type": "string"
+        },
+        "credit": {
+          "type": "string"
+        },
+        "crop": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 4,
+          "maxItems": 4,
+          "description": "[x0,y0,x1,y1] in 0-1: use only this part of the file"
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "file"
+          ]
+        },
+        {
+          "required": [
+            "commons"
+          ]
+        }
+      ]
+    }
+  }
+}
