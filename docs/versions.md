@@ -19,6 +19,11 @@ tried and rolled back.
   so a 110 s video stays under the 100 MB a file the preview branch takes (crf 18 gave 36 MB a minute with the grain).
   `tools/script_check.py`: the ident may say drawn / engraved / carved by. Story `tartini-dream-boilly` (our own
   words in the 13 slots, long form, 217 words; the lead picture is Boilly's lithograph of 1824).
+  FIRST DRY RUN (run 43482303137, Nov 13): 4 min 41 s in all, the bot itself 210 s; 91.3 s of video, 146 wpm, six
+  pictures fetched by the bot (licences read from Commons: 2 CC0, 4 public domain), picture-word audit 32 of 32,
+  -16.0 LUFS, true peak -0.1 dBFS, 69.2 MB; all nine conformance checks passed. The run before it (43481675052,
+  `pictures_only`) put the pictures on `preview` so the focus boxes could be marked: Commons answers 429 to the
+  cloud sandbox, GitHub's runners get through.
 - v1.00 = THE APPROVED MAKET, Andrii, Nov 13 2026 ('Супер! Це буде нашим основним макетом!', after demo 7; the repo
   was created the same hour, first under the working name lore-bot). What it holds: the format measured on the
   reference channel (`docs/FORMAT.md`, `format.json`), the prototype renderer (`render.py`, template "painting"), the
