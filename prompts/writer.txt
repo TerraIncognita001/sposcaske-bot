@@ -29,7 +29,8 @@ S1  HOOK. One sentence, 8-18 words, present tense. It makes ONE promise: somethi
       "Why is / does / did ___?"
     Put two things in it that do not belong together (an angel and a spear, a lullaby and the devil, a man about
     to die and his calm). Use one strong word of judgement (terrifying, disturbing, beautiful, wrong, forbidden).
-    Do not name the picture, the artist or the hero. Do not give the answer.
+    Do not name the picture, the artist or the hero. Do not give the answer: the hook may say THAT something is
+    wrong with the hands, never WHAT is wrong with them. Write the punch word in normal letters, not capitals.
     The LAST WORD is the punch word: a strong plain word of 3-8 letters (miss, wrong, calm, alive, devil, anger,
     forever, alone). It is shown on the screen in giant red letters, alone, so it must carry the video by itself.
 S2  IDENT. One sentence, 9-20 words: who and when. Two forms only.
@@ -45,6 +46,9 @@ S5  DETAIL. One or two sentences of 3-8 words: what is there, said flat. No adje
 S6  TRIAD. Three sentences of 3-6 words in the same shape: two with a negative, then one with "simply", "only" or
     "just". Shape (do not reuse the words): "X doesn't A. X doesn't B. X simply C."
 S7  BACKSTORY. One sentence, 12-20 words, past tense, beginning "According to <source>,". Facts only.
+    The source is NAMED: a book, a person, a museum, a scripture ("According to the Book of Daniel,", "According to
+    the Musée Fabre,"). Never "historical records", "experts", "legend" or "some say" when FACTS name a source.
+    Tell the story the picture shows or the reason it was made, not where the artist lived.
 X   (optional, KIND story, at most 3 in the whole script) one more sentence of the story, facts only, 8-20 words.
     Place after S7, after S9 or after S11.
 S8  EXPECTATION. One sentence, 5-9 words: what should have happened.

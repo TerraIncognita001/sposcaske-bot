@@ -138,7 +138,7 @@ def build(script):
                 elif cur[0] == "portrait":                             # the sentence goes on after the portrait
                     go("main:full", how="cut", push=True)
             else:
-                if cur[0] == "portrait" or (first and slot in ("S3", "S10")) or (first and cur[0] != "main" and not any(t in shows or t in words for t in toks)):
+                if cur[0] == "portrait" or (first and slot in ("S3", "S7", "S10")) or (first and cur[0] != "main" and not any(t in shows or t in words for t in toks)):
                     if cur[0] != "main":
                         cues.append({"scene": "main", "to": "full", "push": True})
                     else:
@@ -182,6 +182,10 @@ def build(script):
                     if wide != cur[1] or cur[0] != "main":
                         cues.append({"to": wide, "on": toks[-2]})
                         cur = ("main", wide)
+            if slot == "S6" and not cues and cur[0] == "main" and cur[1] in focus and re.search(r"\b(simply|only|just)\b", say):
+                wider = [n for n, b in focus.items() if n != cur[1] and inside(focus[cur[1]], b) > 0.9 and area(b) > 1.8 * area(focus[cur[1]])]
+                if wider:                                              # the triad's last beat pulls back: the detail in its owner
+                    go("main:" + min(wider, key=lambda n: area(focus[n])))
             if slot == "S1" and first and not cues:                   # the hook never opens on the whole picture: a crop within two seconds
                 tight = [l["name"] for l in look if area(l["box"]) < 0.4]
                 pick = next((n for n in tight if re.search(r"(face|top|upper|head)", n)), tight[0] if tight else None)
