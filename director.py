@@ -75,8 +75,9 @@ def build(script):
             im["find"] = {"query": e["query"]}
         im["focus"] = {l["name"]: l["box"] for l in e.get("look", [])}
         images[e["key"]] = im
-        for w in e.get("words", []):
-            words.setdefault(w.lower(), []).append(f"{e['key']}:full")
+        for w in e.get("words", []):                                   # "Villa Medici" -> villa, medici
+            for tok in [norm(x) for x in w.split() if len(norm(x)) > 3]:
+                words.setdefault(tok, []).append(f"{e['key']}:full")
         for l in e.get("look", []):
             for w in l.get("words", []):
                 words.setdefault(w.lower(), []).append(f"{e['key']}:{l['name']}")
@@ -96,9 +97,6 @@ def build(script):
 
     names = {w: allowed(t) for w, t in words.items()}
     person = [norm(x) for x in re.split(r"[\s-]+", script["portrait"]["of"]) if x[:1].isupper()]
-    for x in person[:1] + person[-1:]:
-        names.setdefault(x, [])
-        names[x] = ["portrait"] + [n for n in names[x] if n != "portrait"]
 
     lines, cur, sents = [], ("main", "full"), script["sentences"]
     for si, s in enumerate(sents):
@@ -134,6 +132,7 @@ def build(script):
                 hit = next((t for t in toks if t in person), None)
                 if hit and not any("image" in c for l_ in lines if l_["beat"] == "ident" for c in (l_.get("cam") if isinstance(l_.get("cam"), list) else [l_.get("cam") or {}])):
                     cues.append({"image": "portrait", "on": hit})
+                    ln["names"] = {t: ["portrait"] for t in toks if t in person}    # only here: later the name alone asks for nothing
                     cur = ("portrait", "")
                 elif cur[0] == "portrait":                             # the sentence goes on after the portrait
                     go("main:full", how="cut", push=True)
@@ -182,6 +181,12 @@ def build(script):
                     if wide != cur[1] or cur[0] != "main":
                         cues.append({"to": wide, "on": toks[-2]})
                         cur = ("main", wide)
+            if slot == "S1" and first and not cues:                   # the hook never opens on the whole picture: a crop within two seconds
+                tight = [l["name"] for l in look if area(l["box"]) < 0.4]
+                pick = next((n for n in tight if re.search(r"(face|top|upper|head)", n)), tight[0] if tight else None)
+                if pick:
+                    cues.append({"to": pick, "how": "cut"})
+                    cur = ("main", pick)
             if slot in ("S4", "S10") and first:
                 ln["accent"] = True
             if slot == "S10" and first:
