@@ -42,6 +42,8 @@ look and the voice on samples before the first public upload.
    Test with `dry_run` (video + metadata to the `preview` branch, the log to `logs`).
 6. `main` is production. Bot changes go to a `draft` branch and reach `main` only on Andrii's go (his 10-day draft
    rule from ww2-bot); stories and docs go straight to `main`. Commits end with the `Co-Authored-By: Claude` line.
+   VERSIONS: the maket is v1.00; every bot change is the next vX.YY (+0.01), logged in `docs/versions.md` and saved
+   to the branch `sposcaske-vX.YY` (rules: `CLAUDE.md` "Versions"). M1 is v1.01 or later, never v1.00 again.
 7. Secrets only in GitHub secrets; never in code, logs, stories or commit messages. If the repository is public
    (§11), nothing copyrighted goes into it: no reference videos, no third-party music files.
 8. Wikimedia etiquette: descriptive User-Agent with the repository URL, at most 1 request a second, `maxlag=5`,
