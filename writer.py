@@ -115,12 +115,17 @@ def write(topic, work):
     base = ((ROOT / "prompts/writer.txt").read_text(encoding="utf-8") + f"\n\nKIND  {topic['kind']}\nTITLE  {title}\n\nFACTS\n" + "\n".join(f"{i + 1}. {s}" for i, s in enumerate(facts))
             + "\n\nLOOK (" + look.get("summary", "") + ")\n" + "\n".join(f"- {t['name']}: words {', '.join(t.get('words', []))}" for t in look["things"]) + "\n\nAVOID\n" + ("\n".join("- " + r for r in recent()) or "- nothing yet"))
     ok = lambda d: isinstance(d.get("sentences"), list) and len(d["sentences"]) >= 12 and d.get("punch") and d.get("portrait_of") and d.get("meta", {}).get("title")
-    note = ""
-    for attempt in range(3):
+    note, drafts = "", []
+    (work / "look.json").write_text(json.dumps(look, indent=1, ensure_ascii=False), encoding="utf-8")
+    for attempt in range(4):
         w = gemini(base + note, ok, purpose="script")
         res, words, n = script_check.check([s["text"].strip() for s in w["sentences"]], title, w["punch"])
         hard = [f"{name}: {d}" for good, h, name, d in res if not good and h]
         print(f"{topic['id']}: draft {attempt + 1}: {words} words, {n} sentences, {len(hard)} failures of the construction")
+        for h in hard:
+            print("   FAIL", h[:230])
+        drafts.append({"draft": attempt + 1, "failures": hard, "answer": w})
+        (work / "writer_drafts.json").write_text(json.dumps(drafts, indent=1, ensure_ascii=False), encoding="utf-8")
         if not hard:
             return assemble(topic, facts, {"commons": page_image, "license": lic[0], "wikidata": qid}, look, w, title)
         note = "\n\nYOUR LAST DRAFT BROKE THE FORM. Fix exactly these points and return the whole JSON again:\n" + "\n".join("- " + h for h in hard) + "\n\nThe draft:\n" + json.dumps(w["sentences"], ensure_ascii=False)

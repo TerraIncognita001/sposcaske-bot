@@ -79,7 +79,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           rm -rf /tmp/p && mkdir -p /tmp/p
-          cp work/final.mp4 work/metadata.json work/report.json work/sources.json work/directed.json /tmp/p/ 2>/dev/null || true
+          cp work/final.mp4 work/metadata.json work/report.json work/sources.json work/directed.json work/writer_drafts.json work/look.json /tmp/p/ 2>/dev/null || true
           [ "${{ inputs.write }}" = "true" ] && cp scripts/*.json /tmp/p/ 2>/dev/null || true
           if [ "${{ inputs.pictures_only }}" = "true" ]; then mkdir -p /tmp/p/img && cp work/img/* /tmp/p/img/ 2>/dev/null || true; fi
           cp work/final_work/timeline.json /tmp/p/ 2>/dev/null || true
