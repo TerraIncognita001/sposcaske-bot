@@ -1,17 +1,18 @@
-# CLAUDE.md — sposcaske-bot (maket stage, v1.00)
+# CLAUDE.md — sposcaske-bot (v1.01: maket + dry-run bot)
 
 Owner: Andrii (writes in Ukrainian; wants short, army-style answers: task → direct solution, the best free option,
 no fluff). Reply in Ukrainian.
 
-State (2026-11-13): maket only — measured format + build prompt + prototype renderer + one example story. No
-channel, no workflow, no uploads yet. Next: `docs/BUILD_PROMPT.md` §11 (Andrii's decisions), then milestone M1.
+State (2026-11-13): the maket + a bot that makes DRY RUNS (`.github/workflows/video.yml` -> `bot.py`; the video goes
+to the `preview` branch, the log to `logs`). No channel, no upload, no schedule yet. Next: `docs/BUILD_PROMPT.md` §11 (Andrii's decisions), then milestone M1.
 
 Read before any work: `docs/BUILD_PROMPT.md` (the plan and the hard rules; §13 = the second pass), `docs/FORMAT.md`
 (§16–§17 win over earlier sections; §17.2 = the picture–word rule, enforced by `render.py`) + `format.json`, `docs/WRITER_PROMPT.md` (scripts are a fixed form of 13 slots,
 gated by `tools/script_check.py`). Change a number only with a new measurement.
 
 ## Live
-**v1.00** on `main` (Nov 13 2026: the approved maket, demo 7). Next: **v1.01**. History: `docs/versions.md`.
+**v1.01** on `main` (Nov 13 2026: the first bot run = a dry run in GitHub Actions, several pictures in one video;
+v1.00 = the approved maket, demo 7). Next: **v1.02**. History: `docs/versions.md`.
 
 ## Versions (the system of the warehouse ww2-bot, Andrii, Nov 13)
 - Every change of the bot (code, `format.json`, workflow, schedule, the look or the sound of a video, the writer

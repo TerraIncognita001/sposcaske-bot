@@ -1,0 +1,89 @@
+name: video
+# One run = one video (v1.01: dry runs only; the upload is not built yet).
+# A dry run puts the video, its metadata and the report on the "preview" branch and the log on the "logs" branch
+# (both overwritten every time), exactly as the warehouse ww2-bot does.
+on:
+  workflow_dispatch:
+    inputs:
+      story:
+        description: "Story id (the file name in stories/ without .json)"
+        required: true
+      dry_run:
+        description: "Test only: make the video, do NOT upload (it goes to the preview branch)"
+        type: boolean
+        default: true
+      pictures_only:
+        description: "Only fetch the story's pictures and put them on the preview branch (to mark the focus boxes)"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: video
+  cancel-in-progress: false
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      KOKORO_DIR: /home/runner/kokoro
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - name: voice model cache            # offline Kokoro voice, 115 MB, downloaded once
+        if: ${{ !inputs.pictures_only }}
+        uses: actions/cache@v4
+        with:
+          path: ~/kokoro
+          key: kokoro-v1.0-int8
+      - name: tools
+        run: |
+          sudo apt-get install -y -qq --no-install-recommends ffmpeg >/dev/null \
+            || (sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends ffmpeg >/dev/null)
+          ffmpeg -version | head -1
+          pip install -q -r requirements.txt
+      - name: voice model
+        if: ${{ !inputs.pictures_only }}
+        run: |
+          mkdir -p ~/kokoro && cd ~/kokoro
+          for f in kokoro-v1.0.int8.onnx voices-v1.0.bin; do
+            [ -s "$f" ] || curl -sSL --retry 3 -o "$f" "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/$f"
+          done
+          ls -la
+      - name: pictures only
+        if: ${{ inputs.pictures_only }}
+        run: |
+          set -o pipefail
+          python sources.py "stories/${{ inputs.story }}.json" work 2>&1 | tee run.log
+      - name: make the video
+        if: ${{ !inputs.pictures_only }}
+        run: |
+          set -o pipefail
+          python bot.py --story "${{ inputs.story }}" ${{ inputs.dry_run && '--dry-run' || '' }} 2>&1 | tee run.log
+      - name: preview for review           # the video (or the pictures) go to the "preview" branch (overwritten)
+        if: ${{ !cancelled() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -rf /tmp/p && mkdir -p /tmp/p
+          cp work/final.mp4 work/metadata.json work/report.json work/sources.json /tmp/p/ 2>/dev/null || true
+          if [ "${{ inputs.pictures_only }}" = "true" ]; then mkdir -p /tmp/p/img && cp work/img/* /tmp/p/img/ 2>/dev/null || true; fi
+          cp work/final_work/timeline.json /tmp/p/ 2>/dev/null || true
+          [ -n "$(ls -A /tmp/p)" ] || exit 0
+          cd /tmp/p && git init -q -b preview && git add . \
+            && git -c user.name=bot -c user.email=bot@users.noreply.github.com commit -qm "dry run ${GITHUB_RUN_ID}: ${{ inputs.story }}" \
+            && git push -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" preview
+      - name: log                          # the bot's output goes to the "logs" branch (overwritten)
+        if: ${{ !cancelled() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -f run.log ] || exit 0
+          rm -rf /tmp/l && mkdir -p /tmp/l && tail -n 400 run.log > /tmp/l/run.log
+          cd /tmp/l && git init -q -b logs && git add . \
+            && git -c user.name=bot -c user.email=bot@users.noreply.github.com commit -qm "run ${GITHUB_RUN_ID}" \
+            && git push -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" logs

@@ -43,7 +43,7 @@ def check(sents, title="", punch=None):
     if punch:
         rule("S1 ends on the punch word (the red word on screen)", re.sub(r"\W", "", sents[0].split()[-1]).lower() == punch.lower(), sents[0].split()[-1])
     # S2 ident
-    rule("S2 is 'This is <Title>, painted by <Artist> [in <year>].'", re.match(r"^This is .+, painted by .+\.$", sents[1]) is not None, sents[1])
+    rule("S2 is 'This is <Title>, painted / drawn / engraved / carved by <Artist> [in <year>].'", re.match(r"^This is .+, (painted|drawn|engraved|carved|sculpted|made) by .+\.$", sents[1]) is not None, sents[1])
     # turn, detail, triad
     it = find(TURN, 2)
     rule("a TURN sentence 'But look closely / at <detail>.' in the first half", it is not None and it <= n // 2, sents[it] if it is not None else "missing")

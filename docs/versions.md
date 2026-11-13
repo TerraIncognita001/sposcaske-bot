@@ -5,6 +5,20 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.01 = THE FIRST BOT RUN: DRY RUN IN GITHUB ACTIONS + SEVERAL PICTURES IN ONE VIDEO, Andrii, Nov 13 2026 (he sent
+  the reference's video about Tartini's dream, 111 s, nine pictures: 'повністю відтвори це відео за макетом ...
+  відтвори це використовуючи драй ран через бота'; 'залиши початок як є' = the approved opening stays). New:
+  `.github/workflows/video.yml` (workflow_dispatch: `story`, `dry_run`, `pictures_only`; the video, metadata, report
+  and timeline go to the `preview` branch, the log to `logs`, both overwritten, as in ww2-bot); `bot.py` (script gate
+  -> pictures -> render -> conformance -> metadata; exit 3 = this story cannot make a good video; no upload yet, it
+  refuses to run without --dry-run); `sources.py` (pictures from Wikimedia Commons through Special:FilePath, the
+  licence read from the API when it answers and required to be public domain / CC0; a copy in `stories/img/<id>/`
+  wins); `requirements.txt` (the versions demo 7 was made with). `render.py`: a cue `"scene": "<picture key>"` cuts
+  to another picture of the story, each scene has its own camera, focus boxes (`images.<key>.focus`) and pyramid;
+  names in the picture-word audit may be `scene:box`; the encode is capped (`format.json` `encode`: crf 19, 6 Mbit/s)
+  so a 110 s video stays under the 100 MB a file the preview branch takes (crf 18 gave 36 MB a minute with the grain).
+  `tools/script_check.py`: the ident may say drawn / engraved / carved by. Story `tartini-dream-boilly` (our own
+  words in the 13 slots, long form, 217 words; the lead picture is Boilly's lithograph of 1824).
 - v1.00 = THE APPROVED MAKET, Andrii, Nov 13 2026 ('Супер! Це буде нашим основним макетом!', after demo 7; the repo
   was created the same hour, first under the working name lore-bot). What it holds: the format measured on the
   reference channel (`docs/FORMAT.md`, `format.json`), the prototype renderer (`render.py`, template "painting"), the

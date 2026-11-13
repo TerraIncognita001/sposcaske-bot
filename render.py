@@ -33,6 +33,16 @@ def cues(ln):
     return [] if not c else (c if isinstance(c, list) else [c])
 
 
+def scene_track(story, marks):
+    """[(time, scene)]: which picture is on screen. A cue with "scene" cuts to that picture ("main" = the lead one)."""
+    out = [(0.0, "main")]
+    for ln, (t0, t1) in zip(story["lines"], marks):
+        for c in cues(ln):
+            if "scene" in c:
+                out.append((cue_time(c, ln["say"], t0, t1) - F["camera"]["focus_rule"]["cut_lead_s"], c["scene"]))
+    return sorted(out)
+
+
 def word_times(say, t0, t1):
     """Estimated start of every word of a line (one synthesis call per line gives no word clock): the line's time
     shared by letters, with weight for the pause after a comma or a full stop."""
@@ -127,8 +137,9 @@ def beat_times(story, marks):
 class Camera:
     """Rect = (cx, cy, w) in source pixels; h = w / stage aspect. w > image width = the picture as a card."""
 
-    def __init__(self, story, img_w, img_h, sw, sh):
-        self.W, self.H, self.a, self.story = img_w, img_h, sw / sh, story
+    def __init__(self, story, img_w, img_h, sw, sh, scene="main"):
+        self.W, self.H, self.a, self.story, self.scene = img_w, img_h, sw / sh, story, scene
+        self.focus = story.get("focus", {}) if scene == "main" else story["images"][scene].get("focus", {})
         C = F["camera"]
         self.full_w = min(img_w, img_h * self.a)
         self.card_w = max(img_w / C["ident_card"]["zoom"], img_h * self.a / 0.80)
@@ -139,7 +150,7 @@ class Camera:
             return self.clamp((self.W / 2, self.H / 2, self.full_w))
         if name == "card":
             return (self.W / 2, self.H / 2, self.card_w)
-        x0, y0, x1, y1 = self.story["focus"][name]
+        x0, y0, x1, y1 = self.focus[name]
         bw, bh, m = (x1 - x0) * self.W, (y1 - y0) * self.H, F["camera"]["focus_margin"]
         w = min(max(max(bw, bh * self.a) * (1 + 2 * m), self.min_w), self.full_w)
         return self.clamp(((x0 + x1) / 2 * self.W, (y0 + y1) / 2 * self.H, w))
@@ -154,9 +165,14 @@ class Camera:
         return (cx, cy, w)
 
     def moves(self, marks):
-        C, out = F["camera"], []
+        C, out, scene = F["camera"], [], "main"
         for ln, (t0, t1) in zip(self.story["lines"], marks):
             for cam in cues(ln):
+                scene = cam.get("scene", scene)                        # v1.01: several pictures; each has its own camera
+                if scene != self.scene:
+                    continue
+                if "scene" in cam:                                     # entering a picture is always a cut
+                    cam = dict({"to": "full", "push": True}, **cam, how="cut") if not ("seq" in cam or "pan" in cam) else cam
                 ts = cue_time(cam, ln["say"], t0, t1)
                 if "seq" in cam:                                       # hook montage: jump cuts inside one line
                     k = len(cam["seq"])
@@ -288,41 +304,45 @@ class Finish:
         return (x * self.vig * light + grain).clip(0, 255).astype(np.uint8)
 
 
-def focus_audit(story, marks, rects, ev, cam):
+def focus_audit(story, marks, rects, ev, cams, track):
     """THE RULE: the frame shows what the words name. For every word listed in story["names"], look at the camera at
     the moment the word is spoken and require one of its allowed framings: the thing's box at least 70 % inside the
-    frame and at least 4 % of the frame, or the whole picture where "full" is allowed, or the named image shot."""
-    names, out = {k.lower(): v for k, v in story.get("names", {}).items()}, []
+    frame and a real share of it, or the whole picture where "full" is allowed, or the named image shot.
+    A framing is "box" (in the lead picture), "scene:box", "scene:full", or the name of an image shot."""
+    names, out, R_ = {k.lower(): v for k, v in story.get("names", {}).items()}, [], F["camera"]["focus_rule"]
+    shots = {s_[2] for s_ in ev["image_shots"]}
     for ln, (t0, t1) in zip(story["lines"], marks):
         for w, tw in word_times(ln["say"], t0, t1):
-            w0 = w.split("'")[0]
-            allowed = names.get(w) or names.get(w0)
+            allowed = names.get(w) or names.get(w.split("'")[0])
             if not allowed:
                 continue
-            ok, seen, shot = False, "", None
+            ok, seen = False, ""
             for t in np.arange(tw - 0.1, tw + 1.01, 0.1):                  # on screen within a second of being named
                 shot = next((s_[2] for s_ in ev["image_shots"] if s_[0] <= t < s_[1]), None)
-                cx, cy, wv = rects[min(len(rects) - 1, max(0, int(t * FPS)))]
+                scene = [sc for ts, sc in track if ts <= t][-1]
+                cam = cams[scene]
+                cx, cy, wv = rects[scene][min(len(rects[scene]) - 1, max(0, int(t * FPS)))]
                 hv, parts_ = wv / cam.a, []
                 for f in allowed:
-                    if shot or f == "portrait":
+                    fs, fb = f.split(":") if ":" in f else ("main", f)
+                    if shot or f in shots:
                         ok = ok or f == shot
-                    elif f in ("full", "card"):
+                    elif fs != scene:
+                        continue
+                    elif fb in ("full", "card"):
                         ok = ok or wv >= cam.full_w * 0.93
                     else:
-                        x0, y0, x1, y1 = story["focus"][f]
+                        x0, y0, x1, y1 = cam.focus[fb]
                         bx0, by0, bx1, by1 = x0 * cam.W, y0 * cam.H, x1 * cam.W, y1 * cam.H
                         iw = max(0.0, min(bx1, cx + wv / 2) - max(bx0, cx - wv / 2))
                         ih = max(0.0, min(by1, cy + hv / 2) - max(by0, cy - hv / 2))
                         inside, share = iw * ih / ((bx1 - bx0) * (by1 - by0)), iw * ih / (wv * hv)
                         parts_.append(f"{f}:{inside:.0%} in, {share:.0%} of frame")
-                        R_ = F["camera"]["focus_rule"]                     # big in the frame, or the camera is as close as the source allows
                         ok = ok or (inside >= R_["box_inside_min"] and (share >= R_["box_share_of_frame_min"] or wv <= cam.min_w * 1.08))
-                seen = shot or "; ".join(parts_) or f"zoom {cam.full_w / wv:.2f}"
+                seen = shot or "; ".join(parts_) or f"{scene}, zoom {cam.full_w / wv:.2f}"
                 if ok:
                     break
-            t = tw
-            out.append({"t": round(t, 2), "word": w, "line": ln["say"], "ok": bool(ok), "shown": shot or "; ".join(seen) or f"zoom {cam.full_w / wv:.2f}"})
+            out.append({"t": round(float(tw), 2), "word": w, "line": ln["say"], "ok": bool(ok), "shown": seen})
     return out
 
 
@@ -608,26 +628,35 @@ def render(story_path, out_path):
     src = cv2.imread(str(ROOT / story["images"]["main"]["file"]), cv2.IMREAD_COLOR)
     extra = {}
     for k, v in story["images"].items():
-        if k != "main" and v.get("file"):
-            im = cv2.imread(str(ROOT / v["file"]), cv2.IMREAD_COLOR)
+        if v.get("file"):
+            im = src if k == "main" else cv2.imread(str(ROOT / v["file"]), cv2.IMREAD_COLOR)
+            if im is None:
+                raise SystemExit(f"picture '{k}' is missing: {v['file']}")
             if v.get("crop"):                                          # e.g. the rectangle inside an oval portrait
                 x0, y0, x1, y1 = v["crop"]
                 im = im[int(y0 * im.shape[0]):int(y1 * im.shape[0]), int(x0 * im.shape[1]):int(x1 * im.shape[1])]
             extra[k] = im
+    src = extra["main"]
     ih, iw = src.shape[:2]
     a = min(F["canvas"]["stage_aspect_max"], max(F["canvas"]["stage_aspect_min"], iw / ih))
     sw, sh = CW, int(round(CW / a / 2) * 2)
     y_off = int(round(CH * F["canvas"]["stage_center_y"] - sh / 2))
-    pyr = [src]
-    while min(pyr[-1].shape[:2]) > 600:
-        pyr.append(cv2.resize(pyr[-1], None, fx=0.5, fy=0.5, interpolation=cv2.INTER_AREA))
+    def pyramid(im):
+        out = [im]
+        while min(out[-1].shape[:2]) > 600:
+            out.append(cv2.resize(out[-1], None, fx=0.5, fy=0.5, interpolation=cv2.INTER_AREA))
+        return out
 
     clips = speak_lines(story)
     marks, total = timeline(story, clips)
     ev = beat_times(story, marks)
-    camera = Camera(story, iw, ih, sw, sh)
-    rects = camera.path(marks, total)
-    audit = focus_audit(story, marks, rects, ev, camera)
+    track = scene_track(story, marks)                                  # v1.01: one camera and one pyramid per picture used as a scene
+    used = sorted({sc for _, sc in track})
+    cams = {k: Camera(story, extra[k].shape[1], extra[k].shape[0], sw, sh, k) for k in used}
+    paths = {k: cams[k].path(marks, total) for k in used}
+    pyrs = {k: pyramid(extra[k]) for k in used}
+    rects = paths["main"]
+    audit = focus_audit(story, marks, paths, ev, cams, track)
     bad = [a_ for a_ in audit if not a_["ok"]]
     for a_ in bad:
         print(f"FOCUS FAIL {a_['t']:6.2f}s  '{a_['word']}' in \"{a_['line']}\"  shown: {a_['shown']}")
@@ -640,14 +669,19 @@ def render(story_path, out_path):
         caps.append((t0 + delay, nxt + delay, caption_sprite(caption_text(story, ln["say"]), sw, sh)))
     title = title_sprite(story["hook_title"].upper(), sw, sh) if story.get("hook_title") else None
     wav = build_audio(story, clips, marks, total, ev, work)
-    TR, n = F["overlays"]["transitions"], len(rects)
+    TR, n, E = F["overlays"]["transitions"], len(rects), F["encode"]
 
     ff = subprocess.Popen(["ffmpeg", "-y", "-v", "error", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{CW}x{CH}", "-r", str(FPS), "-i", "-", "-i", str(wav),
-                           "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-ar", "44100", "-ac", "2",
+                           "-c:v", "libx264", "-preset", "veryfast", "-crf", str(E["crf"]), "-maxrate", E["maxrate"], "-bufsize", E["bufsize"], "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-ar", "44100", "-ac", "2",
                            "-movflags", "+faststart", "-shortest", str(out_path)], stdin=subprocess.PIPE)
     canvas = np.zeros((CH, CW, 3), np.uint8)
-    for i, (cx, cy, w) in enumerate(rects):
+    ti = 0
+    for i in range(n):
         t = i / FPS
+        while ti + 1 < len(track) and track[ti + 1][0] <= t:
+            ti += 1
+        scene = track[ti][1]
+        (cx, cy, w), pyr, (ih, iw) = paths[scene][i], pyrs[scene], extra[scene].shape[:2]
         shot = next((s for s in ev["image_shots"] if s[0] <= t < s[1] and s[2] in extra), None)
         if shot:                                                       # the painter's portrait card
             st = image_shot(extra[shot[2]], (t - shot[0]) / (shot[1] - shot[0]), stars, sw, sh)

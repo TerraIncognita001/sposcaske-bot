@@ -419,5 +419,11 @@
   "category_id": 27,
   "hashtags": 3,
   "educational_line": "Educational content: this video explores the history, symbolism and details of a historical artwork."
+ },
+ "encode": {
+  "crf": 19,
+  "maxrate": "6M",
+  "bufsize": "12M",
+  "_why": "v1.01: grain makes crf 18 heavy (36 MB a minute); a 110 s video must stay under the 100 MB file limit of the preview branch"
  }
 }
