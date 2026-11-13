@@ -101,6 +101,7 @@ def build(script):
     lines, cur, sents = [], ("main", "full"), script["sentences"]
     for si, s in enumerate(sents):
         slot = s["slot"]
+        s = dict(s, text=re.sub(r"\b[A-Z]{3,}\b", lambda m: m.group(0).lower(), s["text"]))   # the model likes to shout the punch word: "RAGE" -> "rage"
         chunks = split_lines(s["text"])
         if slot == "S6" and lines and lines[-1]["beat"] == "triad" and len(lines[-1]["say"].split()) + len(s["text"].split()) <= 8 and not lines[-1].get("_joined"):
             lines[-1]["say"] += " " + s["text"]                        # two short triad sentences share a caption
