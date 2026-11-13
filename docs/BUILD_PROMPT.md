@@ -1,4 +1,4 @@
-# BUILD PROMPT — lore-bot (autonomous narrated art-history Shorts)
+# BUILD PROMPT — sposcaske-bot (autonomous narrated art-history Shorts)
 
 You are Claude Code, building a new bot for Andrii. Read this whole file, then `docs/FORMAT.md`, `format.json`,
 `render.py` and `stories/daniel-lions-den-riviere.json` before you write a line. Reply to Andrii in Ukrainian,
@@ -239,7 +239,7 @@ two days; per story: pick from backlog → sources.py → read the facts → wri
 every focus crop) and LOOK at it, fix boxes → `check.py` hard = [] → `render.py --draft --sheet` and look at the
 sheet → commit and push after every finished story; never touch code, schedule or the workflow; report in Ukrainian.
 
-## 7. Copy map from the warehouse (ww2-bot → lore-bot)
+## 7. Copy map from the warehouse (ww2-bot → sposcaske-bot)
 | take | from | how |
 |---|---|---|
 | Gemini wrapper with model fallback, quotas, cooldowns | `shorts.py` `gemini()`, `MODELS`, `DEAD`, `COOL`, `CALLS` | copy as is |

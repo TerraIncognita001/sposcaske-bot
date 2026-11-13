@@ -1,4 +1,4 @@
-# CLAUDE.md — lore-bot (maket stage)
+# CLAUDE.md — sposcaske-bot (maket stage)
 
 Owner: Andrii (writes in Ukrainian; wants short, army-style answers: task → direct solution, the best free option,
 no fluff). Reply in Ukrainian.

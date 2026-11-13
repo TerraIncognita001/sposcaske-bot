@@ -1,4 +1,4 @@
-# lore-bot — maket
+# sposcaske-bot — maket
 
 An autonomous YouTube Shorts bot in the measured format of TikTok's @doom.lore: narrated dark art-history videos
 made from one public-domain painting. This folder is the maket (template + prototype), not yet the bot.

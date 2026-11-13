@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""lore-bot PROTOTYPE renderer v2 ("maket"): story JSON -> 1080x1920 MP4 in the measured @doom.lore format.
+"""sposcaske-bot PROTOTYPE renderer v2 ("maket"): story JSON -> 1080x1920 MP4 in the measured @doom.lore format.
 
     python render.py stories/<id>.json out/<id>.mp4
 
