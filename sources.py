@@ -94,9 +94,16 @@ def find_commons(query, min_width=1100, limit=12):
 
 def wikipedia(title):
     """(numbered fact sentences, Commons file of the page's lead picture, Wikidata id) for an English Wikipedia page."""
-    d = api("en.wikipedia.org", action="query", titles=title, redirects=1, prop="extracts|pageimages|pageprops", explaintext=1, exsectionformat="plain",
+    d = api("en.wikipedia.org", action="query", titles=title.lstrip("="), redirects=1, prop="extracts|pageimages|pageprops", explaintext=1, exsectionformat="plain",
             piprop="original|name", ppprop="wikibase_item")
     page = next(iter((d or {}).get("query", {}).get("pages", {}).values()), {})
+    if not page.get("extract") and not title.startswith("="):          # v1.03: a title that is almost right -> the search's first hit
+        hit = api("en.wikipedia.org", action="query", list="search", srsearch=title, srlimit=1)
+        found = ((hit or {}).get("query", {}).get("search") or [{}])[0].get("title")
+        if found and found != title:
+            f_, img, qid, t_ = wikipedia("=" + found)
+            return f_, img, qid, t_
+    title = title.lstrip("=")
     text = re.sub(r"\n+", " ", page.get("extract", ""))
     sents = [x.strip() for x in re.split(r"(?<=[.!?])\s+(?=[A-Z\"])", text) if 30 <= len(x.strip()) <= 400][:60]
     return sents, page.get("pageimage"), page.get("pageprops", {}).get("wikibase_item"), page.get("title", title)

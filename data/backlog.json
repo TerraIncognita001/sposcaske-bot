@@ -1,23 +1,948 @@
-{"_about": "Seed topics (v1.02): public-domain pictures only (the maker died before 1955) and old legends with public-domain pictures. writer.py takes the first one that is not in data/used.json. Order = priority.",
+{
+ "_about": "Seed topics (v1.02): public-domain pictures only (the maker died before 1955) and old legends with public-domain pictures. writer.py takes the first one that is not in data/used.json. Order = priority.",
  "topics": [
-  {"id": "fallen-angel-cabanel", "kind": "artwork", "wikipedia": "The Fallen Angel (painting)", "person": "Alexandre Cabanel"},
-  {"id": "stanczyk-matejko", "kind": "artwork", "wikipedia": "Stańczyk (painting)", "person": "Jan Matejko"},
-  {"id": "lucifer-von-stuck", "kind": "artwork", "wikipedia": "Lucifer (Stuck)", "person": "Franz von Stuck"},
-  {"id": "nightmare-fuseli", "kind": "artwork", "wikipedia": "The Nightmare", "person": "Henry Fuseli"},
-  {"id": "ivan-the-terrible-repin", "kind": "artwork", "wikipedia": "Ivan the Terrible and His Son Ivan", "person": "Ilya Repin"},
-  {"id": "saturn-goya", "kind": "artwork", "wikipedia": "Saturn Devouring His Son", "person": "Francisco Goya"},
-  {"id": "paganini-devil", "kind": "story", "wikipedia": "Niccolò Paganini", "person": "Niccolò Paganini"},
-  {"id": "ambassadors-holbein", "kind": "artwork", "wikipedia": "The Ambassadors (Holbein)", "person": "Hans Holbein the Younger"},
-  {"id": "lady-jane-grey-delaroche", "kind": "artwork", "wikipedia": "The Execution of Lady Jane Grey", "person": "Paul Delaroche"},
-  {"id": "dancing-plague-1518", "kind": "story", "wikipedia": "Dancing plague of 1518", "person": "Paracelsus"},
-  {"id": "death-of-marat-david", "kind": "artwork", "wikipedia": "The Death of Marat", "person": "Jacques-Louis David"},
-  {"id": "judith-caravaggio", "kind": "artwork", "wikipedia": "Judith Beheading Holofernes (Caravaggio)", "person": "Caravaggio"},
-  {"id": "codex-gigas", "kind": "story", "wikipedia": "Codex Gigas", "person": null},
-  {"id": "triumph-of-death-bruegel", "kind": "artwork", "wikipedia": "The Triumph of Death", "person": "Pieter Bruegel the Elder"},
-  {"id": "dante-and-virgil-bouguereau", "kind": "artwork", "wikipedia": "Dante and Virgil", "person": "William-Adolphe Bouguereau"},
-  {"id": "ophelia-millais", "kind": "artwork", "wikipedia": "Ophelia (painting)", "person": "John Everett Millais"},
-  {"id": "witches-sabbath-goya", "kind": "artwork", "wikipedia": "Witches' Sabbath (The Great He-Goat)", "person": "Francisco Goya"},
-  {"id": "pied-piper-hamelin", "kind": "story", "wikipedia": "Pied Piper of Hamelin", "person": null},
-  {"id": "raft-of-the-medusa", "kind": "artwork", "wikipedia": "The Raft of the Medusa", "person": "Théodore Géricault"},
-  {"id": "anatomy-lesson-rembrandt", "kind": "artwork", "wikipedia": "The Anatomy Lesson of Dr. Nicolaes Tulp", "person": "Rembrandt"}
- ]}
+  {
+   "id": "fallen-angel-cabanel",
+   "kind": "artwork",
+   "wikipedia": "The Fallen Angel (painting)",
+   "person": "Alexandre Cabanel",
+   "wikidata": "Q107486133",
+   "picture": "Alexandre_Cabanel_-_Fallen_Angel.jpg",
+   "picture_px": 3732,
+   "score": 10,
+   "scores": {
+    "G": 2,
+    "D": 2,
+    "F": 2,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Lucifer glares directly out over his folded arm, locking eyes with the viewer.",
+    "D": "One large, powerful figure dominates the frame, perfectly readable on a phone screen.",
+    "F": "A single tear on an exquisitely beautiful face that is burning with murderous rage.",
+    "T": "Immense hostility and psychological threat are felt, but no act of violence is shown.",
+    "Y": "His direct eye contact forces the viewer into the position of the one being targeted.",
+    "S": "Based on the biblical story of Lucifer cast out of Heaven."
+   },
+   "character": {
+    "figure": "Lucifer, the Fallen Angel",
+    "threat": "brewing vengeful hatred after expulsion",
+    "feeling": "chilling menace",
+    "theme": "fallen"
+   },
+   "angle": {
+    "first_impression": "A beautiful winged man weeping in defeat on the ground",
+    "detail": "the tear under his furious glare",
+    "readings": [
+     "an angel mourning his lost paradise",
+     "the birth of eternal malice and revenge"
+    ],
+    "question": "So when his eyes lock onto yours, do you see grief or pure hatred?",
+    "punch": [
+     "HATRED",
+     "FALLEN",
+     "REVENGE"
+    ]
+   },
+   "disqualified": null
+  },
+  {
+   "id": "self-portrait-with-death-playing-the-fiddle-bckl",
+   "kind": "artwork",
+   "wikipedia": "Self-Portrait with Death Playing the Fiddle",
+   "person": "Arnold Böcklin",
+   "why": "The artist plays the fiddle while a skeleton looms behind him; the flip is that the skeleton is not attacking, but mocking the artist's melody.",
+   "wikidata": "Q1523789",
+   "picture": "Arnold_Boecklin-fiedelnder_Tod.jpg",
+   "picture_px": 3543,
+   "score": 10,
+   "scores": {
+    "G": 2,
+    "D": 2,
+    "F": 2,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Böcklin stares directly at the viewer with an intense, unblinking gaze.",
+    "D": "The two figures emerge clearly from a dark, minimal background, perfect for a phone screen.",
+    "F": "The single string on the fiddle is a stark, jarring detail that breaks the musical impression.",
+    "T": "Death is playing music directly behind him, yet the artist remains frozen, neither attacking nor running.",
+    "Y": "The direct eye contact allows for an immediate hook about why the artist looks so resigned.",
+    "S": "The specific influence on Gustav Mahler provides a verifiable, high-profile story link."
+   },
+   "character": {
+    "figure": "Artist and Death",
+    "threat": "Imminent end of life",
+    "feeling": "Dreadful acceptance",
+    "theme": "watcher"
+   },
+   "angle": {
+    "first_impression": "An artist pauses while painting to listen to a musical tune.",
+    "detail": "the single string on the fiddle",
+    "readings": [
+     "the artist is composing a masterpiece with Death's melody",
+     "the artist is being pulled into the grave by the music"
+    ],
+    "question": "So, is he choosing to paint, or is he listening to the song of his end?",
+    "punch": [
+     "SILENCE",
+     "FINAL",
+     "CHORD"
+    ]
+   },
+   "disqualified": null
+  },
+  {
+   "id": "lucifer-von-stuck",
+   "kind": "artwork",
+   "wikipedia": "Lucifer (Stuck)",
+   "person": "Franz von Stuck",
+   "wikidata": "Q22953800",
+   "picture": "Luzifer_(Lucifer)_painting_by_Franz_von_Stuck_1890_National_Gallery_in_Sofia.jpg",
+   "picture_px": 4700,
+   "score": 9,
+   "scores": {
+    "G": 2,
+    "D": 2,
+    "F": 1,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Lucifer's luminous eyes lock directly onto the viewer from the dark.",
+    "D": "A single seated figure emerging from pitch blackness, highly readable at phone scale.",
+    "F": "The relaxed thinker's pose suggests calm reflection, but the piercing eyes require explanation to reveal the devil within.",
+    "T": "Immense ominous threat and psychological dread with zero gore or blood shown.",
+    "Y": "The viewer is placed right in front of his piercing, uncomfortable gaze.",
+    "S": "Rooted in biblical mythology and Stuck's infamous man-demon monumental story."
+   },
+   "character": {
+    "figure": "Lucifer in darkness",
+    "threat": "the devil watching you silently",
+    "feeling": "unsettled",
+    "theme": "watcher"
+   },
+   "angle": {
+    "first_impression": "A brooding man sitting quietly in deep shadow",
+    "detail": "the glowing eyes staring out of darkness",
+    "readings": [
+     "a ruined angel lost in thought",
+     "the devil choosing his next target"
+    ],
+    "question": "So is he trapped in his own hell, or is he looking at yours?",
+    "punch": [
+     "DEVIL",
+     "STARE",
+     "LUCIFER"
+    ]
+   },
+   "disqualified": null
+  },
+  {
+   "id": "nightmare-fuseli",
+   "kind": "artwork",
+   "wikipedia": "The Nightmare",
+   "person": "Henry Fuseli",
+   "wikidata": "Q2317837",
+   "picture": "Johann_Heinrich_Füssli_-_The_Nightmare_55.5.A-d1-2019-04-15.jpg",
+   "picture_px": 8192,
+   "score": 9,
+   "scores": {
+    "G": 2,
+    "D": 1,
+    "F": 2,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The demonic incubus sitting on the sleeping woman's chest stares directly out at the viewer.",
+    "D": "Three distinct figures—the glowing woman, the incubus, and the ghost horse—emerge from stark, dark chiaroscuro.",
+    "F": "What looks like a calm sleeping figure is contradicted by a crouching demon staring straight at you.",
+    "T": "Sleep paralysis and uncanny demonic presence create pure psychological dread with zero gore or violence shown.",
+    "Y": "The demon's gaze breaks the fourth wall, directly involving the viewer in the room.",
+    "S": "Rooted in Scandinavian and Germanic folklore of the 'mara' demon tormenting sleepers."
+   },
+   "character": {
+    "figure": "sleeping woman and demon",
+    "threat": "terror during sleep paralysis",
+    "feeling": "uncanny dread",
+    "theme": "watcher"
+   },
+   "angle": {
+    "first_impression": "A glowing woman sleeping peacefully draped across her bed",
+    "detail": "the demon staring out from her chest",
+    "readings": [
+     "a woman experiencing an intense bad dream",
+     "a real demon weighing down a helpless sleeper"
+    ],
+    "question": "So, is that heavy feeling on your chest just a dream?",
+    "punch": [
+     "DREAD",
+     "DEMON",
+     "NIGHT"
+    ]
+   },
+   "disqualified": null
+  },
+  {
+   "id": "ambassadors-holbein",
+   "kind": "artwork",
+   "wikipedia": "The Ambassadors (Holbein)",
+   "person": "Hans Holbein the Younger",
+   "wikidata": "Q1212937",
+   "picture": "Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg",
+   "picture_px": 30000,
+   "score": 9,
+   "scores": {
+    "G": 2,
+    "D": 1,
+    "F": 2,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Both ambassadors stare directly out of the canvas at the viewer with unblinking expressions.",
+    "D": "Two main figures are present, but they are surrounded by complex shelves of objects and textured background rather than an empty dark space.",
+    "F": "The strange slash floating across the floor unravels into a human skull when viewed from the correct angle, instantly reversing the scene's worldly pride.",
+    "T": "The painting presents an uncanny memento mori of death lurking beneath human ambition without showing any actual violence.",
+    "Y": "The viewer is invited to step closer and shift perspective to unravel what is hiding right in front of them.",
+    "S": "The subjects are historical figures Jean de Dinteville and Georges de Selve during the Tudor-era Reformation split."
+   },
+   "character": {
+    "figure": "two wealthy diplomats",
+    "threat": "death lurking beneath worldly success",
+    "feeling": "eerie unease",
+    "theme": "false calm"
+   },
+   "angle": {
+    "first_impression": "two wealthy diplomats surrounded by their supreme scientific achievements",
+    "detail": "the distorted blur at their feet",
+    "readings": [
+     "a proud flex of wealth and human knowledge",
+     "a sinister reminder that death claims everyone"
+    ],
+    "question": "So do you see a showcase of power, or the skull waiting below?",
+    "punch": [
+     "SKULL",
+     "DEATH",
+     "HIDDEN"
+    ]
+   },
+   "disqualified": null
+  },
+  {
+   "id": "portrait-of-innocent-x-velzquez",
+   "kind": "artwork",
+   "wikipedia": "Portrait of Innocent X",
+   "person": "Diego Velázquez",
+   "why": "A powerful Pope stares from a chair; the flip is the hidden malice in a face that should be the embodiment of divine mercy.",
+   "wikidata": "Q1240092",
+   "picture": "Retrato_del_Papa_Inocencio_X._Roma,_by_Diego_Velázquez.jpg",
+   "picture_px": 4545,
+   "score": 9,
+   "scores": {
+    "G": 2,
+    "D": 2,
+    "F": 1,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The Pope stares directly at the viewer with an intense, unblinking judgment.",
+    "D": "He sits against a deep, dark red background that isolates him as a singular, powerful figure.",
+    "F": "The flip is subtle; his eyes hold a piercing, accusatory coldness that contradicts the expected papal benevolence.",
+    "T": "The painting creates a sense of imminent moral scrutiny without showing any active violence.",
+    "Y": "A question about whether he is judging you works perfectly for this portrait.",
+    "S": "The Pope's own reaction, 'It's too true,' provides a legendary, verified-sounding anecdote."
+   },
+   "character": {
+    "figure": "Pope Innocent X",
+    "threat": "unrelenting moral judgment",
+    "feeling": "intense, piercing",
+    "theme": "watcher"
+   },
+   "angle": {
+    "first_impression": "A powerful Pope sitting on his throne in red robes.",
+    "detail": "the piercing intensity in his eyes",
+    "readings": [
+     "a man seeing through your deepest lies",
+     "a leader trapped by his own brilliance"
+    ],
+    "question": "So, when he looks at you, is he judging your soul or your secrets?",
+    "punch": [
+     "JUDGE",
+     "TRUTH",
+     "TRAPPED"
+    ]
+   },
+   "disqualified": null
+  },
+  {
+   "id": "lady-jane-grey-delaroche",
+   "kind": "artwork",
+   "wikipedia": "The Execution of Lady Jane Grey",
+   "person": "Paul Delaroche",
+   "wikidata": "Q1213453",
+   "picture": "PAUL_DELAROCHE_-_Ejecución_de_Lady_Jane_Grey_(National_Gallery_de_Londres,_1834).jpg",
+   "picture_px": 3936,
+   "score": 8,
+   "scores": {
+    "G": 2,
+    "D": 1,
+    "F": 1,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The central blindfolded figure is intently watched by both the waiting executioner and Lieutenant Chandos.",
+    "D": "Five figures are arranged in a dark, staged dungeon space, falling into the three-to-six figure range.",
+    "F": "Her uncertain, blindfolded hand searching for the execution block creates a sharp detail that heightens the scene once noticed.",
+    "T": "Captures the agonizing moment right before death with zero blood, corpse, or actual violence on display.",
+    "Y": "The viewer can be brought into the scene by asking if they could have guided her hand or stopped the axe.",
+    "S": "Based on recorded Tudor history of the 17-year-old 'Nine Days' Queen' executed in 1554."
+   },
+   "character": {
+    "figure": "Lady Jane Grey",
+    "threat": "execution of a teenage queen",
+    "feeling": "dread",
+    "theme": "innocence in danger"
+   },
+   "angle": {
+    "first_impression": "An innocent young woman in glowing white preparing to die",
+    "detail": "her groping hand searching for the block",
+    "readings": [
+     "a tragic martyr accepting her divine fate",
+     "a terrified teenager lost in total darkness"
+    ],
+    "question": "So would you have guided her hand to the block?",
+    "punch": [
+     "STRIKE",
+     "BLOCK",
+     "SHADOW"
+    ]
+   },
+   "disqualified": null
+  },
+  {
+   "id": "medusa-caravaggio",
+   "kind": "artwork",
+   "wikipedia": "Medusa (Caravaggio)",
+   "person": "Caravaggio",
+   "why": "The severed head with snakes; the flip is that her eyes remain wide and sentient, eternally witnessing the viewer as they gaze upon her.",
+   "wikidata": "Q2293905",
+   "picture": "Caravaggio_-_Medusa_-_Google_Art_Project.jpg",
+   "picture_px": 3369,
+   "score": 8,
+   "scores": {
+    "G": 2,
+    "D": 2,
+    "F": 2,
+    "T": 0,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Medusa stares directly at the viewer with wide, horrified eyes.",
+    "D": "The severed head is isolated on a simple, dark shield background, making it highly readable on mobile.",
+    "F": "The first impression is a monster, but it is actually a self-portrait of Caravaggio.",
+    "T": "The painting depicts the act of violence (severed head and blood), which negates the 'threat without violence' score.",
+    "Y": "The viewer is directly confronted by the gaze; asking 'is he looking at you?' is natural.",
+    "S": "The self-portrait aspect and historical context of Caravaggio's life provide a clear, named narrative."
+   },
+   "character": {
+    "figure": "Caravaggio as Medusa",
+    "threat": "petrification by his own hand",
+    "feeling": "intense, visceral, haunting",
+    "theme": "watcher"
+   },
+   "angle": {
+    "first_impression": "A terrifying severed head of a monster with writhing snakes.",
+    "detail": "the artist's own wide-eyed, screaming face",
+    "readings": [
+     "a legendary monster's final moment of death",
+     "the artist's own public cry of self-destruction"
+    ],
+    "question": "So, is he warning you, or is he terrified by what he has become?",
+    "punch": [
+     "REFLECT",
+     "BETRAY",
+     "LOOK"
+    ]
+   },
+   "disqualified": null
+  },
+  {
+   "id": "john-dee-dee",
+   "kind": "story",
+   "wikipedia": "John Dee",
+   "person": "John Dee",
+   "why": "Legend of his scrying visions; an illustration shows him summoning spirits; the flip is his calm, scholarly demeanor while inviting the unknown.",
+   "wikidata": "Q201484",
+   "picture": "John_Dee_Ashmolean.jpg",
+   "picture_px": 2880,
+   "score": 8,
+   "scores": {
+    "G": 2,
+    "D": 2,
+    "F": 1,
+    "T": 1,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The subject makes direct, intense eye contact with the viewer.",
+    "D": "A single, isolated figure against a simple, dark background is perfect for phone screens.",
+    "F": "The flip requires explaining his transition from a respected advisor to a disgraced occultist.",
+    "T": "There is a palpable sense of unease in the subject's stare, but no overt violence.",
+    "Y": "The direct gaze allows for an immediate, personal question to the viewer.",
+    "S": "John Dee has a rich, well-documented historical narrative of genius and downfall."
+   },
+   "character": {
+    "figure": "The scholar John Dee",
+    "threat": "The cost of forbidden knowledge",
+    "feeling": "Haunted, observant",
+    "theme": "watcher"
+   },
+   "angle": {
+    "first_impression": "A stern, elderly scholar watching from the shadows of history.",
+    "detail": "The intense, unblinking eyes of the alchemist",
+    "readings": [
+     "a man searching for truth in the darkness",
+     "a man who has seen too much of the abyss"
+    ],
+    "question": "So, when he looks at you, do you feel seen or judged?",
+    "punch": [
+     "OCCULT",
+     "BLIND",
+     "TRUTH"
+    ]
+   },
+   "disqualified": null
+  },
+  {
+   "id": "stanczyk-matejko",
+   "kind": "artwork",
+   "wikipedia": "Stańczyk (painting)",
+   "person": "Jan Matejko",
+   "wikidata": "Q6609268",
+   "picture": "Jan_Matejko,_Stańczyk.jpg",
+   "picture_px": 5766,
+   "score": 7,
+   "scores": {
+    "G": 0,
+    "D": 2,
+    "F": 1,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Stańczyk is deeply withdrawn into himself, avoiding contact with the viewer or the party guests.",
+    "D": "The jester is isolated in a dark, singular pool of light, making him immediately readable on a small screen.",
+    "F": "The flip is the contrast between his somber expression and the festive party behind him, requiring context to understand.",
+    "T": "The painting captures the eerie, silent moment of realization before a national disaster becomes public knowledge.",
+    "Y": "A hook like 'Would you keep laughing if you knew the kingdom was falling?' pulls the viewer in.",
+    "S": "The figure is a named historical court jester, and the painting documents a specific geopolitical catastrophe."
+   },
+   "character": {
+    "figure": "A solemn court jester",
+    "threat": "The fall of a kingdom",
+    "feeling": "Ominous, isolated",
+    "theme": "false calm"
+   },
+   "angle": {
+    "first_impression": "A sad jester alone while a party happens nearby.",
+    "detail": "the letter on the table",
+    "readings": [
+     "a man grieving the inevitable decline of his nation",
+     "a prophet mourning a tragedy others are too distracted to see"
+    ],
+    "question": "So, if you knew the end was coming, would you keep dancing?",
+    "punch": [
+     "DREAD",
+     "SILENCE",
+     "TRUTH"
+    ]
+   },
+   "disqualified": null
+  },
+  {
+   "id": "christ-in-the-desert-kramskoi",
+   "kind": "artwork",
+   "wikipedia": "Christ in the Desert",
+   "person": "Ivan Kramskoi",
+   "why": "A weary Christ sits in total desolation, looking not at the horizon but directly at the viewer with a gaze of crushing, silent judgment.",
+   "wikidata": "Q2354080",
+   "picture": "Christ_in_the_Wilderness_-_Ivan_Kramskoy_-_Google_Cultural_Institute.jpg",
+   "picture_px": 4000,
+   "score": 7,
+   "scores": {
+    "G": 0,
+    "D": 2,
+    "F": 1,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The figure is looking down in deep thought, not engaging the viewer.",
+    "D": "One lone, readable figure against a stark, desolate landscape.",
+    "F": "The hands are tightly clenched; a detail that reveals extreme internal tension vs the apparent calm.",
+    "T": "The painting captures the weight of the moment before a monumental moral choice.",
+    "Y": "A question can effectively force the viewer to consider the intensity of the man's decision.",
+    "S": "Well-documented source material regarding the artist's intent and the struggle of human conscience."
+   },
+   "character": {
+    "figure": "A lone, weary man",
+    "threat": "The weight of a choice",
+    "feeling": "Deep moral tension",
+    "theme": "last moment"
+   },
+   "angle": {
+    "first_impression": "A tired traveler sitting alone in the cold, barren desert.",
+    "detail": "The tightly clasped hands",
+    "readings": [
+     "the posture of a man ready to surrender",
+     "the grip of a man building the strength to fight"
+    ],
+    "question": "So, when he finally looks up, will the world change because of his choice?",
+    "punch": [
+     "Tension",
+     "Resolve",
+     "Doubt"
+    ]
+   },
+   "disqualified": null
+  },
+  {
+   "id": "the-raising-of-lazarus-rembrandt",
+   "kind": "artwork",
+   "wikipedia": "The Raising of Lazarus (Rembrandt)",
+   "person": "Rembrandt",
+   "why": "The shadow of a hand looms over the tomb; the flip is the terrifying realization that the hand may be pushing the dead back into the earth.",
+   "wikidata": "Q7759351",
+   "picture": "Rembrandt_Harmensz._van_Rijn_-_The_Raising_of_Lazarus_-_Google_Art_Project.jpg",
+   "picture_px": 4113,
+   "score": 6,
+   "scores": {
+    "G": 0,
+    "D": 0,
+    "F": 2,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The figures are looking toward Lazarus or Christ, not directly at the viewer.",
+    "D": "There are too many figures in a complex composition for an immediate, high-impact phone read.",
+    "F": "The flip is the depiction of Christ not as a triumphant savior, but as a weary, struggling magician.",
+    "T": "The painting captures the eerie, uncanny moment of reanimation rather than the act of death or life itself.",
+    "Y": "The viewer can be asked if they recognize the exhaustion in the miracle-worker's face.",
+    "S": "Sister Wendy Beckett provides a specific, named analytical perspective on the artist's intent."
+   },
+   "character": {
+    "figure": "Christ and rising Lazarus",
+    "threat": "The cost of resurrection",
+    "feeling": "Uneasy wonder",
+    "theme": "holy or feared"
+   },
+   "angle": {
+    "first_impression": "Christ performs a miracle to bring Lazarus back to life.",
+    "detail": "the weary, strained expression of Christ",
+    "readings": [
+     "a triumphant divine miracle",
+     "a desperate, exhausting act of dark magic"
+    ],
+    "question": "So, is he truly a savior, or a man burdened by powers he cannot control?",
+    "punch": [
+     "Drained",
+     "Burden",
+     "Miracle"
+    ]
+   },
+   "disqualified": null
+  },
+  {
+   "id": "death-of-marat-david",
+   "kind": "artwork",
+   "wikipedia": "The Death of Marat",
+   "person": "Jacques-Louis David",
+   "wikidata": "Q636537",
+   "picture": "Death_of_Marat_by_David.jpg",
+   "picture_px": 4045,
+   "score": 4,
+   "scores": {
+    "G": 0,
+    "D": 2,
+    "F": 1,
+    "T": 0,
+    "Y": 0,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Marat's eyes are closed in death; no figure in the room looks out or meets the viewer's gaze.",
+    "D": "A single figure in a bath starkly composed against a dark, minimal background, highly readable at phone scale.",
+    "F": "He appears as a peaceful Christian martyr, but the note in his hand is a manipulated tool of political propaganda that requires context to understand.",
+    "T": "The aftermath of murder is directly visible, showing a wound, blood on the linen, and the bloody knife on the floor.",
+    "Y": "The composition positions the viewer strictly as a distant witness to a historical crime scene.",
+    "S": "Rich historical records document the assassination of Marat by Charlotte Corday and David's political framing."
+   },
+   "character": {
+    "figure": "Jean-Paul Marat lying dead",
+    "threat": "political assassination and revolutionary terror",
+    "feeling": "grim horror",
+    "theme": "last moment"
+   },
+   "angle": null,
+   "disqualified": null
+  },
+  {
+   "id": "saint-jerome-writing-caravaggio",
+   "kind": "artwork",
+   "wikipedia": "Saint Jerome Writing",
+   "person": "Caravaggio",
+   "why": "The saint is illuminated in a dark void; the flip is the fragility of his hand and the realization he is being watched by the shadow he creates.",
+   "wikidata": "Q2715177",
+   "picture": "Saint_Jerome_Writing-Caravaggio_(1605-6).jpg",
+   "picture_px": 8708,
+   "score": 4,
+   "scores": {
+    "G": 0,
+    "D": 2,
+    "F": 1,
+    "T": 1,
+    "Y": 0,
+    "S": 0
+   },
+   "reasons": {
+    "G": "Saint Jerome is entirely absorbed in his writing; his gaze is directed downward at the book, never meeting the viewer.",
+    "D": "One figure stands out sharply against a deep, dark void, making it perfectly readable on a mobile device.",
+    "F": "The flip is the tension between his pious study and the presence of the human skull, requiring the explanation of memento mori.",
+    "T": "The painting depicts a moment of somber reflection on death, which is uncanny but lacks a dynamic threat.",
+    "Y": "The provided facts do not offer a hook to pull the viewer into the scene.",
+    "S": "The facts are purely historical regarding the authorship and dating of the painting, offering no compelling narrative hook."
+   },
+   "character": {
+    "figure": "Saint Jerome in solitude",
+    "threat": "The inevitability of death",
+    "feeling": "Solemn, meditative",
+    "theme": "false calm"
+   },
+   "angle": null,
+   "disqualified": null
+  },
+  {
+   "id": "the-monk-by-the-sea-friedrich",
+   "kind": "artwork",
+   "wikipedia": "The Monk by the Sea",
+   "person": "Caspar David Friedrich",
+   "why": "A tiny figure facing an overwhelming darkness; the flip is that the sea and sky do not reflect light but seem to be closing in on the monk.",
+   "wikidata": "Q693746",
+   "picture": "Caspar_David_Friedrich_-_Der_Mönch_am_Meer_-_Google_Art_Project.jpg",
+   "picture_px": 3543,
+   "score": 4,
+   "scores": {
+    "G": 0,
+    "D": 2,
+    "F": 1,
+    "T": 1,
+    "Y": 0,
+    "S": 0
+   },
+   "reasons": {
+    "G": "The figure is turned completely away from the viewer, creating no eye contact.",
+    "D": "It is a single, tiny, isolated figure against a massive, dark, and empty horizon.",
+    "F": "The flip is the hidden history: Friedrich painted two ships on the horizon, then painted them out to erase all hope of rescue.",
+    "T": "The painting evokes profound existential dread and solitude rather than active threat.",
+    "Y": "The text focuses on atmospheric description rather than inviting the viewer into the scene.",
+    "S": "While there is a historical record, it is art history rather than a specific, punchy legend or narrative hook."
+   },
+   "character": {
+    "figure": "A solitary monk",
+    "threat": "Total existential isolation",
+    "feeling": "Empty, lonely",
+    "theme": "other"
+   },
+   "angle": null,
+   "disqualified": null
+  },
+  {
+   "id": "the-entombment-of-christ-caravaggio",
+   "kind": "artwork",
+   "wikipedia": "The Entombment of Christ (Caravaggio)",
+   "person": "Caravaggio",
+   "why": "A hand reaches out from the composition toward the viewer; the flip is that the hand does not belong to the dead, but to a bystander judging the living.",
+   "wikidata": "Q1213151",
+   "picture": "The_Entombment_of_Christ-Caravaggio_(c.1602-3).jpg",
+   "picture_px": 8810,
+   "score": 2,
+   "scores": {
+    "G": 0,
+    "D": 0,
+    "F": 1,
+    "T": 0,
+    "Y": 0,
+    "S": 1
+   },
+   "reasons": {
+    "G": "No figure makes eye contact; all are focused on the body of Christ or looking away.",
+    "D": "There are six distinct figures, which is too busy for the immediate 'pop' required on a small phone screen.",
+    "F": "The detail of the finger poking into the side wound is profound but requires explanation to be noticed.",
+    "T": "The painting depicts a somber, sacred aftermath rather than an uncanny or threatening moment.",
+    "Y": "The provided facts focus on art history and provenance rather than a direct, engaging question to the viewer.",
+    "S": "The work has a well-documented history and identifies specific figures like Nicodemus, providing a clear narrative anchor."
+   },
+   "character": {
+    "figure": "mourners carrying dead Christ",
+    "threat": "none, it is a burial",
+    "feeling": "somber, heavy",
+    "theme": "holy or feared"
+   },
+   "angle": null,
+   "disqualified": null
+  },
+  {
+   "id": "ivan-the-terrible-repin",
+   "kind": "artwork",
+   "wikipedia": "Ivan the Terrible and His Son Ivan",
+   "person": "Ilya Repin",
+   "wikidata": "Q4195595",
+   "picture": "Iván_el_Terrible_y_su_hijo,_por_Iliá_Repin.jpg",
+   "picture_px": 2023,
+   "score": 0,
+   "scores": {
+    "G": 0,
+    "D": 0,
+    "F": 0,
+    "T": 0,
+    "Y": 0,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Neither figure is looking at the viewer; they are entirely consumed by their internal crisis.",
+    "D": "The composition is a wide, busy interior scene, not the singular, dark focus that grabs mobile viewers.",
+    "F": "There is no hidden detail to flip; the violence is the entire point and is explicitly shown.",
+    "T": "The painting depicts the immediate aftermath of an act of violence, meaning it fails the 'threat without violence' criteria.",
+    "Y": "The scene is a historical depiction of a specific murder, offering no direct engagement with the viewer.",
+    "S": "The painting has a clear, documented history regarding the artist's inspiration from real-world political assassinations."
+   },
+   "character": {
+    "figure": "Ivan the Terrible and son",
+    "threat": "filial betrayal",
+    "feeling": "anguish",
+    "theme": "other"
+   },
+   "angle": null,
+   "disqualified": "The painting explicitly shows blood and a murder, which conflicts with the platform's restrictions on gore and violent content."
+  },
+  {
+   "id": "saturn-goya",
+   "kind": "artwork",
+   "wikipedia": "Saturn Devouring His Son",
+   "person": "Francisco Goya",
+   "score": 0,
+   "disqualified": "the picture is only 1661 px wide"
+  },
+  {
+   "id": "paganini-devil",
+   "kind": "story",
+   "wikipedia": "Niccolò Paganini",
+   "person": "Niccolò Paganini",
+   "score": 0,
+   "disqualified": "the picture is only 1630 px wide"
+  },
+  {
+   "id": "dancing-plague-1518",
+   "kind": "story",
+   "wikipedia": "Dancing plague of 1518",
+   "person": "Paracelsus",
+   "score": 0,
+   "disqualified": "the picture is only 1260 px wide"
+  },
+  {
+   "id": "judith-caravaggio",
+   "kind": "artwork",
+   "wikipedia": "Judith Beheading Holofernes (Caravaggio)",
+   "person": "Caravaggio",
+   "wikidata": "Q2470123",
+   "picture": "Caravaggio_-_Giuditta_e_Oloferne_(ca._1599).jpg",
+   "picture_px": 7595,
+   "score": 0,
+   "scores": {
+    "G": 0,
+    "D": 0,
+    "F": 1,
+    "T": 0,
+    "Y": 0,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Judith looks at the victim, not the viewer; the victim looks away in pain.",
+    "D": "Three figures are present, making it too busy for the 1-second rule.",
+    "F": "The repulsion on Judith's face is a contradiction to the act of a heroic killer, but requires context.",
+    "T": "Explicit violence (blood and decapitation) is shown, which disqualifies it per the instructions.",
+    "Y": "The focus is on historical narration rather than direct viewer engagement.",
+    "S": "The biblical story and historical provenance are well-documented."
+   },
+   "character": {
+    "figure": "Judith, maid, and Holofernes",
+    "threat": "The act of beheading",
+    "feeling": "Visceral shock",
+    "theme": "other"
+   },
+   "angle": null,
+   "disqualified": "The image shows explicit violence (blood and an active decapitation)."
+  },
+  {
+   "id": "codex-gigas",
+   "kind": "story",
+   "wikipedia": "Codex Gigas",
+   "person": null,
+   "score": 0,
+   "disqualified": "the picture is not free (Attribution)"
+  },
+  {
+   "id": "triumph-of-death-bruegel",
+   "kind": "artwork",
+   "wikipedia": "The Triumph of Death",
+   "person": "Pieter Bruegel the Elder",
+   "score": 0,
+   "disqualified": "the picture is not free (CC BY-SA 4.0)"
+  },
+  {
+   "id": "dante-and-virgil-bouguereau",
+   "kind": "artwork",
+   "wikipedia": "Dante and Virgil",
+   "person": "William-Adolphe Bouguereau",
+   "wikidata": "Q2665048",
+   "picture": "William_Bouguereau_-_Dante_and_Virgile_-_Google_Art_Project_2.jpg",
+   "picture_px": 2803,
+   "score": 0,
+   "scores": {
+    "G": 0,
+    "D": 0,
+    "F": 0,
+    "T": 0,
+    "Y": 0,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The main figures are fighting, and the observers are looking at the fight, not the viewer.",
+    "D": "There are many figures in the composition, making it too busy for quick recognition on a phone.",
+    "F": "The violence is the entire focus of the painting, leaving no room for a subtle flip.",
+    "T": "The painting shows literal biting and physical combat; it fails the criterion of 'no violence shown'.",
+    "Y": "The composition is too focused on the narrative of the fight to easily pull the viewer into an internal question.",
+    "S": "The painting is a well-documented scene from Dante's Inferno, providing a solid literary source."
+   },
+   "character": {
+    "figure": "Dante, Virgil, and damned souls",
+    "threat": "Eternal torture in hell",
+    "feeling": "Disturbing, violent",
+    "theme": "other"
+   },
+   "angle": null,
+   "disqualified": "The image explicitly shows gore and violent physical combat (biting, wrestling), which triggers the disqualification criteria."
+  },
+  {
+   "id": "ophelia-millais",
+   "kind": "artwork",
+   "wikipedia": "Ophelia (painting)",
+   "person": "John Everett Millais",
+   "score": 0,
+   "disqualified": "Wikipedia: 1 fact sentences, picture None"
+  },
+  {
+   "id": "witches-sabbath-goya",
+   "kind": "artwork",
+   "wikipedia": "Witches' Sabbath (The Great He-Goat)",
+   "person": "Francisco Goya",
+   "score": 0,
+   "disqualified": "Wikipedia: 60 fact sentences, picture None"
+  },
+  {
+   "id": "pied-piper-hamelin",
+   "kind": "story",
+   "wikipedia": "Pied Piper of Hamelin",
+   "person": null,
+   "score": 0,
+   "disqualified": "the picture is not free (licence unknown)"
+  },
+  {
+   "id": "raft-of-the-medusa",
+   "kind": "artwork",
+   "wikipedia": "The Raft of the Medusa",
+   "person": "Théodore Géricault",
+   "wikidata": "Q212616",
+   "picture": "JEAN_LOUIS_THÉODORE_GÉRICAULT_-_La_Balsa_de_la_Medusa_(Museo_del_Louvre,_1818-19).jpg",
+   "picture_px": 5872,
+   "score": 0,
+   "scores": {
+    "G": 0,
+    "D": 0,
+    "F": 1,
+    "T": 0,
+    "Y": 0,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The figures are distracted by the horizon or each other; none engage with the viewer.",
+    "D": "The composition is a complex, crowded scene with many bodies, making it hard to read on a phone.",
+    "F": "The contrast between the hopeful signaling and the fact they are literally sitting on a raft of corpses requires explanation.",
+    "T": "The painting depicts the aftermath of a disaster and shows dead bodies, which triggers the disqualification criteria.",
+    "Y": "The image is too busy to place the viewer directly into the scene with a simple question.",
+    "S": "The story of the Medusa is well-documented and historically significant."
+   },
+   "character": {
+    "figure": "starving shipwreck survivors",
+    "threat": "starvation, dehydration, cannibalism",
+    "feeling": "despair, horror",
+    "theme": "other"
+   },
+   "angle": null,
+   "disqualified": "The painting explicitly shows multiple corpses in the foreground, which violates the content policy for this genre."
+  },
+  {
+   "id": "anatomy-lesson-rembrandt",
+   "kind": "artwork",
+   "wikipedia": "The Anatomy Lesson of Dr. Nicolaes Tulp",
+   "person": "Rembrandt",
+   "wikidata": "Q661378",
+   "picture": "Rembrandt_-_The_Anatomy_Lesson_of_Dr_Nicolaes_Tulp.jpg",
+   "picture_px": 6000,
+   "score": 0,
+   "scores": {
+    "G": 1,
+    "D": 0,
+    "F": 2,
+    "T": 0,
+    "Y": 0,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Several figures look at the arm or Tulp, not directly at the viewer, though the scene is intense.",
+    "D": "There are eight figures in the frame, making it a group scene rather than a single focal point.",
+    "F": "The reality is a fiction; surgeons typically opened the chest first, not the arm, making the dissection anatomically wrong.",
+    "T": "The painting depicts a cadaver and a surgical procedure; this qualifies as visible violence or gore under the platform guidelines.",
+    "Y": "The focus is on the group dynamics and the surgeon's performance rather than engaging the viewer directly.",
+    "S": "The painting has a very strong, well-documented history involving the criminal Aris Kindt and the Surgeons Guild."
+   },
+   "character": {
+    "figure": "Dr. Tulp and his students",
+    "threat": "A public execution of knowledge",
+    "feeling": "Clinical, macabre",
+    "theme": "false calm"
+   },
+   "angle": null,
+   "disqualified": "The painting shows a corpse being dissected, which falls under the prohibition against gore and graphic depictions of bodies."
+  }
+ ]
+}
