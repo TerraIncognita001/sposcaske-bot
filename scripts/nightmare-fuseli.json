@@ -1,0 +1,378 @@
+{
+ "id": "nightmare-fuseli",
+ "kind": "artwork",
+ "hook_frame": "Something about ___ feels completely wrong.",
+ "closer": "open",
+ "detail": "demon",
+ "subject": {
+  "title": "The Nightmare",
+  "creator": "Henry Fuseli",
+  "year": 1781,
+  "wikidata": "Q2317837"
+ },
+ "lead": {
+  "commons": "Johann_Heinrich_Füssli_-_The_Nightmare_55.5.A-d1-2019-04-15.jpg",
+  "width_px": 3840,
+  "license": "Public domain",
+  "credit": "Johann Heinrich Füssli - The Nightmare 55.5.A-d1-2019-04-15 — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Henry Fuseli",
+  "credit": "Portrait of Henry Fuseli — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [
+  {
+   "key": "selinunte",
+   "query": "Selinunte metope sculpture",
+   "words": [
+    "sculptures",
+    "selinunte"
+   ],
+   "license": "Public domain",
+   "credit": "Selinunte metope sculpture — Wikimedia Commons"
+  }
+ ],
+ "look": [
+  {
+   "name": "main_scene",
+   "box": [
+    0.068,
+    0.07,
+    0.978,
+    0.964
+   ],
+   "words": [
+    "woman",
+    "demon"
+   ]
+  },
+  {
+   "name": "woman",
+   "box": [
+    0.068,
+    0.383,
+    0.978,
+    0.964
+   ],
+   "words": [
+    "woman"
+   ]
+  },
+  {
+   "name": "woman_top",
+   "box": [
+    0.395,
+    0.422,
+    0.975,
+    0.964
+   ],
+   "words": [
+    "woman"
+   ]
+  },
+  {
+   "name": "woman_face",
+   "box": [
+    0.815,
+    0.54,
+    0.908,
+    0.775
+   ],
+   "words": [
+    "woman"
+   ]
+  },
+  {
+   "name": "demon",
+   "box": [
+    0.553,
+    0.07,
+    0.768,
+    0.439
+   ],
+   "words": [
+    "demon"
+   ]
+  },
+  {
+   "name": "demon_top",
+   "box": [
+    0.563,
+    0.07,
+    0.725,
+    0.305
+   ],
+   "words": [
+    "demon"
+   ]
+  },
+  {
+   "name": "demon_face",
+   "box": [
+    0.59,
+    0.072,
+    0.698,
+    0.198
+   ],
+   "words": [
+    "demon"
+   ]
+  },
+  {
+   "name": "horse",
+   "box": [
+    0.195,
+    0.106,
+    0.342,
+    0.34
+   ],
+   "words": [
+    "horse"
+   ]
+  },
+  {
+   "name": "horse_face",
+   "box": [
+    0.21,
+    0.19,
+    0.342,
+    0.34
+   ],
+   "words": [
+    "horse"
+   ]
+  },
+  {
+   "name": "table",
+   "box": [
+    0.01,
+    0.63,
+    0.255,
+    0.935
+   ],
+   "words": [
+    "table"
+   ]
+  }
+ ],
+ "punch": "DREAD",
+ "sentences": [
+  {
+   "slot": "S1",
+   "text": "Something about this peaceful sleeping woman feels completely wrong, filled with hidden dread.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "dread",
+     "to": "demon"
+    }
+   ]
+  },
+  {
+   "slot": "S2",
+   "text": "This is The Nightmare, painted by Henry Fuseli in 1781.",
+   "kind": "FACT",
+   "source": 1,
+   "show": [
+    {
+     "on": "Henry Fuseli",
+     "to": "portrait_of"
+    }
+   ]
+  },
+  {
+   "slot": "S3",
+   "text": "A glowing woman lies draped over a bed, resting peacefully in dark surroundings.",
+   "kind": "LOOK",
+   "source": 2,
+   "show": [
+    {
+     "on": "woman",
+     "to": "woman"
+    }
+   ]
+  },
+  {
+   "slot": "S4",
+   "text": "But look at the demon.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "demon",
+     "to": "demon_face"
+    }
+   ]
+  },
+  {
+   "slot": "S5",
+   "text": "It sits on her chest.",
+   "kind": "LOOK",
+   "source": 2,
+   "show": [
+    {
+     "on": "sits",
+     "to": "demon"
+    }
+   ]
+  },
+  {
+   "slot": "S5",
+   "text": "It stares at you.",
+   "kind": "LOOK",
+   "source": 9,
+   "show": [
+    {
+     "on": "stares",
+     "to": "demon_face"
+    }
+   ]
+  },
+  {
+   "slot": "S6",
+   "text": "It doesn't sleep.",
+   "kind": "LOOK",
+   "source": 2
+  },
+  {
+   "slot": "S6",
+   "text": "It doesn't leave.",
+   "kind": "LOOK",
+   "source": 2
+  },
+  {
+   "slot": "S6",
+   "text": "It simply watches.",
+   "kind": "LOOK",
+   "source": 9
+  },
+  {
+   "slot": "S7",
+   "text": "According to art critic Nicholas Powell, the crouching demon derives from ancient sculptures at Selinunte.",
+   "kind": "FACT",
+   "source": 23,
+   "show": [
+    {
+     "on": "Selinunte",
+     "to": "selinunte:full"
+    }
+   ]
+  },
+  {
+   "slot": "S8",
+   "text": "The sleeper should have woken up.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "S9",
+   "text": "But a heavy weight kept her completely paralyzed.",
+   "kind": "FACT",
+   "source": 19
+  },
+  {
+   "slot": "S10",
+   "text": "And here's the disturbing part.",
+   "kind": "HOOK",
+   "source": null
+  },
+  {
+   "slot": "S11",
+   "text": "The woman appears peacefully asleep, yet a demonic weight presses upon her.",
+   "kind": "READING",
+   "source": 7,
+   "show": [
+    {
+     "on": "weight",
+     "to": "demon"
+    }
+   ]
+  },
+  {
+   "slot": "S12",
+   "text": "As if her bad dream took physical shape upon her body.",
+   "kind": "READING",
+   "source": 7
+  },
+  {
+   "slot": "S13",
+   "text": "So is that heavy feeling on your chest just a dream?",
+   "kind": "READING",
+   "source": null
+  }
+ ],
+ "pronounce": {
+  "Fuseli": "FEW-zeh-lee",
+  "Selinunte": "seh-lee-NOON-tay"
+ },
+ "meta": {
+  "title": "The Dark Secret Behind Fuseli's The Nightmare",
+  "description": "Henry Fuseli painted The Nightmare in 1781, capturing a haunting visual representation of sleep paralysis.",
+  "tags": [
+   "art history",
+   "The Nightmare",
+   "Henry Fuseli",
+   "Gothic art"
+  ],
+  "question": "So is that heavy feeling on your chest just a dream?"
+ },
+ "sources": [
+  {
+   "claim": "The Nightmare is a 1781 oil painting by the Swiss artist Henry Fuseli.",
+   "url": "https://en.wikipedia.org/wiki/The_Nightmare",
+   "note": "sentence S2"
+  },
+  {
+   "claim": "It shows a woman with her arms thrown below her, in deep sleep as she undergoes a nightmare as an almost hidden horse (the \"night-mare\") looks on as a demonic and ape-like incubus crouches on her ches",
+   "url": "https://en.wikipedia.org/wiki/The_Nightmare",
+   "note": "sentence S3"
+  },
+  {
+   "claim": "It shows a woman with her arms thrown below her, in deep sleep as she undergoes a nightmare as an almost hidden horse (the \"night-mare\") looks on as a demonic and ape-like incubus crouches on her ches",
+   "url": "https://en.wikipedia.org/wiki/The_Nightmare",
+   "note": "sentence S5"
+  },
+  {
+   "claim": "She is mounted by an incubus that peers out at the viewer.",
+   "url": "https://en.wikipedia.org/wiki/The_Nightmare",
+   "note": "sentence S5"
+  },
+  {
+   "claim": "It shows a woman with her arms thrown below her, in deep sleep as she undergoes a nightmare as an almost hidden horse (the \"night-mare\") looks on as a demonic and ape-like incubus crouches on her ches",
+   "url": "https://en.wikipedia.org/wiki/The_Nightmare",
+   "note": "sentence S6"
+  },
+  {
+   "claim": "It shows a woman with her arms thrown below her, in deep sleep as she undergoes a nightmare as an almost hidden horse (the \"night-mare\") looks on as a demonic and ape-like incubus crouches on her ches",
+   "url": "https://en.wikipedia.org/wiki/The_Nightmare",
+   "note": "sentence S6"
+  },
+  {
+   "claim": "She is mounted by an incubus that peers out at the viewer.",
+   "url": "https://en.wikipedia.org/wiki/The_Nightmare",
+   "note": "sentence S6"
+  },
+  {
+   "claim": "According to the art critic Nicholas Powell, the woman's pose may derive from the Vatican's Ariadne, and the style of the incubus from figures at Selinunte, an archaeological site in Sicily.",
+   "url": "https://en.wikipedia.org/wiki/The_Nightmare",
+   "note": "sentence S7"
+  },
+  {
+   "claim": "The early meaning of nightmare included the sleeper's experience of weight on the chest combined with sleep paralysis, dyspnea, or a feeling of dread.",
+   "url": "https://en.wikipedia.org/wiki/The_Nightmare",
+   "note": "sentence S9"
+  },
+  {
+   "claim": "Description The Nightmare simultaneously offers both the image of a dream—by indicating the effect of the nightmare on the woman—and a dream image—in symbolically portraying the sleeping vision.",
+   "url": "https://en.wikipedia.org/wiki/The_Nightmare",
+   "note": "sentence S11"
+  },
+  {
+   "claim": "Description The Nightmare simultaneously offers both the image of a dream—by indicating the effect of the nightmare on the woman—and a dream image—in symbolically portraying the sleeping vision.",
+   "url": "https://en.wikipedia.org/wiki/The_Nightmare",
+   "note": "sentence S12"
+  }
+ ]
+}

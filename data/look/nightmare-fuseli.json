@@ -1,0 +1,126 @@
+{
+ "things": [
+  {
+   "name": "main_scene",
+   "box": [
+    0.068,
+    0.07,
+    0.978,
+    0.964
+   ],
+   "words": [
+    "woman",
+    "demon"
+   ]
+  },
+  {
+   "name": "woman",
+   "box": [
+    0.068,
+    0.383,
+    0.978,
+    0.964
+   ],
+   "words": [
+    "woman"
+   ]
+  },
+  {
+   "name": "woman_top",
+   "box": [
+    0.395,
+    0.422,
+    0.975,
+    0.964
+   ],
+   "words": [
+    "woman"
+   ]
+  },
+  {
+   "name": "woman_face",
+   "box": [
+    0.815,
+    0.54,
+    0.908,
+    0.775
+   ],
+   "words": [
+    "woman"
+   ]
+  },
+  {
+   "name": "demon",
+   "box": [
+    0.553,
+    0.07,
+    0.768,
+    0.439
+   ],
+   "words": [
+    "demon"
+   ]
+  },
+  {
+   "name": "demon_top",
+   "box": [
+    0.563,
+    0.07,
+    0.725,
+    0.305
+   ],
+   "words": [
+    "demon"
+   ]
+  },
+  {
+   "name": "demon_face",
+   "box": [
+    0.59,
+    0.072,
+    0.698,
+    0.198
+   ],
+   "words": [
+    "demon"
+   ]
+  },
+  {
+   "name": "horse",
+   "box": [
+    0.195,
+    0.106,
+    0.342,
+    0.34
+   ],
+   "words": [
+    "horse"
+   ]
+  },
+  {
+   "name": "horse_face",
+   "box": [
+    0.21,
+    0.19,
+    0.342,
+    0.34
+   ],
+   "words": [
+    "horse"
+   ]
+  },
+  {
+   "name": "table",
+   "box": [
+    0.01,
+    0.63,
+    0.255,
+    0.935
+   ],
+   "words": [
+    "table"
+   ]
+  }
+ ],
+ "summary": "A woman in white lies draped over a bed. A crouching demon sits on her torso while a horse peers through dark curtains."
+}

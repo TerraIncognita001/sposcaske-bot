@@ -1,0 +1,137 @@
+{
+ "total": 60.35959183673471,
+ "lines": [
+  {
+   "t0": 1.65,
+   "t1": 5.52,
+   "beat": "hook",
+   "say": "Something about this peaceful sleeping woman feels completely wrong,"
+  },
+  {
+   "t0": 5.74,
+   "t1": 7.31,
+   "beat": "hook",
+   "say": "filled with hidden dread."
+  },
+  {
+   "t0": 7.96,
+   "t1": 9.34,
+   "beat": "ident",
+   "say": "This is The Nightmare,"
+  },
+  {
+   "t0": 9.56,
+   "t1": 13.57,
+   "beat": "ident",
+   "say": "painted by Henry Fuseli in 1781."
+  },
+  {
+   "t0": 14.17,
+   "t1": 16.56,
+   "beat": "setup",
+   "say": "A glowing woman lies draped over a bed,"
+  },
+  {
+   "t0": 16.78,
+   "t1": 19.07,
+   "beat": "setup",
+   "say": "resting peacefully in dark surroundings."
+  },
+  {
+   "t0": 19.67,
+   "t1": 21.0,
+   "beat": "turn",
+   "say": "But look at the demon."
+  },
+  {
+   "t0": 21.6,
+   "t1": 23.07,
+   "beat": "detail",
+   "say": "It sits on her chest."
+  },
+  {
+   "t0": 23.67,
+   "t1": 24.9,
+   "beat": "detail",
+   "say": "It stares at you."
+  },
+  {
+   "t0": 25.5,
+   "t1": 28.18,
+   "beat": "triad",
+   "say": "It doesn't sleep. It doesn't leave."
+  },
+  {
+   "t0": 28.78,
+   "t1": 30.1,
+   "beat": "triad",
+   "say": "It simply watches."
+  },
+  {
+   "t0": 30.7,
+   "t1": 33.05,
+   "beat": "backstory",
+   "say": "According to art critic Nicholas Powell,"
+  },
+  {
+   "t0": 33.27,
+   "t1": 37.29,
+   "beat": "backstory",
+   "say": "the crouching demon derives from ancient sculptures at Selinunte."
+  },
+  {
+   "t0": 37.89,
+   "t1": 39.56,
+   "beat": "backstory",
+   "say": "The sleeper should have woken up."
+  },
+  {
+   "t0": 40.16,
+   "t1": 42.95,
+   "beat": "backstory",
+   "say": "But a heavy weight kept her completely paralyzed."
+  },
+  {
+   "t0": 43.95,
+   "t1": 45.69,
+   "beat": "reveal",
+   "say": "And here's the disturbing part."
+  },
+  {
+   "t0": 46.29,
+   "t1": 48.42,
+   "beat": "reveal",
+   "say": "The woman appears peacefully asleep,"
+  },
+  {
+   "t0": 48.64,
+   "t1": 51.03,
+   "beat": "reveal",
+   "say": "yet a demonic weight presses upon her."
+  },
+  {
+   "t0": 51.63,
+   "t1": 53.13,
+   "beat": "reveal",
+   "say": "As if her bad dream"
+  },
+  {
+   "t0": 53.35,
+   "t1": 55.4,
+   "beat": "reveal",
+   "say": "took physical shape upon her body."
+  },
+  {
+   "t0": 56.2,
+   "t1": 57.85,
+   "beat": "question",
+   "say": "So is that heavy feeling"
+  },
+  {
+   "t0": 58.07,
+   "t1": 60.01,
+   "beat": "question",
+   "say": "on your chest just a dream?"
+  }
+ ]
+}

@@ -1,0 +1,312 @@
+{
+ "id": "lucifer-von-stuck",
+ "kind": "artwork",
+ "hook_frame": "There's something ___ about the way ___.",
+ "closer": "either_or",
+ "detail": "eyes",
+ "subject": {
+  "title": "Lucifer",
+  "creator": "Franz von Stuck",
+  "year": 1890,
+  "wikidata": "Q22953800"
+ },
+ "lead": {
+  "commons": "Luzifer_(Lucifer)_painting_by_Franz_von_Stuck_1890_National_Gallery_in_Sofia.jpg",
+  "width_px": 3840,
+  "license": "Public domain",
+  "credit": "Luzifer (Lucifer) painting by Franz von Stuck 1890 National Gallery in Sofia — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Franz von Stuck",
+  "credit": "Portrait of Franz von Stuck — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.15,
+    0.07,
+    0.85,
+    0.98
+   ],
+   "words": [
+    "man",
+    "darkness"
+   ]
+  },
+  {
+   "name": "man",
+   "box": [
+    0.26,
+    0.07,
+    0.82,
+    0.98
+   ],
+   "words": [
+    "man"
+   ]
+  },
+  {
+   "name": "man_top",
+   "box": [
+    0.26,
+    0.07,
+    0.82,
+    0.5
+   ],
+   "words": [
+    "man"
+   ]
+  },
+  {
+   "name": "man_face",
+   "box": [
+    0.6,
+    0.07,
+    0.74,
+    0.24
+   ],
+   "words": [
+    "man",
+    "face"
+   ]
+  },
+  {
+   "name": "eyes",
+   "box": [
+    0.62,
+    0.13,
+    0.72,
+    0.17
+   ],
+   "words": [
+    "eyes"
+   ]
+  },
+  {
+   "name": "hand_chin",
+   "box": [
+    0.65,
+    0.17,
+    0.75,
+    0.28
+   ],
+   "words": [
+    "hand"
+   ]
+  },
+  {
+   "name": "hand_side",
+   "box": [
+    0.26,
+    0.38,
+    0.38,
+    0.52
+   ],
+   "words": [
+    "hand"
+   ]
+  },
+  {
+   "name": "legs",
+   "box": [
+    0.52,
+    0.47,
+    0.71,
+    0.98
+   ],
+   "words": [
+    "legs"
+   ]
+  },
+  {
+   "name": "light_glow",
+   "box": [
+    0.15,
+    0.45,
+    0.22,
+    0.58
+   ],
+   "words": [
+    "light"
+   ]
+  }
+ ],
+ "punch": "STARE",
+ "sentences": [
+  {
+   "slot": "S1",
+   "text": "There's something disturbing about the way this quiet darkness holds a stare.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "darkness",
+     "to": " darkness"
+    },
+    {
+     "on": "stare",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "S2",
+   "text": "This is Lucifer, painted by Franz von Stuck in 1890.",
+   "kind": "FACT",
+   "source": 1
+  },
+  {
+   "slot": "S3",
+   "text": "A seated man rests in deep darkness, with light glowing behind him.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "man",
+     "to": "man"
+    },
+    {
+     "on": "darkness",
+     "to": "main_action"
+    },
+    {
+     "on": "light",
+     "to": "light_glow"
+    }
+   ]
+  },
+  {
+   "slot": "S4",
+   "text": "But look at his eyes.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "S5",
+   "text": "They glow in the shadow.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "shadow",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "S6",
+   "text": "He doesn't fight.",
+   "kind": "LOOK",
+   "source": null
+  },
+  {
+   "slot": "S6",
+   "text": "He doesn't scream.",
+   "kind": "LOOK",
+   "source": null
+  },
+  {
+   "slot": "S6",
+   "text": "He simply watches.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "watches",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "S7",
+   "text": "According to the National Art Gallery, Ferdinand of Bulgaria bought this picture directly from Munich.",
+   "kind": "FACT",
+   "source": 4
+  },
+  {
+   "slot": "S8",
+   "text": "A ruined angel should look away.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "S9",
+   "text": "But this figure locks his gaze on you.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "gaze",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "S10",
+   "text": "And here's the disturbing part.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "S11",
+   "text": "He sits lost in thought, yet he chooses his next target.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "S12",
+   "text": "As if he waits for you to step into the dark.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "S13",
+   "text": "So is he trapped in his own hell, or is he looking at yours?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "looking",
+     "to": "eyes"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Lucifer": "LOO-sih-fer",
+  "Stuck": "SHTOOK"
+ },
+ "meta": {
+  "title": "The Stare of Stuck's Lucifer",
+  "description": "Franz von Stuck painted Lucifer in 1890 as a brooding man-demon. The glowing eyes in the deep shadow create an unsettling confrontation with the viewer.",
+  "tags": [
+   "art history",
+   "Franz von Stuck",
+   "Lucifer",
+   "dark art",
+   "Symbolism"
+  ],
+  "question": "So is he trapped in his own hell, or is he looking at yours?"
+ },
+ "sources": [
+  {
+   "claim": "Lucifer is an oil on canvas painting by the German artist Franz Stuck, from 1890.",
+   "url": "https://en.wikipedia.org/wiki/Lucifer_(Stuck)",
+   "note": "sentence S2"
+  },
+  {
+   "claim": "History Ferdinand I of Bulgaria bought the painting for the royal collection in Sofia, from Stuck's studio in Munich in 1891.",
+   "url": "https://en.wikipedia.org/wiki/Lucifer_(Stuck)",
+   "note": "sentence S7"
+  }
+ ]
+}
