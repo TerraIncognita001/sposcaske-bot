@@ -322,8 +322,8 @@
    "source": 18,
    "show": [
     {
-     "on": "find",
-     "to": "hand_block"
+     "on": "Jane",
+     "to": "jane"
     }
    ]
   },
