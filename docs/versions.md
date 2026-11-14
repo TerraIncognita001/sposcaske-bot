@@ -5,6 +5,20 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.03 = TOPICS ARE FOUND AND JUDGED 1-10; YEARS SPOKEN IN TWO HALVES, Andrii, Nov 14 2026 (after the first video
+  the bot made alone: 'те як бот каже рік, треба щоб він казав 18 57 а не 1857. Загалом вибір теми - конкретно ця
+  ну зовсім не цікава. проаналізуй ... топ 15 найпопулярніших відео, знайди спільне між ними та напиши для бота
+  промпт за яким він шукатиме схожі теми, та те як він характеризуватиме теми, оцінюватиме їх. Добав шкалу від 1 до
+  10'). The top 15 took 75 % of the channel's views; what sets them apart, counted on the transcripts: somebody
+  watches (9 of 15 against 9 of 43), figures out of darkness (6 against 2), "you" inside the scene (9 against 13),
+  a named person's legend (5 against 6), no violence shown (0 against 7): `docs/TOPICS.md`. New: `prompts/scout.txt`
+  (where to look and what never worked), `prompts/judge.txt` (six scores: gaze 0-2, darkness and one figure 0-2,
+  the flip 0-2, threat without violence 0-2, "you" 0-1, a story with a name 0-1; anchors; disqualifiers; the
+  topic's character; THE ANGLE), `topics.py` (scout -> Wikipedia / Commons checks -> the judge with the picture in
+  view -> `data/backlog.json` sorted by score). `writer.py` makes only 7+, best first, and gives the judge's ANGLE
+  to the script prompt (the Fallen Angel script had picked the hands, the reference's own video the tear and the
+  eye). `render.py` `year_words`: 1857 -> "eighteen fifty-seven", 1805 -> "eighteen oh five", 1900 -> "nineteen
+  hundred"; the caption keeps the digits. Workflow input `scout`.
 - v1.02 = THE BOT WRITES AND SHOOTS BY THE MAKET: WRITER, DIRECTOR, MATERIAL FINDER, ONE VOICE, Andrii, Nov 13-14 2026
   (he sent the five references again: 'ти маєш знайти спільне між всіма 5 референсами та макетом ... записати код
   для бота, щоб всі його відео які він згенерує були максимально схожі до цих референсів', with five points: the

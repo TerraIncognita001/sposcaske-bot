@@ -1,4 +1,4 @@
-# CLAUDE.md — sposcaske-bot (v1.02: the maket + a bot that writes, shoots and dry-runs)
+# CLAUDE.md — sposcaske-bot (v1.03: the maket + a bot that picks topics, writes, shoots and dry-runs)
 
 Owner: Andrii (writes in Ukrainian; wants short, army-style answers: task → direct solution, the best free option,
 no fluff). Reply in Ukrainian.
@@ -6,7 +6,8 @@ no fluff). Reply in Ukrainian.
 State (2026-11-13): the maket + a bot that makes DRY RUNS (`.github/workflows/video.yml` -> `bot.py`; the video goes
 to the `preview` branch, the log to `logs`). No channel, no upload, no schedule yet. Next: `docs/BUILD_PROMPT.md` §11 (Andrii's decisions), then milestone M1.
 
-Pipeline: `writer.py` (topic -> `scripts/<id>.json`, Gemini, not run live yet: no key) -> `director.py` (script ->
+Pipeline: `topics.py` (find and judge topics 1-10, `docs/TOPICS.md`) -> `writer.py` (topic + the judge's angle ->
+`scripts/<id>.json`, Gemini; the secret GEMINI_API_KEY is set) -> `director.py` (script ->
 story: camera, red word, card, portrait by the maket) -> `sources.py` (pictures, licences) -> `render.py` -> `bot.py`
 conformance. What the genre is and what all references share: `docs/GENRE.md`.
 
@@ -15,8 +16,9 @@ Read before any work: `docs/BUILD_PROMPT.md` (the plan and the hard rules; §13 
 gated by `tools/script_check.py`). Change a number only with a new measurement.
 
 ## Live
-**v1.02** on `main` (Nov 14 2026: writer + director + material finder, one voice, the maket enforced in every video;
-v1.01 = the first dry run in GitHub Actions; v1.00 = the approved maket, demo 7). Next: **v1.03**. History: `docs/versions.md`.
+**v1.03** on `main` (Nov 14 2026: topics found and judged 1-10 with the angle, years spoken in two halves; v1.02 =
+writer + director + material finder, one voice; v1.01 = the first dry run; v1.00 = the approved maket, demo 7).
+Next: **v1.04**. History: `docs/versions.md`.
 
 ## Versions (the system of the warehouse ww2-bot, Andrii, Nov 13)
 - Every change of the bot (code, `format.json`, workflow, schedule, the look or the sound of a video, the writer
