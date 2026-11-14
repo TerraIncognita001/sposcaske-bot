@@ -17,8 +17,8 @@
   "credit": "Retrato del Papa Inocencio X. Roma, by Diego Velázquez — Wikimedia Commons"
  },
  "portrait": {
-  "of": "Diego Velázquez",
-  "credit": "Portrait of Diego Velázquez — Wikimedia Commons",
+  "of": "Diego Rodríguez de Silva y Velázquez",
+  "credit": "Portrait of Diego Rodríguez de Silva y Velázquez — Wikimedia Commons",
   "license": "Public domain"
  },
  "evidence": [],
@@ -188,7 +188,7 @@
   },
   {
    "slot": "S2",
-   "text": "This is Portrait of Innocent X, painted by Diego Velázquez in 1650.",
+   "text": "This is Portrait of Innocent X, painted by Diego Rodríguez de Silva y Velázquez in 1650.",
    "kind": "FACT",
    "source": 15
   },
@@ -362,7 +362,8 @@
  "pronounce": {
   "Innocent X": "Innocent the Tenth",
   "Velázquez": "Veh-lahs-kez",
-  "Gimpel": "Gam-pel"
+  "Gimpel": "Gam-pel",
+  "Rodríguez de Silva y": "Rod-ree-ges deh Seel-va ee"
  },
  "meta": {
   "title": "The pope who said his portrait was too true",

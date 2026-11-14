@@ -1,0 +1,200 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.03,
+    0.04,
+    0.97,
+    0.86
+   ],
+   "words": [
+    "jane",
+    "block",
+    "executioner"
+   ]
+  },
+  {
+   "name": "jane",
+   "box": [
+    0.33,
+    0.32,
+    0.55,
+    0.79
+   ],
+   "words": [
+    "jane",
+    "queen",
+    "girl"
+   ]
+  },
+  {
+   "name": "jane_top",
+   "box": [
+    0.33,
+    0.32,
+    0.53,
+    0.52
+   ],
+   "words": [
+    "jane",
+    "queen",
+    "girl"
+   ]
+  },
+  {
+   "name": "jane_face",
+   "box": [
+    0.4,
+    0.32,
+    0.49,
+    0.44
+   ],
+   "words": [
+    "jane",
+    "queen",
+    "face"
+   ]
+  },
+  {
+   "name": "blindfold",
+   "box": [
+    0.41,
+    0.345,
+    0.485,
+    0.395
+   ],
+   "words": [
+    "blindfold"
+   ]
+  },
+  {
+   "name": "hand",
+   "box": [
+    0.43,
+    0.59,
+    0.49,
+    0.69
+   ],
+   "words": [
+    "hand"
+   ]
+  },
+  {
+   "name": "hand_block",
+   "box": [
+    0.4,
+    0.58,
+    0.51,
+    0.75
+   ],
+   "words": [
+    "hand",
+    "block"
+   ]
+  },
+  {
+   "name": "block",
+   "box": [
+    0.4,
+    0.68,
+    0.5,
+    0.85
+   ],
+   "words": [
+    "block"
+   ]
+  },
+  {
+   "name": "straw",
+   "box": [
+    0.3,
+    0.8,
+    0.64,
+    0.92
+   ],
+   "words": [
+    "straw"
+   ]
+  },
+  {
+   "name": "chandos",
+   "box": [
+    0.34,
+    0.32,
+    0.7,
+    0.81
+   ],
+   "words": [
+    "lieutenant",
+    "jailer",
+    "man"
+   ]
+  },
+  {
+   "name": "chandos_face",
+   "box": [
+    0.48,
+    0.32,
+    0.58,
+    0.43
+   ],
+   "words": [
+    "lieutenant",
+    "jailer",
+    "face"
+   ]
+  },
+  {
+   "name": "executioner",
+   "box": [
+    0.73,
+    0.04,
+    0.97,
+    0.82
+   ],
+   "words": [
+    "executioner"
+   ]
+  },
+  {
+   "name": "executioner_face",
+   "box": [
+    0.8,
+    0.1,
+    0.87,
+    0.2
+   ],
+   "words": [
+    "executioner",
+    "face"
+   ]
+  },
+  {
+   "name": "axe",
+   "box": [
+    0.87,
+    0.55,
+    0.98,
+    0.87
+   ],
+   "words": [
+    "axe"
+   ]
+  },
+  {
+   "name": "ladies",
+   "box": [
+    0.0,
+    0.16,
+    0.34,
+    0.78
+   ],
+   "words": [
+    "ladies",
+    "women"
+   ]
+  }
+ ],
+ "summary": "Blindfolded Lady Jane Grey kneels in white before the block, guided by an old man in a fur collar, while two ladies grieve and the executioner stands with his axe. Straw lies around the block."
+}

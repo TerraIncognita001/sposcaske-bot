@@ -1,0 +1,488 @@
+{
+ "id": "lady-jane-grey-delaroche",
+ "kind": "artwork",
+ "hook_frame": "This ___ is about to ___, and ___.",
+ "closer": "open",
+ "detail": "hand",
+ "subject": {
+  "title": "The Execution of Lady Jane Grey",
+  "creator": "Paul Delaroche",
+  "year": 1833,
+  "wikidata": "Q1213453"
+ },
+ "lead": {
+  "commons": "PAUL_DELAROCHE_-_Ejecución_de_Lady_Jane_Grey_(National_Gallery_de_Londres,_1834).jpg",
+  "width_px": 3840,
+  "license": "Public domain",
+  "credit": "PAUL DELAROCHE - Ejecución de Lady Jane Grey (National Gallery de Londres, 1834) — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Paul Delaroche",
+  "credit": "Portrait of Paul Delaroche — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.03,
+    0.04,
+    0.97,
+    0.86
+   ],
+   "words": [
+    "jane",
+    "block",
+    "executioner"
+   ]
+  },
+  {
+   "name": "jane",
+   "box": [
+    0.33,
+    0.32,
+    0.55,
+    0.79
+   ],
+   "words": [
+    "jane",
+    "queen",
+    "girl"
+   ]
+  },
+  {
+   "name": "jane_top",
+   "box": [
+    0.33,
+    0.32,
+    0.53,
+    0.52
+   ],
+   "words": [
+    "jane",
+    "queen",
+    "girl"
+   ]
+  },
+  {
+   "name": "jane_face",
+   "box": [
+    0.4,
+    0.32,
+    0.49,
+    0.44
+   ],
+   "words": [
+    "jane",
+    "queen",
+    "face"
+   ]
+  },
+  {
+   "name": "blindfold",
+   "box": [
+    0.41,
+    0.345,
+    0.485,
+    0.395
+   ],
+   "words": [
+    "blindfold"
+   ]
+  },
+  {
+   "name": "hand",
+   "box": [
+    0.43,
+    0.59,
+    0.49,
+    0.69
+   ],
+   "words": [
+    "hand"
+   ]
+  },
+  {
+   "name": "hand_block",
+   "box": [
+    0.4,
+    0.58,
+    0.51,
+    0.75
+   ],
+   "words": [
+    "hand",
+    "block"
+   ]
+  },
+  {
+   "name": "block",
+   "box": [
+    0.4,
+    0.68,
+    0.5,
+    0.85
+   ],
+   "words": [
+    "block"
+   ]
+  },
+  {
+   "name": "straw",
+   "box": [
+    0.3,
+    0.8,
+    0.64,
+    0.92
+   ],
+   "words": [
+    "straw"
+   ]
+  },
+  {
+   "name": "chandos",
+   "box": [
+    0.34,
+    0.32,
+    0.7,
+    0.81
+   ],
+   "words": [
+    "lieutenant",
+    "jailer",
+    "man"
+   ]
+  },
+  {
+   "name": "chandos_face",
+   "box": [
+    0.48,
+    0.32,
+    0.58,
+    0.43
+   ],
+   "words": [
+    "lieutenant",
+    "jailer",
+    "face"
+   ]
+  },
+  {
+   "name": "executioner",
+   "box": [
+    0.73,
+    0.04,
+    0.97,
+    0.82
+   ],
+   "words": [
+    "executioner"
+   ]
+  },
+  {
+   "name": "executioner_face",
+   "box": [
+    0.8,
+    0.1,
+    0.87,
+    0.2
+   ],
+   "words": [
+    "executioner",
+    "face"
+   ]
+  },
+  {
+   "name": "axe",
+   "box": [
+    0.87,
+    0.55,
+    0.98,
+    0.87
+   ],
+   "words": [
+    "axe"
+   ]
+  },
+  {
+   "name": "ladies",
+   "box": [
+    0.0,
+    0.16,
+    0.34,
+    0.78
+   ],
+   "words": [
+    "ladies",
+    "women"
+   ]
+  }
+ ],
+ "punch": "BLOCK",
+ "sentences": [
+  {
+   "slot": "S1",
+   "text": "This woman is about to die, and the cruelest detail is right beside the block.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "woman",
+     "to": "jane_top"
+    },
+    {
+     "on": "die",
+     "to": "executioner"
+    },
+    {
+     "on": "block",
+     "to": "block"
+    }
+   ]
+  },
+  {
+   "slot": "S2",
+   "text": "This is The Execution of Lady Jane Grey, painted by Paul Delaroche in 1833.",
+   "kind": "FACT",
+   "source": 1
+  },
+  {
+   "slot": "S3",
+   "text": "Jane kneels in white before the block, while two ladies weep and the executioner waits with his axe.",
+   "kind": "LOOK",
+   "source": 22,
+   "show": [
+    {
+     "on": "Jane",
+     "to": "jane"
+    },
+    {
+     "on": "block",
+     "to": "block"
+    },
+    {
+     "on": "ladies",
+     "to": "ladies"
+    },
+    {
+     "on": "executioner",
+     "to": "executioner"
+    },
+    {
+     "on": "axe",
+     "to": "axe"
+    }
+   ]
+  },
+  {
+   "slot": "S4",
+   "text": "But look at her hand.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "hand",
+     "to": "hand"
+    }
+   ]
+  },
+  {
+   "slot": "S5",
+   "text": "Her hand gropes for the block.",
+   "kind": "LOOK",
+   "source": 18,
+   "show": [
+    {
+     "on": "gropes",
+     "to": "hand"
+    },
+    {
+     "on": "block",
+     "to": "hand_block"
+    }
+   ]
+  },
+  {
+   "slot": "S6",
+   "text": "Jane doesn't see the block.",
+   "kind": "LOOK",
+   "source": 17,
+   "show": [
+    {
+     "on": "see",
+     "to": "blindfold"
+    }
+   ]
+  },
+  {
+   "slot": "S6",
+   "text": "Jane doesn't find it.",
+   "kind": "LOOK",
+   "source": 18,
+   "show": [
+    {
+     "on": "find",
+     "to": "hand_block"
+    }
+   ]
+  },
+  {
+   "slot": "S6",
+   "text": "Jane only reaches.",
+   "kind": "LOOK",
+   "source": 18,
+   "show": [
+    {
+     "on": "reaches",
+     "to": "hand"
+    }
+   ]
+  },
+  {
+   "slot": "S7",
+   "text": "According to the National Gallery, Jane had been proclaimed queen, then deposed only nine days later.",
+   "kind": "FACT",
+   "source": 4,
+   "show": [
+    {
+     "on": "Jane",
+     "to": "jane_face"
+    }
+   ]
+  },
+  {
+   "slot": "S8",
+   "text": "A queen should be guided to a throne.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "queen",
+     "to": "jane_top"
+    }
+   ]
+  },
+  {
+   "slot": "S9",
+   "text": "But the Tower's lieutenant guided her to the block.",
+   "kind": "FACT",
+   "source": 19,
+   "show": [
+    {
+     "on": "lieutenant",
+     "to": "chandos"
+    },
+    {
+     "on": "block",
+     "to": "hand_block"
+    }
+   ]
+  },
+  {
+   "slot": "S10",
+   "text": "And here's the unsettling part.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "S11",
+   "text": "Everyone around her can see the block, yet only Jane must find it.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "Everyone",
+     "to": "main_action"
+    },
+    {
+     "on": "Jane",
+     "to": "hand"
+    }
+   ]
+  },
+  {
+   "slot": "S12",
+   "text": "Almost as if her death depends on her own hand.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "hand",
+     "to": "hand"
+    }
+   ]
+  },
+  {
+   "slot": "S13",
+   "text": "So what is her hand really searching for?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "hand",
+     "to": "hand_block"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Delaroche": "Della-rosh"
+ },
+ "meta": {
+  "title": "The queen who had to find the block herself",
+  "description": "The Execution of Lady Jane Grey was painted by Paul Delaroche in 1833 and hangs in the National Gallery in London. It shows the moment before the execution of Jane, who had been queen for only nine days.",
+  "tags": [
+   "art history",
+   "delaroche",
+   "lady jane grey",
+   "execution",
+   "national gallery",
+   "painting"
+  ],
+  "question": "What is her hand really searching for?"
+ },
+ "sources": [
+  {
+   "claim": "The Execution of Lady Jane Grey is an oil painting by Paul Delaroche, completed in 1833, which is now in the National Gallery in London.",
+   "url": "https://en.wikipedia.org/wiki/The_Execution_of_Lady_Jane_Grey",
+   "note": "sentence S2"
+  },
+  {
+   "claim": "Two ladies in waiting are depicted in the painting, showing their grief at the event which is about to take place.",
+   "url": "https://en.wikipedia.org/wiki/The_Execution_of_Lady_Jane_Grey",
+   "note": "sentence S3"
+  },
+  {
+   "claim": "Her outstretched hand reaches uncertainly down to find the block.",
+   "url": "https://en.wikipedia.org/wiki/The_Execution_of_Lady_Jane_Grey",
+   "note": "sentence S5"
+  },
+  {
+   "claim": "The painting depicts the moment that Jane, blindfolded, is being assisted to lay her head upon the block for the executioner.",
+   "url": "https://en.wikipedia.org/wiki/The_Execution_of_Lady_Jane_Grey",
+   "note": "sentence S6"
+  },
+  {
+   "claim": "Her outstretched hand reaches uncertainly down to find the block.",
+   "url": "https://en.wikipedia.org/wiki/The_Execution_of_Lady_Jane_Grey",
+   "note": "sentence S6"
+  },
+  {
+   "claim": "Her outstretched hand reaches uncertainly down to find the block.",
+   "url": "https://en.wikipedia.org/wiki/The_Execution_of_Lady_Jane_Grey",
+   "note": "sentence S6"
+  },
+  {
+   "claim": "The painting interprets the moments preceding the death of Lady Jane Grey, who on 10 July 1553 had been proclaimed Queen of England, only to be deposed nine days later and executed on 12 February 1554",
+   "url": "https://en.wikipedia.org/wiki/The_Execution_of_Lady_Jane_Grey",
+   "note": "sentence S7"
+  },
+  {
+   "claim": "She is being assisted by a man who is identified as John Brydges, 1st Baron Chandos.",
+   "url": "https://en.wikipedia.org/wiki/The_Execution_of_Lady_Jane_Grey",
+   "note": "sentence S9"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-14"
+}
