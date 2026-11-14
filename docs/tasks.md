@@ -97,8 +97,20 @@ explained»), далі жанр, далі наші найсильніші тем
 - Хештеги в описі: `#shorts #arthistory #painting` + один за темою (`#lucifer`, `#caravaggio`).
 - Теги: `art history`, `painting`, прізвище художника, назва картини, головна постать (angel, devil, saint).
 
-### Чернетка опису каналу
+### Опис каналу (Description)
+Куди вставити: YouTube Studio → Налаштування каналу → Основна інформація → Опис. Ліміт — 1000 символів, тут 627.
+Перші два рядки видно в пошуку, тому вони несуть головну обіцянку.
+
 ```
 One old painting. One detail you were never meant to notice.
-Dark stories hidden in classical art, told in under two minutes. New videos every day.
+
+Every video takes a single work of classical art, a fallen angel, a saint with the wrong smile, a devil who only watches, and shows you the thing most people walk past. Then it tells you the story behind it, and leaves you with a question.
+
+Dark art history in under two minutes: hidden details in famous paintings, old legends, the old masters at their most unsettling. Caravaggio, Goya, Cabanel, von Stuck and many you have never heard of.
+
+Every fact is sourced. Every painting is in the public domain.
+
+New videos every day.
+
+So look closely. What did you miss?
 ```
