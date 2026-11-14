@@ -1,9 +1,9 @@
 {
  "id": "fallen-angel-cabanel",
  "kind": "artwork",
- "hook_frame": "There's something ___ about the way ___.",
+ "hook_frame": "What if ___?",
  "closer": "either_or",
- "detail": "hands",
+ "detail": "fallen_angel_face",
  "subject": {
   "title": "The Fallen Angel",
   "creator": "Alexandre Cabanel",
@@ -21,31 +21,8 @@
   "credit": "Portrait of Alexandre Cabanel — Wikimedia Commons",
   "license": "Public domain"
  },
- "evidence": [
-  {
-   "key": "villa",
-   "query": "Villa Medici Rome 19th century",
-   "words": [
-    "villa medicis"
-   ],
-   "license": "Public domain",
-   "credit": "Villa Medici Rome 19th century — Wikimedia Commons"
-  }
- ],
+ "evidence": [],
  "look": [
-  {
-   "name": "fallen_angel",
-   "box": [
-    0.17,
-    0.17,
-    0.99,
-    0.95
-   ],
-   "words": [
-    "angel",
-    "man"
-   ]
-  },
   {
    "name": "fallen_angel_upper",
    "box": [
@@ -55,8 +32,19 @@
     0.86
    ],
    "words": [
-    "angel",
-    "man"
+    "angel"
+   ]
+  },
+  {
+   "name": "fallen_angel",
+   "box": [
+    0.17,
+    0.17,
+    0.99,
+    0.95
+   ],
+   "words": [
+    "angel"
    ]
   },
   {
@@ -68,8 +56,9 @@
     0.37
    ],
    "words": [
-    "angel",
+    "eye",
     "eyes",
+    "tear",
     "face"
    ]
   },
@@ -94,6 +83,7 @@
     0.98
    ],
    "words": [
+    "wings",
     "wing"
    ]
   },
@@ -129,16 +119,14 @@
     0.99,
     0.98
    ],
-   "words": [
-    "angel"
-   ]
+   "words": []
   }
  ],
- "punch": "RAGE",
+ "punch": "HATRED",
  "sentences": [
   {
    "slot": "S1",
-   "text": "There's something disturbing about the way a crying angel clasps his hands in RAGE.",
+   "text": "What if the most beautiful angel ever painted is looking at you with pure hatred?",
    "kind": "HOOK",
    "source": null
   },
@@ -146,191 +134,128 @@
    "slot": "S2",
    "text": "This is The Fallen Angel, painted by Alexandre Cabanel in 1847.",
    "kind": "FACT",
-   "source": 1,
-   "show": [
-    {
-     "on": "Alexandre Cabanel",
-     "to": "portrait:full"
-    }
-   ]
+   "source": 2
   },
   {
    "slot": "S3",
-   "text": "The angel lies on a rock ledge while distant angels fly above.",
+   "text": "A young angel lies on a rock, his wings folded under him, while other angels fly above.",
    "kind": "LOOK",
-   "source": 9,
-   "show": [
-    {
-     "on": "rock",
-     "to": "rock"
-    },
-    {
-     "on": "angels",
-     "to": "angels"
-    }
-   ]
+   "source": 9
   },
   {
    "slot": "S4",
-   "text": "But look at his hands.",
+   "text": "But look at his eye.",
    "kind": "LOOK",
-   "source": null,
-   "show": [
-    {
-     "on": "hands",
-     "to": "hands"
-    }
-   ]
+   "source": null
   },
   {
    "slot": "S5",
-   "text": "The fingers are clasped tight.",
+   "text": "There is a tear in it.",
    "kind": "LOOK",
-   "source": 13
+   "source": 17
   },
   {
    "slot": "S5",
-   "text": "They grip his arm.",
+   "text": "And he is staring straight at you.",
    "kind": "LOOK",
-   "source": 13
+   "source": 17
   },
   {
    "slot": "S6",
-   "text": "He doesn't fight.",
+   "text": "He doesn't beg.",
    "kind": "LOOK",
-   "source": 8
+   "source": null
   },
   {
    "slot": "S6",
    "text": "He doesn't pray.",
    "kind": "LOOK",
-   "source": 8
+   "source": null
   },
   {
    "slot": "S6",
-   "text": "He simply squeezes.",
+   "text": "He simply stares.",
    "kind": "LOOK",
-   "source": 13
+   "source": null
   },
   {
    "slot": "S7",
-   "text": "According to historical records, Cabanel painted this scene while staying at the Villa Medicis in Rome.",
+   "text": "According to the old story of the fall, God threw this angel out of heaven, and he became the Devil.",
    "kind": "FACT",
-   "source": 10,
-   "show": [
-    {
-     "on": "Villa Medicis",
-     "to": "villa:full"
-    }
-   ]
-  },
-  {
-   "slot": "S8",
-   "text": "A fallen angel should show surrender.",
-   "kind": "READING",
    "source": 8
   },
   {
+   "slot": "S8",
+   "text": "A fallen angel should look broken.",
+   "kind": "READING",
+   "source": null
+  },
+  {
    "slot": "S9",
-   "text": "But his hands remain locked in fury.",
+   "text": "But Cabanel painted him enraged, not sorry.",
    "kind": "FACT",
    "source": 8
   },
   {
    "slot": "S10",
-   "text": "And here's the disturbing part.",
-   "kind": "READING",
+   "text": "And here's the unsettling part.",
+   "kind": "HOOK",
    "source": null
   },
   {
    "slot": "S11",
-   "text": "Tears run down his face, yet his hands stay clenched in anger.",
+   "text": "The tear says he is grieving, yet the eye says something else.",
    "kind": "LOOK",
    "source": 17
   },
   {
    "slot": "S12",
-   "text": "As if his hands are preparing for a strike.",
+   "text": "As if grief is turning into hatred while you watch.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "M",
+   "text": "Maybe this is the last second he is still an angel.",
    "kind": "READING",
    "source": null
   },
   {
    "slot": "S13",
-   "text": "So is the angel weeping from sorrow, or locking his hands in rage?",
+   "text": "So when his eye meets yours, is he asking for pity, or promising revenge?",
    "kind": "READING",
    "source": null
   }
  ],
  "pronounce": {
-  "Cabanel": "kab-ah-NEL",
-  "Medicis": "MED-ee-chees"
+  "Cabanel": "Kah-bah-nel"
  },
  "meta": {
-  "title": "The Hidden Tension in Cabanel's Fallen Angel",
-  "description": "An examination of Alexandre Cabanel's 1847 painting The Fallen Angel. While tears fill Lucifer's eyes, his clasped hands show a deeper story.",
+  "title": "The most beautiful angel ever painted is not sorry",
+  "description": "The Fallen Angel (L'Ange déchu) was painted by Alexandre Cabanel in 1847, when he was 24, at the Villa Médicis in Rome. It shows the Devil just after his fall from Heaven: tears in his eyes, glaring out from behind his arm. Musée Fabre, Montpellier.",
   "tags": [
    "art history",
-   "dark art",
-   "alexandre cabanel",
-   "fallen angel"
+   "painting",
+   "Cabanel",
+   "fallen angel",
+   "Lucifer"
   ],
-  "question": "So is the angel weeping from sorrow, or locking his hands in rage?"
+  "question": "Asking for pity, or promising revenge?"
  },
  "sources": [
   {
-   "claim": "The Fallen Angel (French: L'Ange déchu) is a painting by the French artist Alexandre Cabanel.",
+   "claim": "Painted in 1847 when the artist was 24; depicts the Devil after his fall from Heaven; an angel expelled from heaven by God, enraged, hands crossed, tears running from his eyes; glares out angrily from behind his arm; angels fly in the sky above; Musée Fabre, Montpellier",
    "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
-   "note": "sentence S2"
-  },
-  {
-   "claim": "He lies on the ground, naked, while angels fly in the sky above to show the glory of God.",
-   "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
-   "note": "sentence S3"
-  },
-  {
-   "claim": "Analysis A Romantic work, the figure of Lucifer is shown as a nude, handsome young man reclining, hands clasped, his face partially obscured by his arm.",
-   "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
-   "note": "sentence S5"
-  },
-  {
-   "claim": "Analysis A Romantic work, the figure of Lucifer is shown as a nude, handsome young man reclining, hands clasped, his face partially obscured by his arm.",
-   "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
-   "note": "sentence S5"
-  },
-  {
-   "claim": "Depicting an angel expelled from heaven by God, the painting shows an enraged Lucifer, with his hands crossed and tears running from his eyes.",
-   "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
-   "note": "sentence S6"
-  },
-  {
-   "claim": "Depicting an angel expelled from heaven by God, the painting shows an enraged Lucifer, with his hands crossed and tears running from his eyes.",
-   "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
-   "note": "sentence S6"
-  },
-  {
-   "claim": "Analysis A Romantic work, the figure of Lucifer is shown as a nude, handsome young man reclining, hands clasped, his face partially obscured by his arm.",
-   "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
-   "note": "sentence S6"
-  },
-  {
-   "claim": "Cabanel painted the work at the Villa Médicis in Rome as his second official envoi to Paris.",
-   "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
-   "note": "sentence S7"
-  },
-  {
-   "claim": "Depicting an angel expelled from heaven by God, the painting shows an enraged Lucifer, with his hands crossed and tears running from his eyes.",
-   "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
-   "note": "sentence S8"
-  },
-  {
-   "claim": "Depicting an angel expelled from heaven by God, the painting shows an enraged Lucifer, with his hands crossed and tears running from his eyes.",
-   "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
-   "note": "sentence S9"
-  },
-  {
-   "claim": "Lucifer glares out angrily from behind his arm, tears visible in his eyes.",
-   "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
-   "note": "sentence S11"
+   "note": "sentences 2, 8, 9, 17 of the article"
   }
- ]
+ ],
+ "written_by": "Claude, on the judge's angle (Gemini's daily quota was spent by the first scout run)",
+ "angle": {
+  "first_impression": "a beautiful young angel resting on a rock",
+  "detail": "the tear under his furious glare",
+  "readings": [
+   "an angel grieving for what he lost",
+   "hatred being born"
+  ]
+ }
 }

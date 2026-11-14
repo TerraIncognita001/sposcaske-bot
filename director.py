@@ -144,8 +144,9 @@ def build(script):
                     else:
                         cues.append({"to": "full", "how": "cut", "push": True})
                     cur = ("main", "full")
-                if first and slot == "S13" and cur != ("main", "full"):
-                    go("main:full")                                    # the question pulls back to the whole picture
+                tight = any(t in shows or (t.split("'")[0] in words and "full" not in names.get(t.split("'")[0], [])) for t in toks)
+                if first and slot == "S13" and cur != ("main", "full") and not tight:
+                    go("main:full")                                    # the question pulls back to the whole picture (unless it names a detail)
                 wide_for = None
                 if slot == "S1" and last_line and len(toks) >= 3:      # the hook's last named thing arrives with the glide out
                     j = next((k for k in range(len(toks) - 1, max(len(toks) - 3, -1), -1) if toks[k] in names or toks[k].split("'")[0] in names), None)

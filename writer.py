@@ -49,7 +49,7 @@ def gemini(prompt, ok, extra=None, rounds=5, purpose="script"):
                 data = json.loads(json.loads(raw)["candidates"][0]["content"]["parts"][0]["text"])
                 if ok(data):
                     return data
-                print(model, "incomplete JSON", purpose)
+                print(model, "incomplete JSON", purpose, json.dumps(data, ensure_ascii=False)[:300])
             except (ValueError, KeyError, IndexError, TypeError):
                 print(model, "unreadable answer", purpose)
         live = [COOL.get(m, 0) for m in MODELS if m not in DEAD]
@@ -114,7 +114,13 @@ def write(topic, work):
         print(f"{topic['id']}: the lead picture did not download ({code})")
         return None
     pic = [{"inline_data": {"mime_type": "image/jpeg", "data": base64.b64encode(jpg.read_bytes()).decode()}}]
-    look = gemini((ROOT / "prompts/look.txt").read_text(encoding="utf-8"), valid_look, extra=pic, purpose="look")
+    cache = ROOT / "data/look" / f"{topic['id']}.json"                # v1.03: what is in a picture does not change: asked once, kept
+    if cache.exists():
+        look = json.loads(cache.read_text(encoding="utf-8"))
+    else:
+        look = gemini((ROOT / "prompts/look.txt").read_text(encoding="utf-8"), valid_look, extra=pic, purpose="look")
+        cache.parent.mkdir(parents=True, exist_ok=True)
+        cache.write_text(json.dumps(look, indent=1, ensure_ascii=False), encoding="utf-8")
     base = ((ROOT / "prompts/writer.txt").read_text(encoding="utf-8") + f"\n\nKIND  {topic['kind']}\nTITLE  {title}\n\nFACTS\n" + "\n".join(f"{i + 1}. {s}" for i, s in enumerate(facts))
             + ("\n\nANGLE\n" + "\n".join(f"{k}: {v if isinstance(v, str) else ' / '.join(v)}" for k, v in topic["angle"].items()) if topic.get("angle") else "")
             + "\n\nLOOK (" + look.get("summary", "") + ")\n" + "\n".join(f"- {t['name']}: words {', '.join(t.get('words', []))}" for t in look["things"]) + "\n\nAVOID\n" + ("\n".join("- " + r for r in recent()) or "- nothing yet"))

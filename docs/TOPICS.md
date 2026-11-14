@@ -61,3 +61,18 @@ Girl with a Pearl Earring 3 · an expedition told with photographs 1.
 4. `data/backlog.json` keeps everything with its score. `writer.py` takes only 7 and more, the highest first, and
    writes the script ON the judge's angle (`prompts/writer.txt`, input ANGLE).
 Run it: workflow `video`, input `scout` = how many candidates; the list arrives on the `preview` branch.
+
+## 4. The first run (Nov 14, run 43532578256, 21 minutes)
+18 seed topics re-judged and 20 new candidates asked for. Of the 20: 8 judged, 7 had a title Wikipedia did not
+know (fixed: a missing title is now resolved through the search), 5 had a picture that was too small or not free.
+Result: 11 topics of 7 and more (`data/backlog.json`): The Fallen Angel 10 (the judge's angle: "the tear under
+his furious glare", the same as the reference's own video), Self-Portrait with Death Playing the Fiddle 10, Lucifer
+(von Stuck) 9, The Nightmare 9, The Ambassadors 9, Portrait of Innocent X 9, The Execution of Lady Jane Grey 8,
+Medusa (Caravaggio) 8, John Dee 8, Stanczyk 7, Christ in the Desert 7. Dropped by the judge for violence shown:
+Ivan the Terrible, Judith, Dante and Virgil, The Raft of the Medusa, the Anatomy Lesson.
+Two cautions. (1) The Nightmare got 9, but the reference's own video on it is near the bottom (82 thousand): the
+judge counted the demon's stare and did not take off for "the monster is in full view". Until our own numbers
+exist, treat a 9 with the horror in plain sight as a 7. (2) QUOTA: this one run spent the day's free requests of
+the strong Gemini models (about 40 calls with a picture); the writer could not run afterwards. Scout at most once
+a week, on a day of its own; one video needs about 5 calls. What is visible in a picture is kept in
+`data/look/<id>.json` after the first time.
