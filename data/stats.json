@@ -32,6 +32,7 @@
     "closer": "either_or",
     "theme": "fallen",
     "century": "19th",
+    "length": "60-75 s",
     "writer": "claude",
     "judge": 10,
     "judge_scores": {
@@ -41,15 +42,15 @@
      "T": 2,
      "Y": 1,
      "S": 1
-    },
-    "length": "60-75 s"
+    }
    },
    "hook": "What if the most beautiful angel ever painted is looking at you with pure hatred?",
-   "views": 0,
+   "views": 26,
    "likes": 0,
-   "comments": 0
+   "comments": 1,
+   "score": 3.38
   }
  },
- "read_at": "2026-11-14T15:54:47Z",
+ "read_at": "2026-11-14T20:40:45Z",
  "_about": "written by stats_now.py (v1.09): one entry per public video; learn.py reads it. Do not edit by hand."
 }
