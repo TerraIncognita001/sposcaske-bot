@@ -21,6 +21,12 @@ on:
         type: choice
         options: ["no", "private", "slot"]
         default: "no"
+      publish_at:
+        description: "With upload = slot: an exact publish time in UTC (2026-11-14T02:00:00Z) instead of the gate's next slot"
+        required: false
+      slot:
+        description: "With publish_at: the slot key this video fills (E2026-11-14#2)"
+        required: false
       youtube_check:
         description: "Only check the YouTube connection: which channel do the secrets open? (reads only)"
         type: boolean
@@ -67,7 +73,8 @@ jobs:
           elif [ "${{ inputs.scout }}" != "0" ] && [ -n "${{ inputs.scout }}" ]; then MODE=scout; echo "SCOUT=${{ inputs.scout }}" >> "$GITHUB_ENV";
           else
             echo "UPLOAD=${{ inputs.upload }}" >> "$GITHUB_ENV"
-            if [ "${{ inputs.upload }}" = "slot" ]; then python gate.py | tee gate.out; cat gate.out >> "$GITHUB_ENV"; grep -q "GO=1" gate.out || MODE=idle; fi
+            if [ -n "${{ inputs.publish_at }}" ]; then echo "PUBLISH_AT=${{ inputs.publish_at }}" >> "$GITHUB_ENV"; echo "SLOT=${{ inputs.slot }}" >> "$GITHUB_ENV";    # v1.06: Andrii names the minute himself
+            elif [ "${{ inputs.upload }}" = "slot" ]; then python gate.py | tee gate.out; cat gate.out >> "$GITHUB_ENV"; grep -q "GO=1" gate.out || MODE=idle; fi
           fi
           echo "MODE=$MODE" >> "$GITHUB_ENV"; echo "mode: $MODE"
       - name: python packages
