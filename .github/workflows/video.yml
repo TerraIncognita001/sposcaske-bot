@@ -16,6 +16,10 @@ on:
         description: "Test only: make the video, do NOT upload (it goes to the preview branch)"
         type: boolean
         default: true
+      youtube_check:
+        description: "Only check the YouTube connection: which channel do the secrets open? (reads only)"
+        type: boolean
+        default: false
       scout:
         description: "Topics only: find this many new candidates and judge them 1-10 (0 = off); the list goes to the preview branch"
         default: "0"
@@ -69,6 +73,15 @@ jobs:
           if [ "${{ inputs.story }}" = "_selftest" ]; then python sources.py --selftest 2>&1 | tee run.log; exit 0; fi
           if [ -f "scripts/${{ inputs.story }}.json" ]; then python director.py "scripts/${{ inputs.story }}.json" work/directed.json; S=work/directed.json; else S="stories/${{ inputs.story }}.json"; fi
           python sources.py "$S" work 2>&1 | tee run.log
+      - name: YouTube connection
+        if: ${{ inputs.youtube_check }}
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          set -o pipefail
+          python upload.py --whoami 2>&1 | tee run.log
       - name: find and judge topics
         if: ${{ inputs.scout != '0' && inputs.scout != '' }}
         env:
@@ -79,7 +92,7 @@ jobs:
           python topics.py --rejudge --scout "${{ inputs.scout }}" 2>&1 | tee run.log
           cp data/backlog.json work/backlog.json
       - name: make the video
-        if: ${{ !inputs.pictures_only && (inputs.scout == '0' || inputs.scout == '') }}
+        if: ${{ !inputs.pictures_only && !inputs.youtube_check && (inputs.scout == '0' || inputs.scout == '') }}
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
