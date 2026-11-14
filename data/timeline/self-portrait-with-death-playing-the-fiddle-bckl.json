@@ -1,0 +1,137 @@
+{
+ "total": 60.72591836734694,
+ "lines": [
+  {
+   "t0": 1.65,
+   "t1": 4.24,
+   "beat": "hook",
+   "say": "There's a terrifying detail on this violin,"
+  },
+  {
+   "t0": 4.46,
+   "t1": 7.26,
+   "beat": "hook",
+   "say": "and it explains why the painter stopped to listen."
+  },
+  {
+   "t0": 7.91,
+   "t1": 10.59,
+   "beat": "ident",
+   "say": "This is Self-Portrait with Death Playing the Fiddle,"
+  },
+  {
+   "t0": 10.81,
+   "t1": 14.06,
+   "beat": "ident",
+   "say": "painted by Arnold Böcklin in 1872."
+  },
+  {
+   "t0": 14.66,
+   "t1": 16.75,
+   "beat": "setup",
+   "say": "A bearded painter holds his brush,"
+  },
+  {
+   "t0": 16.97,
+   "t1": 19.69,
+   "beat": "setup",
+   "say": "and behind him a skeleton plays the violin."
+  },
+  {
+   "t0": 20.29,
+   "t1": 21.75,
+   "beat": "turn",
+   "say": "But look at the violin."
+  },
+  {
+   "t0": 22.35,
+   "t1": 24.02,
+   "beat": "detail",
+   "say": "It has only one string."
+  },
+  {
+   "t0": 24.62,
+   "t1": 28.16,
+   "beat": "triad",
+   "say": "The painter doesn't turn. The painter doesn't run."
+  },
+  {
+   "t0": 28.76,
+   "t1": 30.04,
+   "beat": "triad",
+   "say": "He simply listens."
+  },
+  {
+   "t0": 30.64,
+   "t1": 32.25,
+   "beat": "backstory",
+   "say": "According to Alma Mahler,"
+  },
+  {
+   "t0": 32.47,
+   "t1": 34.92,
+   "beat": "backstory",
+   "say": "her husband Gustav wrote his Fourth Symphony"
+  },
+  {
+   "t0": 35.14,
+   "t1": 36.89,
+   "beat": "backstory",
+   "say": "under the spell of this picture."
+  },
+  {
+   "t0": 37.49,
+   "t1": 39.58,
+   "beat": "backstory",
+   "say": "A violin should have four strings."
+  },
+  {
+   "t0": 40.18,
+   "t1": 42.52,
+   "beat": "backstory",
+   "say": "But Böcklin gave Death a fiddle with one."
+  },
+  {
+   "t0": 43.52,
+   "t1": 45.26,
+   "beat": "reveal",
+   "say": "And here's the disturbing part."
+  },
+  {
+   "t0": 45.86,
+   "t1": 47.57,
+   "beat": "reveal",
+   "say": "Death has only one string,"
+  },
+  {
+   "t0": 47.79,
+   "t1": 50.03,
+   "beat": "reveal",
+   "say": "yet the painter cannot stop listening."
+  },
+  {
+   "t0": 50.63,
+   "t1": 53.07,
+   "beat": "reveal",
+   "say": "As if the song ends when that string breaks."
+  },
+  {
+   "t0": 53.67,
+   "t1": 55.76,
+   "beat": "reveal",
+   "say": "Maybe the last string is his own life."
+  },
+  {
+   "t0": 56.56,
+   "t1": 58.34,
+   "beat": "question",
+   "say": "So is the painter working,"
+  },
+  {
+   "t0": 58.56,
+   "t1": 60.38,
+   "beat": "question",
+   "say": "or listening to his own end?"
+  }
+ ]
+}
