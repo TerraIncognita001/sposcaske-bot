@@ -13,6 +13,8 @@ conformance. What the genre is and what all references share: `docs/GENRE.md`.
 
 ANDRII'S LIST: `docs/tasks.md` (in Ukrainian: the schedule, the decisions waiting for his yes, the to-do list with
 P1-P3, the channel keywords). Keep it current and show it to him (SendUserFile, display render) after every change.
+A finished task and an answered decision MOVE to its section 'Зроблено' as '- ✅ ~~**text**~~' (Andrii, Nov 14:
+'виконані завдання в таскс мд перенось у зроблене'); the open sections hold only what is open.
 
 Read before any work: `docs/BUILD_PROMPT.md` (the plan and the hard rules; §13 = the second pass), `docs/FORMAT.md`
 (§16–§17 win over earlier sections; §17.2 = the picture–word rule, enforced by `render.py`) + `format.json`, `docs/WRITER_PROMPT.md` (scripts are a fixed form of 13 slots,
