@@ -19,7 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "tools"))
-import sources, script_check, learn
+import sources, script_check, learn, director
 
 MODELS = [os.environ.get("GEMINI_MODEL", "gemini-3.5-flash"), "gemini-flash-latest", "gemini-3.1-flash-lite", "gemini-2.5-flash"]
 COOL, DEAD = {}, set()
@@ -114,6 +114,30 @@ def brief(topic, title, facts, look=None):
             + "\n\nAVOID\n" + ("\n".join("- " + r for r in recent()) or "- nothing yet") + learn.notes())
 
 
+def target(to):
+    """A "show" target as the director knows it: a LOOK name in lower_snake_case, or <evidence key>:<name | full>."""
+    to = str(to).strip()
+    return to if ":" in to else re.sub(r"\W", "_", to.lower())
+
+
+def camera_faults(script):
+    """v1.10: what the director could not shoot (Nov 14: Gemini's Lucifer sent the camera to ' darkness', which is no
+    thing of LOOK, and the run stopped there). Checked while the script is written, so the model gets it back."""
+    names, keys = {l["name"] for l in script["look"]}, {e["key"] for e in script.get("evidence", [])}
+    out = []
+    for s in script["sentences"]:
+        for x in (s.get("show") or []) if s.get("slot") != "S2" else []:     # the ident has its own shots (card, portrait): the director reads no "show" there
+            to = x.get("to", "")
+            if (to.split(":")[0] not in keys) if ":" in to else (to not in names):
+                out.append(f"{s.get('slot')}: \"show\" sends the camera to '{to}', which is not a name of LOOK ({', '.join(sorted(names))}): use one of these names or drop that \"show\"")
+    if not out:
+        try:
+            director.build(script)
+        except Exception as e:
+            out.append(f"the camera cannot follow this script ({e!r}): every \"show\" target and \"detail\" must be a name of LOOK")
+    return out
+
+
 def assemble(topic, facts, lead, look, w, title):
     """The writer's answer + the facts + the pictures = scripts/<id>.json (what director.py reads)."""
     year = next((int(m) for m in re.findall(r"\b(1[0-9]{3})\b", " ".join(s["text"] for s in w["sentences"][:2]))), None)
@@ -125,7 +149,7 @@ def assemble(topic, facts, lead, look, w, title):
             "evidence": [{"key": re.sub(r"\W", "", e["key"])[:12] or f"ev{i}", "query": e["query"], "words": [x.lower() for x in e.get("words", [])],
                           "license": "Public domain", "credit": f"{e['query']} — Wikimedia Commons"} for i, e in enumerate(w.get("evidence", [])[:3])],
             "look": [{"name": re.sub(r"\W", "_", t["name"].lower()), "box": [round(float(v), 3) for v in t["box"]], "words": [x.lower() for x in t.get("words", [])]} for t in look["things"]],
-            "punch": w["punch"].upper(), "sentences": w["sentences"], "pronounce": w.get("pronounce", {}), "meta": w["meta"],
+            "punch": w["punch"].upper(), "sentences": [dict(s, show=[dict(x, to=target(x.get("to", ""))) for x in s["show"]]) if s.get("show") else s for s in w["sentences"]],    # v1.10: "Man Face" and " eyes" mean man_face and eyes "pronounce": w.get("pronounce", {}), "meta": w["meta"],
             "sources": [{"claim": facts[s["source"] - 1][:200], "url": "https://en.wikipedia.org/wiki/" + title.replace(" ", "_"), "note": f"sentence {s['slot']}"}
                         for s in w["sentences"] if isinstance(s.get("source"), int) and 0 < s["source"] <= len(facts)]}
 
@@ -161,13 +185,17 @@ def write(topic, work):
         w = gemini(base + note, ok, purpose="script")
         res, words, n = script_check.check([s["text"].strip() for s in w["sentences"]], title, w["punch"])
         hard = [f"{name}: {d}" for good, h, name, d in res if not good and h]
+        script = None
+        if not hard:                                                    # v1.10: the form holds; can the director shoot it?
+            script = assemble(topic, facts, {"commons": page_image, "license": lic[0], "wikidata": qid}, look, w, title)
+            hard = camera_faults(script)
         print(f"{topic['id']}: draft {attempt + 1}: {words} words, {n} sentences, {len(hard)} failures of the construction")
         for h in hard:
             print("   FAIL", h[:230])
         drafts.append({"draft": attempt + 1, "failures": hard, "answer": w})
         (work / "writer_drafts.json").write_text(json.dumps(drafts, indent=1, ensure_ascii=False), encoding="utf-8")
         if not hard:
-            return assemble(topic, facts, {"commons": page_image, "license": lic[0], "wikidata": qid}, look, w, title)
+            return script
         note = "\n\nYOUR LAST DRAFT BROKE THE FORM. Fix exactly these points and return the whole JSON again:\n" + "\n".join("- " + h for h in hard) + "\n\nThe draft:\n" + json.dumps(w["sentences"], ensure_ascii=False)
     return None
 

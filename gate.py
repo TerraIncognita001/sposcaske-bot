@@ -9,8 +9,8 @@ Never change SLOTS without his yes.
 A slot = one video. Its key is E<date>#N (the London date of the publish time), as in the warehouse ww2-bot.
 v1.08 (Andrii, Nov 14: 'хай тепер за день до пустого слоту бот сам пише та випускає відео, загружає як приватне та
 ставить скеджл на випуск на потрібну годину'): a run fills the earliest slot that is still empty and whose publish
-time is between 30 minutes and 30 hours away. With the four daily fires (12:05, 13:05, 20:05, 21:05 UTC) every video
-is therefore made 27 to 30 hours AHEAD and waits on the channel, private, with its publish minute; YouTube itself
+time is between 30 minutes and 30 hours away. With the fires of the day (v1.10: every hour 12:05-23:05 UTC; before
+that 12:05, 13:05, 20:05, 21:05) every video is therefore made 27 to 30 hours AHEAD and waits on the channel, private, with its publish minute; YouTube itself
 makes it public. A slot that failed a day ahead is tried again by the next fires, four tries in all.
 data/slots.json remembers which slot got which video.
 """

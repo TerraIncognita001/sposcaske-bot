@@ -1,4 +1,4 @@
-# CLAUDE.md — sposcaske-bot (v1.09: picks topics, writes, shoots, uploads on a schedule, counts and learns; LIVE)
+# CLAUDE.md — sposcaske-bot (v1.10: picks topics, writes, shoots, uploads on a schedule, counts and learns; LIVE)
 
 Owner: Andrii (writes in Ukrainian; wants short, army-style answers: task → direct solution, the best free option,
 no fluff). Reply in Ukrainian.
@@ -26,15 +26,18 @@ Read before any work: `docs/BUILD_PROMPT.md` (the plan and the hard rules; §13 
 gated by `tools/script_check.py`). Change a number only with a new measurement.
 
 ## Live
-**v1.09** on `main` (Nov 14 2026: statistics + learning + the night writer Claude as the main writer, Gemini the backup; v1.08 = videos are made a day ahead (27-30 h) and wait private with their publish minute; v1.07 = schedule_video; v1.06 = the first public video (Daniel, 02:00 London), manual publish minute; v1.05 = THE SCHEDULE IS ON since Andrii's yes; v1.04 = channel connected, upload + schedule built; v1.03 = topics
+**v1.10** on `main` (Nov 14 2026: a fire every hour 12:05-23:05 UTC because GitHub drops scheduled runs, a manual run of main posts the comments and refreshes the statistics too, a Gemini script with a camera target outside LOOK is refused while written; v1.09 = statistics + learning + the night writer Claude as the main writer, Gemini the backup; v1.08 = videos are made a day ahead (27-30 h) and wait private with their publish minute; v1.07 = schedule_video; v1.06 = the first public video (Daniel, 02:00 London), manual publish minute; v1.05 = THE SCHEDULE IS ON since Andrii's yes; v1.04 = channel connected, upload + schedule built; v1.03 = topics
 judged 1-10; v1.02 = writer + director + finder; v1.01 = the first dry run; v1.00 = the approved maket).
-Next: **v1.10**.
+Next: **v1.11**.
 
 ## Channel and schedule
 Channel: **sposcaske** (@sposcaske, id UCNamDfqgZhL8JOaAiCNY_ww). Schedule (the source of truth = `gate.py` SLOTS;
 Andrii, Nov 14): every day **15:00 and 02:00 London**. THE SWITCH: `data/config.json` `"live"` is **true since Nov 14** (false = the
 scheduled runs do nothing; true = they write, make and upload (private, public at the slot through publishAt)).
 Never switch it, and never change the slots, without Andrii's yes. History: `docs/versions.md`.
+GITHUB DROPS SCHEDULED RUNS (Nov 14: none came all day): after a fire hour check `gh run list --event schedule`; a
+missed slot is filled by a manual run `write` = true, `upload` = slot, which the session's safety check lets through
+only after Andrii's explicit permission in the chat (ask each time), or he starts it himself in Actions.
 
 ## The night writer (v1.09, Andrii, Nov 14: 'Нічний сценарист Claude як основний, Gemini як запасний ... Роби')
 The scheduled task 'sposcaske night writer' (trig_01WjFPWccHHzWenYrZTT5bqj; every day 07:43 UTC) wakes ONE standing

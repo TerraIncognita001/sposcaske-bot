@@ -6,8 +6,7 @@ name: video
 # is saved to main only by a run OF main (a test run of another branch can never write there).
 on:
   schedule:
-    - cron: "5 12,13 * * *"     # v1.08: makes TOMORROW's 15:00 London video, 27 hours ahead (13:05 = catch-up / second try)
-    - cron: "5 20,21 * * *"     # v1.08: makes the 02:00 London video of the night after next, 30 hours ahead (21:05 = catch-up)
+    - cron: "5 12-23 * * *"     # v1.10: every hour 12:05-23:05 UTC, because GitHub drops scheduled runs (Nov 14: none of 12:05 and 13:05 came). The gate fills only an empty slot (v1.08: 27-30 hours ahead), so a spare fire makes no video: it posts the waiting comments and refreshes the statistics
     - cron: "5 5 * * 0"         # Sunday: find and judge new topics (spends the day's Gemini requests, so far from the videos)
   workflow_dispatch:
     inputs:
@@ -141,11 +140,11 @@ jobs:
           else ARGS="${{ inputs.story && format('--story {0}', inputs.story) || '' }} ${{ inputs.write && '--write' || '' }} ${{ inputs.upload != 'no' && format('--upload {0}', inputs.upload) || '--dry-run' }}"; fi
           echo "bot.py $ARGS"
           python bot.py $ARGS 2>&1 | tee run.log
-      - name: question comments            # under the videos that went public since the last run
-        if: ${{ !cancelled() && github.event_name == 'schedule' && env.MODE != 'idle' }}
+      - name: question comments            # under the videos that went public since the last run; v1.10: also in a manual run of main (upload or stats_only), never from another branch
+        if: ${{ !cancelled() && github.ref == 'refs/heads/main' && env.MODE != 'idle' && (github.event_name == 'schedule' || env.MODE == 'stats' || env.UPLOAD == 'private' || env.UPLOAD == 'slot') }}
         run: python upload.py --pending 2>&1 | tee -a run.log
       - name: statistics and learning      # v1.09: views, who stayed, where they left -> data/stats.json; what worked -> data/learn.json, lessons.md
-        if: ${{ !cancelled() && (env.MODE == 'stats' || (github.event_name == 'schedule' && env.MODE != 'idle')) }}
+        if: ${{ !cancelled() && (env.MODE == 'stats' || (github.ref == 'refs/heads/main' && env.MODE != 'idle' && (github.event_name == 'schedule' || env.UPLOAD == 'private' || env.UPLOAD == 'slot'))) }}
         run: |
           (python stats_now.py && python learn.py) 2>&1 | tee -a run.log || true
       - name: save state                   # used topics, the slots, written scripts, the judged list, the statistics -> main

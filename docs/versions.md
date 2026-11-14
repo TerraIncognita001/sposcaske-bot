@@ -5,6 +5,20 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.10 = A FIRE EVERY HOUR, COMMENTS AND STATISTICS IN MANUAL RUNS, NO CAMERA TARGET OUTSIDE THE PICTURE, Andrii,
+  Nov 14 2026 (Р15: 'Так на всі три'). Why: on Nov 14 GitHub fired none of the scheduled runs (12:05 and 13:05 UTC
+  never came; the warehouse ww2-bot knows it: 2 of 9 fires on Nov 6 and 7), so both slots of Nov 15 were filled by
+  hand. (a) cron `5 12-23 * * *` (was 12, 13, 20, 21): twelve chances a day instead of four; the gate is unchanged
+  (the earliest empty slot 30 minutes to 30 hours ahead, four tries a slot), so a spare fire makes no video: it
+  posts the waiting comments and refreshes the statistics, about half a minute. The publish times (15:00 and 02:00
+  London) are untouched. (b) the steps 'question comments' and 'statistics and learning' also run in a manual run
+  of `main` that uploads or is `stats_only` (they ran only on schedule, so with no scheduled run Daniel and the
+  Fallen Angel got no question comment and data/stats.json was never written); comments never come from a run of
+  another branch. (c) `writer.camera_faults`: a Gemini draft that holds the form is assembled and given to the
+  director at once; a "show" target that is no LOOK name (Lucifer, Nov 14: ' darkness') or anything else the
+  director cannot shoot goes back to the model as a failure of that draft instead of costing the topic;
+  `writer.target` brings "Man Face" and " eyes" to man_face and eyes. "show" in the ident (S2) is not judged: the
+  director reads none there.
 - v1.09 = STATISTICS, LEARNING, THE NIGHT WRITER CLAUDE, Andrii, Nov 14 2026 ('P2 Збір статистики ... P2 Самонавчання
   ... P2 Нічний сценарист Claude як основний, Gemini як запасний. Роби ці всі!').
   (1) `stats_now.py` -> `data/stats.json`, in every scheduled run and by the manual input `stats_only`, no Gemini:
