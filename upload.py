@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
-"""upload.py — the bot's hands on YouTube (v1.04: the connection check; the upload itself comes with the schedule).
+"""upload.py — the bot's hands on YouTube (v1.04).
 
     python upload.py --whoami        which channel do the secrets open? (reads only, changes nothing)
+    python upload.py --pending       post the question comments of videos that went public
+    upload(mp4, meta, publish_at)    called by bot.py: always private, public at the slot time when one is given
 
 Secrets (GitHub Actions): YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN, made once with tools/youtube_auth.py.
 Copied from the warehouse ww2-bot (shorts.py credentials / youtube).
@@ -38,5 +40,48 @@ def whoami():
     return 0
 
 
+def upload(mp4, meta, publish_at=None):
+    """One resumable upload (network hiccups are retried inside the same session, never a second video). Always
+    PRIVATE; with publish_at (UTC, ...Z) YouTube itself makes it public on that minute. Returns the video id."""
+    from googleapiclient.http import MediaFileUpload
+    tags = " ".join("#" + t.replace(" ", "") for t in (["shorts"] + meta.get("tags", []))[:4])
+    body = {"snippet": {"title": meta["title"][:100], "description": (meta["description"] + "\n\n" + tags)[:4900], "tags": meta.get("tags", [])[:12],
+                        "categoryId": meta.get("categoryId", "27"), "defaultLanguage": "en", "defaultAudioLanguage": "en"},
+            "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False, "embeddable": True}}
+    if publish_at:
+        body["status"]["publishAt"] = publish_at
+    vid = youtube().videos().insert(part="snippet,status", body=body, media_body=MediaFileUpload(str(mp4), chunksize=-1, resumable=True)).execute(num_retries=3)["id"]
+    print(f"uploaded: https://youtube.com/shorts/{vid}  (private" + (f", public at {publish_at} UTC)" if publish_at else ", no publish time)"))
+    return vid
+
+
+def comment(vid, text):
+    youtube().commentThreads().insert(part="snippet", body={"snippet": {"videoId": vid, "topLevelComment": {"snippet": {"textOriginal": text}}}}).execute()
+
+
+def post_pending():
+    """The question comment of every video that is public by now and still waits for it (a private video takes none)."""
+    import json
+    from datetime import datetime, timezone
+    import gate
+    st, now, n = gate.load(), datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), 0
+    for key, s in st["slots"].items():
+        if s.get("comment_pending") and s.get("video") and s.get("publish_at", "9") <= now:
+            try:
+                comment(s["video"], s["comment_pending"])
+                s.pop("comment_pending")
+                n += 1
+                print(f"comment posted under {s['video']} ({key})")
+            except Exception as e:
+                print(f"comment under {s['video']} failed:", str(e)[:160])
+    gate.STATE.write_text(json.dumps(st, indent=1, ensure_ascii=False), encoding="utf-8")
+    return n
+
+
 if __name__ == "__main__":
-    sys.exit(whoami() if "--whoami" in sys.argv else 1)
+    if "--whoami" in sys.argv:
+        sys.exit(whoami())
+    if "--pending" in sys.argv:
+        post_pending()
+        sys.exit(0)
+    sys.exit(1)

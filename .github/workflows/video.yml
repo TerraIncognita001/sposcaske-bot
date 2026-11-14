@@ -1,30 +1,35 @@
 name: video
-# One run = one video (v1.02: dry runs only; the upload is not built yet).
-# A dry run puts the video, its metadata and the report on the "preview" branch and the log on the "logs" branch
-# (both overwritten every time), exactly as the warehouse ww2-bot does.
+# One run = one video (v1.04). The schedule lives in gate.py (15:00 and 02:00 London) and runs only while
+# data/config.json says "live": true. Manual runs: dry run (video -> the "preview" branch), a private test upload,
+# the topic scout, the pictures of a story, the YouTube connection check. The log always goes to the "logs" branch.
 on:
+  schedule:
+    - cron: "5 12,13 * * *"     # the 15:00 London video, made about three hours ahead (13:05 = the second try)
+    - cron: "5 20,21 * * *"     # the 02:00 London video, made about six hours ahead (21:05 = the second try)
+    - cron: "5 5 * * 0"         # Sunday: find and judge new topics (spends the day's Gemini requests, so far from the videos)
   workflow_dispatch:
     inputs:
       story:
         description: "Script or story id (the file name in scripts/ or stories/ without .json). Empty + write = the next topic"
         required: false
       write:
-        description: "Let the bot write the script itself first (writer.py, needs the secret GEMINI_API_KEY)"
+        description: "Let the bot write the script itself first (writer.py)"
         type: boolean
         default: false
-      dry_run:
-        description: "Test only: make the video, do NOT upload (it goes to the preview branch)"
-        type: boolean
-        default: true
+      upload:
+        description: "no = dry run only (video -> preview branch) | private = upload private, no publish time | slot = private, public at the next free slot"
+        type: choice
+        options: ["no", "private", "slot"]
+        default: "no"
       youtube_check:
         description: "Only check the YouTube connection: which channel do the secrets open? (reads only)"
         type: boolean
         default: false
       scout:
-        description: "Topics only: find this many new candidates and judge them 1-10 (0 = off); the list goes to the preview branch"
+        description: "Topics only: find this many new candidates and judge them 1-10 (0 = off)"
         default: "0"
       pictures_only:
-        description: "Only fetch the story's pictures and put them on the preview branch (to mark the focus boxes)"
+        description: "Only fetch the story's pictures and put them on the preview branch"
         type: boolean
         default: false
 permissions:
@@ -35,82 +40,107 @@ concurrency:
 jobs:
   make:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
     env:
       KOKORO_DIR: /home/runner/kokoro
       PYTHONUNBUFFERED: "1"
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
           cache: pip
+      - name: gate                         # what is this run for? MODE = video | scout | check | pictures | idle
+        run: |
+          MODE=video
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            LIVE=$(python -c "import json;print(int(bool(json.load(open('data/config.json')).get('live'))))")
+            if [ "$LIVE" != "1" ]; then MODE=idle; echo "the schedule is switched off (data/config.json)";
+            elif [ "${{ github.event.schedule }}" = "5 5 * * 0" ]; then MODE=scout; echo "SCOUT=20" >> "$GITHUB_ENV";
+            else python gate.py | tee gate.out; cat gate.out >> "$GITHUB_ENV"; grep -q "GO=1" gate.out || MODE=comments; echo "UPLOAD=slot" >> "$GITHUB_ENV"; fi
+          elif [ "${{ inputs.youtube_check }}" = "true" ]; then MODE=check;
+          elif [ "${{ inputs.pictures_only }}" = "true" ]; then MODE=pictures;
+          elif [ "${{ inputs.scout }}" != "0" ] && [ -n "${{ inputs.scout }}" ]; then MODE=scout; echo "SCOUT=${{ inputs.scout }}" >> "$GITHUB_ENV";
+          else
+            echo "UPLOAD=${{ inputs.upload }}" >> "$GITHUB_ENV"
+            if [ "${{ inputs.upload }}" = "slot" ]; then python gate.py | tee gate.out; cat gate.out >> "$GITHUB_ENV"; grep -q "GO=1" gate.out || MODE=idle; fi
+          fi
+          echo "MODE=$MODE" >> "$GITHUB_ENV"; echo "mode: $MODE"
+      - name: python packages
+        if: env.MODE != 'idle'
+        run: pip install -q -r requirements.txt
       - name: voice model cache            # offline Kokoro voice, 115 MB, downloaded once
-        if: ${{ !inputs.pictures_only }}
+        if: env.MODE == 'video'
         uses: actions/cache@v4
         with:
           path: ~/kokoro
           key: kokoro-v1.0-int8
-      - name: tools
+      - name: ffmpeg and the voice model
+        if: env.MODE == 'video'
         run: |
           sudo apt-get install -y -qq --no-install-recommends ffmpeg >/dev/null \
             || (sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends ffmpeg >/dev/null)
           ffmpeg -version | head -1
-          pip install -q -r requirements.txt
-      - name: voice model
-        if: ${{ !inputs.pictures_only }}
-        run: |
           mkdir -p ~/kokoro && cd ~/kokoro
           for f in kokoro-v1.0.int8.onnx voices-v1.0.bin; do
             [ -s "$f" ] || curl -sSL --retry 3 -o "$f" "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/$f"
           done
-          ls -la
+      - name: YouTube connection
+        if: env.MODE == 'check'
+        run: |
+          set -o pipefail
+          python upload.py --whoami 2>&1 | tee run.log
       - name: pictures only
-        if: ${{ inputs.pictures_only }}
+        if: env.MODE == 'pictures'
         run: |
           set -o pipefail
           mkdir -p work
           if [ "${{ inputs.story }}" = "_selftest" ]; then python sources.py --selftest 2>&1 | tee run.log; exit 0; fi
           if [ -f "scripts/${{ inputs.story }}.json" ]; then python director.py "scripts/${{ inputs.story }}.json" work/directed.json; S=work/directed.json; else S="stories/${{ inputs.story }}.json"; fi
           python sources.py "$S" work 2>&1 | tee run.log
-      - name: YouTube connection
-        if: ${{ inputs.youtube_check }}
-        env:
-          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
-          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
-          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
-        run: |
-          set -o pipefail
-          python upload.py --whoami 2>&1 | tee run.log
       - name: find and judge topics
-        if: ${{ inputs.scout != '0' && inputs.scout != '' }}
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        if: env.MODE == 'scout'
         run: |
           set -o pipefail
           mkdir -p work
-          python topics.py --rejudge --scout "${{ inputs.scout }}" 2>&1 | tee run.log
+          python topics.py --rejudge --scout "$SCOUT" 2>&1 | tee run.log
           cp data/backlog.json work/backlog.json
       - name: make the video
-        if: ${{ !inputs.pictures_only && !inputs.youtube_check && (inputs.scout == '0' || inputs.scout == '') }}
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        if: env.MODE == 'video'
         run: |
           set -o pipefail
-          python bot.py ${{ inputs.story && format('--story "{0}"', inputs.story) || '' }} ${{ inputs.write && '--write' || '' }} ${{ inputs.dry_run && '--dry-run' || '' }} 2>&1 | tee run.log
-      - name: preview for review           # the video (or the pictures) go to the "preview" branch (overwritten)
-        if: ${{ !cancelled() }}
+          if [ "${{ github.event_name }}" = "schedule" ]; then ARGS="--write --upload slot";
+          else ARGS="${{ inputs.story && format('--story {0}', inputs.story) || '' }} ${{ inputs.write && '--write' || '' }} ${{ inputs.upload != 'no' && format('--upload {0}', inputs.upload) || '--dry-run' }}"; fi
+          echo "bot.py $ARGS"
+          python bot.py $ARGS 2>&1 | tee run.log
+      - name: question comments            # under the videos that went public since the last run
+        if: ${{ !cancelled() && github.event_name == 'schedule' && env.MODE != 'idle' }}
+        run: python upload.py --pending 2>&1 | tee -a run.log
+      - name: save state                   # used topics, the slots, written scripts, the judged list -> main
+        if: ${{ !cancelled() && env.MODE != 'idle' && (github.event_name == 'schedule' || env.UPLOAD == 'private' || env.UPLOAD == 'slot') }}
+        run: |
+          git config user.name bot && git config user.email bot@users.noreply.github.com
+          git add data scripts 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -qm "state: ${SLOT:-$MODE} (run ${GITHUB_RUN_ID})"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break || sleep 5; done
+      - name: preview for review           # manual runs: the video (or the pictures, the judged list) -> the "preview" branch
+        if: ${{ !cancelled() && github.event_name != 'schedule' }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           rm -rf /tmp/p && mkdir -p /tmp/p
           cp work/final.mp4 work/metadata.json work/report.json work/sources.json work/directed.json work/writer_drafts.json work/look.json work/backlog.json /tmp/p/ 2>/dev/null || true
+          if [ "$MODE" = "pictures" ]; then mkdir -p /tmp/p/img && cp work/img/* /tmp/p/img/ 2>/dev/null || true; fi
           [ "${{ inputs.write }}" = "true" ] && cp scripts/*.json /tmp/p/ 2>/dev/null || true
-          if [ "${{ inputs.pictures_only }}" = "true" ]; then mkdir -p /tmp/p/img && cp work/img/* /tmp/p/img/ 2>/dev/null || true; fi
           cp work/final_work/timeline.json /tmp/p/ 2>/dev/null || true
           [ -n "$(find /tmp/p -type f | head -1)" ] || exit 0
           cd /tmp/p && git init -q -b preview && git add . \
-            && git -c user.name=bot -c user.email=bot@users.noreply.github.com commit -qm "dry run ${GITHUB_RUN_ID}: ${{ inputs.story }}" \
+            && git -c user.name=bot -c user.email=bot@users.noreply.github.com commit -qm "run ${GITHUB_RUN_ID}: ${{ inputs.story }}" \
             && git push -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" preview
       - name: log                          # the bot's output goes to the "logs" branch (overwritten)
         if: ${{ !cancelled() }}

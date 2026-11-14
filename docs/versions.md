@@ -5,6 +5,19 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.04 = THE CHANNEL IS CONNECTED; UPLOAD AND THE SCHEDULE (SWITCHED OFF UNTIL ANDRII SAYS GO), Andrii, Nov 14 2026
+  ('добавив ці секрети'; 'випускатимемо відео 2 рази в день. 1500 за лондоном та 0200 за лондоном'). The secrets
+  YT_CLIENT_ID / YT_CLIENT_SECRET / YT_REFRESH_TOKEN were made with the warehouse's OAuth client (its consent screen
+  is named "Iron Archive Uploader"; only the owner sees that name) and open the channel **sposcaske (@sposcaske)**,
+  id UCNamDfqgZhL8JOaAiCNY_ww, checked by `upload.py --whoami` (run 43537970382; 0 videos; long uploads "eligible" =
+  the phone is not verified yet). New: `gate.py` (SLOTS 15:00 and 02:00 London, keys E<date>#1 / #2, a slot is
+  filled 30 min to 14 h ahead, two tries; `data/slots.json`), `upload.py` (`upload`: always private, public at the
+  slot time through publishAt; the question comment once the video is public; `--pending`), `bot.py --upload
+  private|slot` (only a video that passed every check goes up; then `data/used.json` and the slot are recorded;
+  a topic that cannot be written is skipped, up to three per run), `data/config.json` `"live": false` = THE SWITCH:
+  the scheduled runs do nothing until it is true. Workflow: cron 12:05 / 13:05 UTC (the 15:00 video), 20:05 / 21:05
+  (the 02:00 video), Sunday 05:05 (the weekly scout, 20 candidates), manual input `upload` no / private / slot;
+  the bot commits its state (`data`, `scripts`) to `main`. Not built yet: thumbnails, stats, learn.py.
 - v1.03 = TOPICS ARE FOUND AND JUDGED 1-10; YEARS SPOKEN IN TWO HALVES, Andrii, Nov 14 2026 (after the first video
   the bot made alone: 'те як бот каже рік, треба щоб він казав 18 57 а не 1857. Загалом вибір теми - конкретно ця
   ну зовсім не цікава. проаналізуй ... топ 15 найпопулярніших відео, знайди спільне між ними та напиши для бота

@@ -67,21 +67,43 @@ def main():
     ap.add_argument("--story")
     ap.add_argument("--write", action="store_true", help="write the next topic with writer.py first (needs GEMINI_API_KEY)")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--upload", choices=["no", "private", "slot"], default="no",
+                    help="private = upload private with no publish time; slot = private, public at env PUBLISH_AT (the gate's slot)")
     ap.add_argument("--work", default="work")
     a = ap.parse_args()
-    if not a.dry_run:
-        print("upload is not built yet (v1.01 makes dry runs only): run with --dry-run")
+    if a.dry_run:
+        a.upload = "no"
+    elif a.upload == "no":
+        print("nothing to do: give --dry-run (make only) or --upload private|slot")
         return 1
     t0, work = time.time(), (ROOT / a.work)
     work.mkdir(exist_ok=True)
-    if a.write:
+    if a.write and not a.story:                                         # v1.04: a topic that cannot be written is skipped, up to three tries
+        import writer
+        skip = []
+        for _ in range(3):
+            topic = writer.next_topic(skip=skip)
+            if not topic:
+                break
+            code = run_one(a, topic["id"], work, t0, write=True)
+            if code != 3:
+                return code
+            skip.append(topic["id"])
+            print(f"== {topic['id']} cannot make a good video: next topic")
+        print("no topic made a video in this run")
+        return 3
+    return run_one(a, a.story, work, t0, write=a.write)
+
+
+def run_one(a, story_id, work, t0, write=False):
+    a = argparse.Namespace(**dict(vars(a), story=story_id))
+    if write:
         import writer
         topic = writer.next_topic(a.story)
         script = topic and writer.write(topic, work)
         if not script:
-            print("the writer has no script for this run")
+            print("the writer has no script for this topic")
             return 3
-        a.story = topic["id"]
         (ROOT / "scripts" / f"{a.story}.json").write_text(json.dumps(script, indent=1, ensure_ascii=False), encoding="utf-8")
     spath, path = ROOT / "scripts" / f"{a.story}.json", ROOT / "stories" / f"{a.story}.json"
     if spath.exists():                                                  # the director shoots every script the same way
@@ -132,7 +154,22 @@ def main():
     (work / "report.json").write_text(json.dumps({"story": story["id"], "numbers": numbers, "checks": [{"check": n_, "ok": bool(o), "got": g} for n_, o, g in rows],
                                                   "bot_seconds": round(time.time() - t0)}, indent=1), encoding="utf-8")
     print(f"== done in {time.time() - t0:.0f} s: work/final.mp4, {numbers}")
-    return 0 if all(o for _, o, _ in rows) else 3
+    if not all(o for _, o, _ in rows):
+        return 3
+    if a.upload != "no":                                                # v1.04: only a video that passed every check goes up
+        import os, upload, gate
+        at = os.environ.get("PUBLISH_AT") if a.upload == "slot" else None
+        if a.upload == "slot" and not at:
+            print("--upload slot needs PUBLISH_AT from the gate")
+            return 1
+        vid = upload.upload(work / "final.mp4", meta, at)
+        used = json.loads((ROOT / "data/used.json").read_text(encoding="utf-8"))
+        used["used"] = sorted(set(used["used"]) | {story["id"]})
+        (ROOT / "data/used.json").write_text(json.dumps(used, ensure_ascii=False), encoding="utf-8")
+        key = os.environ.get("SLOT") or f"manual-{time.strftime('%Y%m%d-%H%M%S', time.gmtime())}"
+        gate.record(key, video=vid, story=story["id"], title=meta["title"], publish_at=at, seconds=numbers["seconds"],
+                    **({"comment_pending": meta["pinned_question"] + " 👇"} if meta.get("pinned_question") and at else {}))
+    return 0
 
 
 if __name__ == "__main__":

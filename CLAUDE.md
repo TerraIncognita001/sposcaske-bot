@@ -1,10 +1,10 @@
-# CLAUDE.md — sposcaske-bot (v1.03: the maket + a bot that picks topics, writes, shoots and dry-runs)
+# CLAUDE.md — sposcaske-bot (v1.04: picks topics, writes, shoots, uploads on a schedule; the switch is off)
 
 Owner: Andrii (writes in Ukrainian; wants short, army-style answers: task → direct solution, the best free option,
 no fluff). Reply in Ukrainian.
 
-State (2026-11-13): the maket + a bot that makes DRY RUNS (`.github/workflows/video.yml` -> `bot.py`; the video goes
-to the `preview` branch, the log to `logs`). No channel, no upload, no schedule yet. Next: `docs/BUILD_PROMPT.md` §11 (Andrii's decisions), then milestone M1.
+State (2026-11-14): the whole chain exists (topics -> script -> video -> upload on a schedule). Dry runs put the video
+on the `preview` branch, every run puts its log on `logs`. Missing: thumbnails, stats and learning (`docs/BUILD_PROMPT.md` §6.10).
 
 Pipeline: `topics.py` (find and judge topics 1-10, `docs/TOPICS.md`) -> `writer.py` (topic + the judge's angle ->
 `scripts/<id>.json`, Gemini; the secret GEMINI_API_KEY is set) -> `director.py` (script ->
@@ -16,9 +16,15 @@ Read before any work: `docs/BUILD_PROMPT.md` (the plan and the hard rules; §13 
 gated by `tools/script_check.py`). Change a number only with a new measurement.
 
 ## Live
-**v1.03** on `main` (Nov 14 2026: topics found and judged 1-10 with the angle, years spoken in two halves; v1.02 =
-writer + director + material finder, one voice; v1.01 = the first dry run; v1.00 = the approved maket, demo 7).
-Next: **v1.04**. History: `docs/versions.md`.
+**v1.04** on `main` (Nov 14 2026: the channel is connected, upload + schedule built, the switch is OFF; v1.03 = topics
+judged 1-10; v1.02 = writer + director + finder; v1.01 = the first dry run; v1.00 = the approved maket).
+Next: **v1.05**.
+
+## Channel and schedule
+Channel: **sposcaske** (@sposcaske, id UCNamDfqgZhL8JOaAiCNY_ww). Schedule (the source of truth = `gate.py` SLOTS;
+Andrii, Nov 14): every day **15:00 and 02:00 London**. THE SWITCH: `data/config.json` `"live"`: false = the
+scheduled runs do nothing; true = they write, make and upload (private, public at the slot through publishAt).
+Never switch it, and never change the slots, without Andrii's yes. History: `docs/versions.md`.
 
 ## Versions (the system of the warehouse ww2-bot, Andrii, Nov 13)
 - Every change of the bot (code, `format.json`, workflow, schedule, the look or the sound of a video, the writer

@@ -59,9 +59,9 @@ def gemini(prompt, ok, extra=None, rounds=5, purpose="script"):
     raise SystemExit(f"Gemini unavailable ({purpose})")
 
 
-def next_topic(wanted=None):
+def next_topic(wanted=None, skip=()):
     topics = json.loads((ROOT / "data/backlog.json").read_text(encoding="utf-8"))["topics"]
-    used = set(json.loads((ROOT / "data/used.json").read_text(encoding="utf-8"))["used"])
+    used = set(json.loads((ROOT / "data/used.json").read_text(encoding="utf-8"))["used"]) | set(skip)
     if wanted:
         return next((t for t in topics if t["id"] == wanted), None)
     scored = sorted((t for t in topics if t["id"] not in used and (t.get("score") or 0) >= 7), key=lambda t: -t["score"])    # v1.03: only 7 and more, best first
