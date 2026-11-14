@@ -66,17 +66,24 @@ def free(lic):
     return bool(lic and FREE.match(lic))
 
 
-def find_portrait(name):
-    """The Commons file Wikidata shows for a person (P18), e.g. the painter or the hero of the story. None if none."""
+def find_portrait(name, work=None):
+    """The Commons file Wikidata shows for a person (P18), e.g. the painter or the hero of the story. None if none.
+    v1.11: with `work` (the painting's Wikidata id) a hit that is the painting's creator (P170) wins over the first
+    hit: 'Diego Velázquez' found an Argentine actor first (Nov 14, run 43612356730)."""
+    claims = lambda q: (((api("www.wikidata.org", action="wbgetentities", ids=q, props="claims") or {}).get("entities", {}).get(q, {})) or {}).get("claims", {})
+    ids = lambda c, p: [x.get("mainsnak", {}).get("datavalue", {}).get("value", {}).get("id") for x in c.get(p, [])]
+    creators = set(ids(claims(work), "P170")) if work else set()
     d = api("www.wikidata.org", action="wbsearchentities", search=name, language="en", type="item", limit=5)
-    for hit in (d or {}).get("search", []):
-        e = api("www.wikidata.org", action="wbgetentities", ids=hit["id"], props="claims")
-        c = ((e or {}).get("entities", {}).get(hit["id"], {}) or {}).get("claims", {})
-        human = any(x.get("mainsnak", {}).get("datavalue", {}).get("value", {}).get("id") == "Q5" for x in c.get("P31", []))
+    hits = [h["id"] for h in (d or {}).get("search", [])]
+    first = None
+    for q in sorted(hits, key=lambda q: q not in creators):                   # v1.11: the creator first
+        c = claims(q)
         img = next((x["mainsnak"]["datavalue"]["value"] for x in c.get("P18", []) if x.get("mainsnak", {}).get("datavalue")), None)
-        if human and img:
-            return img, hit["id"]
-    return None, None
+        if "Q5" in ids(c, "P31") and img:
+            if q in creators or not creators:
+                return img, q
+            first = first or (img, q)
+    return first or (None, None)
 
 
 def find_commons(query, min_width=1100, limit=12):
@@ -169,7 +176,7 @@ def resolve(story_path, work):
         if v.get("commons") or v.get("file") or not f:
             continue
         if f.get("portrait_of"):
-            v["commons"], qid = find_portrait(f["portrait_of"])
+            v["commons"], qid = find_portrait(f["portrait_of"], f.get("work"))    # v1.11: the painting's creator wins
             found.append(f"{key}: portrait of {f['portrait_of']} -> {v['commons']} ({qid})")
         if not v.get("commons") and f.get("query"):
             hits = find_commons(f["query"])

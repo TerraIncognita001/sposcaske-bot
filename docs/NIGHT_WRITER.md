@@ -53,7 +53,9 @@ Read every `FAILED EARLIER` line: it says which check refused an earlier script 
    at `work/night/<id>/sheet.jpg`**: one frame per caption line. The named thing must be in its frame; the red
    punch word must stand on the wide picture; the portrait card must show the right person's face.
    If a check failed or a frame is wrong: fix (`look.json` or `answer.json`), `save`, push, one more dry run.
-   **At most 2 dry runs a script and 5 a night** (the repository has 2,000 free Actions minutes a month). A script
+   **At most 2 dry runs a script and 7 a night** (v1.11, Andrii, Nov 14: 'Дозволяй'; the repository has 2,000 free
+   Actions minutes a month, a dry run takes about 4). Start each run once (`gh workflow run ... --ref main`) and
+   check with `gh run list` that only one started. A script
    that still fails after its second dry run is removed (`git rm scripts/<id>.json`, push) and named in the
    report: Gemini will write that topic.
    The cloud sandbox cannot render the video itself: Wikimedia answers 429 to it for the large pictures.

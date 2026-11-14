@@ -1,4 +1,4 @@
-# CLAUDE.md — sposcaske-bot (v1.10: picks topics, writes, shoots, uploads on a schedule, counts and learns; LIVE)
+# CLAUDE.md — sposcaske-bot (v1.11: picks topics, writes, shoots, uploads on a schedule, counts and learns; LIVE)
 
 Owner: Andrii (writes in Ukrainian; wants short, army-style answers: task → direct solution, the best free option,
 no fluff). Reply in Ukrainian.
@@ -26,9 +26,9 @@ Read before any work: `docs/BUILD_PROMPT.md` (the plan and the hard rules; §13 
 gated by `tools/script_check.py`). Change a number only with a new measurement.
 
 ## Live
-**v1.10** on `main` (Nov 14 2026: a fire every hour 12:05-23:05 UTC because GitHub drops scheduled runs, a manual run of main posts the comments and refreshes the statistics too, a Gemini script with a camera target outside LOOK is refused while written; v1.09 = statistics + learning + the night writer Claude as the main writer, Gemini the backup; v1.08 = videos are made a day ahead (27-30 h) and wait private with their publish minute; v1.07 = schedule_video; v1.06 = the first public video (Daniel, 02:00 London), manual publish minute; v1.05 = THE SCHEDULE IS ON since Andrii's yes; v1.04 = channel connected, upload + schedule built; v1.03 = topics
+**v1.11** on `main` (Nov 14 2026: the writer assembles again (v1.10 had cut off meta), the portrait is the painting's creator from Wikidata, the night writer may make 7 dry runs a night; v1.10 = a fire every hour 12:05-23:05 UTC because GitHub drops scheduled runs, a manual run of main posts the comments and refreshes the statistics too, a Gemini script with a camera target outside LOOK is refused while written; v1.09 = statistics + learning + the night writer Claude as the main writer, Gemini the backup; v1.08 = videos are made a day ahead (27-30 h) and wait private with their publish minute; v1.07 = schedule_video; v1.06 = the first public video (Daniel, 02:00 London), manual publish minute; v1.05 = THE SCHEDULE IS ON since Andrii's yes; v1.04 = channel connected, upload + schedule built; v1.03 = topics
 judged 1-10; v1.02 = writer + director + finder; v1.01 = the first dry run; v1.00 = the approved maket).
-Next: **v1.11**.
+Next: **v1.12**.
 
 ## Channel and schedule
 Channel: **sposcaske** (@sposcaske, id UCNamDfqgZhL8JOaAiCNY_ww). Schedule (the source of truth = `gate.py` SLOTS;
@@ -45,7 +45,7 @@ cloud session of the same name (session_01DqdGaZ55tVzFcGQiVwjGb8, claude-opus-5-
 fresh session a night: a routine made from a chat gets no repository (tried Nov 14: 'no git repo', the clone was
 refused); if Andrii remakes it in the claude.ai routines UI with the repository added, a fresh session works too
 and is cheaper. It keeps 4 ready scripts in `scripts/` (two days). Its rules: `docs/NIGHT_WRITER.md`; it pushes only `scripts/` and `data/look/` to
-`main`, checks each script with a dry run (at most 5 a night), never touches code or the schedule. A ready script is
+`main`, checks each script with a dry run (at most 7 a night, v1.11), never touches code or the schedule. A ready script is
 marked `"written_by": "Claude (night writer) ..."`; one that failed the bot's checks is kept as
 `scripts/<id>.failed.json`. The routine spends the Claude subscription's limit (the ww2-bot writer failed on
 Nov 13 with 'usage limit reached'): if it does not run, Gemini writes as before v1.09.

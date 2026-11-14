@@ -5,6 +5,16 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.11 = THE WRITER ASSEMBLES AGAIN, THE PAINTER'S OWN PORTRAIT, 7 DRY RUNS A NIGHT, Andrii, Nov 14 2026 ('1. Роби
+  2. Роби 3. Дозволяй'). Why: the first night of the night writer (Nov 14). (1) `writer.assemble`: the comment
+  `# v1.10 ...` stood in the middle of the line and cut off `"pronounce"` and `"meta"`; every script assembled after
+  v1.10 (the night writer's `save` and Gemini's `writer.py`) failed in the director with KeyError 'meta'. The two
+  keys are back on their own line. (2) `sources.find_portrait(name, work)`: the director passes the painting's
+  Wikidata id; a search hit that is the painting's creator (P170) wins over the first hit. 'Diego Velázquez' gave
+  an Argentine actor's photo (CC BY 2.0, run 43612356730), now Q297 the painter. Without the id, or when the creator
+  is not among the hits, it works as before. (3) `docs/NIGHT_WRITER.md` and the routine's prompt: 7 dry runs a night
+  (was 5); the first night ran out at 5 with 2 of 4 scripts (one start went twice, one script failed twice).
+
 - v1.10 = A FIRE EVERY HOUR, COMMENTS AND STATISTICS IN MANUAL RUNS, NO CAMERA TARGET OUTSIDE THE PICTURE, Andrii,
   Nov 14 2026 (Р15: 'Так на всі три'). Why: on Nov 14 GitHub fired none of the scheduled runs (12:05 and 13:05 UTC
   never came; the warehouse ww2-bot knows it: 2 of 9 fires on Nov 6 and 7), so both slots of Nov 15 were filled by

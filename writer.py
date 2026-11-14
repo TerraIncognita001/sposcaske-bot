@@ -149,7 +149,8 @@ def assemble(topic, facts, lead, look, w, title):
             "evidence": [{"key": re.sub(r"\W", "", e["key"])[:12] or f"ev{i}", "query": e["query"], "words": [x.lower() for x in e.get("words", [])],
                           "license": "Public domain", "credit": f"{e['query']} — Wikimedia Commons"} for i, e in enumerate(w.get("evidence", [])[:3])],
             "look": [{"name": re.sub(r"\W", "_", t["name"].lower()), "box": [round(float(v), 3) for v in t["box"]], "words": [x.lower() for x in t.get("words", [])]} for t in look["things"]],
-            "punch": w["punch"].upper(), "sentences": [dict(s, show=[dict(x, to=target(x.get("to", ""))) for x in s["show"]]) if s.get("show") else s for s in w["sentences"]],    # v1.10: "Man Face" and " eyes" mean man_face and eyes "pronounce": w.get("pronounce", {}), "meta": w["meta"],
+            "punch": w["punch"].upper(), "sentences": [dict(s, show=[dict(x, to=target(x.get("to", ""))) for x in s["show"]]) if s.get("show") else s for s in w["sentences"]],
+            "pronounce": w.get("pronounce", {}), "meta": w["meta"],    # v1.10: "Man Face" and " eyes" mean man_face and eyes; v1.11: the comment had cut off pronounce and meta (KeyError 'meta')
             "sources": [{"claim": facts[s["source"] - 1][:200], "url": "https://en.wikipedia.org/wiki/" + title.replace(" ", "_"), "note": f"sentence {s['slot']}"}
                         for s in w["sentences"] if isinstance(s.get("source"), int) and 0 < s["source"] <= len(facts)]}
 

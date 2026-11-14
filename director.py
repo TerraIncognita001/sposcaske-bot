@@ -64,7 +64,7 @@ def build(script):
     focus = {l["name"]: l["box"] for l in look}
     images = {"main": dict(script["lead"]), "portrait": {k: v for k, v in script["portrait"].items() if k != "of"}}
     if not (images["portrait"].get("commons") or images["portrait"].get("file")):
-        images["portrait"]["find"] = {"portrait_of": script["portrait"]["of"]}      # sources.py looks it up (Wikidata P18)
+        images["portrait"]["find"] = {"portrait_of": script["portrait"]["of"], "work": (script.get("subject") or {}).get("wikidata")}    # v1.11: the painting's id, so its creator wins      # sources.py looks it up (Wikidata P18)
     words = {}                                                         # word -> targets, the tightest / first listed first
     for l in look:
         for w in l.get("words", []):
