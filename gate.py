@@ -6,10 +6,13 @@ Never change SLOTS without his yes.
 
     python gate.py            -> prints the slot this run should fill, as KEY=VALUE lines for the workflow
 
-A slot = one video. Its key is E<date>#N (the London date of the publish time), as in the warehouse ww2-bot. A run
-fills the earliest slot that is still empty and whose publish time is between 30 minutes and 14 hours away; the
-video is uploaded private with publishAt, YouTube itself makes it public on the minute. data/slots.json remembers
-which slot got which video; a slot is tried twice (two cron fires), never a third time.
+A slot = one video. Its key is E<date>#N (the London date of the publish time), as in the warehouse ww2-bot.
+v1.08 (Andrii, Nov 14: 'хай тепер за день до пустого слоту бот сам пише та випускає відео, загружає як приватне та
+ставить скеджл на випуск на потрібну годину'): a run fills the earliest slot that is still empty and whose publish
+time is between 30 minutes and 30 hours away. With the four daily fires (12:05, 13:05, 20:05, 21:05 UTC) every video
+is therefore made 27 to 30 hours AHEAD and waits on the channel, private, with its publish minute; YouTube itself
+makes it public. A slot that failed a day ahead is tried again by the next fires, four tries in all.
+data/slots.json remembers which slot got which video.
 """
 import json, sys
 from datetime import datetime, timedelta, timezone
@@ -20,7 +23,7 @@ ROOT = Path(__file__).resolve().parent
 LONDON = ZoneInfo("Europe/London")
 SLOTS = [(1, 15, 0), (2, 2, 0)]            # (number, London hour, minute): 15:00 and 02:00
 STATE, CONFIG = ROOT / "data/slots.json", ROOT / "data/config.json"
-LEAD_MIN, LEAD_MAX, TRIES = timedelta(minutes=30), timedelta(hours=14), 2
+LEAD_MIN, LEAD_MAX, TRIES = timedelta(minutes=30), timedelta(hours=30), 4       # v1.08: a day ahead (was 14 hours, 2 tries)
 
 
 def upcoming(now=None, days=2):
@@ -52,7 +55,7 @@ def pick(now=None):
             continue
         if LEAD_MIN <= at - now <= LEAD_MAX:
             return key, at
-    return None, "no empty slot between 30 minutes and 14 hours from now"
+    return None, "no empty slot between 30 minutes and 30 hours from now"
 
 
 def record(key, **fields):

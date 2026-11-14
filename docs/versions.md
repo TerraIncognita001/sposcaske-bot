@@ -5,6 +5,14 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.08 = VIDEOS ARE MADE A DAY AHEAD, Andrii, Nov 14 2026 ('хай тепер за день до пустого слоту бот сам пише та
+  випускає відео, загружає як приватне та ставить скеджл на випуск на потрібну годину'). `gate.py`: a run fills the
+  earliest empty slot between 30 minutes and 30 HOURS away (was 14 hours); four tries a slot (was two), because a
+  slot that failed a day ahead meets the next day's fires again. The cron is unchanged (12:05, 13:05, 20:05, 21:05
+  UTC): in the steady state 12:05 makes tomorrow's 15:00 (27 h ahead) and 20:05 makes the 02:00 of the night after
+  next (30 h ahead); 13:05 and 21:05 only catch up. So every video lies on the channel, private and scheduled, for
+  about a day before it goes public: time for Andrii to look at it. Catch-up on Nov 14: 12:05 -> Nov 15 02:00,
+  13:05 -> Nov 15 15:00, 20:05 -> Nov 16 02:00.
 - v1.07 = A PRIVATE VIDEO ON THE CHANNEL CAN BE GIVEN ITS PUBLISH MINUTE, Andrii, Nov 14 2026 (his answers to the
   draft: R2 'заплануй його вихід на 1500 сьогодні', R4 'лишити', R5-R7 done by him). `upload.schedule` + workflow
   input `schedule_video`: the Fallen Angel test upload (vquovec65EM) goes public at 15:00 London and holds slot

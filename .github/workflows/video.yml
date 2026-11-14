@@ -4,8 +4,8 @@ name: video
 # the topic scout, the pictures of a story, the YouTube connection check. The log always goes to the "logs" branch.
 on:
   schedule:
-    - cron: "5 12,13 * * *"     # the 15:00 London video, made about three hours ahead (13:05 = the second try)
-    - cron: "5 20,21 * * *"     # the 02:00 London video, made about six hours ahead (21:05 = the second try)
+    - cron: "5 12,13 * * *"     # v1.08: makes TOMORROW's 15:00 London video, 27 hours ahead (13:05 = catch-up / second try)
+    - cron: "5 20,21 * * *"     # v1.08: makes the 02:00 London video of the night after next, 30 hours ahead (21:05 = catch-up)
     - cron: "5 5 * * 0"         # Sunday: find and judge new topics (spends the day's Gemini requests, so far from the videos)
   workflow_dispatch:
     inputs:
