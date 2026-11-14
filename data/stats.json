@@ -1,0 +1,55 @@
+{
+ "videos": {
+  "Ym92xlQ5h7M": {
+   "story": "daniel-lions-den-riviere",
+   "slot": "E2026-11-14#2",
+   "title": "He is about to be eaten alive. Why is he calm?",
+   "publish_at": "2026-11-14T02:00:00Z",
+   "seconds": 57.0,
+   "f": {
+    "hook_frame": "about_to",
+    "punch": "CALM",
+    "century": "19th",
+    "length": "under 60 s",
+    "writer": "hand"
+   },
+   "hook": "This man is about to be eaten alive, and somehow he is completely calm.",
+   "views": 268,
+   "likes": 17,
+   "comments": 2,
+   "score": 6.33
+  },
+  "vquovec65EM": {
+   "story": "fallen-angel-cabanel",
+   "slot": "E2026-11-14#1",
+   "title": "The most beautiful angel ever painted is not sorry",
+   "publish_at": "2026-11-14T15:00:00Z",
+   "seconds": 67,
+   "f": {
+    "kind": "artwork",
+    "hook_frame": "what_if",
+    "punch": "HATRED",
+    "closer": "either_or",
+    "theme": "fallen",
+    "century": "19th",
+    "writer": "claude",
+    "judge": 10,
+    "judge_scores": {
+     "G": 2,
+     "D": 2,
+     "F": 2,
+     "T": 2,
+     "Y": 1,
+     "S": 1
+    },
+    "length": "60-75 s"
+   },
+   "hook": "What if the most beautiful angel ever painted is looking at you with pure hatred?",
+   "views": 0,
+   "likes": 0,
+   "comments": 0
+  }
+ },
+ "read_at": "2026-11-14T15:54:47Z",
+ "_about": "written by stats_now.py (v1.09): one entry per public video; learn.py reads it. Do not edit by hand."
+}
