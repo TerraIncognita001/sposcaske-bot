@@ -1,0 +1,148 @@
+{
+ "things": [
+  {
+   "name": "painter",
+   "box": [
+    0.0,
+    0.08,
+    0.8,
+    1.0
+   ],
+   "words": [
+    "painter",
+    "böcklin",
+    "man"
+   ]
+  },
+  {
+   "name": "painter_top",
+   "box": [
+    0.24,
+    0.08,
+    0.7,
+    0.52
+   ],
+   "words": [
+    "painter",
+    "böcklin",
+    "man"
+   ]
+  },
+  {
+   "name": "painter_face",
+   "box": [
+    0.35,
+    0.19,
+    0.6,
+    0.46
+   ],
+   "words": [
+    "painter",
+    "böcklin",
+    "face",
+    "eyes"
+   ]
+  },
+  {
+   "name": "death",
+   "box": [
+    0.56,
+    0.13,
+    1.0,
+    0.56
+   ],
+   "words": [
+    "death",
+    "skeleton"
+   ]
+  },
+  {
+   "name": "skull",
+   "box": [
+    0.58,
+    0.14,
+    0.83,
+    0.39
+   ],
+   "words": [
+    "death",
+    "skeleton",
+    "skull"
+   ]
+  },
+  {
+   "name": "fiddle",
+   "box": [
+    0.7,
+    0.25,
+    1.0,
+    0.52
+   ],
+   "words": [
+    "violin",
+    "fiddle"
+   ]
+  },
+  {
+   "name": "fiddle_string",
+   "box": [
+    0.78,
+    0.26,
+    1.0,
+    0.42
+   ],
+   "words": [
+    "string"
+   ]
+  },
+  {
+   "name": "death_hand",
+   "box": [
+    0.62,
+    0.38,
+    0.84,
+    0.56
+   ],
+   "words": [
+    "bow",
+    "fingers"
+   ]
+  },
+  {
+   "name": "brush",
+   "box": [
+    0.0,
+    0.76,
+    0.42,
+    0.96
+   ],
+   "words": [
+    "brush",
+    "hand"
+   ]
+  },
+  {
+   "name": "palette",
+   "box": [
+    0.48,
+    0.9,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "palette"
+   ]
+  },
+  {
+   "name": "main_action",
+   "box": [
+    0.22,
+    0.08,
+    1.0,
+    0.58
+   ],
+   "words": []
+  }
+ ],
+ "summary": "A bearded painter in a dark coat holds a brush and a palette and looks out of the picture. Behind his shoulder a skeleton plays a violin close to his ear."
+}

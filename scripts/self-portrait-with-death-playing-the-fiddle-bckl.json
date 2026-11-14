@@ -1,0 +1,320 @@
+{
+ "id": "self-portrait-with-death-playing-the-fiddle-bckl",
+ "kind": "artwork",
+ "hook_frame": "There's a ___ detail in this painting most people ___.",
+ "closer": "either_or",
+ "detail": "fiddle_string",
+ "subject": {
+  "title": "Self-Portrait with Death Playing the Fiddle",
+  "creator": "Arnold Böcklin",
+  "year": 1872,
+  "wikidata": "Q1523789"
+ },
+ "lead": {
+  "commons": "Arnold_Boecklin-fiedelnder_Tod.jpg",
+  "width_px": 3840,
+  "license": "Public domain",
+  "credit": "Arnold Boecklin-fiedelnder Tod — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Arnold Böcklin",
+  "credit": "Portrait of Arnold Böcklin — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "painter",
+   "box": [
+    0.0,
+    0.08,
+    0.8,
+    1.0
+   ],
+   "words": [
+    "painter",
+    "böcklin",
+    "man"
+   ]
+  },
+  {
+   "name": "painter_top",
+   "box": [
+    0.24,
+    0.08,
+    0.7,
+    0.52
+   ],
+   "words": [
+    "painter",
+    "böcklin",
+    "man"
+   ]
+  },
+  {
+   "name": "painter_face",
+   "box": [
+    0.35,
+    0.19,
+    0.6,
+    0.46
+   ],
+   "words": [
+    "painter",
+    "böcklin",
+    "face",
+    "eyes"
+   ]
+  },
+  {
+   "name": "death",
+   "box": [
+    0.56,
+    0.13,
+    1.0,
+    0.56
+   ],
+   "words": [
+    "death",
+    "skeleton"
+   ]
+  },
+  {
+   "name": "skull",
+   "box": [
+    0.58,
+    0.14,
+    0.83,
+    0.39
+   ],
+   "words": [
+    "death",
+    "skeleton",
+    "skull"
+   ]
+  },
+  {
+   "name": "fiddle",
+   "box": [
+    0.7,
+    0.25,
+    1.0,
+    0.52
+   ],
+   "words": [
+    "violin",
+    "fiddle"
+   ]
+  },
+  {
+   "name": "fiddle_string",
+   "box": [
+    0.78,
+    0.26,
+    1.0,
+    0.42
+   ],
+   "words": [
+    "string"
+   ]
+  },
+  {
+   "name": "death_hand",
+   "box": [
+    0.62,
+    0.38,
+    0.84,
+    0.56
+   ],
+   "words": [
+    "bow",
+    "fingers"
+   ]
+  },
+  {
+   "name": "brush",
+   "box": [
+    0.0,
+    0.76,
+    0.42,
+    0.96
+   ],
+   "words": [
+    "brush",
+    "hand"
+   ]
+  },
+  {
+   "name": "palette",
+   "box": [
+    0.48,
+    0.9,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "palette"
+   ]
+  },
+  {
+   "name": "main_action",
+   "box": [
+    0.22,
+    0.08,
+    1.0,
+    0.58
+   ],
+   "words": []
+  }
+ ],
+ "punch": "LISTEN",
+ "sentences": [
+  {
+   "slot": "S1",
+   "text": "There's a terrifying detail on this violin, and it explains why the painter stopped to listen.",
+   "kind": "HOOK",
+   "source": null
+  },
+  {
+   "slot": "S2",
+   "text": "This is Self-Portrait with Death Playing the Fiddle, painted by Arnold Böcklin in 1872.",
+   "kind": "FACT",
+   "source": 1
+  },
+  {
+   "slot": "S3",
+   "text": "A bearded painter holds his brush, and behind him a skeleton plays the violin.",
+   "kind": "LOOK",
+   "source": null
+  },
+  {
+   "slot": "S4",
+   "text": "But look at the violin.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "violin",
+     "to": "fiddle"
+    }
+   ]
+  },
+  {
+   "slot": "S5",
+   "text": "It has only one string.",
+   "kind": "FACT",
+   "source": 4
+  },
+  {
+   "slot": "S6",
+   "text": "The painter doesn't turn.",
+   "kind": "LOOK",
+   "source": null
+  },
+  {
+   "slot": "S6",
+   "text": "The painter doesn't run.",
+   "kind": "LOOK",
+   "source": null
+  },
+  {
+   "slot": "S6",
+   "text": "He simply listens.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "listens",
+     "to": "painter_face"
+    }
+   ]
+  },
+  {
+   "slot": "S7",
+   "text": "According to Alma Mahler, her husband Gustav wrote his Fourth Symphony under the spell of this picture.",
+   "kind": "FACT",
+   "source": 7
+  },
+  {
+   "slot": "S8",
+   "text": "A violin should have four strings.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "S9",
+   "text": "But Böcklin gave Death a fiddle with one.",
+   "kind": "FACT",
+   "source": 4
+  },
+  {
+   "slot": "S10",
+   "text": "And here's the disturbing part.",
+   "kind": "HOOK",
+   "source": null
+  },
+  {
+   "slot": "S11",
+   "text": "Death has only one string, yet the painter cannot stop listening.",
+   "kind": "LOOK",
+   "source": null
+  },
+  {
+   "slot": "S12",
+   "text": "As if the song ends when that string breaks.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "M",
+   "text": "Maybe the last string is his own life.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "S13",
+   "text": "So is the painter working, or listening to his own end?",
+   "kind": "READING",
+   "source": null
+  }
+ ],
+ "pronounce": {
+  "Böcklin": "Burklin"
+ },
+ "meta": {
+  "title": "Death plays for this painter on a single string",
+  "description": "Self-Portrait with Death Playing the Fiddle was painted by Arnold Böcklin in Munich in 1872. Death stands behind the painter and plays a violin with a single string. Alte Nationalgalerie, Berlin.",
+  "tags": [
+   "art history",
+   "painting",
+   "Böcklin",
+   "self-portrait",
+   "death in art",
+   "symbolism"
+  ],
+  "question": "Still working, or listening to his own end?"
+ },
+ "sources": [
+  {
+   "claim": "Self-Portrait with Death Playing the Fiddle is a painted self-portrait executed in 1872 by the Swiss symbolist artist Arnold Böcklin.",
+   "url": "https://en.wikipedia.org/wiki/Self-Portrait_with_Death_Playing_the_Fiddle",
+   "note": "sentence S2"
+  },
+  {
+   "claim": "Painted in Munich, the painting depicts a bearded Böcklin stalked by a personification of death playing a single-stringed violin in an intimation of his mortality.",
+   "url": "https://en.wikipedia.org/wiki/Self-Portrait_with_Death_Playing_the_Fiddle",
+   "note": "sentence S5"
+  },
+  {
+   "claim": "According to Alma Mahler, the wife of the composer Gustav Mahler, her husband was \"under the spell\" of Böcklin's self-portrait when writing the scherzo movement of his Fourth Symphony.",
+   "url": "https://en.wikipedia.org/wiki/Self-Portrait_with_Death_Playing_the_Fiddle",
+   "note": "sentence S7"
+  },
+  {
+   "claim": "Painted in Munich, the painting depicts a bearded Böcklin stalked by a personification of death playing a single-stringed violin in an intimation of his mortality.",
+   "url": "https://en.wikipedia.org/wiki/Self-Portrait_with_Death_Playing_the_Fiddle",
+   "note": "sentence S9"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-14"
+}

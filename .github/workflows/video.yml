@@ -1,7 +1,9 @@
 name: video
 # One run = one video (v1.04). The schedule lives in gate.py (15:00 and 02:00 London) and runs only while
 # data/config.json says "live": true. Manual runs: dry run (video -> the "preview" branch), a private test upload,
-# the topic scout, the pictures of a story, the YouTube connection check. The log always goes to the "logs" branch.
+# the topic scout, the pictures of a story, the YouTube connection check, stats only. The log always goes to the
+# "logs" branch. v1.09: every scheduled run also refreshes data/stats.json and data/learn.json (no Gemini), and state
+# is saved to main only by a run OF main (a test run of another branch can never write there).
 on:
   schedule:
     - cron: "5 12,13 * * *"     # v1.08: makes TOMORROW's 15:00 London video, 27 hours ahead (13:05 = catch-up / second try)
@@ -41,6 +43,10 @@ on:
         description: "Only fetch the story's pictures and put them on the preview branch"
         type: boolean
         default: false
+      stats_only:
+        description: "Only refresh the statistics and the learning (data/stats.json, learn.json, lessons.md); no video, no Gemini"
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency:
@@ -73,6 +79,7 @@ jobs:
             else python gate.py | tee gate.out; cat gate.out >> "$GITHUB_ENV"; grep -q "GO=1" gate.out || MODE=comments; echo "UPLOAD=slot" >> "$GITHUB_ENV"; fi
           elif [ -n "${{ inputs.schedule_video }}" ]; then MODE=schedule; echo "UPLOAD=slot" >> "$GITHUB_ENV";
           elif [ "${{ inputs.youtube_check }}" = "true" ]; then MODE=check;
+          elif [ "${{ inputs.stats_only }}" = "true" ]; then MODE=stats;
           elif [ "${{ inputs.pictures_only }}" = "true" ]; then MODE=pictures;
           elif [ "${{ inputs.scout }}" != "0" ] && [ -n "${{ inputs.scout }}" ]; then MODE=scout; echo "SCOUT=${{ inputs.scout }}" >> "$GITHUB_ENV";
           else
@@ -137,8 +144,12 @@ jobs:
       - name: question comments            # under the videos that went public since the last run
         if: ${{ !cancelled() && github.event_name == 'schedule' && env.MODE != 'idle' }}
         run: python upload.py --pending 2>&1 | tee -a run.log
-      - name: save state                   # used topics, the slots, written scripts, the judged list -> main
-        if: ${{ !cancelled() && env.MODE != 'idle' && (github.event_name == 'schedule' || env.UPLOAD == 'private' || env.UPLOAD == 'slot') }}
+      - name: statistics and learning      # v1.09: views, who stayed, where they left -> data/stats.json; what worked -> data/learn.json, lessons.md
+        if: ${{ !cancelled() && (env.MODE == 'stats' || (github.event_name == 'schedule' && env.MODE != 'idle')) }}
+        run: |
+          (python stats_now.py && python learn.py) 2>&1 | tee -a run.log || true
+      - name: save state                   # used topics, the slots, written scripts, the judged list, the statistics -> main
+        if: ${{ !cancelled() && github.ref == 'refs/heads/main' && env.MODE != 'idle' && (github.event_name == 'schedule' || env.MODE == 'stats' || env.UPLOAD == 'private' || env.UPLOAD == 'slot') }}
         run: |
           git config user.name bot && git config user.email bot@users.noreply.github.com
           git add data scripts 2>/dev/null || true

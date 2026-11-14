@@ -8,8 +8,10 @@
 Steps: facts and the lead picture from Wikipedia / Commons (free licence required) -> LOOK: Gemini looks at the
 picture and lists what is visible, with boxes (prompts/look.txt) -> the script in the fixed slots (prompts/writer.txt)
 -> tools/script_check.py; its failures go back to the model, three rounds -> the script file.
-Needs GEMINI_API_KEY (free tier). The nightly Claude routine may write scripts/<id>.json by hand with the same
-prompt; this module is the path that needs no human and no Claude.
+Needs GEMINI_API_KEY (free tier).
+v1.09: THE MAIN WRITER IS THE NIGHTLY CLAUDE ROUTINE (docs/NIGHT_WRITER.md, tools/night_writer.py): it leaves
+scripts/<id>.json marked "written_by": "Claude ...". bot.py takes such a script as it is and asks Gemini nothing;
+this module is the BACKUP for a topic that has no ready script (or whose ready script failed the bot's checks).
 """
 import argparse, base64, json, os, random, re, subprocess, sys, time
 from pathlib import Path
@@ -17,7 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "tools"))
-import sources, script_check
+import sources, script_check, learn
 
 MODELS = [os.environ.get("GEMINI_MODEL", "gemini-3.5-flash"), "gemini-flash-latest", "gemini-3.1-flash-lite", "gemini-2.5-flash"]
 COOL, DEAD = {}, set()
@@ -59,13 +61,33 @@ def gemini(prompt, ok, extra=None, rounds=5, purpose="script"):
     raise SystemExit(f"Gemini unavailable ({purpose})")
 
 
-def next_topic(wanted=None, skip=()):
+def ready_script(topic_id):
+    """v1.09: the night writer's script for this topic, if it is there and has not failed the bot's checks."""
+    p = ROOT / "scripts" / f"{topic_id}.json"
+    try:
+        s = json.loads(p.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    return p if str(s.get("written_by", "")).lower().startswith("claude") and not s.get("failed") else None
+
+
+def queue(skip=()):
+    """The topics the bot may make, best first. v1.03: only 7 and more; v1.05: a topic on "hold" waits for Andrii;
+    v1.09: ordered by learn.priority (= the judge's total until learning switches on)."""
     topics = json.loads((ROOT / "data/backlog.json").read_text(encoding="utf-8"))["topics"]
     used = set(json.loads((ROOT / "data/used.json").read_text(encoding="utf-8"))["used"]) | set(skip)
+    L = learn.load()
+    return sorted((t for t in topics if t["id"] not in used and (t.get("score") or 0) >= 7 and not t.get("hold")), key=lambda t: -learn.priority(t, L)), topics, used
+
+
+def next_topic(wanted=None, skip=()):
+    scored, topics, used = queue(skip)
     if wanted:
         return next((t for t in topics if t["id"] == wanted), None)
-    scored = sorted((t for t in topics if t["id"] not in used and (t.get("score") or 0) >= 7 and not t.get("hold")), key=lambda t: -t["score"])    # v1.03: only 7 and more, best first; v1.05: a topic on "hold" waits for Andrii
-    return scored[0] if scored else next((t for t in topics if t["id"] not in used and t.get("score") is None), None)
+    ready = [t for t in scored if ready_script(t["id"])]              # v1.09: a topic the night writer has already written goes first
+    if ready or scored:
+        return (ready or scored)[0]
+    return next((t for t in topics if t["id"] not in used and t.get("score") is None), None)
 
 
 def recent(n=8):
@@ -80,6 +102,16 @@ def recent(n=8):
 def valid_look(d):
     t = d.get("things", [])
     return len(t) >= 5 and all(len(x.get("box", [])) == 4 and 0 <= x["box"][0] < x["box"][2] <= 1 and 0 <= x["box"][1] < x["box"][3] <= 1 and x.get("name") for x in t)
+
+
+def brief(topic, title, facts, look=None):
+    """The whole task of one script: the form (prompts/writer.txt) + this topic's facts, the judge's angle, what is in
+    the picture, what the last scripts used, and (v1.09) what our own videos taught. The same text for Gemini and
+    for the night writer."""
+    return ((ROOT / "prompts/writer.txt").read_text(encoding="utf-8") + f"\n\nKIND  {topic['kind']}\nTITLE  {title}\n\nFACTS\n" + "\n".join(f"{i + 1}. {s}" for i, s in enumerate(facts))
+            + ("\n\nANGLE\n" + "\n".join(f"{k}: {v if isinstance(v, str) else ' / '.join(v)}" for k, v in topic["angle"].items()) if topic.get("angle") else "")
+            + ("\n\nLOOK (" + look.get("summary", "") + ")\n" + "\n".join(f"- {t['name']}: words {', '.join(t.get('words', []))}" for t in look["things"]) if look else "")
+            + "\n\nAVOID\n" + ("\n".join("- " + r for r in recent()) or "- nothing yet") + learn.notes())
 
 
 def assemble(topic, facts, lead, look, w, title):
@@ -121,9 +153,7 @@ def write(topic, work):
         look = gemini((ROOT / "prompts/look.txt").read_text(encoding="utf-8"), valid_look, extra=pic, purpose="look")
         cache.parent.mkdir(parents=True, exist_ok=True)
         cache.write_text(json.dumps(look, indent=1, ensure_ascii=False), encoding="utf-8")
-    base = ((ROOT / "prompts/writer.txt").read_text(encoding="utf-8") + f"\n\nKIND  {topic['kind']}\nTITLE  {title}\n\nFACTS\n" + "\n".join(f"{i + 1}. {s}" for i, s in enumerate(facts))
-            + ("\n\nANGLE\n" + "\n".join(f"{k}: {v if isinstance(v, str) else ' / '.join(v)}" for k, v in topic["angle"].items()) if topic.get("angle") else "")
-            + "\n\nLOOK (" + look.get("summary", "") + ")\n" + "\n".join(f"- {t['name']}: words {', '.join(t.get('words', []))}" for t in look["things"]) + "\n\nAVOID\n" + ("\n".join("- " + r for r in recent()) or "- nothing yet"))
+    base = brief(topic, title, facts, look)
     ok = lambda d: isinstance(d.get("sentences"), list) and len(d["sentences"]) >= 12 and d.get("punch") and d.get("portrait_of") and d.get("meta", {}).get("title")
     note, drafts = "", []
     (work / "look.json").write_text(json.dumps(look, indent=1, ensure_ascii=False), encoding="utf-8")
