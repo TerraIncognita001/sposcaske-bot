@@ -3,7 +3,7 @@
   {
    "name": "main_action",
    "box": [
-    0.15,
+    0.14,
     0.07,
     0.85,
     0.98
@@ -22,7 +22,8 @@
     0.98
    ],
    "words": [
-    "man"
+    "man",
+    "lucifer"
    ]
   },
   {
@@ -34,7 +35,8 @@
     0.5
    ],
    "words": [
-    "man"
+    "man",
+    "lucifer"
    ]
   },
   {
@@ -47,6 +49,7 @@
    ],
    "words": [
     "man",
+    "lucifer",
     "face"
    ]
   },
@@ -109,7 +112,19 @@
    "words": [
     "light"
    ]
+  },
+  {
+   "name": "wing",
+   "box": [
+    0.26,
+    0.28,
+    0.53,
+    0.66
+   ],
+   "words": [
+    "wing"
+   ]
   }
  ],
- "summary": "A seated male figure sits hunched in shadow resting his chin on one hand. A small light source glows dimly in the background."
+ "summary": "Lucifer sits hunched in the dark with his chin on one hand and a dark wing hanging at his side. A small cold light glows on the ground behind him."
 }

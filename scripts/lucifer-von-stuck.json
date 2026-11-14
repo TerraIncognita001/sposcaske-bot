@@ -1,8 +1,8 @@
 {
  "id": "lucifer-von-stuck",
  "kind": "artwork",
- "hook_frame": "There's something ___ about the way ___.",
- "closer": "either_or",
+ "hook_frame": "This painting may hide ___.",
+ "closer": "open",
  "detail": "eyes",
  "subject": {
   "title": "Lucifer",
@@ -17,8 +17,8 @@
   "credit": "Luzifer (Lucifer) painting by Franz von Stuck 1890 National Gallery in Sofia — Wikimedia Commons"
  },
  "portrait": {
-  "of": "Franz von Stuck",
-  "credit": "Portrait of Franz von Stuck — Wikimedia Commons",
+  "of": "Franz Stuck",
+  "credit": "Portrait of Franz Stuck — Wikimedia Commons",
   "license": "Public domain"
  },
  "evidence": [],
@@ -26,7 +26,7 @@
   {
    "name": "main_action",
    "box": [
-    0.15,
+    0.14,
     0.07,
     0.85,
     0.98
@@ -45,7 +45,8 @@
     0.98
    ],
    "words": [
-    "man"
+    "man",
+    "lucifer"
    ]
   },
   {
@@ -57,7 +58,8 @@
     0.5
    ],
    "words": [
-    "man"
+    "man",
+    "lucifer"
    ]
   },
   {
@@ -70,6 +72,7 @@
    ],
    "words": [
     "man",
+    "lucifer",
     "face"
    ]
   },
@@ -132,35 +135,47 @@
    "words": [
     "light"
    ]
+  },
+  {
+   "name": "wing",
+   "box": [
+    0.26,
+    0.28,
+    0.53,
+    0.66
+   ],
+   "words": [
+    "wing"
+   ]
   }
  ],
- "punch": "STARE",
+ "punch": "AWAKE",
  "sentences": [
   {
    "slot": "S1",
-   "text": "There's something disturbing about the way this quiet darkness holds a stare.",
+   "text": "This painting may hide something that sits in total darkness, completely awake.",
    "kind": "HOOK",
    "source": null,
    "show": [
     {
      "on": "darkness",
-     "to": " darkness"
+     "to": "main_action"
     },
     {
-     "on": "stare",
+     "on": "awake",
      "to": "eyes"
     }
    ]
   },
   {
    "slot": "S2",
-   "text": "This is Lucifer, painted by Franz von Stuck in 1890.",
+   "text": "This is Lucifer, painted by Franz Stuck in 1890.",
    "kind": "FACT",
    "source": 1
   },
   {
    "slot": "S3",
-   "text": "A seated man rests in deep darkness, with light glowing behind him.",
+   "text": "A man sits in the darkness with his chin on his hand. A black wing hangs at his side.",
    "kind": "LOOK",
    "source": null,
    "show": [
@@ -173,8 +188,12 @@
      "to": "main_action"
     },
     {
-     "on": "light",
-     "to": "light_glow"
+     "on": "chin",
+     "to": "hand_chin"
+    },
+    {
+     "on": "wing",
+     "to": "wing"
     }
    ]
   },
@@ -192,110 +211,150 @@
   },
   {
    "slot": "S5",
-   "text": "They glow in the shadow.",
+   "text": "His eyes are glowing.",
    "kind": "LOOK",
    "source": null,
    "show": [
     {
-     "on": "shadow",
+     "on": "glowing",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "S5",
+   "text": "They look straight at you.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "you",
+     "to": "man_face"
+    }
+   ]
+  },
+  {
+   "slot": "S6",
+   "text": "Lucifer doesn't blink.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "blink",
      "to": "eyes"
     }
    ]
   },
   {
    "slot": "S6",
-   "text": "He doesn't fight.",
-   "kind": "LOOK",
-   "source": null
-  },
-  {
-   "slot": "S6",
-   "text": "He doesn't scream.",
-   "kind": "LOOK",
-   "source": null
-  },
-  {
-   "slot": "S6",
-   "text": "He simply watches.",
+   "text": "Lucifer doesn't look away.",
    "kind": "LOOK",
    "source": null,
    "show": [
     {
-     "on": "watches",
-     "to": "eyes"
+     "on": "away",
+     "to": "man_face"
+    }
+   ]
+  },
+  {
+   "slot": "S6",
+   "text": "Lucifer simply waits.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "waits",
+     "to": "man_top"
     }
    ]
   },
   {
    "slot": "S7",
-   "text": "According to the National Art Gallery, Ferdinand of Bulgaria bought this picture directly from Munich.",
+   "text": "According to the National Art Gallery in Sofia, Ferdinand of Bulgaria bought this painting straight from the artist's studio.",
    "kind": "FACT",
    "source": 4
   },
   {
    "slot": "S8",
-   "text": "A ruined angel should look away.",
+   "text": "A king should hang saints in his palace.",
    "kind": "READING",
    "source": null
   },
   {
    "slot": "S9",
-   "text": "But this figure locks his gaze on you.",
-   "kind": "READING",
-   "source": null,
+   "text": "But he chose a demon for the royal collection.",
+   "kind": "FACT",
+   "source": 3,
    "show": [
     {
-     "on": "gaze",
-     "to": "eyes"
+     "on": "demon",
+     "to": "man"
     }
    ]
   },
   {
    "slot": "S10",
-   "text": "And here's the disturbing part.",
+   "text": "And here's the unsettling part.",
    "kind": "READING",
    "source": null
   },
   {
    "slot": "S11",
-   "text": "He sits lost in thought, yet he chooses his next target.",
-   "kind": "READING",
-   "source": null
-  },
-  {
-   "slot": "S12",
-   "text": "As if he waits for you to step into the dark.",
-   "kind": "READING",
-   "source": null
-  },
-  {
-   "slot": "S13",
-   "text": "So is he trapped in his own hell, or is he looking at yours?",
+   "text": "His body is resting, yet his eyes have never been more awake.",
    "kind": "READING",
    "source": null,
    "show": [
     {
-     "on": "looking",
+     "on": "body",
+     "to": "man"
+    },
+    {
+     "on": "eyes",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "S12",
+   "text": "As if he were waiting for you to notice him.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "waiting",
+     "to": "man_face"
+    }
+   ]
+  },
+  {
+   "slot": "S13",
+   "text": "So what is Lucifer waiting for in the dark?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "Lucifer",
      "to": "eyes"
     }
    ]
   }
  ],
  "pronounce": {
-  "Lucifer": "LOO-sih-fer",
-  "Stuck": "SHTOOK"
+  "Stuck": "Shtook"
  },
  "meta": {
-  "title": "The Stare of Stuck's Lucifer",
-  "description": "Franz von Stuck painted Lucifer in 1890 as a brooding man-demon. The glowing eyes in the deep shadow create an unsettling confrontation with the viewer.",
+  "title": "The eyes of Lucifer that never close",
+  "description": "Lucifer is an oil painting by the German artist Franz Stuck from 1890, from his dark monumental period. Ferdinand I of Bulgaria bought it from Stuck's studio in Munich for the royal collection in Sofia.",
   "tags": [
    "art history",
-   "Franz von Stuck",
-   "Lucifer",
+   "franz von stuck",
+   "lucifer",
+   "symbolism",
    "dark art",
-   "Symbolism"
+   "painting"
   ],
-  "question": "So is he trapped in his own hell, or is he looking at yours?"
+  "question": "What is Lucifer waiting for?"
  },
  "sources": [
   {
@@ -307,6 +366,12 @@
    "claim": "History Ferdinand I of Bulgaria bought the painting for the royal collection in Sofia, from Stuck's studio in Munich in 1891.",
    "url": "https://en.wikipedia.org/wiki/Lucifer_(Stuck)",
    "note": "sentence S7"
+  },
+  {
+   "claim": "The painting belongs to Stuck's \"dark monumental\" period, presenting an image of \"man-demon\".",
+   "url": "https://en.wikipedia.org/wiki/Lucifer_(Stuck)",
+   "note": "sentence S9"
   }
- ]
+ ],
+ "written_by": "Claude (night writer), 2026-11-14"
 }
