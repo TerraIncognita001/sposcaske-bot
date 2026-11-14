@@ -5,6 +5,11 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.07 = A PRIVATE VIDEO ON THE CHANNEL CAN BE GIVEN ITS PUBLISH MINUTE, Andrii, Nov 14 2026 (his answers to the
+  draft: R2 'заплануй його вихід на 1500 сьогодні', R4 'лишити', R5-R7 done by him). `upload.schedule` + workflow
+  input `schedule_video`: the Fallen Angel test upload (vquovec65EM) goes public at 15:00 London and holds slot
+  E2026-11-14#1, so the bot's own first video is the 02:00 of Nov 15 (made 20:05 UTC). The Nightmare and Medusa are
+  back in the queue (`hold` removed).
 - v1.06 = A MANUAL RUN MAY NAME ITS OWN PUBLISH MINUTE; THE FIRST PUBLIC VIDEO, Andrii, Nov 14 2026 ('випусти те відео
   яке ми створили як макет сьогодні о 0200, запость як приватне а потім в 0200 переведи його у публічне'; the
   session's safety check stopped the first launch, he answered 'даю дозвіл'). Workflow inputs `publish_at` (UTC) and
