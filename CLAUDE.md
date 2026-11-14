@@ -11,6 +11,9 @@ Pipeline: `topics.py` (find and judge topics 1-10, `docs/TOPICS.md`) -> `writer.
 story: camera, red word, card, portrait by the maket) -> `sources.py` (pictures, licences) -> `render.py` -> `bot.py`
 conformance. What the genre is and what all references share: `docs/GENRE.md`.
 
+ANDRII'S LIST: `docs/tasks.md` (in Ukrainian: the schedule, the decisions waiting for his yes, the to-do list with
+P1-P3, the channel keywords). Keep it current and show it to him (SendUserFile, display render) after every change.
+
 Read before any work: `docs/BUILD_PROMPT.md` (the plan and the hard rules; §13 = the second pass), `docs/FORMAT.md`
 (§16–§17 win over earlier sections; §17.2 = the picture–word rule, enforced by `render.py`) + `format.json`, `docs/WRITER_PROMPT.md` (scripts are a fixed form of 13 slots,
 gated by `tools/script_check.py`). Change a number only with a new measurement.
