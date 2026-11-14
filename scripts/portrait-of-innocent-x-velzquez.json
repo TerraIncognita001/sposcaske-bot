@@ -1,0 +1,398 @@
+{
+ "id": "portrait-of-innocent-x-velzquez",
+ "kind": "artwork",
+ "hook_frame": "There's a reason ___.",
+ "closer": "either_or",
+ "detail": "eyes",
+ "subject": {
+  "title": "Portrait of Innocent X",
+  "creator": "Diego Velázquez",
+  "year": 1650,
+  "wikidata": "Q1240092"
+ },
+ "lead": {
+  "commons": "Retrato_del_Papa_Inocencio_X._Roma,_by_Diego_Velázquez.jpg",
+  "width_px": 3840,
+  "license": "Public domain",
+  "credit": "Retrato del Papa Inocencio X. Roma, by Diego Velázquez — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Diego Velázquez",
+  "credit": "Portrait of Diego Velázquez — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.02,
+    0.08,
+    1.0,
+    0.75
+   ],
+   "words": [
+    "pope",
+    "throne"
+   ]
+  },
+  {
+   "name": "pope",
+   "box": [
+    0.05,
+    0.135,
+    0.96,
+    1.0
+   ],
+   "words": [
+    "pope",
+    "innocent"
+   ]
+  },
+  {
+   "name": "pope_top",
+   "box": [
+    0.05,
+    0.135,
+    0.8,
+    0.65
+   ],
+   "words": [
+    "pope",
+    "innocent"
+   ]
+  },
+  {
+   "name": "pope_face",
+   "box": [
+    0.31,
+    0.2,
+    0.51,
+    0.37
+   ],
+   "words": [
+    "pope",
+    "innocent",
+    "face"
+   ]
+  },
+  {
+   "name": "eyes",
+   "box": [
+    0.37,
+    0.235,
+    0.48,
+    0.275
+   ],
+   "words": [
+    "eyes"
+   ]
+  },
+  {
+   "name": "cap",
+   "box": [
+    0.32,
+    0.11,
+    0.5,
+    0.22
+   ],
+   "words": [
+    "cap"
+   ]
+  },
+  {
+   "name": "cape",
+   "box": [
+    0.05,
+    0.345,
+    0.79,
+    0.655
+   ],
+   "words": [
+    "cape",
+    "silk"
+   ]
+  },
+  {
+   "name": "throne",
+   "box": [
+    0.02,
+    0.085,
+    0.6,
+    1.0
+   ],
+   "words": [
+    "throne"
+   ]
+  },
+  {
+   "name": "hand_ring",
+   "box": [
+    0.32,
+    0.59,
+    0.47,
+    0.72
+   ],
+   "words": [
+    "hand",
+    "ring"
+   ]
+  },
+  {
+   "name": "paper",
+   "box": [
+    0.84,
+    0.58,
+    1.0,
+    0.71
+   ],
+   "words": [
+    "paper",
+    "hand"
+   ]
+  },
+  {
+   "name": "curtain",
+   "box": [
+    0.6,
+    0.0,
+    1.0,
+    0.55
+   ],
+   "words": [
+    "curtain"
+   ]
+  }
+ ],
+ "punch": "JUDGED",
+ "sentences": [
+  {
+   "slot": "S1",
+   "text": "There's a disturbing reason the eyes of this holy man leave everyone feeling judged.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "eyes"
+    },
+    {
+     "on": "man",
+     "to": "pope_top"
+    },
+    {
+     "on": "judged",
+     "to": "pope_face"
+    }
+   ]
+  },
+  {
+   "slot": "S2",
+   "text": "This is Portrait of Innocent X, painted by Diego Velázquez in 1650.",
+   "kind": "FACT",
+   "source": 15
+  },
+  {
+   "slot": "S3",
+   "text": "The pope sits on a golden throne, a paper in one hand.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "pope",
+     "to": "pope"
+    },
+    {
+     "on": "throne",
+     "to": "throne"
+    },
+    {
+     "on": "paper",
+     "to": "paper"
+    }
+   ]
+  },
+  {
+   "slot": "S4",
+   "text": "But look at his eyes.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "S5",
+   "text": "His eyes turn sideways, toward you.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "eyes"
+    },
+    {
+     "on": "you",
+     "to": "pope_face"
+    }
+   ]
+  },
+  {
+   "slot": "S6",
+   "text": "The pope doesn't smile.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "smile",
+     "to": "pope_face"
+    }
+   ]
+  },
+  {
+   "slot": "S6",
+   "text": "The pope doesn't bless.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "bless",
+     "to": "hand_ring"
+    }
+   ]
+  },
+  {
+   "slot": "S6",
+   "text": "The pope simply measures.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "measures",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "S7",
+   "text": "According to the art dealer René Gimpel, the face was a whirlpool of life and the eyes were searching.",
+   "kind": "FACT",
+   "source": 30,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "S8",
+   "text": "A pope should love his own portrait.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "pope",
+     "to": "pope_top"
+    }
+   ]
+  },
+  {
+   "slot": "S9",
+   "text": "But Innocent called it too true.",
+   "kind": "FACT",
+   "source": 22,
+   "show": [
+    {
+     "on": "Innocent",
+     "to": "pope_face"
+    }
+   ]
+  },
+  {
+   "slot": "S10",
+   "text": "And here's the disturbing part.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "S11",
+   "text": "He sits still on his throne, yet his eyes are already judging you.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "throne",
+     "to": "pope"
+    },
+    {
+     "on": "eyes",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "S12",
+   "text": "As if the painter caught what the pope wanted hidden.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "pope",
+     "to": "pope_face"
+    }
+   ]
+  },
+  {
+   "slot": "S13",
+   "text": "So is the pope judging you, or afraid of what you see?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "pope",
+     "to": "eyes"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Innocent X": "Innocent the Tenth",
+  "Velázquez": "Veh-lahs-kez",
+  "Gimpel": "Gam-pel"
+ },
+ "meta": {
+  "title": "The pope who said his portrait was too true",
+  "description": "Portrait of Innocent X was painted by Diego Velázquez around 1650 in Rome. According to one story, the pope called it too true. It hangs in the Galleria Doria Pamphilj.",
+  "tags": [
+   "art history",
+   "velazquez",
+   "innocent x",
+   "pope",
+   "baroque",
+   "painting"
+  ],
+  "question": "Is he judging you, or afraid of what you see?"
+ },
+ "sources": [
+  {
+   "claim": "The subject's vestments are of light linen, suggesting that the picture was probably painted during summer, most likely in 1650.",
+   "url": "https://en.wikipedia.org/wiki/Portrait_of_Innocent_X",
+   "note": "sentence S2"
+  },
+  {
+   "claim": "That face is a whirlpool of flesh, and blood, and life; the eyes are searching.\" Influence The 20th century artist Francis Bacon painted a series of distorted variants, often known as the \"Screaming P",
+   "url": "https://en.wikipedia.org/wiki/Portrait_of_Innocent_X",
+   "note": "sentence S7"
+  },
+  {
+   "claim": "Apparently, when the Pope saw the finished portrait, he exclaimed: \"È troppo vero! È troppo vero!\" (\"It's too true!",
+   "url": "https://en.wikipedia.org/wiki/Portrait_of_Innocent_X",
+   "note": "sentence S9"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-14"
+}

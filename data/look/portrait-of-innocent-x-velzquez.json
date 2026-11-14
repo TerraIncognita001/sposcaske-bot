@@ -1,0 +1,145 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.02,
+    0.08,
+    1.0,
+    0.75
+   ],
+   "words": [
+    "pope",
+    "throne"
+   ]
+  },
+  {
+   "name": "pope",
+   "box": [
+    0.05,
+    0.135,
+    0.96,
+    1.0
+   ],
+   "words": [
+    "pope",
+    "innocent"
+   ]
+  },
+  {
+   "name": "pope_top",
+   "box": [
+    0.05,
+    0.135,
+    0.8,
+    0.65
+   ],
+   "words": [
+    "pope",
+    "innocent"
+   ]
+  },
+  {
+   "name": "pope_face",
+   "box": [
+    0.31,
+    0.2,
+    0.51,
+    0.37
+   ],
+   "words": [
+    "pope",
+    "innocent",
+    "face"
+   ]
+  },
+  {
+   "name": "eyes",
+   "box": [
+    0.37,
+    0.235,
+    0.48,
+    0.275
+   ],
+   "words": [
+    "eyes"
+   ]
+  },
+  {
+   "name": "cap",
+   "box": [
+    0.32,
+    0.11,
+    0.5,
+    0.22
+   ],
+   "words": [
+    "cap"
+   ]
+  },
+  {
+   "name": "cape",
+   "box": [
+    0.05,
+    0.345,
+    0.79,
+    0.655
+   ],
+   "words": [
+    "cape",
+    "silk"
+   ]
+  },
+  {
+   "name": "throne",
+   "box": [
+    0.02,
+    0.085,
+    0.6,
+    1.0
+   ],
+   "words": [
+    "throne"
+   ]
+  },
+  {
+   "name": "hand_ring",
+   "box": [
+    0.32,
+    0.59,
+    0.47,
+    0.72
+   ],
+   "words": [
+    "hand",
+    "ring"
+   ]
+  },
+  {
+   "name": "paper",
+   "box": [
+    0.84,
+    0.58,
+    1.0,
+    0.71
+   ],
+   "words": [
+    "paper",
+    "hand"
+   ]
+  },
+  {
+   "name": "curtain",
+   "box": [
+    0.6,
+    0.0,
+    1.0,
+    0.55
+   ],
+   "words": [
+    "curtain"
+   ]
+  }
+ ],
+ "summary": "Pope Innocent X sits on a gilded throne in a red silk cape and cap, a paper in his left hand and a ring on his right. Red curtains hang behind him."
+}
