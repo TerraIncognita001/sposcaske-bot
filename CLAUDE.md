@@ -1,4 +1,4 @@
-# CLAUDE.md — sposcaske-bot (v1.04: picks topics, writes, shoots, uploads on a schedule; the switch is off)
+# CLAUDE.md — sposcaske-bot (v1.05: picks topics, writes, shoots, uploads on a schedule; LIVE)
 
 Owner: Andrii (writes in Ukrainian; wants short, army-style answers: task → direct solution, the best free option,
 no fluff). Reply in Ukrainian.
@@ -19,14 +19,14 @@ Read before any work: `docs/BUILD_PROMPT.md` (the plan and the hard rules; §13 
 gated by `tools/script_check.py`). Change a number only with a new measurement.
 
 ## Live
-**v1.04** on `main` (Nov 14 2026: the channel is connected, upload + schedule built, the switch is OFF; v1.03 = topics
+**v1.05** on `main` (Nov 14 2026: THE SCHEDULE IS ON since Andrii's yes; v1.04 = channel connected, upload + schedule built; v1.03 = topics
 judged 1-10; v1.02 = writer + director + finder; v1.01 = the first dry run; v1.00 = the approved maket).
-Next: **v1.05**.
+Next: **v1.06**.
 
 ## Channel and schedule
 Channel: **sposcaske** (@sposcaske, id UCNamDfqgZhL8JOaAiCNY_ww). Schedule (the source of truth = `gate.py` SLOTS;
-Andrii, Nov 14): every day **15:00 and 02:00 London**. THE SWITCH: `data/config.json` `"live"`: false = the
-scheduled runs do nothing; true = they write, make and upload (private, public at the slot through publishAt).
+Andrii, Nov 14): every day **15:00 and 02:00 London**. THE SWITCH: `data/config.json` `"live"` is **true since Nov 14** (false = the
+scheduled runs do nothing; true = they write, make and upload (private, public at the slot through publishAt)).
 Never switch it, and never change the slots, without Andrii's yes. History: `docs/versions.md`.
 
 ## Versions (the system of the warehouse ww2-bot, Andrii, Nov 13)

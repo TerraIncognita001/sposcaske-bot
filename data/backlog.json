@@ -188,7 +188,8 @@
      "NIGHT"
     ]
    },
-   "disqualified": null
+   "disqualified": null,
+   "hold": "waits for Andrii's decision R4 (docs/tasks.md): the monster / the severed head in full view"
   },
   {
    "id": "ambassadors-holbein",
@@ -378,7 +379,8 @@
      "LOOK"
     ]
    },
-   "disqualified": null
+   "disqualified": null,
+   "hold": "waits for Andrii's decision R4 (docs/tasks.md): the monster / the severed head in full view"
   },
   {
    "id": "john-dee-dee",

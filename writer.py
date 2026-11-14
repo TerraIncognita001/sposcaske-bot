@@ -64,7 +64,7 @@ def next_topic(wanted=None, skip=()):
     used = set(json.loads((ROOT / "data/used.json").read_text(encoding="utf-8"))["used"]) | set(skip)
     if wanted:
         return next((t for t in topics if t["id"] == wanted), None)
-    scored = sorted((t for t in topics if t["id"] not in used and (t.get("score") or 0) >= 7), key=lambda t: -t["score"])    # v1.03: only 7 and more, best first
+    scored = sorted((t for t in topics if t["id"] not in used and (t.get("score") or 0) >= 7 and not t.get("hold")), key=lambda t: -t["score"])    # v1.03: only 7 and more, best first; v1.05: a topic on "hold" waits for Andrii
     return scored[0] if scored else next((t for t in topics if t["id"] not in used and t.get("score") is None), None)
 
 

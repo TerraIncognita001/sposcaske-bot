@@ -5,6 +5,12 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.05 = THE SCHEDULE IS ON, Andrii, Nov 14 2026 ('Р1. Увімкнути розклад. Так'): `data/config.json` `"live": true`.
+  The first slot is E2026-11-14#1 (15:00 London; the run of 12:05 UTC makes it), then 02:00 and 15:00 every day.
+  A topic may carry `"hold"` in `data/backlog.json` and is then skipped by `writer.next_topic`: The Nightmare and
+  Medusa (Caravaggio) are on hold until his decision R4. Known gaps at switch-on, all in `docs/tasks.md`: the writer
+  has not yet written on a judge's angle, no picture check for nudity, no alarm for an empty slot, the phone of the
+  channel is not verified.
 - v1.04 = THE CHANNEL IS CONNECTED; UPLOAD AND THE SCHEDULE (SWITCHED OFF UNTIL ANDRII SAYS GO), Andrii, Nov 14 2026
   ('добавив ці секрети'; 'випускатимемо відео 2 рази в день. 1500 за лондоном та 0200 за лондоном'). The secrets
   YT_CLIENT_ID / YT_CLIENT_SECRET / YT_REFRESH_TOKEN were made with the warehouse's OAuth client (its consent screen

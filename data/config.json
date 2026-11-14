@@ -1,1 +1,5 @@
-{"live": false, "_about": "live = true lets the scheduled runs make and upload videos (private, with publishAt at the slot time). Andrii switches it; never switch it without his yes."}
+{
+ "live": true,
+ "_about": "live = true lets the scheduled runs make and upload videos (private, with publishAt at the slot time). Andrii switches it; never switch it without his yes.",
+ "live_since": "2026-11-14, Andrii: 'Р1. Увімкнути розклад. Так'"
+}
