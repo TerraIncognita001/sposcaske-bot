@@ -5,6 +5,13 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.06 = A MANUAL RUN MAY NAME ITS OWN PUBLISH MINUTE; THE FIRST PUBLIC VIDEO, Andrii, Nov 14 2026 ('випусти те відео
+  яке ми створили як макет сьогодні о 0200, запость як приватне а потім в 0200 переведи його у публічне'; the
+  session's safety check stopped the first launch, he answered 'даю дозвіл'). Workflow inputs `publish_at` (UTC) and
+  `slot`: with them `upload = slot` skips the gate (which refuses a slot less than 30 minutes away). Run 43541091232:
+  Daniel in the Lions' Den, the maket's own story, 57.0 s, 12 of 12 checks, uploaded 01:34 UTC as
+  https://youtube.com/shorts/Ym92xlQ5h7M, private, public at 02:00 UTC = slot E2026-11-14#2: the channel's first
+  video. The phone of the channel is verified (long uploads "allowed").
 - v1.05 = THE SCHEDULE IS ON, Andrii, Nov 14 2026 ('Р1. Увімкнути розклад. Так'): `data/config.json` `"live": true`.
   The first slot is E2026-11-14#1 (15:00 London; the run of 12:05 UTC makes it), then 02:00 and 15:00 every day.
   A topic may carry `"hold"` in `data/backlog.json` and is then skipped by `writer.next_topic`: The Nightmare and

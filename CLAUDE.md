@@ -19,9 +19,9 @@ Read before any work: `docs/BUILD_PROMPT.md` (the plan and the hard rules; §13 
 gated by `tools/script_check.py`). Change a number only with a new measurement.
 
 ## Live
-**v1.05** on `main` (Nov 14 2026: THE SCHEDULE IS ON since Andrii's yes; v1.04 = channel connected, upload + schedule built; v1.03 = topics
+**v1.06** on `main` (Nov 14 2026: the first public video (Daniel, 02:00 London), manual publish minute; v1.05 = THE SCHEDULE IS ON since Andrii's yes; v1.04 = channel connected, upload + schedule built; v1.03 = topics
 judged 1-10; v1.02 = writer + director + finder; v1.01 = the first dry run; v1.00 = the approved maket).
-Next: **v1.06**.
+Next: **v1.07**.
 
 ## Channel and schedule
 Channel: **sposcaske** (@sposcaske, id UCNamDfqgZhL8JOaAiCNY_ww). Schedule (the source of truth = `gate.py` SLOTS;
