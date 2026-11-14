@@ -37,8 +37,11 @@ scheduled runs do nothing; true = they write, make and upload (private, public a
 Never switch it, and never change the slots, without Andrii's yes. History: `docs/versions.md`.
 
 ## The night writer (v1.09, Andrii, Nov 14: 'Нічний сценарист Claude як основний, Gemini як запасний ... Роби')
-The cloud routine 'sposcaske night writer' (trig_01DsnVEp8rFaEJ5x5KM6iYKu; every day 07:43 UTC, a fresh session) keeps 4 ready
-scripts in `scripts/` (two days). Its rules: `docs/NIGHT_WRITER.md`; it pushes only `scripts/` and `data/look/` to
+The scheduled task 'sposcaske night writer' (trig_01WjFPWccHHzWenYrZTT5bqj; every day 07:43 UTC) wakes ONE standing
+cloud session of the same name (session_01DqdGaZ55tVzFcGQiVwjGb8, claude-opus-5-5, the repository attached). Not a
+fresh session a night: a routine made from a chat gets no repository (tried Nov 14: 'no git repo', the clone was
+refused); if Andrii remakes it in the claude.ai routines UI with the repository added, a fresh session works too
+and is cheaper. It keeps 4 ready scripts in `scripts/` (two days). Its rules: `docs/NIGHT_WRITER.md`; it pushes only `scripts/` and `data/look/` to
 `main`, checks each script with a dry run (at most 5 a night), never touches code or the schedule. A ready script is
 marked `"written_by": "Claude (night writer) ..."`; one that failed the bot's checks is kept as
 `scripts/<id>.failed.json`. The routine spends the Claude subscription's limit (the ww2-bot writer failed on

@@ -1,6 +1,7 @@
 # The night writer (v1.09)
 
-The main writer of the channel **sposcaske** is a nightly Claude cloud routine ('sposcaske night writer'). It leaves
+The main writer of the channel **sposcaske** is a Claude cloud session ('sposcaske night writer') woken every day at
+07:43 UTC by a scheduled task of the same name. It leaves
 finished scripts in `scripts/<topic id>.json`, marked `"written_by": "Claude (night writer) ..."`. The bot
 (`bot.py --write`) takes such a script as it is, with no Gemini request; Gemini (`writer.py`) writes only a topic that
 has no ready script, or whose ready script failed a check of the bot (it is then kept as

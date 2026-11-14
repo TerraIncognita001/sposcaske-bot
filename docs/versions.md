@@ -34,8 +34,13 @@ tried and rolled back.
   43544781464 from the work branch: 60.7 s, 12 of 12 checks, 25 of 25 named things in frame.
   Workflow: input `stats_only`; step 'statistics and learning'; state is saved to `main` only by a run of `main`
   (a test run of another branch can no longer write there).
-  Pushed on his 'П12 так'; the routine 'sposcaske night writer' (trig_01DsnVEp8rFaEJ5x5KM6iYKu, every day 07:43
-  UTC) created on his 'П13 так'.
+  Pushed on his 'П12 так'; the night writer created on his 'П13 так': the scheduled task
+  trig_01WjFPWccHHzWenYrZTT5bqj (every day 07:43 UTC) wakes the standing session session_01DqdGaZ55tVzFcGQiVwjGb8
+  (the first try, a fresh session a night, had no repository and wrote nothing).
+  First day on `main` (GitHub fired no scheduled run, both slots filled by hand on his 'П14 даю дозвіл'): Böcklin
+  by Claude -> BHLGgjy0qs8, 12 of 12; Lucifer by Gemini passed the form on draft 4 and then broke the director
+  (a "show" target ' darkness' that is no LOOK name): v1.09 caught it and went on to The Nightmare by Gemini ->
+  lFKLVEK27GE, 12 of 12 (v1.08 would have ended the run with an error).
 - v1.08 = VIDEOS ARE MADE A DAY AHEAD, Andrii, Nov 14 2026 ('хай тепер за день до пустого слоту бот сам пише та
   випускає відео, загружає як приватне та ставить скеджл на випуск на потрібну годину'). `gate.py`: a run fills the
   earliest empty slot between 30 minutes and 30 HOURS away (was 14 hours); four tries a slot (was two), because a
