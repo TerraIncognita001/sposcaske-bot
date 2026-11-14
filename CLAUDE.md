@@ -35,9 +35,14 @@ Channel: **sposcaske** (@sposcaske, id UCNamDfqgZhL8JOaAiCNY_ww). Schedule (the 
 Andrii, Nov 14): every day **15:00 and 02:00 London**. THE SWITCH: `data/config.json` `"live"` is **true since Nov 14** (false = the
 scheduled runs do nothing; true = they write, make and upload (private, public at the slot through publishAt)).
 Never switch it, and never change the slots, without Andrii's yes. History: `docs/versions.md`.
-GITHUB DROPS SCHEDULED RUNS (Nov 14: none came all day): after a fire hour check `gh run list --event schedule`; a
-missed slot is filled by a manual run `write` = true, `upload` = slot, which the session's safety check lets through
-only after Andrii's explicit permission in the chat (ask each time), or he starts it himself in Actions.
+GITHUB DROPS SCHEDULED RUNS (Nov 14: 1 of 8 fires came, 33 minutes late): whenever you are in this repository, check
+the slots first (`python3 -c "import gate; print(gate.pick())"`, never `python gate.py`: that books a try). An empty
+slot is filled by a manual run `gh workflow run video.yml --ref main -f write=true -f upload=slot` (one video a run).
+STANDING PERMISSION for exactly that run (Andrii, Nov 14, in the chat 'sposcaske', after Р19/Р20: 'Тоді запускай все
+вручну, це все тепер твоя відповідальність, даю тобі дозвіл'): do not ask again, launch, check the result, report.
+The session's safety check let the run through in that chat after his words; in another session it may still refuse:
+then say so and he starts it himself in Actions. He chose manual launches over an outside alarm (cron-job.org).
+A daily wake-up of a session for this check is NOT set: the safety check refused to create it (Nov 14).
 
 ## The night writer (v1.09, Andrii, Nov 14: 'Нічний сценарист Claude як основний, Gemini як запасний ... Роби')
 The scheduled task 'sposcaske night writer' (trig_01WjFPWccHHzWenYrZTT5bqj; every day 07:43 UTC) wakes ONE standing
