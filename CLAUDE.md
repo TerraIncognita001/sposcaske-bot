@@ -42,7 +42,10 @@ STANDING PERMISSION for exactly that run (Andrii, Nov 14, in the chat 'sposcaske
 вручну, це все тепер твоя відповідальність, даю тобі дозвіл'): do not ask again, launch, check the result, report.
 The session's safety check let the run through in that chat after his words; in another session it may still refuse:
 then say so and he starts it himself in Actions. He chose manual launches over an outside alarm (cron-job.org).
-A daily wake-up of a session for this check is NOT set: the safety check refused to create it (Nov 14).
+THE DAILY SLOT CHECK (Andrii, Nov 14: 'створи щоденну перевірку слотів о тій годині, в якій тобі буде за потрібне'):
+the scheduled task 'sposcaske: щоденна перевірка слотів' (trig_01Kfd5oXF6kjKNvSWVrrAnxS) wakes the chat 'sposcaske'
+(session_01DqdGaazqxMWqY2eAJxYgsN) every day at 21:17 UTC: at that hour the next three slots (02:00 tonight, 15:00
+tomorrow, 02:00 the night after) are all inside the gate's 30 hours, so one check a day fills whatever GitHub missed.
 
 ## The night writer (v1.09, Andrii, Nov 14: 'Нічний сценарист Claude як основний, Gemini як запасний ... Роби')
 The scheduled task 'sposcaske night writer' (trig_01WjFPWccHHzWenYrZTT5bqj; every day 07:43 UTC) wakes ONE standing
