@@ -55,6 +55,27 @@ def upload(mp4, meta, publish_at=None):
     return vid
 
 
+def schedule(vid, publish_at, slot=None, story=None, question=None):
+    """v1.07: give a video that is already on the channel, private, its publish minute (UTC, ...Z), and book the slot."""
+    import gate
+    yt = youtube()
+    cur = yt.videos().list(part="status,snippet", id=vid).execute()["items"][0]
+    if cur["status"]["privacyStatus"] != "private":
+        print(f"{vid} is {cur['status']['privacyStatus']}, not private: nothing changed")
+        return 1
+    yt.videos().update(part="status", body={"id": vid, "status": {"privacyStatus": "private", "publishAt": publish_at,
+                       "selfDeclaredMadeForKids": False, "embeddable": True}}).execute()
+    print(f"scheduled: https://youtube.com/shorts/{vid} '{cur['snippet']['title']}' goes public at {publish_at} UTC")
+    if slot:
+        old = next((k for k, v in gate.load()["slots"].items() if v.get("video") == vid and k != slot), None)
+        st = gate.load()
+        if old:
+            st["slots"].pop(old)
+            gate.STATE.write_text(__import__("json").dumps(st, indent=1, ensure_ascii=False), encoding="utf-8")
+        gate.record(slot, video=vid, story=story, title=cur["snippet"]["title"], publish_at=publish_at, **({"comment_pending": question + " 👇"} if question else {}))
+    return 0
+
+
 def comment(vid, text):
     youtube().commentThreads().insert(part="snippet", body={"snippet": {"videoId": vid, "topLevelComment": {"snippet": {"textOriginal": text}}}}).execute()
 
@@ -81,6 +102,9 @@ def post_pending():
 if __name__ == "__main__":
     if "--whoami" in sys.argv:
         sys.exit(whoami())
+    if "--schedule" in sys.argv:                                        # --schedule <video id> <publish_at> [slot] [story] [question]
+        a = sys.argv[sys.argv.index("--schedule") + 1:]
+        sys.exit(schedule(*a[:5]))
     if "--pending" in sys.argv:
         post_pending()
         sys.exit(0)

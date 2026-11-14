@@ -27,6 +27,9 @@ on:
       slot:
         description: "With publish_at: the slot key this video fills (E2026-11-14#2)"
         required: false
+      schedule_video:
+        description: "Give a video already on the channel (private) its publish minute: the video id; needs publish_at, takes slot and story"
+        required: false
       youtube_check:
         description: "Only check the YouTube connection: which channel do the secrets open? (reads only)"
         type: boolean
@@ -68,6 +71,7 @@ jobs:
             if [ "$LIVE" != "1" ]; then MODE=idle; echo "the schedule is switched off (data/config.json)";
             elif [ "${{ github.event.schedule }}" = "5 5 * * 0" ]; then MODE=scout; echo "SCOUT=20" >> "$GITHUB_ENV";
             else python gate.py | tee gate.out; cat gate.out >> "$GITHUB_ENV"; grep -q "GO=1" gate.out || MODE=comments; echo "UPLOAD=slot" >> "$GITHUB_ENV"; fi
+          elif [ -n "${{ inputs.schedule_video }}" ]; then MODE=schedule; echo "UPLOAD=slot" >> "$GITHUB_ENV";
           elif [ "${{ inputs.youtube_check }}" = "true" ]; then MODE=check;
           elif [ "${{ inputs.pictures_only }}" = "true" ]; then MODE=pictures;
           elif [ "${{ inputs.scout }}" != "0" ] && [ -n "${{ inputs.scout }}" ]; then MODE=scout; echo "SCOUT=${{ inputs.scout }}" >> "$GITHUB_ENV";
@@ -101,6 +105,12 @@ jobs:
         run: |
           set -o pipefail
           python upload.py --whoami 2>&1 | tee run.log
+      - name: schedule a video that is already uploaded
+        if: env.MODE == 'schedule'
+        run: |
+          set -o pipefail
+          Q=$(python -c "import json,sys; s=json.load(open('scripts/${{ inputs.story }}.json')) if '${{ inputs.story }}' else {}; print(s.get('meta',{}).get('question',''))" 2>/dev/null || true)
+          python upload.py --schedule "${{ inputs.schedule_video }}" "${{ inputs.publish_at }}" "${{ inputs.slot }}" "${{ inputs.story }}" "$Q" 2>&1 | tee run.log
       - name: pictures only
         if: env.MODE == 'pictures'
         run: |
