@@ -1,15 +1,20 @@
-# CLAUDE.md — sposcaske-bot (v1.05: picks topics, writes, shoots, uploads on a schedule; LIVE)
+# CLAUDE.md — sposcaske-bot (v1.09: picks topics, writes, shoots, uploads on a schedule, counts and learns; LIVE)
 
 Owner: Andrii (writes in Ukrainian; wants short, army-style answers: task → direct solution, the best free option,
 no fluff). Reply in Ukrainian.
 
 State (2026-11-14): the whole chain exists (topics -> script -> video -> upload on a schedule). Dry runs put the video
-on the `preview` branch, every run puts its log on `logs`. Missing: thumbnails, stats and learning (`docs/BUILD_PROMPT.md` §6.10).
+on the `preview` branch, every run puts its log on `logs`. Missing: thumbnails, the picture safety check.
 
-Pipeline: `topics.py` (find and judge topics 1-10, `docs/TOPICS.md`) -> `writer.py` (topic + the judge's angle ->
-`scripts/<id>.json`, Gemini; the secret GEMINI_API_KEY is set) -> `director.py` (script ->
+Pipeline: `topics.py` (find and judge topics 1-10, `docs/TOPICS.md`) -> the script `scripts/<id>.json` (v1.09: THE
+NIGHT WRITER = a Claude cloud routine, rules in `docs/NIGHT_WRITER.md`, tools in `tools/night_writer.py`; `writer.py`
+with Gemini only for a topic that has no ready script or whose ready script failed) -> `director.py` (script ->
 story: camera, red word, card, portrait by the maket) -> `sources.py` (pictures, licences) -> `render.py` -> `bot.py`
 conformance. What the genre is and what all references share: `docs/GENRE.md`.
+After the videos (v1.09, every scheduled run, no Gemini): `stats_now.py` -> `data/stats.json` (views, stayed, average
+% viewed, shares, the retention curve and the caption line viewers left at) -> `learn.py` -> `data/learn.json`
+(multipliers of hook frame, closer, theme ...; the judge's six marks re-weighted on our numbers; it switches ON by
+itself at 8 videos public for 3 days, before that the bot ignores it) + `data/lessons.md` (the same, to read).
 
 ANDRII'S LIST: `docs/tasks.md` (in Ukrainian: the schedule, the decisions waiting for his yes, the to-do list with
 P1-P3, the channel keywords). Keep it current and show it to him (SendUserFile, display render) after every change.
@@ -21,15 +26,23 @@ Read before any work: `docs/BUILD_PROMPT.md` (the plan and the hard rules; §13 
 gated by `tools/script_check.py`). Change a number only with a new measurement.
 
 ## Live
-**v1.08** on `main` (Nov 14 2026: videos are made a day ahead (27-30 h) and wait private with their publish minute; v1.07 = schedule_video; v1.06 = the first public video (Daniel, 02:00 London), manual publish minute; v1.05 = THE SCHEDULE IS ON since Andrii's yes; v1.04 = channel connected, upload + schedule built; v1.03 = topics
+**v1.09** on `main` (Nov 14 2026: statistics + learning + the night writer Claude as the main writer, Gemini the backup; v1.08 = videos are made a day ahead (27-30 h) and wait private with their publish minute; v1.07 = schedule_video; v1.06 = the first public video (Daniel, 02:00 London), manual publish minute; v1.05 = THE SCHEDULE IS ON since Andrii's yes; v1.04 = channel connected, upload + schedule built; v1.03 = topics
 judged 1-10; v1.02 = writer + director + finder; v1.01 = the first dry run; v1.00 = the approved maket).
-Next: **v1.09**.
+Next: **v1.10**.
 
 ## Channel and schedule
 Channel: **sposcaske** (@sposcaske, id UCNamDfqgZhL8JOaAiCNY_ww). Schedule (the source of truth = `gate.py` SLOTS;
 Andrii, Nov 14): every day **15:00 and 02:00 London**. THE SWITCH: `data/config.json` `"live"` is **true since Nov 14** (false = the
 scheduled runs do nothing; true = they write, make and upload (private, public at the slot through publishAt)).
 Never switch it, and never change the slots, without Andrii's yes. History: `docs/versions.md`.
+
+## The night writer (v1.09, Andrii, Nov 14: 'Нічний сценарист Claude як основний, Gemini як запасний ... Роби')
+The cloud routine 'sposcaske night writer' (trig_01DsnVEp8rFaEJ5x5KM6iYKu; every day 07:43 UTC, a fresh session) keeps 4 ready
+scripts in `scripts/` (two days). Its rules: `docs/NIGHT_WRITER.md`; it pushes only `scripts/` and `data/look/` to
+`main`, checks each script with a dry run (at most 5 a night), never touches code or the schedule. A ready script is
+marked `"written_by": "Claude (night writer) ..."`; one that failed the bot's checks is kept as
+`scripts/<id>.failed.json`. The routine spends the Claude subscription's limit (the ww2-bot writer failed on
+Nov 13 with 'usage limit reached'): if it does not run, Gemini writes as before v1.09.
 
 ## Versions (the system of the warehouse ww2-bot, Andrii, Nov 13)
 - Every change of the bot (code, `format.json`, workflow, schedule, the look or the sound of a video, the writer

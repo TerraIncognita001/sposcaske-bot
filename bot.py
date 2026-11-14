@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""bot.py — one run = one video (v1.02: the dry-run path only).
+"""bot.py — one run = one video.
 
     python bot.py --story <id> --dry-run          -> work/final.mp4, work/metadata.json, work/report.json
     python bot.py --write --dry-run               the bot writes the next topic of data/backlog.json itself first
@@ -10,7 +10,11 @@ render with its picture-word audit (render.py) -> conformance to the maket (fram
 sound, the red word, the portrait) -> the metadata the upload would use. A hand-made stories/<id>.json is used when
 there is no scripts/<id>.json.
 Exit codes as in the warehouse: 0 = a video was made, 3 = this story cannot make a good video (the workflow may try
-another), 1 = a bug. Uploading is not built yet: without --dry-run the bot refuses.
+another), 1 = a bug.
+v1.09: with --write the bot first takes the night writer's ready script of the topic (scripts/<id>.json marked
+"written_by": "Claude ..."), as it is, with no Gemini request. Only a topic without one, or whose ready script failed
+a check, is written by Gemini (writer.py). At an upload the caption timings go to data/timeline/<story>.json, so
+stats_now.py can say which line the viewers left at.
 """
 import argparse, json, re, subprocess, sys, time
 from pathlib import Path
@@ -85,7 +89,15 @@ def main():
             topic = writer.next_topic(skip=skip)
             if not topic:
                 break
-            code = run_one(a, topic["id"], work, t0, write=True)
+            ready = writer.ready_script(topic["id"])
+            code = run_one(a, topic["id"], work, t0, write=not ready)
+            if code == 3 and ready:                                     # v1.09: the night writer's script failed a check -> marked, Gemini writes the topic
+                s = json.loads(ready.read_text(encoding="utf-8"))
+                s["failed"] = WHY[-1] if WHY else "a check of the bot refused it"
+                ready.write_text(json.dumps(s, indent=1, ensure_ascii=False), encoding="utf-8")
+                ready.replace(ready.with_name(ready.stem + ".failed.json"))    # kept beside the new script for the night writer to read
+                print(f"== {topic['id']}: the night writer's script failed ({s['failed'][:160]}): Gemini writes it")
+                code = run_one(a, topic["id"], work, t0, write=True)
             if code != 3:
                 return code
             skip.append(topic["id"])
@@ -93,6 +105,14 @@ def main():
         print("no topic made a video in this run")
         return 3
     return run_one(a, a.story, work, t0, write=a.write)
+
+
+WHY = []                                                               # v1.09: why the last story was refused, in words
+
+
+def refuse(msg):
+    WHY.append(msg)
+    return 3
 
 
 def run_one(a, story_id, work, t0, write=False):
@@ -108,7 +128,13 @@ def run_one(a, story_id, work, t0, write=False):
     spath, path = ROOT / "scripts" / f"{a.story}.json", ROOT / "stories" / f"{a.story}.json"
     if spath.exists():                                                  # the director shoots every script the same way
         import director
-        story = director.build(json.loads(spath.read_text(encoding="utf-8")))
+        script = json.loads(spath.read_text(encoding="utf-8"))
+        print(f"== script by {script.get('written_by') or 'Gemini (writer.py)'}")
+        try:
+            story = director.build(script)
+        except Exception as e:                                          # v1.09: a hand-written script may lack a field
+            print("the director cannot shoot this script:", repr(e)[:200])
+            return refuse(f"director: {e!r}"[:200])
         path = work / "directed.json"
         path.write_text(json.dumps(story, indent=1, ensure_ascii=False), encoding="utf-8")
         print(f"== directed: {len(story['lines'])} caption lines, {sum(1 for l in story['lines'] if l.get('cam'))} with camera cues")
@@ -127,7 +153,7 @@ def run_one(a, story_id, work, t0, write=False):
             print(("FAIL " if h else "warn ") + name + (" | " + d if d else ""))
     print(f"== script gate: {words} words, {n} sentences, {len(hard)} hard failures")
     if hard:
-        return 3
+        return refuse("script gate: " + "; ".join(f"{n_} ({d})" for n_, d in hard))
 
     import sources
     story, report, bad = sources.resolve(path, work)
@@ -137,14 +163,14 @@ def run_one(a, story_id, work, t0, write=False):
         print(f"picture {r['key']:10s} {r.get('from', '-'):22s} licence: {r.get('licence_on_commons') or r.get('licence_in_story')}")
     if bad:
         print("\n".join("PROBLEM " + b for b in bad))
-        return 3
+        return refuse("pictures: " + "; ".join(bad))
 
     import render
     try:
         render.render(work / "story.json", work / "final.mp4")
     except SystemExit as e:                                             # the picture-word audit refused the story
         print("render refused:", e)
-        return 3
+        return refuse(f"render: {e}")
 
     rows, numbers = conform(work / "final.mp4", story, work)
     for name, ok, got in rows:
@@ -155,7 +181,7 @@ def run_one(a, story_id, work, t0, write=False):
                                                   "bot_seconds": round(time.time() - t0)}, indent=1), encoding="utf-8")
     print(f"== done in {time.time() - t0:.0f} s: work/final.mp4, {numbers}")
     if not all(o for _, o, _ in rows):
-        return 3
+        return refuse("maket checks: " + "; ".join(f"{n_} ({g})" for n_, o, g in rows if not o))
     if a.upload != "no":                                                # v1.04: only a video that passed every check goes up
         import os, upload, gate
         at = os.environ.get("PUBLISH_AT") if a.upload == "slot" else None
@@ -166,6 +192,9 @@ def run_one(a, story_id, work, t0, write=False):
         used = json.loads((ROOT / "data/used.json").read_text(encoding="utf-8"))
         used["used"] = sorted(set(used["used"]) | {story["id"]})
         (ROOT / "data/used.json").write_text(json.dumps(used, ensure_ascii=False), encoding="utf-8")
+        tl = json.loads((work / "final_work" / "timeline.json").read_text())    # v1.09: when each caption line is spoken, for the retention curve
+        (ROOT / "data/timeline").mkdir(exist_ok=True)
+        (ROOT / "data/timeline" / f"{story['id']}.json").write_text(json.dumps({"total": tl["total"], "lines": tl["lines"]}, indent=1, ensure_ascii=False), encoding="utf-8")
         key = os.environ.get("SLOT") or f"manual-{time.strftime('%Y%m%d-%H%M%S', time.gmtime())}"
         gate.record(key, video=vid, story=story["id"], title=meta["title"], publish_at=at, seconds=numbers["seconds"],
                     **({"comment_pending": meta["pinned_question"] + " 👇"} if meta.get("pinned_question") and at else {}))
