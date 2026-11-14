@@ -41,8 +41,8 @@ Never switch it, and never change the slots, without Andrii's yes. History: `doc
 - The commit of a version starts with `vX.YY: `; a line of code changed for a reason carries `# vX.YY` and the reason.
 - Changes that do not touch the bot (docs, stories, this file) go to `main` with no number.
 - Production branch = `main`. Ask before pushing a version. Update the "Live" lines above at every push.
-- NOT switched on yet: the 10-day `draft` branch of ww2-bot. It makes sense only when videos are going out; ask
-  Andrii when the first real video is scheduled.
+- NO 10-day `draft` branch here (Andrii, Nov 14: 'не треба'): a bot change goes to `main` at once, as a version.
+  Do not propose it again unless he asks.
 
 Hard rules (short): free tools only · public-domain art only · every fact has a source in the story file · never
 copy the reference channel's wording or name · never publish, change the schedule, the voice or the look without
