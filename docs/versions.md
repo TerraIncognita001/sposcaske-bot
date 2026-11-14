@@ -33,6 +33,16 @@ tried and rolled back.
   portrait card of Tartini, -16.6 LUFS, true peak -1.0 dBFS, 71 MB; 12 of 12 checks. The run before it failed one
   check (true peak +0.2 dBFS: the shutter click with the voice starting on it overshoots in AAC): the click is 3 dB
   lower now and `render.py` lowers the whole track when the encoded peak is above -0.5 dBFS.
+  FIRST VIDEO THE BOT MADE ALONE (Nov 14, after Andrii added the secret GEMINI_API_KEY; runs 43530006181 the
+  writer, 43531088580 the final render): topic 1 of the backlog, The Fallen Angel (Cabanel, 1847). Gemini listed 8
+  things in the picture with boxes; drafts 1 and 2 broke the form (too few short sentences, a two-sentence detail
+  glued to the turn, no triad), draft 3 passed: 128 words, 16 sentences, punch RAGE. The bot found Cabanel's
+  self-portrait (Wikidata P18) and a photograph of the Villa Medici (Commons search, CC0). 60.3 s, 132 wpm, audit
+  18 of 18, 12 of 12 checks, 28 MB, the bot's own time 108 s. Fixed on the way: the painter's name outside the
+  ident asked for the portrait (the rule now lives on the ident line only); multi-word evidence words; a punch
+  word written in capitals; the hook opens on a crop; detail zoom capped at 3.6x (5x went soft on the hands); the
+  triad's last beat pulls back; the backstory opens on the whole picture; the writer must name its source ("According
+  to historical records" got through in this script).
 - v1.01 = THE FIRST BOT RUN: DRY RUN IN GITHUB ACTIONS + SEVERAL PICTURES IN ONE VIDEO, Andrii, Nov 13 2026 (he sent
   the reference's video about Tartini's dream, 111 s, nine pictures: 'повністю відтвори це відео за макетом ...
   відтвори це використовуючи драй ран через бота'; 'залиши початок як є' = the approved opening stays). New:
