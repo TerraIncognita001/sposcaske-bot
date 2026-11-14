@@ -16,6 +16,9 @@ on:
         description: "Test only: make the video, do NOT upload (it goes to the preview branch)"
         type: boolean
         default: true
+      scout:
+        description: "Topics only: find this many new candidates and judge them 1-10 (0 = off); the list goes to the preview branch"
+        default: "0"
       pictures_only:
         description: "Only fetch the story's pictures and put them on the preview branch (to mark the focus boxes)"
         type: boolean
@@ -66,8 +69,17 @@ jobs:
           if [ "${{ inputs.story }}" = "_selftest" ]; then python sources.py --selftest 2>&1 | tee run.log; exit 0; fi
           if [ -f "scripts/${{ inputs.story }}.json" ]; then python director.py "scripts/${{ inputs.story }}.json" work/directed.json; S=work/directed.json; else S="stories/${{ inputs.story }}.json"; fi
           python sources.py "$S" work 2>&1 | tee run.log
+      - name: find and judge topics
+        if: ${{ inputs.scout != '0' && inputs.scout != '' }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          set -o pipefail
+          mkdir -p work
+          python topics.py --rejudge --scout "${{ inputs.scout }}" 2>&1 | tee run.log
+          cp data/backlog.json work/backlog.json
       - name: make the video
-        if: ${{ !inputs.pictures_only }}
+        if: ${{ !inputs.pictures_only && (inputs.scout == '0' || inputs.scout == '') }}
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
@@ -79,7 +91,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           rm -rf /tmp/p && mkdir -p /tmp/p
-          cp work/final.mp4 work/metadata.json work/report.json work/sources.json work/directed.json work/writer_drafts.json work/look.json /tmp/p/ 2>/dev/null || true
+          cp work/final.mp4 work/metadata.json work/report.json work/sources.json work/directed.json work/writer_drafts.json work/look.json work/backlog.json /tmp/p/ 2>/dev/null || true
           [ "${{ inputs.write }}" = "true" ] && cp scripts/*.json /tmp/p/ 2>/dev/null || true
           if [ "${{ inputs.pictures_only }}" = "true" ]; then mkdir -p /tmp/p/img && cp work/img/* /tmp/p/img/ 2>/dev/null || true; fi
           cp work/final_work/timeline.json /tmp/p/ 2>/dev/null || true

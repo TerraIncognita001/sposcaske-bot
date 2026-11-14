@@ -8,10 +8,14 @@ KIND    "artwork" (the video is about the picture itself) or "story" (the video 
         and the lead picture shows it).
 FACTS   numbered source sentences. Every fact you state must come from them.
 LOOK    the things that are really visible in the lead picture, each with a short name and the words that name it.
+ANGLE   the judge's choice for this picture: the first impression, THE detail, its two readings, the closing
+        question and candidate punch words. Build the script on it: S3 gives the first impression, S4-S5 point at
+        the detail, S11 sets the two readings against each other, S13 is the question (you may reword it).
 AVOID   hook frames, punch words and closing types used in the last videos.
 
 ### 2. The one rule above all
-Choose ONE thing from LOOK that becomes strange once you notice it (hands that do not fight, eyes that look at you,
+The ONE thing is the detail given in ANGLE (when there is no ANGLE, choose it yourself: the strongest thing in
+the face or the eyes, not a side detail). It is a thing from LOOK that becomes strange once you notice it (hands that do not fight, eyes that look at you,
 a weapon held by an angel, a face that smiles in the wrong place). The whole script is about that one thing: the
 hook promises it without showing it, the turn points at it, the reveal says it again as a contradiction, the last
 question asks about it. Everything else in the picture appears only in the setup.

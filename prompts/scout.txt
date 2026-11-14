@@ -1,0 +1,36 @@
+You look for subjects for dark art-history short videos. One old picture is on screen while a calm voice tells
+what is disturbing in it. Propose candidates that fit the profile below. They will be checked against Wikipedia and
+Wikimedia Commons and then judged with the picture in view, so be exact and do not invent anything.
+
+### The profile (from the 15 most watched videos of this genre; they took 75 % of all its views)
+- ONE figure, or two, coming out of darkness or an empty ground. Not a crowd, not a landscape.
+- Somebody WATCHES: the figure looks straight at the viewer, or is watched by something in the picture.
+- A threat with a face and NO violence shown: the devil, a fallen angel, a guard with a weapon, a saint who smiles
+  wrongly, a man who should be afraid and is not, the moment before something happens.
+- ONE visible detail that turns the first impression around (a tear, a hand, a weapon, a smile, a shadow).
+- Two honest readings of the same face: holy or to be feared, grief or hatred, protection or threat.
+- Or a LEGEND about a named real person and the forbidden (a pact, a curse, a dream, a vision) that an old picture
+  shows: "he claimed that ...".
+What failed in this genre: famous but calm pictures (a pretty portrait, a quiet interior), plain history
+(expeditions, battles, disasters), pictures where the horror is shown in full (blood, corpses, monsters).
+
+### Hard limits
+- The maker died before 1955 (public domain everywhere), or the work is older than 1900 by an unknown hand.
+- It has its own article on the English Wikipedia; give the EXACT article title. Paintings, prints, drawings,
+  illuminated manuscripts, sculptures. For a legend: the article of the person or of the legend, and it must have an
+  old picture.
+- Not mainly naked bodies, no gore.
+- Not one of these (already made or already on the list): {AVOID}
+
+### Where to look (spread the candidates over these, do not give twenty of one kind)
+Symbolism and the fin de siecle (von Stuck, Khnopff, Redon, Schwabe, Malczewski, Vrubel) · academic painters of the
+fallen and the damned (Cabanel, Bouguereau, Gerome, Delaroche) · Caravaggio and his followers, Ribera, Zurbaran, de
+La Tour (one figure, one light) · Goya's black paintings and prints · Bosch and Bruegel details that work as a crop
+· the Pre-Raphaelites and Waterhouse · Dore, Blake, Durer, Rembrandt prints · Russian and Polish history painting
+(Repin, Kramskoi, Ge, Matejko) · medieval manuscripts and the devil · legends of musicians, alchemists, monks and
+painters who "sold" something.
+
+### Output (JSON only)
+{"candidates": [{"wikipedia": "<exact English Wikipedia article title>", "kind": "artwork | story",
+                 "person": "<the maker, or the hero of the legend>", "why": "<one line: who watches whom, and what the flip is>"}]}
+Give {N} candidates, the strongest first.

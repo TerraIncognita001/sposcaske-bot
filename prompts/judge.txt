@@ -1,0 +1,62 @@
+You judge ONE candidate for a dark art-history short video: an old picture (you are shown it) and the facts about
+it. A calm voice will tell the viewer that something in this picture is not what it seems. Your job: say how well
+this picture can hold a viewer who has never heard of it, on a phone, in the first three seconds and to the end.
+
+The scale was built from 58 published videos of this genre. The 15 most watched took 75 % of all views. What set
+them apart from the other 43 (share of the top 15 against share of the rest, and median views with / without):
+- someone in the picture WATCHES (looks straight at the viewer, or is watched): 9 of 15 against 9 of 43; 1.29M / 0.29M
+- one or two figures coming out of DARKNESS: 6 of 15 against 2 of 43; 1.65M / 0.39M
+- the viewer can be spoken to as "you" inside the scene: 9 of 15 against 13 of 43; 0.89M / 0.29M
+- a named person and a story he "claimed" or a legend with a source: 5 of 15 against 6 of 43; 0.93M / 0.35M
+- violence SHOWN (blood, a killing, a corpse): 0 of 15 against 7 of 43; 0.26M / 0.60M
+- a sacred or demonic figure by itself decided nothing (0.55M / 0.49M): what counts is what the figure DOES to you
+- fame decided nothing: Girl with a Pearl Earring, Whistler's Mother and Christina's World are at the bottom
+
+### Score six things (write one short reason for each, from what you SEE and from FACTS)
+G  THE GAZE, 0-2.  2 = a figure looks straight out at the viewer, or the main figure is being watched by someone or
+   something in the picture. 1 = eyes or a look matter but do not meet anyone. 0 = nobody looks.
+D  DARKNESS AND ONE FIGURE, 0-2.  2 = one or two figures against a dark or empty ground, readable at phone size in
+   one second. 1 = three to six figures, or a simple scene in daylight. 0 = a crowd, a landscape, small figures.
+F  THE FLIP, 0-2.  2 = ONE thing, visible in a close crop, that contradicts the first impression (a tear on a
+   perfect face, a spear in an angel's hand, a calm man among lions, a smile where there should be none). 1 = a
+   detail exists but it has to be explained before it is seen. 0 = nothing to find.
+T  THREAT WITHOUT VIOLENCE, 0-2.  2 = danger, the forbidden or the uncanny is present and NOTHING is shown
+   happening (the moment before, the watcher, the one who should be afraid and is not). 1 = grief or aftermath.
+   0 = nothing at stake, or the violence itself is shown (blood, a killing, a corpse, a monster in full view).
+Y  YOU, 0-1.  1 = one honest question puts the viewer inside ("is he looking at you?", "would you have opened the
+   door?", "which one do you see?"). 0 = the viewer stays outside.
+S  A STORY WITH A NAME, 0-1.  1 = FACTS hold a story that pays off the flip and has a source that can be named
+   (scripture, a legend about a named person, the artist's own words, a recorded event). 0 = only art history.
+TOTAL = G + D + F + T + Y + S, from 0 to 10. A total of 0 is written as 1: the scale is 1 to 10.
+
+### What the totals mean
+9-10  make it first: the kind that took millions       7-8  make it       5-6  keep in reserve       1-4  never
+
+### Anchors (how the scale reads on known pictures; do not copy their angles)
+10  The Fallen Angel (Cabanel): one figure, his eye meets yours, a tear on a beautiful face, grief or hatred?
+ 9  Lucifer (von Stuck): a face in the dark, two eyes on you, nothing happens.   Daniel in the Lions' Den
+    (Riviere): the lions watch and do not attack.   Saint John the Baptist (Leonardo): the smile, the dark.
+ 8  A legend with a named man and the devil, shown by an old print (Tartini's dream).
+ 7  Stanczyk (Matejko): one man alone and grieving at the edge of a feast.
+ 3  Girl with a Pearl Earring, Whistler's Mother, Christina's World: famous, calm, nothing at stake.
+ 1  An expedition, a battle, a disaster told with photographs: a story, but no picture to look INTO.
+
+### Disqualify (TOTAL = 0, say why) when
+the facts are fewer than eight sentences; the picture is mostly naked bodies or shows gore (the platform would
+restrict it); the picture is a photograph of living people; nothing in it can be recognised at phone size.
+
+### The angle (only when TOTAL >= 5)
+Give the ONE angle the video should take. It is the flip, not the most famous fact:
+first_impression  what everyone sees in the first second (6-12 words)
+detail            the one thing to point at, as a plain noun phrase ("the tear on his cheek"), and it must be
+                  the STRONGEST one in the picture, usually in the face or the eyes, not a side detail
+readings          the two ways to read it ("an angel mourning what he lost" / "the moment hatred is born")
+question          the last question of the video, 6-16 words, beginning "So"
+punch             three candidate punch words of 3-8 letters for the red word on screen
+
+### Output (JSON only)
+{"scores": {"G": 0, "D": 0, "F": 0, "T": 0, "Y": 0, "S": 0}, "reasons": {"G": "...", "D": "...", "F": "...", "T": "...", "Y": "...", "S": "..."},
+ "total": 0, "disqualified": null,
+ "character": {"figure": "<who is in it, 2-5 words>", "threat": "<what is at stake, 3-8 words>", "feeling": "<the feeling it should leave, 1-3 words>",
+               "theme": "<one of: watcher, fallen, pact, innocence in danger, false calm, holy or feared, last moment, other>"},
+ "angle": {"first_impression": "...", "detail": "...", "readings": ["...", "..."], "question": "...", "punch": ["...", "...", "..."]}}

@@ -62,7 +62,10 @@ def gemini(prompt, ok, extra=None, rounds=5, purpose="script"):
 def next_topic(wanted=None):
     topics = json.loads((ROOT / "data/backlog.json").read_text(encoding="utf-8"))["topics"]
     used = set(json.loads((ROOT / "data/used.json").read_text(encoding="utf-8"))["used"])
-    return next((t for t in topics if (t["id"] == wanted if wanted else t["id"] not in used)), None)
+    if wanted:
+        return next((t for t in topics if t["id"] == wanted), None)
+    scored = sorted((t for t in topics if t["id"] not in used and (t.get("score") or 0) >= 7), key=lambda t: -t["score"])    # v1.03: only 7 and more, best first
+    return scored[0] if scored else next((t for t in topics if t["id"] not in used and t.get("score") is None), None)
 
 
 def recent(n=8):
@@ -113,6 +116,7 @@ def write(topic, work):
     pic = [{"inline_data": {"mime_type": "image/jpeg", "data": base64.b64encode(jpg.read_bytes()).decode()}}]
     look = gemini((ROOT / "prompts/look.txt").read_text(encoding="utf-8"), valid_look, extra=pic, purpose="look")
     base = ((ROOT / "prompts/writer.txt").read_text(encoding="utf-8") + f"\n\nKIND  {topic['kind']}\nTITLE  {title}\n\nFACTS\n" + "\n".join(f"{i + 1}. {s}" for i, s in enumerate(facts))
+            + ("\n\nANGLE\n" + "\n".join(f"{k}: {v if isinstance(v, str) else ' / '.join(v)}" for k, v in topic["angle"].items()) if topic.get("angle") else "")
             + "\n\nLOOK (" + look.get("summary", "") + ")\n" + "\n".join(f"- {t['name']}: words {', '.join(t.get('words', []))}" for t in look["things"]) + "\n\nAVOID\n" + ("\n".join("- " + r for r in recent()) or "- nothing yet"))
     ok = lambda d: isinstance(d.get("sentences"), list) and len(d["sentences"]) >= 12 and d.get("punch") and d.get("portrait_of") and d.get("meta", {}).get("title")
     note, drafts = "", []

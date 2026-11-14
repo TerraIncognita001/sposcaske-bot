@@ -81,6 +81,7 @@ def speak_lines(story):
         for text in re.split(r"(?<=[.!?])\s+", ln["say"].strip()):       # every sentence ends in a real pause
             for a, b in story.get("pronounce", {}).items():
                 text = text.replace(a, b)
+            text = year_words(text)                                    # the caption keeps the digits, the voice says the halves
             y, sr = k.create(text, voice=voice, speed=kv["speed"], lang=kv["lang"])
             loud = np.nonzero(np.abs(y) > 0.02)[0]
             if len(loud):
@@ -89,6 +90,26 @@ def speak_lines(story):
             pieces += [gap] * bool(pieces) + [rough(np.interp(np.linspace(0, len(y) - 1, n), np.arange(len(y)), y).astype(np.float32))]
         clips.append(np.concatenate(pieces))
     return clips
+
+
+ONES = "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen".split()
+TENS = "- - twenty thirty forty fifty sixty seventy eighty ninety".split()
+
+
+def year_words(text):
+    """v1.03 (Andrii: 'треба щоб він казав 18 57 а не 1857'): a year is spoken in two halves, the way people say it:
+    1857 -> eighteen fifty-seven, 1805 -> eighteen oh five, 1900 -> nineteen hundred, 2004 -> two thousand four."""
+    two = lambda n: ONES[n] if n < 20 else TENS[n // 10] + ("-" + ONES[n % 10] if n % 10 else "")
+
+    def say(m):
+        y = int(m.group(0))
+        a, b = divmod(y, 100)
+        if not 1000 <= y <= 2099:
+            return m.group(0)
+        if 2000 <= y <= 2009:
+            return "two thousand" + (" " + ONES[b] if b else "")
+        return two(a) + (" hundred" if b == 0 else " oh " + ONES[b] if b < 10 else " " + two(b))
+    return re.sub(r"(?<![\d.,])\d{4}(?![\d]|,\d)", say, text)
 
 
 def rough(y):
