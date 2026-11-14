@@ -5,6 +5,35 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.09 = STATISTICS, LEARNING, THE NIGHT WRITER CLAUDE, Andrii, Nov 14 2026 ('P2 Збір статистики ... P2 Самонавчання
+  ... P2 Нічний сценарист Claude як основний, Gemini як запасний. Роби ці всі!').
+  (1) `stats_now.py` -> `data/stats.json`, in every scheduled run and by the manual input `stats_only`, no Gemini:
+  per public video the views, likes, comments (Data API), engaged views, average % viewed, shares, subscribers
+  (Analytics; the token has the scope, checked by run 43544715706: Daniel 7 views ten minutes after its first
+  minute, analytics rows come 2-3 days later), "stay" = engaged / views, the retention curve and its three steepest
+  drops after second 3, each mapped to the caption line spoken then (`bot.py` saves the line times of every upload
+  to `data/timeline/<story>.json`), the warehouse's score (stay weighs most), and what the video was made of (hook
+  frame as one of 9 fixed names, punch, closer, kind, theme, century, length band, writer, the judge's marks).
+  (2) `learn.py` -> `data/learn.json` + `data/lessons.md`: a multiplier 0.5-2.0 for every value of hook frame,
+  closer, kind, theme, century, length, writer (mean score of its videos / mean of all; under 3 videos = 1.0); THE
+  JUDGE'S SCALE RE-CALIBRATED: each of the six marks weighted 0.5-1.5 by its correlation with our score, a topic's
+  total brought back to 1-10. `writer.queue` orders the topics by `learn.priority` (calibrated score x theme x kind),
+  the writer's task gets PREFER / AVOID lines. LEARNING SWITCHES ON BY ITSELF AT 8 VIDEOS PUBLIC FOR 3 DAYS (about
+  Nov 21); until then learn.json says "on": false and the queue and the prompt are exactly as in v1.08. The
+  threshold 7 stays on the judge's own total.
+  (3) THE NIGHT WRITER: a Claude cloud routine (rules `docs/NIGHT_WRITER.md`, tools `tools/night_writer.py`: stock,
+  brief, crops, save, preview, sheet) keeps 4 ready scripts marked "written_by": "Claude (night writer) ...".
+  `bot.py --write` takes the ready script of a topic first (no Gemini request at all: the LOOK is in the script);
+  a ready script that fails a check is set aside as `scripts/<id>.failed.json` with the reason and Gemini writes
+  that topic in the same run; a topic with no ready script is written by Gemini as before. Why: Gemini's free quota
+  was the weak point (one scout run ate a day; three scripts a day never proven), and the first bot-written hook
+  gave its detail away. Claude looks at the picture, cuts out every box to check it, and looks at one frame per
+  caption line of a dry run before the script counts. The cloud sandbox cannot render (Wikimedia 429), so the
+  check is a dry run on GitHub (at most 5 a night, about 20 Actions minutes).
+  First night script: Böcklin, Self-Portrait with Death Playing the Fiddle (punch LISTEN, 140 words), dry run
+  43544781464 from the work branch: 60.7 s, 12 of 12 checks, 25 of 25 named things in frame.
+  Workflow: input `stats_only`; step 'statistics and learning'; state is saved to `main` only by a run of `main`
+  (a test run of another branch can no longer write there).
 - v1.08 = VIDEOS ARE MADE A DAY AHEAD, Andrii, Nov 14 2026 ('хай тепер за день до пустого слоту бот сам пише та
   випускає відео, загружає як приватне та ставить скеджл на випуск на потрібну годину'). `gate.py`: a run fills the
   earliest empty slot between 30 minutes and 30 HOURS away (was 14 hours); four tries a slot (was two), because a

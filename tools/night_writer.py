@@ -202,21 +202,23 @@ def sheet(tid, src="work/preview"):
     if not mp4.exists() or not tl.exists():
         print(f"no final.mp4 + timeline.json in {src}: start a dry run (docs/NIGHT_WRITER.md), then `preview`")
         return 1
-    lines = json.loads(tl.read_text())["lines"]
+    T = json.loads(tl.read_text())
+    lines, (sw, sh), y_off = T["lines"], T.get("stage", [1080, 1920]), T.get("y_off", 0)
     d = NIGHT / tid
     d.mkdir(parents=True, exist_ok=True)
-    w, h, cols = 270, 480, 6
+    w, cols = 400, 4                                                   # only the stage (the picture with its caption), not the black bars
+    h = int(w * sh / sw)
     out = Image.new("RGB", (cols * w, -(-len(lines) // cols) * (h + 50)), (18, 18, 18))
     dr = ImageDraw.Draw(out)
     for i, ln in enumerate(lines):
         t = ln["t0"] + 0.7 * (ln["t1"] - ln["t0"])
-        raw = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{t:.2f}", "-i", str(mp4), "-frames:v", "1", "-vf", f"scale={w}:{h}", "-f", "image2pipe", "-vcodec", "png", "-"], capture_output=True).stdout
+        raw = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{t:.2f}", "-i", str(mp4), "-frames:v", "1", "-vf", f"crop={sw}:{sh}:0:{y_off},scale={w}:{h}", "-f", "image2pipe", "-vcodec", "png", "-"], capture_output=True).stdout
         ox, oy = (i % cols) * w, (i // cols) * (h + 50)
         if raw:
             import io
             out.paste(Image.open(io.BytesIO(raw)).convert("RGB"), (ox, oy + 50))
         dr.text((ox + 4, oy + 4), f"{ln['t0']:.1f}s {ln['beat']}", fill=(255, 220, 0), font=font(14))
-        dr.text((ox + 4, oy + 24), ln["say"][:36], fill=(255, 255, 255), font=font(13))
+        dr.text((ox + 4, oy + 24), ln["say"][:52], fill=(255, 255, 255), font=font(13))
     out.save(d / "sheet.jpg", quality=85)
     print(f"{d / 'sheet.jpg'}: one frame per caption line ({len(lines)}). LOOK: is the thing each line names in its frame, sharp and whole?")
     return 0
