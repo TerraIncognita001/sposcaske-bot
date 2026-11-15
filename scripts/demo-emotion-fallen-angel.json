@@ -2,7 +2,7 @@
  "id": "demo-emotion-fallen-angel",
  "kind": "artwork",
  "form": "emotion",
- "hook_frame": "There's something ___ about the way ___.",
+ "hook_frame": "This angel ___, and ___.",
  "closer": "either_or",
  "detail": "eye",
  "home": "face",
@@ -147,7 +147,7 @@
  "sentences": [
   {
    "slot": "E1",
-   "text": "There's something terrifying about the way this beautiful face is looking at you.",
+   "text": "This angel has just been thrown out of heaven, and he is looking at you.",
    "kind": "HOOK",
    "source": null
   },
@@ -159,21 +159,21 @@
   },
   {
    "slot": "E3",
-   "text": "And this is no monster with claws.",
-   "kind": "LOOK",
-   "source": null
+   "text": "It shows the Devil, and he has no horns.",
+   "kind": "FACT",
+   "source": 2
   },
   {
    "slot": "E3",
-   "text": "It's an angel with wings.",
-   "kind": "LOOK",
-   "source": null
+   "text": "Cabanel painted him as a young man with wings.",
+   "kind": "FACT",
+   "source": 13
   },
   {
    "slot": "E4",
-   "text": "Young, flawless, almost holy.",
+   "text": "Young, handsome, still winged.",
    "kind": "LOOK",
-   "source": null
+   "source": 13
   },
   {
    "slot": "E5",
@@ -189,15 +189,15 @@
   },
   {
    "slot": "E6",
-   "text": "There's one tear caught at the edge of his eye.",
+   "text": "There's one tear at the corner of his eye.",
    "kind": "LOOK",
    "source": 17
   },
   {
    "slot": "E7",
-   "text": "And yet it doesn't look like grief at all.",
-   "kind": "READING",
-   "source": null
+   "text": "And yet the brow above it is pulled down hard.",
+   "kind": "LOOK",
+   "source": 17
   },
   {
    "slot": "E8",
@@ -213,43 +213,43 @@
   },
   {
    "slot": "E9",
-   "text": "A quiet, patient, sleepless rage.",
-   "kind": "READING",
-   "source": null
+   "text": "A silent, clenched, weeping rage.",
+   "kind": "LOOK",
+   "source": 8
   },
   {
    "slot": "E10",
-   "text": "As if something in him has just gone cold forever.",
+   "text": "As if he has already made up his mind.",
    "kind": "READING",
    "source": null
   },
   {
    "slot": "E11",
-   "text": "According to the old story of the fall, God cast this angel out of heaven, and he became the Devil.",
+   "text": "According to the Christian story of the fall, God expelled this angel from heaven, and he became the Devil.",
    "kind": "FACT",
    "source": 7
   },
   {
    "slot": "E12",
-   "text": "And Cabanel seems to capture something few painters dared.",
-   "kind": "READING",
-   "source": null
+   "text": "And Cabanel, at twenty-four, chose a subject French painters rarely touched.",
+   "kind": "FACT",
+   "source": 7
   },
   {
    "slot": "E12",
-   "text": "Not the fall itself, but the first minute after it.",
-   "kind": "READING",
-   "source": null
+   "text": "Not the fall itself, but the hour after it, on the ground.",
+   "kind": "FACT",
+   "source": 9
   },
   {
    "slot": "E12",
-   "text": "The moment when an angel understands the door is shut for good.",
-   "kind": "READING",
-   "source": null
+   "text": "The moment when the other angels still fly overhead, and he does not.",
+   "kind": "FACT",
+   "source": 16
   },
   {
    "slot": "E13",
-   "text": "Imagine being thrown out of the only home you ever had.",
+   "text": "Imagine being thrown out of the only home you had.",
    "kind": "READING",
    "source": null
   },
@@ -273,7 +273,7 @@
   },
   {
    "slot": "E14",
-   "text": "That's what makes this painting so hard to look at.",
+   "text": "That's what makes this painting hard to look at.",
    "kind": "HOOK",
    "source": null
   },
@@ -290,20 +290,14 @@
    "source": null
   },
   {
-   "slot": "E16",
-   "text": "And perhaps that's the most frightening part.",
-   "kind": "HOOK",
-   "source": null
-  },
-  {
    "slot": "E17",
-   "text": "Maybe evil never arrives looking like evil.",
+   "text": "Maybe this is how the Devil looked on his first day.",
    "kind": "READING",
    "source": null
   },
   {
    "slot": "E17",
-   "text": "Maybe it begins with a wound, then becomes a grudge, and eventually turns into rage.",
+   "text": "Maybe it starts with being thrown out, then a tear, then a decision.",
    "kind": "READING",
    "source": null
   },
@@ -321,7 +315,7 @@
   },
   {
    "slot": "E19",
-   "text": "Or the first second of the Devil?",
+   "text": "Or the Devil, one hour old?",
    "kind": "READING",
    "source": null
   }
@@ -344,6 +338,21 @@
    "note": "sentence E2"
   },
   {
+   "claim": "It was painted in 1847, when the artist was 24 years old, and depicts the Devil after his fall from Heaven.",
+   "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
+   "note": "sentence E3"
+  },
+  {
+   "claim": "Analysis A Romantic work, the figure of Lucifer is shown as a nude, handsome young man reclining, hands clasped, his face partially obscured by his arm.",
+   "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
+   "note": "sentence E3"
+  },
+  {
+   "claim": "Analysis A Romantic work, the figure of Lucifer is shown as a nude, handsome young man reclining, hands clasped, his face partially obscured by his arm.",
+   "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
+   "note": "sentence E4"
+  },
+  {
    "claim": "Depicting an angel expelled from heaven by God, the painting shows an enraged Lucifer, with his hands crossed and tears running from his eyes.",
    "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
    "note": "sentence E6"
@@ -354,16 +363,41 @@
    "note": "sentence E6"
   },
   {
+   "claim": "Lucifer glares out angrily from behind his arm, tears visible in his eyes.",
+   "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
+   "note": "sentence E7"
+  },
+  {
    "claim": "Depicting an angel expelled from heaven by God, the painting shows an enraged Lucifer, with his hands crossed and tears running from his eyes.",
    "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
    "note": "sentence E8"
   },
   {
+   "claim": "Depicting an angel expelled from heaven by God, the painting shows an enraged Lucifer, with his hands crossed and tears running from his eyes.",
+   "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
+   "note": "sentence E9"
+  },
+  {
    "claim": "Cabanel opted for a subject not often represented in French painting: the fall from Heaven of the Fallen Angel, who went on to become the Devil.",
    "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
    "note": "sentence E11"
+  },
+  {
+   "claim": "Cabanel opted for a subject not often represented in French painting: the fall from Heaven of the Fallen Angel, who went on to become the Devil.",
+   "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
+   "note": "sentence E12"
+  },
+  {
+   "claim": "He lies on the ground, naked, while angels fly in the sky above to show the glory of God.",
+   "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
+   "note": "sentence E12"
+  },
+  {
+   "claim": "In the sky numerous less detailed angels are in flight all moving in the same direction Lucifer faces.",
+   "url": "https://en.wikipedia.org/wiki/The_Fallen_Angel_(painting)",
+   "note": "sentence E12"
   }
  ],
- "written_by": "Claude (demo of v1.12, not for upload)",
+ "written_by": "Claude (demo of v1.12 after the humanizer pass, not for upload)",
  "hold": "demo"
 }
