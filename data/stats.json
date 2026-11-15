@@ -15,7 +15,7 @@
     "writer": "hand"
    },
    "hook": "This man is about to be eaten alive, and somehow he is completely calm.",
-   "views": 271,
+   "views": 273,
    "likes": 16,
    "comments": 2,
    "score": 6.31
@@ -47,10 +47,10 @@
     }
    },
    "hook": "What if the most beautiful angel ever painted is looking at you with pure hatred?",
-   "views": 32,
+   "views": 33,
    "likes": 1,
    "comments": 1,
-   "score": 3.61
+   "score": 3.64
   },
   "BHLGgjy0qs8": {
    "story": "self-portrait-with-death-playing-the-fiddle-bckl",
@@ -111,12 +111,12 @@
     }
    },
    "hook": "Something about this peaceful sleeping woman feels completely wrong, filled with hidden dread.",
-   "views": 20,
+   "views": 26,
    "likes": 0,
    "comments": 1,
-   "score": 3.13
+   "score": 3.38
   }
  },
- "read_at": "2026-11-15T21:22:44Z",
+ "read_at": "2026-11-15T23:21:50Z",
  "_about": "written by stats_now.py (v1.09): one entry per public video; learn.py reads it. Do not edit by hand."
 }
