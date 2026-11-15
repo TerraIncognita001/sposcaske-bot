@@ -68,7 +68,7 @@ def ready_script(topic_id):
         s = json.loads(p.read_text(encoding="utf-8"))
     except Exception:
         return None
-    return p if str(s.get("written_by", "")).lower().startswith("claude") and not s.get("failed") else None
+    return p if str(s.get("written_by", "")).lower().startswith("claude") and not s.get("failed") and s.get("form") else None    # v1.12: a script from before the forms is written anew
 
 
 def queue(skip=()):
@@ -109,9 +109,34 @@ def brief(topic, title, facts, look=None):
     the picture, what the last scripts used, and (v1.09) what our own videos taught. The same text for Gemini and
     for the night writer."""
     return ((ROOT / "prompts/writer.txt").read_text(encoding="utf-8") + f"\n\nKIND  {topic['kind']}\nTITLE  {title}\n\nFACTS\n" + "\n".join(f"{i + 1}. {s}" for i, s in enumerate(facts))
-            + ("\n\nANGLE\n" + "\n".join(f"{k}: {v if isinstance(v, str) else ' / '.join(v)}" for k, v in topic["angle"].items()) if topic.get("angle") else "")
+            + ("\n\nANGLE\n" + "\n".join(f"{k}: {v if isinstance(v, str) else ' / '.join(v)}" for k, v in topic["angle"].items() if k != "form") if topic.get("angle") else "")
+            + "\n\nFORM  " + (form_of(topic) or "choose")
             + ("\n\nLOOK (" + look.get("summary", "") + ")\n" + "\n".join(f"- {t['name']}: words {', '.join(t.get('words', []))}" for t in look["things"]) if look else "")
             + "\n\nAVOID\n" + ("\n".join("- " + r for r in recent()) or "- nothing yet") + learn.notes())
+
+
+FORMS = ("riddle", "emotion", "scene", "legend")
+
+
+def form_of(topic):
+    """The form the judge gave the topic (v1.12), or None: then the writer chooses by section 3 of the prompt."""
+    f = (topic.get("angle") or {}).get("form") or topic.get("form")
+    return f if f in FORMS else "legend" if topic.get("kind") == "story" else None
+
+
+def picture_aspect(path):
+    """Width / height of a picture file, or None. The director needs it to know what a framing really shows."""
+    try:
+        from PIL import Image
+        with Image.open(path) as im:
+            return round(im.width / im.height, 4)
+    except Exception:
+        try:
+            import cv2
+            im = cv2.imread(str(path))
+            return round(im.shape[1] / im.shape[0], 4)
+        except Exception:
+            return None
 
 
 def target(to):
@@ -125,6 +150,10 @@ def camera_faults(script):
     thing of LOOK, and the run stopped there). Checked while the script is written, so the model gets it back."""
     names, keys = {l["name"] for l in script["look"]}, {e["key"] for e in script.get("evidence", [])}
     out = []
+    if script.get("form") == "emotion":                                 # v1.12: the face the video holds, and the small thing in it
+        for k in ("home", "detail"):
+            if script.get(k) not in names:
+                out.append(f"\"{k}\" is '{script.get(k)}', which is not a name of LOOK ({', '.join(sorted(names))}): the emotion form needs the face as \"home\" and the small thing as \"detail\"")
     for s in script["sentences"]:
         for x in (s.get("show") or []) if s.get("slot") != "S2" else []:     # the ident has its own shots (card, portrait): the director reads no "show" there
             to = x.get("to", "")
@@ -142,9 +171,11 @@ def assemble(topic, facts, lead, look, w, title):
     """The writer's answer + the facts + the pictures = scripts/<id>.json (what director.py reads)."""
     year = next((int(m) for m in re.findall(r"\b(1[0-9]{3})\b", " ".join(s["text"] for s in w["sentences"][:2]))), None)
     creator = topic.get("person") or w.get("portrait_of") or "unknown"
-    return {"id": topic["id"], "kind": topic["kind"], "hook_frame": w.get("hook_frame"), "closer": w.get("closer"), "detail": w.get("detail"),
+    form = w.get("form") if w.get("form") in FORMS else form_of(topic) or "riddle"
+    return {"id": topic["id"], "kind": topic["kind"], "form": form, "hook_frame": w.get("hook_frame"), "closer": w.get("closer"),
+            "detail": target(w.get("detail") or ""), "home": target(w["home"]) if w.get("home") else None,
             "subject": {"title": re.sub(r"\s*\(.*\)$", "", title), "creator": creator, "year": year, "wikidata": lead.get("wikidata")},
-            "lead": {"commons": lead["commons"], "width_px": 3840, "license": lead["license"], "credit": f"{re.sub(chr(95), ' ', lead['commons'].rsplit('.', 1)[0])} — Wikimedia Commons"},
+            "lead": {"commons": lead["commons"], "width_px": 3840, "aspect": lead.get("aspect"), "px": topic.get("picture_px"), "license": lead["license"], "credit": f"{re.sub(chr(95), ' ', lead['commons'].rsplit('.', 1)[0])} — Wikimedia Commons"},
             "portrait": {"of": w["portrait_of"], "credit": f"Portrait of {w['portrait_of']} — Wikimedia Commons", "license": "Public domain"},
             "evidence": [{"key": re.sub(r"\W", "", e["key"])[:12] or f"ev{i}", "query": e["query"], "words": [x.lower() for x in e.get("words", [])],
                           "license": "Public domain", "credit": f"{e['query']} — Wikimedia Commons"} for i, e in enumerate(w.get("evidence", [])[:3])],
@@ -184,13 +215,14 @@ def write(topic, work):
     (work / "look.json").write_text(json.dumps(look, indent=1, ensure_ascii=False), encoding="utf-8")
     for attempt in range(4):
         w = gemini(base + note, ok, purpose="script")
-        res, words, n = script_check.check([s["text"].strip() for s in w["sentences"]], title, w["punch"])
+        form = w.get("form") if w.get("form") in FORMS else form_of(topic) or "riddle"
+        res, words, n = script_check.check([s["text"].strip() for s in w["sentences"]], title, w["punch"], form)
         hard = [f"{name}: {d}" for good, h, name, d in res if not good and h]
         script = None
         if not hard:                                                    # v1.10: the form holds; can the director shoot it?
-            script = assemble(topic, facts, {"commons": page_image, "license": lic[0], "wikidata": qid}, look, w, title)
+            script = assemble(topic, facts, {"commons": page_image, "license": lic[0], "wikidata": qid, "aspect": picture_aspect(jpg)}, look, w, title)
             hard = camera_faults(script)
-        print(f"{topic['id']}: draft {attempt + 1}: {words} words, {n} sentences, {len(hard)} failures of the construction")
+        print(f"{topic['id']}: draft {attempt + 1} ({form}): {words} words, {n} sentences, {len(hard)} failures of the construction")
         for h in hard:
             print("   FAIL", h[:230])
         drafts.append({"draft": attempt + 1, "failures": hard, "answer": w})

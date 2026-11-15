@@ -49,6 +49,7 @@ def features(story_id, seconds=None):
     hook = (sc.get("sentences") or [{}])[0].get("text") or " ".join(l["say"] for l in st.get("lines", []) if l.get("beat") == "hook")
     year = (sc.get("subject") or {}).get("year") or (st.get("artwork") or {}).get("year")
     f["kind"] = sc.get("kind") or st.get("kind") or topic.get("kind")
+    f["form"] = sc.get("form") or ("riddle" if sc or st else None)      # v1.12: riddle, emotion, scene, legend
     f["hook_frame"] = frame_of(hook) if hook else None
     f["punch"] = sc.get("punch") or st.get("hook_title")
     f["closer"] = sc.get("closer")

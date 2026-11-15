@@ -356,3 +356,54 @@ Knobs: `overlays.candle.amp` (how much the light wavers), `glow` (how warm that 
 `overlays.candle.amp` 0.045 → 0.08, `glow` 0.05 → 0.06; nothing else changed. Demo 7 over the same 6 s: left third
 4.8 / 3.5 / 2.2 % rms in R / G / B (22 % between its brightest and darkest frame), right third 1.7 / 1.1 / 0.8 % (6 %),
 whole frame 3.1 / 2.2 / 1.3 %. The numbers in §18.2 are demo 6's.
+
+
+## 19. The forms (v1.12, Nov 15 2026): the form follows the picture
+Why: the reference's own Fallen Angel (v4, 114 s, 6.7M) was laid beside the bot's Fallen Angel (66 s, the 13 slots).
+The 13 slots of §16 are the skeleton of v1 (Daniel, 47 s) and nothing else: the reference tells a face, a scene and a
+legend each in its own way. Andrii: 'виправи всі недоліки ... дозволяю тобі ставити чи знімати заборони ... щоб відео
+згенеровані нашим ботом були максимально схожі на референс'.
+
+### 19.1 Four constructions (prompts/writer.txt section 3; the gate is tools/script_check.py `check(..., form)`)
+| form | measured on | words | seconds | what carries it |
+|---|---|---|---|---|
+| riddle | v1 Daniel (121 words, 47 s) | 105-140 | 45-65 | a question about what is happening; §16 unchanged |
+| emotion | v4 The Fallen Angel (239 words, 30 sentences, 114 s) | 200-250 | 95-120 | the viewer is put in the figure's place |
+| scene | v5 Hope (about 400 words, 145 s) | 220-320 | 105-145 | the eye walks from the first figure to the hidden second one |
+| legend | v3 Tartini (about 230 words, 107 s) | 190-240 | 95-115 | a named man's story, then "would you?" |
+The judge names the form of a new topic (`angle.form`); for a topic without one the writer chooses by the picture.
+
+### 19.2 The emotion form, block by block (v4's own timeline)
+0-7 s the hook and the ident · 11-20 s CONTRAST ("this isn't a <monster>. It's <what it is>.") and three slow beats
+(three qualities, the third softened) · 20-29 s the turn, the detail, "yet it doesn't feel like <the expected
+feeling>" · 29-40 s a second look, the real feeling named, three slow beats of adjectives, "As if" · 40-51 s the
+backstory · 51-67 s THE MOMENT ("Not the <event>, but what comes after. The moment when ...") · 67-79 s EMPATHY
+("Imagine ..." and three questions to the viewer, the third the dark one) · 79-90 s the marker and the two things in
+the face that disagree · 90-105 s THE IDEA (two "Maybe" sentences about people, the second a chain of three steps)
+· 105-114 s "So look at him one more time" and two questions. Blocks from 51 s on take HALF the video and had no
+slot in §16. The gate checks the joints only (the reference's own text passes it); the words between are new each time.
+Lifted for this form: adjectives of feeling (slow, three at a time), verbless three-beat lines, readings outside
+the last three sentences, direct address ("you" at least six times; the reference has 7).
+
+### 19.3 The face lock (director.build_lock, format.json camera.face_lock)
+v4, 57 frames two seconds apart: the face is in the frame in 51 (about 90 %); frame 0 is the eye; the whole picture
+is seen only as the ident card; two glances at the body (1.5 s each) during the contrast; 6 s of the tear alone.
+Our old Fallen Angel: the face in 36 % of 66 s, first at second 22, the tear never large, because the camera went to
+every named noun. Now, for the emotion form: the video OPENS on the face (story "open"), the camera breathes between
+three scales of it (home 3.6x, a middle one about 4.9x, the detail up to 7x: `zoom.macro`), goes to the detail
+whenever it is named, glances elsewhere only while the contrast names something, and returns to the face with the
+next sentence. The face stands for the figure: its box answers for "the angel". The first demo (run 43657185176):
+114.7 s against the reference's 114, 16 of 16 named things in frame, 12 of 12 checks.
+A scene opens on its first figure's face too; riddle and legend open on the whole picture, as v1 does.
+
+### 19.4 Pauses by meaning (format.json timing.meaning, v4's word clock)
+The reference and our old video have the same share of silence (17 % and 18 %) and the same speed while speaking (171
+and 178 wpm). The difference is WHERE the silence stands: 1.28 s before "Not the moment of the fall", 1.0 s before
+the third question, 0.92 s and 0.55 s between the three beats, 0.74 s before "According to", 0.70 s before
+"Imagine". The director writes these pauses into the lines of the emotion form; a three-beat line is spoken and
+captioned one beat at a time.
+
+### 19.5 The frame decides, not the name (director.Geo)
+The director now computes what a framing really shows with the renderer's own arithmetic, so "the camera is already
+on it" means the audit would accept it. Before, a named word could pass the director and fail the audit (Nov 14:
+'Jane' with the camera on her hand; 'throne'). A script carries the picture's aspect (`lead.aspect`) for this.

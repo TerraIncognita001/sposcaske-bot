@@ -5,6 +5,34 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.12 = THE FORM FOLLOWS THE PICTURE, THE FACE LOCK, PAUSES BY MEANING, Andrii, Nov 15 2026. He sent the
+  reference's own Fallen Angel (114 s, 6.7M views) to be laid beside the bot's ('різниця величезна ... саме той
+  розрив що розділяє між десятьма переглядами і мільйонами'), then, on the seven differences found: 'виправи всі
+  недоліки, допиши код щоб бот теж дотримувався цих всіх тонкостей та деталей. дозволяю тобі ставити чи знімати
+  заборони. роби 1,2,3 і загалом все, щоб відео згенеровані нашим ботом були максимально схожі на референс'.
+  Measured (docs/FORMAT.md section 19): ours 66 s, 155 words, the face in the frame 36 % of the time and first at
+  second 22, the tear never large; the reference 114 s, 239 words, frame 0 is the eye, the face 90 % of the time.
+  Half of the reference (the moment after, 'imagine ... would you?', the idea about people) had no slot in our form:
+  the 13 slots are the skeleton of the 47-second Daniel only.
+  (1) FORMS: `prompts/writer.txt` section 3 has four constructions: riddle (the 13 slots), emotion (E1-E19, on v4),
+  scene (C1-C13, on v5 Hope), legend (L1-L9, on v3 Tartini); the judge names the form of a new topic, the writer
+  chooses for an old one. LIFTED: no adjectives, no fragments, a reading only in the last three sentences, 140
+  words at most. `tools/script_check.py check(..., form)` gates the joints of each form (the reference's own text
+  passes the emotion gate). A ready script must carry a form: scripts from before are written anew.
+  (2) THE FACE LOCK (`director.build_lock`, emotion): the video opens on the face (render: story "open"), holds it,
+  breathes between three scales (3.6x, about 4.9x, the detail up to 7x: `zoom.macro`), goes to the detail when it
+  is named, glances elsewhere only during the contrast, shows the whole picture only as the ident card. A scene
+  opens on its first figure's face.
+  (3) PAUSES BY MEANING (`format.json timing.meaning`): 1.25 s before the pivot, 1.0 s before the third question,
+  0.9 and 0.55 s between the three beats (each spoken and captioned alone), 0.75 s before the backstory.
+  (4) `director.Geo`: the director does the renderer's own framing arithmetic, so a named thing is 'on screen' only
+  if the audit would accept it (was by box name: 'Jane', 'throne', 'skull' failed in the render). A script carries
+  `lead.aspect`.
+  Demo, never uploaded (`scripts/demo-emotion-fallen-angel.json`, run 43657806331): 114.7 s against the reference's
+  114, 256 words, 12 of 12 checks, 16 of 16 named things in frame. The Gemini backup with the new prompt (run
+  43658419156): chose emotion for Innocent X and fell four times on one joint (relaxed after), wrote a riddle for
+  Lady Jane Grey in two drafts; its Ambassadors lost the skull in the last question (fixed: the question goes to
+  the thing it names). The form goes into the statistics (`f.form`) and the learning.
 - v1.11 = THE WRITER ASSEMBLES AGAIN, THE PAINTER'S OWN PORTRAIT, 7 DRY RUNS A NIGHT, Andrii, Nov 14 2026 ('1. Роби
   2. Роби 3. Дозволяй'). Why: the first night of the night writer (Nov 14). (1) `writer.assemble`: the comment
   `# v1.10 ...` stood in the middle of the line and cut off `"pronounce"` and `"meta"`; every script assembled after
