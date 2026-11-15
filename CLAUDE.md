@@ -83,3 +83,4 @@ The skill `humanizer` (`.claude/skills/humanizer/`, Andrii, Nov 15: 'скача�
 DO NOT run it over a video script on your own: it deletes 'not X but Y', three-beat lines and one-line closers, which
 are the joints of the reference's scripts (`docs/FORMAT.md`). Use it on titles, descriptions, comments, docs and
 replies, or where Andrii says so.
+Its rules are NOT to be written into `prompts/writer.txt` (Andrii, Nov 15: 'ні'); do not propose it again.
