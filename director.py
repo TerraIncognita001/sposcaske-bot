@@ -162,7 +162,7 @@ def build_lock(script):
     focus["_mid"] = [round(a + (b - a) * k_mid, 4) for a, b in zip(focus[home], focus[tight])]
     scale = {"home": home, "mid": "_mid", "detail": tight}
     family = [home, "_mid", tight]
-    geo = geo_of(script, focus, macro=[tight])
+    geo = geo_of(script, focus, macro=["_mid", tight])        # both may pass the usual 3.6: the face itself is already there
     images = {"main": dict(script["lead"]), "portrait": {k: v for k, v in script["portrait"].items() if k != "of"}}
     if not (images["portrait"].get("commons") or images["portrait"].get("file")):
         images["portrait"]["find"] = {"portrait_of": script["portrait"]["of"], "work": (script.get("subject") or {}).get("wikidata")}
@@ -271,7 +271,7 @@ def build_lock(script):
             if cues:
                 ln["cam"] = cues[0] if len(cues) == 1 else cues
             lines.append(ln)
-    return finish(script, images, focus, names, lines, open="_mid", macro=[tight], home=home)
+    return finish(script, images, focus, names, lines, open="_mid", macro=["_mid", tight], home=home)
 
 
 def inside(a, b):
