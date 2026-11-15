@@ -97,6 +97,55 @@
    "disqualified": null
   },
   {
+   "id": "the-sleep-of-reason-produces-monsters-goya",
+   "kind": "artwork",
+   "wikipedia": "The Sleep of Reason Produces Monsters",
+   "person": "Francisco Goya",
+   "why": "A sleeping man hides his face while staring night owls and bats emerge from the darkness behind him.",
+   "wikidata": "Q671237",
+   "picture": "Francisco_José_de_Goya_y_Lucientes_-_The_sleep_of_reason_produces_monsters_(No._43),_from_Los_Caprichos_-_Google_Art_Project.jpg",
+   "picture_px": 2645,
+   "score": 10,
+   "scores": {
+    "G": 2,
+    "D": 2,
+    "F": 2,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Staring owls and a watchful lynx glare directly out at the viewer while surrounding the sleeping man.",
+    "D": "A single main figure slumped over a desk dominates the center against a dark background of swarming bats.",
+    "F": "The owl right behind the sleeping artist is actually holding out a drawing stylus to his hands, revealing the monsters inspire his art rather than just attack him.",
+    "T": "An uncanny nightmare scene filled with menacing creatures, but no actual violence or harm is depicted.",
+    "Y": "The viewer is directly asked whether nightmarish thoughts destroy reason or unlock true creation.",
+    "S": "Goya's own documented epigraph and manifesto for Capricho No. 43 provide a clear named origin and historical context."
+   },
+   "character": {
+    "figure": "Goya asleep at desk",
+    "threat": "nightmare swarm emerging from dark",
+    "feeling": "uncanny inspiration",
+    "theme": "false calm"
+   },
+   "angle": {
+    "first_impression": "A man attacked by terrifying bats and owls while he sleeps",
+    "detail": "the owl holding out a stylus",
+    "readings": [
+     "a helpless mind destroyed by madness",
+     "the dark source of true artistic imagination"
+    ],
+    "question": "So are the monsters attacking his mind, or handing him his masterpiece?",
+    "punch": [
+     "DREAM",
+     "GENIUS",
+     "MONSTER"
+    ],
+    "form": "riddle"
+   },
+   "disqualified": null
+  },
+  {
    "id": "lucifer-von-stuck",
    "kind": "artwork",
    "wikipedia": "Lucifer (Stuck)",
@@ -287,6 +336,55 @@
    "disqualified": null
   },
   {
+   "id": "job-mocked-by-his-wife-tour",
+   "kind": "artwork",
+   "wikipedia": "Job's wife",
+   "person": "Georges de La Tour",
+   "why": "A tall woman looms over a seated man in candlelight, her expression reading as either merciful comfort or quiet mockery.",
+   "wikidata": "Q16070970",
+   "picture": "Gaspare_Traversi_-_Job_mocked_by_his_wife.jpg",
+   "picture_px": 4712,
+   "score": 9,
+   "scores": {
+    "G": 2,
+    "D": 2,
+    "F": 1,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The woman leans in close and stares intently at the broken man, who looks up toward heaven.",
+    "D": "Two large figures emerge starkly from pitch darkness, instantly clear on a phone screen.",
+    "F": "Her open mouth and gesturing hands seem like cruelty, but her words may be a plea for mercy.",
+    "T": "The moment of ultimate spiritual collapse and temptation with no physical blood shown.",
+    "Y": "Asks the viewer if they would stay loyal to God or listen to her advice.",
+    "S": "Grounded in the biblical story of Job and theological commentaries on his unnamed wife."
+   },
+   "character": {
+    "figure": "Job and his wife",
+    "threat": "temptation to give up faith and die",
+    "feeling": "uncanny tension",
+    "theme": "pact"
+   },
+   "angle": {
+    "first_impression": "A cruel woman mocking a helpless, suffering old man",
+    "detail": "her open mouth whispering in his ear",
+    "readings": [
+     "Satan using a wife as his final weapon to break Job",
+     "a grieving mother demanding an end to endless torture"
+    ],
+    "question": "So was she Satan's cruelest tool, or the only voice speaking truth?",
+    "punch": [
+     "TEMPT",
+     "CURSE",
+     "DEVIL"
+    ],
+    "form": "scene"
+   },
+   "disqualified": null
+  },
+  {
    "id": "lady-jane-grey-delaroche",
    "kind": "artwork",
    "wikipedia": "The Execution of Lady Jane Grey",
@@ -431,6 +529,251 @@
    "disqualified": null
   },
   {
+   "id": "the-demon-seated-vrubel",
+   "kind": "artwork",
+   "wikipedia": "The Demon Seated",
+   "person": "Mikhail Vrubel",
+   "why": "A tragic fallen demon sits in darkness staring into the void, his tense muscles making it unclear if he is grieving or plotting vengeance.",
+   "wikidata": "Q4157667",
+   "picture": "Vrubel_Demon.jpg",
+   "picture_px": 2048,
+   "score": 8,
+   "scores": {
+    "G": 1,
+    "D": 2,
+    "F": 1,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The demon's eyes stare downward in deep sorrow without meeting the viewer directly.",
+    "D": "A single giant figure dominates the composition against a stylized background, highly readable on a small screen.",
+    "F": "The massive, muscular body of a titan contrasts with a heartbroken, suffering expression upon closer look.",
+    "T": "An ominous demonic presence sits trapped in brooding agony without any visible gore or violence.",
+    "Y": "Invites the viewer to question whether they are looking at a terrifying monster or a suffering soul.",
+    "S": "Backed by Lermontov's famous 1839 poem 'The Demon' and Vrubel's own recorded words about a sorrowful spirit."
+   },
+   "character": {
+    "figure": "a seated muscular demon",
+    "threat": "eternal isolation and spiritual entrapment",
+    "feeling": "haunting tragedy",
+    "theme": "fallen"
+   },
+   "angle": {
+    "first_impression": "a powerful titan resting peacefully at sunset among crystal flowers",
+    "detail": "the sorrowful expression in his downcast eyes",
+    "readings": [
+     "a dangerous dark entity plotting retribution",
+     "a broken spirit crushed by tragic solitude"
+    ],
+    "question": "So would you fear this ancient creature, or pity his endless isolation?",
+    "punch": [
+     "FALLEN",
+     "BROKEN",
+     "TRAPPED"
+    ],
+    "form": "emotion"
+   },
+   "disqualified": null
+  },
+  {
+   "id": "saint-serapion-zurbarn",
+   "kind": "artwork",
+   "wikipedia": "Saint Serapion (Zurbarán)",
+   "person": "Francisco de Zurbarán",
+   "why": "A bound figure in white robes hangs against black space, looking like he is peacefully sleeping until you notice the ropes on his wrists.",
+   "wikidata": "Q3464088",
+   "picture": "San_Serapio,_por_Francisco_de_Zurbarán.jpg",
+   "picture_px": 3139,
+   "score": 8,
+   "scores": {
+    "G": 0,
+    "D": 2,
+    "F": 2,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The saint's eyes are closed in death or unconsciousness, meeting no look.",
+    "D": "A single figure in brilliant white cloth stands out against stark black shadow.",
+    "F": "He appears to be resting peacefully, until you notice his wrists tied with thick ropes to a pole.",
+    "T": "A violent martyrdom is occurring, yet no blood or gore is shown—only surreal, silent stillness.",
+    "Y": "The direct prompt asks the viewer to choose between seeing a sleeping man or an executed martyr.",
+    "S": "Refers to the historical 13th-century Crusader knight turned Mercedarian friar Saint Serapion."
+   },
+   "character": {
+    "figure": "bound monk in white",
+    "threat": "brutal execution concealed as peace",
+    "feeling": "uncanny quiet",
+    "theme": "false calm"
+   },
+   "angle": {
+    "first_impression": "A monk resting peacefully in heavy white robes",
+    "detail": "the bound ropes around his wrists",
+    "readings": [
+     "a man sleeping peacefully in sacred white robes",
+     "an executed martyr suspended in silent death"
+    ],
+    "question": "So do you see a sleeping monk—or a man hanging from his execution?",
+    "punch": [
+     "BOUND",
+     "MARTYR",
+     "HIDDEN"
+    ],
+    "form": "riddle"
+   },
+   "disqualified": null
+  },
+  {
+   "id": "the-young-martyr-delaroche",
+   "kind": "artwork",
+   "wikipedia": "The Young Martyr",
+   "person": "Paul Delaroche",
+   "why": "A glowing halo illuminates a peaceful girl floating in dark water, looking asleep until you see her bound hands.",
+   "wikidata": "Q16915832",
+   "picture": "La_Jeune_Martyre_-_Paul_Delaroche_-_Muse_du_Louvre_Peintures_RF_1038.jpg",
+   "picture_px": 3102,
+   "score": 8,
+   "scores": {
+    "G": 1,
+    "D": 2,
+    "F": 2,
+    "T": 1,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Her eyes are closed in death while shadowed watchers look on from the distant shore, but no eyes meet the viewer.",
+    "D": "A single pale, glowing figure floats isolated against pitch-black water, instantly readable on a phone screen.",
+    "F": "Her face and halo look like peaceful sleep, but a close look shows thick ropes binding her wrists.",
+    "T": "The murder has already happened; she floats serenely in the aftermath of execution.",
+    "Y": "The video can directly ask the viewer whether they see a sleeping girl or a crime scene.",
+    "S": "The scene depicts a Christian executed during Emperor Diocletian's persecution in ancient Rome."
+   },
+   "character": {
+    "figure": "a drowned young martyr",
+    "threat": "execution by drowning for her faith",
+    "feeling": "haunting peace",
+    "theme": "innocence in danger"
+   },
+   "angle": {
+    "first_impression": "A peaceful glowing girl floating asleep in dark calm water",
+    "detail": "the bound ropes around her wrists",
+    "readings": [
+     "a saint sleeping in holy light",
+     "the corpse of an executed martyr floating downstream"
+    ],
+    "question": "So when you look at her face, do you see peace or a murder?",
+    "punch": [
+     "BOUND",
+     "MARTYR",
+     "SILENT"
+    ],
+    "form": "riddle"
+   },
+   "disqualified": null
+  },
+  {
+   "id": "knight-death-and-the-devil-drer",
+   "kind": "artwork",
+   "wikipedia": "Knight, Death and the Devil",
+   "person": "Albrecht Dürer",
+   "why": "A calm knight rides forward while Death holds an hourglass and a pig-snouted devil watches him closely from the shadows.",
+   "wikidata": "Q1755464",
+   "picture": "Albrecht_Dürer,_Knight,_Death_and_Devil,_1513,_NGA_6637.jpg",
+   "picture_px": 3087,
+   "score": 8,
+   "scores": {
+    "G": 2,
+    "D": 1,
+    "F": 1,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The knight is actively watched and stalked by both Death and a goat-headed devil.",
+    "D": "Features multiple figures and a dense, detailed background, placing it at a 1 rather than a clean single-figure 2.",
+    "F": "Death holds an hourglass right in the knight's path, yet the knight refuses to turn his gaze.",
+    "T": "Monsters press in closely, but no violence is occurring; the knight simply rides forward unbothered.",
+    "Y": "Asks the viewer if they would have the resolve to keep moving straight ahead when stalked by death.",
+    "S": "Backed by Dürer's master print history, Erasmus's handbook of the Christian soldier, and Psalm 23."
+   },
+   "character": {
+    "figure": "an armored knight on horseback",
+    "threat": "death and the devil lurking alongside him",
+    "feeling": "steely dread",
+    "theme": "false calm"
+   },
+   "angle": {
+    "first_impression": "a knight surrounded by horrifying monsters in a dark gorge",
+    "detail": "the hourglass held right beside his face",
+    "readings": [
+     "a hero protected by absolute faith",
+     "a doomed man marching blindly to his end"
+    ],
+    "question": "So would you keep your eyes forward if Death held your time right beside you?",
+    "punch": [
+     "STEEL",
+     "FAITH",
+     "IGNORE"
+    ],
+    "form": "riddle"
+   },
+   "disqualified": null
+  },
+  {
+   "id": "devil-s-trill-sonata-tartini",
+   "kind": "story",
+   "wikipedia": "Devil's Trill Sonata",
+   "person": "Giuseppe Tartini",
+   "why": "The composer claimed the Devil appeared at the foot of his bed in a dream and played a violin sonata of terrifying perfection.",
+   "wikidata": "Q2641249",
+   "picture": "Le_Songe_de_Tartini_par_Louis-Léopold_Boilly_1824_(color).jpg",
+   "picture_px": 2529,
+   "score": 8,
+   "scores": {
+    "G": 2,
+    "D": 2,
+    "F": 1,
+    "T": 1,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The demonic figure looks straight out at the viewer while playing the violin.",
+    "D": "Two figures clear against an uncluttered, foggy background, easily readable on a phone screen.",
+    "F": "The monstrous visitor is not attacking, but playing beautiful music—a twist requiring explanation.",
+    "T": "The scene shows no violence, only the quiet threat of a demonic pact and artist's despair.",
+    "Y": "Engages the viewer directly by asking if they would trade their soul for artistic perfection.",
+    "S": "Tartini's own recorded dream account published in Lalande's travel journals."
+   },
+   "character": {
+    "figure": "Giuseppe Tartini and the devil",
+    "threat": "trading a soul for unattainable music",
+    "feeling": "haunting awe",
+    "theme": "pact"
+   },
+   "angle": {
+    "first_impression": "a demon playing a violin over a sleeping man's bed",
+    "detail": "the devil's stare while playing",
+    "readings": [
+     "a terrifying demonic visitation",
+     "a musician captivated by impossible perfection"
+    ],
+    "question": "So would you sell your soul to hear a song you could never repeat?",
+    "punch": [
+     "DEVIL",
+     "TRICK",
+     "PERFECT"
+    ],
+    "form": "legend"
+   },
+   "disqualified": null
+  },
+  {
    "id": "stanczyk-matejko",
    "kind": "artwork",
    "wikipedia": "Stańczyk (painting)",
@@ -522,6 +865,55 @@
      "Resolve",
      "Doubt"
     ]
+   },
+   "disqualified": null
+  },
+  {
+   "id": "peter-the-great-interrogating-the-tsarevich-alex",
+   "kind": "artwork",
+   "wikipedia": "Peter the Great Interrogating the Tsarevich Alexei Petrovich at Peterhof",
+   "person": "Nikolai Ge",
+   "why": "A stern father stares intensely at his standing son in a quiet room, the silent glance marking the quiet moment before a fatal sentence.",
+   "wikidata": "Q21041551",
+   "picture": "Peter_the_Great_Interrogating_the_Tsarevich_Alexei_Petrovich.jpg",
+   "picture_px": 2048,
+   "score": 7,
+   "scores": {
+    "G": 1,
+    "D": 1,
+    "F": 1,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Peter glares intensely at his son who looks down; the eyes drive the drama but no one meets the viewer.",
+    "D": "Two figures are prominent, but the interior room with furniture and checkered floor prevents an empty dark ground.",
+    "F": "The dropped paper on the floor looks like simple clutter until explained as the confession leading to execution.",
+    "T": "Immense threat of filicide and execution hangs in total stillness without any violence shown.",
+    "Y": "Asks the viewer if they could choose between protecting their country's future or saving their child.",
+    "S": "Grounded in documented history of Peter I interrogating Tsarevich Alexei for high treason in 1718."
+   },
+   "character": {
+    "figure": "Peter the Great and his son",
+    "threat": "a father deciding to execute his son",
+    "feeling": "cold dread",
+    "theme": "last moment"
+   },
+   "angle": {
+    "first_impression": "A stern father scolding his standing son in a quiet office",
+    "detail": "the papers dropped on the floor",
+    "readings": [
+     "a father searching for remorse to save his child",
+     "an emperor who has already passed a death sentence"
+    ],
+    "question": "So would you sentence your own child to death to protect your kingdom?",
+    "punch": [
+     "VERDICT",
+     "TREASON",
+     "EMPIRE"
+    ],
+    "form": "scene"
    },
    "disqualified": null
   },
@@ -673,6 +1065,41 @@
     "threat": "Total existential isolation",
     "feeling": "Empty, lonely",
     "theme": "other"
+   },
+   "angle": null,
+   "disqualified": null
+  },
+  {
+   "id": "chatterton-wallis",
+   "kind": "artwork",
+   "wikipedia": "The Death of Chatterton",
+   "person": "Henry Wallis",
+   "why": "A young man lies motionless in the morning light looking asleep, until the eye catches the small shattered vial of poison on the floor.",
+   "wikidata": "Q18686015",
+   "picture": "Henry_Wallis_-_Chatterton_-_Google_Art_Project.jpg",
+   "picture_px": 2256,
+   "score": 4,
+   "scores": {
+    "G": 0,
+    "D": 2,
+    "F": 1,
+    "T": 0,
+    "Y": 0,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The figure's eyes are closed in death; no eyes meet the viewer.",
+    "D": "A single prominent figure sprawled on a bed against a dark garret room, easily readable on a phone screen.",
+    "F": "He looks asleep at first glance, but small details like the tiny poison vial on the floor and torn manuscripts require explanation to clarify he is dead.",
+    "T": "Shows a corpse directly after suicide, which places violence/death directly in view (scoring 0 per criteria).",
+    "Y": "The composition positions the viewer strictly as an outside observer of a tragic scene.",
+    "S": "Tells the real, documented story of 17-year-old poet Thomas Chatterton, complete with historical records and Marlowe's Faustus inscription."
+   },
+   "character": {
+    "figure": "dead young poet",
+    "threat": "tragic suicide by arsenic poisoning",
+    "feeling": "gloom",
+    "theme": "last moment"
    },
    "angle": null,
    "disqualified": null
@@ -945,6 +1372,41 @@
    },
    "angle": null,
    "disqualified": "The painting shows a corpse being dissected, which falls under the prohibition against gore and graphic depictions of bodies."
+  },
+  {
+   "id": "the-caress-khnopff",
+   "kind": "artwork",
+   "wikipedia": "Fernand Khnopff",
+   "person": "Fernand Khnopff",
+   "why": "A serene youth is caressed by a cheetah-bodied Sphinx whose gaze at the viewer is ambiguous between loving intimacy and predatory trap.",
+   "wikidata": "Q559559",
+   "picture": "Fernand_Khnopff.jpg",
+   "picture_px": 3421,
+   "score": 0,
+   "scores": {
+    "G": 0,
+    "D": 0,
+    "F": 0,
+    "T": 0,
+    "Y": 0,
+    "S": 0
+   },
+   "reasons": {
+    "G": "The subject gazes off to the side rather than looking at the viewer.",
+    "D": "It shows one figure, but as a plain historical studio photograph rather than a dark visual scene.",
+    "F": "There is no visual anomaly or hidden detail that flips the initial impression.",
+    "T": "No threat, uncanny element, or tension is present in this formal portrait.",
+    "Y": "The pose keeps the viewer entirely outside as an observer of a standard portrait.",
+    "S": "The accompanying text consists of general biographical details rather than a dark story with a visual payoff."
+   },
+   "character": {
+    "figure": "Fernand Khnopff",
+    "threat": "none present in image",
+    "feeling": "neutral portrait",
+    "theme": "other"
+   },
+   "angle": null,
+   "disqualified": "The image is a studio photograph of a person."
   }
  ]
 }
