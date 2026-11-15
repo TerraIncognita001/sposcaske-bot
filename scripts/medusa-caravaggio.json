@@ -1,0 +1,492 @@
+{
+ "id": "medusa-caravaggio",
+ "kind": "artwork",
+ "form": "emotion",
+ "hook_frame": "What if ___?",
+ "closer": "either_or",
+ "detail": "eyes",
+ "home": "medusa_face",
+ "subject": {
+  "title": "Medusa",
+  "creator": "Caravaggio",
+  "year": 1597,
+  "wikidata": "Q2293905"
+ },
+ "lead": {
+  "commons": "Caravaggio_-_Medusa_-_Google_Art_Project.jpg",
+  "width_px": 3840,
+  "aspect": 0.9756,
+  "px": 3369,
+  "license": "Public domain",
+  "credit": "Caravaggio - Medusa - Google Art Project — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Michelangelo Merisi da Caravaggio",
+  "credit": "Portrait of Michelangelo Merisi da Caravaggio — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.005,
+    0.03,
+    0.995,
+    0.975
+   ],
+   "words": [
+    "shield"
+   ]
+  },
+  {
+   "name": "head_snakes",
+   "box": [
+    0.16,
+    0.06,
+    0.85,
+    0.85
+   ],
+   "words": [
+    "snakes",
+    "hair"
+   ]
+  },
+  {
+   "name": "snakes_top",
+   "box": [
+    0.19,
+    0.06,
+    0.85,
+    0.36
+   ],
+   "words": [
+    "snakes"
+   ]
+  },
+  {
+   "name": "medusa_face",
+   "box": [
+    0.3,
+    0.27,
+    0.67,
+    0.71
+   ],
+   "words": [
+    "medusa",
+    "face",
+    "head",
+    "caravaggio",
+    "boy",
+    "painter"
+   ]
+  },
+  {
+   "name": "eyes",
+   "box": [
+    0.44,
+    0.39,
+    0.625,
+    0.465
+   ],
+   "words": [
+    "eyes",
+    "eye"
+   ]
+  },
+  {
+   "name": "brow",
+   "box": [
+    0.415,
+    0.36,
+    0.53,
+    0.405
+   ],
+   "words": [
+    "brow",
+    "frown"
+   ]
+  },
+  {
+   "name": "mouth",
+   "box": [
+    0.46,
+    0.53,
+    0.56,
+    0.62
+   ],
+   "words": [
+    "mouth"
+   ]
+  },
+  {
+   "name": "blood",
+   "box": [
+    0.335,
+    0.58,
+    0.475,
+    0.86
+   ],
+   "words": [
+    "blood",
+    "neck"
+   ]
+  }
+ ],
+ "punch": "TERROR",
+ "sentences": [
+  {
+   "slot": "E1",
+   "text": "What if this is not a monster's scream at all, but the purest terror you have ever seen?",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "scream",
+     "to": "medusa_face"
+    }
+   ]
+  },
+  {
+   "slot": "E2",
+   "text": "This is Medusa, painted by Michelangelo Merisi da Caravaggio in 1597.",
+   "kind": "FACT",
+   "source": 22
+  },
+  {
+   "slot": "E3",
+   "text": "And this isn't a cursed monster.",
+   "kind": "READING",
+   "source": 25,
+   "show": [
+    {
+     "on": "monster",
+     "to": "head_snakes"
+    }
+   ]
+  },
+  {
+   "slot": "E3",
+   "text": "It's a boy with snakes for hair.",
+   "kind": "LOOK",
+   "source": 26,
+   "show": [
+    {
+     "on": "snakes",
+     "to": "snakes_top"
+    }
+   ]
+  },
+  {
+   "slot": "E4",
+   "text": "Pale, screaming, almost alive.",
+   "kind": "READING",
+   "source": 29
+  },
+  {
+   "slot": "E5",
+   "text": "But look at his eyes.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "E6",
+   "text": "He's screaming.",
+   "kind": "LOOK",
+   "source": 30
+  },
+  {
+   "slot": "E6",
+   "text": "There's a white glint in each wide open eye.",
+   "kind": "LOOK",
+   "source": 30,
+   "show": [
+    {
+     "on": "glint",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "E7",
+   "text": "And yet it doesn't feel like rage to you.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E8",
+   "text": "Look into his eyes.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "E8",
+   "text": "There's terror there.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E9",
+   "text": "A sudden, helpless, conscious terror.",
+   "kind": "READING",
+   "source": 29
+  },
+  {
+   "slot": "E10",
+   "text": "As if he knows you are the last thing he sees.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E11",
+   "text": "According to the traditional story of Medusa, anyone who looked at her was turned to stone.",
+   "kind": "FACT",
+   "source": 26,
+   "show": [
+    {
+     "on": "Medusa",
+     "to": "medusa_face"
+    }
+   ]
+  },
+  {
+   "slot": "E12",
+   "text": "And Caravaggio seems to capture something strange.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E12",
+   "text": "Not the monster's death, but the second right after it.",
+   "kind": "READING",
+   "source": 29
+  },
+  {
+   "slot": "E12",
+   "text": "The moment when the head still understands what has happened.",
+   "kind": "READING",
+   "source": 29,
+   "show": [
+    {
+     "on": "head",
+     "to": "medusa_face"
+    }
+   ]
+  },
+  {
+   "slot": "E13",
+   "text": "Imagine giving a monster your own face.",
+   "kind": "READING",
+   "source": 28,
+   "show": [
+    {
+     "on": "face",
+     "to": "medusa_face"
+    }
+   ]
+  },
+  {
+   "slot": "E13",
+   "text": "Would you paint yourself as the hero?",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E13",
+   "text": "Would you leave yourself out of it?",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E13",
+   "text": "Or would you become the monster yourself?",
+   "kind": "READING",
+   "source": 28
+  },
+  {
+   "slot": "E14",
+   "text": "That's what makes this painting so hard to look at.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E15",
+   "text": "The face is still young, but his eyes no longer look innocent.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "E15",
+   "text": "His open mouth says one thing, his frown says another.",
+   "kind": "READING",
+   "source": 30,
+   "show": [
+    {
+     "on": "mouth",
+     "to": "mouth"
+    },
+    {
+     "on": "frown",
+     "to": "brow"
+    }
+   ]
+  },
+  {
+   "slot": "E16",
+   "text": "And perhaps that's the most frightening part.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E17",
+   "text": "Maybe terror does not begin with monsters.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E17",
+   "text": "Maybe it begins with a mirror, then becomes a mask, and eventually turns into terror.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E18",
+   "text": "So look at him one more time.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "him",
+     "to": "medusa_face"
+    }
+   ]
+  },
+  {
+   "slot": "E19",
+   "text": "Do you see a monster in its final second?",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E19",
+   "text": "Or a painter screaming at his own face?",
+   "kind": "READING",
+   "source": 28,
+   "show": [
+    {
+     "on": "painter",
+     "to": "medusa_face"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Caravaggio": "Kara-vah-jo",
+  "Merisi": "Meh-ree-zee",
+  "Medusa": "Meh-dyoo-sa"
+ },
+ "meta": {
+  "title": "Caravaggio painted his own face on Medusa",
+  "description": "Caravaggio painted Medusa on a round wooden shield around 1597; it hangs in the Uffizi in Florence. He gave the severed Gorgon's head his own face.",
+  "tags": [
+   "art history",
+   "caravaggio",
+   "medusa",
+   "uffizi",
+   "baroque",
+   "painting"
+  ],
+  "question": "A monster in its final second, or a painter screaming at himself?"
+ },
+ "sources": [
+  {
+   "claim": "Although the work is not signed or dated, it is often dated as 1597.",
+   "url": "https://en.wikipedia.org/wiki/Medusa_(Caravaggio)",
+   "note": "sentence E2"
+  },
+  {
+   "claim": "Medusa was once a human woman, but the goddess Athena cursed her to live as a monster after Poseidon raped her in one of Athena's temples.",
+   "url": "https://en.wikipedia.org/wiki/Medusa_(Caravaggio)",
+   "note": "sentence E3"
+  },
+  {
+   "claim": "Her hair was turned to snakes, and anybody who looked at her would be turned to stone.",
+   "url": "https://en.wikipedia.org/wiki/Medusa_(Caravaggio)",
+   "note": "sentence E3"
+  },
+  {
+   "claim": "Though the head is decapitated, it still appears conscious, with the painting capturing its final moments before death.",
+   "url": "https://en.wikipedia.org/wiki/Medusa_(Caravaggio)",
+   "note": "sentence E4"
+  },
+  {
+   "claim": "The face's eyes are widened, and its brows are creased; its mouth hangs open.",
+   "url": "https://en.wikipedia.org/wiki/Medusa_(Caravaggio)",
+   "note": "sentence E6"
+  },
+  {
+   "claim": "The face's eyes are widened, and its brows are creased; its mouth hangs open.",
+   "url": "https://en.wikipedia.org/wiki/Medusa_(Caravaggio)",
+   "note": "sentence E6"
+  },
+  {
+   "claim": "Though the head is decapitated, it still appears conscious, with the painting capturing its final moments before death.",
+   "url": "https://en.wikipedia.org/wiki/Medusa_(Caravaggio)",
+   "note": "sentence E9"
+  },
+  {
+   "claim": "Her hair was turned to snakes, and anybody who looked at her would be turned to stone.",
+   "url": "https://en.wikipedia.org/wiki/Medusa_(Caravaggio)",
+   "note": "sentence E11"
+  },
+  {
+   "claim": "Though the head is decapitated, it still appears conscious, with the painting capturing its final moments before death.",
+   "url": "https://en.wikipedia.org/wiki/Medusa_(Caravaggio)",
+   "note": "sentence E12"
+  },
+  {
+   "claim": "Though the head is decapitated, it still appears conscious, with the painting capturing its final moments before death.",
+   "url": "https://en.wikipedia.org/wiki/Medusa_(Caravaggio)",
+   "note": "sentence E12"
+  },
+  {
+   "claim": "Caravaggio replaced Medusa's face with his own, allowing him to position himself as being immune to her fatal gaze.",
+   "url": "https://en.wikipedia.org/wiki/Medusa_(Caravaggio)",
+   "note": "sentence E13"
+  },
+  {
+   "claim": "Caravaggio replaced Medusa's face with his own, allowing him to position himself as being immune to her fatal gaze.",
+   "url": "https://en.wikipedia.org/wiki/Medusa_(Caravaggio)",
+   "note": "sentence E13"
+  },
+  {
+   "claim": "The face's eyes are widened, and its brows are creased; its mouth hangs open.",
+   "url": "https://en.wikipedia.org/wiki/Medusa_(Caravaggio)",
+   "note": "sentence E15"
+  },
+  {
+   "claim": "Caravaggio replaced Medusa's face with his own, allowing him to position himself as being immune to her fatal gaze.",
+   "url": "https://en.wikipedia.org/wiki/Medusa_(Caravaggio)",
+   "note": "sentence E19"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-15"
+}

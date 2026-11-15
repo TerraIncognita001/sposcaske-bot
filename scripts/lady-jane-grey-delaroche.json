@@ -1,9 +1,11 @@
 {
  "id": "lady-jane-grey-delaroche",
  "kind": "artwork",
- "hook_frame": "This ___ is about to ___, and ___.",
+ "form": "riddle",
+ "hook_frame": "What if ___?",
  "closer": "open",
  "detail": "hand",
+ "home": null,
  "subject": {
   "title": "The Execution of Lady Jane Grey",
   "creator": "Paul Delaroche",
@@ -13,6 +15,8 @@
  "lead": {
   "commons": "PAUL_DELAROCHE_-_Ejecución_de_Lady_Jane_Grey_(National_Gallery_de_Londres,_1834).jpg",
   "width_px": 3840,
+  "aspect": 1.197,
+  "px": 3936,
   "license": "Public domain",
   "credit": "PAUL DELAROCHE - Ejecución de Lady Jane Grey (National Gallery de Londres, 1834) — Wikimedia Commons"
  },
@@ -219,25 +223,21 @@
    ]
   }
  ],
- "punch": "BLOCK",
+ "punch": "BLIND",
  "sentences": [
   {
    "slot": "S1",
-   "text": "This woman is about to die, and the cruelest detail is right beside the block.",
+   "text": "What if this young queen has to find her own death completely blind?",
    "kind": "HOOK",
    "source": null,
    "show": [
     {
-     "on": "woman",
+     "on": "queen",
      "to": "jane_top"
     },
     {
-     "on": "die",
-     "to": "executioner"
-    },
-    {
-     "on": "block",
-     "to": "block"
+     "on": "blind",
+     "to": "blindfold"
     }
    ]
   },
@@ -249,29 +249,25 @@
   },
   {
    "slot": "S3",
-   "text": "Jane kneels in white before the block, while two ladies weep and the executioner waits with his axe.",
+   "text": "Jane kneels in white on the straw, an old lieutenant at her side and the executioner waiting.",
    "kind": "LOOK",
-   "source": 22,
+   "source": 17,
    "show": [
     {
      "on": "Jane",
      "to": "jane"
     },
     {
-     "on": "block",
-     "to": "block"
+     "on": "straw",
+     "to": "straw"
     },
     {
-     "on": "ladies",
-     "to": "ladies"
+     "on": "lieutenant",
+     "to": "chandos"
     },
     {
      "on": "executioner",
      "to": "executioner"
-    },
-    {
-     "on": "axe",
-     "to": "axe"
     }
    ]
   },
@@ -289,12 +285,12 @@
   },
   {
    "slot": "S5",
-   "text": "Her hand gropes for the block.",
+   "text": "Her fingers reach for the block.",
    "kind": "LOOK",
    "source": 18,
    "show": [
     {
-     "on": "gropes",
+     "on": "fingers",
      "to": "hand"
     },
     {
@@ -305,10 +301,14 @@
   },
   {
    "slot": "S6",
-   "text": "Jane doesn't see the block.",
+   "text": "Jane can't see the block.",
    "kind": "LOOK",
    "source": 17,
    "show": [
+    {
+     "on": "Jane",
+     "to": "jane"
+    },
     {
      "on": "see",
      "to": "blindfold"
@@ -317,7 +317,7 @@
   },
   {
    "slot": "S6",
-   "text": "Jane doesn't find it.",
+   "text": "Jane can't touch it.",
    "kind": "LOOK",
    "source": 18,
    "show": [
@@ -329,53 +329,49 @@
   },
   {
    "slot": "S6",
-   "text": "Jane only reaches.",
+   "text": "Jane just keeps searching.",
    "kind": "LOOK",
    "source": 18,
    "show": [
     {
-     "on": "reaches",
+     "on": "searching",
      "to": "hand"
     }
    ]
   },
   {
    "slot": "S7",
-   "text": "According to the National Gallery, Jane had been proclaimed queen, then deposed only nine days later.",
+   "text": "According to the National Gallery, she was seventeen and had been queen for only nine days.",
    "kind": "FACT",
-   "source": 4,
+   "source": 12,
    "show": [
     {
-     "on": "Jane",
+     "on": "queen",
      "to": "jane_face"
     }
    ]
   },
   {
    "slot": "S8",
-   "text": "A queen should be guided to a throne.",
+   "text": "A crowned girl should never kneel like this.",
    "kind": "READING",
    "source": null,
    "show": [
     {
-     "on": "queen",
-     "to": "jane_top"
+     "on": "girl",
+     "to": "jane"
     }
    ]
   },
   {
    "slot": "S9",
-   "text": "But the Tower's lieutenant guided her to the block.",
+   "text": "But Queen Mary had her beheaded anyway.",
    "kind": "FACT",
-   "source": 19,
+   "source": 12,
    "show": [
     {
-     "on": "lieutenant",
-     "to": "chandos"
-    },
-    {
-     "on": "block",
-     "to": "hand_block"
+     "on": "beheaded",
+     "to": "executioner"
     }
    ]
   },
@@ -387,35 +383,39 @@
   },
   {
    "slot": "S11",
-   "text": "Everyone around her can see the block, yet only Jane must find it.",
+   "text": "Every eye in the room sees the block, yet Jane must search.",
    "kind": "READING",
    "source": null,
    "show": [
     {
-     "on": "Everyone",
+     "on": "block",
      "to": "main_action"
     },
     {
      "on": "Jane",
+     "to": "jane"
+    },
+    {
+     "on": "search",
      "to": "hand"
     }
    ]
   },
   {
    "slot": "S12",
-   "text": "Almost as if her death depends on her own hand.",
+   "text": "Almost as if she is made to choose it herself.",
    "kind": "READING",
    "source": null,
    "show": [
     {
-     "on": "hand",
-     "to": "hand"
+     "on": "choose",
+     "to": "hand_block"
     }
    ]
   },
   {
    "slot": "S13",
-   "text": "So what is her hand really searching for?",
+   "text": "So what is that hand really reaching for?",
    "kind": "READING",
    "source": null,
    "show": [
@@ -430,17 +430,17 @@
   "Delaroche": "Della-rosh"
  },
  "meta": {
-  "title": "The queen who had to find the block herself",
-  "description": "The Execution of Lady Jane Grey was painted by Paul Delaroche in 1833 and hangs in the National Gallery in London. It shows the moment before the execution of Jane, who had been queen for only nine days.",
+  "title": "The blindfolded queen searching for the block",
+  "description": "The Execution of Lady Jane Grey was painted by Paul Delaroche in 1833 and hangs in the National Gallery in London. Jane was seventeen and had been queen for nine days.",
   "tags": [
    "art history",
    "delaroche",
    "lady jane grey",
    "execution",
-   "national gallery",
+   "tudor",
    "painting"
   ],
-  "question": "What is her hand really searching for?"
+  "question": "What is that hand really reaching for?"
  },
  "sources": [
   {
@@ -449,7 +449,7 @@
    "note": "sentence S2"
   },
   {
-   "claim": "Two ladies in waiting are depicted in the painting, showing their grief at the event which is about to take place.",
+   "claim": "The painting depicts the moment that Jane, blindfolded, is being assisted to lay her head upon the block for the executioner.",
    "url": "https://en.wikipedia.org/wiki/The_Execution_of_Lady_Jane_Grey",
    "note": "sentence S3"
   },
@@ -474,15 +474,15 @@
    "note": "sentence S6"
   },
   {
-   "claim": "The painting interprets the moments preceding the death of Lady Jane Grey, who on 10 July 1553 had been proclaimed Queen of England, only to be deposed nine days later and executed on 12 February 1554",
+   "claim": "On Friday 12 February, Mary had Jane, then aged 17, and her husband beheaded.",
    "url": "https://en.wikipedia.org/wiki/The_Execution_of_Lady_Jane_Grey",
    "note": "sentence S7"
   },
   {
-   "claim": "She is being assisted by a man who is identified as John Brydges, 1st Baron Chandos.",
+   "claim": "On Friday 12 February, Mary had Jane, then aged 17, and her husband beheaded.",
    "url": "https://en.wikipedia.org/wiki/The_Execution_of_Lady_Jane_Grey",
    "note": "sentence S9"
   }
  ],
- "written_by": "Claude (night writer), 2026-11-14"
+ "written_by": "Claude (night writer), 2026-11-15"
 }
