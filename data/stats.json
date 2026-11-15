@@ -16,9 +16,9 @@
    },
    "hook": "This man is about to be eaten alive, and somehow he is completely calm.",
    "views": 270,
-   "likes": 17,
+   "likes": 16,
    "comments": 2,
-   "score": 6.34
+   "score": 6.3
   },
   "vquovec65EM": {
    "story": "fallen-angel-cabanel",
@@ -47,10 +47,10 @@
     }
    },
    "hook": "What if the most beautiful angel ever painted is looking at you with pure hatred?",
-   "views": 28,
+   "views": 32,
    "likes": 1,
    "comments": 1,
-   "score": 3.48
+   "score": 3.61
   },
   "BHLGgjy0qs8": {
    "story": "self-portrait-with-death-playing-the-fiddle-bckl",
@@ -79,12 +79,44 @@
     }
    },
    "hook": "There's a terrifying detail on this violin, and it explains why the painter stopped to listen.",
-   "views": 101,
+   "views": 102,
    "likes": 9,
+   "comments": 1,
+   "score": 5.02
+  },
+  "lFKLVEK27GE": {
+   "story": "nightmare-fuseli",
+   "slot": "E2026-11-15#1",
+   "title": "The Dark Secret Behind Fuseli's The Nightmare",
+   "publish_at": "2026-11-15T15:00:00Z",
+   "seconds": 60.4,
+   "f": {
+    "kind": "artwork",
+    "form": "riddle",
+    "hook_frame": "something_about",
+    "punch": "DREAD",
+    "closer": "open",
+    "theme": "watcher",
+    "century": "18th",
+    "length": "60-75 s",
+    "writer": "gemini",
+    "judge": 9,
+    "judge_scores": {
+     "G": 2,
+     "D": 1,
+     "F": 2,
+     "T": 2,
+     "Y": 1,
+     "S": 1
+    }
+   },
+   "hook": "Something about this peaceful sleeping woman feels completely wrong, filled with hidden dread.",
+   "views": 1,
+   "likes": 0,
    "comments": 0,
-   "score": 4.92
+   "score": 0.69
   }
  },
- "read_at": "2026-11-15T12:47:28Z",
+ "read_at": "2026-11-15T18:49:47Z",
  "_about": "written by stats_now.py (v1.09): one entry per public video; learn.py reads it. Do not edit by hand."
 }

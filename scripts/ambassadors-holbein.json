@@ -2,9 +2,9 @@
  "id": "ambassadors-holbein",
  "kind": "artwork",
  "form": "riddle",
- "hook_frame": "There's a reason ___.",
+ "hook_frame": "There's a ___ detail in this painting most people ___.",
  "closer": "either_or",
- "detail": "skull",
+ "detail": "shape",
  "home": null,
  "subject": {
   "title": "The Ambassadors",
@@ -25,7 +25,17 @@
   "credit": "Portrait of Hans Holbein the Younger — Wikimedia Commons",
   "license": "Public domain"
  },
- "evidence": [],
+ "evidence": [
+  {
+   "key": "holbein_port",
+   "query": "Hans Holbein the Younger self portrait",
+   "words": [
+    "hans holbein the younger"
+   ],
+   "license": "Public domain",
+   "credit": "Hans Holbein the Younger self portrait — Wikimedia Commons"
+  }
+ ],
  "look": [
   {
    "name": "main_action",
@@ -206,23 +216,13 @@
    ]
   }
  ],
- "punch": "HIDDEN",
+ "punch": "MISS",
  "sentences": [
   {
    "slot": "S1",
-   "text": "There's a disturbing reason these two proud men stand so close to something hidden.",
+   "text": "There's a disturbing detail in this diplomatic room most people miss.",
    "kind": "HOOK",
-   "source": null,
-   "show": [
-    {
-     "on": "men",
-     "to": "main_action"
-    },
-    {
-     "on": "hidden",
-     "to": "floor"
-    }
-   ]
+   "source": null
   },
   {
    "slot": "S2",
@@ -232,127 +232,57 @@
   },
   {
    "slot": "S3",
-   "text": "Two men stand beside a table full of globes, instruments, a lute and a book.",
+   "text": "Two rich ambassadors stand beside a table stacked with instruments, showing off their knowledge.",
    "kind": "LOOK",
-   "source": 6,
-   "show": [
-    {
-     "on": "men",
-     "to": "main_action"
-    },
-    {
-     "on": "table",
-     "to": "table"
-    },
-    {
-     "on": "instruments",
-     "to": "instruments"
-    },
-    {
-     "on": "lute",
-     "to": "lute"
-    },
-    {
-     "on": "book",
-     "to": "book"
-    }
-   ]
+   "source": 6
   },
   {
    "slot": "S4",
-   "text": "But look at the floor.",
-   "kind": "LOOK",
-   "source": null,
-   "show": [
-    {
-     "on": "floor",
-     "to": "floor"
-    }
-   ]
+   "text": "But look closer.",
+   "kind": "READING",
+   "source": null
   },
   {
    "slot": "S5",
-   "text": "A grey shape cuts across it.",
+   "text": "A strange grey shape floats across the floor.",
    "kind": "LOOK",
-   "source": null,
-   "show": [
-    {
-     "on": "shape",
-     "to": "skull"
-    }
-   ]
+   "source": 30
   },
   {
    "slot": "S6",
-   "text": "The men don't see it.",
-   "kind": "LOOK",
-   "source": null,
-   "show": [
-    {
-     "on": "men",
-     "to": "main_action"
-    }
-   ]
+   "text": "It doesn't fit.",
+   "kind": "READING",
+   "source": null
   },
   {
    "slot": "S6",
-   "text": "The men don't step around it.",
-   "kind": "LOOK",
-   "source": null,
-   "show": [
-    {
-     "on": "step",
-     "to": "skull"
-    }
-   ]
+   "text": "It doesn't belong.",
+   "kind": "READING",
+   "source": null
   },
   {
    "slot": "S6",
-   "text": "The men simply stand.",
-   "kind": "LOOK",
-   "source": null,
-   "show": [
-    {
-     "on": "men",
-     "to": "main_action"
-    }
-   ]
+   "text": "It simply floats.",
+   "kind": "READING",
+   "source": null
   },
   {
    "slot": "S7",
-   "text": "According to the National Gallery, Holbein painted the shape as a skull that only appears from the side.",
+   "text": "According to the National Gallery, Holbein painted a human skull skewed in extreme perspective.",
    "kind": "FACT",
-   "source": 31,
-   "show": [
-    {
-     "on": "skull",
-     "to": "skull"
-    }
-   ]
+   "source": 31
   },
   {
    "slot": "S8",
-   "text": "A portrait should flatter the men who paid.",
+   "text": "Viewers should see a normal diplomatic meeting.",
    "kind": "READING",
-   "source": null,
-   "show": [
-    {
-     "on": "men",
-     "to": "main_action"
-    }
-   ]
+   "source": null
   },
   {
    "slot": "S9",
-   "text": "But Holbein put death at their feet instead.",
-   "kind": "FACT",
-   "source": 11,
-   "show": [
-    {
-     "on": "death",
-     "to": "skull"
-    }
-   ]
+   "text": "But a sinister shadow of death corrupts the room.",
+   "kind": "READING",
+   "source": null
   },
   {
    "slot": "S10",
@@ -362,64 +292,39 @@
   },
   {
    "slot": "S11",
-   "text": "Death lies in plain sight, yet nobody standing in front notices it.",
+   "text": "They display worldly wealth, yet death haunts their feet.",
    "kind": "READING",
-   "source": 11,
-   "show": [
-    {
-     "on": "Death",
-     "to": "skull"
-    },
-    {
-     "on": "nobody",
-     "to": "main_action"
-    }
-   ]
+   "source": null
   },
   {
    "slot": "S12",
-   "text": "As if it waits for you to step aside.",
+   "text": "Almost as if all their knowledge cannot save them.",
    "kind": "READING",
-   "source": null,
-   "show": [
-    {
-     "on": "waits",
-     "to": "skull"
-    }
-   ]
+   "source": null
   },
   {
    "slot": "S13",
-   "text": "So is this a portrait of power, or of the skull below?",
+   "text": "So do you see a showcase of power, or the skull waiting below?",
    "kind": "READING",
-   "source": null,
-   "show": [
-    {
-     "on": "power",
-     "to": "main_action"
-    },
-    {
-     "on": "skull",
-     "to": "skull"
-    }
-   ]
+   "source": null
   }
  ],
  "pronounce": {
-  "Holbein": "Hole-bine"
+  "Holbein": "WHOLE-byne",
+  "Dinteville": "DAN-teh-veel",
+  "Selve": "SELL-vuh"
  },
  "meta": {
-  "title": "The skull hidden at the ambassadors' feet",
-  "description": "The Ambassadors was painted by Hans Holbein the Younger in 1533 and hangs in the National Gallery in London. The grey shape on the floor is a skull in anamorphic perspective that only resolves from the side.",
+  "title": "The Hidden Skull in Holbein's The Ambassadors",
+  "description": "Hans Holbein painted two wealthy diplomats in 1533 surrounded by scientific symbols. Hidden at their feet is an anamorphic skull representing mortality.",
   "tags": [
    "art history",
-   "holbein",
-   "the ambassadors",
+   "The Ambassadors",
+   "Hans Holbein",
    "anamorphosis",
-   "memento mori",
-   "painting"
+   "memento mori"
   ],
-  "question": "A portrait of power, or of the skull below?"
+  "question": "So do you see a showcase of power, or the skull waiting below?"
  },
  "sources": [
   {
@@ -433,20 +338,14 @@
    "note": "sentence S3"
   },
   {
+   "claim": "The work has been described as \"one of the most staggeringly impressive portraits in Renaissance art.\" Anamorphic skull The most notable and famous of Holbein's symbols in the work is the distorted sk",
+   "url": "https://en.wikipedia.org/wiki/The_Ambassadors_(Holbein)",
+   "note": "sentence S5"
+  },
+  {
    "claim": "The skull, rendered in anamorphic perspective, another invention of the Early Renaissance, is meant to be a visual puzzle as the viewer must approach the painting from high on the right side, or low o",
    "url": "https://en.wikipedia.org/wiki/The_Ambassadors_(Holbein)",
    "note": "sentence S7"
-  },
-  {
-   "claim": "Either way, death is both prominent and obscured until discovered.",
-   "url": "https://en.wikipedia.org/wiki/The_Ambassadors_(Holbein)",
-   "note": "sentence S9"
-  },
-  {
-   "claim": "Either way, death is both prominent and obscured until discovered.",
-   "url": "https://en.wikipedia.org/wiki/The_Ambassadors_(Holbein)",
-   "note": "sentence S11"
   }
- ],
- "written_by": "Claude (night writer), 2026-11-15"
+ ]
 }
