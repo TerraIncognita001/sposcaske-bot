@@ -74,6 +74,10 @@ Nov 13 with 'usage limit reached'): if it does not run, Gemini writes as before 
 - NO 10-day `draft` branch here (Andrii, Nov 14: 'не треба'): a bot change goes to `main` at once, as a version.
   Do not propose it again unless he asks.
 
+THE REPOSITORY IS PUBLIC since Nov 15 2026 (Andrii made it so: GitHub Actions minutes are then free and unlimited;
+ww2-bot stays private). Everything committed here, on any branch (`main`, `preview`, `logs`), is read by anyone:
+never commit a secret, a token, an e-mail, a private note about Andrii, or anything he would not post in public.
+
 Hard rules (short): free tools only · public-domain art only · every fact has a source in the story file · never
 copy the reference channel's wording or name · never publish, change the schedule, the voice or the look without
 Andrii's yes · never delete or re-upload a published video · `ww2-bot` is a read-only warehouse.
