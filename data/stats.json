@@ -15,10 +15,10 @@
     "writer": "hand"
    },
    "hook": "This man is about to be eaten alive, and somehow he is completely calm.",
-   "views": 270,
+   "views": 271,
    "likes": 16,
    "comments": 2,
-   "score": 6.3
+   "score": 6.31
   },
   "vquovec65EM": {
    "story": "fallen-angel-cabanel",
@@ -111,12 +111,12 @@
     }
    },
    "hook": "Something about this peaceful sleeping woman feels completely wrong, filled with hidden dread.",
-   "views": 1,
+   "views": 20,
    "likes": 0,
-   "comments": 0,
-   "score": 0.69
+   "comments": 1,
+   "score": 3.13
   }
  },
- "read_at": "2026-11-15T18:49:47Z",
+ "read_at": "2026-11-15T21:22:44Z",
  "_about": "written by stats_now.py (v1.09): one entry per public video; learn.py reads it. Do not edit by hand."
 }
