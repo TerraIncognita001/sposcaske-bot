@@ -1,0 +1,481 @@
+{
+ "id": "portrait-of-innocent-x-velzquez",
+ "kind": "artwork",
+ "form": "emotion",
+ "hook_frame": "There's something ___ about the way ___.",
+ "closer": "either_or",
+ "detail": "eyes",
+ "home": "pope_face",
+ "subject": {
+  "title": "Portrait of Innocent X",
+  "creator": "Diego Velázquez",
+  "year": 1650,
+  "wikidata": "Q1240092"
+ },
+ "lead": {
+  "commons": "Retrato_del_Papa_Inocencio_X._Roma,_by_Diego_Velázquez.jpg",
+  "width_px": 3840,
+  "aspect": 0.7837,
+  "px": 4545,
+  "license": "Public domain",
+  "credit": "Retrato del Papa Inocencio X. Roma, by Diego Velázquez — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Diego Velázquez",
+  "credit": "Portrait of Diego Velázquez — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.02,
+    0.08,
+    1.0,
+    0.75
+   ],
+   "words": [
+    "pope",
+    "throne"
+   ]
+  },
+  {
+   "name": "pope",
+   "box": [
+    0.05,
+    0.135,
+    0.96,
+    1.0
+   ],
+   "words": [
+    "pope",
+    "innocent"
+   ]
+  },
+  {
+   "name": "pope_top",
+   "box": [
+    0.05,
+    0.135,
+    0.8,
+    0.65
+   ],
+   "words": [
+    "pope",
+    "innocent"
+   ]
+  },
+  {
+   "name": "pope_face",
+   "box": [
+    0.31,
+    0.2,
+    0.51,
+    0.37
+   ],
+   "words": [
+    "pope",
+    "innocent",
+    "face"
+   ]
+  },
+  {
+   "name": "eyes",
+   "box": [
+    0.37,
+    0.235,
+    0.48,
+    0.275
+   ],
+   "words": [
+    "eyes"
+   ]
+  },
+  {
+   "name": "cap",
+   "box": [
+    0.32,
+    0.11,
+    0.5,
+    0.22
+   ],
+   "words": [
+    "cap"
+   ]
+  },
+  {
+   "name": "cape",
+   "box": [
+    0.05,
+    0.345,
+    0.79,
+    0.655
+   ],
+   "words": [
+    "cape",
+    "silk"
+   ]
+  },
+  {
+   "name": "throne",
+   "box": [
+    0.02,
+    0.085,
+    0.6,
+    1.0
+   ],
+   "words": [
+    "throne"
+   ]
+  },
+  {
+   "name": "hand_ring",
+   "box": [
+    0.32,
+    0.59,
+    0.47,
+    0.72
+   ],
+   "words": [
+    "hand",
+    "ring"
+   ]
+  },
+  {
+   "name": "paper",
+   "box": [
+    0.84,
+    0.58,
+    1.0,
+    0.71
+   ],
+   "words": [
+    "paper",
+    "hand"
+   ]
+  },
+  {
+   "name": "curtain",
+   "box": [
+    0.6,
+    0.0,
+    1.0,
+    0.55
+   ],
+   "words": [
+    "curtain"
+   ]
+  }
+ ],
+ "punch": "DISTRUST",
+ "sentences": [
+  {
+   "slot": "E1",
+   "text": "There's something colder than anger about the way this old man looks back at you.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "man",
+     "to": "pope_face"
+    }
+   ]
+  },
+  {
+   "slot": "E2",
+   "text": "This is Portrait of Innocent X, painted by Diego Velázquez in 1650.",
+   "kind": "FACT",
+   "source": 15
+  },
+  {
+   "slot": "E3",
+   "text": "And this isn't a saint with a halo.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "saint",
+     "to": "pope_top"
+    }
+   ]
+  },
+  {
+   "slot": "E3",
+   "text": "It's a man in red silk.",
+   "kind": "LOOK",
+   "source": 6,
+   "show": [
+    {
+     "on": "silk",
+     "to": "cape"
+    }
+   ]
+  },
+  {
+   "slot": "E4",
+   "text": "Old, powerful, almost tired.",
+   "kind": "READING",
+   "source": 5
+  },
+  {
+   "slot": "E5",
+   "text": "But look at his eyes.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "E6",
+   "text": "He's watching.",
+   "kind": "LOOK",
+   "source": null
+  },
+  {
+   "slot": "E6",
+   "text": "There's a slight squint in the eye on the left.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "squint",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "E7",
+   "text": "And yet it doesn't feel like holy calm.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E8",
+   "text": "Look into his eyes.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "E8",
+   "text": "There's suspicion there.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E9",
+   "text": "A cold, patient, measuring distrust.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E10",
+   "text": "As if he has already decided you are lying.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E11",
+   "text": "According to the traditional story of Innocent X, the pope mistrusted Velázquez's fame and asked for proof.",
+   "kind": "FACT",
+   "source": 19,
+   "show": [
+    {
+     "on": "pope",
+     "to": "pope_face"
+    }
+   ]
+  },
+  {
+   "slot": "E12",
+   "text": "And Velázquez seems to capture something few painters dared.",
+   "kind": "READING",
+   "source": 5
+  },
+  {
+   "slot": "E12",
+   "text": "Not a holy blessing, but a ruler sizing up a stranger.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E12",
+   "text": "The moment when he knows the painter has seen him too.",
+   "kind": "READING",
+   "source": 22
+  },
+  {
+   "slot": "E13",
+   "text": "Imagine seeing your own face painted this honestly.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "face",
+     "to": "pope_face"
+    }
+   ]
+  },
+  {
+   "slot": "E13",
+   "text": "Would you thank the painter?",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E13",
+   "text": "Would you hang it for all to see?",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E13",
+   "text": "Or would you hide it from the world?",
+   "kind": "READING",
+   "source": 10
+  },
+  {
+   "slot": "E14",
+   "text": "That's what makes this painting so unsettling.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E15",
+   "text": "The pope is still dignified, but his eyes no longer seem kind.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "E15",
+   "text": "His mouth says one thing, his eyes say another.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "E16",
+   "text": "And maybe that is the worst of it.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E17",
+   "text": "Maybe distrust does not begin with cruelty.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E17",
+   "text": "Maybe it begins with power, then becomes caution, and eventually turns into distrust.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E18",
+   "text": "So look at him one more time.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "him",
+     "to": "pope_face"
+    }
+   ]
+  },
+  {
+   "slot": "E19",
+   "text": "Do you see a holy father, tired and careful?",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E19",
+   "text": "Or a man who trusts nobody, not even you?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "you",
+     "to": "eyes"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Innocent X": "Innocent the Tenth",
+  "Velázquez": "Veh-lahs-kez"
+ },
+ "meta": {
+  "title": "The pope who called his own portrait too true",
+  "description": "Portrait of Innocent X was painted by Diego Velázquez around 1650 during his second trip to Italy. According to one story the pope first mistrusted the painter, and the portrait was long shown only to his family.",
+  "tags": [
+   "art history",
+   "velazquez",
+   "innocent x",
+   "pope",
+   "baroque",
+   "portrait"
+  ],
+  "question": "A holy father, or a man who trusts nobody?"
+ },
+ "sources": [
+  {
+   "claim": "The subject's vestments are of light linen, suggesting that the picture was probably painted during summer, most likely in 1650.",
+   "url": "https://en.wikipedia.org/wiki/Portrait_of_Innocent_X",
+   "note": "sentence E2"
+  },
+  {
+   "claim": "He is dressed in linen vestments, and the quality of the work is evident in the rich reds of his upper clothing, head-dress, and the hanging curtains.",
+   "url": "https://en.wikipedia.org/wiki/Portrait_of_Innocent_X",
+   "note": "sentence E3"
+  },
+  {
+   "claim": "The painting is noted for its realism as an unflinching portrait of a highly intelligent, shrewd, and aging man.",
+   "url": "https://en.wikipedia.org/wiki/Portrait_of_Innocent_X",
+   "note": "sentence E4"
+  },
+  {
+   "claim": "He offered to paint a portrait of the Pope, but Innocent X mistrusted Velázquez's fame, and asked for proof of Veláquez's skills.",
+   "url": "https://en.wikipedia.org/wiki/Portrait_of_Innocent_X",
+   "note": "sentence E11"
+  },
+  {
+   "claim": "The painting is noted for its realism as an unflinching portrait of a highly intelligent, shrewd, and aging man.",
+   "url": "https://en.wikipedia.org/wiki/Portrait_of_Innocent_X",
+   "note": "sentence E12"
+  },
+  {
+   "claim": "Apparently, when the Pope saw the finished portrait, he exclaimed: \"È troppo vero! È troppo vero!\" (\"It's too true!",
+   "url": "https://en.wikipedia.org/wiki/Portrait_of_Innocent_X",
+   "note": "sentence E12"
+  },
+  {
+   "claim": "The Pope, however, remained cautious, and the painting was initially displayed only to his immediate family, and was largely lost from public view through the 17th and 18th centuries.",
+   "url": "https://en.wikipedia.org/wiki/Portrait_of_Innocent_X",
+   "note": "sentence E13"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-15"
+}
