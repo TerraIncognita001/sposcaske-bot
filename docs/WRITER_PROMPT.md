@@ -3,7 +3,8 @@
 > **v1.02: the prompt the bot sends is `prompts/writer.txt`** (the same 13 slots, made universal from all five
 > references: S2 has two forms, artwork and story; optional X and M sentences; the pictures beside the lead one).
 > `prompts/look.txt` asks the model what is visible in the lead picture. Part C below is the first version, kept
-> for its reasoning; where the two differ, `prompts/writer.txt` wins. What the five references share, with
+> for its reasoning; where the two differ, `prompts/writer.txt` wins. **v1.12: the 13 slots are one form of four
+> (riddle); emotion, scene and legend are in `prompts/writer.txt` section 3 and `docs/FORMAT.md` section 19.** What the five references share, with
 > numbers: `docs/GENRE.md`. From sentences to camera: `director.py` (part D below is now done by code).
 
 Why this file exists: the first demo script was written "in the spirit" of the reference and came out built

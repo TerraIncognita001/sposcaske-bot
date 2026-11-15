@@ -21,7 +21,49 @@
   "wpm_overall": [
    140,
    160
-  ]
+  ],
+  "forms": {
+   "riddle": {
+    "words": [
+     105,
+     140
+    ],
+    "seconds": [
+     45,
+     65
+    ]
+   },
+   "emotion": {
+    "words": [
+     200,
+     250
+    ],
+    "seconds": [
+     95,
+     120
+    ]
+   },
+   "scene": {
+    "words": [
+     220,
+     320
+    ],
+    "seconds": [
+     105,
+     145
+    ]
+   },
+   "legend": {
+    "words": [
+     190,
+     240
+    ],
+    "seconds": [
+     95,
+     115
+    ]
+   }
+  }
  },
  "timing": {
   "lead_in_s": 1.65,
@@ -37,7 +79,19 @@
   "pause_after_hook_s": 0.65,
   "caption_delay_s": 0.1,
   "end_black_frames": 2,
-  "pause_sentence_inner_s": 0.32
+  "pause_sentence_inner_s": 0.32,
+  "meaning": {
+   "_measured": "v1.12, v4 The Fallen Angel (word clock): the long pauses stand at the turns of thought, not after every sentence. 1.28 s before 'Not the moment of the fall'; 1.0 before the third question 'Or would you hate'; 0.92 and then about 0.55 between the beats of 'A cold, silent, controlled anger'; 0.74 before 'According to'; 0.70 before 'Imagine'; 0.66 after 'But look at his face.'; 0.62 inside the pivot and inside the return",
+   "three_beat_first_s": 0.9,
+   "three_beat_next_s": 0.55,
+   "pivot_before_s": 1.25,
+   "pivot_inner_s": 0.6,
+   "third_question_before_s": 1.0,
+   "backstory_before_s": 0.75,
+   "imagine_before_s": 0.7,
+   "after_turn_s": 0.65,
+   "return_after_s": 0.6
+  }
  },
  "voice": {
   "target": {
@@ -148,7 +202,10 @@
      2.0
     ]
    },
-   "_note": "v1.02: 5.0 -> 3.6: at 5x a 3840 px source is enlarged 1.4 times and a small detail (hands) goes soft"
+   "_note": "v1.02: 5.0 -> 3.6: at 5x a 3840 px source is enlarged 1.4 times and a small detail (hands) goes soft",
+   "macro": 7.0,
+   "macro_min_stage_share": 0.4,
+   "_macro_note": "v1.12: the reference's close view of an eye is 6-7 times the whole picture (v4: the eye with its tear fills the frame for 6 s); its usual view of the face is about 3.6. Only the framings a story lists in 'macro' may go this far; a 3840 px source is then enlarged about 1.8 times, as soft as the reference's own"
   },
   "focus_margin": 0.12,
   "events_per_minute": [
@@ -190,6 +247,17 @@
    "box_share_of_frame_min": 0.12,
    "cut_lead_s": 0.1,
    "glide_lead_s": 0.45
+  },
+  "face_lock": {
+   "_measured": "v1.12, v4 The Fallen Angel, 57 frames two seconds apart: the face is in the frame in 51 (about 90 % of 114 s): frame 0 is the eye; the whole picture appears only as the ident card; two glances at the body (1.5 s each) while 'It's an angel. Beautiful' is spoken; 6 s of the tear alone; the rest drifts between three scales of the same face",
+   "scales": [
+    "home",
+    "mid",
+    "detail"
+   ],
+   "open_on": "mid",
+   "mid_share_of_detail": 0.35,
+   "_note": "v1.12, the first demo (run 43657185176): with the middle framing halfway between the face and the detail, the three scales read as two (3.6, 5.5, 6.0). The middle one is now 35 % of the way (about 4.5) and the detail may go to 7.0, as the reference's own tear does"
   }
  },
  "overlays": {

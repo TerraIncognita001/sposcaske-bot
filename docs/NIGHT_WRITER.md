@@ -36,8 +36,22 @@ Read every `FAILED EARLIER` line: it says which check refused an earlier script 
    Every crop must show the thing its words name, whole and tight. Fix the boxes until it does. The camera goes
    exactly where the boxes say.
 4. Write `work/night/<id>/answer.json`: the JSON of `prompts/writer.txt` section 7. Rules that matter most:
-   - ONE detail (the judge's, from ANGLE); the hook promises it and never says what it is; S1 ends on the punch word.
-   - Every fact comes from FACTS and carries its number in `"source"`; S7 names a source that FACTS names.
+   - **THE FORM FIRST (v1.12).** `prompts/writer.txt` section 3 has four constructions: riddle (the question in
+     the picture, about 55 s), emotion (a face and what it feels, about 110 s), scene (the eye walks from the
+     first thing to the second, about 120 s), legend (a named man's story). The brief says FORM, or "choose": then
+     choose by the picture. A face with a tear, a gaze or a wrong smile is an emotion, never a riddle. Write every
+     slot of that form, in order, with its code (E1 ... E19). `"form"` goes into the answer.
+   - **emotion and scene need `"home"`**: the LOOK name of the FACE (hair to chin, with what the face rests on),
+     and `"detail"`: the LOOK name of the small thing in it. Draw both boxes with care and look at their crops:
+     in the emotion form the camera lives on these two boxes for the whole video. The face box carries every word
+     that names the figure ("angel", "king", the name), so the camera can stay when the figure is named.
+     After the three beats of E4 name nothing outside the face.
+   - The forms are a construction, not a text: the joints are fixed ("But look at", "Imagine", "Would you",
+     "So look at him one more time"), every sentence between them is new. `scripts/demo-emotion-fallen-angel.json`
+     shows the emotion form filled in (a demo, never uploaded): read its SHAPE, never reuse its sentences.
+   - ONE detail (the judge's, from ANGLE); the hook promises it and never says what it is. riddle and legend: the
+     hook ends on the punch word. emotion: the punch word is the feeling the script arrives at (E9).
+   - Every fact comes from FACTS and carries its number in `"source"`; the backstory names a source FACTS names.
    - A hook frame, punch word and closer that are not in AVOID; follow LEARNED when it is there.
    - `"evidence"` only when you are sure such a public-domain picture exists on Commons under that search; leave
      it empty otherwise (a wrong picture is worse than none).

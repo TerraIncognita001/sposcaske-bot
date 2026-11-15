@@ -165,6 +165,8 @@ class Camera:
         self.full_w = min(img_w, img_h * self.a)
         self.card_w = max(img_w / C["ident_card"]["zoom"], img_h * self.a / 0.80)
         self.min_w = max(self.full_w / C["zoom"]["max"], sw / 2.0)
+        self.macro = set(story.get("macro", [])) if scene == "main" else set()     # v1.12: the framings that may go as close as the reference's eye (6x)
+        self.min_macro = max(self.full_w / C["zoom"].get("macro", C["zoom"]["max"]), sw * C["zoom"].get("macro_min_stage_share", 0.5))
 
     def rect(self, name):
         if name == "full":
@@ -173,7 +175,7 @@ class Camera:
             return (self.W / 2, self.H / 2, self.card_w)
         x0, y0, x1, y1 = self.focus[name]
         bw, bh, m = (x1 - x0) * self.W, (y1 - y0) * self.H, F["camera"]["focus_margin"]
-        w = min(max(max(bw, bh * self.a) * (1 + 2 * m), self.min_w), self.full_w)
+        w = min(max(max(bw, bh * self.a) * (1 + 2 * m), self.min_macro if name in self.macro else self.min_w), self.full_w)
         return self.clamp(((x0 + x1) / 2 * self.W, (y0 + y1) / 2 * self.H, w))
 
     def clamp(self, r):
@@ -215,7 +217,9 @@ class Camera:
         mv, e = self.moves(marks), C["glide"]["ease"]
         ease = lambda u: e["cosine"] * (1 - math.cos(math.pi * u)) / 2 + e["linear"] * u
         full = self.rect("full")
-        cur, base, t_arr, push, k, active, start, rects = full, full, marks[0][0], True, 0, None, None, []
+        op = self.story.get("open") if self.scene == "main" else None  # v1.12: the frame the video opens on (the reference's Fallen Angel opens on the eye, not on the picture)
+        first = self.rect(op) if op in self.focus else full
+        cur, base, t_arr, push, k, active, start, rects = first, first, marks[0][0], first is full, 0, None, None, []
         for i in range(n):
             t = i / FPS
             while k < len(mv) and mv[k]["t"] <= t:
@@ -248,7 +252,7 @@ class Camera:
                     rate, cap = ((sum(fv["pct_per_s"]) / 2, fv["to"] / fv["from"]) if push or base[2] >= self.full_w * 0.98
                                  else (C["hold"]["drift_pct_per_s"], 1.12))
                     z = min(cap, math.exp(rate / 100 * max(0.0, t - t_arr)))
-                    cur = self.clamp((base[0], base[1], max(self.min_w * 0.9, base[2] / z)))
+                    cur = self.clamp((base[0], base[1], max((self.min_macro if base[2] < self.min_w else self.min_w) * 0.9, base[2] / z)))    # v1.12: a macro hold stays macro
             rects.append(cur)
         return rects
 

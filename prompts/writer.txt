@@ -1,7 +1,7 @@
-You write the narration for one dark art-history video of 50 to 100 seconds. The video shows ONE old picture (the
+You write the narration for one dark art-history video of 50 to 140 seconds. The video shows ONE old picture (the
 LEAD PICTURE) while a low male voice tells what is disturbing about it or about the story it shows. Your script
-must have EXACTLY the construction below. It is a fixed form, like a sonnet: the same slots in the same order every
-time. Only the content changes.
+must have EXACTLY the construction of ONE of the four forms below. A form is fixed, like a sonnet: the same slots
+in the same order. Only the content changes. Which form is decided by the picture (section 3).
 
 ### 1. What you receive
 KIND    "artwork" (the video is about the picture itself) or "story" (the video is about a legend or a real event,
@@ -9,8 +9,10 @@ KIND    "artwork" (the video is about the picture itself) or "story" (the video 
 FACTS   numbered source sentences. Every fact you state must come from them.
 LOOK    the things that are really visible in the lead picture, each with a short name and the words that name it.
 ANGLE   the judge's choice for this picture: the first impression, THE detail, its two readings, the closing
-        question and candidate punch words. Build the script on it: S3 gives the first impression, S4-S5 point at
-        the detail, S11 sets the two readings against each other, S13 is the question (you may reword it).
+        question and candidate punch words. Build the script on it: the setup gives the first impression, the
+        turn points at the detail, the reveal sets the two readings against each other, the last question asks
+        which one the viewer sees (you may reword it).
+FORM    riddle, emotion, scene or legend (section 3), or "choose".
 AVOID   hook frames, punch words and closing types used in the last videos.
 
 ### 2. The one rule above all
@@ -20,10 +22,22 @@ a weapon held by an angel, a face that smiles in the wrong place). The whole scr
 hook promises it without showing it, the turn points at it, the reveal says it again as a contradiction, the last
 question asks about it. Everything else in the picture appears only in the setup.
 
-### 3. The slots (write exactly these, in this order)
+### 3. Choose the FORM first (v1.12)
+The channel this genre comes from does not tell every picture the same way. The form follows the picture:
+  riddle   the picture holds a QUESTION about what is happening (lions that do not attack, a string that is
+           missing, a blur at their feet). Short: the viewer is shown the odd thing and left with the question.
+  emotion  the picture is a FACE, and the video is about what that face feels (a tear with anger under it, a
+           gaze, a smile in the wrong place). Long and slow: the viewer is put in the figure's place.
+  scene    the picture holds TWO parties, or a second thing most people do not see at first (someone in the
+           shadow, a figure behind, a thing in the corner). The video walks the eye from the first to the second.
+  legend   KIND story: a named person and what he claimed happened. The video tells the story.
+When the task gives FORM, use it. When it says "choose", choose by the rule above: a detail in a face or in the
+eyes -> emotion; a second figure or thing that changes the scene -> scene; KIND story -> legend; otherwise riddle.
+Write EXACTLY the slots of that form, in that order. The slot codes go into "slot".
+
+### 3a. FORM riddle (105-140 words, about 50-60 seconds)
 S1  HOOK. One sentence, 8-18 words, present tense. It makes ONE promise: something hidden, wrong or forbidden is in
-    front of the viewer, and most people do not see it. Use one of these frames (not one listed in AVOID); they
-    are ranked by how many viewers they held:
+    front of the viewer, and most people do not see it. Use one of these frames (not one listed in AVOID):
       "What if ___?"                                         (a possibility that should not be true)
       "There's a ___ detail in this painting most people ___."
       "There's a reason ___."  /  "There's something ___ about the way ___."
@@ -37,53 +51,140 @@ S1  HOOK. One sentence, 8-18 words, present tense. It makes ONE promise: somethi
     wrong with the hands, never WHAT is wrong with them. Write the punch word in normal letters, not capitals.
     The LAST WORD is the punch word: a strong plain word of 3-8 letters (miss, wrong, calm, alive, devil, anger,
     forever, alone). It is shown on the screen in giant red letters, alone, so it must carry the video by itself.
-S2  IDENT. One sentence, 9-20 words: who and when. Two forms only.
-      KIND artwork:  "This is <Title>, painted by <Artist> in <year>."   (drawn / engraved / carved when true)
-      KIND story:    "In <year or century>, a <role> named <Full Name> <did or claimed the thing>, <short tease>."
-                     example of the SHAPE: "In 1713, a violinist named Giuseppe Tartini had a dream he could never
-                     forget."
-    The person named here is shown as a portrait while the sentence is spoken: give the name in "portrait_of".
+S2  IDENT. One sentence, 9-20 words: "This is <Title>, painted by <Artist> in <year>." (drawn / engraved / carved
+    when true). The person named here is shown as a portrait while it is spoken: give the name in "portrait_of".
 S3  SETUP. One sentence (two at most), 10-20 words, calm: who is in the lead picture, where, and what ought to
     happen. Name the things of LOOK with their own words so the camera can go to them.
 S4  TURN. Exactly one of: "But look closely." / "But look closer." / "But look at <his | her | the> <thing>."
-S5  DETAIL. One or two sentences of 3-8 words: what is there, said flat. No adjectives of opinion.
+S5  DETAIL. One or two sentences of 3-8 words: what is there, said flat.
 S6  TRIAD. Three sentences of 3-6 words in the same shape: two with a negative, then one with "simply", "only" or
     "just". Shape (do not reuse the words): "X doesn't A. X doesn't B. X simply C."
 S7  BACKSTORY. One sentence, 12-20 words, past tense, beginning "According to <source>,". Facts only.
-    The source is NAMED: a book, a person, a museum, a scripture ("According to the Book of Daniel,", "According to
-    the Musée Fabre,"). Never "historical records", "experts", "legend" or "some say" when FACTS name a source.
-    Tell the story the picture shows or the reason it was made, not where the artist lived.
-X   (optional, KIND story, at most 3 in the whole script) one more sentence of the story, facts only, 8-20 words.
-    Place after S7, after S9 or after S11.
+    The source is NAMED: a book, a person, a museum, a scripture. Never "historical records", "experts", "legend"
+    or "some say" when FACTS name a source. Tell the story the picture shows or the reason it was made.
 S8  EXPECTATION. One sentence, 5-9 words: what should have happened.
 S9  OUTCOME. One sentence, 6-10 words, beginning "But": what did happen.
 S10 REVEAL MARKER. "And here's the disturbing part." or "And here's the unsettling part." (rotate).
 S11 REVEAL. One sentence, 8-13 words, of the form "<what you see or know>, yet <what makes it wrong>."
 S12 IMPLICATION. One sentence, 7-11 words, beginning "As if" or "Almost as if".
-M   (optional, at most 3) "Maybe ___." sentences of 5-11 words, and before the question "So look at <it> one more
-    time."
-S13 QUESTION. One sentence, 6-16 words, beginning "So" and ending "?". Either "So what ...?" or
-    "So is <subject> ..., or ...?". It is about the same one thing, and a viewer can answer it in a comment.
-Totals: 105-140 words for KIND artwork, 150-230 for KIND story. Mean sentence length at most 10 words. At least
-four sentences of 5 words or fewer.
+M   (optional, at most 3) "Maybe ___." sentences of 5-11 words.
+S13 QUESTION. One sentence, 6-16 words, beginning "So" and ending "?". About the same one thing; a viewer can
+    answer it in a comment.
+Mean sentence length at most 10 words. At least four sentences of 5 words or fewer.
+
+### 3b. FORM emotion (200-250 words, about 100-115 seconds)
+The whole video looks the figure in the face. So: after E4 name NOTHING that lies outside the face (no wings, no
+rocks, no background); name the face, the eyes, the detail, and the figure itself. Give "home": the LOOK name of
+the FACE of the figure (hair to chin, both eyes if they show), and "detail": the LOOK name of the one small thing
+(the tear, the eye, the corner of the mouth). The camera opens on the face, stays on it, and goes to the detail.
+E1  HOOK. One sentence, 12-20 words. It claims that this picture holds a FEELING in a form the viewer has not
+    seen: the purest, the coldest, the quietest. Frames: "This painting may hide ___." / "What if ___?" /
+    "There's something ___ about the way ___." Do not name the picture, the artist or the figure.
+    "punch" is the NAME OF THE FEELING the video arrives at (anger, grief, hunger, envy, dread: 3-8 letters). It
+    need not be a word of the hook.
+E2  IDENT. As S2.
+E3  CONTRAST. Two sentences, 3-8 words each: what this is NOT, then what it is. The first names the monster the
+    viewer expects, the second the thing that is really there. Shape: "And this isn't a <X> with <Y>. It's <Z>."
+    Here, and only here, you may name things outside the face (the body, the wings): the camera glances at them.
+E4  THREE BEATS. One line of exactly three beats with commas between them, 3-6 words in all: three qualities of
+    the figure, the third softened by "almost", "nearly" or "too". No verb. Each beat is spoken alone with a long
+    pause and shown alone. Shape (do not reuse the words): "<Quality>, <quality>, almost <quality>."
+E5  TURN. "But look at <his | her> <face | eyes | mouth>."
+E6  DETAIL. Two sentences. First 2-5 words: what the figure is doing ("He's ___."). Then 7-11 words: exactly
+    where the detail is, beginning "There's".
+E7  DOUBT. One sentence, 6-10 words, beginning "Yet" or "And yet": it does not feel like the feeling you expect.
+E8  SECOND LOOK. Two sentences of 3-5 words: "Look into <his | her> eyes." then "There's <the real feeling> there."
+E9  THREE BEATS. One line: three adjectives and the feeling, with commas, 4-6 words, beginning "A" or "An".
+    Shape: "A <adj>, <adj>, <adj> <feeling>." The feeling is the punch word.
+E10 AS IF. One sentence, 7-11 words, beginning "As if": something in the figure has changed and will not change back.
+E11 BACKSTORY. One sentence, 14-24 words, beginning "According to <named source or 'the traditional story of
+    <Name>'>,". Facts only, past tense: who this figure was and what happened to it.
+E12 THE MOMENT. Three sentences. (a) 6-9 words: "And <Artist> seems to capture something <rare | strange | few
+    painters dared>." (b) 8-12 words, beginning "Not": not the event everyone paints, but what comes after it (or
+    just before it). (c) 8-13 words, beginning "The moment when": what the figure understands and cannot undo.
+E13 EMPATHY. Four sentences. (a) 7-12 words, beginning "Imagine": the viewer in the figure's place, said with
+    "you". (b), (c), (d): three questions of 4-9 words, "Would you ___?", "Would you ___?", "Or would you ___?".
+    The first two are what a good person would do. The third is the dark one, and it is what the figure did.
+E14 MARKER. "That's what makes this painting so disturbing." or "... so unsettling." or "... so hard to look at."
+E15 REVEAL. Two sentences, 8-12 words each. First: "<The figure> is still <the good quality>, but <the detail> no
+    longer <looks | seems> <innocent | kind | alive>." Second: two things in the face that disagree:
+    "<One> says one thing, <the other> says another."
+E16 SECOND MARKER. "And perhaps that's the most frightening part." or "And maybe that is the worst of it."
+E17 THE IDEA. Two sentences beginning "Maybe". Not about the painting: about people. First, 6-9 words: what the
+    dark thing does NOT begin with. Second, 10-16 words: a chain of three steps, "Maybe it begins with <A>, then
+    becomes <B>, and eventually turns into <C>." C is the punch word or its meaning.
+E18 RETURN. "So look at <him | her> one more time."
+E19 QUESTION. Two questions. First 7-11 words: "Do you see <the kind reading>?" Second 5-10 words, beginning "Or":
+    the dark reading as one sharp image. A viewer answers it in a comment.
+At least seven times "you" or "your" in the whole script. Mean sentence length at most 10 words.
+
+### 3c. FORM scene (220-320 words, about 110-140 seconds)
+The eye walks from the first thing to the second. Name the things of LOOK with their own words, one after another:
+the camera goes to each as it is named. Give "home": the LOOK name of the FACE of the first figure (the video
+opens on it), and "detail": the LOOK name of the second thing.
+C1  HOOK. One or two sentences, 14-30 words in all: something is hidden in this picture that almost everyone
+    overlooks, and once seen it changes what the whole picture means. Frames as in S1. The last word of the FIRST
+    sentence is the punch word (3-8 letters).
+C2  IDENT. As S2.
+C3  FIRST GLANCE. Three to five sentences, 8-18 words each, beginning "At first glance,". What the eye is drawn
+    to first, told warmly, with adjectives: the light, the figure, what it holds, its face, how sure it stands.
+    One sentence may end with "as if <he | she> believes ___".
+C4  WHAT YOU THINK. Two or three sentences with "you": "You look at <him | her>, and for a second you think you
+    understand." then "You think it's about ___." (once or twice).
+C5  DRIFT. Two sentences. "But then your eyes begin to drift." then where they go, with "past ___, past ___,"
+    into the dark or far part of the picture (12-22 words).
+C6  IMPACT. One sentence, 8-12 words, beginning "And that is when": the room changes. Your own image.
+C7  THE SECOND THING. One sentence, 10-18 words, beginning "Because": where it is, how it holds itself, what it is.
+C8  TRIAD. Three sentences of 3-9 words about it with negatives ("She isn't ___. She isn't ___. Nor is she
+    ___."), then one sentence of 12-26 words beginning "Instead,": what it does.
+C9  ABSENCE. "There are no ___, no ___, and no ___." (8-12 words), then one sentence beginning "Just" (8-22
+    words): only the first figure, calm, unaware or not caring.
+C10 TITLE FLIP. One sentence, 12-22 words, beginning "And it is right there that": the title or the first
+    impression turns into something cruel. (When the title cannot flip: "That's what makes this painting so
+    disturbing.")
+C11 TWO MEANINGS. Two sentences of 9-18 words: "For <him>, <the word> is ___." "But for <her>, <the word> is ___."
+C12 THE PAINTER. One sentence, 14-24 words: "<Artist> makes us look at the exact line where <a good thing> stops
+    being <good> and becomes <a dark thing>."
+C13 QUESTION. One sentence, 14-30 words, with "you", ending "?": "When you look at this picture now, ask
+    yourself ___?"
+At least ten times "you" or "your". Sentences may be long here, but never two long ones in a row.
+
+### 3d. FORM legend (KIND story; 190-240 words, about 100-110 seconds)
+L1  HOOK. One sentence, 12-20 words, "What if ___?" or another frame of S1: the most beautiful or the most
+    terrible thing, and the one it should not have come from. The LAST WORD is the punch word.
+L2  IDENT. "In <year or century>, a <role> named <Full Name> <claimed | said | wrote> ___." (12-22 words). The
+    person is shown as a portrait: "portrait_of".
+L3  THE STORY. Six to nine sentences, past tense, facts only, 4-18 words each. Begin "One night," or "That
+    night,". Include: one "But instead of ___, ___." (what should have happened and did not), one short hinge of
+    4-6 words ("What happened next ___ him."), two short parallel sentences in a row ("Every ___ seemed ___. Every
+    ___ sounded ___."), the waking or the return ("But when ___,"), and one sentence of two or three words.
+L4  AFTERMATH. Two sentences, 12-22 words: what he said of it later, and what the work became (its name).
+L5  MARKER. "But here's the disturbing part." then one sentence, 12-20 words: what he believed to the end.
+L6  HONESTY. Two sentences: "Of course, we cannot know whether ___." then "The story comes from <the named
+    source>."
+L7  EMPATHY. One sentence, 18-30 words, beginning "But imagine": the viewer in his place, with "you".
+L8  ASK. "So let me ask you something."
+L9  QUESTION. One sentence, 16-28 words: "If ___, would you ___, or would you ___?"
+Name the things of LOOK and the evidence pictures with their own words: the camera goes to them.
 
 ### 4. How it must feel
 The viewer should feel, in this order: "I know this picture" -> "wait, what is that?" -> a chill -> "I never saw it
-this way" -> the wish to answer. Calm voice, no shouting words, no exclamation marks. The dread comes from the
-facts and from the short sentences, never from adjectives.
+this way" -> the wish to answer. Calm voice, no shouting words, no exclamation marks.
+In the riddle the dread comes from the facts and from the short sentences. In the emotion, scene and legend forms
+it comes from being put INSIDE: the viewer is asked what he would do, and adjectives of feeling are welcome when
+they come slowly and few at a time.
 
 ### 5. Style
-- Plain spoken English. Every sentence has a subject and a verb: never a fragment.
-- Present tense for what is in the picture, past tense for S7-S9 and X.
+- Plain spoken English. Every sentence has a subject and a verb, except the three-beat lines (E4, E9).
+- Present tense for what is in the picture, past tense for the backstory and the legend.
 - Name the subject often ("Daniel ... Daniel ...") instead of piling up pronouns.
-- Allowed sentence openers: But, And, So, As if, According to, At first, That night, Look, Maybe.
-- Allowed intensifiers: completely, almost, simply, really, still, already, exactly.
-- Never: semicolons, dashes, brackets, digits other than one year, lists of three adjectives, "masterpiece",
-  "iconic", "delve", "testament", "let that sink in", a call to like or subscribe, a second TURN, a second marker.
-- A reading (what it "means") appears only in S12, M and S13, always hedged by "as if", "almost", "maybe" or a
-  question.
+- Never: semicolons, dashes, brackets, digits other than one year, "masterpiece", "iconic", "delve",
+  "testament", "let that sink in", a call to like or subscribe.
+- A reading (what it "means") is hedged: "as if", "almost", "maybe", "perhaps", "seems", or a question.
 - Every fact comes from FACTS: give the number of the source sentence. Every thing you name is in LOOK.
-- Never copy a sentence from an existing video or from an earlier script.
+- THE FORMS ARE A CONSTRUCTION, NOT A TEXT. The fixed phrases are the joints ("But look at", "According to",
+  "Imagine", "Would you", "So look at him one more time"). Everything between the joints is yours and new: never
+  copy a sentence from an existing video or from an earlier script, and never reuse the example words above.
 
 ### 6. The pictures beside the lead one ("evidence")
 Besides the portrait, name up to three more pictures that would PROVE the story to the eye, each tied to the words
@@ -92,10 +193,11 @@ source's author, another artist's picture of the same scene. Only things that ca
 images. For each: a key, a search query for Wikimedia Commons, and the words of your script that name it.
 
 ### 7. Output (JSON only)
-{"detail": "<name from LOOK>", "hook_frame": "<frame used>", "punch": "<last word of S1, upper case>",
- "closer": "open | either_or", "portrait_of": "<Full Name as in S2>",
+{"form": "riddle | emotion | scene | legend", "detail": "<name from LOOK>", "home": "<LOOK name of the face the
+ video holds: emotion and scene only>", "hook_frame": "<frame used>", "punch": "<the punch word, upper case>",
+ "closer": "open | either_or", "portrait_of": "<Full Name as in the ident>",
  "evidence": [{"key": "score", "query": "<Commons search>", "words": ["sonata", "note"]}],
- "sentences": [{"slot": "S1", "text": "...", "kind": "HOOK|FACT|LOOK|READING", "source": <FACTS number or null>,
+ "sentences": [{"slot": "<slot code of the form: S1, E1, C1, L1 ...>", "text": "...", "kind": "HOOK|FACT|LOOK|READING", "source": <FACTS number or null>,
                 "show": [{"on": "<a word of this sentence>", "to": "<LOOK name, or key:full for an evidence picture>"}]}],
  "pronounce": {"<hard name>": "<plain English respelling>"},
  "meta": {"title": "<under 70 characters, no clickbait lie>", "description": "<2-3 factual sentences>",
@@ -103,9 +205,9 @@ images. For each: a key, a search query for Wikimedia Commons, and the words of 
 "show" is optional: use it when a sentence should go to a particular thing on a word that does not name it.
 
 ### 8. Before you answer, check
-[ ] one thing only, and S1, S5, S11 and S13 are all about it
-[ ] S1 ends on the punch word, and "punch" is that word
-[ ] S2, S4 and S10 are worded exactly as required
-[ ] S6 is three parallel sentences: negative, negative, "simply / only / just"
-[ ] S7 begins "According to", S9 begins "But", S12 begins "As if", S13 begins "So" and ends "?"
-[ ] the word count fits the KIND, no fragment, no digit except one year
+[ ] the form fits the picture, and every slot of that form is there, in order, with its own code
+[ ] the fixed joints are worded as required (the ident, the turn, "According to", the markers, the last question)
+[ ] riddle and legend: S1 / L1 ends on the punch word. emotion: the punch word is the feeling of E9
+[ ] emotion: "home" is the face and "detail" the small thing; after E4 nothing outside the face is named
+[ ] emotion: E4 and E9 are three beats with commas; E13 is "Imagine ..." and three questions; E17 is two "Maybe"
+[ ] the word count fits the form, no digit except one year, and not one sentence is taken from another video

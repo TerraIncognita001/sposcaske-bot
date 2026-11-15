@@ -5,6 +5,11 @@ The Fallen Angel 6.6M, Hope 5.1M, Watchers in the Night 4.6M, Tartini's dream 1.
 all 58 videos of the reference channel, and the approved maket (demo 7 + the dry run). The reference is study
 material: its words, name and branding are never used.
 
+> **v1.12: the form follows the picture.** What is written below about one construction (the turn, the triad, the
+> marker) describes the RIDDLE, the shape of the shortest reference (Daniel). A face is told as an EMOTION, a
+> picture with a hidden second figure as a SCENE, a named man's story as a LEGEND: `docs/FORMAT.md` section 19,
+> `prompts/writer.txt` section 3.
+
 ## 1. The genre in plain words
 **Dark art-history lore in under two minutes.** One old picture is on screen. A calm low male voice says there is
 something in it that most people never notice, names the picture or the person, shows the scene as everyone sees it,
