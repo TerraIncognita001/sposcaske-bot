@@ -1,4 +1,4 @@
-# CLAUDE.md — sposcaske-bot (v1.12: picks topics, writes, shoots, uploads on a schedule, counts and learns; LIVE)
+# CLAUDE.md — sposcaske-bot (v1.13: picks topics, writes, shoots, uploads on a schedule, counts and learns; LIVE)
 
 Owner: Andrii (writes in Ukrainian; wants short, army-style answers: task → direct solution, the best free option,
 no fluff). Reply in Ukrainian.
@@ -29,9 +29,9 @@ Read before any work: `docs/BUILD_PROMPT.md` (the plan and the hard rules; §13 
 gated by `tools/script_check.py`; since v1.12 the 13 slots are the riddle, one form of four). Change a number only with a new measurement.
 
 ## Live
-**v1.12** on `main` (Nov 15 2026: four script forms by the picture, the face lock, pauses by meaning, macro framings, the frame geometry in the director; v1.11 = the writer assembles again (v1.10 had cut off meta), the portrait is the painting's creator from Wikidata, the night writer may make 7 dry runs a night; v1.10 = a fire every hour 12:05-23:05 UTC because GitHub drops scheduled runs, a manual run of main posts the comments and refreshes the statistics too, a Gemini script with a camera target outside LOOK is refused while written; v1.09 = statistics + learning + the night writer Claude as the main writer, Gemini the backup; v1.08 = videos are made a day ahead (27-30 h) and wait private with their publish minute; v1.07 = schedule_video; v1.06 = the first public video (Daniel, 02:00 London), manual publish minute; v1.05 = THE SCHEDULE IS ON since Andrii's yes; v1.04 = channel connected, upload + schedule built; v1.03 = topics
+**v1.13** on `main` (Nov 15 2026: the true peak is cut from mix.wav and measured again, no AAC over AAC; v1.12 = four script forms by the picture, the face lock, pauses by meaning, macro framings, the frame geometry in the director; v1.11 = the writer assembles again (v1.10 had cut off meta), the portrait is the painting's creator from Wikidata, the night writer may make 7 dry runs a night; v1.10 = a fire every hour 12:05-23:05 UTC because GitHub drops scheduled runs, a manual run of main posts the comments and refreshes the statistics too, a Gemini script with a camera target outside LOOK is refused while written; v1.09 = statistics + learning + the night writer Claude as the main writer, Gemini the backup; v1.08 = videos are made a day ahead (27-30 h) and wait private with their publish minute; v1.07 = schedule_video; v1.06 = the first public video (Daniel, 02:00 London), manual publish minute; v1.05 = THE SCHEDULE IS ON since Andrii's yes; v1.04 = channel connected, upload + schedule built; v1.03 = topics
 judged 1-10; v1.02 = writer + director + finder; v1.01 = the first dry run; v1.00 = the approved maket).
-Next: **v1.13**.
+Next: **v1.14**.
 
 ## Channel and schedule
 Channel: **sposcaske** (@sposcaske, id UCNamDfqgZhL8JOaAiCNY_ww). Schedule (the source of truth = `gate.py` SLOTS;

@@ -756,14 +756,21 @@ def render(story_path, out_path):
         ff.stdin.write(canvas.tobytes())
     ff.stdin.close()
     ff.wait()
-    err = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(out_path), "-af", "ebur128=peak=true", "-f", "null", "-"], capture_output=True, text=True).stderr
-    pk = [float(x) for x in re.findall(r"Peak:\s+(-?[\d.]+) dBFS", err)]
-    if pk and pk[-1] > -0.5:                                           # v1.02: AAC overshoots on the shutter click; pull the whole track under -0.7 dBFS
+    def true_peak():
+        err = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(out_path), "-af", "ebur128=peak=true", "-f", "null", "-"], capture_output=True, text=True).stderr
+        pk = [float(x) for x in re.findall(r"Peak:\s+(-?[\d.]+) dBFS", err)]
+        return pk[-1] if pk else None
+    pk, gain = true_peak(), 0.0
+    for _ in range(3):                                                 # v1.02: AAC overshoots on the shutter click; v1.13: the cut is re-encoded from mix.wav (one AAC generation,
+        if pk is None or pk <= -0.5:                                   # not AAC over AAC: Medusa, Nov 15, -0.3 dBFS lowered by 0.6 dB came back as +0.4) and measured again, up to 3 times
+            break
+        gain += -1.0 - pk
         tmp = Path(str(out_path) + ".tmp.mp4")
-        subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(out_path), "-c:v", "copy", "-af", f"volume={-0.9 - pk[-1]:.2f}dB", "-c:a", "aac", "-b:a", "192k",
-                        "-movflags", "+faststart", str(tmp)], check=True)
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(out_path), "-i", str(wav), "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-af", f"volume={gain:.2f}dB",
+                        "-c:a", "aac", "-b:a", "192k", "-ar", "44100", "-ac", "2", "-shortest", "-movflags", "+faststart", str(tmp)], check=True)
         tmp.replace(out_path)
-        print(f"true peak was {pk[-1]:.1f} dBFS: track lowered by {0.9 + pk[-1]:.1f} dB")
+        old_pk, pk = pk, true_peak()
+        print(f"true peak was {old_pk:.1f} dBFS: track lowered by {-gain:.1f} dB, now {pk:.1f} dBFS")
     (work / "timeline.json").write_text(json.dumps({"total": total, "stage": [sw, sh], "y_off": y_off, "events": ev, "focus_audit": audit, "lines": [
         {"t0": round(a_, 2), "t1": round(b_, 2), "beat": ln["beat"], "say": ln["say"]} for ln, (a_, b_) in zip(story["lines"], marks)]}, indent=1))
     words = sum(len(ln["say"].split()) for ln in story["lines"])

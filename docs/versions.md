@@ -5,6 +5,14 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.13 = THE PEAK IS FIXED FROM THE MIX, Andrii, Nov 15 2026 ('1. так'). Why: Medusa (emotion, 114 s) failed both
+  dry runs (43691576357, 43692182156) on true peak +0.4 dBFS, every other check passed. `render.py` lowered a track
+  peaking at -0.3 dBFS by 0.6 dB, but re-encoded the AAC of the finished file (AAC over AAC), and the second
+  generation overshot again. Now the cut is encoded once from `mix.wav` (the video stream copied), aimed at -1.0 dBFS
+  true peak, measured again after the encode and repeated up to 3 times while the peak is over -0.5 dBFS. A track
+  under -0.5 dBFS is not touched (no change for the videos that passed). The loudness check (-16 LUFS +-1) keeps its
+  room: Medusa's cut is about 0.7 dB.
+
 - v1.12 = THE FORM FOLLOWS THE PICTURE, THE FACE LOCK, PAUSES BY MEANING, Andrii, Nov 15 2026. He sent the
   reference's own Fallen Angel (114 s, 6.7M views) to be laid beside the bot's ('різниця величезна ... саме той
   розрив що розділяє між десятьма переглядами і мільйонами'), then, on the seven differences found: 'виправи всі
