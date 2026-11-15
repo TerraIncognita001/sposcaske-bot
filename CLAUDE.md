@@ -76,3 +76,7 @@ copy the reference channel's wording or name · never publish, change the schedu
 Andrii's yes · never delete or re-upload a published video · `ww2-bot` is a read-only warehouse.
 Nudity in classical painting is ALLOWED (Andrii, Nov 14, Р11: 'дозволяти'); do not build a filter against it. The
 prompts still cap a picture that is MOSTLY naked bodies (`prompts/judge.txt`, `scout.txt`): his word is needed to lift it.
+The skill `humanizer` (`.claude/skills/humanizer/`, Andrii, Nov 15: 'скачай humanizer') removes AI habits from prose.
+DO NOT run it over a video script on your own: it deletes 'not X but Y', three-beat lines and one-line closers, which
+are the joints of the reference's scripts (`docs/FORMAT.md`). Use it on titles, descriptions, comments, docs and
+replies, or where Andrii says so.
