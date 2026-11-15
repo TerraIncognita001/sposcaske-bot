@@ -20,7 +20,106 @@ def sentences(text):
     return [s.strip() for s in re.split(r"(?<=[.!?])\s+", text.strip()) if s.strip()]
 
 
-def check(sents, title="", punch=None):
+THREE = re.compile(r"^[^,.?!]+,[^,.?!]+,[^,.?!]+[.]$")                # "Beautiful, perfect, almost divine."
+IDENT_A = r"^This is .+, (painted|drawn|engraved|carved|sculpted|made|written|composed) by .+\.$"
+IDENT_B = r"^In (the |about |around )?[\w' -]{2,40}, an? .{3,60} (named|called) [A-Z].+\.$"
+YOU = re.compile(r"\byou(r|rs|rself)?\b", re.I)
+
+
+def check_form(sents, title, punch, form):
+    """v1.12: the three long constructions measured on the reference's own videos (docs/FORMAT.md section 18):
+    emotion = v4 The Fallen Angel (114 s, 239 words, 29 sentences), scene = v5 Hope (145 s), legend = v3 Tartini
+    (107 s). The joints are checked, never the words between them."""
+    wc = [len(s.split()) for s in sents]
+    words, n, out, text = sum(wc), len(sents), [], " ".join(sents)
+
+    def rule(name, ok, detail="", hard=True):
+        out.append((bool(ok), hard, name, detail))
+
+    find = lambda rx, lo=0, fl=0: next((i for i in range(lo, n) if re.search(rx, sents[i], fl)), None)
+    lim = {"emotion": (190, 260, 24, 36), "scene": (210, 330, 20, 38), "legend": (180, 250, 18, 32)}[form]
+    rule(f"length {lim[0]}-{lim[1]} words ({form})", lim[0] <= words <= lim[1], f"{words} words")
+    rule(f"{lim[2]}-{lim[3]} sentences", lim[2] <= n <= lim[3], f"{n} sentences")
+    rule("no sentence over 30 words", max(wc) <= 30, f"longest {max(wc)}")
+    rule("S1 hook uses a reference frame", any(re.search(rx, sents[0]) for rx in HOOK), sents[0])
+    if title:
+        rule("the hook does not name the painting", title.lower() not in sents[0].lower())
+    ii = next((i for i in (1, 2) if i < n and (re.match(IDENT_A, sents[i]) or re.match(IDENT_B, sents[i]))), None)
+    rule("IDENT in sentence 2 (or 3): 'This is <Title>, painted by <Artist> in <year>.' or 'In <time>, a <role> named <Name> ...'", ii is not None, sents[1])
+    rule("the last sentence is a question", sents[-1].endswith("?"), sents[-1])
+    you = len(YOU.findall(text))
+    q = [i for i, s in enumerate(sents) if s.endswith("?")]
+    if form == "emotion":
+        rule("mean sentence <= 10 words", words / n <= 10, f"{words / n:.1f}")
+        if punch:
+            rule("the punch word (the feeling) is said in the script", re.search(rf"\b{re.escape(punch.lower())}\b", text.lower()), punch)
+        it = find(TURN, 2)
+        rule("E5 TURN 'But look at <his | her> <face | eyes>.' in the first third", it is not None and it <= n // 3 + 1, sents[it] if it is not None else "missing")
+        three = [i for i, s in enumerate(sents) if THREE.match(s) and wc[i] <= 7]
+        rule("E4 and E9: two three-beat lines ('<A>, <B>, almost <C>.' / 'A <adj>, <adj>, <adj> <feeling>.')", len(three) >= 2, " / ".join(sents[i] for i in three) or "missing")
+        rule("E7 DOUBT begins 'Yet' or 'And yet'", find(r"^(And )?[Yy]et\b", 2) is not None)
+        rule("E8 SECOND LOOK: a second 'Look ...' sentence", len([s for s in sents if re.match(r"^(But )?[Ll]ook\b", s)]) >= 2)
+        rule("E10 a sentence beginning 'As if'", find(r"^(Almost )?[Aa]s if\b") is not None)
+        ib = find(r"^(And )?[Aa]ccording to\b", 2)
+        rule("E11 BACKSTORY opens with 'According to <source>, ...'", ib is not None)
+        ip = find(r"^Not\b.*\bbut\b", ib or 2)
+        rule("E12 THE MOMENT: 'Not <the event>, but what comes after.' then 'The moment when ...'", ip is not None and ip + 1 < n and re.match(r"^The moment (when|that)\b", sents[ip + 1]),
+             sents[ip] if ip is not None else "missing")
+        im = find(r"^(But )?[Ii]magine\b", ib or 2)
+        rule("E13 EMPATHY: 'Imagine ...' and then three questions in a row ('Would you ...? Would you ...? Or would you ...?')",
+             im is not None and all(im + k < n and sents[im + k].endswith("?") for k in (1, 2, 3)) and re.match(r"^Or would you\b", sents[im + 3] if im is not None and im + 3 < n else ""),
+             " ".join(sents[im:im + 4]) if im is not None else "missing")
+        mk = find(MARK, im or 2)
+        rule("E14 MARKER after the empathy (\"That's what makes this painting so disturbing.\")", mk is not None)
+        rule("E15 REVEAL: '... says one thing, ... says another.' within three sentences of the marker",
+             mk is not None and any(re.search(r"says one thing", sents[j]) for j in range(mk + 1, min(n, mk + 4))))
+        maybe = [i for i, s in enumerate(sents) if re.match(r"^(Maybe|Perhaps)\b", s)]
+        rule("E17 THE IDEA: two sentences beginning 'Maybe', the second a chain ('begins with ..., then ..., and ... turns into ...')",
+             len(maybe) >= 2 and any(sents[i].count(",") >= 2 for i in maybe), " / ".join(sents[i] for i in maybe) or "missing")
+        ir = find(r"^So look at (him|her|it|them|this \w+) (one more time|once more|again)\.$")
+        rule("E18 RETURN: 'So look at <him | her> one more time.'", ir is not None and ir >= n - 3)
+        rule("E19 QUESTION: the last two sentences are questions, the last begins 'Or'", n - 2 in q and re.match(r"^Or\b", sents[-1]), " ".join(sents[-2:]))
+        rule("'you' / 'your' at least six times (the reference: 7)", you >= 6, f"{you}")
+    elif form == "scene":
+        rule("C3 FIRST GLANCE begins 'At first glance,'", find(r"^At first glance,") is not None)
+        think = len(re.findall(r"\byou think\b", text, re.I))
+        rule("C4 WHAT YOU THINK: 'you think' at least twice", think >= 2, f"{think}")
+        idr = find(r"^But then your eyes\b")
+        rule("C5 DRIFT: 'But then your eyes begin to drift.' and a sentence with 'past ..., past ...'", idr is not None and any(len(re.findall(r"\bpast\b", sents[j])) >= 2 for j in range(idr, min(n, idr + 3))))
+        rule("C6 IMPACT begins 'And that is when'", find(r"^And that is when\b", idr or 0) is not None)
+        rule("C7 THE SECOND THING begins 'Because'", find(r"^Because\b", idr or 0) is not None)
+        tri = next((i for i in range(2, n - 2) if all(NEG.search(sents[j]) or re.match(r"^Nor\b", sents[j]) for j in (i, i + 1, i + 2)) and all(wc[j] <= 12 for j in (i, i + 1, i + 2))), None)
+        rule("C8 TRIAD: three sentences with negatives in a row, then 'Instead, ...'", tri is not None and find(r"^Instead,", tri) is not None)
+        ia = find(r"^There (are|is) no\b", tri or 0)
+        rule("C9 ABSENCE: 'There are no ..., no ..., and no ...' then 'Just ...'", ia is not None and ia + 1 < n and re.match(r"^Just\b", sents[ia + 1]))
+        rule("C10 TITLE FLIP 'And it is right there that ...' or a marker", find(r"^And it is right there that\b") is not None or find(MARK) is not None)
+        fo = find(r"^For (him|her|them|the \w+)\b")
+        rule("C11 TWO MEANINGS: 'For <him>, ...' then 'But for <her>, ...'", fo is not None and fo + 1 < n and re.match(r"^But for\b", sents[fo + 1]))
+        rule("C13 QUESTION has 'you'", bool(YOU.search(sents[-1])), sents[-1])
+        rule("'you' / 'your' at least ten times", you >= 10, f"{you}")
+        rule("never two sentences over 22 words in a row", not any(wc[i] > 22 and wc[i + 1] > 22 for i in range(n - 1)))
+    else:                                                               # legend
+        rule("L2 IDENT is the story form 'In <time>, a <role> named <Name> ...'", ii is not None and re.match(IDENT_B, sents[ii]), sents[1])
+        if punch:
+            rule("L1 ends on the punch word (the red word on screen)", re.sub(r"\W", "", sents[0].split()[-1]).lower() == punch.lower(), sents[0].split()[-1])
+        rule("L3 THE STORY begins 'One night,' or 'That night,'", find(r"^(One|That) night,") is not None)
+        rule("L3 has 'But instead of ..., ...'", find(r"^But instead of\b") is not None)
+        rule("L3 has a sentence of two or three words", any(w <= 3 for w in wc[2:]))
+        mk = find(MARK, 3)
+        rule("L5 MARKER 'But here's the disturbing part.'", mk is not None)
+        rule("L6 HONESTY: 'Of course, we cannot know whether ...' and 'The story comes from <source>.'", find(r"\bwe cannot know\b", mk or 0) is not None and find(r"^The story comes from\b", mk or 0) is not None)
+        rule("L7 EMPATHY begins 'But imagine' and says 'you'", (lambda i: i is not None and YOU.search(sents[i]))(find(r"^But imagine\b", mk or 0)))
+        rule("L8 ASK: 'So let me ask you something.'", n >= 2 and re.match(r"^So let me ask you something\.$", sents[-2]), sents[-2] if n >= 2 else "")
+        rule("L9 QUESTION: 'If ..., would you ..., or would you ...?'", re.match(r"^If\b", sents[-1]) and len(re.findall(r"\bwould you\b", sents[-1], re.I)) >= 2, sents[-1])
+    rule("no semicolons, dashes, brackets, exclamation marks", not re.search(r"[;—–()\[\]!]", text))
+    rule("no digits except one year", len(re.findall(r"\d+", text)) <= 1, " ".join(re.findall(r"\d+", text)), hard=False)
+    rule("banned words absent", not re.search(r"\b(masterpiece|iconic|delve|tapestry|testament|breathtaking|um|subscribe|like and)\b", text, re.I))
+    return out, words, n
+
+
+def check(sents, title="", punch=None, form="riddle"):
+    if form in ("emotion", "scene", "legend"):
+        return check_form(sents, title, punch, form)
     wc = [len(s.split()) for s in sents]
     words, n, out = sum(wc), len(sents), []
 
@@ -93,7 +192,8 @@ if __name__ == "__main__":
     else:
         st = json.load(open(a[0], encoding="utf-8"))
         text, title, punch = " ".join(l["say"] for l in st["lines"]), st["artwork"]["title"], st.get("hook_title")
-    res, words, n = check(sentences(text), title, punch)
+    form = a[a.index("--form") + 1] if "--form" in a else "riddle"
+    res, words, n = check(sentences(text), title, punch, form)
     for ok, hard, name, detail in res:
         print(("OK  " if ok else "FAIL" if hard else "warn"), name, ("| " + detail) if detail and not ok else "")
     bad = sum(1 for ok, hard, _, _ in res if not ok and hard)

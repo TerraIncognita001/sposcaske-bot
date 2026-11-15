@@ -146,7 +146,7 @@ def run_one(a, story_id, work, t0, write=False):
 
     import script_check
     text = " ".join(l["say"] for l in story["lines"])
-    res, words, n = script_check.check(script_check.sentences(text), story["artwork"]["title"], story.get("hook_title"))
+    res, words, n = script_check.check(story.get("sentences") or script_check.sentences(text), story["artwork"]["title"], story.get("hook_title"), story.get("form") or "riddle")    # v1.12: each form has its own gate; the script's own sentences, not the caption lines glued back
     hard = [(name, d) for ok, h, name, d in res if not ok and h]
     for ok, h, name, d in res:
         if not ok:

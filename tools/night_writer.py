@@ -65,7 +65,7 @@ def brief(tid):
         return 3
     cache = ROOT / "data/look" / f"{tid}.json"
     look = json.loads(cache.read_text(encoding="utf-8")) if cache.exists() else None
-    (d / "facts.json").write_text(json.dumps({"facts": facts, "image": image, "wikidata": qid, "title": title,
+    (d / "facts.json").write_text(json.dumps({"facts": facts, "image": image, "wikidata": qid, "title": title, "aspect": writer.picture_aspect(d / "lead.jpg"),
                                               "license": lic[0] if lic else "Public domain"}, indent=1, ensure_ascii=False), encoding="utf-8")
     (d / "brief.txt").write_text(writer.brief(topic, title, facts, look), encoding="utf-8")
     print(f"{d / 'brief.txt'}: the task ({len(facts)} facts, the judge's angle, AVOID)")
@@ -126,16 +126,22 @@ def save(tid, answer_path, look_path):
     if not (isinstance(sents, list) and len(sents) >= 12 and w.get("punch") and w.get("portrait_of") and (w.get("meta") or {}).get("title")):
         bad.append("answer: needs sentences (12+), punch, portrait_of, meta.title (prompts/writer.txt section 7)")
     else:
-        res, words, n = script_check.check([s["text"].strip() for s in sents], fx["title"], w["punch"])
+        form = w.get("form") if w.get("form") in writer.FORMS else None
+        if not form:
+            print("NOT SAVED:\n  - answer: \"form\" must be riddle, emotion, scene or legend (prompts/writer.txt section 3)")
+            return 1
+        res, words, n = script_check.check([s["text"].strip() for s in sents], fx["title"], w["punch"], form)
         bad += [f"construction: {name}: {det}" for ok, hard, name, det in res if not ok and hard]
         for ok, hard, name, det in res:
             if not ok and not hard:
                 print("warn", name, "|", det)
         last = re.sub(r"[^\w']", "", sents[0]["text"].split()[-1]).upper()
-        if w["punch"].upper() != last:
-            bad.append(f"punch is {w['punch']!r} but S1 ends on {last!r}")
+        if form in ("riddle", "legend") and w["punch"].upper() != last:
+            bad.append(f"punch is {w['punch']!r} but the hook ends on {last!r}")
         if re.sub(r"\W", "_", str(w.get("detail", "")).lower()) not in names:
             bad.append(f"detail {w.get('detail')!r} is not a name of look.json ({', '.join(sorted(names))})")
+        if form in ("emotion", "scene") and re.sub(r"\W", "_", str(w.get("home", "")).lower()) not in names:
+            bad.append(f"home {w.get('home')!r} is not a name of look.json: the {form} form needs the face the video opens on")
         for s in sents:
             if s.get("kind") == "FACT" and not (isinstance(s.get("source"), int) and 0 < s["source"] <= len(fx["facts"])):
                 bad.append(f"{s.get('slot')}: a FACT needs \"source\": the number of its FACTS sentence (1-{len(fx['facts'])})")
@@ -148,7 +154,11 @@ def save(tid, answer_path, look_path):
     if bad:
         print("NOT SAVED:\n" + "\n".join("  - " + b for b in bad))
         return 1
-    script = writer.assemble(topic, fx["facts"], {"commons": fx["image"], "license": fx["license"], "wikidata": fx["wikidata"]}, look, w, fx["title"])
+    script = writer.assemble(topic, fx["facts"], {"commons": fx["image"], "license": fx["license"], "wikidata": fx["wikidata"], "aspect": fx.get("aspect")}, look, w, fx["title"])
+    bad = writer.camera_faults(script)
+    if bad:
+        print("NOT SAVED:\n" + "\n".join("  - " + b for b in bad))
+        return 1
     script["written_by"] = f"Claude (night writer), {time.strftime('%Y-%m-%d', time.gmtime())}"
     try:
         story = director.build(script)
@@ -162,7 +172,7 @@ def save(tid, answer_path, look_path):
         old.unlink()
     (ROOT / "data/look").mkdir(exist_ok=True)
     (ROOT / "data/look" / f"{tid}.json").write_text(json.dumps(look, indent=1, ensure_ascii=False), encoding="utf-8")
-    print(f"{out}: {words} words, {n} sentences, punch {script['punch']}, portrait of {script['portrait']['of']}, {len(script['evidence'])} evidence pictures")
+    print(f"{out}: form {script['form']}, {words} words, {n} sentences, punch {script['punch']}, portrait of {script['portrait']['of']}, {len(script['evidence'])} evidence pictures")
     print("the director's shots (caption line -> where the camera goes):")
     for ln in story["lines"]:
         cam = ln.get("cam")
