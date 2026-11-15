@@ -488,5 +488,6 @@
    "note": "sentence E19"
   }
  ],
- "written_by": "Claude (night writer), 2026-11-15"
+ "written_by": "Claude (night writer), 2026-11-15",
+ "failed": "night writer, Nov 15: two dry runs (43691576357, 43692182156) failed only on true peak +0.4 dBFS (render.py lowers -0.3 by 0.6 dB, the AAC re-encode overshoots again); content checks passed, 24 of 24 in frame"
 }
