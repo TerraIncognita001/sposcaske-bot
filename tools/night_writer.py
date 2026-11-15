@@ -34,7 +34,8 @@ def stock(want):
     for t in ready:
         print(f"  READY  {t['score']:>2}  {t['id']}")
     for t in todo:
-        print(f"  WRITE  {t['score']:>2}  {t['id']}  | {t['wikipedia']} | angle: {(t.get('angle') or {}).get('detail')}")
+        old = " | REWRITE: the script on main is from before the forms (v1.12)" if (ROOT / "scripts" / f"{t['id']}.json").exists() else ""
+        print(f"  WRITE  {t['score']:>2}  {t['id']}  | {t['wikipedia']} | angle: {(t.get('angle') or {}).get('detail')} | form: {writer.form_of(t) or 'choose'}{old}")
     for f in sorted((ROOT / "scripts").glob("*.failed.json")):
         s = json.loads(f.read_text(encoding="utf-8"))
         print(f"  FAILED EARLIER  {s['id']}: {str(s.get('failed'))[:200]}")

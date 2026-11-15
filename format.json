@@ -203,8 +203,8 @@
     ]
    },
    "_note": "v1.02: 5.0 -> 3.6: at 5x a 3840 px source is enlarged 1.4 times and a small detail (hands) goes soft",
-   "macro": 6.0,
-   "macro_min_stage_share": 0.42,
+   "macro": 7.0,
+   "macro_min_stage_share": 0.4,
    "_macro_note": "v1.12: the reference's close view of an eye is 6-7 times the whole picture (v4: the eye with its tear fills the frame for 6 s); its usual view of the face is about 3.6. Only the framings a story lists in 'macro' may go this far; a 3840 px source is then enlarged about 1.8 times, as soft as the reference's own"
   },
   "focus_margin": 0.12,
@@ -255,7 +255,9 @@
     "mid",
     "detail"
    ],
-   "open_on": "mid"
+   "open_on": "mid",
+   "mid_share_of_detail": 0.35,
+   "_note": "v1.12, the first demo (run 43657185176): with the middle framing halfway between the face and the detail, the three scales read as two (3.6, 5.5, 6.0). The middle one is now 35 % of the way (about 4.5) and the detail may go to 7.0, as the reference's own tear does"
   }
  },
  "overlays": {

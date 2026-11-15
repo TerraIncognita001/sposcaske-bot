@@ -53,10 +53,18 @@ detail            the one thing to point at, as a plain noun phrase ("the tear o
 readings          the two ways to read it ("an angel mourning what he lost" / "the moment hatred is born")
 question          the last question of the video, 6-16 words, beginning "So"
 punch             three candidate punch words of 3-8 letters for the red word on screen
+form              how this picture must be told (the form follows the picture):
+                  "emotion"  the detail is in a FACE or in the eyes, and the video is about what that face feels
+                             (a tear with anger under it, a gaze, a smile in the wrong place)
+                  "scene"    the picture holds two parties, or a second figure or thing that most people do not
+                             see at first and that changes what the scene means
+                  "riddle"   the detail raises a question about what is happening (animals that do not attack, a
+                             thing that is missing, an object that should not be there)
+                  "legend"   the candidate is a story about a named person, not a painting to look into
 
 ### Output (JSON only)
 {"scores": {"G": 0, "D": 0, "F": 0, "T": 0, "Y": 0, "S": 0}, "reasons": {"G": "...", "D": "...", "F": "...", "T": "...", "Y": "...", "S": "..."},
  "total": 0, "disqualified": null,
  "character": {"figure": "<who is in it, 2-5 words>", "threat": "<what is at stake, 3-8 words>", "feeling": "<the feeling it should leave, 1-3 words>",
                "theme": "<one of: watcher, fallen, pact, innocence in danger, false calm, holy or feared, last moment, other>"},
- "angle": {"first_impression": "...", "detail": "...", "readings": ["...", "..."], "question": "...", "punch": ["...", "...", "..."]}}
+ "angle": {"first_impression": "...", "detail": "...", "readings": ["...", "..."], "question": "...", "punch": ["...", "...", "..."], "form": "emotion | scene | riddle | legend"}}

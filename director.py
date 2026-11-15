@@ -158,10 +158,11 @@ def build_lock(script):
     M, look = F["timing"]["meaning"], script["look"]
     focus = {l["name"]: list(l["box"]) for l in look}
     home, tight = script["home"], script["detail"]
-    focus["_mid"] = [round((a + b) / 2, 4) for a, b in zip(focus[home], focus[tight])]
+    k_mid = F["camera"]["face_lock"]["mid_share_of_detail"]            # the middle scale: 35 % of the way from the face to the detail
+    focus["_mid"] = [round(a + (b - a) * k_mid, 4) for a, b in zip(focus[home], focus[tight])]
     scale = {"home": home, "mid": "_mid", "detail": tight}
     family = [home, "_mid", tight]
-    geo = geo_of(script, focus, macro=["_mid", tight])
+    geo = geo_of(script, focus, macro=[tight])
     images = {"main": dict(script["lead"]), "portrait": {k: v for k, v in script["portrait"].items() if k != "of"}}
     if not (images["portrait"].get("commons") or images["portrait"].get("file")):
         images["portrait"]["find"] = {"portrait_of": script["portrait"]["of"], "work": (script.get("subject") or {}).get("wikidata")}
@@ -270,7 +271,7 @@ def build_lock(script):
             if cues:
                 ln["cam"] = cues[0] if len(cues) == 1 else cues
             lines.append(ln)
-    return finish(script, images, focus, names, lines, open="_mid", macro=["_mid", tight], home=home)
+    return finish(script, images, focus, names, lines, open="_mid", macro=[tight], home=home)
 
 
 def inside(a, b):
