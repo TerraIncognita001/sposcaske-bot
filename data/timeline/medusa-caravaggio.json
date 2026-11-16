@@ -1,0 +1,281 @@
+{
+ "total": 113.98873015873019,
+ "lines": [
+  {
+   "t0": 1.65,
+   "t1": 3.0,
+   "beat": "hook",
+   "say": "What if this is not"
+  },
+  {
+   "t0": 3.22,
+   "t1": 4.83,
+   "beat": "hook",
+   "say": "a monster's scream at all,"
+  },
+  {
+   "t0": 5.05,
+   "t1": 7.26,
+   "beat": "hook",
+   "say": "but the purest terror you have ever seen?"
+  },
+  {
+   "t0": 7.91,
+   "t1": 9.6,
+   "beat": "ident",
+   "say": "This is Medusa,"
+  },
+  {
+   "t0": 9.82,
+   "t1": 14.85,
+   "beat": "ident",
+   "say": "painted by Michelangelo Merisi da Caravaggio in 1597."
+  },
+  {
+   "t0": 15.45,
+   "t1": 17.27,
+   "beat": "contrast",
+   "say": "And this isn't a cursed monster."
+  },
+  {
+   "t0": 17.87,
+   "t1": 19.74,
+   "beat": "contrast",
+   "say": "It's a boy with snakes for hair."
+  },
+  {
+   "t0": 20.34,
+   "t1": 20.93,
+   "beat": "beats",
+   "say": "Pale,"
+  },
+  {
+   "t0": 21.83,
+   "t1": 22.6,
+   "beat": "beats",
+   "say": "screaming,"
+  },
+  {
+   "t0": 23.15,
+   "t1": 24.27,
+   "beat": "beats",
+   "say": "almost alive."
+  },
+  {
+   "t0": 24.87,
+   "t1": 26.16,
+   "beat": "turn",
+   "say": "But look at his eyes."
+  },
+  {
+   "t0": 26.81,
+   "t1": 27.89,
+   "beat": "detail",
+   "say": "He's screaming."
+  },
+  {
+   "t0": 28.49,
+   "t1": 31.14,
+   "beat": "detail",
+   "say": "There's a white glint in each wide open eye."
+  },
+  {
+   "t0": 31.74,
+   "t1": 33.89,
+   "beat": "doubt",
+   "say": "And yet it doesn't feel like rage to you."
+  },
+  {
+   "t0": 34.49,
+   "t1": 35.84,
+   "beat": "look",
+   "say": "Look into his eyes."
+  },
+  {
+   "t0": 36.44,
+   "t1": 37.68,
+   "beat": "look",
+   "say": "There's terror there."
+  },
+  {
+   "t0": 38.28,
+   "t1": 39.01,
+   "beat": "beats",
+   "say": "A sudden,"
+  },
+  {
+   "t0": 39.91,
+   "t1": 40.6,
+   "beat": "beats",
+   "say": "helpless,"
+  },
+  {
+   "t0": 41.15,
+   "t1": 42.41,
+   "beat": "beats",
+   "say": "conscious terror."
+  },
+  {
+   "t0": 43.01,
+   "t1": 44.31,
+   "beat": "feeling",
+   "say": "As if he knows you"
+  },
+  {
+   "t0": 44.53,
+   "t1": 46.09,
+   "beat": "feeling",
+   "say": "are the last thing he sees."
+  },
+  {
+   "t0": 47.44,
+   "t1": 50.5,
+   "beat": "backstory",
+   "say": "According to the traditional story of Medusa,"
+  },
+  {
+   "t0": 50.72,
+   "t1": 53.17,
+   "beat": "backstory",
+   "say": "anyone who looked at her was turned to stone."
+  },
+  {
+   "t0": 53.77,
+   "t1": 56.84,
+   "beat": "moment",
+   "say": "And Caravaggio seems to capture something strange."
+  },
+  {
+   "t0": 58.69,
+   "t1": 60.1,
+   "beat": "moment",
+   "say": "Not the monster's death,"
+  },
+  {
+   "t0": 60.7,
+   "t1": 62.35,
+   "beat": "moment",
+   "say": "but the second right after it."
+  },
+  {
+   "t0": 62.95,
+   "t1": 64.24,
+   "beat": "moment",
+   "say": "The moment when the head"
+  },
+  {
+   "t0": 64.46,
+   "t1": 66.49,
+   "beat": "moment",
+   "say": "still understands what has happened."
+  },
+  {
+   "t0": 67.79,
+   "t1": 70.24,
+   "beat": "empathy",
+   "say": "Imagine giving a monster your own face."
+  },
+  {
+   "t0": 70.84,
+   "t1": 72.96,
+   "beat": "empathy",
+   "say": "Would you paint yourself as the hero?"
+  },
+  {
+   "t0": 73.56,
+   "t1": 75.25,
+   "beat": "empathy",
+   "say": "Would you leave yourself out of it?"
+  },
+  {
+   "t0": 76.85,
+   "t1": 79.08,
+   "beat": "empathy",
+   "say": "Or would you become the monster yourself?"
+  },
+  {
+   "t0": 80.08,
+   "t1": 81.73,
+   "beat": "marker",
+   "say": "That's what makes this painting"
+  },
+  {
+   "t0": 81.95,
+   "t1": 83.28,
+   "beat": "marker",
+   "say": "so hard to look at."
+  },
+  {
+   "t0": 83.88,
+   "t1": 85.46,
+   "beat": "reveal",
+   "say": "The face is still young,"
+  },
+  {
+   "t0": 85.68,
+   "t1": 87.95,
+   "beat": "reveal",
+   "say": "but his eyes no longer look innocent."
+  },
+  {
+   "t0": 88.55,
+   "t1": 90.58,
+   "beat": "reveal",
+   "say": "His open mouth says one thing,"
+  },
+  {
+   "t0": 90.8,
+   "t1": 92.33,
+   "beat": "reveal",
+   "say": "his frown says another."
+  },
+  {
+   "t0": 93.33,
+   "t1": 95.5,
+   "beat": "marker",
+   "say": "And perhaps that's the most frightening part."
+  },
+  {
+   "t0": 96.1,
+   "t1": 98.78,
+   "beat": "idea",
+   "say": "Maybe terror does not begin with monsters."
+  },
+  {
+   "t0": 99.38,
+   "t1": 101.24,
+   "beat": "idea",
+   "say": "Maybe it begins with a mirror,"
+  },
+  {
+   "t0": 101.46,
+   "t1": 102.91,
+   "beat": "idea",
+   "say": "then becomes a mask,"
+  },
+  {
+   "t0": 103.13,
+   "t1": 105.06,
+   "beat": "idea",
+   "say": "and eventually turns into terror."
+  },
+  {
+   "t0": 105.66,
+   "t1": 107.6,
+   "beat": "return",
+   "say": "So look at him one more time."
+  },
+  {
+   "t0": 108.4,
+   "t1": 110.71,
+   "beat": "question",
+   "say": "Do you see a monster in its final second?"
+  },
+  {
+   "t0": 111.31,
+   "t1": 113.64,
+   "beat": "question",
+   "say": "Or a painter screaming at his own face?"
+  }
+ ]
+}

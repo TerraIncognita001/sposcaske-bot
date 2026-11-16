@@ -91,7 +91,7 @@
     }
    },
    "hook": "There's a terrifying detail on this violin, and it explains why the painter stopped to listen.",
-   "views": 111,
+   "views": 112,
    "likes": 10,
    "comments": 1,
    "score": 10.93,
@@ -162,10 +162,10 @@
     }
    },
    "hook": "This painting may hide something that sits in total darkness, completely awake.",
-   "views": 1085,
+   "views": 1125,
    "likes": 37,
-   "comments": 2,
-   "score": 7.38
+   "comments": 3,
+   "score": 7.42
   },
   "NO2YjSazYLg": {
    "story": "ambassadors-holbein",
@@ -200,6 +200,6 @@
    "score": 5.09
   }
  },
- "read_at": "2026-11-16T21:23:17Z",
+ "read_at": "2026-11-16T21:44:34Z",
  "_about": "written by stats_now.py (v1.09): one entry per public video; learn.py reads it. Do not edit by hand."
 }
