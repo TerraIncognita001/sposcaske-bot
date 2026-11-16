@@ -760,17 +760,35 @@ def render(story_path, out_path):
         err = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(out_path), "-af", "ebur128=peak=true", "-f", "null", "-"], capture_output=True, text=True).stderr
         pk = [float(x) for x in re.findall(r"Peak:\s+(-?[\d.]+) dBFS", err)]
         return pk[-1] if pk else None
-    pk, gain = true_peak(), 0.0
-    for _ in range(3):                                                 # v1.02: AAC overshoots on the shutter click; v1.13: the cut is re-encoded from mix.wav (one AAC generation,
-        if pk is None or pk <= -0.5:                                   # not AAC over AAC: Medusa, Nov 15, -0.3 dBFS lowered by 0.6 dB came back as +0.4) and measured again, up to 3 times
-            break
-        gain += -1.0 - pk
+    def peak_time():                                                   # v1.14: WHERE the loudest sample of the encoded track is (4x oversampled, like a true-peak meter)
+        raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(out_path), "-vn", "-ar", str(SR * 4), "-ac", "2", "-f", "f32le", "-"], capture_output=True).stdout
+        return float(np.abs(np.frombuffer(raw, np.float32).reshape(-1, 2)).max(1).argmax()) / (SR * 4)
+    pk, mix = true_peak(), None
+    for _ in range(6):                                                 # v1.02: AAC overshoots; v1.13: the cut is encoded once from mix.wav and measured again.
+        if pk is None or pk <= -0.5:                                   # v1.14: ONLY THE PLACE OF THE PEAK IS LOWERED, never the whole track: v1.13 lowered everything, and when the
+            break                                                      # encoder overshot again (Ambassadors -0.1 -> +0.6 -> 2.5 dB down, Goya 1.2 dB down) the loudness left -16 LUFS +-1
+        if mix is None:                                                # and a good script was refused. The opening sound takes one gain as a whole (still no filter, no limiter);
+            with wave.open(str(wav), "rb") as w:                       # a peak later in the track takes a 0.2 s dip around it
+                mix = np.frombuffer(w.readframes(w.getnframes()), "<i2").astype(np.float32).reshape(-1, w.getnchannels()) / 32767
+        t, g = peak_time(), 10 ** ((-1.0 - pk) / 20)
+        k = min(int(ev["voice_start"] * SR), len(mix))
+        if t * SR < k:
+            mix[:k] *= g
+            what = "the opening sound"
+        else:
+            i, h = int(t * SR), int(0.1 * SR)
+            lo, hi = max(k, i - h), min(len(mix), i + h)
+            mix[lo:hi] *= (1 - (1 - g) * np.hanning(2 * h)[lo - (i - h):hi - (i - h)])[:, None]
+            what = f"0.2 s around {t:.2f} s"
+        with wave.open(str(wav), "wb") as w:
+            w.setnchannels(mix.shape[1]); w.setsampwidth(2); w.setframerate(SR)
+            w.writeframes((np.clip(mix, -1, 1) * 32767).astype("<i2").tobytes())
         tmp = Path(str(out_path) + ".tmp.mp4")
-        subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(out_path), "-i", str(wav), "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-af", f"volume={gain:.2f}dB",
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(out_path), "-i", str(wav), "-map", "0:v", "-map", "1:a", "-c:v", "copy",
                         "-c:a", "aac", "-b:a", "192k", "-ar", "44100", "-ac", "2", "-shortest", "-movflags", "+faststart", str(tmp)], check=True)
         tmp.replace(out_path)
         old_pk, pk = pk, true_peak()
-        print(f"true peak was {old_pk:.1f} dBFS: track lowered by {-gain:.1f} dB, now {pk:.1f} dBFS")
+        print(f"true peak was {old_pk:.1f} dBFS: {what} lowered by {-20 * np.log10(g):.1f} dB, now {pk:.1f} dBFS")
     (work / "timeline.json").write_text(json.dumps({"total": total, "stage": [sw, sh], "y_off": y_off, "events": ev, "focus_audit": audit, "lines": [
         {"t0": round(a_, 2), "t1": round(b_, 2), "beat": ln["beat"], "say": ln["say"]} for ln, (a_, b_) in zip(story["lines"], marks)]}, indent=1))
     words = sum(len(ln["say"].split()) for ln in story["lines"])
