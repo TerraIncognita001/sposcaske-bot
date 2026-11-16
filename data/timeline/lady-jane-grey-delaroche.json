@@ -1,0 +1,137 @@
+{
+ "total": 57.30315192743763,
+ "lines": [
+  {
+   "t0": 1.65,
+   "t1": 3.21,
+   "beat": "hook",
+   "say": "What if this young queen"
+  },
+  {
+   "t0": 3.43,
+   "t1": 6.08,
+   "beat": "hook",
+   "say": "has to find her own death completely blind?"
+  },
+  {
+   "t0": 6.73,
+   "t1": 9.43,
+   "beat": "ident",
+   "say": "This is The Execution of Lady Jane Grey,"
+  },
+  {
+   "t0": 9.65,
+   "t1": 12.68,
+   "beat": "ident",
+   "say": "painted by Paul Delaroche in 1833."
+  },
+  {
+   "t0": 13.28,
+   "t1": 15.43,
+   "beat": "setup",
+   "say": "Jane kneels in white on the straw,"
+  },
+  {
+   "t0": 15.65,
+   "t1": 17.55,
+   "beat": "setup",
+   "say": "an old lieutenant at her side"
+  },
+  {
+   "t0": 17.77,
+   "t1": 19.47,
+   "beat": "setup",
+   "say": "and the executioner waiting."
+  },
+  {
+   "t0": 20.07,
+   "t1": 21.29,
+   "beat": "turn",
+   "say": "But look at her hand."
+  },
+  {
+   "t0": 21.89,
+   "t1": 23.73,
+   "beat": "detail",
+   "say": "Her fingers reach for the block."
+  },
+  {
+   "t0": 24.33,
+   "t1": 25.89,
+   "beat": "triad",
+   "say": "Jane can't see the block."
+  },
+  {
+   "t0": 26.49,
+   "t1": 29.74,
+   "beat": "triad",
+   "say": "Jane can't touch it. Jane just keeps searching."
+  },
+  {
+   "t0": 30.34,
+   "t1": 32.42,
+   "beat": "backstory",
+   "say": "According to the National Gallery,"
+  },
+  {
+   "t0": 32.64,
+   "t1": 33.92,
+   "beat": "backstory",
+   "say": "she was seventeen"
+  },
+  {
+   "t0": 34.14,
+   "t1": 36.36,
+   "beat": "backstory",
+   "say": "and had been queen for only nine days."
+  },
+  {
+   "t0": 36.96,
+   "t1": 39.44,
+   "beat": "backstory",
+   "say": "A crowned girl should never kneel like this."
+  },
+  {
+   "t0": 40.04,
+   "t1": 42.42,
+   "beat": "backstory",
+   "say": "But Queen Mary had her beheaded anyway."
+  },
+  {
+   "t0": 43.42,
+   "t1": 45.42,
+   "beat": "reveal",
+   "say": "And here's the unsettling part."
+  },
+  {
+   "t0": 46.02,
+   "t1": 48.22,
+   "beat": "reveal",
+   "say": "Every eye in the room sees the block,"
+  },
+  {
+   "t0": 48.44,
+   "t1": 49.92,
+   "beat": "reveal",
+   "say": "yet Jane must search."
+  },
+  {
+   "t0": 50.52,
+   "t1": 51.84,
+   "beat": "reveal",
+   "say": "Almost as if she"
+  },
+  {
+   "t0": 52.06,
+   "t1": 53.77,
+   "beat": "reveal",
+   "say": "is made to choose it herself."
+  },
+  {
+   "t0": 54.57,
+   "t1": 56.95,
+   "beat": "question",
+   "say": "So what is that hand really reaching for?"
+  }
+ ]
+}

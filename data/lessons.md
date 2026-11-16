@@ -1,6 +1,6 @@
 # Lessons from our own videos
 
-Written by `learn.py` on 2026-11-15T23:21Z from `data/stats.json`. Do not edit by hand.
+Written by `learn.py` on 2026-11-16T21:23Z from `data/stats.json`. Do not edit by hand.
 
 Learning is **OFF**: 0 videos counted (on at 8 videos public for 3 days; a value needs 3 videos).
 
@@ -8,10 +8,12 @@ Learning is **OFF**: 0 videos counted (on at 8 videos public for 3 days; a value
 
 | public (UTC) | views | stayed | avg % viewed | score | hook | where viewers left |
 |---|---|---|---|---|---|---|
-| 2026-11-14 02:00 | 273 | — | — | 6.31 | This man is about to be eaten alive, and somehow he is completely calm. | — |
-| 2026-11-14 15:00 | 33 | — | — | 3.64 | What if the most beautiful angel ever painted is looking at you with pure hatred? | — |
-| 2026-11-15 02:00 | 102 | — | — | 5.02 | There's a terrifying detail on this violin, and it explains why the painter stopped to lis | — |
-| 2026-11-15 15:00 | 26 | — | — | 3.38 | Something about this peaceful sleeping woman feels completely wrong, filled with hidden dr | — |
+| 2026-11-14 02:00 | 273 | — | 95.36 | 6.31 | This man is about to be eaten alive, and somehow he is completely calm. | — |
+| 2026-11-14 15:00 | 39 | — | 16.24 | 3.81 | What if the most beautiful angel ever painted is looking at you with pure hatred? | — |
+| 2026-11-15 02:00 | 111 | 0.495 | 86.71 | 10.93 | There's a terrifying detail on this violin, and it explains why the painter stopped to lis | — |
+| 2026-11-15 15:00 | 46 | — | — | 3.93 | Something about this peaceful sleeping woman feels completely wrong, filled with hidden dr | — |
+| 2026-11-16 02:00 | 1085 | — | — | 7.38 | This painting may hide something that sits in total darkness, completely awake. | — |
+| 2026-11-16 15:00 | 130 | — | — | 5.09 | There's a disturbing detail in this diplomatic room most people miss. | — |
 
 ## What worked (mean score of the videos with this value; multiplier 1.0 = too few videos to say)
 
