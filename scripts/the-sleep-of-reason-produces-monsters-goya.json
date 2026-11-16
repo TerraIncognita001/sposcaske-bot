@@ -81,6 +81,18 @@
    ]
   },
   {
+   "name": "owl_wide",
+   "box": [
+    0.0,
+    0.44,
+    0.36,
+    0.7
+   ],
+   "words": [
+    "owl"
+   ]
+  },
+  {
    "name": "owls",
    "box": [
     0.0,
@@ -101,7 +113,6 @@
     0.57
    ],
    "words": [
-    "owl",
     "wings"
    ]
   },
@@ -194,7 +205,7 @@
   },
   {
    "slot": "S3",
-   "text": "A man sleeps at his desk while owls, bats and a lynx crowd in behind him.",
+   "text": "A man sleeps at his desk while owls and a lynx crowd in behind him.",
    "kind": "LOOK",
    "source": 3,
    "show": [
@@ -209,10 +220,6 @@
     {
      "on": "owls",
      "to": "owls"
-    },
-    {
-     "on": "bats",
-     "to": "bats"
     },
     {
      "on": "lynx",
@@ -276,6 +283,10 @@
    "show": [
     {
      "on": "owl",
+     "to": "owl_stylus"
+    },
+    {
+     "on": "offers",
      "to": "owl_stylus"
     }
    ]
