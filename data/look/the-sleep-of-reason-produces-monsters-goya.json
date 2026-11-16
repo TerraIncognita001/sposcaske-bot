@@ -1,0 +1,145 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.25,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "creatures",
+    "monsters"
+   ]
+  },
+  {
+   "name": "man",
+   "box": [
+    0.045,
+    0.54,
+    0.8,
+    0.995
+   ],
+   "words": [
+    "man",
+    "dreamer",
+    "goya"
+   ]
+  },
+  {
+   "name": "man_head",
+   "box": [
+    0.1,
+    0.54,
+    0.42,
+    0.69
+   ],
+   "words": [
+    "man",
+    "head"
+   ]
+  },
+  {
+   "name": "owl_stylus",
+   "box": [
+    0.0,
+    0.48,
+    0.24,
+    0.645
+   ],
+   "words": [
+    "owl",
+    "stylus"
+   ]
+  },
+  {
+   "name": "owls",
+   "box": [
+    0.0,
+    0.43,
+    0.95,
+    0.7
+   ],
+   "words": [
+    "owls"
+   ]
+  },
+  {
+   "name": "owl_center",
+   "box": [
+    0.08,
+    0.43,
+    0.7,
+    0.57
+   ],
+   "words": [
+    "owl",
+    "wings"
+   ]
+  },
+  {
+   "name": "bats",
+   "box": [
+    0.32,
+    0.0,
+    1.0,
+    0.5
+   ],
+   "words": [
+    "bats"
+   ]
+  },
+  {
+   "name": "big_bat",
+   "box": [
+    0.47,
+    0.0,
+    0.8,
+    0.33
+   ],
+   "words": [
+    "bat"
+   ]
+  },
+  {
+   "name": "lynx",
+   "box": [
+    0.8,
+    0.715,
+    0.99,
+    0.925
+   ],
+   "words": [
+    "lynx"
+   ]
+  },
+  {
+   "name": "cat_eyes",
+   "box": [
+    0.49,
+    0.545,
+    0.6,
+    0.615
+   ],
+   "words": [
+    "eyes"
+   ]
+  },
+  {
+   "name": "desk",
+   "box": [
+    0.0,
+    0.72,
+    0.38,
+    0.995
+   ],
+   "words": [
+    "desk",
+    "caption",
+    "words"
+   ]
+  }
+ ],
+ "summary": "A man sleeps with his head on his arms at a desk while owls, bats and a lynx gather behind him. An owl on the left holds a stylus toward him."
+}

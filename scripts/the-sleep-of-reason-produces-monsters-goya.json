@@ -1,0 +1,413 @@
+{
+ "id": "the-sleep-of-reason-produces-monsters-goya",
+ "kind": "artwork",
+ "form": "riddle",
+ "hook_frame": "Why is / does / did ___?",
+ "closer": "open",
+ "detail": "owl_stylus",
+ "home": null,
+ "subject": {
+  "title": "The Sleep of Reason Produces Monsters",
+  "creator": "Francisco Goya",
+  "year": 1799,
+  "wikidata": "Q671237"
+ },
+ "lead": {
+  "commons": "Francisco_José_de_Goya_y_Lucientes_-_The_sleep_of_reason_produces_monsters_(No._43),_from_Los_Caprichos_-_Google_Art_Project.jpg",
+  "width_px": 3840,
+  "aspect": 0.6612,
+  "px": 2645,
+  "license": "Public domain",
+  "credit": "Francisco José de Goya y Lucientes - The sleep of reason produces monsters (No. 43), from Los Caprichos - Google Art Project — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Francisco Goya",
+  "credit": "Portrait of Francisco Goya — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.25,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "creatures",
+    "monsters"
+   ]
+  },
+  {
+   "name": "man",
+   "box": [
+    0.045,
+    0.54,
+    0.8,
+    0.995
+   ],
+   "words": [
+    "man",
+    "dreamer",
+    "goya"
+   ]
+  },
+  {
+   "name": "man_head",
+   "box": [
+    0.1,
+    0.54,
+    0.42,
+    0.69
+   ],
+   "words": [
+    "man",
+    "head"
+   ]
+  },
+  {
+   "name": "owl_stylus",
+   "box": [
+    0.0,
+    0.48,
+    0.24,
+    0.645
+   ],
+   "words": [
+    "owl",
+    "stylus"
+   ]
+  },
+  {
+   "name": "owls",
+   "box": [
+    0.0,
+    0.43,
+    0.95,
+    0.7
+   ],
+   "words": [
+    "owls"
+   ]
+  },
+  {
+   "name": "owl_center",
+   "box": [
+    0.08,
+    0.43,
+    0.7,
+    0.57
+   ],
+   "words": [
+    "owl",
+    "wings"
+   ]
+  },
+  {
+   "name": "bats",
+   "box": [
+    0.32,
+    0.0,
+    1.0,
+    0.5
+   ],
+   "words": [
+    "bats"
+   ]
+  },
+  {
+   "name": "big_bat",
+   "box": [
+    0.47,
+    0.0,
+    0.8,
+    0.33
+   ],
+   "words": [
+    "bat"
+   ]
+  },
+  {
+   "name": "lynx",
+   "box": [
+    0.8,
+    0.715,
+    0.99,
+    0.925
+   ],
+   "words": [
+    "lynx"
+   ]
+  },
+  {
+   "name": "cat_eyes",
+   "box": [
+    0.49,
+    0.545,
+    0.6,
+    0.615
+   ],
+   "words": [
+    "eyes"
+   ]
+  },
+  {
+   "name": "desk",
+   "box": [
+    0.0,
+    0.72,
+    0.38,
+    0.995
+   ],
+   "words": [
+    "desk",
+    "caption",
+    "words"
+   ]
+  }
+ ],
+ "punch": "FRIEND",
+ "sentences": [
+  {
+   "slot": "S1",
+   "text": "Why does one of these terrifying night creatures act almost like a friend?",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "creatures",
+     "to": "owls"
+    },
+    {
+     "on": "friend",
+     "to": "man_head"
+    }
+   ]
+  },
+  {
+   "slot": "S2",
+   "text": "This is The Sleep of Reason Produces Monsters, engraved by Francisco Goya in 1799.",
+   "kind": "FACT",
+   "source": 18
+  },
+  {
+   "slot": "S3",
+   "text": "A man sleeps at his desk while owls, bats and a lynx crowd in behind him.",
+   "kind": "LOOK",
+   "source": 3,
+   "show": [
+    {
+     "on": "man",
+     "to": "man"
+    },
+    {
+     "on": "desk",
+     "to": "desk"
+    },
+    {
+     "on": "owls",
+     "to": "owls"
+    },
+    {
+     "on": "bats",
+     "to": "bats"
+    },
+    {
+     "on": "lynx",
+     "to": "lynx"
+    }
+   ]
+  },
+  {
+   "slot": "S4",
+   "text": "But look at the owl.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "owl",
+     "to": "owl_stylus"
+    }
+   ]
+  },
+  {
+   "slot": "S5",
+   "text": "It holds a stylus out to him.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "stylus",
+     "to": "owl_stylus"
+    }
+   ]
+  },
+  {
+   "slot": "S6",
+   "text": "The owl doesn't bite.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "owl",
+     "to": "owl_stylus"
+    }
+   ]
+  },
+  {
+   "slot": "S6",
+   "text": "The owl doesn't scream.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "owl",
+     "to": "owl_stylus"
+    }
+   ]
+  },
+  {
+   "slot": "S6",
+   "text": "The owl simply offers.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "owl",
+     "to": "owl_stylus"
+    }
+   ]
+  },
+  {
+   "slot": "S7",
+   "text": "According to Goya's own caption, fantasy abandoned by reason produced impossible monsters.",
+   "kind": "FACT",
+   "source": 15,
+   "show": [
+    {
+     "on": "monsters",
+     "to": "main_action"
+    }
+   ]
+  },
+  {
+   "slot": "S8",
+   "text": "Monsters should come to destroy the dreamer.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "Monsters",
+     "to": "main_action"
+    },
+    {
+     "on": "dreamer",
+     "to": "man"
+    }
+   ]
+  },
+  {
+   "slot": "S9",
+   "text": "But united with reason, fantasy was the mother of arts.",
+   "kind": "FACT",
+   "source": 15,
+   "show": [
+    {
+     "on": "fantasy",
+     "to": "owl_stylus"
+    }
+   ]
+  },
+  {
+   "slot": "S10",
+   "text": "And here's the disturbing part.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "S11",
+   "text": "The creatures surround a sleeping man, yet one hands him his tool.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "creatures",
+     "to": "main_action"
+    },
+    {
+     "on": "man",
+     "to": "man"
+    },
+    {
+     "on": "tool",
+     "to": "owl_stylus"
+    }
+   ]
+  },
+  {
+   "slot": "S12",
+   "text": "As if the nightmare wants him to keep drawing.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "drawing",
+     "to": "owl_stylus"
+    }
+   ]
+  },
+  {
+   "slot": "S13",
+   "text": "So what is the owl asking him to draw?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "owl",
+     "to": "owl_stylus"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Goya": "Goy-a"
+ },
+ "meta": {
+  "title": "The owl that hands Goya his pen",
+  "description": "The Sleep of Reason Produces Monsters is plate 43 of Los Caprichos by Francisco Goya, published in 1799. Goya's caption says fantasy abandoned by reason produces impossible monsters, but united with reason it is the mother of the arts.",
+  "tags": [
+   "art history",
+   "goya",
+   "los caprichos",
+   "etching",
+   "sleep of reason",
+   "owl"
+  ],
+  "question": "What is the owl asking him to draw?"
+ },
+ "sources": [
+  {
+   "claim": "Los Caprichos, Goya's set of 80 aquatints that were published in the year 1799, emphasize the flaws inherent in humans.",
+   "url": "https://en.wikipedia.org/wiki/The_Sleep_of_Reason_Produces_Monsters",
+   "note": "sentence S2"
+  },
+  {
+   "claim": "The image depicts a man asleep at his desk, swarmed by owls, bats, and monstrous creatures.",
+   "url": "https://en.wikipedia.org/wiki/The_Sleep_of_Reason_Produces_Monsters",
+   "note": "sentence S3"
+  },
+  {
+   "claim": "The full epigraph for Capricho No. 43 reads; \"Fantasy abandoned by reason produces impossible monsters: united with her [reason], she [fantasy] is the mother of the arts and the origin of their marvel",
+   "url": "https://en.wikipedia.org/wiki/The_Sleep_of_Reason_Produces_Monsters",
+   "note": "sentence S7"
+  },
+  {
+   "claim": "The full epigraph for Capricho No. 43 reads; \"Fantasy abandoned by reason produces impossible monsters: united with her [reason], she [fantasy] is the mother of the arts and the origin of their marvel",
+   "url": "https://en.wikipedia.org/wiki/The_Sleep_of_Reason_Produces_Monsters",
+   "note": "sentence S9"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-16"
+}
