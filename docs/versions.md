@@ -5,6 +5,19 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.14 = ONLY THE PLACE OF THE PEAK IS LOWERED, Andrii, Nov 16 2026 ('так! перезніми Сон розуму'). Why: v1.13 lowered the
+  WHOLE track when the true peak was over -0.5 dBFS, and the encoder often overshot again, so the next pass lowered
+  it more: Ambassadors (Nov 15) -0.1 -> +0.6 dBFS -> 2.5 dB down = -18.5 LUFS; Goya's Sleep of Reason (Nov 16, a
+  10-point topic) 1.2 dB down = -17.2 LUFS. Both failed the loudness check (-16 +-1), the night writer's scripts were
+  thrown away, Gemini wrote Ambassadors and could not write Goya at all (4 drafts refused). Medusa passed at -16.7.
+  Measured on a dry-run file: the loudest sample sits in the opening sound (0.09 s, -1.2 dBFS) and the body comes
+  within 0.2 dB of it (13.2 s). Now `render.py` finds WHERE the peak is (the track decoded 4x oversampled): a peak in
+  the opening sound lowers the opening sound as a whole (one gain, still no filter, no limiter); a peak later lowers
+  0.2 s around it (a Hann dip). Encoded once from `mix.wav`, measured again, up to 6 passes. Test on a real video
+  with the peak forced to +0.8 dBFS: -1.0 dBFS after three passes, loudness moved by 0.1 LUFS (v1.13: 1.8 and more).
+  The Goya script is back among the ready ones. Dry run 43963259853 on the branch: Goya 12 of 12, -16.1 LUFS, true
+  peak -1.1 dBFS after two passes (0.2 s around 13.9 s).
+
 - v1.13 = THE PEAK IS FIXED FROM THE MIX, Andrii, Nov 15 2026 ('1. так'). Why: Medusa (emotion, 114 s) failed both
   dry runs (43691576357, 43692182156) on true peak +0.4 dBFS, every other check passed. `render.py` lowered a track
   peaking at -0.3 dBFS by 0.6 dB, but re-encoded the AAC of the finished file (AAC over AAC), and the second
