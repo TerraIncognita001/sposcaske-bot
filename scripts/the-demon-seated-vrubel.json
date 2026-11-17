@@ -1,0 +1,466 @@
+{
+ "id": "the-demon-seated-vrubel",
+ "kind": "artwork",
+ "form": "emotion",
+ "hook_frame": "This painting may hide ___.",
+ "closer": "either_or",
+ "detail": "eyes",
+ "home": "demon_face",
+ "subject": {
+  "title": "The Demon Seated",
+  "creator": "Mikhail Vrubel",
+  "year": 1890,
+  "wikidata": "Q4157667"
+ },
+ "lead": {
+  "commons": "Vrubel_Demon.jpg",
+  "width_px": 3840,
+  "aspect": 1.8842,
+  "px": 2048,
+  "license": "Public domain",
+  "credit": "Vrubel Demon — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Mikhail Vrubel",
+  "credit": "Portrait of Mikhail Vrubel — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "mountains"
+   ]
+  },
+  {
+   "name": "demon",
+   "box": [
+    0.23,
+    0.0,
+    0.69,
+    1.0
+   ],
+   "words": [
+    "giant"
+   ]
+  },
+  {
+   "name": "demon_top",
+   "box": [
+    0.23,
+    0.0,
+    0.69,
+    0.55
+   ],
+   "words": [
+    "shoulders"
+   ]
+  },
+  {
+   "name": "demon_face",
+   "box": [
+    0.35,
+    0.0,
+    0.48,
+    0.31
+   ],
+   "words": [
+    "demon",
+    "face",
+    "spirit",
+    "creature",
+    "him"
+   ]
+  },
+  {
+   "name": "eyes",
+   "box": [
+    0.365,
+    0.08,
+    0.445,
+    0.15
+   ],
+   "words": [
+    "eyes",
+    "eye"
+   ]
+  },
+  {
+   "name": "hands",
+   "box": [
+    0.35,
+    0.675,
+    0.51,
+    0.945
+   ],
+   "words": [
+    "hands"
+   ]
+  },
+  {
+   "name": "flowers",
+   "box": [
+    0.66,
+    0.0,
+    1.0,
+    0.88
+   ],
+   "words": [
+    "flowers",
+    "stone"
+   ]
+  },
+  {
+   "name": "sunset",
+   "box": [
+    0.0,
+    0.44,
+    0.24,
+    0.79
+   ],
+   "words": [
+    "sunset"
+   ]
+  }
+ ],
+ "punch": "SORROW",
+ "sentences": [
+  {
+   "slot": "E1",
+   "text": "This painting may hide the loneliest feeling ever given to a creature built like a god.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "creature",
+     "to": "demon_face"
+    }
+   ]
+  },
+  {
+   "slot": "E2",
+   "text": "This is The Demon Seated, painted by Mikhail Vrubel in 1890.",
+   "kind": "FACT",
+   "source": 1
+  },
+  {
+   "slot": "E3",
+   "text": "And this isn't a devil with horns.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "devil",
+     "to": "demon_top"
+    }
+   ]
+  },
+  {
+   "slot": "E3",
+   "text": "It's a young giant among stone flowers.",
+   "kind": "LOOK",
+   "source": 4,
+   "show": [
+    {
+     "on": "giant",
+     "to": "demon"
+    },
+    {
+     "on": "flowers",
+     "to": "flowers"
+    }
+   ]
+  },
+  {
+   "slot": "E4",
+   "text": "Strong, silent, almost gentle.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E5",
+   "text": "But look at his eyes.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "E6",
+   "text": "He's waiting.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E6",
+   "text": "There's a shadow under the eye turned away from you.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "shadow",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "E7",
+   "text": "And yet it doesn't feel like evil at all.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E8",
+   "text": "Look into his eyes.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "E8",
+   "text": "There's sorrow there.",
+   "kind": "READING",
+   "source": 13
+  },
+  {
+   "slot": "E9",
+   "text": "A heavy, quiet, endless sorrow.",
+   "kind": "READING",
+   "source": 13
+  },
+  {
+   "slot": "E10",
+   "text": "As if he already knows nobody will come for him.",
+   "kind": "READING",
+   "source": 12
+  },
+  {
+   "slot": "E11",
+   "text": "According to Lermontov's poem, this demon fell in love, had his hopes dashed, and was finally crushed.",
+   "kind": "FACT",
+   "source": 8,
+   "show": [
+    {
+     "on": "demon",
+     "to": "demon_face"
+    }
+   ]
+  },
+  {
+   "slot": "E12",
+   "text": "And Vrubel seems to paint something rarely shown.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E12",
+   "text": "Not the demon's fall, but the long silence after it.",
+   "kind": "READING",
+   "source": 10
+  },
+  {
+   "slot": "E12",
+   "text": "The moment when he understands there is no place left for him.",
+   "kind": "READING",
+   "source": 12
+  },
+  {
+   "slot": "E13",
+   "text": "Imagine wanting love and being shut out of your world for it.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E13",
+   "text": "Would you keep hoping?",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E13",
+   "text": "Would you ask for forgiveness?",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E13",
+   "text": "Or would you start planning your revenge?",
+   "kind": "READING",
+   "source": 11
+  },
+  {
+   "slot": "E14",
+   "text": "That's what makes this painting so unsettling.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E15",
+   "text": "The demon is still beautiful, but his eyes no longer look hopeful.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "E15",
+   "text": "His calm mouth says one thing, his tired eyes say another.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "E16",
+   "text": "And maybe that is the worst of it.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E17",
+   "text": "Maybe evil does not begin with hatred.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E17",
+   "text": "Maybe it begins with longing, then becomes loneliness, and eventually turns into sorrow.",
+   "kind": "READING",
+   "source": 10
+  },
+  {
+   "slot": "E18",
+   "text": "So look at him one more time.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "him",
+     "to": "demon_face"
+    }
+   ]
+  },
+  {
+   "slot": "E19",
+   "text": "Do you see a monster waiting for his revenge?",
+   "kind": "READING",
+   "source": 11
+  },
+  {
+   "slot": "E19",
+   "text": "Or a lonely spirit nobody ever answered?",
+   "kind": "READING",
+   "source": 12,
+   "show": [
+    {
+     "on": "spirit",
+     "to": "demon_face"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Vrubel": "Vroo-bel",
+  "Lermontov": "Lair-mon-toff"
+ },
+ "meta": {
+  "title": "The demon who was never evil, only alone",
+  "description": "The Demon Seated was painted by Mikhail Vrubel in 1890 after Lermontov's poem The Demon. Vrubel called his demon a spirit not so much evil as suffering and sorrowing.",
+  "tags": [
+   "art history",
+   "vrubel",
+   "the demon seated",
+   "lermontov",
+   "symbolism",
+   "painting"
+  ],
+  "question": "A monster waiting for revenge, or a lonely spirit?"
+ },
+ "sources": [
+  {
+   "claim": "The Demon Seated  (Russian: Демон сидящий) is an 1890 symbolist piece by Russian artist Mikhail Vrubel.",
+   "url": "https://en.wikipedia.org/wiki/The_Demon_Seated",
+   "note": "sentence E2"
+  },
+  {
+   "claim": "The painting is created in Vrubel's unique style with the effect of crystal edges, which makes his paintings look like stained glasses or panels.",
+   "url": "https://en.wikipedia.org/wiki/The_Demon_Seated",
+   "note": "sentence E3"
+  },
+  {
+   "claim": "Vrubel described this Demon as “a spirit uniting in itself masculine and feminine qualities…a spirit, not so much evil as suffering and sorrowing, but in all that a powerful spirit…a majestic spirit”.",
+   "url": "https://en.wikipedia.org/wiki/The_Demon_Seated",
+   "note": "sentence E8"
+  },
+  {
+   "claim": "Vrubel described this Demon as “a spirit uniting in itself masculine and feminine qualities…a spirit, not so much evil as suffering and sorrowing, but in all that a powerful spirit…a majestic spirit”.",
+   "url": "https://en.wikipedia.org/wiki/The_Demon_Seated",
+   "note": "sentence E9"
+  },
+  {
+   "claim": "In the end, he is crushed and has no place in this world.",
+   "url": "https://en.wikipedia.org/wiki/The_Demon_Seated",
+   "note": "sentence E10"
+  },
+  {
+   "claim": "In this piece, among others, Vrubel explored the theme of a Demon from Mikhail Lermontov's 1839 poem, which tells of a Byronic demon that fell in love with a Georgian princess, who dies as a result of",
+   "url": "https://en.wikipedia.org/wiki/The_Demon_Seated",
+   "note": "sentence E11"
+  },
+  {
+   "claim": "He seems to briefly fulfill his longing, but suddenly has his hopes dashed.",
+   "url": "https://en.wikipedia.org/wiki/The_Demon_Seated",
+   "note": "sentence E12"
+  },
+  {
+   "claim": "In the end, he is crushed and has no place in this world.",
+   "url": "https://en.wikipedia.org/wiki/The_Demon_Seated",
+   "note": "sentence E12"
+  },
+  {
+   "claim": "The Demon is disillusioned and pines for retribution.",
+   "url": "https://en.wikipedia.org/wiki/The_Demon_Seated",
+   "note": "sentence E13"
+  },
+  {
+   "claim": "He seems to briefly fulfill his longing, but suddenly has his hopes dashed.",
+   "url": "https://en.wikipedia.org/wiki/The_Demon_Seated",
+   "note": "sentence E17"
+  },
+  {
+   "claim": "The Demon is disillusioned and pines for retribution.",
+   "url": "https://en.wikipedia.org/wiki/The_Demon_Seated",
+   "note": "sentence E19"
+  },
+  {
+   "claim": "In the end, he is crushed and has no place in this world.",
+   "url": "https://en.wikipedia.org/wiki/The_Demon_Seated",
+   "note": "sentence E19"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-17"
+}

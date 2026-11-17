@@ -1,0 +1,107 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "mountains"
+   ]
+  },
+  {
+   "name": "demon",
+   "box": [
+    0.23,
+    0.0,
+    0.69,
+    1.0
+   ],
+   "words": [
+    "giant"
+   ]
+  },
+  {
+   "name": "demon_top",
+   "box": [
+    0.23,
+    0.0,
+    0.69,
+    0.55
+   ],
+   "words": [
+    "shoulders"
+   ]
+  },
+  {
+   "name": "demon_face",
+   "box": [
+    0.35,
+    0.0,
+    0.48,
+    0.31
+   ],
+   "words": [
+    "demon",
+    "face",
+    "spirit",
+    "creature",
+    "him"
+   ]
+  },
+  {
+   "name": "eyes",
+   "box": [
+    0.365,
+    0.08,
+    0.445,
+    0.15
+   ],
+   "words": [
+    "eyes",
+    "eye"
+   ]
+  },
+  {
+   "name": "hands",
+   "box": [
+    0.35,
+    0.675,
+    0.51,
+    0.945
+   ],
+   "words": [
+    "hands"
+   ]
+  },
+  {
+   "name": "flowers",
+   "box": [
+    0.66,
+    0.0,
+    1.0,
+    0.88
+   ],
+   "words": [
+    "flowers",
+    "stone"
+   ]
+  },
+  {
+   "name": "sunset",
+   "box": [
+    0.0,
+    0.44,
+    0.24,
+    0.79
+   ],
+   "words": [
+    "sunset"
+   ]
+  }
+ ],
+ "summary": "A muscular young demon sits hunched with his hands clasped around his knees, looking aside, among large crystal-like flowers. A red sunset burns behind the mountains."
+}
