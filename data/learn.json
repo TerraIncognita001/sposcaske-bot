@@ -1,14 +1,14 @@
 {
  "_about": "written by learn.py (v1.09) from data/stats.json. on = false: the bot ignores this file.",
- "updated": "2026-11-17T04:26Z",
+ "updated": "2026-11-17T20:49Z",
  "on": false,
- "videos_counted": 1,
+ "videos_counted": 2,
  "rule": "on at 8 videos public for 3 days; a value needs 3 videos",
  "mult": {
   "form": {
    "riddle": {
-    "n": 1,
-    "mean": 6.31,
+    "n": 2,
+    "mean": 6.2,
     "m": 1.0
    }
   },
@@ -17,15 +17,38 @@
     "n": 1,
     "mean": 6.31,
     "m": 1.0
+   },
+   "what_if": {
+    "n": 1,
+    "mean": 6.08,
+    "m": 1.0
    }
   },
-  "closer": {},
-  "kind": {},
-  "theme": {},
+  "closer": {
+   "either_or": {
+    "n": 1,
+    "mean": 6.08,
+    "m": 1.0
+   }
+  },
+  "kind": {
+   "artwork": {
+    "n": 1,
+    "mean": 6.08,
+    "m": 1.0
+   }
+  },
+  "theme": {
+   "fallen": {
+    "n": 1,
+    "mean": 6.08,
+    "m": 1.0
+   }
+  },
   "century": {
    "19th": {
-    "n": 1,
-    "mean": 6.31,
+    "n": 2,
+    "mean": 6.2,
     "m": 1.0
    }
   },
@@ -34,12 +57,22 @@
     "n": 1,
     "mean": 6.31,
     "m": 1.0
+   },
+   "60-75 s": {
+    "n": 1,
+    "mean": 6.08,
+    "m": 1.0
    }
   },
   "writer": {
    "hand": {
     "n": 1,
     "mean": 6.31,
+    "m": 1.0
+   },
+   "claude": {
+    "n": 1,
+    "mean": 6.08,
     "m": 1.0
    }
   }
@@ -53,5 +86,5 @@
   "S": 1.0
  },
  "judge_fit": null,
- "mean_score": 6.31
+ "mean_score": 6.2
 }

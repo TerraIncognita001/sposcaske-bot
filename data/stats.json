@@ -15,14 +15,14 @@
     "writer": "hand"
    },
    "hook": "This man is about to be eaten alive, and somehow he is completely calm.",
-   "views": 273,
+   "views": 271,
    "likes": 16,
    "comments": 2,
    "score": 6.31,
-   "a_views": 5,
-   "a_engagedViews": 3,
-   "a_averageViewPercentage": 95.36,
-   "a_averageViewDuration": 55,
+   "a_views": 8,
+   "a_engagedViews": 5,
+   "a_averageViewPercentage": 80.45,
+   "a_averageViewDuration": 46,
    "a_shares": 0,
    "a_subscribersGained": 0
   },
@@ -56,13 +56,206 @@
    "views": 39,
    "likes": 1,
    "comments": 1,
-   "score": 3.81,
-   "a_views": 28,
-   "a_engagedViews": 9,
-   "a_averageViewPercentage": 16.24,
-   "a_averageViewDuration": 10,
+   "score": 6.08,
+   "a_views": 33,
+   "a_engagedViews": 10,
+   "a_averageViewPercentage": 19.02,
+   "a_averageViewDuration": 12,
    "a_shares": 0,
-   "a_subscribersGained": 0
+   "a_subscribersGained": 0,
+   "curve": [
+    [
+     0.01,
+     1
+    ],
+    [
+     0.02,
+     1
+    ],
+    [
+     0.03,
+     1
+    ],
+    [
+     0.04,
+     1
+    ],
+    [
+     0.05,
+     1
+    ],
+    [
+     0.06,
+     1
+    ],
+    [
+     0.07,
+     1
+    ],
+    [
+     0.08,
+     1
+    ],
+    [
+     0.09,
+     0.7
+    ],
+    [
+     0.1,
+     0.7
+    ],
+    [
+     0.11,
+     0.7
+    ],
+    [
+     0.12,
+     0.7
+    ],
+    [
+     0.13,
+     0.7
+    ],
+    [
+     0.14,
+     0.6
+    ],
+    [
+     0.15,
+     0.6
+    ],
+    [
+     0.16,
+     0.6
+    ],
+    [
+     0.17,
+     0.5
+    ],
+    [
+     0.18,
+     0.4
+    ],
+    [
+     0.19,
+     0.4
+    ],
+    [
+     0.2,
+     0.3
+    ],
+    [
+     0.21,
+     0.3
+    ],
+    [
+     0.22,
+     0.3
+    ],
+    [
+     0.23,
+     0.2
+    ],
+    [
+     0.24,
+     0.2
+    ],
+    [
+     0.25,
+     0.2
+    ],
+    [
+     0.26,
+     0.2
+    ],
+    [
+     0.27,
+     0.2
+    ],
+    [
+     0.28,
+     0.2
+    ],
+    [
+     0.29,
+     0.2
+    ],
+    [
+     0.3,
+     0.2
+    ],
+    [
+     0.31,
+     0.2
+    ],
+    [
+     0.32,
+     0.2
+    ],
+    [
+     0.33,
+     0.2
+    ],
+    [
+     0.34,
+     0.2
+    ],
+    [
+     0.35,
+     0.2
+    ],
+    [
+     0.36,
+     0.2
+    ],
+    [
+     0.37,
+     0.2
+    ],
+    [
+     0.38,
+     0.2
+    ],
+    [
+     0.39,
+     0.2
+    ],
+    [
+     0.4,
+     0.2
+    ],
+    [
+     0.41,
+     0.2
+    ],
+    [
+     0.42,
+     0.1
+    ],
+    [
+     0.43,
+     0.1
+    ],
+    [
+     0.44,
+     0.1
+    ]
+   ],
+   "stay": 0.303,
+   "drops": [
+    {
+     "t": 5.4,
+     "lost": 30.0
+    },
+    {
+     "t": 8.7,
+     "lost": 10.0
+    },
+    {
+     "t": 10.7,
+     "lost": 20.0
+    }
+   ]
   },
   "BHLGgjy0qs8": {
    "story": "self-portrait-with-death-playing-the-fiddle-bckl",
@@ -91,17 +284,17 @@
     }
    },
    "hook": "There's a terrifying detail on this violin, and it explains why the painter stopped to listen.",
-   "views": 113,
+   "views": 114,
    "likes": 10,
    "comments": 1,
-   "score": 10.93,
-   "a_views": 99,
-   "a_engagedViews": 49,
-   "a_averageViewPercentage": 86.71,
-   "a_averageViewDuration": 52,
+   "score": 10.97,
+   "a_views": 102,
+   "a_engagedViews": 51,
+   "a_averageViewPercentage": 83.87,
+   "a_averageViewDuration": 51,
    "a_shares": 0,
    "a_subscribersGained": 0,
-   "stay": 0.495
+   "stay": 0.5
   },
   "lFKLVEK27GE": {
    "story": "nightmare-fuseli",
@@ -130,10 +323,439 @@
     }
    },
    "hook": "Something about this peaceful sleeping woman feels completely wrong, filled with hidden dread.",
-   "views": 48,
+   "views": 50,
    "likes": 0,
    "comments": 1,
-   "score": 3.98
+   "score": 10.1,
+   "a_views": 33,
+   "a_engagedViews": 15,
+   "a_averageViewPercentage": 105.93999999999998,
+   "a_averageViewDuration": 64,
+   "a_shares": 0,
+   "a_subscribersGained": 0,
+   "curve": [
+    [
+     0.01,
+     1.733
+    ],
+    [
+     0.02,
+     1.733
+    ],
+    [
+     0.03,
+     1.733
+    ],
+    [
+     0.04,
+     1.733
+    ],
+    [
+     0.05,
+     1.733
+    ],
+    [
+     0.06,
+     1.733
+    ],
+    [
+     0.07,
+     1.733
+    ],
+    [
+     0.08,
+     1.667
+    ],
+    [
+     0.09,
+     1.667
+    ],
+    [
+     0.1,
+     1.667
+    ],
+    [
+     0.11,
+     1.6
+    ],
+    [
+     0.12,
+     1.533
+    ],
+    [
+     0.13,
+     1.533
+    ],
+    [
+     0.14,
+     1.467
+    ],
+    [
+     0.15,
+     1.467
+    ],
+    [
+     0.16,
+     1.467
+    ],
+    [
+     0.17,
+     1.4
+    ],
+    [
+     0.18,
+     1.4
+    ],
+    [
+     0.19,
+     1.4
+    ],
+    [
+     0.2,
+     1.333
+    ],
+    [
+     0.21,
+     1.267
+    ],
+    [
+     0.22,
+     1.2
+    ],
+    [
+     0.23,
+     1.2
+    ],
+    [
+     0.24,
+     1.2
+    ],
+    [
+     0.25,
+     1.2
+    ],
+    [
+     0.26,
+     1.2
+    ],
+    [
+     0.27,
+     1.2
+    ],
+    [
+     0.28,
+     1.133
+    ],
+    [
+     0.29,
+     1.133
+    ],
+    [
+     0.3,
+     1.133
+    ],
+    [
+     0.31,
+     1.133
+    ],
+    [
+     0.32,
+     1.133
+    ],
+    [
+     0.33,
+     1.067
+    ],
+    [
+     0.34,
+     1.067
+    ],
+    [
+     0.35,
+     1.067
+    ],
+    [
+     0.36,
+     1.067
+    ],
+    [
+     0.37,
+     1.067
+    ],
+    [
+     0.38,
+     1.067
+    ],
+    [
+     0.39,
+     1.067
+    ],
+    [
+     0.4,
+     1.067
+    ],
+    [
+     0.41,
+     1.067
+    ],
+    [
+     0.42,
+     1.067
+    ],
+    [
+     0.43,
+     1.067
+    ],
+    [
+     0.44,
+     1.067
+    ],
+    [
+     0.45,
+     1.067
+    ],
+    [
+     0.46,
+     1.067
+    ],
+    [
+     0.47,
+     1
+    ],
+    [
+     0.48,
+     1
+    ],
+    [
+     0.49,
+     1
+    ],
+    [
+     0.5,
+     1
+    ],
+    [
+     0.51,
+     0.933
+    ],
+    [
+     0.52,
+     0.933
+    ],
+    [
+     0.53,
+     0.933
+    ],
+    [
+     0.54,
+     0.933
+    ],
+    [
+     0.55,
+     0.933
+    ],
+    [
+     0.56,
+     0.933
+    ],
+    [
+     0.57,
+     0.933
+    ],
+    [
+     0.58,
+     0.933
+    ],
+    [
+     0.59,
+     0.933
+    ],
+    [
+     0.6,
+     0.867
+    ],
+    [
+     0.61,
+     0.867
+    ],
+    [
+     0.62,
+     0.867
+    ],
+    [
+     0.63,
+     0.867
+    ],
+    [
+     0.64,
+     0.867
+    ],
+    [
+     0.65,
+     0.867
+    ],
+    [
+     0.66,
+     0.867
+    ],
+    [
+     0.67,
+     0.867
+    ],
+    [
+     0.68,
+     0.867
+    ],
+    [
+     0.69,
+     0.867
+    ],
+    [
+     0.7,
+     0.867
+    ],
+    [
+     0.71,
+     0.867
+    ],
+    [
+     0.72,
+     0.867
+    ],
+    [
+     0.73,
+     0.867
+    ],
+    [
+     0.74,
+     0.867
+    ],
+    [
+     0.75,
+     0.867
+    ],
+    [
+     0.76,
+     0.867
+    ],
+    [
+     0.77,
+     0.867
+    ],
+    [
+     0.78,
+     0.867
+    ],
+    [
+     0.79,
+     0.8
+    ],
+    [
+     0.8,
+     0.8
+    ],
+    [
+     0.81,
+     0.8
+    ],
+    [
+     0.82,
+     0.8
+    ],
+    [
+     0.83,
+     0.8
+    ],
+    [
+     0.84,
+     0.8
+    ],
+    [
+     0.85,
+     0.8
+    ],
+    [
+     0.86,
+     0.8
+    ],
+    [
+     0.87,
+     0.8
+    ],
+    [
+     0.88,
+     0.8
+    ],
+    [
+     0.89,
+     0.8
+    ],
+    [
+     0.9,
+     0.8
+    ],
+    [
+     0.91,
+     0.8
+    ],
+    [
+     0.92,
+     0.8
+    ],
+    [
+     0.93,
+     0.8
+    ],
+    [
+     0.94,
+     0.8
+    ],
+    [
+     0.95,
+     0.8
+    ],
+    [
+     0.96,
+     0.8
+    ],
+    [
+     0.97,
+     0.8
+    ],
+    [
+     0.98,
+     0.8
+    ],
+    [
+     0.99,
+     0.8
+    ],
+    [
+     1,
+     0.8
+    ]
+   ],
+   "stay": 0.455,
+   "drops": [
+    {
+     "t": 6.0,
+     "lost": 13.4,
+     "beat": "hook",
+     "say": "Something about this peaceful sleeping woman feels completely wrong,"
+    },
+    {
+     "t": 9.7,
+     "lost": 6.7,
+     "beat": "ident",
+     "say": "This is The Nightmare,"
+    },
+    {
+     "t": 11.5,
+     "lost": 20.0,
+     "beat": "ident",
+     "say": "painted by Henry Fuseli in 1781."
+    }
+   ]
   },
   "bZ8y6RVO2Ow": {
    "story": "lucifer-von-stuck",
@@ -162,10 +784,17 @@
     }
    },
    "hook": "This painting may hide something that sits in total darkness, completely awake.",
-   "views": 1152,
+   "views": 1233,
    "likes": 38,
    "comments": 3,
-   "score": 7.45
+   "score": 12.81,
+   "a_views": 954,
+   "a_engagedViews": 535,
+   "a_averageViewPercentage": 53.37,
+   "a_averageViewDuration": 32,
+   "a_shares": 0,
+   "a_subscribersGained": 4,
+   "stay": 0.561
   },
   "NO2YjSazYLg": {
    "story": "ambassadors-holbein",
@@ -194,10 +823,10 @@
     }
    },
    "hook": "There's a disturbing detail in this diplomatic room most people miss.",
-   "views": 131,
+   "views": 133,
    "likes": 4,
    "comments": 1,
-   "score": 5.1
+   "score": 5.11
   },
   "gz8Ng36PBl4": {
    "story": "portrait-of-innocent-x-velzquez",
@@ -226,12 +855,44 @@
     }
    },
    "hook": "There's something colder than anger about the way this old man looks back at you.",
-   "views": 198,
-   "likes": 17,
-   "comments": 2,
-   "score": 6.03
+   "views": 579,
+   "likes": 29,
+   "comments": 3,
+   "score": 6.99
+  },
+  "gsXMtSkxE7o": {
+   "story": "lady-jane-grey-delaroche",
+   "slot": "E2026-11-17#1",
+   "title": "The blindfolded queen searching for the block",
+   "publish_at": "2026-11-17T15:00:00Z",
+   "seconds": 57.3,
+   "f": {
+    "kind": "artwork",
+    "form": "riddle",
+    "hook_frame": "what_if",
+    "punch": "BLIND",
+    "closer": "open",
+    "theme": "innocence in danger",
+    "century": "19th",
+    "length": "under 60 s",
+    "writer": "claude",
+    "judge": 8,
+    "judge_scores": {
+     "G": 2,
+     "D": 1,
+     "F": 1,
+     "T": 2,
+     "Y": 1,
+     "S": 1
+    }
+   },
+   "hook": "What if this young queen has to find her own death completely blind?",
+   "views": 70,
+   "likes": 1,
+   "comments": 0,
+   "score": 4.3
   }
  },
- "read_at": "2026-11-17T04:26:23Z",
+ "read_at": "2026-11-17T20:49:34Z",
  "_about": "written by stats_now.py (v1.09): one entry per public video; learn.py reads it. Do not edit by hand."
 }
