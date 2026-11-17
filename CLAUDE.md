@@ -1,4 +1,4 @@
-# CLAUDE.md — sposcaske-bot (v1.15: picks topics, writes, shoots, uploads on a schedule, counts and learns; LIVE)
+# CLAUDE.md — sposcaske-bot (v1.16: picks topics, writes, shoots, uploads on a schedule, counts and learns; LIVE)
 
 Owner: Andrii (writes in Ukrainian; wants short, army-style answers: task → direct solution, the best free option,
 no fluff). Reply in Ukrainian.
@@ -14,9 +14,10 @@ conformance. What the genre is and what all references share: `docs/GENRE.md`.
 THE FORM FOLLOWS THE PICTURE (v1.12, `docs/FORMAT.md` §19, `prompts/writer.txt` §3): a script is a riddle (13 slots,
 about 55 s), an emotion (a face: 19 blocks, about 110 s, the camera HOLDS THE FACE and opens on it), a scene or a
 legend; the judge or the writer chooses. Measured on the reference's own videos; the wording is never copied.
-v1.15 (Andrii, Nov 17: the scripts were 'full of water'): every ARTWORK is now written in the form of the day,
-INVESTIGATION (even days, UTC: three clues, then the answer) or TWIST (odd days: the usual reading, then the fact that
-turns it over), both under the NO WATER rules (`prompts/writer.txt` 3x/3e/3f, `script_check.check_lean`); stories stay legend.
+v1.16 (Andrii, Nov 17: 'друге дно мені сподобалось найбільше, чергуй його з оригінальним форматом раз через раз'):
+artworks ALTERNATE one video by one: TWIST (the usual reading, then the fact that turns it over, under the NO WATER
+rules, `prompts/writer.txt` 3x/3f, `script_check.check_lean`) and the ORIGINAL form (the judge's riddle, emotion or
+scene); `writer.next_class` / `write_class`. Investigation (v1.15) is valid but out of the alternation; stories stay legend.
 After the videos (v1.09, every scheduled run, no Gemini): `stats_now.py` -> `data/stats.json` (views, stayed, average
 % viewed, shares, the retention curve and the caption line viewers left at) -> `learn.py` -> `data/learn.json`
 (multipliers of hook frame, closer, theme ...; the judge's six marks re-weighted on our numbers; it switches ON by
@@ -32,9 +33,9 @@ Read before any work: `docs/BUILD_PROMPT.md` (the plan and the hard rules; §13 
 gated by `tools/script_check.py`; since v1.12 the 13 slots are the riddle, one form of four). Change a number only with a new measurement.
 
 ## Live
-**v1.15** on `main` (Nov 17 2026: two lean forms, investigation and twist, alternate day by day for every artwork, no water (one guess at most, 3-4 facts, the hook answered); v1.14 = only the place of the true peak is lowered (the opening sound as a whole, or 0.2 s around a later peak), never the whole track: v1.13 pushed two good scripts out of -16 LUFS +-1; v1.13 = the true peak is cut from mix.wav and measured again, no AAC over AAC; v1.12 = four script forms by the picture, the face lock, pauses by meaning, macro framings, the frame geometry in the director; v1.11 = the writer assembles again (v1.10 had cut off meta), the portrait is the painting's creator from Wikidata, the night writer may make 7 dry runs a night; v1.10 = a fire every hour 12:05-23:05 UTC because GitHub drops scheduled runs, a manual run of main posts the comments and refreshes the statistics too, a Gemini script with a camera target outside LOOK is refused while written; v1.09 = statistics + learning + the night writer Claude as the main writer, Gemini the backup; v1.08 = videos are made a day ahead (27-30 h) and wait private with their publish minute; v1.07 = schedule_video; v1.06 = the first public video (Daniel, 02:00 London), manual publish minute; v1.05 = THE SCHEDULE IS ON since Andrii's yes; v1.04 = channel connected, upload + schedule built; v1.03 = topics
+**v1.16** on `main` (Nov 17 2026: twist and the original form alternate one video by one; a phrase split over caption lines is spoken in one breath; v1.15 = two lean forms, investigation and twist, alternate day by day for every artwork, no water (one guess at most, 3-4 facts, the hook answered); v1.14 = only the place of the true peak is lowered (the opening sound as a whole, or 0.2 s around a later peak), never the whole track: v1.13 pushed two good scripts out of -16 LUFS +-1; v1.13 = the true peak is cut from mix.wav and measured again, no AAC over AAC; v1.12 = four script forms by the picture, the face lock, pauses by meaning, macro framings, the frame geometry in the director; v1.11 = the writer assembles again (v1.10 had cut off meta), the portrait is the painting's creator from Wikidata, the night writer may make 7 dry runs a night; v1.10 = a fire every hour 12:05-23:05 UTC because GitHub drops scheduled runs, a manual run of main posts the comments and refreshes the statistics too, a Gemini script with a camera target outside LOOK is refused while written; v1.09 = statistics + learning + the night writer Claude as the main writer, Gemini the backup; v1.08 = videos are made a day ahead (27-30 h) and wait private with their publish minute; v1.07 = schedule_video; v1.06 = the first public video (Daniel, 02:00 London), manual publish minute; v1.05 = THE SCHEDULE IS ON since Andrii's yes; v1.04 = channel connected, upload + schedule built; v1.03 = topics
 judged 1-10; v1.02 = writer + director + finder; v1.01 = the first dry run; v1.00 = the approved maket).
-Next: **v1.16**.
+Next: **v1.17**.
 
 ## Channel and schedule
 Channel: **sposcaske** (@sposcaske, id UCNamDfqgZhL8JOaAiCNY_ww). Schedule (the source of truth = `gate.py` SLOTS;

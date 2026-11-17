@@ -5,6 +5,19 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.16 = TWIST AND THE ORIGINAL FORM ALTERNATE, A PHRASE IN ONE BREATH, Andrii, Nov 17 2026 ('друге дно мені
+  сподобалось найбільше, чергуй його з оригінальним форматом раз через раз. акуратніше з тим як в озвучці ставляться
+  паузи, бо деколи вони не дуже вчасно'). (1) `writer.next_class`: the next video is the opposite class of the last
+  published artwork video in `data/slots.json` (twist <-> original = the judge's riddle, emotion or scene);
+  `next_topic` takes the best ready script of that class first; `writer.write_class` / `form_of`: the writer writes
+  the class the stock of ready scripts lacks (a tie: the class the next video needs). Investigation (v1.15) stays a
+  valid form, out of the alternation; legend for stories as before. (2) `render.speak_lines`: one synthesis per
+  PHRASE, not per caption line. Measured on the twist demo (run 44011740629): 4 phrases were broken by a caption line
+  and got a 0.22 s pause and a falling tone in the middle ('she asked if he / still held fast to his integrity.',
+  'The scholar Ilana Pardes calls / her a victim ...'). Now caption lines are joined until one ends in , . ; : ? ! (or
+  a meaning pause / a new beat starts), spoken once, and cut back into the lines at the quietest 20 ms between words
+  near the letter estimate (+-0.3 s); inside the phrase the pause is 0.
+
 - v1.15 = TWO LEAN FORMS, NO WATER, THE FORM OF THE DAY, Andrii, Nov 17 2026 ('сценарій ніби повний води та ні до
   чого не веде' ... 'так і зроби'). Why: the scripts repeated the hook instead of answering it; of Medusa's 30
   sentences about 12 only guessed ('As if', 'Maybe it begins with ... then ... eventually ...', three-beat lines,

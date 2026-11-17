@@ -85,6 +85,8 @@ def next_topic(wanted=None, skip=()):
     if wanted:
         return next((t for t in topics if t["id"] == wanted), None)
     ready = [t for t in scored if ready_script(t["id"])]              # v1.09: a topic the night writer has already written goes first
+    want = next_class()                                                # v1.16: twist and the original forms alternate, one video by one
+    ready.sort(key=lambda t: form_class(script_form(t["id"])) != want)  # stable: the best of the wanted class first
     if ready or scored:
         return (ready or scored)[0]
     return next((t for t in topics if t["id"] not in used and t.get("score") is None), None)
@@ -110,23 +112,65 @@ def brief(topic, title, facts, look=None):
     for the night writer."""
     return ((ROOT / "prompts/writer.txt").read_text(encoding="utf-8") + f"\n\nKIND  {topic['kind']}\nTITLE  {title}\n\nFACTS\n" + "\n".join(f"{i + 1}. {s}" for i, s in enumerate(facts))
             + ("\n\nANGLE\n" + "\n".join(f"{k}: {v if isinstance(v, str) else ' / '.join(v)}" for k, v in topic["angle"].items() if k != "form") if topic.get("angle") else "")
-            + "\n\nFORM  " + (form_of(topic) or "choose")
+            + "\n\nFORM  " + (form_of(topic) or "choose one of riddle, emotion, scene (this is the turn of the original forms: not twist, not investigation)")
             + ("\n\nLOOK (" + look.get("summary", "") + ")\n" + "\n".join(f"- {t['name']}: words {', '.join(t.get('words', []))}" for t in look["things"]) if look else "")
             + "\n\nAVOID\n" + ("\n".join("- " + r for r in recent()) or "- nothing yet") + learn.notes())
 
 
 FORMS = ("riddle", "emotion", "scene", "legend", "investigation", "twist")
-ROTATION = ("investigation", "twist")    # v1.15 (Andrii, Nov 17: 'так і зроби'): the two lean forms alternate day by day, so the statistics compare them
+ORIGINAL = ("riddle", "emotion", "scene")    # v1.16 (Andrii, Nov 17: 'друге дно мені сподобалось найбільше, чергуй його з оригінальним форматом раз через раз')
+
+
+def form_class(form):
+    """v1.16: "twist", "original" (riddle, emotion, scene: the judge's form) or None (legend, investigation: not in the alternation)."""
+    return "twist" if form == "twist" else "original" if form in ORIGINAL else None
+
+
+def script_form(story_id):
+    try:
+        return json.loads((ROOT / "scripts" / f"{story_id}.json").read_text(encoding="utf-8")).get("form")
+    except Exception:
+        return None
+
+
+def next_class():
+    """v1.16: the class the NEXT video should have: the opposite of the last published artwork video (data/slots.json)."""
+    try:
+        slots = json.loads((ROOT / "data/slots.json").read_text(encoding="utf-8"))["slots"].values()
+    except Exception:
+        slots = []
+    for s in sorted((s for s in slots if s.get("story") and s.get("publish_at")), key=lambda s: s["publish_at"], reverse=True):
+        c = form_class(script_form(s["story"]))
+        if c:
+            return "original" if c == "twist" else "twist"
+    return "twist"
+
+
+def write_class():
+    """v1.16: the class the writer should write now: the one the stock of ready scripts lacks, so the bot can alternate
+    (ready twist vs ready original; a tie -> the class the next video needs)."""
+    n = {"twist": 0, "original": 0}
+    for t in queue()[0]:
+        if ready_script(t["id"]):
+            c = form_class(script_form(t["id"]))
+            if c:
+                n[c] += 1
+    return next_class() if n["twist"] == n["original"] else min(n, key=n.get)
+
+
+def judge_form(topic):
+    f = (topic.get("angle") or {}).get("form") or topic.get("form")
+    return f if f in ORIGINAL else None
 
 
 def form_of(topic, day=None):
-    """v1.15: KIND story -> legend; KIND artwork -> the form of the day (investigation on even days of the calendar,
-    twist on odd ones, UTC), whatever the judge proposed: the old forms carried too much water (Andrii, Nov 17).
-    (v1.12: the form the judge gave the topic, or None.)"""
+    """v1.16: KIND story -> legend; KIND artwork -> twist or the original form (the judge's riddle, emotion or scene;
+    None = the writer chooses among those three), as `write_class` says: twist and the original alternate one video by
+    one video. (v1.15: investigation and twist alternated by the day; investigation stays a valid form, out of the
+    alternation. v1.12: the form the judge gave the topic.)"""
     if topic.get("kind") == "story":
         return "legend"
-    import datetime
-    return ROTATION[(day or datetime.datetime.now(datetime.timezone.utc).date()).toordinal() % 2]
+    return "twist" if write_class() == "twist" else judge_form(topic)
 
 
 def fact_count(sentences):

@@ -67,8 +67,41 @@ def cue_time(cam, say, t0, t1):
 
 
 # ---------------------------------------------------------------- voice
+def phrase_groups(lines):
+    """v1.16 (Andrii, Nov 17: 'акуратніше з тим як в озвучці ставляться паузи, бо деколи вони не дуже вчасно'): caption
+    lines that split ONE phrase ("she asked if he" / "still held fast to his integrity.") are spoken in one breath. A
+    group ends at a line that ends in , . ; : ? ! (a real pause in speech); the lines before that are joined."""
+    groups, cur = [], []
+    for i, ln in enumerate(lines):
+        cur.append(i)
+        nxt = lines[i + 1] if i + 1 < len(lines) else {}
+        if ln["say"].rstrip()[-1:] in ",.;:?!" or ln.get("pause") is not None or nxt.get("pause_before") or nxt.get("beat") != ln.get("beat"):
+            groups.append(cur)
+            cur = []
+    return groups + ([cur] if cur else [])
+
+
+def split_at_words(y, says):
+    """v1.16: cut one phrase's audio into its caption lines: the cut is the quietest 20 ms between words near the place
+    the letters say (the estimate +-0.3 s), never inside a word."""
+    w = [sum(len(re.sub(r"\W", "", x)) + 1.5 for x in s.split()) for s in says]
+    cuts, win, lo = [], int(0.02 * SR), 0
+    for k in range(1, len(says)):
+        est = int(len(y) * sum(w[:k]) / sum(w))
+        a, b = max(lo + win, est - int(0.3 * SR)), min(len(y) - win, est + int(0.3 * SR))
+        if b - a < win:
+            cut = est
+        else:
+            e = np.convolve(y[a:b] ** 2, np.ones(win) / win, mode="same")
+            cut = a + int(np.argmin(e + 1e-4 * np.abs(np.arange(b - a) - (est - a)) / SR))    # the quietest, then the nearest to the estimate
+        cuts.append(cut)
+        lo = cut
+    return [y[i:j] for i, j in zip([0] + cuts, cuts + [len(y)])]
+
+
 def speak_lines(story):
-    """One synthesis call per line (= one caption clause): exact clause timings, pauses are ours."""
+    """One synthesis call per PHRASE (v1.16; before: per caption line, which put a 0.22 s pause and a falling tone in
+    the middle of a phrase): the phrase is cut back into its caption lines between words, so the timings stay per line."""
     from kokoro_onnx import Kokoro
     k = Kokoro(str(KOKORO / "kokoro-v1.0.int8.onnx"), str(KOKORO / "voices-v1.0.bin"))
     kv, clips = F["voice"]["kokoro"], []
@@ -76,9 +109,10 @@ def speak_lines(story):
     parts = [(p.split(":")[0], float(p.split(":")[1]) if ":" in p else 1.0) for p in spec.split("+")]
     voice = parts[0][0] if len(parts) == 1 else sum(k.get_voice_style(n) * w for n, w in parts) / sum(w for _, w in parts)
     gap = np.zeros(int(T["pause_sentence_inner_s"] * SR), np.float32)
-    for ln in story["lines"]:
+    lines = story["lines"]
+    for g in phrase_groups(lines):
         pieces = []
-        for text in re.split(r"(?<=[.!?])\s+", ln["say"].strip()):       # every sentence ends in a real pause
+        for text in re.split(r"(?<=[.!?])\s+", " ".join(lines[i]["say"].strip() for i in g)):       # every sentence ends in a real pause
             for a, b in story.get("pronounce", {}).items():
                 text = text.replace(a, b)
             text = year_words(text)                                    # the caption keeps the digits, the voice says the halves
@@ -88,7 +122,10 @@ def speak_lines(story):
                 y = y[max(0, loud[0] - int(0.02 * sr)):loud[-1] + int(0.06 * sr)]
             n = int(len(y) * SR / sr)
             pieces += [gap] * bool(pieces) + [rough(np.interp(np.linspace(0, len(y) - 1, n), np.arange(len(y)), y).astype(np.float32))]
-        clips.append(np.concatenate(pieces))
+        y = np.concatenate(pieces)
+        clips += [y] if len(g) == 1 else split_at_words(y, [lines[i]["say"] for i in g])
+        for i in g[:-1]:
+            lines[i]["pause"] = 0.0                                    # v1.16: inside a phrase the voice runs on, no pause
     return clips
 
 
