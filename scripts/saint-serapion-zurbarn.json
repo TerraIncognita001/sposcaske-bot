@@ -36,7 +36,7 @@
     1.0
    ],
    "words": [
-    "picture"
+    "darkness"
    ]
   },
   {
@@ -190,13 +190,7 @@
    "slot": "T4",
    "text": "And the picture seems to agree.",
    "kind": "READING",
-   "source": null,
-   "show": [
-    {
-     "on": "picture",
-     "to": "main_action"
-    }
-   ]
+   "source": null
   },
   {
    "slot": "T4",
