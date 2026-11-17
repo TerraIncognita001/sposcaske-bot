@@ -1,0 +1,121 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "picture"
+   ]
+  },
+  {
+   "name": "monk",
+   "box": [
+    0.035,
+    0.135,
+    0.895,
+    1.0
+   ],
+   "words": [
+    "monk",
+    "saint",
+    "martyr"
+   ]
+  },
+  {
+   "name": "monk_top",
+   "box": [
+    0.035,
+    0.135,
+    0.895,
+    0.55
+   ],
+   "words": [
+    "friar",
+    "serapion"
+   ]
+  },
+  {
+   "name": "face",
+   "box": [
+    0.17,
+    0.21,
+    0.37,
+    0.39
+   ],
+   "words": [
+    "face",
+    "eyes",
+    "head"
+   ]
+  },
+  {
+   "name": "rope_left",
+   "box": [
+    0.06,
+    0.135,
+    0.2,
+    0.32
+   ],
+   "words": [
+    "wrists",
+    "ropes",
+    "rope"
+   ]
+  },
+  {
+   "name": "rope_right",
+   "box": [
+    0.73,
+    0.095,
+    0.895,
+    0.235
+   ],
+   "words": [
+    "hands"
+   ]
+  },
+  {
+   "name": "robes",
+   "box": [
+    0.06,
+    0.3,
+    0.86,
+    1.0
+   ],
+   "words": [
+    "robes",
+    "cloth"
+   ]
+  },
+  {
+   "name": "badge",
+   "box": [
+    0.43,
+    0.505,
+    0.505,
+    0.68
+   ],
+   "words": [
+    "badge"
+   ]
+  },
+  {
+   "name": "note",
+   "box": [
+    0.855,
+    0.575,
+    0.975,
+    0.62
+   ],
+   "words": [
+    "note"
+   ]
+  }
+ ],
+ "summary": "A young friar in heavy white robes hangs with his head fallen on his shoulder and his eyes closed, each wrist tied with rope above him. A red badge hangs on his chest and a small note is pinned on the right."
+}

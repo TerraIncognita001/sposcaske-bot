@@ -1,0 +1,373 @@
+{
+ "id": "saint-serapion-zurbarn",
+ "kind": "artwork",
+ "form": "twist",
+ "hook_frame": "This ___ ...",
+ "closer": "either_or",
+ "detail": "rope_left",
+ "home": null,
+ "subject": {
+  "title": "Saint Serapion",
+  "creator": "Francisco de Zurbarán",
+  "year": 1628,
+  "wikidata": "Q3464088"
+ },
+ "lead": {
+  "commons": "San_Serapio,_por_Francisco_de_Zurbarán.jpg",
+  "width_px": 3840,
+  "aspect": 0.8719,
+  "px": 3139,
+  "license": "Public domain",
+  "credit": "San Serapio, por Francisco de Zurbarán — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Francisco Zurbarán",
+  "credit": "Portrait of Francisco Zurbarán — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "picture"
+   ]
+  },
+  {
+   "name": "monk",
+   "box": [
+    0.035,
+    0.135,
+    0.895,
+    1.0
+   ],
+   "words": [
+    "monk",
+    "saint",
+    "martyr"
+   ]
+  },
+  {
+   "name": "monk_top",
+   "box": [
+    0.035,
+    0.135,
+    0.895,
+    0.55
+   ],
+   "words": [
+    "friar",
+    "serapion"
+   ]
+  },
+  {
+   "name": "face",
+   "box": [
+    0.17,
+    0.21,
+    0.37,
+    0.39
+   ],
+   "words": [
+    "face",
+    "eyes",
+    "head"
+   ]
+  },
+  {
+   "name": "rope_left",
+   "box": [
+    0.06,
+    0.135,
+    0.2,
+    0.32
+   ],
+   "words": [
+    "wrists",
+    "ropes",
+    "rope"
+   ]
+  },
+  {
+   "name": "rope_right",
+   "box": [
+    0.73,
+    0.095,
+    0.895,
+    0.235
+   ],
+   "words": [
+    "hands"
+   ]
+  },
+  {
+   "name": "robes",
+   "box": [
+    0.06,
+    0.3,
+    0.86,
+    1.0
+   ],
+   "words": [
+    "robes",
+    "cloth"
+   ]
+  },
+  {
+   "name": "badge",
+   "box": [
+    0.43,
+    0.505,
+    0.505,
+    0.68
+   ],
+   "words": [
+    "badge"
+   ]
+  },
+  {
+   "name": "note",
+   "box": [
+    0.855,
+    0.575,
+    0.975,
+    0.62
+   ],
+   "words": [
+    "note"
+   ]
+  }
+ ],
+ "punch": "DEATH",
+ "sentences": [
+  {
+   "slot": "T1",
+   "text": "This saint looks peacefully asleep, but his white robes are hiding a death.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "saint",
+     "to": "face"
+    },
+    {
+     "on": "robes",
+     "to": "robes"
+    }
+   ]
+  },
+  {
+   "slot": "T2",
+   "text": "This is Saint Serapion, painted by Francisco Zurbarán in 1628.",
+   "kind": "FACT",
+   "source": 1
+  },
+  {
+   "slot": "T3",
+   "text": "Most people see a tired monk resting in calm white cloth.",
+   "kind": "FACT",
+   "source": 13,
+   "show": [
+    {
+     "on": "monk",
+     "to": "monk"
+    }
+   ]
+  },
+  {
+   "slot": "T3",
+   "text": "Even the critic Tom Lubbock called the scene understated and calm.",
+   "kind": "FACT",
+   "source": 5
+  },
+  {
+   "slot": "T4",
+   "text": "And the picture seems to agree.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "picture",
+     "to": "main_action"
+    }
+   ]
+  },
+  {
+   "slot": "T4",
+   "text": "His eyes are closed and his head rests softly on his shoulder.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "T5",
+   "text": "But look at his wrists.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "wrists",
+     "to": "rope_left"
+    }
+   ]
+  },
+  {
+   "slot": "T6",
+   "text": "Ropes tie both hands to a pole.",
+   "kind": "FACT",
+   "source": 8,
+   "show": [
+    {
+     "on": "Ropes",
+     "to": "rope_left"
+    },
+    {
+     "on": "hands",
+     "to": "rope_right"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "According to the painter Alison Watt, you are seduced by this simplicity, only to realise you have been duped.",
+   "kind": "FACT",
+   "source": 15,
+   "show": [
+    {
+     "on": "simplicity",
+     "to": "robes"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "Serapion was a Mercedarian friar who fought in the Crusades and was later martyred.",
+   "kind": "FACT",
+   "source": 7,
+   "show": [
+    {
+     "on": "friar",
+     "to": "monk_top"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "Zurbarán painted him for the funeral chapel of his order in Seville.",
+   "kind": "FACT",
+   "source": 2
+  },
+  {
+   "slot": "T8",
+   "text": "He isn't sleeping.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "sleeping",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "T8",
+   "text": "He's a martyr, bound by both hands.",
+   "kind": "FACT",
+   "source": 7,
+   "show": [
+    {
+     "on": "martyr",
+     "to": "monk_top"
+    },
+    {
+     "on": "hands",
+     "to": "rope_right"
+    }
+   ]
+  },
+  {
+   "slot": "T9",
+   "text": "So now, do you see a sleeping monk, or a martyr?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "monk",
+     "to": "face"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Zurbarán": "Zoor-bah-rahn",
+  "Serapion": "Seh-rah-pee-on",
+  "Mercedarian": "Mer-seh-dair-ian"
+ },
+ "meta": {
+  "title": "This saint is not asleep",
+  "description": "Saint Serapion was painted by Francisco Zurbarán in 1628 for the funeral chapel of the Mercedarian monastery in Seville. The calm figure in white is a martyr, tied by both wrists to a pole.",
+  "tags": [
+   "art history",
+   "zurbaran",
+   "saint serapion",
+   "martyr",
+   "baroque",
+   "painting"
+  ],
+  "question": "A sleeping monk, or a martyr?"
+ },
+ "sources": [
+  {
+   "claim": "Saint Serapion  or The Martyrdom of Saint Serapion is a 1628 oil painting on canvas by the Spanish artist Francisco Zurbarán (1598–1664).",
+   "url": "https://en.wikipedia.org/wiki/Saint_Serapion_(Zurbarán)",
+   "note": "sentence T2"
+  },
+  {
+   "claim": "The dominance of the white paint used to render the cloth creates a sense of tranquillity, while the tension of the painting is derived from the dark shade created by the deep folds of the robes.",
+   "url": "https://en.wikipedia.org/wiki/Saint_Serapion_(Zurbarán)",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "He contrasted the understated and calm depiction of St.",
+   "url": "https://en.wikipedia.org/wiki/Saint_Serapion_(Zurbarán)",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "Saint Serapion is depicted by Zurbarán in a quasi-crucified pose, standing with each hand bound by ropes and chains to an overhead horizontal pole.",
+   "url": "https://en.wikipedia.org/wiki/Saint_Serapion_(Zurbarán)",
+   "note": "sentence T6"
+  },
+  {
+   "claim": "As a viewer you are seduced by this simplicity, only to realise you have been duped.",
+   "url": "https://en.wikipedia.org/wiki/Saint_Serapion_(Zurbarán)",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "The art critic draws a comparison in the manner of the depiction of Campion's death and that of Saint Serapion of Algiers (1179–1240), a Mercedarian friar who fought in the Third Crusade of 1196 and w",
+   "url": "https://en.wikipedia.org/wiki/Saint_Serapion_(Zurbarán)",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "The work was commissioned by the Mercedarian Order to hang in the De Profundis (funerary chapel) hall of their monastery in Seville (now Museum of Fine Arts of Seville).",
+   "url": "https://en.wikipedia.org/wiki/Saint_Serapion_(Zurbarán)",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "The art critic draws a comparison in the manner of the depiction of Campion's death and that of Saint Serapion of Algiers (1179–1240), a Mercedarian friar who fought in the Third Crusade of 1196 and w",
+   "url": "https://en.wikipedia.org/wiki/Saint_Serapion_(Zurbarán)",
+   "note": "sentence T8"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-17"
+}
