@@ -38,10 +38,16 @@ BEAT = {"S1": "hook", "S2": "ident", "S3": "setup", "S4": "turn", "S5": "detail"
         "E18": "return", "E19": "question",
         "C1": "hook", "C2": "ident", "C3": "glance", "C4": "think", "C5": "drift", "C6": "impact", "C7": "second", "C8": "triad", "C9": "absence",
         "C10": "flip", "C11": "meanings", "C12": "painter", "C13": "question",
-        "L1": "hook", "L2": "ident", "L3": "story", "L4": "aftermath", "L5": "marker", "L6": "honesty", "L7": "empathy", "L8": "ask", "L9": "question"}
+        "L1": "hook", "L2": "ident", "L3": "story", "L4": "aftermath", "L5": "marker", "L6": "honesty", "L7": "empathy", "L8": "ask", "L9": "question",
+        # v1.15 investigation and twist
+        "I1": "hook", "I2": "ident", "I3": "case", "I4": "clue", "I5": "clue", "I6": "clue", "I7": "answer", "I8": "more", "I9": "question",
+        "T1": "hook", "T2": "ident", "T3": "usual", "T4": "seems", "T5": "turn", "T6": "detail", "T7": "fact", "T8": "flip", "T9": "question"}
 # v1.12: scene and legend are shot by the riddle's mechanism: each of their slots moves the camera like this slot of the riddle
 LEGACY = {"C1": "S1", "C2": "S2", "C3": "S3", "C4": "S5", "C5": "S4", "C6": "S10", "C7": "S11", "C8": "S6", "C9": "S7", "C10": "S10", "C11": "S11",
-          "C12": "S12", "C13": "S13", "L1": "S1", "L2": "S2", "L3": "S3", "L4": "X", "L5": "S10", "L6": "S12", "L7": "M", "L8": "M", "L9": "S13"}
+          "C12": "S12", "C13": "S13", "L1": "S1", "L2": "S2", "L3": "S3", "L4": "X", "L5": "S10", "L6": "S12", "L7": "M", "L8": "M", "L9": "S13",
+          # v1.15: a clue names things like the riddle's detail; the answer moves like the reveal; the fact like the backstory
+          "I1": "S1", "I2": "S2", "I3": "S3", "I4": "S5", "I5": "S5", "I6": "S5", "I7": "S11", "I8": "S9", "I9": "S13",
+          "T1": "S1", "T2": "S2", "T3": "S3", "T4": "S3", "T5": "S4", "T6": "S5", "T7": "S7", "T8": "S11", "T9": "S13"}
 F = json.loads((Path(__file__).resolve().parent / "format.json").read_text(encoding="utf-8"))
 JOIN = {"and", "but", "or", "with", "that", "because", "after", "before", "when", "while", "who", "which", "so", "yet", "if", "as", "until"}
 norm = lambda w: re.sub(r"[^\w'’]", "", w).lower().replace("’", "'")

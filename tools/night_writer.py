@@ -129,15 +129,15 @@ def save(tid, answer_path, look_path):
     else:
         form = w.get("form") if w.get("form") in writer.FORMS else None
         if not form:
-            print("NOT SAVED:\n  - answer: \"form\" must be riddle, emotion, scene or legend (prompts/writer.txt section 3)")
+            print("NOT SAVED:\n  - answer: \"form\" must be one of " + ", ".join(writer.FORMS) + " (prompts/writer.txt section 3)")
             return 1
-        res, words, n = script_check.check([s["text"].strip() for s in sents], fx["title"], w["punch"], form)
+        res, words, n = script_check.check([s["text"].strip() for s in sents], fx["title"], w["punch"], form, writer.fact_count(sents))    # v1.15
         bad += [f"construction: {name}: {det}" for ok, hard, name, det in res if not ok and hard]
         for ok, hard, name, det in res:
             if not ok and not hard:
                 print("warn", name, "|", det)
         last = re.sub(r"[^\w']", "", sents[0]["text"].split()[-1]).upper()
-        if form in ("riddle", "legend") and w["punch"].upper() != last:
+        if form in ("riddle", "legend", "investigation", "twist") and w["punch"].upper() != last:    # v1.15: the lean forms end the hook on it too
             bad.append(f"punch is {w['punch']!r} but the hook ends on {last!r}")
         if re.sub(r"\W", "_", str(w.get("detail", "")).lower()) not in names:
             bad.append(f"detail {w.get('detail')!r} is not a name of look.json ({', '.join(sorted(names))})")

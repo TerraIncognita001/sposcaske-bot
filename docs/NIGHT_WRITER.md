@@ -36,6 +36,11 @@ Read every `FAILED EARLIER` line: it says which check refused an earlier script 
    Every crop must show the thing its words name, whole and tight. Fix the boxes until it does. The camera goes
    exactly where the boxes say.
 4. Write `work/night/<id>/answer.json`: the JSON of `prompts/writer.txt` section 7. Rules that matter most:
+   - **v1.15: THE BRIEF'S FORM IS THE FORM OF THE DAY** (investigation on even days, twist on odd days, UTC; a
+     story is a legend). Write that one, under the NO WATER rules of `prompts/writer.txt` 3x: every sentence a new
+     fact, a new thing of LOOK or a turn; one guess at most; the hook's question answered with facts. Shapes:
+     `scripts/demo-investigation-goya.json`, `scripts/demo-twist-job.json` (demos: read the shape, never reuse a
+     sentence).
    - **THE FORM FIRST (v1.12).** `prompts/writer.txt` section 3 has four constructions: riddle (the question in
      the picture, about 55 s), emotion (a face and what it feels, about 110 s), scene (the eye walks from the
      first thing to the second, about 120 s), legend (a named man's story). The brief says FORM, or "choose": then

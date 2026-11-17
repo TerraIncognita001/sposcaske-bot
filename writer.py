@@ -115,13 +115,23 @@ def brief(topic, title, facts, look=None):
             + "\n\nAVOID\n" + ("\n".join("- " + r for r in recent()) or "- nothing yet") + learn.notes())
 
 
-FORMS = ("riddle", "emotion", "scene", "legend")
+FORMS = ("riddle", "emotion", "scene", "legend", "investigation", "twist")
+ROTATION = ("investigation", "twist")    # v1.15 (Andrii, Nov 17: 'так і зроби'): the two lean forms alternate day by day, so the statistics compare them
 
 
-def form_of(topic):
-    """The form the judge gave the topic (v1.12), or None: then the writer chooses by section 3 of the prompt."""
-    f = (topic.get("angle") or {}).get("form") or topic.get("form")
-    return f if f in FORMS else "legend" if topic.get("kind") == "story" else None
+def form_of(topic, day=None):
+    """v1.15: KIND story -> legend; KIND artwork -> the form of the day (investigation on even days of the calendar,
+    twist on odd ones, UTC), whatever the judge proposed: the old forms carried too much water (Andrii, Nov 17).
+    (v1.12: the form the judge gave the topic, or None.)"""
+    if topic.get("kind") == "story":
+        return "legend"
+    import datetime
+    return ROTATION[(day or datetime.datetime.now(datetime.timezone.utc).date()).toordinal() % 2]
+
+
+def fact_count(sentences):
+    """v1.15: how many sentences are FACT with a FACTS number (the lean forms need 3-4)."""
+    return sum(1 for s in sentences if s.get("kind") == "FACT" and isinstance(s.get("source"), int))
 
 
 def picture_aspect(path):
@@ -216,7 +226,7 @@ def write(topic, work):
     for attempt in range(4):
         w = gemini(base + note, ok, purpose="script")
         form = w.get("form") if w.get("form") in FORMS else form_of(topic) or "riddle"
-        res, words, n = script_check.check([s["text"].strip() for s in w["sentences"]], title, w["punch"], form)
+        res, words, n = script_check.check([s["text"].strip() for s in w["sentences"]], title, w["punch"], form, fact_count(w["sentences"]))    # v1.15: the facts are counted
         hard = [f"{name}: {d}" for good, h, name, d in res if not good and h]
         script = None
         if not hard:                                                    # v1.10: the form holds; can the director shoot it?

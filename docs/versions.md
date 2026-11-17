@@ -5,6 +5,23 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.15 = TWO LEAN FORMS, NO WATER, THE FORM OF THE DAY, Andrii, Nov 17 2026 ('сценарій ніби повний води та ні до
+  чого не веде' ... 'так і зроби'). Why: the scripts repeated the hook instead of answering it; of Medusa's 30
+  sentences about 12 only guessed ('As if', 'Maybe it begins with ... then ... eventually ...', three-beat lines,
+  'Imagine ... Would you ...?') and there was one fact sentence in the whole video. The best kept videos so far are
+  the short ones (Daniel 55 s: 95 % viewed; the violin: 87 %). New in `prompts/writer.txt` 3e/3f and
+  `tools/script_check.py` `check_lean`: INVESTIGATION (120-190 words, I1-I9: hook, ident, the case as a question,
+  'The first / second / third clue is ...' each with a fact, 'The answer is ...', 'But there's one more thing.' + a
+  last fact, 'So ...?') and TWIST (110-180 words, T1-T9: hook, ident, 'For centuries, / Most people' the usual
+  reading, 'And the picture seems to agree.', the turn, 'According to <source>,' the fact that turns it over,
+  '<She> isn't ... <She's> ...', 'So ...?'). NO WATER (3x), checked: at most one guessing sentence, no three-beat
+  lines and no 'Imagine', at least 4 (investigation) or 3 (twist) FACT sentences with a source, the hook is answered.
+  `writer.form_of`: KIND artwork alternates investigation (even calendar days, UTC) and twist (odd days), whatever
+  the judge proposed, so `learn.py` (it already counts "form") compares them; KIND story stays legend. The director
+  shoots the new slots with the riddle's mechanism (`LEGACY`: a clue like the detail, the answer like the reveal).
+  Ready scripts of the old forms are used as they are. Demos (never uploaded, "hold"): `scripts/demo-investigation-
+  goya.json` (the same picture as the riddle of Nov 18, before/after) and `scripts/demo-twist-job.json`.
+
 - v1.14 = ONLY THE PLACE OF THE PEAK IS LOWERED, Andrii, Nov 16 2026 ('так! перезніми Сон розуму'). Why: v1.13 lowered the
   WHOLE track when the true peak was over -0.5 dBFS, and the encoder often overshot again, so the next pass lowered
   it more: Ambassadors (Nov 15) -0.1 -> +0.6 dBFS -> 2.5 dB down = -18.5 LUFS; Goya's Sleep of Reason (Nov 16, a

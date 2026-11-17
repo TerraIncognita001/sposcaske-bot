@@ -118,7 +118,73 @@ def check_form(sents, title, punch, form):
     return out, words, n
 
 
-def check(sents, title="", punch=None, form="riddle"):
+HEDGE = re.compile(r"^(Almost as if|As if|Maybe|Perhaps|It's almost as if)\b", re.I)
+
+
+def check_lean(sents, title, punch, form, facts=None):
+    """v1.15 (Andrii, Nov 17: 'сценарій ніби повний води та ні до чого не веде'): investigation = a question, three
+    clues, the answer; twist = the usual reading, then the one fact that turns it over. Both forbid water: one guess
+    at most, the facts carry the video. `facts` = how many sentences are FACT with a source (None: not checked, e.g.
+    bot.py, which reads the sentences only)."""
+    wc = [len(s.split()) for s in sents]
+    words, n, out, text = sum(wc), len(sents), [], " ".join(sents)
+
+    def rule(name, ok, detail="", hard=True):
+        out.append((bool(ok), hard, name, detail))
+
+    find = lambda rx, lo=0: next((i for i in range(lo, n) if re.search(rx, sents[i])), None)
+    lo_w, hi_w, lo_n, hi_n, min_facts = {"investigation": (120, 190, 12, 26, 4), "twist": (110, 180, 12, 24, 3)}[form]
+    rule(f"length {lo_w}-{hi_w} words ({form})", lo_w <= words <= hi_w, f"{words} words")
+    rule(f"{lo_n}-{hi_n} sentences", lo_n <= n <= hi_n, f"{n} sentences")
+    rule("mean sentence <= 12 words", words / n <= 12, f"{words / n:.1f}")
+    rule("no sentence over 24 words", max(wc) <= 24, f"longest {max(wc)}")
+    rule("the hook uses a reference frame", any(re.search(rx, sents[0]) for rx in HOOK), sents[0])
+    rule("the hook is 8-18 words", 8 <= wc[0] <= 18, f"{wc[0]}")
+    if title:
+        rule("the hook does not name the painting", title.lower() not in sents[0].lower())
+    if punch:
+        rule("the hook ends on the punch word (the red word on screen)", re.sub(r"\W", "", sents[0].split()[-1]).lower() == punch.lower(), sents[0].split()[-1])
+    rule("IDENT in sentence 2: 'This is <Title>, painted by <Artist> in <year>.' or 'In <time>, a <role> named <Name> ...'",
+         n > 1 and (re.match(IDENT_A, sents[1]) or re.match(IDENT_B, sents[1])), sents[1] if n > 1 else "")
+    hedges = [s for s in sents if HEDGE.match(s)]
+    rule("NO WATER: at most one sentence of guessing (As if / Maybe / Perhaps)", len(hedges) <= 1, " / ".join(hedges))
+    rule("NO WATER: no three-beat lines and no 'Imagine ... Would you' in this form",
+         not any(THREE.match(s) and len(s.split()) <= 7 for s in sents) and not find(r"^(But )?[Ii]magine\b"))
+    if facts is not None:
+        rule(f"NO WATER: at least {min_facts} FACT sentences with a source", facts >= min_facts, f"{facts}")
+    rule("an 'According to <named source>, ...' sentence", find(r"^(And )?[Aa]ccording to\b", 2) is not None)
+    rule("the last sentence is a question beginning 'So', 6-16 words", re.match(r"^So\b", sents[-1]) and sents[-1].endswith("?") and 6 <= wc[-1] <= 16, sents[-1])
+    if form == "investigation":
+        rule("I3 THE CASE: a question in sentence 3 or 4 that does not begin 'So'", any(i < n and sents[i].endswith("?") and not sents[i].startswith("So") for i in (2, 3)),
+             " / ".join(sents[2:4]))
+        c = [find(rf"^The {k} clue is\b") for k in ("first", "second", "third")]
+        rule("I4-I6 CLUES: 'The first clue is ...', 'The second clue is ...', 'The third clue is ...' in order",
+             all(x is not None for x in c) and c[0] < c[1] < c[2], str(c))
+        ia = find(r"^(And )?[Tt]he answer is\b", (c[2] or 0) if all(x is not None for x in c) else 0)
+        rule("I7 THE ANSWER: a sentence beginning 'The answer is' after the third clue", ia is not None)
+        im = find(r"^But there's one more (thing|detail|fact)\.$", ia or 0)
+        rule("I8 ONE MORE THING: 'But there's one more thing.' after the answer, then one sentence", im is not None and im + 2 < n, sents[im] if im is not None else "missing")
+    else:                                                               # twist
+        iu = find(r"^(For centuries|For years|For \w+ years|Most people|Everyone)\b")
+        rule("T3 THE USUAL STORY begins 'For centuries,' / 'Most people' / 'Everyone' in sentence 3", iu == 2, sents[2] if n > 2 else "")
+        ia = find(r"^And the (picture|painting|print|etching|engraving|scene) seems to agree\.$")
+        rule("T4 'And the picture seems to agree.'", ia is not None and (iu is None or ia > iu))
+        it = find(TURN, 3)
+        rule("T5 TURN 'But look at <his | her | the> <thing>.' after T4", it is not None and (ia is None or it > ia), sents[it] if it is not None else "missing")
+        ib = find(r"^According to\b", it or 3)
+        rule("T7 THE FACT begins 'According to <named source>,' after the turn", ib is not None)
+        fl = next((i for i in range((ib or 3) + 1, n - 1) if re.match(r"^(So )?(This|It|She|He|They|The \w+) (isn't|wasn't|aren't|weren't|is not|was not)\b", sents[i])
+                   and re.match(r"^(It's|It is|It was|She's|She is|She was|He's|He is|He was|They're|They are|They were)\b", sents[i + 1])), None)
+        rule("T8 FLIP: '<She | It> isn't ...' then '<She's | It's> ...' after the fact", fl is not None)
+    rule("no semicolons, dashes, brackets, exclamation marks", not re.search(r"[;—–()\[\]!]", text))
+    rule("no digits except one year", len(re.findall(r"\d+", text)) <= 1, " ".join(re.findall(r"\d+", text)), hard=False)
+    rule("banned words absent", not re.search(r"\b(masterpiece|iconic|delve|tapestry|testament|breathtaking|um|subscribe|like and)\b", text, re.I))
+    return out, words, n
+
+
+def check(sents, title="", punch=None, form="riddle", facts=None):
+    if form in ("investigation", "twist"):
+        return check_lean(sents, title, punch, form, facts)          # v1.15
     if form in ("emotion", "scene", "legend"):
         return check_form(sents, title, punch, form)
     wc = [len(s.split()) for s in sents]

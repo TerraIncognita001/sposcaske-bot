@@ -1,0 +1,436 @@
+{
+ "id": "demo-investigation-goya",
+ "kind": "artwork",
+ "form": "investigation",
+ "hook_frame": "Why is / does / did ___?",
+ "closer": "either_or",
+ "detail": "owl_stylus",
+ "home": null,
+ "subject": {
+  "title": "The Sleep of Reason Produces Monsters",
+  "creator": "Francisco Goya",
+  "year": 1799,
+  "wikidata": "Q671237"
+ },
+ "lead": {
+  "commons": "Francisco_José_de_Goya_y_Lucientes_-_The_sleep_of_reason_produces_monsters_(No._43),_from_Los_Caprichos_-_Google_Art_Project.jpg",
+  "width_px": 3840,
+  "aspect": 0.6612,
+  "px": 2645,
+  "license": "Public domain",
+  "credit": "Francisco José de Goya y Lucientes - The sleep of reason produces monsters (No. 43), from Los Caprichos - Google Art Project — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Francisco Goya",
+  "credit": "Portrait of Francisco Goya — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.25,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "creatures",
+    "monsters"
+   ]
+  },
+  {
+   "name": "man",
+   "box": [
+    0.045,
+    0.54,
+    0.8,
+    0.995
+   ],
+   "words": [
+    "man",
+    "dreamer",
+    "goya"
+   ]
+  },
+  {
+   "name": "man_head",
+   "box": [
+    0.1,
+    0.54,
+    0.42,
+    0.69
+   ],
+   "words": [
+    "man",
+    "head"
+   ]
+  },
+  {
+   "name": "owl_stylus",
+   "box": [
+    0.0,
+    0.48,
+    0.24,
+    0.645
+   ],
+   "words": [
+    "owl",
+    "stylus"
+   ]
+  },
+  {
+   "name": "owl_wide",
+   "box": [
+    0.0,
+    0.44,
+    0.36,
+    0.7
+   ],
+   "words": [
+    "owl"
+   ]
+  },
+  {
+   "name": "owls",
+   "box": [
+    0.0,
+    0.43,
+    0.95,
+    0.7
+   ],
+   "words": [
+    "owls"
+   ]
+  },
+  {
+   "name": "owl_center",
+   "box": [
+    0.08,
+    0.43,
+    0.7,
+    0.57
+   ],
+   "words": [
+    "wings"
+   ]
+  },
+  {
+   "name": "bats",
+   "box": [
+    0.32,
+    0.0,
+    1.0,
+    0.5
+   ],
+   "words": [
+    "bats"
+   ]
+  },
+  {
+   "name": "big_bat",
+   "box": [
+    0.47,
+    0.0,
+    0.8,
+    0.33
+   ],
+   "words": [
+    "bat"
+   ]
+  },
+  {
+   "name": "lynx",
+   "box": [
+    0.8,
+    0.715,
+    0.99,
+    0.925
+   ],
+   "words": [
+    "lynx"
+   ]
+  },
+  {
+   "name": "cat_eyes",
+   "box": [
+    0.49,
+    0.545,
+    0.6,
+    0.615
+   ],
+   "words": [
+    "eyes"
+   ]
+  },
+  {
+   "name": "desk",
+   "box": [
+    0.0,
+    0.72,
+    0.38,
+    0.995
+   ],
+   "words": [
+    "desk",
+    "caption",
+    "words"
+   ]
+  }
+ ],
+ "punch": "PEN",
+ "sentences": [
+  {
+   "slot": "I1",
+   "text": "Why is the creature closest to this sleeping man holding out a pen?",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "creature",
+     "to": "owl_wide"
+    },
+    {
+     "on": "man",
+     "to": "man_head"
+    },
+    {
+     "on": "pen",
+     "to": "owl_stylus"
+    }
+   ]
+  },
+  {
+   "slot": "I2",
+   "text": "This is The Sleep of Reason Produces Monsters, engraved by Francisco Goya in 1799.",
+   "kind": "FACT",
+   "source": 18
+  },
+  {
+   "slot": "I3",
+   "text": "Are these creatures attacking the artist, or working for him?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "creatures",
+     "to": "owls"
+    },
+    {
+     "on": "artist",
+     "to": "man"
+    }
+   ]
+  },
+  {
+   "slot": "I4",
+   "text": "The first clue is the desk.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "desk",
+     "to": "desk"
+    }
+   ]
+  },
+  {
+   "slot": "I4",
+   "text": "The title of the print is written on its front.",
+   "kind": "FACT",
+   "source": 11,
+   "show": [
+    {
+     "on": "title",
+     "to": "desk"
+    }
+   ]
+  },
+  {
+   "slot": "I5",
+   "text": "The second clue is the sleeper himself.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "sleeper",
+     "to": "man"
+    }
+   ]
+  },
+  {
+   "slot": "I5",
+   "text": "Many observers believe Goya drew himself asleep among his own drawing tools.",
+   "kind": "FACT",
+   "source": 9,
+   "show": [
+    {
+     "on": "himself",
+     "to": "man_head"
+    }
+   ]
+  },
+  {
+   "slot": "I6",
+   "text": "The third clue is Goya's own caption.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "caption",
+     "to": "desk"
+    }
+   ]
+  },
+  {
+   "slot": "I6",
+   "text": "According to Goya's caption, fantasy abandoned by reason produces impossible monsters.",
+   "kind": "FACT",
+   "source": 15,
+   "show": [
+    {
+     "on": "monsters",
+     "to": "main_action"
+    }
+   ]
+  },
+  {
+   "slot": "I6",
+   "text": "United with reason, fantasy is the mother of the arts.",
+   "kind": "FACT",
+   "source": 15,
+   "show": [
+    {
+     "on": "fantasy",
+     "to": "owl_stylus"
+    }
+   ]
+  },
+  {
+   "slot": "I7",
+   "text": "The answer is that these creatures are his own imagination.",
+   "kind": "FACT",
+   "source": 12,
+   "show": [
+    {
+     "on": "creatures",
+     "to": "main_action"
+    }
+   ]
+  },
+  {
+   "slot": "I7",
+   "text": "Without reason they are monsters, but with it they give him his art.",
+   "kind": "FACT",
+   "source": 13,
+   "show": [
+    {
+     "on": "art",
+     "to": "owl_stylus"
+    }
+   ]
+  },
+  {
+   "slot": "I8",
+   "text": "But there's one more thing.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "I8",
+   "text": "In Spanish, the word sueño means both sleep and dream.",
+   "kind": "FACT",
+   "source": 45
+  },
+  {
+   "slot": "I8",
+   "text": "So the title can also say that the dream of reason produces monsters.",
+   "kind": "FACT",
+   "source": 1,
+   "show": [
+    {
+     "on": "title",
+     "to": "desk"
+    }
+   ]
+  },
+  {
+   "slot": "I9",
+   "text": "So is Goya sleeping here, or dreaming up his next print?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "Goya",
+     "to": "man"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Goya": "Goy-a",
+  "sueño": "sway-nyo"
+ },
+ "meta": {
+  "title": "Why Goya's monsters hand him a pen",
+  "description": "The Sleep of Reason Produces Monsters is plate 43 of Los Caprichos by Francisco Goya, published in 1799. Goya's caption says fantasy abandoned by reason produces impossible monsters, but united with reason it is the mother of the arts.",
+  "tags": [
+   "art history",
+   "goya",
+   "los caprichos",
+   "etching",
+   "sleep of reason"
+  ],
+  "question": "Is Goya sleeping, or dreaming up his next print?"
+ },
+ "sources": [
+  {
+   "claim": "Los Caprichos, Goya's set of 80 aquatints that were published in the year 1799, emphasize the flaws inherent in humans.",
+   "url": "https://en.wikipedia.org/wiki/The_Sleep_of_Reason_Produces_Monsters",
+   "note": "sentence I2"
+  },
+  {
+   "claim": "The title of the print, as marked on the front of the desk, is typically read as proclaiming Goya's adherence to the values of the Enlightenment: without reason, evil and corruption prevail.",
+   "url": "https://en.wikipedia.org/wiki/The_Sleep_of_Reason_Produces_Monsters",
+   "note": "sentence I4"
+  },
+  {
+   "claim": "Many observers believe that Goya intended to depict himself asleep amidst his drawing tools, his reason dulled by slumber, bedeviled by creatures that prowl in the dark.",
+   "url": "https://en.wikipedia.org/wiki/The_Sleep_of_Reason_Produces_Monsters",
+   "note": "sentence I5"
+  },
+  {
+   "claim": "The full epigraph for Capricho No. 43 reads; \"Fantasy abandoned by reason produces impossible monsters: united with her [reason], she [fantasy] is the mother of the arts and the origin of their marvel",
+   "url": "https://en.wikipedia.org/wiki/The_Sleep_of_Reason_Produces_Monsters",
+   "note": "sentence I6"
+  },
+  {
+   "claim": "The full epigraph for Capricho No. 43 reads; \"Fantasy abandoned by reason produces impossible monsters: united with her [reason], she [fantasy] is the mother of the arts and the origin of their marvel",
+   "url": "https://en.wikipedia.org/wiki/The_Sleep_of_Reason_Produces_Monsters",
+   "note": "sentence I6"
+  },
+  {
+   "claim": "Goya also included a caption for this print that may suggest a different interpretation: \"Imagination abandoned by reason produces impossible monsters; united with her, she is the mother of the arts a",
+   "url": "https://en.wikipedia.org/wiki/The_Sleep_of_Reason_Produces_Monsters",
+   "note": "sentence I7"
+  },
+  {
+   "claim": "On this interpretation, Goya believed that imagination should never be completely renounced in favor of the strictly rational, as imagination (in combination with reason) is what produces works of art",
+   "url": "https://en.wikipedia.org/wiki/The_Sleep_of_Reason_Produces_Monsters",
+   "note": "sentence I7"
+  },
+  {
+   "claim": "This conventional interpretation of this plate—an endorsement of Enlightenment ideology, translating sueño as \"sleep\" rather than the equally justifiable translation as \"dream\"—remains for the most pa",
+   "url": "https://en.wikipedia.org/wiki/The_Sleep_of_Reason_Produces_Monsters",
+   "note": "sentence I8"
+  },
+  {
+   "claim": "The Sleep of Reason Produces Monsters or The Dream of Reason Produces Monsters (Spanish: El sueño de la razón produce monstruos) is an aquatint by the Spanish painter and printmaker Francisco Goya.",
+   "url": "https://en.wikipedia.org/wiki/The_Sleep_of_Reason_Produces_Monsters",
+   "note": "sentence I8"
+  }
+ ],
+ "written_by": "Claude (demo of v1.15, not for upload)",
+ "hold": true
+}

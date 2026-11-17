@@ -31,9 +31,21 @@ The channel this genre comes from does not tell every picture the same way. The 
   scene    the picture holds TWO parties, or a second thing most people do not see at first (someone in the
            shadow, a figure behind, a thing in the corner). The video walks the eye from the first to the second.
   legend   KIND story: a named person and what he claimed happened. The video tells the story.
+  investigation (v1.15) the picture holds a question, and the facts can ANSWER it: three clues, then the answer.
+  twist         (v1.15) everyone reads the picture one way, and one fact turns that reading over.
 When the task gives FORM, use it. When it says "choose", choose by the rule above: a detail in a face or in the
 eyes -> emotion; a second figure or thing that changes the scene -> scene; KIND story -> legend; otherwise riddle.
 Write EXACTLY the slots of that form, in that order. The slot codes go into "slot".
+
+### 3x. NO WATER (v1.15, Andrii, Nov 17: 'сценарій ніби повний води та ні до чого не веде'; binding in the forms
+investigation and twist)
+- Every sentence does one of three jobs: it gives a NEW FACT (with its FACTS number), it shows a NEW THING of LOOK
+  (the camera goes there), or it TURNS the story. A sentence that only repeats, decorates or guesses is cut.
+- At most ONE sentence of guessing in the whole script ("As if", "Almost as if", "Maybe", "Perhaps").
+- The hook asks something, and the script ANSWERS it with facts before the last line. The last question is about
+  the answer, never the hook asked again.
+- No three-beat lines, no triads of negatives, no "Imagine ... Would you ...?" in these two forms.
+- The facts carry the video: at least four FACT sentences (investigation) or three (twist), each with "source".
 
 ### 3a. FORM riddle (105-140 words, about 50-60 seconds)
 S1  HOOK. One sentence, 8-18 words, present tense. It makes ONE promise: something hidden, wrong or forbidden is in
@@ -167,6 +179,42 @@ L8  ASK. "So let me ask you something."
 L9  QUESTION. One sentence, 16-28 words: "If ___, would you ___, or would you ___?"
 Name the things of LOOK and the evidence pictures with their own words: the camera goes to them.
 
+### 3e. FORM investigation (v1.15; 120-190 words, about 55-75 seconds)
+A case solved on screen. The viewer gets a question, three clues found IN THE PICTURE or IN THE FACTS, and the answer.
+I1  HOOK. One sentence, 8-18 words, a frame of S1 (not one in AVOID). It asks or claims ONE concrete thing about the
+    detail. The LAST WORD is the punch word (3-8 letters).
+I2  IDENT. As S2.
+I3  THE CASE. One sentence, 8-16 words, ending "?": the question, said plainly (it must not begin with "So").
+I4  CLUE ONE. "The first clue is <a thing of LOOK>." (4-10 words), then one or two sentences that say what it shows,
+    at least one of them a FACT.
+I5  CLUE TWO. "The second clue is <a thing of LOOK or a named source>." then one or two sentences, a FACT among them.
+I6  CLUE THREE. "The third clue is <...>." then one or two sentences. One of the three clues opens with
+    "According to <named source>," inside its sentences.
+I7  THE ANSWER. One or two sentences, the first beginning "The answer is" (or "And the answer is"): what the
+    detail is and why it is there, from the facts. No hedging words.
+I8  ONE MORE THING. "But there's one more thing." then one sentence, 8-18 words: a last fact that makes the answer
+    darker or stranger.
+I9  QUESTION. One sentence, 6-16 words, beginning "So" and ending "?": about the answer, for the comments.
+Mean sentence length at most 12 words. Name the things of LOOK with their own words: the camera goes to each.
+
+### 3f. FORM twist (v1.15; 110-180 words, about 50-70 seconds)
+The common reading first, then the one fact that turns it over.
+T1  HOOK. One sentence, 8-18 words, a frame of S1 (not one in AVOID). It says the usual reading is wrong without
+    saying why. The LAST WORD is the punch word (3-8 letters).
+T2  IDENT. As S2.
+T3  THE USUAL STORY. Two or three sentences, the first beginning "For centuries," or "Most people" or "Everyone":
+    how this picture is usually read, with a FACT (a scholar, a tradition, a text).
+T4  IT SEEMS TO FIT. "And the picture seems to agree." then one sentence naming two things of LOOK that seem to
+    prove the usual reading.
+T5  TURN. "But look at <his | her | the> <thing>."
+T6  DETAIL. One sentence, 4-10 words: what is there, said flat.
+T7  THE FACT. One sentence, 12-24 words, beginning "According to <named source>,": the fact that turns the reading
+    over. Then one or two FACT sentences that make it hold.
+T8  FLIP. Two short sentences: "<She | He | It | This> isn't <the usual reading>." then "<She's | He's | It's> <what
+    the fact shows>." (3-10 words each).
+T9  QUESTION. One sentence, 6-16 words, beginning "So" and ending "?": which reading the viewer now believes.
+Mean sentence length at most 12 words.
+
 ### 4. How it must feel
 The viewer should feel, in this order: "I know this picture" -> "wait, what is that?" -> a chill -> "I never saw it
 this way" -> the wish to answer. Calm voice, no shouting words, no exclamation marks.
@@ -193,11 +241,11 @@ source's author, another artist's picture of the same scene. Only things that ca
 images. For each: a key, a search query for Wikimedia Commons, and the words of your script that name it.
 
 ### 7. Output (JSON only)
-{"form": "riddle | emotion | scene | legend", "detail": "<name from LOOK>", "home": "<LOOK name of the face the
+{"form": "riddle | emotion | scene | legend | investigation | twist", "detail": "<name from LOOK>", "home": "<LOOK name of the face the
  video holds: emotion and scene only>", "hook_frame": "<frame used>", "punch": "<the punch word, upper case>",
  "closer": "open | either_or", "portrait_of": "<Full Name as in the ident>",
  "evidence": [{"key": "score", "query": "<Commons search>", "words": ["sonata", "note"]}],
- "sentences": [{"slot": "<slot code of the form: S1, E1, C1, L1 ...>", "text": "...", "kind": "HOOK|FACT|LOOK|READING", "source": <FACTS number or null>,
+ "sentences": [{"slot": "<slot code of the form: S1, E1, C1, L1, I1, T1 ...>", "text": "...", "kind": "HOOK|FACT|LOOK|READING", "source": <FACTS number or null>,
                 "show": [{"on": "<a word of this sentence>", "to": "<LOOK name, or key:full for an evidence picture>"}]}],
  "pronounce": {"<hard name>": "<plain English respelling>"},
  "meta": {"title": "<under 70 characters, no clickbait lie>", "description": "<2-3 factual sentences>",
@@ -208,6 +256,8 @@ images. For each: a key, a search query for Wikimedia Commons, and the words of 
 [ ] the form fits the picture, and every slot of that form is there, in order, with its own code
 [ ] the fixed joints are worded as required (the ident, the turn, "According to", the markers, the last question)
 [ ] riddle and legend: S1 / L1 ends on the punch word. emotion: the punch word is the feeling of E9
+[ ] investigation and twist: no water (3x): every sentence a new fact, a new thing or a turn; one guess at most;
+    the hook's question is answered; I1 / T1 ends on the punch word
 [ ] emotion: "home" is the face and "detail" the small thing; after E4 nothing outside the face is named
 [ ] emotion: E4 and E9 are three beats with commas; E13 is "Imagine ..." and three questions; E17 is two "Maybe"
 [ ] the word count fits the form, no digit except one year, and not one sentence is taken from another video
