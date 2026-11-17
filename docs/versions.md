@@ -5,6 +5,16 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.17 = A SECOND ARTICLE FOR THE FACTS, Andrii, Nov 17 2026 ('доповни факти Йова статтею про Траверсі'). Why: the
+  topic's article (Job's wife) never names the painter, so the ident had no source. A topic may now list
+  "more_wikipedia" (`data/backlog.json`); `writer.topic_facts` appends their sentences up to the references, each
+  marked "[<article>] ", and `assemble` links such a fact to its own article. Without the topic's own article
+  (Wikipedia 429) nothing is appended, so the brief refuses instead of writing on the painter's facts alone (seen
+  once while testing). Job's topic: + "Gaspare Traversi" (fact: "Traversi's early works ... Job Derided (National
+  Museum in Warsaw)"). Also: `writer.recent` skips the demo scripts (the twist demo had put its own punch into AVOID).
+  The Job twist script is written on these facts (ident: "This is Job Derided, painted by Gaspare Traversi, an Italian
+  Rococo painter.").
+
 - v1.16 = TWIST AND THE ORIGINAL FORM ALTERNATE, A PHRASE IN ONE BREATH, Andrii, Nov 17 2026 ('друге дно мені
   сподобалось найбільше, чергуй його з оригінальним форматом раз через раз. акуратніше з тим як в озвучці ставляться
   паузи, бо деколи вони не дуже вчасно'). (1) `writer.next_class`: the next video is the opposite class of the last

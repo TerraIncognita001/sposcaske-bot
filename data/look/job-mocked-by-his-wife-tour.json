@@ -1,0 +1,120 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "picture"
+   ]
+  },
+  {
+   "name": "wife",
+   "box": [
+    0.0,
+    0.02,
+    0.55,
+    0.61
+   ],
+   "words": [
+    "wife",
+    "woman"
+   ]
+  },
+  {
+   "name": "wife_face",
+   "box": [
+    0.355,
+    0.0,
+    0.5,
+    0.215
+   ],
+   "words": [
+    "wife",
+    "face",
+    "brow"
+   ]
+  },
+  {
+   "name": "wife_mouth",
+   "box": [
+    0.38,
+    0.13,
+    0.45,
+    0.2
+   ],
+   "words": [
+    "mouth"
+   ]
+  },
+  {
+   "name": "wife_hands",
+   "box": [
+    0.32,
+    0.19,
+    0.56,
+    0.37
+   ],
+   "words": [
+    "finger",
+    "hands"
+   ]
+  },
+  {
+   "name": "job",
+   "box": [
+    0.12,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "job",
+    "him"
+   ]
+  },
+  {
+   "name": "job_face",
+   "box": [
+    0.7,
+    0.02,
+    0.94,
+    0.3
+   ],
+   "words": [
+    "job",
+    "face"
+   ]
+  },
+  {
+   "name": "job_hand",
+   "box": [
+    0.67,
+    0.34,
+    0.845,
+    0.5
+   ],
+   "words": [
+    "hand",
+    "chest"
+   ]
+  },
+  {
+   "name": "job_open_hand",
+   "box": [
+    0.23,
+    0.61,
+    0.4,
+    0.79
+   ],
+   "words": [
+    "palm"
+   ]
+  }
+ ],
+ "summary": "A young woman leans in from the left, her mouth open and a finger pointing, toward the naked old Job, who sits on the ground with a hand on his chest and looks up to heaven."
+}

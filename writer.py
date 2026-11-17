@@ -95,7 +95,7 @@ def next_topic(wanted=None, skip=()):
 def recent(n=8):
     """Hook frames, punch words and closers of the last scripts: the writer must not repeat them."""
     out = []
-    for f in sorted((ROOT / "scripts").glob("*.json"), key=lambda p: p.stat().st_mtime)[-n:]:
+    for f in sorted((p for p in (ROOT / "scripts").glob("*.json") if not p.name.startswith("demo-")), key=lambda p: p.stat().st_mtime)[-n:]:    # v1.17: a demo is no video
         s = json.loads(f.read_text(encoding="utf-8"))
         out.append(f"{s.get('hook_frame', '?')} | punch {s.get('punch')} | closer {s.get('closer', '?')}")
     return out
@@ -156,6 +156,23 @@ def write_class():
             if c:
                 n[c] += 1
     return next_class() if n["twist"] == n["original"] else min(n, key=n.get)
+
+
+MORE = re.compile(r"^\[(?P<title>[^\]]+)\] ")                 # v1.17: a fact taken from a second article: "[Gaspare Traversi] ..."
+
+
+def topic_facts(topic):
+    """v1.17 (Andrii, Nov 17: 'доповни факти Йова статтею про Траверсі'): the facts of the topic's article, then the
+    facts of each article in "more_wikipedia" (the painter, when the topic's article does not name him), marked
+    "[<article>] " so the source of every sentence is known. A second article stops at its references."""
+    facts, image, qid, title = sources.wikipedia(topic["wikipedia"])
+    for extra in (topic.get("more_wikipedia", []) if facts else []):   # no facts of the topic's own article: nothing (the caller refuses)
+        more, _, _, t2 = sources.wikipedia("=" + extra)
+        for s in more:
+            if re.match(r"^(Gallery|Notes|References|See also|External links|Further reading)\b", s):
+                break
+            facts.append(f"[{t2}] {s}")
+    return facts, image, qid, title
 
 
 def judge_form(topic):
@@ -236,13 +253,13 @@ def assemble(topic, facts, lead, look, w, title):
             "look": [{"name": re.sub(r"\W", "_", t["name"].lower()), "box": [round(float(v), 3) for v in t["box"]], "words": [x.lower() for x in t.get("words", [])]} for t in look["things"]],
             "punch": w["punch"].upper(), "sentences": [dict(s, show=[dict(x, to=target(x.get("to", ""))) for x in s["show"]]) if s.get("show") else s for s in w["sentences"]],
             "pronounce": w.get("pronounce", {}), "meta": w["meta"],    # v1.10: "Man Face" and " eyes" mean man_face and eyes; v1.11: the comment had cut off pronounce and meta (KeyError 'meta')
-            "sources": [{"claim": facts[s["source"] - 1][:200], "url": "https://en.wikipedia.org/wiki/" + title.replace(" ", "_"), "note": f"sentence {s['slot']}"}
+            "sources": [{"claim": MORE.sub("", facts[s["source"] - 1])[:200], "url": "https://en.wikipedia.org/wiki/" + (MORE.match(facts[s["source"] - 1]) or {"title": title})["title"].replace(" ", "_"), "note": f"sentence {s['slot']}"}    # v1.17: a fact of a second article links to it
                         for s in w["sentences"] if isinstance(s.get("source"), int) and 0 < s["source"] <= len(facts)]}
 
 
 def write(topic, work):
     work.mkdir(parents=True, exist_ok=True)
-    facts, page_image, qid, title = sources.wikipedia(topic["wikipedia"])
+    facts, page_image, qid, title = topic_facts(topic)                 # v1.17: + the articles in "more_wikipedia"
     if len(facts) < 8 or not page_image:
         print(f"{topic['id']}: Wikipedia gave {len(facts)} sentences and picture {page_image}: not enough")
         return None

@@ -51,7 +51,7 @@ def brief(tid):
         return 3
     d = NIGHT / tid
     d.mkdir(parents=True, exist_ok=True)
-    facts, image, qid, title = sources.wikipedia(topic["wikipedia"])
+    facts, image, qid, title = writer.topic_facts(topic)               # v1.17: + the articles in "more_wikipedia"
     image = image or topic.get("picture")
     if len(facts) < 8 or not image:
         print(f"{tid}: Wikipedia gave {len(facts)} sentences and picture {image}: not enough (skip this topic, say so in the report)")

@@ -1,0 +1,359 @@
+{
+ "id": "job-mocked-by-his-wife-tour",
+ "kind": "artwork",
+ "form": "twist",
+ "hook_frame": "This ___ is about to ___, and ___.",
+ "closer": "either_or",
+ "detail": "wife_face",
+ "home": null,
+ "subject": {
+  "title": "Job's wife",
+  "creator": "Gaspare Traversi",
+  "year": null,
+  "wikidata": "Q16070970"
+ },
+ "lead": {
+  "commons": "Gaspare_Traversi_-_Job_mocked_by_his_wife.jpg",
+  "width_px": 3840,
+  "aspect": 1.354,
+  "px": 4712,
+  "license": "Public domain",
+  "credit": "Gaspare Traversi - Job mocked by his wife — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Gaspare Traversi",
+  "credit": "Portrait of Gaspare Traversi — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "picture"
+   ]
+  },
+  {
+   "name": "wife",
+   "box": [
+    0.0,
+    0.02,
+    0.55,
+    0.61
+   ],
+   "words": [
+    "wife",
+    "woman"
+   ]
+  },
+  {
+   "name": "wife_face",
+   "box": [
+    0.355,
+    0.0,
+    0.5,
+    0.215
+   ],
+   "words": [
+    "wife",
+    "face",
+    "brow"
+   ]
+  },
+  {
+   "name": "wife_mouth",
+   "box": [
+    0.38,
+    0.13,
+    0.45,
+    0.2
+   ],
+   "words": [
+    "mouth"
+   ]
+  },
+  {
+   "name": "wife_hands",
+   "box": [
+    0.32,
+    0.19,
+    0.56,
+    0.37
+   ],
+   "words": [
+    "finger",
+    "hands"
+   ]
+  },
+  {
+   "name": "job",
+   "box": [
+    0.12,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "job",
+    "him"
+   ]
+  },
+  {
+   "name": "job_face",
+   "box": [
+    0.7,
+    0.02,
+    0.94,
+    0.3
+   ],
+   "words": [
+    "job",
+    "face"
+   ]
+  },
+  {
+   "name": "job_hand",
+   "box": [
+    0.67,
+    0.34,
+    0.845,
+    0.5
+   ],
+   "words": [
+    "hand",
+    "chest"
+   ]
+  },
+  {
+   "name": "job_open_hand",
+   "box": [
+    0.23,
+    0.61,
+    0.4,
+    0.79
+   ],
+   "words": [
+    "palm"
+   ]
+  }
+ ],
+ "punch": "OPPOSITE",
+ "sentences": [
+  {
+   "slot": "T1",
+   "text": "This woman is famous for cruelty, and the Bible may say the exact opposite.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "woman",
+     "to": "wife"
+    }
+   ]
+  },
+  {
+   "slot": "T2",
+   "text": "This is Job Derided, painted by Gaspare Traversi, an Italian Rococo painter.",
+   "kind": "FACT",
+   "source": 24
+  },
+  {
+   "slot": "T3",
+   "text": "For centuries, Job's wife has been read as the villain of his story.",
+   "kind": "FACT",
+   "source": 9,
+   "show": [
+    {
+     "on": "wife",
+     "to": "wife"
+    }
+   ]
+  },
+  {
+   "slot": "T3",
+   "text": "The theologian Abraham Kuyper even called her Satan's instrument for torturing Job.",
+   "kind": "FACT",
+   "source": 11,
+   "show": [
+    {
+     "on": "Job",
+     "to": "job_face"
+    }
+   ]
+  },
+  {
+   "slot": "T4",
+   "text": "And the picture seems to agree.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "picture",
+     "to": "main_action"
+    }
+   ]
+  },
+  {
+   "slot": "T4",
+   "text": "Her mouth is open at his ear, and her finger points at him.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "mouth",
+     "to": "wife_mouth"
+    },
+    {
+     "on": "finger",
+     "to": "wife_hands"
+    }
+   ]
+  },
+  {
+   "slot": "T5",
+   "text": "But look at her face.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "face",
+     "to": "wife_face"
+    }
+   ]
+  },
+  {
+   "slot": "T6",
+   "text": "Her brow is tight with worry.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "brow",
+     "to": "wife_face"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "According to the Book of Job, she asked if he still held fast to his integrity.",
+   "kind": "FACT",
+   "source": 3,
+   "show": [
+    {
+     "on": "Job",
+     "to": "job_face"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "And the word translated as curse actually means bless.",
+   "kind": "FACT",
+   "source": 4
+  },
+  {
+   "slot": "T7",
+   "text": "The scholar Ilana Pardes calls her a victim of the same divine tests.",
+   "kind": "FACT",
+   "source": 12,
+   "show": [
+    {
+     "on": "victim",
+     "to": "wife_face"
+    }
+   ]
+  },
+  {
+   "slot": "T8",
+   "text": "She isn't Satan's weapon.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "T8",
+   "text": "She's a second victim of the same test.",
+   "kind": "FACT",
+   "source": 12,
+   "show": [
+    {
+     "on": "victim",
+     "to": "wife_face"
+    }
+   ]
+  },
+  {
+   "slot": "T9",
+   "text": "So is she mocking him, or the only one telling him the truth?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "him",
+     "to": "job_face"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Traversi": "Tra-vair-see",
+  "Kuyper": "Kai-per",
+  "Pardes": "Par-dess"
+ },
+ "meta": {
+  "title": "The wife of Job was not what you were told",
+  "description": "Job Derided is an early work by the Italian Rococo painter Gaspare Traversi, now in the National Museum in Warsaw. Job's wife is usually read as a villain, but the Hebrew word translated as curse literally means bless.",
+  "tags": [
+   "art history",
+   "traversi",
+   "book of job",
+   "bible",
+   "rococo",
+   "painting"
+  ],
+  "question": "Is she mocking him, or telling him the truth?"
+ },
+ "sources": [
+  {
+   "claim": "Early career Traversi's early works, while still indebted to Solimena, already reveal a deep and highly individual realism, for example Job Derided (National Museum in Warsaw), the Portrait of a Man (",
+   "url": "https://en.wikipedia.org/wiki/Gaspare_Traversi",
+   "note": "sentence T2"
+  },
+  {
+   "claim": "Evaluation Job's wife is usually viewed negatively.",
+   "url": "https://en.wikipedia.org/wiki/Job's_wife",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "Abraham Kuyper even suggests that she is Job's last trial: \"Satan knew he could use her as an instrument with which to grieve and torture his victim, and for that reason he permitted her to live.\" Oth",
+   "url": "https://en.wikipedia.org/wiki/Job's_wife",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "She says to him in verse 9, \"Do you still hold fast your integrity?",
+   "url": "https://en.wikipedia.org/wiki/Job's_wife",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "The word translated \"curse\" actually means \"bless\", but almost all English translations view it as a euphemism.",
+   "url": "https://en.wikipedia.org/wiki/Job's_wife",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "Ilana Pardes appeals to 19:17 in saying that \"she too, after all, is a victim of these divine tests in addition to being pained by exposure to his afflictions\".",
+   "url": "https://en.wikipedia.org/wiki/Job's_wife",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "Ilana Pardes appeals to 19:17 in saying that \"she too, after all, is a victim of these divine tests in addition to being pained by exposure to his afflictions\".",
+   "url": "https://en.wikipedia.org/wiki/Job's_wife",
+   "note": "sentence T8"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-17"
+}
