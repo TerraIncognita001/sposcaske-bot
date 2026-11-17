@@ -1,0 +1,374 @@
+{
+ "id": "john-dee-dee",
+ "kind": "story",
+ "form": "legend",
+ "hook_frame": "He was ___",
+ "closer": "either_or",
+ "detail": "eyes",
+ "home": null,
+ "subject": {
+  "title": "John Dee",
+  "creator": "John Dee",
+  "year": null,
+  "wikidata": "Q201484"
+ },
+ "lead": {
+  "commons": "John_Dee_Ashmolean.jpg",
+  "width_px": 3840,
+  "aspect": 1.0,
+  "px": 2880,
+  "license": "Public domain",
+  "credit": "John Dee Ashmolean — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "John Dee",
+  "credit": "Portrait of John Dee — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "portrait"
+   ]
+  },
+  {
+   "name": "dee",
+   "box": [
+    0.13,
+    0.12,
+    0.9,
+    0.76
+   ],
+   "words": [
+    "dee",
+    "scholar",
+    "man"
+   ]
+  },
+  {
+   "name": "dee_face",
+   "box": [
+    0.35,
+    0.15,
+    0.6,
+    0.47
+   ],
+   "words": [
+    "face",
+    "him"
+   ]
+  },
+  {
+   "name": "eyes",
+   "box": [
+    0.39,
+    0.285,
+    0.56,
+    0.34
+   ],
+   "words": [
+    "eyes"
+   ]
+  },
+  {
+   "name": "beard",
+   "box": [
+    0.36,
+    0.4,
+    0.52,
+    0.68
+   ],
+   "words": [
+    "beard"
+   ]
+  },
+  {
+   "name": "cap",
+   "box": [
+    0.38,
+    0.2,
+    0.66,
+    0.3
+   ],
+   "words": [
+    "cap"
+   ]
+  },
+  {
+   "name": "inscription",
+   "box": [
+    0.19,
+    0.135,
+    0.4,
+    0.35
+   ],
+   "words": [
+    "inscription",
+    "name"
+   ]
+  },
+  {
+   "name": "curtain",
+   "box": [
+    0.33,
+    0.0,
+    0.72,
+    0.135
+   ],
+   "words": [
+    "curtain"
+   ]
+  }
+ ],
+ "punch": "ANGELS",
+ "sentences": [
+  {
+   "slot": "L1",
+   "text": "He was the Queen's own scholar, and he spent his nights trying to talk to angels.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "scholar",
+     "to": "dee_face"
+    }
+   ]
+  },
+  {
+   "slot": "L2",
+   "text": "In the sixteenth century, a scholar named John Dee advised Queen Elizabeth and then tried to speak with angels.",
+   "kind": "FACT",
+   "source": 2
+  },
+  {
+   "slot": "L3",
+   "text": "One night, Dee looked into a scrying stone, hoping the angels would answer.",
+   "kind": "FACT",
+   "source": 57,
+   "show": [
+    {
+     "on": "Dee",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "L3",
+   "text": "But instead of angels, he found a young man named Edward Kelley.",
+   "kind": "FACT",
+   "source": 58
+  },
+  {
+   "slot": "L3",
+   "text": "What happened next consumed him.",
+   "kind": "FACT",
+   "source": 59,
+   "show": [
+    {
+     "on": "him",
+     "to": "dee_face"
+    }
+   ]
+  },
+  {
+   "slot": "L3",
+   "text": "Every session began with prayer.",
+   "kind": "FACT",
+   "source": 60
+  },
+  {
+   "slot": "L3",
+   "text": "Every meal gave way to fasting.",
+   "kind": "FACT",
+   "source": 60
+  },
+  {
+   "slot": "L3",
+   "text": "He left the Queen's service and wandered through Europe.",
+   "kind": "FACT",
+   "source": 5
+  },
+  {
+   "slot": "L3",
+   "text": "But when he came home, his house and library had been vandalised.",
+   "kind": "FACT",
+   "source": 7
+  },
+  {
+   "slot": "L3",
+   "text": "It was ruined.",
+   "kind": "FACT",
+   "source": 7
+  },
+  {
+   "slot": "L4",
+   "text": "He returned to the Queen's service, but her successor, James the First, turned him away.",
+   "kind": "FACT",
+   "source": 8
+  },
+  {
+   "slot": "L4",
+   "text": "The man who coined the words British Empire died in poverty in London.",
+   "kind": "FACT",
+   "source": 9,
+   "show": [
+    {
+     "on": "man",
+     "to": "dee"
+    }
+   ]
+  },
+  {
+   "slot": "L5",
+   "text": "But here's the disturbing part.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "L5",
+   "text": "Nobody even knows where he is buried, and the Queen's own adviser has no grave to visit.",
+   "kind": "FACT",
+   "source": 9,
+   "show": [
+    {
+     "on": "adviser",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "L6",
+   "text": "Of course, we cannot know whether any angel ever spoke to him.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "L6",
+   "text": "The story comes from his life as his biographers tell it.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "L7",
+   "text": "But imagine being the cleverest mind of your age, and still feeling that the answers were just out of reach.",
+   "kind": "READING",
+   "source": 54
+  },
+  {
+   "slot": "L8",
+   "text": "So let me ask you something.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "L9",
+   "text": "If you had the greatest library in England, would you keep reading, or would you look into the stone?",
+   "kind": "READING",
+   "source": 41,
+   "show": [
+    {
+     "on": "stone",
+     "to": "eyes"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Kelley": "Kelly",
+  "vandalised": "vandalized"
+ },
+ "meta": {
+  "title": "The Queen's scholar who tried to talk to angels",
+  "description": "John Dee was the court astronomer and advisor to Elizabeth I. In the 1580s he turned to scrying with Edward Kelley, and he died in poverty in London with no known grave.",
+  "tags": [
+   "history",
+   "john dee",
+   "elizabeth i",
+   "occult",
+   "alchemy",
+   "edward kelley"
+  ],
+  "question": "Would you keep reading, or look into the stone?"
+ },
+ "sources": [
+  {
+   "claim": "He was the court astronomer for, and advisor to, Elizabeth I, and spent much of his time on alchemy, divination, and Hermetic philosophy.",
+   "url": "https://en.wikipedia.org/wiki/John_Dee",
+   "note": "sentence L2"
+  },
+  {
+   "claim": "He sought to contact spirits through scrying, which he thought would act as an intermediary between himself and the angels.",
+   "url": "https://en.wikipedia.org/wiki/John_Dee",
+   "note": "sentence L3"
+  },
+  {
+   "claim": "Dee's first attempts with scryers were unsatisfactory, but in 1582, he met Edward Kelley (then calling himself Edward Talbot), who impressed him greatly with his abilities.",
+   "url": "https://en.wikipedia.org/wiki/John_Dee",
+   "note": "sentence L3"
+  },
+  {
+   "claim": "Dee took Kelley into his service and began to devote all his energies to his supernatural pursuits.",
+   "url": "https://en.wikipedia.org/wiki/John_Dee",
+   "note": "sentence L3"
+  },
+  {
+   "claim": "These \"spiritual conferences\" or \"actions\" were conducted with intense Christian piety, always after periods of purification, prayer and fasting.",
+   "url": "https://en.wikipedia.org/wiki/John_Dee",
+   "note": "sentence L3"
+  },
+  {
+   "claim": "These \"spiritual conferences\" or \"actions\" were conducted with intense Christian piety, always after periods of purification, prayer and fasting.",
+   "url": "https://en.wikipedia.org/wiki/John_Dee",
+   "note": "sentence L3"
+  },
+  {
+   "claim": "Dee eventually left Elizabeth's service and went on a quest for knowledge of the occult and supernatural.",
+   "url": "https://en.wikipedia.org/wiki/John_Dee",
+   "note": "sentence L3"
+  },
+  {
+   "claim": "Upon his return to England, he found his home and library vandalised.",
+   "url": "https://en.wikipedia.org/wiki/John_Dee",
+   "note": "sentence L3"
+  },
+  {
+   "claim": "Upon his return to England, he found his home and library vandalised.",
+   "url": "https://en.wikipedia.org/wiki/John_Dee",
+   "note": "sentence L3"
+  },
+  {
+   "claim": "He eventually returned to the Queen's service, but was turned away when she was succeeded by James I.",
+   "url": "https://en.wikipedia.org/wiki/John_Dee",
+   "note": "sentence L4"
+  },
+  {
+   "claim": "He died in poverty in London, and his gravesite is unknown.",
+   "url": "https://en.wikipedia.org/wiki/John_Dee",
+   "note": "sentence L4"
+  },
+  {
+   "claim": "He died in poverty in London, and his gravesite is unknown.",
+   "url": "https://en.wikipedia.org/wiki/John_Dee",
+   "note": "sentence L5"
+  },
+  {
+   "claim": "Later life By the early 1580s, Dee was discontented with his progress in learning the secrets of nature and his diminishing influence and recognition in court circles.",
+   "url": "https://en.wikipedia.org/wiki/John_Dee",
+   "note": "sentence L7"
+  },
+  {
+   "claim": "Dee's library, a centre of learning outside the universities, became the greatest in England and attracted many scholars.",
+   "url": "https://en.wikipedia.org/wiki/John_Dee",
+   "note": "sentence L9"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-17"
+}

@@ -1,0 +1,105 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "portrait"
+   ]
+  },
+  {
+   "name": "dee",
+   "box": [
+    0.13,
+    0.12,
+    0.9,
+    0.76
+   ],
+   "words": [
+    "dee",
+    "scholar",
+    "man"
+   ]
+  },
+  {
+   "name": "dee_face",
+   "box": [
+    0.35,
+    0.15,
+    0.6,
+    0.47
+   ],
+   "words": [
+    "face",
+    "him"
+   ]
+  },
+  {
+   "name": "eyes",
+   "box": [
+    0.39,
+    0.285,
+    0.56,
+    0.34
+   ],
+   "words": [
+    "eyes"
+   ]
+  },
+  {
+   "name": "beard",
+   "box": [
+    0.36,
+    0.4,
+    0.52,
+    0.68
+   ],
+   "words": [
+    "beard"
+   ]
+  },
+  {
+   "name": "cap",
+   "box": [
+    0.38,
+    0.2,
+    0.66,
+    0.3
+   ],
+   "words": [
+    "cap"
+   ]
+  },
+  {
+   "name": "inscription",
+   "box": [
+    0.19,
+    0.135,
+    0.4,
+    0.35
+   ],
+   "words": [
+    "inscription",
+    "name"
+   ]
+  },
+  {
+   "name": "curtain",
+   "box": [
+    0.33,
+    0.0,
+    0.72,
+    0.135
+   ],
+   "words": [
+    "curtain"
+   ]
+  }
+ ],
+ "summary": "A portrait of the old scholar John Dee in a black cap, white ruff and dark gown, with a long white beard, inside a painted oval frame with a Latin inscription and a red curtain."
+}
