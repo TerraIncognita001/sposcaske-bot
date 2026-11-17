@@ -1,10 +1,49 @@
 {
  "_about": "written by learn.py (v1.09) from data/stats.json. on = false: the bot ignores this file.",
- "updated": "2026-11-16T22:27Z",
+ "updated": "2026-11-17T04:26Z",
  "on": false,
- "videos_counted": 0,
+ "videos_counted": 1,
  "rule": "on at 8 videos public for 3 days; a value needs 3 videos",
- "mult": {},
+ "mult": {
+  "form": {
+   "riddle": {
+    "n": 1,
+    "mean": 6.31,
+    "m": 1.0
+   }
+  },
+  "hook_frame": {
+   "about_to": {
+    "n": 1,
+    "mean": 6.31,
+    "m": 1.0
+   }
+  },
+  "closer": {},
+  "kind": {},
+  "theme": {},
+  "century": {
+   "19th": {
+    "n": 1,
+    "mean": 6.31,
+    "m": 1.0
+   }
+  },
+  "length": {
+   "under 60 s": {
+    "n": 1,
+    "mean": 6.31,
+    "m": 1.0
+   }
+  },
+  "writer": {
+   "hand": {
+    "n": 1,
+    "mean": 6.31,
+    "m": 1.0
+   }
+  }
+ },
  "judge_weights": {
   "G": 1.0,
   "D": 1.0,
@@ -13,5 +52,6 @@
   "Y": 1.0,
   "S": 1.0
  },
- "judge_fit": null
+ "judge_fit": null,
+ "mean_score": 6.31
 }

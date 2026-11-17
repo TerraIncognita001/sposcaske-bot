@@ -91,7 +91,7 @@
     }
    },
    "hook": "There's a terrifying detail on this violin, and it explains why the painter stopped to listen.",
-   "views": 112,
+   "views": 113,
    "likes": 10,
    "comments": 1,
    "score": 10.93,
@@ -130,10 +130,10 @@
     }
    },
    "hook": "Something about this peaceful sleeping woman feels completely wrong, filled with hidden dread.",
-   "views": 46,
+   "views": 48,
    "likes": 0,
    "comments": 1,
-   "score": 3.93
+   "score": 3.98
   },
   "bZ8y6RVO2Ow": {
    "story": "lucifer-von-stuck",
@@ -162,10 +162,10 @@
     }
    },
    "hook": "This painting may hide something that sits in total darkness, completely awake.",
-   "views": 1125,
-   "likes": 37,
+   "views": 1152,
+   "likes": 38,
    "comments": 3,
-   "score": 7.42
+   "score": 7.45
   },
   "NO2YjSazYLg": {
    "story": "ambassadors-holbein",
@@ -194,12 +194,44 @@
     }
    },
    "hook": "There's a disturbing detail in this diplomatic room most people miss.",
-   "views": 130,
+   "views": 131,
    "likes": 4,
    "comments": 1,
-   "score": 5.09
+   "score": 5.1
+  },
+  "gz8Ng36PBl4": {
+   "story": "portrait-of-innocent-x-velzquez",
+   "slot": "E2026-11-17#2",
+   "title": "The pope who called his own portrait too true",
+   "publish_at": "2026-11-17T02:00:00Z",
+   "seconds": 115.6,
+   "f": {
+    "kind": "artwork",
+    "form": "emotion",
+    "hook_frame": "something_about",
+    "punch": "DISTRUST",
+    "closer": "either_or",
+    "theme": "watcher",
+    "century": "17th",
+    "length": "over 75 s",
+    "writer": "claude",
+    "judge": 9,
+    "judge_scores": {
+     "G": 2,
+     "D": 2,
+     "F": 1,
+     "T": 2,
+     "Y": 1,
+     "S": 1
+    }
+   },
+   "hook": "There's something colder than anger about the way this old man looks back at you.",
+   "views": 198,
+   "likes": 17,
+   "comments": 2,
+   "score": 6.03
   }
  },
- "read_at": "2026-11-16T22:27:03Z",
+ "read_at": "2026-11-17T04:26:23Z",
  "_about": "written by stats_now.py (v1.09): one entry per public video; learn.py reads it. Do not edit by hand."
 }
