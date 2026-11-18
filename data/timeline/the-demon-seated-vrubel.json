@@ -1,0 +1,299 @@
+{
+ "total": 112.46145124716556,
+ "lines": [
+  {
+   "t0": 1.65,
+   "t1": 2.74,
+   "beat": "hook",
+   "say": "This painting may hide"
+  },
+  {
+   "t0": 2.74,
+   "t1": 4.91,
+   "beat": "hook",
+   "say": "the loneliest feeling ever given"
+  },
+  {
+   "t0": 4.91,
+   "t1": 6.67,
+   "beat": "hook",
+   "say": "to a creature built like a god."
+  },
+  {
+   "t0": 7.32,
+   "t1": 9.06,
+   "beat": "ident",
+   "say": "This is The Demon Seated,"
+  },
+  {
+   "t0": 9.28,
+   "t1": 12.1,
+   "beat": "ident",
+   "say": "painted by Mikhail Vrubel in 1890."
+  },
+  {
+   "t0": 12.7,
+   "t1": 14.72,
+   "beat": "contrast",
+   "say": "And this isn't a devil with horns."
+  },
+  {
+   "t0": 15.32,
+   "t1": 17.83,
+   "beat": "contrast",
+   "say": "It's a young giant among stone flowers."
+  },
+  {
+   "t0": 18.43,
+   "t1": 19.06,
+   "beat": "beats",
+   "say": "Strong,"
+  },
+  {
+   "t0": 19.96,
+   "t1": 20.62,
+   "beat": "beats",
+   "say": "silent,"
+  },
+  {
+   "t0": 21.17,
+   "t1": 22.4,
+   "beat": "beats",
+   "say": "almost gentle."
+  },
+  {
+   "t0": 23.0,
+   "t1": 24.28,
+   "beat": "turn",
+   "say": "But look at his eyes."
+  },
+  {
+   "t0": 24.93,
+   "t1": 25.89,
+   "beat": "detail",
+   "say": "He's waiting."
+  },
+  {
+   "t0": 26.49,
+   "t1": 27.64,
+   "beat": "detail",
+   "say": "There's a shadow under"
+  },
+  {
+   "t0": 27.64,
+   "t1": 29.17,
+   "beat": "detail",
+   "say": "the eye turned away from you."
+  },
+  {
+   "t0": 29.77,
+   "t1": 31.97,
+   "beat": "doubt",
+   "say": "And yet it doesn't feel like evil at all."
+  },
+  {
+   "t0": 32.57,
+   "t1": 33.91,
+   "beat": "look",
+   "say": "Look into his eyes."
+  },
+  {
+   "t0": 34.51,
+   "t1": 35.75,
+   "beat": "look",
+   "say": "There's sorrow there."
+  },
+  {
+   "t0": 36.35,
+   "t1": 37.05,
+   "beat": "beats",
+   "say": "A heavy,"
+  },
+  {
+   "t0": 37.95,
+   "t1": 38.52,
+   "beat": "beats",
+   "say": "quiet,"
+  },
+  {
+   "t0": 39.07,
+   "t1": 40.21,
+   "beat": "beats",
+   "say": "endless sorrow."
+  },
+  {
+   "t0": 40.81,
+   "t1": 42.06,
+   "beat": "feeling",
+   "say": "As if he already knows"
+  },
+  {
+   "t0": 42.06,
+   "t1": 43.6,
+   "beat": "feeling",
+   "say": "nobody will come for him."
+  },
+  {
+   "t0": 44.95,
+   "t1": 47.0,
+   "beat": "backstory",
+   "say": "According to Lermontov's poem,"
+  },
+  {
+   "t0": 47.22,
+   "t1": 48.75,
+   "beat": "backstory",
+   "say": "this demon fell in love,"
+  },
+  {
+   "t0": 48.97,
+   "t1": 50.29,
+   "beat": "backstory",
+   "say": "had his hopes dashed,"
+  },
+  {
+   "t0": 50.51,
+   "t1": 52.03,
+   "beat": "backstory",
+   "say": "and was finally crushed."
+  },
+  {
+   "t0": 52.63,
+   "t1": 55.48,
+   "beat": "moment",
+   "say": "And Vrubel seems to paint something rarely shown."
+  },
+  {
+   "t0": 57.33,
+   "t1": 58.81,
+   "beat": "moment",
+   "say": "Not the demon's fall,"
+  },
+  {
+   "t0": 59.41,
+   "t1": 61.11,
+   "beat": "moment",
+   "say": "but the long silence after it."
+  },
+  {
+   "t0": 61.71,
+   "t1": 63.33,
+   "beat": "moment",
+   "say": "The moment when he understands there"
+  },
+  {
+   "t0": 63.33,
+   "t1": 64.97,
+   "beat": "moment",
+   "say": "is no place left for him."
+  },
+  {
+   "t0": 66.27,
+   "t1": 67.68,
+   "beat": "empathy",
+   "say": "Imagine wanting love"
+  },
+  {
+   "t0": 67.68,
+   "t1": 69.57,
+   "beat": "empathy",
+   "say": "and being shut out of your world for it."
+  },
+  {
+   "t0": 70.17,
+   "t1": 71.5,
+   "beat": "empathy",
+   "say": "Would you keep hoping?"
+  },
+  {
+   "t0": 72.1,
+   "t1": 73.77,
+   "beat": "empathy",
+   "say": "Would you ask for forgiveness?"
+  },
+  {
+   "t0": 75.37,
+   "t1": 77.49,
+   "beat": "empathy",
+   "say": "Or would you start planning your revenge?"
+  },
+  {
+   "t0": 78.49,
+   "t1": 81.05,
+   "beat": "marker",
+   "say": "That's what makes this painting so unsettling."
+  },
+  {
+   "t0": 81.65,
+   "t1": 83.4,
+   "beat": "reveal",
+   "say": "The demon is still beautiful,"
+  },
+  {
+   "t0": 83.62,
+   "t1": 85.81,
+   "beat": "reveal",
+   "say": "but his eyes no longer look hopeful."
+  },
+  {
+   "t0": 86.41,
+   "t1": 88.39,
+   "beat": "reveal",
+   "say": "His calm mouth says one thing,"
+  },
+  {
+   "t0": 88.61,
+   "t1": 90.44,
+   "beat": "reveal",
+   "say": "his tired eyes say another."
+  },
+  {
+   "t0": 91.44,
+   "t1": 93.41,
+   "beat": "marker",
+   "say": "And maybe that is the worst of it."
+  },
+  {
+   "t0": 94.01,
+   "t1": 96.5,
+   "beat": "idea",
+   "say": "Maybe evil does not begin with hatred."
+  },
+  {
+   "t0": 97.1,
+   "t1": 98.98,
+   "beat": "idea",
+   "say": "Maybe it begins with longing,"
+  },
+  {
+   "t0": 99.2,
+   "t1": 100.91,
+   "beat": "idea",
+   "say": "then becomes loneliness,"
+  },
+  {
+   "t0": 101.13,
+   "t1": 103.16,
+   "beat": "idea",
+   "say": "and eventually turns into sorrow."
+  },
+  {
+   "t0": 103.76,
+   "t1": 105.7,
+   "beat": "return",
+   "say": "So look at him one more time."
+  },
+  {
+   "t0": 106.5,
+   "t1": 108.92,
+   "beat": "question",
+   "say": "Do you see a monster waiting for his revenge?"
+  },
+  {
+   "t0": 109.52,
+   "t1": 112.11,
+   "beat": "question",
+   "say": "Or a lonely spirit nobody ever answered?"
+  }
+ ]
+}

@@ -1,72 +1,87 @@
 {
  "_about": "written by learn.py (v1.09) from data/stats.json. on = false: the bot ignores this file.",
- "updated": "2026-11-18T02:51Z",
+ "updated": "2026-11-18T20:28Z",
  "on": false,
- "videos_counted": 3,
+ "videos_counted": 4,
  "rule": "on at 8 videos public for 3 days; a value needs 3 videos",
  "mult": {
   "form": {
    "riddle": {
-    "n": 3,
-    "mean": 7.79,
+    "n": 4,
+    "mean": 8.77,
     "m": 1.0
    }
   },
   "hook_frame": {
    "detail_most_miss": {
     "n": 1,
-    "mean": 10.97,
+    "mean": 11.45,
+    "m": 1.0
+   },
+   "something_about": {
+    "n": 1,
+    "mean": 10.14,
+    "m": 1.0
+   },
+   "what_if": {
+    "n": 1,
+    "mean": 7.18,
     "m": 1.0
    },
    "about_to": {
     "n": 1,
     "mean": 6.31,
     "m": 1.0
-   },
-   "what_if": {
-    "n": 1,
-    "mean": 6.08,
-    "m": 1.0
    }
   },
   "closer": {
+   "open": {
+    "n": 1,
+    "mean": 10.14,
+    "m": 1.0
+   },
    "either_or": {
     "n": 2,
-    "mean": 8.53,
+    "mean": 9.31,
     "m": 1.0
    }
   },
   "kind": {
    "artwork": {
-    "n": 2,
-    "mean": 8.53,
-    "m": 1.0
+    "n": 3,
+    "mean": 9.59,
+    "m": 1.09
    }
   },
   "theme": {
    "watcher": {
-    "n": 1,
-    "mean": 10.97,
+    "n": 2,
+    "mean": 10.79,
     "m": 1.0
    },
    "fallen": {
     "n": 1,
-    "mean": 6.08,
+    "mean": 7.18,
     "m": 1.0
    }
   },
   "century": {
+   "18th": {
+    "n": 1,
+    "mean": 10.14,
+    "m": 1.0
+   },
    "19th": {
     "n": 3,
-    "mean": 7.79,
-    "m": 1.0
+    "mean": 8.31,
+    "m": 0.95
    }
   },
   "length": {
    "60-75 s": {
-    "n": 2,
-    "mean": 8.53,
-    "m": 1.0
+    "n": 3,
+    "mean": 9.59,
+    "m": 1.09
    },
    "under 60 s": {
     "n": 1,
@@ -75,9 +90,14 @@
    }
   },
   "writer": {
+   "gemini": {
+    "n": 1,
+    "mean": 10.14,
+    "m": 1.0
+   },
    "claude": {
     "n": 2,
-    "mean": 8.53,
+    "mean": 9.31,
     "m": 1.0
    },
    "hand": {
@@ -96,5 +116,5 @@
   "S": 1.0
  },
  "judge_fit": null,
- "mean_score": 7.79
+ "mean_score": 8.77
 }

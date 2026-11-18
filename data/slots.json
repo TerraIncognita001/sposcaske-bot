@@ -74,8 +74,7 @@
    "story": "the-sleep-of-reason-produces-monsters-goya",
    "title": "The owl that hands Goya his pen",
    "publish_at": "2026-11-18T15:00:00Z",
-   "seconds": 57.3,
-   "comment_pending": "What is the owl asking him to draw? 👇"
+   "seconds": 57.3
   },
   "E2026-11-19#2": {
    "tries": 1,
@@ -85,6 +84,15 @@
    "publish_at": "2026-11-19T02:00:00Z",
    "seconds": 59.9,
    "comment_pending": "Is she mocking him, or telling him the truth? 👇"
+  },
+  "E2026-11-19#1": {
+   "tries": 1,
+   "video": "Ynxuh3gEyXI",
+   "story": "the-demon-seated-vrubel",
+   "title": "The demon who was never evil, only alone",
+   "publish_at": "2026-11-19T15:00:00Z",
+   "seconds": 112.5,
+   "comment_pending": "A monster waiting for revenge, or a lonely spirit? 👇"
   }
  }
 }
