@@ -1,0 +1,375 @@
+{
+ "id": "the-young-martyr-delaroche",
+ "kind": "artwork",
+ "form": "riddle",
+ "hook_frame": "Something about ___ feels completely wrong.",
+ "closer": "open",
+ "detail": "hands_rope",
+ "home": null,
+ "subject": {
+  "title": "The Young Martyr",
+  "creator": "Paul Delaroche",
+  "year": 1855,
+  "wikidata": "Q16915832"
+ },
+ "lead": {
+  "commons": "La_Jeune_Martyre_-_Paul_Delaroche_-_Muse_du_Louvre_Peintures_RF_1038.jpg",
+  "width_px": 3840,
+  "aspect": 0.8739,
+  "px": 3102,
+  "license": "Public domain",
+  "credit": "La Jeune Martyre - Paul Delaroche - Muse du Louvre Peintures RF 1038 — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Paul Delaroche",
+  "credit": "Portrait of Paul Delaroche — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.05,
+    1.0,
+    0.9
+   ],
+   "words": [
+    "darkness"
+   ]
+  },
+  {
+   "name": "martyr",
+   "box": [
+    0.02,
+    0.625,
+    0.975,
+    0.83
+   ],
+   "words": [
+    "girl",
+    "body",
+    "martyr"
+   ]
+  },
+  {
+   "name": "martyr_face",
+   "box": [
+    0.62,
+    0.6,
+    0.84,
+    0.76
+   ],
+   "words": [
+    "face"
+   ]
+  },
+  {
+   "name": "hands_rope",
+   "box": [
+    0.35,
+    0.64,
+    0.53,
+    0.74
+   ],
+   "words": [
+    "wrists",
+    "hands",
+    "rope"
+   ]
+  },
+  {
+   "name": "halo",
+   "box": [
+    0.72,
+    0.565,
+    0.89,
+    0.625
+   ],
+   "words": [
+    "halo"
+   ]
+  },
+  {
+   "name": "parents",
+   "box": [
+    0.2,
+    0.04,
+    0.44,
+    0.25
+   ],
+   "words": [
+    "figures",
+    "parents"
+   ]
+  },
+  {
+   "name": "sunset",
+   "box": [
+    0.15,
+    0.2,
+    0.34,
+    0.26
+   ],
+   "words": [
+    "sunset"
+   ]
+  },
+  {
+   "name": "water",
+   "box": [
+    0.0,
+    0.75,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "river",
+    "water",
+    "tiber"
+   ]
+  }
+ ],
+ "punch": "WRONG",
+ "sentences": [
+  {
+   "slot": "S1",
+   "text": "Something about this girl sleeping on the dark water feels completely wrong.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "girl",
+     "to": "martyr_face"
+    },
+    {
+     "on": "water",
+     "to": "water"
+    }
+   ]
+  },
+  {
+   "slot": "S2",
+   "text": "This is The Young Martyr, painted by Paul Delaroche in 1855.",
+   "kind": "FACT",
+   "source": 2
+  },
+  {
+   "slot": "S3",
+   "text": "A girl floats on the river with a halo above her, while two figures watch from the shore.",
+   "kind": "LOOK",
+   "source": 8,
+   "show": [
+    {
+     "on": "girl",
+     "to": "martyr"
+    },
+    {
+     "on": "halo",
+     "to": "halo"
+    },
+    {
+     "on": "figures",
+     "to": "parents"
+    }
+   ]
+  },
+  {
+   "slot": "S4",
+   "text": "But look at her wrists.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "wrists",
+     "to": "hands_rope"
+    }
+   ]
+  },
+  {
+   "slot": "S5",
+   "text": "Rope ties her hands together.",
+   "kind": "FACT",
+   "source": 15,
+   "show": [
+    {
+     "on": "Rope",
+     "to": "hands_rope"
+    }
+   ]
+  },
+  {
+   "slot": "S6",
+   "text": "She doesn't swim.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "swim",
+     "to": "martyr"
+    }
+   ]
+  },
+  {
+   "slot": "S6",
+   "text": "She doesn't struggle.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "struggle",
+     "to": "hands_rope"
+    }
+   ]
+  },
+  {
+   "slot": "S6",
+   "text": "She simply floats.",
+   "kind": "FACT",
+   "source": 15,
+   "show": [
+    {
+     "on": "floats",
+     "to": "martyr"
+    }
+   ]
+  },
+  {
+   "slot": "S7",
+   "text": "According to Roman law under Diocletian, Christians who would not honour the gods faced prison or death.",
+   "kind": "FACT",
+   "source": 24
+  },
+  {
+   "slot": "S8",
+   "text": "Her faith should have kept her safe.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "faith",
+     "to": "halo"
+    }
+   ]
+  },
+  {
+   "slot": "S9",
+   "text": "But she was thrown into the Tiber instead.",
+   "kind": "FACT",
+   "source": 20,
+   "show": [
+    {
+     "on": "Tiber",
+     "to": "water"
+    }
+   ]
+  },
+  {
+   "slot": "S10",
+   "text": "And here's the unsettling part.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "S11",
+   "text": "Her face looks peacefully asleep, yet her body lies stiff as death.",
+   "kind": "FACT",
+   "source": 16,
+   "show": [
+    {
+     "on": "face",
+     "to": "martyr_face"
+    },
+    {
+     "on": "body",
+     "to": "martyr"
+    }
+   ]
+  },
+  {
+   "slot": "S12",
+   "text": "As if she is both dead and still alive.",
+   "kind": "READING",
+   "source": 16,
+   "show": [
+    {
+     "on": "alive",
+     "to": "martyr_face"
+    }
+   ]
+  },
+  {
+   "slot": "S13",
+   "text": "So what are those two figures on the shore really watching?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "figures",
+     "to": "parents"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Delaroche": "Della-rosh",
+  "Diocletian": "Dye-oh-klee-shun"
+ },
+ "meta": {
+  "title": "The sleeping girl on the river is not asleep",
+  "description": "The Young Martyr was painted by Paul Delaroche in 1855 and hangs in the Louvre. A young Christian woman floats on the Tiber with her hands bound by rope, a halo above her.",
+  "tags": [
+   "art history",
+   "delaroche",
+   "the young martyr",
+   "louvre",
+   "martyr",
+   "painting"
+  ],
+  "question": "What are the two figures on the shore watching?"
+ },
+ "sources": [
+  {
+   "claim": "It was completed in 1855 and is based on the Romantic style of genre painting.",
+   "url": "https://en.wikipedia.org/wiki/The_Young_Martyr",
+   "note": "sentence S2"
+  },
+  {
+   "claim": "Although the identity of the figures is unclear, it is generally thought that they are the young Christian's parents.",
+   "url": "https://en.wikipedia.org/wiki/The_Young_Martyr",
+   "note": "sentence S3"
+  },
+  {
+   "claim": "The Martyr's hands are bound by rope, as she gently floats upon the surface of the Tiber.",
+   "url": "https://en.wikipedia.org/wiki/The_Young_Martyr",
+   "note": "sentence S5"
+  },
+  {
+   "claim": "The Martyr's hands are bound by rope, as she gently floats upon the surface of the Tiber.",
+   "url": "https://en.wikipedia.org/wiki/The_Young_Martyr",
+   "note": "sentence S6"
+  },
+  {
+   "claim": "Under these laws, Christians were expected to sacrifice and honor gods they themselves did not believe in, under penalty of imprisonment or death.",
+   "url": "https://en.wikipedia.org/wiki/The_Young_Martyr",
+   "note": "sentence S7"
+  },
+  {
+   "claim": "Possible narrative(s) On the surface, The Young Martyr depicts the sacrifice of a young Christian woman into the Tiber River.",
+   "url": "https://en.wikipedia.org/wiki/The_Young_Martyr",
+   "note": "sentence S9"
+  },
+  {
+   "claim": "With her body erect (potentially suggesting the rigor mortis), the Martyr, appears both dead and alive.",
+   "url": "https://en.wikipedia.org/wiki/The_Young_Martyr",
+   "note": "sentence S11"
+  },
+  {
+   "claim": "With her body erect (potentially suggesting the rigor mortis), the Martyr, appears both dead and alive.",
+   "url": "https://en.wikipedia.org/wiki/The_Young_Martyr",
+   "note": "sentence S12"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-18"
+}

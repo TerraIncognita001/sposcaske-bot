@@ -1,0 +1,108 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.05,
+    1.0,
+    0.9
+   ],
+   "words": [
+    "darkness"
+   ]
+  },
+  {
+   "name": "martyr",
+   "box": [
+    0.02,
+    0.625,
+    0.975,
+    0.83
+   ],
+   "words": [
+    "girl",
+    "body",
+    "martyr"
+   ]
+  },
+  {
+   "name": "martyr_face",
+   "box": [
+    0.62,
+    0.6,
+    0.84,
+    0.76
+   ],
+   "words": [
+    "face"
+   ]
+  },
+  {
+   "name": "hands_rope",
+   "box": [
+    0.35,
+    0.64,
+    0.53,
+    0.74
+   ],
+   "words": [
+    "wrists",
+    "hands",
+    "rope"
+   ]
+  },
+  {
+   "name": "halo",
+   "box": [
+    0.72,
+    0.565,
+    0.89,
+    0.625
+   ],
+   "words": [
+    "halo"
+   ]
+  },
+  {
+   "name": "parents",
+   "box": [
+    0.2,
+    0.04,
+    0.44,
+    0.25
+   ],
+   "words": [
+    "figures",
+    "parents"
+   ]
+  },
+  {
+   "name": "sunset",
+   "box": [
+    0.15,
+    0.2,
+    0.34,
+    0.26
+   ],
+   "words": [
+    "sunset"
+   ]
+  },
+  {
+   "name": "water",
+   "box": [
+    0.0,
+    0.75,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "river",
+    "water",
+    "tiber"
+   ]
+  }
+ ],
+ "summary": "A young woman in white floats on dark water with her hands tied by a rope and a thin halo above her head. Far behind, two dark figures stand on the shore against the last light."
+}
