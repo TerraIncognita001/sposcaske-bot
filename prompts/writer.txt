@@ -252,6 +252,17 @@ images. For each: a key, a search query for Wikimedia Commons, and the words of 
           "tags": ["art history", "..."], "question": "<the S13 question, short>"}}
 "show" is optional: use it when a sentence should go to a particular thing on a word that does not name it.
 
+### 7a. THE TITLE (v1.18, measured on 100 videos of the niche, 11.7M views; our own best two are the first pattern)
+The title follows the form:
+  twist                      ACTION AND TURN: "<Subject> <did X>... and <found / became Y>"  ("They Opened the Painting...
+                             and Found a DRAGON"). The "..." is required.
+  riddle, investigation      WHY: "Why <the odd detail>?"  ("Why They Put a Crown on a Bare Skull")
+  legend                     ACTION AND TURN (above) or WHO (below)
+  emotion, scene             WHO: "The <noun> Who / That <did the extraordinary thing>"  ("The Artist Who Lived Inside a
+                             Rock for a Week"): the figure's ACTION, never a description ("that hands Goya his pen" held
+                             51 views, "who called his own portrait too true" 683).
+Title Case, ONE key word in CAPITALS, at most 70 characters, then " #history #art". No lie: the video answers it.
+
 ### 8. Before you answer, check
 [ ] the form fits the picture, and every slot of that form is there, in order, with its own code
 [ ] the fixed joints are worded as required (the ident, the turn, "According to", the markers, the last question)

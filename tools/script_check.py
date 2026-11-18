@@ -118,6 +118,40 @@ def check_form(sents, title, punch, form):
     return out, words, n
 
 
+TITLE_WANT = {"twist": ("action",), "riddle": ("why",), "investigation": ("why",), "emotion": ("who",), "scene": ("who",), "legend": ("action", "who")}
+
+
+def title_pattern(title):
+    """v1.18 (Andrii, Nov 18: the title patterns of 100 videos of the niche, 11.7M views): "why" = 'Why ...?',
+    "action" = 'He did X... and found Y' (a turn after an ellipsis), "who" = 'The <noun> who / that ...' or 'The most ...',
+    else "other". Hashtags are ignored."""
+    t = re.sub(r"\s*#\w+", "", title or "").strip()
+    if re.match(r"^Why\b", t):
+        return "why"
+    if re.search(r"(\.\.\.|…)", t):
+        return "action"
+    if re.match(r"^(The|This) (most \w+|[\w' -]+? (who|that|whose))\b", t, re.I):
+        return "who"
+    return "other"
+
+
+def title_faults(title, form):
+    """v1.18: what is wrong with a title for this form ([] = good)."""
+    body, out = re.sub(r"\s*#\w+", "", title or "").strip(), []
+    want = TITLE_WANT.get(form)
+    say = {"why": "a 'Why ...?' question about the odd detail", "action": "an action and its turn: '<Subject> <did X>... and <found / was Y>' (with '...')",
+           "who": "'The <noun> who / that <did an extraordinary thing>'"}
+    if want and title_pattern(title) not in want:
+        out.append(f"the title of the {form} form is " + " or ".join(say[w] for w in want) + f" (got: {title!r})")
+    if not re.search(r"\b[A-Z]{3,}\b", body):
+        out.append("the title needs ONE key word in capitals (3+ letters), as 'DRAGON' or 'GLASS' in the niche's best titles")
+    if len(body) > 70:
+        out.append(f"the title without hashtags is {len(body)} characters, at most 70")
+    if not re.search(r"#history\b", title or "") or len(title) > 100:
+        out.append("the title ends with '#history' (and may add '#art'), 100 characters in all at most")
+    return out
+
+
 HEDGE = re.compile(r"^(Almost as if|As if|Maybe|Perhaps|It's almost as if)\b", re.I)
 
 

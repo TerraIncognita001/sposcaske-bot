@@ -22,6 +22,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "tools"))                              # v1.18: script_check.title_pattern
+import script_check
 STATS, SLOTS = ROOT / "data/stats.json", ROOT / "data/slots.json"
 FRAMES = [("what_if", r"^What if\b"), ("detail_most_miss", r"^There(?:'s| is) (?:a|an|one)\b.*\bdetail\b"), ("reason", r"^There(?:'s| is) a reason\b"),
           ("something_about", r"^(?:There(?:'s| is) something|Something about)\b"), ("may_hide", r"\bmay (?:hide|be hiding)\b"),
@@ -53,6 +55,7 @@ def features(story_id, seconds=None):
     f["hook_frame"] = frame_of(hook) if hook else None
     f["punch"] = sc.get("punch") or st.get("hook_title")
     f["closer"] = sc.get("closer")
+    f["title_pattern"] = script_check.title_pattern((sc.get("meta") or {}).get("title")) if (sc.get("meta") or {}).get("title") else None    # v1.18: why / action / who / other
     f["theme"] = (topic.get("character") or {}).get("theme")
     f["century"] = f"{int(year) // 100 + 1}th" if isinstance(year, int) or str(year or "").isdigit() else None
     f["length"] = band(seconds)

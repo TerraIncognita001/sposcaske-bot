@@ -288,7 +288,7 @@ def write(topic, work):
         w = gemini(base + note, ok, purpose="script")
         form = w.get("form") if w.get("form") in FORMS else form_of(topic) or "riddle"
         res, words, n = script_check.check([s["text"].strip() for s in w["sentences"]], title, w["punch"], form, fact_count(w["sentences"]))    # v1.15: the facts are counted
-        hard = [f"{name}: {d}" for good, h, name, d in res if not good and h]
+        hard = [f"{name}: {d}" for good, h, name, d in res if not good and h] + [f"meta.title: {x}" for x in script_check.title_faults((w.get("meta") or {}).get("title", ""), form)]    # v1.18
         script = None
         if not hard:                                                    # v1.10: the form holds; can the director shoot it?
             script = assemble(topic, facts, {"commons": page_image, "license": lic[0], "wikidata": qid, "aspect": picture_aspect(jpg)}, look, w, title)

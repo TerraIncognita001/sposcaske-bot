@@ -23,7 +23,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 STATS, LEARN, LESSONS = ROOT / "data/stats.json", ROOT / "data/learn.json", ROOT / "data/lessons.md"
-PARAMS = ("form", "hook_frame", "closer", "kind", "theme", "century", "length", "writer")
+PARAMS = ("form", "hook_frame", "closer", "kind", "theme", "century", "length", "writer", "title_pattern")    # v1.18: the title pattern is compared too
 KEYS, LIMIT = ("G", "D", "F", "T", "Y", "S"), {"G": 2, "D": 2, "F": 2, "T": 2, "Y": 1, "S": 1}
 MIN_VIDEOS, MIN_AGE_DAYS, MIN_PER_VALUE = 8, 3, 3
 mean = lambda xs: sum(xs) / len(xs)

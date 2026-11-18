@@ -5,6 +5,17 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.18 = THE TITLE FOLLOWS THE FORM, Andrii, Nov 18 2026 (the title patterns of 100 videos of the niche, 11.7M views;
+  'так, роби'). Our own numbers agree: the two best titles are 'The <noun> who / that <did something>' (Lucifer 1235
+  views, Innocent X 683), but a description in that shape held nothing ('The owl that hands Goya his pen' 51). Now
+  `prompts/writer.txt` 7a and `script_check.title_faults`: twist -> 'He did X... and found Y' (the ellipsis is the
+  turn); riddle, investigation -> 'Why ...?'; emotion, scene -> 'The <noun> Who / That <action>'; legend -> either of the
+  last two kinds; Title Case, one key word in CAPITALS, at most 70 characters, then '#history' (+ '#art'), 100 in all.
+  Refused at `night_writer save` and given back to Gemini as a failure. `stats_now.features` records
+  `title_pattern` (why / action / who / other) and `learn.py` compares it. Retitled the two ready scripts not yet
+  uploaded: Young Martyr 'Why Are This Sleeping Girl's Hands TIED? #history #art', John Dee 'He Tried to Talk to
+  Angels... and Lost EVERYTHING #history #art'. Uploaded videos keep their titles.
+
 - v1.17 = A SECOND ARTICLE FOR THE FACTS, Andrii, Nov 17 2026 ('доповни факти Йова статтею про Траверсі'). Why: the
   topic's article (Job's wife) never names the painter, so the ident had no source. A topic may now list
   "more_wikipedia" (`data/backlog.json`); `writer.topic_facts` appends their sentences up to the references, each

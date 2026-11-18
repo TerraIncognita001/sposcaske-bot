@@ -150,8 +150,9 @@ def save(tid, answer_path, look_path):
                 if ":" not in sh.get("to", "") and re.sub(r"\W", "_", sh.get("to", "").lower()) not in names:
                     bad.append(f"{s.get('slot')}: show.to {sh.get('to')!r} is not a name of look.json")
         m = w["meta"]
-        if len(m["title"]) > 70 or not m.get("description") or not m.get("tags") or not m.get("question"):
-            bad.append("meta: title under 70 characters, description, tags and question are all needed")
+        if not m.get("description") or not m.get("tags") or not m.get("question"):
+            bad.append("meta: title, description, tags and question are all needed")
+        bad += [f"meta.title: {x}" for x in script_check.title_faults(m["title"], form)]    # v1.18: the title follows the form
     if bad:
         print("NOT SAVED:\n" + "\n".join("  - " + b for b in bad))
         return 1

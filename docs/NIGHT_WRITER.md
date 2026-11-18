@@ -42,6 +42,9 @@ Read every `FAILED EARLIER` line: it says which check refused an earlier script 
      every sentence a new fact, a new thing of LOOK or a turn; one guess at most; the hook's question answered. Shapes:
      `scripts/demo-investigation-goya.json`, `scripts/demo-twist-job.json` (demos: read the shape, never reuse a
      sentence).
+   - **v1.18: THE TITLE FOLLOWS THE FORM** (`prompts/writer.txt` 7a): twist "<Subject> did X... and found Y",
+     riddle "Why ...?", emotion "The <noun> Who <action>", legend either; one CAPS word, at most 70 characters, then
+     "#history #art". `save` refuses another shape.
    - **THE FORM FIRST (v1.12).** `prompts/writer.txt` section 3 has four constructions: riddle (the question in
      the picture, about 55 s), emotion (a face and what it feels, about 110 s), scene (the eye walks from the
      first thing to the second, about 120 s), legend (a named man's story). The brief says FORM, or "choose": then
