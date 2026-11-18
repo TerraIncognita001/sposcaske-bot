@@ -2352,7 +2352,7 @@
     }
    },
    "hook": "There's something colder than anger about the way this old man looks back at you.",
-   "views": 676,
+   "views": 683,
    "likes": 34,
    "comments": 4,
    "score": 13.61,
@@ -2391,10 +2391,10 @@
     }
    },
    "hook": "What if this young queen has to find her own death completely blind?",
-   "views": 234,
+   "views": 253,
    "likes": 7,
    "comments": 1,
-   "score": 5.78
+   "score": 5.85
   },
   "1rRJnD-APP4": {
    "story": "medusa-caravaggio",
@@ -2423,10 +2423,10 @@
     }
    },
    "hook": "What if this is not a monster's scream at all, but the purest terror you have ever seen?",
-   "views": 92,
+   "views": 112,
    "likes": 5,
    "comments": 1,
-   "score": 4.78
+   "score": 4.98
   },
   "fmg0r0Z-4fI": {
    "story": "the-sleep-of-reason-produces-monsters-goya",
@@ -2455,12 +2455,12 @@
     }
    },
    "hook": "Why does one of these terrifying night creatures act almost like a friend?",
-   "views": 28,
+   "views": 51,
    "likes": 2,
-   "comments": 0,
-   "score": 3.43
+   "comments": 1,
+   "score": 4.1
   }
  },
- "read_at": "2026-11-18T20:28:36Z",
+ "read_at": "2026-11-18T21:40:54Z",
  "_about": "written by stats_now.py (v1.09): one entry per public video; learn.py reads it. Do not edit by hand."
 }

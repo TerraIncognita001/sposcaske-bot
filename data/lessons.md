@@ -1,6 +1,6 @@
 # Lessons from our own videos
 
-Written by `learn.py` on 2026-11-18T20:28Z from `data/stats.json`. Do not edit by hand.
+Written by `learn.py` on 2026-11-18T21:40Z from `data/stats.json`. Do not edit by hand.
 
 Learning is **OFF**: 4 videos counted (on at 8 videos public for 3 days; a value needs 3 videos).
 
@@ -14,10 +14,10 @@ Learning is **OFF**: 4 videos counted (on at 8 videos public for 3 days; a value
 | 2026-11-15 15:00 | 50 | 0.469 | 84.46 | 10.14 | Something about this peaceful sleeping woman feels completely wrong, filled with hidden dr | 6.0 s −18.1 % [hook: Something about this peaceful sleeping woman feels completely wrong,]; 9.7 s −13.6 % [ident: This is The Nightmare,]; 11.5 s −13.6 % [ident: painted by Henry Fuseli in 1781.] |
 | 2026-11-16 02:00 | 1235 | 0.561 | 51 | 12.87 | This painting may hide something that sits in total darkness, completely awake. | 4.2 s −40.7 % [hook: that sits in total darkness,]; 10.3 s −9.8 % [ident: painted by Franz Stuck in 1890.]; 15.1 s −4.4 % [setup: with his chin on his hand.] |
 | 2026-11-16 15:00 | 139 | 0.336 | 64.9 | 8.89 | There's a disturbing detail in this diplomatic room most people miss. | 4.0 s −18.6 % [hook: in this diplomatic room most people miss.]; 6.3 s −18.6 % [hook: in this diplomatic room most people miss.]; 9.7 s −14.0 % [ident: painted by Hans Holbein the Younger in 1533.] |
-| 2026-11-17 02:00 | 676 | 0.578 | 98.3 | 13.61 | There's something colder than anger about the way this old man looks back at you. | — |
-| 2026-11-17 15:00 | 234 | — | — | 5.78 | What if this young queen has to find her own death completely blind? | — |
-| 2026-11-18 02:00 | 92 | — | — | 4.78 | What if this is not a monster's scream at all, but the purest terror you have ever seen? | — |
-| 2026-11-18 15:00 | 28 | — | — | 3.43 | Why does one of these terrifying night creatures act almost like a friend? | — |
+| 2026-11-17 02:00 | 683 | 0.578 | 98.3 | 13.61 | There's something colder than anger about the way this old man looks back at you. | — |
+| 2026-11-17 15:00 | 253 | — | — | 5.85 | What if this young queen has to find her own death completely blind? | — |
+| 2026-11-18 02:00 | 112 | — | — | 4.98 | What if this is not a monster's scream at all, but the purest terror you have ever seen? | — |
+| 2026-11-18 15:00 | 51 | — | — | 4.1 | Why does one of these terrifying night creatures act almost like a friend? | — |
 
 ## What worked (mean score of the videos with this value; multiplier 1.0 = too few videos to say)
 

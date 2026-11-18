@@ -1,0 +1,155 @@
+{
+ "total": 59.30383219954649,
+ "lines": [
+  {
+   "t0": 1.65,
+   "t1": 3.6,
+   "beat": "hook",
+   "say": "This saint looks peacefully asleep,"
+  },
+  {
+   "t0": 3.82,
+   "t1": 5.88,
+   "beat": "hook",
+   "say": "but his white robes are hiding a death."
+  },
+  {
+   "t0": 6.53,
+   "t1": 8.35,
+   "beat": "ident",
+   "say": "This is Saint Serapion,"
+  },
+  {
+   "t0": 8.57,
+   "t1": 12.12,
+   "beat": "ident",
+   "say": "painted by Francisco Zurbarán in 1628."
+  },
+  {
+   "t0": 12.72,
+   "t1": 15.09,
+   "beat": "usual",
+   "say": "Most people see a tired monk resting"
+  },
+  {
+   "t0": 15.09,
+   "t1": 16.15,
+   "beat": "usual",
+   "say": "in calm white cloth."
+  },
+  {
+   "t0": 16.75,
+   "t1": 18.49,
+   "beat": "usual",
+   "say": "Even the critic Tom Lubbock called"
+  },
+  {
+   "t0": 18.49,
+   "t1": 20.59,
+   "beat": "usual",
+   "say": "the scene understated and calm."
+  },
+  {
+   "t0": 21.19,
+   "t1": 22.94,
+   "beat": "seems",
+   "say": "And the picture seems to agree."
+  },
+  {
+   "t0": 23.54,
+   "t1": 24.62,
+   "beat": "seems",
+   "say": "His eyes are closed"
+  },
+  {
+   "t0": 24.62,
+   "t1": 26.95,
+   "beat": "seems",
+   "say": "and his head rests softly on his shoulder."
+  },
+  {
+   "t0": 27.55,
+   "t1": 28.86,
+   "beat": "turn",
+   "say": "But look at his wrists."
+  },
+  {
+   "t0": 29.46,
+   "t1": 31.62,
+   "beat": "detail",
+   "say": "Ropes tie both hands to a pole."
+  },
+  {
+   "t0": 32.22,
+   "t1": 34.3,
+   "beat": "fact",
+   "say": "According to the painter Alison Watt,"
+  },
+  {
+   "t0": 34.52,
+   "t1": 36.64,
+   "beat": "fact",
+   "say": "you are seduced by this simplicity,"
+  },
+  {
+   "t0": 36.86,
+   "t1": 38.98,
+   "beat": "fact",
+   "say": "only to realise you have been duped."
+  },
+  {
+   "t0": 39.58,
+   "t1": 41.69,
+   "beat": "fact",
+   "say": "Serapion was a Mercedarian friar"
+  },
+  {
+   "t0": 41.69,
+   "t1": 45.15,
+   "beat": "fact",
+   "say": "who fought in the Crusades and was later martyred."
+  },
+  {
+   "t0": 45.75,
+   "t1": 48.18,
+   "beat": "fact",
+   "say": "Zurbarán painted him for the funeral chapel"
+  },
+  {
+   "t0": 48.18,
+   "t1": 49.83,
+   "beat": "fact",
+   "say": "of his order in Seville."
+  },
+  {
+   "t0": 50.43,
+   "t1": 51.71,
+   "beat": "flip",
+   "say": "He isn't sleeping."
+  },
+  {
+   "t0": 52.31,
+   "t1": 53.22,
+   "beat": "flip",
+   "say": "He's a martyr,"
+  },
+  {
+   "t0": 53.44,
+   "t1": 55.02,
+   "beat": "flip",
+   "say": "bound by both hands."
+  },
+  {
+   "t0": 55.82,
+   "t1": 57.8,
+   "beat": "question",
+   "say": "So now, do you see a sleeping monk,"
+  },
+  {
+   "t0": 58.02,
+   "t1": 58.95,
+   "beat": "question",
+   "say": "or a martyr?"
+  }
+ ]
+}
