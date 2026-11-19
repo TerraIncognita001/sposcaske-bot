@@ -339,7 +339,9 @@
    "id": "job-mocked-by-his-wife-tour",
    "kind": "artwork",
    "wikipedia": "Job's wife",
-   "more_wikipedia": ["Gaspare Traversi"],
+   "more_wikipedia": [
+    "Gaspare Traversi"
+   ],
    "person": "Gaspare Traversi",
    "why": "A young woman leans to the ear of the naked, suffering old Job and points at him, talking, while he looks up to heaven. (Nov 17: the picture is Gaspare Traversi's 'Job mocked by his wife', National Museum in Warsaw; the topic was first judged as Georges de La Tour's.)",
    "wikidata": "Q16070970",
@@ -527,7 +529,9 @@
      "TRUTH"
     ]
    },
-   "disqualified": null
+   "disqualified": null,
+   "hold": true,
+   "hold_why": "Nov 19, Andrii ('Замінити тему'): 86 s on one portrait, replaced by another topic"
   },
   {
    "id": "the-demon-seated-vrubel",
@@ -772,7 +776,9 @@
     ],
     "form": "legend"
    },
-   "disqualified": null
+   "disqualified": null,
+   "hold": true,
+   "hold_why": "Nov 19, Andrii ('Так'): the same story as tartini-devils-trill, published Nov 15"
   },
   {
    "id": "stanczyk-matejko",
