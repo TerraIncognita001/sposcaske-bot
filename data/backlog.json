@@ -388,6 +388,55 @@
    "disqualified": null
   },
   {
+   "id": "self-portrait-drer",
+   "kind": "artwork",
+   "wikipedia": "Self-Portrait (Dürer, Munich)",
+   "person": "Albrecht Dürer",
+   "why": "The artist adopts a Christ-like pose in 1500, staring with a piercing gaze that invites the viewer to decide if it is supreme hubris or genuine religious devotion.",
+   "wikidata": "Q2546309",
+   "picture": "Dürer_Alte_Pinakothek.jpg",
+   "picture_px": 2128,
+   "score": 9,
+   "scores": {
+    "G": 2,
+    "D": 2,
+    "F": 2,
+    "T": 1,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Dürer looks straight out of the canvas, making direct and unsettling eye contact with the viewer.",
+    "D": "A single central figure isolated against a solid black background, instantly readable on a phone display.",
+    "F": "What appears to be a holy icon of Jesus Christ blessing the viewer is actually a secular self-portrait of the painter himself.",
+    "T": "The tension comes from quiet, uncanny hubris and taboo blasphemy rather than explicit violence.",
+    "Y": "The intense direct gaze makes it effortless to ask the viewer whether he is blessing or confronting them.",
+    "S": "Dürer's documented turning-point portrait from 1500 featuring his famous 'A.D.' initials."
+   },
+   "character": {
+    "figure": "Albrecht Dürer dressed as Christ",
+    "threat": "the fine line between devotion and blasphemy",
+    "feeling": "unsettled awe",
+    "theme": " holy or feared"
+   },
+   "angle": {
+    "first_impression": "A sacred Renaissance painting of Jesus Christ looking at you",
+    "detail": "the Christ-like hand gesture resting on fur",
+    "readings": [
+     "a holy recognition that artistic genius comes from God",
+     "an act of breathtaking arrogance bordering on blasphemy"
+    ],
+    "question": "So did he paint himself as God out of devotion, or pure ego?",
+    "punch": [
+     "blasphemy",
+     "arrogance",
+     "divine"
+    ],
+    "form": "emotion"
+   },
+   "disqualified": null
+  },
+  {
    "id": "lady-jane-grey-delaroche",
    "kind": "artwork",
    "wikipedia": "The Execution of Lady Jane Grey",
@@ -781,6 +830,104 @@
    "hold_why": "Nov 19, Andrii ('Так'): the same story as tartini-devils-trill, published Nov 15"
   },
   {
+   "id": "the-penitent-magdalene-tour",
+   "kind": "artwork",
+   "wikipedia": "Penitent Magdalene (Caravaggio)",
+   "person": "Georges de La Tour",
+   "why": "She stares into a mirror reflecting a skull, her calm posture suggesting either divine enlightenment or an cold, detached acceptance of death.",
+   "wikidata": "Q2732274",
+   "picture": "Penitent_Magdalene-Caravaggio_(1594-6).jpg",
+   "picture_px": 6317,
+   "score": 8,
+   "scores": {
+    "G": 0,
+    "D": 2,
+    "F": 2,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "She is looking down in sorrow; her eyes do not meet the viewer's gaze.",
+    "D": "The subject is isolated against a plain, dark background, making her highly readable at phone scale.",
+    "F": "A single, quiet tear tracks down her cheek, contradicting the serene, almost bored pose.",
+    "T": "The painting carries a heavy, stifled atmosphere of grief and hidden trauma without showing the event itself.",
+    "Y": "The viewer is drawn in by the question of what exactly has happened to cause such silent, internal collapse.",
+    "S": "The story of Anna Bianchini and the theory of hidden physical trauma provides a compelling, specific narrative."
+   },
+   "character": {
+    "figure": "A repentant young woman",
+    "threat": "Hidden trauma or societal abuse",
+    "feeling": "Silent, crushing grief",
+    "theme": "false calm"
+   },
+   "angle": {
+    "first_impression": "A quiet, religious moment of a woman in deep reflection.",
+    "detail": "the single tear on her cheek",
+    "readings": [
+     "a moment of genuine spiritual repentance for her sins",
+     "a portrait of a woman suffering from real, physical state-sanctioned violence"
+    ],
+    "question": "So, is she praying for forgiveness, or is she mourning her own ruined life?",
+    "punch": [
+     "SCARRED",
+     "SILENT",
+     "HIDDEN"
+    ],
+    "form": "emotion"
+   },
+   "disqualified": null
+  },
+  {
+   "id": "the-lute-player-caravaggio",
+   "kind": "artwork",
+   "wikipedia": "The Lute Player (Caravaggio)",
+   "person": "Caravaggio",
+   "why": "The androgynous figure gazes at the viewer, but the presence of a decaying fruit bowl beside the instrument suggests a sudden, hidden transition to mortality.",
+   "wikidata": "Q2370247",
+   "picture": "The_Lute_Player-Caravaggio_(Metropolitan_Museum_of_Art).jpg",
+   "picture_px": 7183,
+   "score": 8,
+   "scores": {
+    "G": 2,
+    "D": 2,
+    "F": 1,
+    "T": 1,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The lute player engages the viewer with a direct, questioning gaze.",
+    "D": "The subject is illuminated against a dark, moody background, standing out clearly at phone size.",
+    "F": "The contrast between the romantic serenade and the symbols of decay (rotting fruit, birdcage) requires explanation.",
+    "T": "The painting carries a sense of transient, melancholic longing rather than explicit physical danger.",
+    "Y": "A question about the singer's intent or the hidden meaning of the music brings the viewer in.",
+    "S": "The identification of the model and the specific madrigals provides a concrete narrative thread."
+   },
+   "character": {
+    "figure": "a young, androgynous musician",
+    "threat": "the fleeting nature of love",
+    "feeling": "melancholic, seductive",
+    "theme": "false calm"
+   },
+   "angle": {
+    "first_impression": "A romantic musician singing a sweet song of love.",
+    "detail": "the rotting fruit and the caged bird",
+    "readings": [
+     "a tender performance of a love song",
+     "a grim memento mori about the inevitable decay of beauty"
+    ],
+    "question": "So, is he singing for you, or is he reminding you that time is dying?",
+    "punch": [
+     "fleeting",
+     "decay",
+     "mortal"
+    ],
+    "form": "emotion"
+   },
+   "disqualified": null
+  },
+  {
    "id": "stanczyk-matejko",
    "kind": "artwork",
    "wikipedia": "Stańczyk (painting)",
@@ -973,6 +1120,153 @@
    "disqualified": null
   },
   {
+   "id": "portrait-of-cardinal-fernando-nio-de-guevara-gre",
+   "kind": "artwork",
+   "wikipedia": "Portrait of Fernando Niño de Guevara",
+   "person": "El Greco",
+   "why": "The cold, sharp eyes of the Grand Inquisitor watch the viewer with a piercing intensity that makes the clerical robes look like armor.",
+   "wikidata": "Q3784753",
+   "picture": "Cardinal_Fernando_Niño_de_Guevara_(1541–1609)_MET_DT854.jpg",
+   "picture_px": 2378,
+   "score": 6,
+   "scores": {
+    "G": 2,
+    "D": 0,
+    "F": 2,
+    "T": 2,
+    "Y": 0,
+    "S": 0
+   },
+   "reasons": {
+    "G": "The Cardinal's direct, stern gaze is the anchor of the portrait and immediately confronts the viewer.",
+    "D": "The composition features too much background detail and complex framing to qualify as a dark, singular focus.",
+    "F": "The surprisingly modern, thick-rimmed spectacles on an Inquisitor from 1600 are an immediately jarring visual contradiction.",
+    "T": "The figure is the Inquisitor General; the power he wields creates an unspoken, heavy tension without any visible violence.",
+    "Y": "The provided facts are mostly biographical and institutional; they lack a direct, personal prompt for the viewer.",
+    "S": "The story revolves around art patronage and historical trivia rather than a cohesive, gripping legend or source-backed mystery."
+   },
+   "character": {
+    "figure": "Cardinal Fernando Niño de Guevara",
+    "threat": "The power of the Inquisition",
+    "feeling": "Unease and judgment",
+    "theme": "watcher"
+   },
+   "angle": {
+    "first_impression": "A powerful 17th-century Cardinal sits in his official vestments.",
+    "detail": "the thick-rimmed spectacles",
+    "readings": [
+     "an enlightened intellectual ahead of his time",
+     "a man literally watching through a lens of judgment"
+    ],
+    "question": "So, does this look like a holy man or an inquisitor watching you?",
+    "punch": [
+     "JUDGE",
+     "WATCH",
+     "POWER"
+    ],
+    "form": "emotion"
+   },
+   "disqualified": null
+  },
+  {
+   "id": "the-face-of-christ-kramskoi",
+   "kind": "artwork",
+   "wikipedia": "Fyodor Dostoevsky",
+   "person": "Ivan Kramskoi",
+   "why": "Christ sits in the desert, his hollow eyes conveying a mix of profound human exhaustion and an inhuman, judging omniscience.",
+   "wikidata": "Q991",
+   "picture": "Vasily_Perov_-_Портрет_Ф.М.Достоевского_-_Google_Art_Project.jpg",
+   "picture_px": 3200,
+   "score": 5,
+   "scores": {
+    "G": 0,
+    "D": 2,
+    "F": 1,
+    "T": 1,
+    "Y": 0,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Dostoevsky is looking away from the viewer, lost in thought.",
+    "D": "A single figure emerges from a dark, empty background, highly readable at phone size.",
+    "F": "The flip is the hidden intensity and hidden sickness in a man who appears merely weary.",
+    "T": "The painting captures the aftermath of his traumatic experience with death and exile.",
+    "Y": "The provided facts do not suggest a direct engagement with the viewer's perspective.",
+    "S": "The portrait of Dostoevsky is grounded in his documented, dramatic life history."
+   },
+   "character": {
+    "figure": "Fyodor Dostoevsky",
+    "threat": "The darkness of his own mind",
+    "feeling": "Haunted",
+    "theme": "other"
+   },
+   "angle": {
+    "first_impression": "A tired, middle-aged man sitting alone in the dark.",
+    "detail": "the tension in his clasped hands",
+    "readings": [
+     "a man resting from a long day of writing",
+     "a man keeping his sanity from fracturing"
+    ],
+    "question": "So, are those hands clutching a pen, or holding back a total mental collapse?",
+    "punch": [
+     "Fracture",
+     "Internal",
+     "Shadow"
+    ],
+    "form": "emotion"
+   },
+   "disqualified": null
+  },
+  {
+   "id": "ahasuerus-gottlieb",
+   "kind": "artwork",
+   "wikipedia": "Esther Before Ahasuerus (Artemisia Gentileschi)",
+   "person": "Maurycy Gottlieb",
+   "why": "The Wandering Jew gazes into the distance with eyes that have seen too much; the horror is in the lack of surprise at the suffering he witnesses.",
+   "wikidata": "Q3733425",
+   "picture": "Gentileschi,_Artemisia_-_Esther_before_Ahasuerus_-_c._1628–1635.jpg",
+   "picture_px": 3771,
+   "score": 5,
+   "scores": {
+    "G": 0,
+    "D": 1,
+    "F": 1,
+    "T": 1,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The figures look at each other, but nobody makes eye contact with the viewer.",
+    "D": "There are three main figures visible, but the scene is brightly lit rather than dark/moody.",
+    "F": "The collapse of the heroine is the focal point, but it requires the context of court etiquette to understand the stakes.",
+    "T": "The moment of fainting captures the tension of life-or-death risk without showing violence.",
+    "Y": "A direct question about the king's reaction or the risk of death easily pulls the viewer in.",
+    "S": "The story is a well-known biblical account of Esther risking her life to save her people."
+   },
+   "character": {
+    "figure": "Esther, Ahasuerus, and attendants",
+    "threat": "execution of a whole people",
+    "feeling": "vulnerability",
+    "theme": "innocence in danger"
+   },
+   "angle": {
+    "first_impression": "A queen faints before a powerful, dismissive looking king.",
+    "detail": "the king's unconcerned posture",
+    "readings": [
+     "a moment of supreme vulnerability before a tyrant",
+     "a calculated performance to manipulate the king"
+    ],
+    "question": "So, is she really fainting, or is this the ultimate move in a deadly game?",
+    "punch": [
+     "DANGER",
+     "DECEIT",
+     "SURVIVAL"
+    ],
+    "form": "scene"
+   },
+   "disqualified": null
+  },
+  {
    "id": "death-of-marat-david",
    "kind": "artwork",
    "wikipedia": "The Death of Marat",
@@ -1112,6 +1406,41 @@
    "disqualified": null
   },
   {
+   "id": "the-blind-beggar-harmsworth",
+   "kind": "artwork",
+   "wikipedia": "The Parable of the Blind",
+   "person": "Harmsworth",
+   "why": "The blind figure stares upward with unseeing eyes, creating a disquieting feeling that he is looking at something the viewer cannot perceive.",
+   "wikidata": "Q1192570",
+   "picture": "Притча_о_слепых.jpeg",
+   "picture_px": 2700,
+   "score": 4,
+   "scores": {
+    "G": 0,
+    "D": 0,
+    "F": 2,
+    "T": 1,
+    "Y": 0,
+    "S": 1
+   },
+   "reasons": {
+    "G": "All figures are blind or looking away; no eye contact with the viewer.",
+    "D": "This is a wide landscape scene with six figures, making it visually complex rather than a sharp focus on one or two figures.",
+    "F": "The flip is the realization that the leader has already fallen and the entire chain is unknowingly marching toward doom.",
+    "T": "The scene shows the moment of impending collective disaster, bordering on aftermath, but no active violence.",
+    "Y": "The provided text doesn't invite the viewer into the scene with an intimate, direct question.",
+    "S": "The painting is a well-documented masterwork tied to the biblical parable of the blind and historical political unrest."
+   },
+   "character": {
+    "figure": "six blind men in procession",
+    "threat": "unavoidable collective fall",
+    "feeling": "inevitable doom",
+    "theme": "false calm"
+   },
+   "angle": null,
+   "disqualified": null
+  },
+  {
    "id": "the-entombment-of-christ-caravaggio",
    "kind": "artwork",
    "wikipedia": "The Entombment of Christ (Caravaggio)",
@@ -1142,6 +1471,41 @@
     "threat": "none, it is a burial",
     "feeling": "somber, heavy",
     "theme": "holy or feared"
+   },
+   "angle": null,
+   "disqualified": null
+  },
+  {
+   "id": "st-jerome-in-his-study-messina",
+   "kind": "artwork",
+   "wikipedia": "Saint Jerome in His Study (Antonello da Messina)",
+   "person": "Antonello da Messina",
+   "why": "The small, framed figure of the saint is lost in a massive, dark interior, his focus on his book implying he is oblivious to a threat lurking in the architecture.",
+   "wikidata": "Q2715353",
+   "picture": "Antonello_da_Messina_-_St_Jerome_in_his_study_-_National_Gallery_London.jpg",
+   "picture_px": 4731,
+   "score": 2,
+   "scores": {
+    "G": 0,
+    "D": 0,
+    "F": 1,
+    "T": 0,
+    "Y": 0,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The figure is looking down at his book, completely absorbed; there is no interaction with the viewer.",
+    "D": "It is a complex, multi-layered architectural scene with many elements, making it difficult to read at a quick glance on a small screen.",
+    "F": "There is a hidden, microscopic signature in the floor tiles, but it requires extreme magnification and explanation to be seen.",
+    "T": "The painting is a peaceful depiction of a scholar in his study; there is no sense of threat or unease.",
+    "Y": "The composition is designed to be distant and objective, providing no direct invitation for the viewer to enter the space.",
+    "S": "There is a specific, verifiable historical story about the hidden signature identified by Carmelo Micalizzi."
+   },
+   "character": {
+    "figure": "Saint Jerome reading",
+    "threat": "none, it is a peaceful study",
+    "feeling": "scholarly, quiet",
+    "theme": "other"
    },
    "angle": null,
    "disqualified": null
