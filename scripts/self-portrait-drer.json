@@ -1,0 +1,314 @@
+{
+ "id": "self-portrait-drer",
+ "kind": "artwork",
+ "form": "twist",
+ "hook_frame": "There's a reason ___.",
+ "closer": "either_or",
+ "detail": "face",
+ "home": null,
+ "subject": {
+  "title": "Self-Portrait",
+  "creator": "Albrecht Dürer",
+  "year": 1500,
+  "wikidata": "Q2546309"
+ },
+ "lead": {
+  "commons": "Dürer_Alte_Pinakothek.jpg",
+  "width_px": 3840,
+  "aspect": 0.7093,
+  "px": 2128,
+  "license": "Public domain",
+  "credit": "Dürer Alte Pinakothek — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Albrecht Dürer",
+  "credit": "Portrait of Albrecht Dürer — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "portrait"
+   ]
+  },
+  {
+   "name": "durer",
+   "box": [
+    0.0,
+    0.04,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "painter"
+   ]
+  },
+  {
+   "name": "durer_top",
+   "box": [
+    0.0,
+    0.04,
+    1.0,
+    0.58
+   ],
+   "words": [
+    "hair"
+   ]
+  },
+  {
+   "name": "face",
+   "box": [
+    0.36,
+    0.13,
+    0.64,
+    0.44
+   ],
+   "words": [
+    "face"
+   ]
+  },
+  {
+   "name": "eyes",
+   "box": [
+    0.39,
+    0.21,
+    0.62,
+    0.265
+   ],
+   "words": [
+    "eyes",
+    "gaze"
+   ]
+  },
+  {
+   "name": "hand",
+   "box": [
+    0.31,
+    0.74,
+    0.56,
+    0.98
+   ],
+   "words": [
+    "hand"
+   ]
+  },
+  {
+   "name": "monogram",
+   "box": [
+    0.04,
+    0.205,
+    0.15,
+    0.265
+   ],
+   "words": [
+    "monogram"
+   ]
+  },
+  {
+   "name": "inscription",
+   "box": [
+    0.74,
+    0.215,
+    0.96,
+    0.3
+   ],
+   "words": [
+    "inscription"
+   ]
+  }
+ ],
+ "punch": "CHRIST",
+ "sentences": [
+  {
+   "slot": "T1",
+   "text": "There's a reason this young painter dared to look like Christ.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "painter",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "T2",
+   "text": "This is the Self-Portrait at Twenty-Eight, painted by Albrecht Dürer in 1500.",
+   "kind": "FACT",
+   "source": 1
+  },
+  {
+   "slot": "T3",
+   "text": "Most people see it as stunning arrogance, or even blasphemy.",
+   "kind": "FACT",
+   "source": 4
+  },
+  {
+   "slot": "T3",
+   "text": "His frontal pose, his gaze and his blessing hand all copy pictures of Christ.",
+   "kind": "FACT",
+   "source": 5,
+   "show": [
+    {
+     "on": "gaze",
+     "to": "eyes"
+    },
+    {
+     "on": "hand",
+     "to": "hand"
+    }
+   ]
+  },
+  {
+   "slot": "T4",
+   "text": "And the picture seems to agree.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "T4",
+   "text": "His long hair and his calm eyes look straight out at you.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "hair",
+     "to": "durer_top"
+    },
+    {
+     "on": "eyes",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "T5",
+   "text": "But look at his hair.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "hair",
+     "to": "durer_top"
+    }
+   ]
+  },
+  {
+   "slot": "T6",
+   "text": "He painted it brown, not his real reddish blond.",
+   "kind": "FACT",
+   "source": 27
+  },
+  {
+   "slot": "T7",
+   "text": "According to a later woodcut by Sebald Beham, this exact face became the face of Christ.",
+   "kind": "FACT",
+   "source": 28,
+   "show": [
+    {
+     "on": "face",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "In the next century, Johann Georg Vischer used it for Christ again.",
+   "kind": "FACT",
+   "source": 30
+  },
+  {
+   "slot": "T8",
+   "text": "It isn't Dürer pretending to be Christ.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "T8",
+   "text": "It's Christ who ended up wearing Dürer's face.",
+   "kind": "FACT",
+   "source": 28,
+   "show": [
+    {
+     "on": "face",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "T9",
+   "text": "So did he copy Christ, or did Christ end up copying him?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "him",
+     "to": "eyes"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Dürer": "Dyoo-rer",
+  "Beham": "Bay-hahm",
+  "Vischer": "Fisher"
+ },
+ "meta": {
+  "title": "He Painted Himself Like Christ... Then Christ Got HIS Face #history #art",
+  "description": "Albrecht Dürer painted this self-portrait in 1500, at twenty-eight, in the pose of Christ. Later, Sebald Beham used the face for Christ in a woodcut, and Johann Georg Vischer did the same in 1637.",
+  "tags": [
+   "art history",
+   "durer",
+   "self-portrait",
+   "renaissance",
+   "alte pinakothek"
+  ],
+  "question": "Did he copy Christ, or did Christ copy him?"
+ },
+ "sources": [
+  {
+   "claim": "Self-Portrait (or Self-Portrait at Twenty-Eight) is a panel painting by the German Renaissance artist Albrecht Dürer.",
+   "url": "https://en.wikipedia.org/wiki/Self-Portrait_(Dürer,_Munich)",
+   "note": "sentence T2"
+  },
+  {
+   "claim": "The self-portrait is considered remarkable because of its resemblance to contemporary representations of Christ, which could be interpreted as a feat of either stunning arrogance or blasphemy.",
+   "url": "https://en.wikipedia.org/wiki/Self-Portrait_(Dürer,_Munich)",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "The similarities with the conventions of religious painting include the positioning of his hands which seem to be in the act of blessing, the manner of his direct gaze, and the sober and earthy tones.",
+   "url": "https://en.wikipedia.org/wiki/Self-Portrait_(Dürer,_Munich)",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "Dürer has rendered himself in this manner, and gives himself brown hair, despite his other self-portraits showing his hair as reddish-blond.",
+   "url": "https://en.wikipedia.org/wiki/Self-Portrait_(Dürer,_Munich)",
+   "note": "sentence T6"
+  },
+  {
+   "claim": "The painting so closely follows the conventions of late medieval religious art that it was used as the basis for depictions of Christ in a woodcut by Sebald Beham of c. 1520.",
+   "url": "https://en.wikipedia.org/wiki/Self-Portrait_(Dürer,_Munich)",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "In the next century, the face was used for Christ again, in a Christ and the Woman Taken in Adultery of 1637 by Johann Georg Vischer.",
+   "url": "https://en.wikipedia.org/wiki/Self-Portrait_(Dürer,_Munich)",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "The painting so closely follows the conventions of late medieval religious art that it was used as the basis for depictions of Christ in a woodcut by Sebald Beham of c. 1520.",
+   "url": "https://en.wikipedia.org/wiki/Self-Portrait_(Dürer,_Munich)",
+   "note": "sentence T8"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-19"
+}

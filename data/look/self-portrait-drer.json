@@ -1,0 +1,102 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "portrait"
+   ]
+  },
+  {
+   "name": "durer",
+   "box": [
+    0.0,
+    0.04,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "painter"
+   ]
+  },
+  {
+   "name": "durer_top",
+   "box": [
+    0.0,
+    0.04,
+    1.0,
+    0.58
+   ],
+   "words": [
+    "hair"
+   ]
+  },
+  {
+   "name": "face",
+   "box": [
+    0.36,
+    0.13,
+    0.64,
+    0.44
+   ],
+   "words": [
+    "face"
+   ]
+  },
+  {
+   "name": "eyes",
+   "box": [
+    0.39,
+    0.21,
+    0.62,
+    0.265
+   ],
+   "words": [
+    "eyes",
+    "gaze"
+   ]
+  },
+  {
+   "name": "hand",
+   "box": [
+    0.31,
+    0.74,
+    0.56,
+    0.98
+   ],
+   "words": [
+    "hand"
+   ]
+  },
+  {
+   "name": "monogram",
+   "box": [
+    0.04,
+    0.205,
+    0.15,
+    0.265
+   ],
+   "words": [
+    "monogram"
+   ]
+  },
+  {
+   "name": "inscription",
+   "box": [
+    0.74,
+    0.215,
+    0.96,
+    0.3
+   ],
+   "words": [
+    "inscription"
+   ]
+  }
+ ],
+ "summary": "A young man with long curling hair and a beard looks straight out in a fur-collared coat, one hand raised to the fur at his chest. The year 1500 and a monogram stand on the left, a Latin inscription on the right."
+}
