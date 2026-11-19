@@ -1,18 +1,23 @@
 {
  "_about": "written by learn.py (v1.09) from data/stats.json. on = false: the bot ignores this file.",
- "updated": "2026-11-18T21:40Z",
+ "updated": "2026-11-19T02:29Z",
  "on": false,
- "videos_counted": 4,
+ "videos_counted": 5,
  "rule": "on at 8 videos public for 3 days; a value needs 3 videos",
  "mult": {
   "form": {
    "riddle": {
-    "n": 4,
-    "mean": 8.77,
+    "n": 5,
+    "mean": 9.59,
     "m": 1.0
    }
   },
   "hook_frame": {
+   "may_hide": {
+    "n": 1,
+    "mean": 12.87,
+    "m": 1.0
+   },
    "detail_most_miss": {
     "n": 1,
     "mean": 11.45,
@@ -36,8 +41,8 @@
   },
   "closer": {
    "open": {
-    "n": 1,
-    "mean": 10.14,
+    "n": 2,
+    "mean": 11.5,
     "m": 1.0
    },
    "either_or": {
@@ -48,16 +53,16 @@
   },
   "kind": {
    "artwork": {
-    "n": 3,
-    "mean": 9.59,
+    "n": 4,
+    "mean": 10.41,
     "m": 1.09
    }
   },
   "theme": {
    "watcher": {
-    "n": 2,
-    "mean": 10.79,
-    "m": 1.0
+    "n": 3,
+    "mean": 11.49,
+    "m": 1.2
    },
    "fallen": {
     "n": 1,
@@ -72,15 +77,15 @@
     "m": 1.0
    },
    "19th": {
-    "n": 3,
-    "mean": 8.31,
-    "m": 0.95
+    "n": 4,
+    "mean": 9.45,
+    "m": 0.99
    }
   },
   "length": {
    "60-75 s": {
-    "n": 3,
-    "mean": 9.59,
+    "n": 4,
+    "mean": 10.41,
     "m": 1.09
    },
    "under 60 s": {
@@ -90,19 +95,31 @@
    }
   },
   "writer": {
+   "claude": {
+    "n": 3,
+    "mean": 10.5,
+    "m": 1.09
+   },
    "gemini": {
     "n": 1,
     "mean": 10.14,
     "m": 1.0
    },
-   "claude": {
-    "n": 2,
-    "mean": 9.31,
-    "m": 1.0
-   },
    "hand": {
     "n": 1,
     "mean": 6.31,
+    "m": 1.0
+   }
+  },
+  "title_pattern": {
+   "other": {
+    "n": 2,
+    "mean": 10.79,
+    "m": 1.0
+   },
+   "who": {
+    "n": 2,
+    "mean": 10.02,
     "m": 1.0
    }
   }
@@ -116,5 +133,5 @@
   "S": 1.0
  },
  "judge_fit": null,
- "mean_score": 8.77
+ "mean_score": 9.59
 }

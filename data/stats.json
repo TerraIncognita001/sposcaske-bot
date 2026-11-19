@@ -38,6 +38,7 @@
     "hook_frame": "what_if",
     "punch": "HATRED",
     "closer": "either_or",
+    "title_pattern": "who",
     "theme": "fallen",
     "century": "19th",
     "length": "60-75 s",
@@ -493,6 +494,7 @@
     "hook_frame": "detail_most_miss",
     "punch": "LISTEN",
     "closer": "either_or",
+    "title_pattern": "other",
     "theme": "watcher",
     "century": "19th",
     "length": "60-75 s",
@@ -512,8 +514,8 @@
    "likes": 10,
    "comments": 1,
    "score": 11.45,
-   "a_views": 112,
-   "a_engagedViews": 60,
+   "a_views": 110,
+   "a_engagedViews": 59,
    "a_averageViewPercentage": 76.07,
    "a_averageViewDuration": 46,
    "a_shares": 0,
@@ -954,6 +956,7 @@
     "hook_frame": "something_about",
     "punch": "DREAD",
     "closer": "open",
+    "title_pattern": "other",
     "theme": "watcher",
     "century": "18th",
     "length": "60-75 s",
@@ -1415,6 +1418,7 @@
     "hook_frame": "may_hide",
     "punch": "AWAKE",
     "closer": "open",
+    "title_pattern": "who",
     "theme": "watcher",
     "century": "19th",
     "length": "60-75 s",
@@ -1430,7 +1434,7 @@
     }
    },
    "hook": "This painting may hide something that sits in total darkness, completely awake.",
-   "views": 1235,
+   "views": 1238,
    "likes": 38,
    "comments": 3,
    "score": 12.87,
@@ -1876,6 +1880,7 @@
     "hook_frame": "detail_most_miss",
     "punch": "MISS",
     "closer": "either_or",
+    "title_pattern": "other",
     "theme": "false calm",
     "century": "16th",
     "length": "under 60 s",
@@ -2337,6 +2342,7 @@
     "hook_frame": "something_about",
     "punch": "DISTRUST",
     "closer": "either_or",
+    "title_pattern": "who",
     "theme": "watcher",
     "century": "17th",
     "length": "over 75 s",
@@ -2352,7 +2358,7 @@
     }
    },
    "hook": "There's something colder than anger about the way this old man looks back at you.",
-   "views": 683,
+   "views": 689,
    "likes": 34,
    "comments": 4,
    "score": 13.61,
@@ -2376,6 +2382,7 @@
     "hook_frame": "what_if",
     "punch": "BLIND",
     "closer": "open",
+    "title_pattern": "other",
     "theme": "innocence in danger",
     "century": "19th",
     "length": "under 60 s",
@@ -2391,10 +2398,10 @@
     }
    },
    "hook": "What if this young queen has to find her own death completely blind?",
-   "views": 253,
+   "views": 286,
    "likes": 7,
    "comments": 1,
-   "score": 5.85
+   "score": 5.98
   },
   "1rRJnD-APP4": {
    "story": "medusa-caravaggio",
@@ -2408,6 +2415,7 @@
     "hook_frame": "what_if",
     "punch": "TERROR",
     "closer": "either_or",
+    "title_pattern": "other",
     "theme": "watcher",
     "century": "16th",
     "length": "over 75 s",
@@ -2423,10 +2431,10 @@
     }
    },
    "hook": "What if this is not a monster's scream at all, but the purest terror you have ever seen?",
-   "views": 112,
-   "likes": 5,
+   "views": 127,
+   "likes": 6,
    "comments": 1,
-   "score": 4.98
+   "score": 5.14
   },
   "fmg0r0Z-4fI": {
    "story": "the-sleep-of-reason-produces-monsters-goya",
@@ -2440,6 +2448,7 @@
     "hook_frame": "why",
     "punch": "FRIEND",
     "closer": "open",
+    "title_pattern": "who",
     "theme": "false calm",
     "century": "18th",
     "length": "under 60 s",
@@ -2455,12 +2464,44 @@
     }
    },
    "hook": "Why does one of these terrifying night creatures act almost like a friend?",
-   "views": 51,
+   "views": 68,
    "likes": 2,
    "comments": 1,
-   "score": 4.1
+   "score": 4.38
+  },
+  "mpGWU2a7HuY": {
+   "story": "job-mocked-by-his-wife-tour",
+   "slot": "E2026-11-19#2",
+   "title": "The wife of Job was not what you were told",
+   "publish_at": "2026-11-19T02:00:00Z",
+   "seconds": 59.9,
+   "f": {
+    "kind": "artwork",
+    "form": "twist",
+    "hook_frame": "this_x",
+    "punch": "OPPOSITE",
+    "closer": "either_or",
+    "title_pattern": "other",
+    "theme": "pact",
+    "length": "under 60 s",
+    "writer": "claude",
+    "judge": 9,
+    "judge_scores": {
+     "G": 2,
+     "D": 2,
+     "F": 1,
+     "T": 2,
+     "Y": 1,
+     "S": 1
+    }
+   },
+   "hook": "This woman is famous for cruelty, and the Bible may say the exact opposite.",
+   "views": 46,
+   "likes": 3,
+   "comments": 0,
+   "score": 3.95
   }
  },
- "read_at": "2026-11-18T21:40:54Z",
+ "read_at": "2026-11-19T02:29:53Z",
  "_about": "written by stats_now.py (v1.09): one entry per public video; learn.py reads it. Do not edit by hand."
 }
