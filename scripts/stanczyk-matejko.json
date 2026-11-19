@@ -1,0 +1,422 @@
+{
+ "id": "stanczyk-matejko",
+ "kind": "artwork",
+ "form": "riddle",
+ "hook_frame": "There's something ___ about the way ___.",
+ "closer": "open",
+ "detail": "letter",
+ "home": null,
+ "subject": {
+  "title": "Stańczyk",
+  "creator": "Jan Matejko",
+  "year": 1862,
+  "wikidata": "Q6609268"
+ },
+ "lead": {
+  "commons": "Jan_Matejko,_Stańczyk.jpg",
+  "width_px": 3840,
+  "aspect": 1.3445,
+  "px": 5766,
+  "license": "Public domain",
+  "credit": "Jan Matejko, Stańczyk — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Jan Matejko",
+  "credit": "Portrait of Jan Matejko — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "room"
+   ]
+  },
+  {
+   "name": "jester",
+   "box": [
+    0.2,
+    0.15,
+    0.68,
+    0.94
+   ],
+   "words": [
+    "jester",
+    "fool"
+   ]
+  },
+  {
+   "name": "jester_top",
+   "box": [
+    0.35,
+    0.15,
+    0.68,
+    0.54
+   ],
+   "words": [
+    "man"
+   ]
+  },
+  {
+   "name": "jester_face",
+   "box": [
+    0.45,
+    0.17,
+    0.57,
+    0.4
+   ],
+   "words": [
+    "face"
+   ]
+  },
+  {
+   "name": "hands",
+   "box": [
+    0.435,
+    0.42,
+    0.555,
+    0.51
+   ],
+   "words": [
+    "hands"
+   ]
+  },
+  {
+   "name": "letter",
+   "box": [
+    0.14,
+    0.4,
+    0.3,
+    0.53
+   ],
+   "words": [
+    "letter"
+   ]
+  },
+  {
+   "name": "table",
+   "box": [
+    0.03,
+    0.2,
+    0.36,
+    0.85
+   ],
+   "words": [
+    "table"
+   ]
+  },
+  {
+   "name": "ball",
+   "box": [
+    0.79,
+    0.14,
+    1.0,
+    0.67
+   ],
+   "words": [
+    "ball",
+    "court",
+    "party"
+   ]
+  },
+  {
+   "name": "window",
+   "box": [
+    0.0,
+    0.0,
+    0.155,
+    0.42
+   ],
+   "words": [
+    "window",
+    "cathedral",
+    "comet"
+   ]
+  },
+  {
+   "name": "marotte",
+   "box": [
+    0.68,
+    0.77,
+    0.755,
+    0.86
+   ],
+   "words": [
+    "marotte"
+   ]
+  }
+ ],
+ "punch": "SILENCE",
+ "sentences": [
+  {
+   "slot": "S1",
+   "text": "There's something heavy about the way this jester sits through the party in silence.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "jester",
+     "to": "jester_face"
+    },
+    {
+     "on": "party",
+     "to": "ball"
+    }
+   ]
+  },
+  {
+   "slot": "S2",
+   "text": "This is Stańczyk, painted by Jan Matejko in 1862.",
+   "kind": "FACT",
+   "source": 44
+  },
+  {
+   "slot": "S3",
+   "text": "A jester sits alone in a dark room while a royal ball goes on.",
+   "kind": "FACT",
+   "source": 24,
+   "show": [
+    {
+     "on": "jester",
+     "to": "jester"
+    },
+    {
+     "on": "ball",
+     "to": "ball"
+    }
+   ]
+  },
+  {
+   "slot": "S4",
+   "text": "But look at the table.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "table",
+     "to": "table"
+    }
+   ]
+  },
+  {
+   "slot": "S5",
+   "text": "A letter lies opened there.",
+   "kind": "FACT",
+   "source": 28,
+   "show": [
+    {
+     "on": "letter",
+     "to": "letter"
+    }
+   ]
+  },
+  {
+   "slot": "S6",
+   "text": "The jester doesn't dance.",
+   "kind": "LOOK",
+   "source": 25,
+   "show": [
+    {
+     "on": "jester",
+     "to": "jester"
+    }
+   ]
+  },
+  {
+   "slot": "S6",
+   "text": "The jester doesn't joke.",
+   "kind": "LOOK",
+   "source": 25,
+   "show": [
+    {
+     "on": "joke",
+     "to": "jester_face"
+    }
+   ]
+  },
+  {
+   "slot": "S6",
+   "text": "The jester just stares.",
+   "kind": "LOOK",
+   "source": 25,
+   "show": [
+    {
+     "on": "stares",
+     "to": "jester_face"
+    }
+   ]
+  },
+  {
+   "slot": "S7",
+   "text": "According to its full title, Stańczyk sat at a ball facing the loss of Smolensk.",
+   "kind": "FACT",
+   "source": 19,
+   "show": [
+    {
+     "on": "title",
+     "to": "jester_top"
+    }
+   ]
+  },
+  {
+   "slot": "S8",
+   "text": "A jester should be making the court laugh.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "court",
+     "to": "ball"
+    }
+   ]
+  },
+  {
+   "slot": "S9",
+   "text": "But Smolensk had just been lost to Moscow.",
+   "kind": "FACT",
+   "source": 28,
+   "show": [
+    {
+     "on": "Smolensk",
+     "to": "letter"
+    }
+   ]
+  },
+  {
+   "slot": "S10",
+   "text": "And here's the disturbing part.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "S11",
+   "text": "The whole court is celebrating, yet only the fool understands the news.",
+   "kind": "FACT",
+   "source": 29,
+   "show": [
+    {
+     "on": "court",
+     "to": "ball"
+    },
+    {
+     "on": "fool",
+     "to": "jester_face"
+    }
+   ]
+  },
+  {
+   "slot": "S12",
+   "text": "Almost as if the wisest man there wears the bells.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "man",
+     "to": "jester_top"
+    }
+   ]
+  },
+  {
+   "slot": "M",
+   "text": "Maybe that is why Matejko gave him his own face.",
+   "kind": "FACT",
+   "source": 46,
+   "show": [
+    {
+     "on": "face",
+     "to": "jester_face"
+    }
+   ]
+  },
+  {
+   "slot": "S13",
+   "text": "So what would you do if only you had read it?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "read",
+     "to": "letter"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Stańczyk": "Stahn-chick",
+  "Matejko": "Mah-tay-ko",
+  "Smolensk": "Smo-lensk"
+ },
+ "meta": {
+  "title": "Why Is This Jester So SAD While Everyone Dances? #history #art",
+  "description": "Stańczyk was painted by Jan Matejko in 1862, when he was twenty-four. The court jester sits alone while a royal ball goes on, after the news that Smolensk was lost; Matejko gave him his own face.",
+  "tags": [
+   "art history",
+   "matejko",
+   "stanczyk",
+   "jester",
+   "poland",
+   "painting"
+  ],
+  "question": "What would you do if only you had read it?"
+ },
+ "sources": [
+  {
+   "claim": "Completed in 1862, when Matejko was twenty-four years old, it is one of his most famous works and the one that launched him to fame.",
+   "url": "https://en.wikipedia.org/wiki/Stańczyk_(painting)",
+   "note": "sentence S2"
+  },
+  {
+   "claim": "Stańczyk is shown sitting alone in a dark room, while a ball, hosted by the royal family, is in full swing in the neighbouring hall.",
+   "url": "https://en.wikipedia.org/wiki/Stańczyk_(painting)",
+   "note": "sentence S3"
+  },
+  {
+   "claim": "On the table lies a letter likely announcing that the Grand Duchy of Lithuania has lost Smolensk (now in Russia) to the Grand Duchy of Moscow, causing Stańczyk's sorrow and reflection on his fatherlan",
+   "url": "https://en.wikipedia.org/wiki/Stańczyk_(painting)",
+   "note": "sentence S5"
+  },
+  {
+   "claim": "His appearance is unlike that one would expect in a jester – gloomy, deep in thought.",
+   "url": "https://en.wikipedia.org/wiki/Stańczyk_(painting)",
+   "note": "sentence S6"
+  },
+  {
+   "claim": "His appearance is unlike that one would expect in a jester – gloomy, deep in thought.",
+   "url": "https://en.wikipedia.org/wiki/Stańczyk_(painting)",
+   "note": "sentence S6"
+  },
+  {
+   "claim": "His appearance is unlike that one would expect in a jester – gloomy, deep in thought.",
+   "url": "https://en.wikipedia.org/wiki/Stańczyk_(painting)",
+   "note": "sentence S6"
+  },
+  {
+   "claim": "Content The full title of the painting is Stańczyk w czasie balu na dworze królowej Bony wobec straconego Smoleńska (Stańczyk during a ball at the court of Queen Bona in the face of the loss of Smolen",
+   "url": "https://en.wikipedia.org/wiki/Stańczyk_(painting)",
+   "note": "sentence S7"
+  },
+  {
+   "claim": "On the table lies a letter likely announcing that the Grand Duchy of Lithuania has lost Smolensk (now in Russia) to the Grand Duchy of Moscow, causing Stańczyk's sorrow and reflection on his fatherlan",
+   "url": "https://en.wikipedia.org/wiki/Stańczyk_(painting)",
+   "note": "sentence S9"
+  },
+  {
+   "claim": "The letter seems to have been discarded by some official, and only the jester realizes its significance – while the rulers are partying, celebrating the recent victory at the Battle of Orsha, disregar",
+   "url": "https://en.wikipedia.org/wiki/Stańczyk_(painting)",
+   "note": "sentence S11"
+  },
+  {
+   "claim": "Matejko used his own face for Stańczyk, and with this work began a series of paintings analyzing and interpreting the History of Poland through the figure of Stańczyk.",
+   "url": "https://en.wikipedia.org/wiki/Stańczyk_(painting)",
+   "note": "sentence M"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-19"
+}

@@ -1,0 +1,130 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "room"
+   ]
+  },
+  {
+   "name": "jester",
+   "box": [
+    0.2,
+    0.15,
+    0.68,
+    0.94
+   ],
+   "words": [
+    "jester",
+    "fool"
+   ]
+  },
+  {
+   "name": "jester_top",
+   "box": [
+    0.35,
+    0.15,
+    0.68,
+    0.54
+   ],
+   "words": [
+    "man"
+   ]
+  },
+  {
+   "name": "jester_face",
+   "box": [
+    0.45,
+    0.17,
+    0.57,
+    0.4
+   ],
+   "words": [
+    "face"
+   ]
+  },
+  {
+   "name": "hands",
+   "box": [
+    0.435,
+    0.42,
+    0.555,
+    0.51
+   ],
+   "words": [
+    "hands"
+   ]
+  },
+  {
+   "name": "letter",
+   "box": [
+    0.14,
+    0.4,
+    0.3,
+    0.53
+   ],
+   "words": [
+    "letter"
+   ]
+  },
+  {
+   "name": "table",
+   "box": [
+    0.03,
+    0.2,
+    0.36,
+    0.85
+   ],
+   "words": [
+    "table"
+   ]
+  },
+  {
+   "name": "ball",
+   "box": [
+    0.79,
+    0.14,
+    1.0,
+    0.67
+   ],
+   "words": [
+    "ball",
+    "court",
+    "party"
+   ]
+  },
+  {
+   "name": "window",
+   "box": [
+    0.0,
+    0.0,
+    0.155,
+    0.42
+   ],
+   "words": [
+    "window",
+    "cathedral",
+    "comet"
+   ]
+  },
+  {
+   "name": "marotte",
+   "box": [
+    0.68,
+    0.77,
+    0.755,
+    0.86
+   ],
+   "words": [
+    "marotte"
+   ]
+  }
+ ],
+ "summary": "A jester in red sits slumped in a chair in a dark room beside a table with an opened letter, while a royal ball goes on in the bright hall on the right. Through the window a cathedral and a comet show in the night sky."
+}
