@@ -510,7 +510,7 @@
     }
    },
    "hook": "There's a terrifying detail on this violin, and it explains why the painter stopped to listen.",
-   "views": 112,
+   "views": 113,
    "likes": 10,
    "comments": 1,
    "score": 11.31,
@@ -3282,7 +3282,7 @@
     }
    },
    "hook": "What if this is not a monster's scream at all, but the purest terror you have ever seen?",
-   "views": 178,
+   "views": 170,
    "likes": 11,
    "comments": 2,
    "score": 13.84,
@@ -3322,10 +3322,10 @@
     }
    },
    "hook": "Why does one of these terrifying night creatures act almost like a friend?",
-   "views": 146,
+   "views": 149,
    "likes": 3,
    "comments": 2,
-   "score": 5.26
+   "score": 5.28
   },
   "mpGWU2a7HuY": {
    "story": "job-mocked-by-his-wife-tour",
@@ -3354,10 +3354,10 @@
     }
    },
    "hook": "This woman is famous for cruelty, and the Bible may say the exact opposite.",
-   "views": 299,
+   "views": 303,
    "likes": 8,
    "comments": 2,
-   "score": 6.14
+   "score": 6.15
   },
   "Ynxuh3gEyXI": {
    "story": "the-demon-seated-vrubel",
@@ -3387,12 +3387,12 @@
     }
    },
    "hook": "This painting may hide the loneliest feeling ever given to a creature built like a god.",
-   "views": 66,
+   "views": 88,
    "likes": 4,
-   "comments": 0,
-   "score": 4.34
+   "comments": 1,
+   "score": 4.71
   }
  },
- "read_at": "2026-11-19T20:30:33Z",
+ "read_at": "2026-11-19T21:21:00Z",
  "_about": "written by stats_now.py (v1.09): one entry per public video; learn.py reads it. Do not edit by hand."
 }
