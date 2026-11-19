@@ -122,8 +122,7 @@
    ],
    "words": [
     "ball",
-    "court",
-    "party"
+    "court"
    ]
   },
   {
@@ -164,10 +163,6 @@
     {
      "on": "jester",
      "to": "jester_face"
-    },
-    {
-     "on": "party",
-     "to": "ball"
     }
    ]
   },
