@@ -1,0 +1,129 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.02,
+    0.02,
+    0.98,
+    0.97
+   ],
+   "words": [
+    "gorge"
+   ]
+  },
+  {
+   "name": "knight",
+   "box": [
+    0.36,
+    0.14,
+    0.66,
+    0.62
+   ],
+   "words": [
+    "knight",
+    "rider",
+    "soldier"
+   ]
+  },
+  {
+   "name": "knight_face",
+   "box": [
+    0.47,
+    0.175,
+    0.6,
+    0.27
+   ],
+   "words": [
+    "face"
+   ]
+  },
+  {
+   "name": "death",
+   "box": [
+    0.29,
+    0.22,
+    0.44,
+    0.36
+   ],
+   "words": [
+    "death"
+   ]
+  },
+  {
+   "name": "hourglass",
+   "box": [
+    0.225,
+    0.2,
+    0.295,
+    0.31
+   ],
+   "words": [
+    "hourglass"
+   ]
+  },
+  {
+   "name": "devil",
+   "box": [
+    0.7,
+    0.26,
+    0.93,
+    0.53
+   ],
+   "words": [
+    "devil"
+   ]
+  },
+  {
+   "name": "fox_tail",
+   "box": [
+    0.62,
+    0.0,
+    0.95,
+    0.3
+   ],
+   "words": [
+    "lance",
+    "fox",
+    "tail"
+   ]
+  },
+  {
+   "name": "horse",
+   "box": [
+    0.085,
+    0.28,
+    0.97,
+    0.99
+   ],
+   "words": [
+    "horse"
+   ]
+  },
+  {
+   "name": "dog",
+   "box": [
+    0.45,
+    0.66,
+    0.85,
+    0.83
+   ],
+   "words": [
+    "dog"
+   ]
+  },
+  {
+   "name": "skull",
+   "box": [
+    0.02,
+    0.8,
+    0.12,
+    0.87
+   ],
+   "words": [
+    "skull"
+   ]
+  }
+ ],
+ "summary": "An armoured knight rides a horse through a narrow gorge with his dog, a lance on his shoulder with a fox tail at its tip. Death holds up an hourglass beside him and a goat-headed devil follows behind; a skull lies on the ground."
+}

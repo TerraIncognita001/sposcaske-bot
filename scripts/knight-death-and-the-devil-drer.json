@@ -1,0 +1,390 @@
+{
+ "id": "knight-death-and-the-devil-drer",
+ "kind": "artwork",
+ "form": "twist",
+ "hook_frame": "What if ___?",
+ "closer": "either_or",
+ "detail": "fox_tail",
+ "home": null,
+ "subject": {
+  "title": "Knight, Death and the Devil",
+  "creator": "Albrecht Dürer",
+  "year": 1513,
+  "wikidata": "Q1755464"
+ },
+ "lead": {
+  "commons": "Albrecht_Dürer,_Knight,_Death_and_Devil,_1513,_NGA_6637.jpg",
+  "width_px": 3840,
+  "aspect": 0.7717,
+  "px": 3087,
+  "license": "CC0",
+  "credit": "Albrecht Dürer, Knight, Death and Devil, 1513, NGA 6637 — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Albrecht Dürer",
+  "credit": "Portrait of Albrecht Dürer — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.02,
+    0.02,
+    0.98,
+    0.97
+   ],
+   "words": [
+    "gorge"
+   ]
+  },
+  {
+   "name": "knight",
+   "box": [
+    0.36,
+    0.14,
+    0.66,
+    0.62
+   ],
+   "words": [
+    "knight",
+    "rider",
+    "soldier"
+   ]
+  },
+  {
+   "name": "knight_face",
+   "box": [
+    0.47,
+    0.175,
+    0.6,
+    0.27
+   ],
+   "words": [
+    "face"
+   ]
+  },
+  {
+   "name": "death",
+   "box": [
+    0.29,
+    0.22,
+    0.44,
+    0.36
+   ],
+   "words": [
+    "death"
+   ]
+  },
+  {
+   "name": "hourglass",
+   "box": [
+    0.225,
+    0.2,
+    0.295,
+    0.31
+   ],
+   "words": [
+    "hourglass"
+   ]
+  },
+  {
+   "name": "devil",
+   "box": [
+    0.7,
+    0.26,
+    0.93,
+    0.53
+   ],
+   "words": [
+    "devil"
+   ]
+  },
+  {
+   "name": "fox_tail",
+   "box": [
+    0.62,
+    0.0,
+    0.95,
+    0.3
+   ],
+   "words": [
+    "lance",
+    "fox",
+    "tail"
+   ]
+  },
+  {
+   "name": "horse",
+   "box": [
+    0.085,
+    0.28,
+    0.97,
+    0.99
+   ],
+   "words": [
+    "horse"
+   ]
+  },
+  {
+   "name": "dog",
+   "box": [
+    0.45,
+    0.66,
+    0.85,
+    0.83
+   ],
+   "words": [
+    "dog"
+   ]
+  },
+  {
+   "name": "skull",
+   "box": [
+    0.02,
+    0.8,
+    0.12,
+    0.87
+   ],
+   "words": [
+    "skull"
+   ]
+  }
+ ],
+ "punch": "HERO",
+ "sentences": [
+  {
+   "slot": "T1",
+   "text": "What if the famous knight of faith in this engraving was never a hero?",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "knight",
+     "to": "knight"
+    },
+    {
+     "on": "hero",
+     "to": "knight_face"
+    }
+   ]
+  },
+  {
+   "slot": "T2",
+   "text": "This is Knight, Death and the Devil, engraved by Albrecht Dürer in 1513.",
+   "kind": "FACT",
+   "source": 1
+  },
+  {
+   "slot": "T3",
+   "text": "For centuries, the rider has been read as a Christian soldier protected by the armour of his faith.",
+   "kind": "FACT",
+   "source": 18,
+   "show": [
+    {
+     "on": "rider",
+     "to": "knight"
+    }
+   ]
+  },
+  {
+   "slot": "T3",
+   "text": "Nietzsche even gave a print to Wagner as a symbol of a brave future.",
+   "kind": "FACT",
+   "source": 44
+  },
+  {
+   "slot": "T4",
+   "text": "And the picture seems to agree.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "T4",
+   "text": "The knight stares ahead while Death and the Devil crowd beside his horse.",
+   "kind": "FACT",
+   "source": 14,
+   "show": [
+    {
+     "on": "knight",
+     "to": "knight_face"
+    },
+    {
+     "on": "Death",
+     "to": "death"
+    },
+    {
+     "on": "Devil",
+     "to": "devil"
+    },
+    {
+     "on": "horse",
+     "to": "horse"
+    }
+   ]
+  },
+  {
+   "slot": "T5",
+   "text": "But look at his lance.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "lance",
+     "to": "fox_tail"
+    }
+   ]
+  },
+  {
+   "slot": "T6",
+   "text": "A fox tail hangs from its tip.",
+   "kind": "FACT",
+   "source": 34,
+   "show": [
+    {
+     "on": "fox",
+     "to": "fox_tail"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "According to the writers Sten Karling and Ursula Meyer, the work did not seek to glorify the knight.",
+   "kind": "FACT",
+   "source": 33,
+   "show": [
+    {
+     "on": "knight",
+     "to": "knight"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "In early Christian symbolism, the fox stood for greed, cunning and treachery.",
+   "kind": "FACT",
+   "source": 34,
+   "show": [
+    {
+     "on": "fox",
+     "to": "fox_tail"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "And Dorothy Getlein saw his face as resigned and downcast.",
+   "kind": "FACT",
+   "source": 30,
+   "show": [
+    {
+     "on": "face",
+     "to": "knight_face"
+    }
+   ]
+  },
+  {
+   "slot": "T8",
+   "text": "He isn't a hero of faith.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "hero",
+     "to": "knight_face"
+    }
+   ]
+  },
+  {
+   "slot": "T8",
+   "text": "He's a resigned rider with Death as his companion.",
+   "kind": "FACT",
+   "source": 37,
+   "show": [
+    {
+     "on": "Death",
+     "to": "death"
+    }
+   ]
+  },
+  {
+   "slot": "T9",
+   "text": "So is he a saint in armour, or a man who already gave up?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "armour",
+     "to": "knight"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Dürer": "Dyoo-rer",
+  "Karling": "Kar-ling",
+  "Getlein": "Get-line",
+  "Nietzsche": "Nee-cheh"
+ },
+ "meta": {
+  "title": "Everyone Called Him a Hero... Then They Saw the FOX Tail #history #art",
+  "description": "Knight, Death and the Devil is an engraving by Albrecht Dürer from 1513. It is usually read as a Christian knight protected by his faith, but Sten Karling and Ursula Meyer argued it did not glorify him: a fox tail, a symbol of greed and cunning, hangs from his lance.",
+  "tags": [
+   "art history",
+   "durer",
+   "knight death and the devil",
+   "engraving",
+   "renaissance"
+  ],
+  "question": "A saint in armour, or a man who gave up?"
+ },
+ "sources": [
+  {
+   "claim": "Knight, Death and the Devil (German: Ritter, Tod und Teufel) is a large 1513 engraving by the German artist Albrecht Dürer, one of the three Meisterstiche (master prints) completed during a period whe",
+   "url": "https://en.wikipedia.org/wiki/Knight,_Death_and_the_Devil",
+   "note": "sentence T2"
+  },
+  {
+   "claim": "The surrounding characters are threatening to the knight, who is seemingly protected by the literal and figurative armor of his faith.",
+   "url": "https://en.wikipedia.org/wiki/Knight,_Death_and_the_Devil",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "Influence Germany In 1870 Friedrich Nietzsche gave a print of the engraving to Richard Wagner.",
+   "url": "https://en.wikipedia.org/wiki/Knight,_Death_and_the_Devil",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "The man is shown looking doggedly straight ahead; he does not allow his line of vision to be interrupted or distracted by the demons beside him.",
+   "url": "https://en.wikipedia.org/wiki/Knight,_Death_and_the_Devil",
+   "note": "sentence T4"
+  },
+  {
+   "claim": "They point to the supposed lack of Christian or religious symbolism in the work and to the fox's tail wrapped on top of the knight's lance – in early Christian Greek symbolism the fox was a symbol of ",
+   "url": "https://en.wikipedia.org/wiki/Knight,_Death_and_the_Devil",
+   "note": "sentence T6"
+  },
+  {
+   "claim": "According to Getlein, \"there is a sense of obsolescence about the knight accompanied by Death and the Devil.\"  In 1970 writer Sten Karling, and later Ursula Meyer, said that the work did not seek to g",
+   "url": "https://en.wikipedia.org/wiki/Knight,_Death_and_the_Devil",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "They point to the supposed lack of Christian or religious symbolism in the work and to the fox's tail wrapped on top of the knight's lance – in early Christian Greek symbolism the fox was a symbol of ",
+   "url": "https://en.wikipedia.org/wiki/Knight,_Death_and_the_Devil",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "Dorothy Getlein said the knight looks resigned, and his facial features are downcast.",
+   "url": "https://en.wikipedia.org/wiki/Knight,_Death_and_the_Devil",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "In this interpretation Death and the Devil are merely the knight's companions on his journey, not omens.",
+   "url": "https://en.wikipedia.org/wiki/Knight,_Death_and_the_Devil",
+   "note": "sentence T8"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-19"
+}
