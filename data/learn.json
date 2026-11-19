@@ -1,31 +1,31 @@
 {
  "_about": "written by learn.py (v1.09) from data/stats.json. on = false: the bot ignores this file.",
- "updated": "2026-11-19T02:29Z",
+ "updated": "2026-11-19T20:30Z",
  "on": false,
- "videos_counted": 5,
+ "videos_counted": 6,
  "rule": "on at 8 videos public for 3 days; a value needs 3 videos",
  "mult": {
   "form": {
    "riddle": {
-    "n": 5,
-    "mean": 9.59,
+    "n": 6,
+    "mean": 9.45,
     "m": 1.0
    }
   },
   "hook_frame": {
    "may_hide": {
     "n": 1,
-    "mean": 12.87,
+    "mean": 12.85,
     "m": 1.0
    },
    "detail_most_miss": {
-    "n": 1,
-    "mean": 11.45,
+    "n": 2,
+    "mean": 10.18,
     "m": 1.0
    },
    "something_about": {
     "n": 1,
-    "mean": 10.14,
+    "mean": 10.0,
     "m": 1.0
    },
    "what_if": {
@@ -42,27 +42,32 @@
   "closer": {
    "open": {
     "n": 2,
-    "mean": 11.5,
+    "mean": 11.43,
     "m": 1.0
    },
    "either_or": {
-    "n": 2,
-    "mean": 9.31,
-    "m": 1.0
+    "n": 3,
+    "mean": 9.18,
+    "m": 0.97
    }
   },
   "kind": {
    "artwork": {
-    "n": 4,
-    "mean": 10.41,
-    "m": 1.09
+    "n": 5,
+    "mean": 10.08,
+    "m": 1.07
    }
   },
   "theme": {
    "watcher": {
     "n": 3,
-    "mean": 11.49,
+    "mean": 11.39,
     "m": 1.2
+   },
+   "false calm": {
+    "n": 1,
+    "mean": 9.05,
+    "m": 1.0
    },
    "fallen": {
     "n": 1,
@@ -73,36 +78,41 @@
   "century": {
    "18th": {
     "n": 1,
-    "mean": 10.14,
+    "mean": 10.0,
     "m": 1.0
    },
    "19th": {
     "n": 4,
-    "mean": 9.45,
-    "m": 0.99
+    "mean": 9.41,
+    "m": 1.0
+   },
+   "16th": {
+    "n": 1,
+    "mean": 9.05,
+    "m": 1.0
    }
   },
   "length": {
    "60-75 s": {
     "n": 4,
-    "mean": 10.41,
+    "mean": 10.34,
     "m": 1.09
    },
    "under 60 s": {
-    "n": 1,
-    "mean": 6.31,
+    "n": 2,
+    "mean": 7.68,
     "m": 1.0
    }
   },
   "writer": {
    "claude": {
     "n": 3,
-    "mean": 10.5,
-    "m": 1.09
+    "mean": 10.45,
+    "m": 1.11
    },
    "gemini": {
-    "n": 1,
-    "mean": 10.14,
+    "n": 2,
+    "mean": 9.53,
     "m": 1.0
    },
    "hand": {
@@ -113,9 +123,9 @@
   },
   "title_pattern": {
    "other": {
-    "n": 2,
-    "mean": 10.79,
-    "m": 1.0
+    "n": 3,
+    "mean": 10.12,
+    "m": 1.07
    },
    "who": {
     "n": 2,
@@ -133,5 +143,5 @@
   "S": 1.0
  },
  "judge_fit": null,
- "mean_score": 9.59
+ "mean_score": 9.45
 }

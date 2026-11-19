@@ -90,8 +90,7 @@
    "story": "the-demon-seated-vrubel",
    "title": "The demon who was never evil, only alone",
    "publish_at": "2026-11-19T15:00:00Z",
-   "seconds": 112.5,
-   "comment_pending": "A monster waiting for revenge, or a lonely spirit? 👇"
+   "seconds": 112.5
   },
   "E2026-11-20#2": {
    "tries": 1,
@@ -101,6 +100,15 @@
    "publish_at": "2026-11-20T02:00:00Z",
    "seconds": 59.3,
    "comment_pending": "A sleeping monk, or a martyr? 👇"
+  },
+  "E2026-11-20#1": {
+   "tries": 1,
+   "video": "e6z-1qwtMmQ",
+   "story": "the-young-martyr-delaroche",
+   "title": "Why Are This Sleeping Girl's Hands TIED? #history #art",
+   "publish_at": "2026-11-20T15:00:00Z",
+   "seconds": 54.1,
+   "comment_pending": "What are the two figures on the shore watching? 👇"
   }
  }
 }
