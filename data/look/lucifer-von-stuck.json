@@ -4,13 +4,14 @@
    "name": "main_action",
    "box": [
     0.14,
-    0.07,
-    0.85,
+    0.05,
+    0.86,
     0.98
    ],
    "words": [
-    "man",
-    "darkness"
+    "dark",
+    "darkness",
+    "night"
    ]
   },
   {
@@ -23,7 +24,8 @@
    ],
    "words": [
     "man",
-    "lucifer"
+    "devil",
+    "body"
    ]
   },
   {
@@ -35,58 +37,64 @@
     0.5
    ],
    "words": [
-    "man",
-    "lucifer"
+    "shoulders"
    ]
   },
   {
-   "name": "man_face",
+   "name": "face",
    "box": [
-    0.6,
+    0.585,
     0.07,
-    0.74,
+    0.745,
     0.24
    ],
    "words": [
-    "man",
+    "face",
     "lucifer",
-    "face"
+    "him",
+    "star"
    ]
   },
   {
    "name": "eyes",
    "box": [
-    0.62,
-    0.13,
-    0.72,
-    0.17
+    0.622,
+    0.12,
+    0.728,
+    0.165
    ],
    "words": [
-    "eyes"
+    "eyes",
+    "eye",
+    "stare",
+    "light"
    ]
   },
   {
    "name": "hand_chin",
    "box": [
-    0.65,
-    0.17,
-    0.75,
+    0.655,
+    0.165,
+    0.745,
     0.28
    ],
    "words": [
-    "hand"
+    "hand",
+    "fist",
+    "chin"
    ]
   },
   {
-   "name": "hand_side",
+   "name": "wing",
    "box": [
-    0.26,
-    0.38,
-    0.38,
-    0.52
+    0.3,
+    0.28,
+    0.55,
+    0.66
    ],
    "words": [
-    "hand"
+    "wing",
+    "wings"
    ]
   },
   {
@@ -105,26 +113,13 @@
    "name": "light_glow",
    "box": [
     0.15,
-    0.45,
+    0.46,
     0.22,
-    0.58
+    0.56
    ],
    "words": [
-    "light"
-   ]
-  },
-  {
-   "name": "wing",
-   "box": [
-    0.26,
-    0.28,
-    0.53,
-    0.66
-   ],
-   "words": [
-    "wing"
+    "flame"
    ]
   }
- ],
- "summary": "Lucifer sits hunched in the dark with his chin on one hand and a dark wing hanging at his side. A small cold light glows on the ground behind him."
+ ]
 }

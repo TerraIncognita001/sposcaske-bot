@@ -1,9 +1,11 @@
 {
  "id": "lucifer-von-stuck",
  "kind": "artwork",
- "hook_frame": "This painting may hide ___.",
- "closer": "open",
+ "form": "emotion",
+ "hook_frame": "There's something ___ about the way ___.",
+ "closer": "either_or",
  "detail": "eyes",
+ "home": "face",
  "subject": {
   "title": "Lucifer",
   "creator": "Franz von Stuck",
@@ -13,6 +15,8 @@
  "lead": {
   "commons": "Luzifer_(Lucifer)_painting_by_Franz_von_Stuck_1890_National_Gallery_in_Sofia.jpg",
   "width_px": 3840,
+  "aspect": 0.9472,
+  "px": 4700,
   "license": "Public domain",
   "credit": "Luzifer (Lucifer) painting by Franz von Stuck 1890 National Gallery in Sofia — Wikimedia Commons"
  },
@@ -27,13 +31,14 @@
    "name": "main_action",
    "box": [
     0.14,
-    0.07,
-    0.85,
+    0.05,
+    0.86,
     0.98
    ],
    "words": [
-    "man",
-    "darkness"
+    "dark",
+    "darkness",
+    "night"
    ]
   },
   {
@@ -46,7 +51,8 @@
    ],
    "words": [
     "man",
-    "lucifer"
+    "devil",
+    "body"
    ]
   },
   {
@@ -58,58 +64,64 @@
     0.5
    ],
    "words": [
-    "man",
-    "lucifer"
+    "shoulders"
    ]
   },
   {
-   "name": "man_face",
+   "name": "face",
    "box": [
-    0.6,
+    0.585,
     0.07,
-    0.74,
+    0.745,
     0.24
    ],
    "words": [
-    "man",
+    "face",
     "lucifer",
-    "face"
+    "him",
+    "star"
    ]
   },
   {
    "name": "eyes",
    "box": [
-    0.62,
-    0.13,
-    0.72,
-    0.17
+    0.622,
+    0.12,
+    0.728,
+    0.165
    ],
    "words": [
-    "eyes"
+    "eyes",
+    "eye",
+    "stare",
+    "light"
    ]
   },
   {
    "name": "hand_chin",
    "box": [
-    0.65,
-    0.17,
-    0.75,
+    0.655,
+    0.165,
+    0.745,
     0.28
    ],
    "words": [
-    "hand"
+    "hand",
+    "fist",
+    "chin"
    ]
   },
   {
-   "name": "hand_side",
+   "name": "wing",
    "box": [
-    0.26,
-    0.38,
-    0.38,
-    0.52
+    0.3,
+    0.28,
+    0.55,
+    0.66
    ],
    "words": [
-    "hand"
+    "wing",
+    "wings"
    ]
   },
   {
@@ -128,213 +140,305 @@
    "name": "light_glow",
    "box": [
     0.15,
-    0.45,
+    0.46,
     0.22,
-    0.58
+    0.56
    ],
    "words": [
-    "light"
-   ]
-  },
-  {
-   "name": "wing",
-   "box": [
-    0.26,
-    0.28,
-    0.53,
-    0.66
-   ],
-   "words": [
-    "wing"
+    "flame"
    ]
   }
  ],
- "punch": "AWAKE",
+ "punch": "SORROW",
  "sentences": [
   {
-   "slot": "S1",
-   "text": "This painting may hide something that sits in total darkness, completely awake.",
+   "slot": "E1",
+   "text": "There's something wrong about the way these eyes stare at you, and it isn't evil.",
    "kind": "HOOK",
    "source": null,
    "show": [
     {
-     "on": "darkness",
-     "to": "main_action"
-    },
-    {
-     "on": "awake",
+     "on": "eyes",
      "to": "eyes"
     }
    ]
   },
   {
-   "slot": "S2",
+   "slot": "E2",
    "text": "This is Lucifer, painted by Franz Stuck in 1890.",
    "kind": "FACT",
    "source": 1
   },
   {
-   "slot": "S3",
-   "text": "A man sits in the darkness with his chin on his hand. A black wing hangs at his side.",
-   "kind": "LOOK",
+   "slot": "E3",
+   "text": "And this isn't a devil with horns.",
+   "kind": "READING",
    "source": null,
    "show": [
     {
-     "on": "man",
+     "on": "devil",
      "to": "man"
-    },
-    {
-     "on": "darkness",
-     "to": "main_action"
-    },
-    {
-     "on": "chin",
-     "to": "hand_chin"
-    },
-    {
-     "on": "wing",
-     "to": "wing"
     }
    ]
   },
   {
-   "slot": "S4",
+   "slot": "E3",
+   "text": "It's a fallen star, sitting in the dark.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "dark",
+     "to": "main_action"
+    }
+   ]
+  },
+  {
+   "slot": "E4",
+   "text": "Naked, silent, almost human.",
+   "kind": "LOOK",
+   "source": null
+  },
+  {
+   "slot": "E5",
    "text": "But look at his eyes.",
    "kind": "LOOK",
+   "source": null
+  },
+  {
+   "slot": "E6",
+   "text": "He's watching you.",
+   "kind": "LOOK",
    "source": null,
    "show": [
     {
-     "on": "eyes",
+     "on": "watching",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "E6",
+   "text": "There's a pale light burning in both eyes.",
+   "kind": "LOOK",
+   "source": null
+  },
+  {
+   "slot": "E7",
+   "text": "Yet it doesn't feel like hatred.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "hatred",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "E8",
+   "text": "Look into his eyes.",
+   "kind": "LOOK",
+   "source": null
+  },
+  {
+   "slot": "E8",
+   "text": "There's grief there.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "grief",
      "to": "eyes"
     }
    ]
   },
   {
-   "slot": "S5",
-   "text": "His eyes are glowing.",
-   "kind": "LOOK",
-   "source": null,
-   "show": [
-    {
-     "on": "glowing",
-     "to": "eyes"
-    }
-   ]
-  },
-  {
-   "slot": "S5",
-   "text": "They look straight at you.",
-   "kind": "LOOK",
-   "source": null,
-   "show": [
-    {
-     "on": "you",
-     "to": "man_face"
-    }
-   ]
-  },
-  {
-   "slot": "S6",
-   "text": "Lucifer doesn't blink.",
-   "kind": "LOOK",
-   "source": null,
-   "show": [
-    {
-     "on": "blink",
-     "to": "eyes"
-    }
-   ]
-  },
-  {
-   "slot": "S6",
-   "text": "Lucifer doesn't look away.",
-   "kind": "LOOK",
-   "source": null,
-   "show": [
-    {
-     "on": "away",
-     "to": "man_face"
-    }
-   ]
-  },
-  {
-   "slot": "S6",
-   "text": "Lucifer simply waits.",
-   "kind": "LOOK",
-   "source": null,
-   "show": [
-    {
-     "on": "waits",
-     "to": "man_top"
-    }
-   ]
-  },
-  {
-   "slot": "S7",
-   "text": "According to the National Art Gallery in Sofia, Ferdinand of Bulgaria bought this painting straight from the artist's studio.",
-   "kind": "FACT",
-   "source": 4
-  },
-  {
-   "slot": "S8",
-   "text": "A king should hang saints in his palace.",
+   "slot": "E9",
+   "text": "A cold, sleepless, endless sorrow.",
    "kind": "READING",
    "source": null
   },
   {
-   "slot": "S9",
-   "text": "But he chose a demon for the royal collection.",
-   "kind": "FACT",
-   "source": 3,
-   "show": [
-    {
-     "on": "demon",
-     "to": "man"
-    }
-   ]
-  },
-  {
-   "slot": "S10",
-   "text": "And here's the unsettling part.",
-   "kind": "READING",
-   "source": null
-  },
-  {
-   "slot": "S11",
-   "text": "His body is resting, yet his eyes have never been more awake.",
+   "slot": "E10",
+   "text": "As if he still remembers the sky he lost.",
    "kind": "READING",
    "source": null,
    "show": [
     {
-     "on": "body",
-     "to": "man"
+     "on": "sky",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "E11",
+   "text": "According to the traditional story of Lucifer, the morning star was banished to Earth for his pride.",
+   "kind": "FACT",
+   "source": 12,
+   "show": [
+    {
+     "on": "star",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "E11",
+   "text": "A century later, Paris and Berlin showed him in an exhibition about melancholy.",
+   "kind": "FACT",
+   "source": 8,
+   "show": [
+    {
+     "on": "melancholy",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "E12",
+   "text": "And Stuck seems to capture something few painters dared.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "Stuck",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "E12",
+   "text": "Not the fall everyone paints, but the long night after.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "night",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "E12",
+   "text": "The moment when he understands the light is never coming back.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "light",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "E13",
+   "text": "Imagine you were once the brightest star in the sky.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "star",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "E13",
+   "text": "Would you beg to be forgiven?",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E13",
+   "text": "Would you try to climb back?",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E13",
+   "text": "Or would you sit in the dark and stare?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "stare",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "E14",
+   "text": "That's what makes this painting so hard to look at.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E15",
+   "text": "Lucifer is still beautiful, but his eyes no longer seem alive.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "beautiful",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "E15",
+   "text": "His face says one thing, his eyes say another.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "face",
+     "to": "face"
     },
     {
-     "on": "eyes",
+     "on": "another",
      "to": "eyes"
     }
    ]
   },
   {
-   "slot": "S12",
-   "text": "As if he were waiting for you to notice him.",
+   "slot": "E16",
+   "text": "And maybe that is the worst of it.",
    "kind": "READING",
-   "source": null,
-   "show": [
-    {
-     "on": "waiting",
-     "to": "man_face"
-    }
-   ]
+   "source": null
   },
   {
-   "slot": "S13",
-   "text": "So what is Lucifer waiting for in the dark?",
+   "slot": "E17",
+   "text": "Maybe darkness doesn't begin with hatred.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E17",
+   "text": "Maybe it begins with pride, then becomes loneliness, and eventually turns into sorrow.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E18",
+   "text": "So look at him one more time.",
+   "kind": "LOOK",
+   "source": null
+  },
+  {
+   "slot": "E19",
+   "text": "Do you see the Devil, waiting for his revenge?",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E19",
+   "text": "Or a star that never stopped falling?",
    "kind": "READING",
    "source": null,
    "show": [
     {
-     "on": "Lucifer",
+     "on": "falling",
      "to": "eyes"
     }
    ]
@@ -344,34 +448,35 @@
   "Stuck": "Shtook"
  },
  "meta": {
-  "title": "The eyes of Lucifer that never close",
-  "description": "Lucifer is an oil painting by the German artist Franz Stuck from 1890, from his dark monumental period. Ferdinand I of Bulgaria bought it from Stuck's studio in Munich for the royal collection in Sofia.",
+  "title": "The Devil Who Ended Up in a Show About MELANCHOLY #history #art",
+  "description": "Lucifer is an oil painting by the German artist Franz Stuck from 1890, from his dark monumental period. Ferdinand I of Bulgaria bought it for the royal collection in Sofia, and in 2005-2006 it hung in an exhibition on the history of melancholy in Paris and Berlin.",
   "tags": [
    "art history",
    "franz von stuck",
    "lucifer",
    "symbolism",
    "dark art",
+   "melancholy",
    "painting"
   ],
-  "question": "What is Lucifer waiting for?"
+  "question": "Devil or fallen star: what do you see?"
  },
  "sources": [
   {
    "claim": "Lucifer is an oil on canvas painting by the German artist Franz Stuck, from 1890.",
    "url": "https://en.wikipedia.org/wiki/Lucifer_(Stuck)",
-   "note": "sentence S2"
+   "note": "sentence E2"
   },
   {
-   "claim": "History Ferdinand I of Bulgaria bought the painting for the royal collection in Sofia, from Stuck's studio in Munich in 1891.",
-   "url": "https://en.wikipedia.org/wiki/Lucifer_(Stuck)",
-   "note": "sentence S7"
+   "claim": "Thus, the name is connected to the deadly sin of pride for the Devil's attempt to overthrow God, after which he was banished to Earth.",
+   "url": "https://en.wikipedia.org/wiki/Lucifer",
+   "note": "sentence E11"
   },
   {
-   "claim": "The painting belongs to Stuck's \"dark monumental\" period, presenting an image of \"man-demon\".",
+   "claim": "The development of the German symbolism 1870–1920 in Frankfurt, Birmingham and Stockholm 2005–2006 – History of melancholy in Paris and Berlin 2006–2007 – Franz von Stuck.",
    "url": "https://en.wikipedia.org/wiki/Lucifer_(Stuck)",
-   "note": "sentence S9"
+   "note": "sentence E11"
   }
  ],
- "written_by": "Claude (night writer), 2026-11-14"
+ "written_by": "Claude (night writer), 2026-11-20"
 }
