@@ -1,0 +1,451 @@
+{
+ "id": "the-penitent-magdalene-tour",
+ "kind": "artwork",
+ "form": "emotion",
+ "hook_frame": "This painting may hide ___.",
+ "closer": "either_or",
+ "detail": "tear",
+ "home": "face",
+ "subject": {
+  "title": "Penitent Magdalene",
+  "creator": "Georges de La Tour",
+  "year": 1595,
+  "wikidata": "Q2732274"
+ },
+ "lead": {
+  "commons": "Penitent_Magdalene-Caravaggio_(1594-6).jpg",
+  "width_px": 3840,
+  "aspect": 0.8184,
+  "px": 6317,
+  "license": "Public domain",
+  "credit": "Penitent Magdalene-Caravaggio (1594-6) — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Caravaggio",
+  "credit": "Portrait of Caravaggio — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.25,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "room"
+   ]
+  },
+  {
+   "name": "figure",
+   "box": [
+    0.22,
+    0.3,
+    0.98,
+    1.0
+   ],
+   "words": [
+    "chair"
+   ]
+  },
+  {
+   "name": "figure_top",
+   "box": [
+    0.22,
+    0.3,
+    0.73,
+    0.69
+   ],
+   "words": [
+    "dress"
+   ]
+  },
+  {
+   "name": "face",
+   "box": [
+    0.4,
+    0.27,
+    0.61,
+    0.44
+   ],
+   "words": [
+    "face",
+    "magdalene",
+    "woman",
+    "saint"
+   ]
+  },
+  {
+   "name": "tear",
+   "box": [
+    0.49,
+    0.345,
+    0.575,
+    0.415
+   ],
+   "words": [
+    "tear",
+    "cheek",
+    "nose"
+   ]
+  },
+  {
+   "name": "hands",
+   "box": [
+    0.42,
+    0.61,
+    0.58,
+    0.7
+   ],
+   "words": [
+    "hands"
+   ]
+  },
+  {
+   "name": "jewels",
+   "box": [
+    0.0,
+    0.83,
+    0.26,
+    0.94
+   ],
+   "words": [
+    "jewels",
+    "pearls"
+   ]
+  },
+  {
+   "name": "jar",
+   "box": [
+    0.22,
+    0.87,
+    0.29,
+    0.99
+   ],
+   "words": [
+    "jar",
+    "ointment"
+   ]
+  }
+ ],
+ "punch": "REMORSE",
+ "sentences": [
+  {
+   "slot": "E1",
+   "text": "This painting may hide the quietest pain ever given to a saint.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "saint",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "E2",
+   "text": "This is Penitent Magdalene, painted by Caravaggio around 1595.",
+   "kind": "FACT",
+   "source": 3
+  },
+  {
+   "slot": "E3",
+   "text": "And this isn't a saint in glory.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E3",
+   "text": "It's a young woman on a low chair.",
+   "kind": "FACT",
+   "source": 6,
+   "show": [
+    {
+     "on": "chair",
+     "to": "figure"
+    }
+   ]
+  },
+  {
+   "slot": "E4",
+   "text": "Young, silent, almost asleep.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E5",
+   "text": "But look at her face.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "face",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "E6",
+   "text": "She's crying.",
+   "kind": "READING",
+   "source": 9
+  },
+  {
+   "slot": "E6",
+   "text": "There's a single tear beside her nose.",
+   "kind": "FACT",
+   "source": 9,
+   "show": [
+    {
+     "on": "tear",
+     "to": "tear"
+    }
+   ]
+  },
+  {
+   "slot": "E7",
+   "text": "And yet it doesn't feel like prayer.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E8",
+   "text": "Look at her closed eyes.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "tear"
+    }
+   ]
+  },
+  {
+   "slot": "E8",
+   "text": "There's remorse there.",
+   "kind": "READING",
+   "source": 18
+  },
+  {
+   "slot": "E9",
+   "text": "A silent, hidden, aching remorse.",
+   "kind": "READING",
+   "source": 18
+  },
+  {
+   "slot": "E10",
+   "text": "As if she can no longer bear for you to see her.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E11",
+   "text": "According to the Jesuit poet Giuseppe Silos, you could see the silent remorse hidden in her conscience.",
+   "kind": "FACT",
+   "source": 18
+  },
+  {
+   "slot": "E12",
+   "text": "And Caravaggio seems to capture something darker.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E12",
+   "text": "Not a saint in heaven, but a real woman from Rome.",
+   "kind": "FACT",
+   "source": 12
+  },
+  {
+   "slot": "E12",
+   "text": "The moment when her old life is over and nothing has replaced it.",
+   "kind": "FACT",
+   "source": 2
+  },
+  {
+   "slot": "E13",
+   "text": "Imagine being painted at the lowest moment of your life.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E13",
+   "text": "Would you hide your face?",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E13",
+   "text": "Would you ask to be painted as a saint?",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E13",
+   "text": "Or would you let him paint every bruise?",
+   "kind": "READING",
+   "source": 21
+  },
+  {
+   "slot": "E14",
+   "text": "That's what makes this painting so hard to look at.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E15",
+   "text": "The Magdalene is still beautiful, but her tear no longer looks innocent.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "tear",
+     "to": "tear"
+    }
+   ]
+  },
+  {
+   "slot": "E15",
+   "text": "Her bowed head says one thing, her swollen face says another.",
+   "kind": "FACT",
+   "source": 21,
+   "show": [
+    {
+     "on": "face",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "E16",
+   "text": "And perhaps that's the most frightening part.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E17",
+   "text": "Maybe remorse does not begin with sin.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E17",
+   "text": "Maybe it begins with pain, then becomes shame, and eventually turns into remorse.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E18",
+   "text": "So look at her one more time.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "her",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "E19",
+   "text": "Do you see a saint weeping for her sins?",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "E19",
+   "text": "Or a woman hiding what was done to her?",
+   "kind": "READING",
+   "source": 22,
+   "show": [
+    {
+     "on": "woman",
+     "to": "face"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Caravaggio": "Kara-vah-jo",
+  "Magdalene": "Mag-da-leen",
+  "Giuseppe Silos": "Joo-zep-peh See-loss"
+ },
+ "meta": {
+  "title": "The Saint Who Wept a Single Real TEAR #history #art",
+  "description": "Penitent Magdalene was painted by Caravaggio around 1595 and hangs in the Doria Pamphilj Gallery in Rome. A single tear runs down her cheek; the biographer Peter Robb suggested the model may have been hurt.",
+  "tags": [
+   "art history",
+   "caravaggio",
+   "mary magdalene",
+   "baroque",
+   "painting"
+  ],
+  "question": "A saint weeping for her sins, or a woman hiding what was done to her?"
+ },
+ "sources": [
+  {
+   "claim": "At the time of its completion, ca. 1594–1595, the painting was unconventional for its contemporary realism and departure from traditional Magdalene iconography.",
+   "url": "https://en.wikipedia.org/wiki/Penitent_Magdalene_(Caravaggio)",
+   "note": "sentence E2"
+  },
+  {
+   "claim": "Composition The painting depicts a young brunette, squatting or kneeling on a low chair, with her hands cradled in her lap.",
+   "url": "https://en.wikipedia.org/wiki/Penitent_Magdalene_(Caravaggio)",
+   "note": "sentence E3"
+  },
+  {
+   "claim": "A single tear runs down one cheek to the side of her nose.",
+   "url": "https://en.wikipedia.org/wiki/Penitent_Magdalene_(Caravaggio)",
+   "note": "sentence E6"
+  },
+  {
+   "claim": "A single tear runs down one cheek to the side of her nose.",
+   "url": "https://en.wikipedia.org/wiki/Penitent_Magdalene_(Caravaggio)",
+   "note": "sentence E6"
+  },
+  {
+   "claim": "Rather, in his Pinacotheca sive Romana pictura et sculptura, published in 1673, he praised it and its painter elaborately: We can see the silent remorse hidden in her conscience, and in the depths of ",
+   "url": "https://en.wikipedia.org/wiki/Penitent_Magdalene_(Caravaggio)",
+   "note": "sentence E8"
+  },
+  {
+   "claim": "Rather, in his Pinacotheca sive Romana pictura et sculptura, published in 1673, he praised it and its painter elaborately: We can see the silent remorse hidden in her conscience, and in the depths of ",
+   "url": "https://en.wikipedia.org/wiki/Penitent_Magdalene_(Caravaggio)",
+   "note": "sentence E9"
+  },
+  {
+   "claim": "Rather, in his Pinacotheca sive Romana pictura et sculptura, published in 1673, he praised it and its painter elaborately: We can see the silent remorse hidden in her conscience, and in the depths of ",
+   "url": "https://en.wikipedia.org/wiki/Penitent_Magdalene_(Caravaggio)",
+   "note": "sentence E11"
+  },
+  {
+   "claim": "Caravaggio was known to have used several prostitutes as models for his works, and historians have speculated that Anna Bianchini is featured in this painting.",
+   "url": "https://en.wikipedia.org/wiki/Penitent_Magdalene_(Caravaggio)",
+   "note": "sentence E12"
+  },
+  {
+   "claim": "The painting portrays a repentant Mary Magdalene bowed in penitent sorrow as she leaves behind her dissolute life, its trappings abandoned beside her.",
+   "url": "https://en.wikipedia.org/wiki/Penitent_Magdalene_(Caravaggio)",
+   "note": "sentence E12"
+  },
+  {
+   "claim": "In his controversial contemporary biography M (2001), Peter Robb suggested that the realism of the piece and the subtle hints of violence he perceived—broken pearls and the subject's swollen face and ",
+   "url": "https://en.wikipedia.org/wiki/Penitent_Magdalene_(Caravaggio)",
+   "note": "sentence E13"
+  },
+  {
+   "claim": "In his controversial contemporary biography M (2001), Peter Robb suggested that the realism of the piece and the subtle hints of violence he perceived—broken pearls and the subject's swollen face and ",
+   "url": "https://en.wikipedia.org/wiki/Penitent_Magdalene_(Caravaggio)",
+   "note": "sentence E15"
+  },
+  {
+   "claim": "Based on records from Bianchini's life, Robb speculates that Bianchini might have been publicly whipped in the custom of the day, the ointment in the jar her treatment for this, her injury Caravaggio'",
+   "url": "https://en.wikipedia.org/wiki/Penitent_Magdalene_(Caravaggio)",
+   "note": "sentence E19"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-20"
+}

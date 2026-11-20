@@ -1,0 +1,108 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.25,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "room"
+   ]
+  },
+  {
+   "name": "figure",
+   "box": [
+    0.22,
+    0.3,
+    0.98,
+    1.0
+   ],
+   "words": [
+    "chair"
+   ]
+  },
+  {
+   "name": "figure_top",
+   "box": [
+    0.22,
+    0.3,
+    0.73,
+    0.69
+   ],
+   "words": [
+    "dress"
+   ]
+  },
+  {
+   "name": "face",
+   "box": [
+    0.4,
+    0.27,
+    0.61,
+    0.44
+   ],
+   "words": [
+    "face",
+    "magdalene",
+    "woman",
+    "saint"
+   ]
+  },
+  {
+   "name": "tear",
+   "box": [
+    0.49,
+    0.345,
+    0.575,
+    0.415
+   ],
+   "words": [
+    "tear",
+    "cheek",
+    "nose"
+   ]
+  },
+  {
+   "name": "hands",
+   "box": [
+    0.42,
+    0.61,
+    0.58,
+    0.7
+   ],
+   "words": [
+    "hands"
+   ]
+  },
+  {
+   "name": "jewels",
+   "box": [
+    0.0,
+    0.83,
+    0.26,
+    0.94
+   ],
+   "words": [
+    "jewels",
+    "pearls"
+   ]
+  },
+  {
+   "name": "jar",
+   "box": [
+    0.22,
+    0.87,
+    0.29,
+    0.99
+   ],
+   "words": [
+    "jar",
+    "ointment"
+   ]
+  }
+ ],
+ "summary": "A young red-haired woman sits on a low chair with her head bowed and her hands in her lap, a single tear beside her nose. Pearls, jewels and a glass jar lie on the floor beside her."
+}
