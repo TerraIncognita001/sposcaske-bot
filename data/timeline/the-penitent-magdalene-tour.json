@@ -1,0 +1,287 @@
+{
+ "total": 110.77632653061227,
+ "lines": [
+  {
+   "t0": 1.65,
+   "t1": 2.79,
+   "beat": "hook",
+   "say": "This painting may hide"
+  },
+  {
+   "t0": 2.79,
+   "t1": 5.34,
+   "beat": "hook",
+   "say": "the quietest pain ever given to a saint."
+  },
+  {
+   "t0": 5.99,
+   "t1": 8.0,
+   "beat": "ident",
+   "say": "This is Penitent Magdalene,"
+  },
+  {
+   "t0": 8.22,
+   "t1": 11.42,
+   "beat": "ident",
+   "say": "painted by Caravaggio around 1595."
+  },
+  {
+   "t0": 12.02,
+   "t1": 13.98,
+   "beat": "contrast",
+   "say": "And this isn't a saint in glory."
+  },
+  {
+   "t0": 14.58,
+   "t1": 16.7,
+   "beat": "contrast",
+   "say": "It's a young woman on a low chair."
+  },
+  {
+   "t0": 17.3,
+   "t1": 17.87,
+   "beat": "beats",
+   "say": "Young,"
+  },
+  {
+   "t0": 18.77,
+   "t1": 19.43,
+   "beat": "beats",
+   "say": "silent,"
+  },
+  {
+   "t0": 19.98,
+   "t1": 21.17,
+   "beat": "beats",
+   "say": "almost asleep."
+  },
+  {
+   "t0": 21.77,
+   "t1": 23.05,
+   "beat": "turn",
+   "say": "But look at her face."
+  },
+  {
+   "t0": 23.7,
+   "t1": 24.72,
+   "beat": "detail",
+   "say": "She's crying."
+  },
+  {
+   "t0": 25.32,
+   "t1": 27.41,
+   "beat": "detail",
+   "say": "There's a single tear beside her nose."
+  },
+  {
+   "t0": 28.01,
+   "t1": 29.82,
+   "beat": "doubt",
+   "say": "And yet it doesn't feel like prayer."
+  },
+  {
+   "t0": 30.42,
+   "t1": 32.04,
+   "beat": "look",
+   "say": "Look at her closed eyes."
+  },
+  {
+   "t0": 32.64,
+   "t1": 34.03,
+   "beat": "look",
+   "say": "There's remorse there."
+  },
+  {
+   "t0": 34.63,
+   "t1": 35.42,
+   "beat": "beats",
+   "say": "A silent,"
+  },
+  {
+   "t0": 36.32,
+   "t1": 36.9,
+   "beat": "beats",
+   "say": "hidden,"
+  },
+  {
+   "t0": 37.45,
+   "t1": 38.74,
+   "beat": "beats",
+   "say": "aching remorse."
+  },
+  {
+   "t0": 39.34,
+   "t1": 40.89,
+   "beat": "feeling",
+   "say": "As if she can no longer bear"
+  },
+  {
+   "t0": 40.89,
+   "t1": 41.88,
+   "beat": "feeling",
+   "say": "for you to see her."
+  },
+  {
+   "t0": 43.23,
+   "t1": 46.25,
+   "beat": "backstory",
+   "say": "According to the Jesuit poet Giuseppe Silos,"
+  },
+  {
+   "t0": 46.47,
+   "t1": 47.22,
+   "beat": "backstory",
+   "say": "you could see"
+  },
+  {
+   "t0": 47.22,
+   "t1": 49.5,
+   "beat": "backstory",
+   "say": "the silent remorse hidden in her conscience."
+  },
+  {
+   "t0": 50.1,
+   "t1": 53.3,
+   "beat": "moment",
+   "say": "And Caravaggio seems to capture something darker."
+  },
+  {
+   "t0": 55.15,
+   "t1": 56.7,
+   "beat": "moment",
+   "say": "Not a saint in heaven,"
+  },
+  {
+   "t0": 57.3,
+   "t1": 59.04,
+   "beat": "moment",
+   "say": "but a real woman from Rome."
+  },
+  {
+   "t0": 59.64,
+   "t1": 61.57,
+   "beat": "moment",
+   "say": "The moment when her old life is over"
+  },
+  {
+   "t0": 61.57,
+   "t1": 63.29,
+   "beat": "moment",
+   "say": "and nothing has replaced it."
+  },
+  {
+   "t0": 64.59,
+   "t1": 65.58,
+   "beat": "empathy",
+   "say": "Imagine being painted"
+  },
+  {
+   "t0": 65.58,
+   "t1": 67.93,
+   "beat": "empathy",
+   "say": "at the lowest moment of your life."
+  },
+  {
+   "t0": 68.53,
+   "t1": 69.99,
+   "beat": "empathy",
+   "say": "Would you hide your face?"
+  },
+  {
+   "t0": 70.59,
+   "t1": 72.79,
+   "beat": "empathy",
+   "say": "Would you ask to be painted as a saint?"
+  },
+  {
+   "t0": 74.39,
+   "t1": 76.57,
+   "beat": "empathy",
+   "say": "Or would you let him paint every bruise?"
+  },
+  {
+   "t0": 77.57,
+   "t1": 78.94,
+   "beat": "marker",
+   "say": "That's what makes this painting"
+  },
+  {
+   "t0": 78.94,
+   "t1": 80.17,
+   "beat": "marker",
+   "say": "so hard to look at."
+  },
+  {
+   "t0": 80.77,
+   "t1": 82.84,
+   "beat": "reveal",
+   "say": "The Magdalene is still beautiful,"
+  },
+  {
+   "t0": 83.06,
+   "t1": 85.12,
+   "beat": "reveal",
+   "say": "but her tear no longer looks innocent."
+  },
+  {
+   "t0": 85.72,
+   "t1": 87.58,
+   "beat": "reveal",
+   "say": "Her bowed head says one thing,"
+  },
+  {
+   "t0": 87.8,
+   "t1": 89.72,
+   "beat": "reveal",
+   "say": "her swollen face says another."
+  },
+  {
+   "t0": 90.72,
+   "t1": 92.89,
+   "beat": "marker",
+   "say": "And perhaps that's the most frightening part."
+  },
+  {
+   "t0": 93.49,
+   "t1": 95.96,
+   "beat": "idea",
+   "say": "Maybe remorse does not begin with sin."
+  },
+  {
+   "t0": 96.56,
+   "t1": 98.36,
+   "beat": "idea",
+   "say": "Maybe it begins with pain,"
+  },
+  {
+   "t0": 98.58,
+   "t1": 99.98,
+   "beat": "idea",
+   "say": "then becomes shame,"
+  },
+  {
+   "t0": 100.2,
+   "t1": 102.3,
+   "beat": "idea",
+   "say": "and eventually turns into remorse."
+  },
+  {
+   "t0": 102.9,
+   "t1": 104.8,
+   "beat": "return",
+   "say": "So look at her one more time."
+  },
+  {
+   "t0": 105.6,
+   "t1": 107.64,
+   "beat": "question",
+   "say": "Do you see a saint weeping for her sins?"
+  },
+  {
+   "t0": 108.24,
+   "t1": 110.43,
+   "beat": "question",
+   "say": "Or a woman hiding what was done to her?"
+  }
+ ]
+}
