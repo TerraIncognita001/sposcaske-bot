@@ -1,0 +1,167 @@
+{
+ "total": 62.697687074829936,
+ "lines": [
+  {
+   "t0": 1.65,
+   "t1": 3.83,
+   "beat": "hook",
+   "say": "What if the famous knight of faith"
+  },
+  {
+   "t0": 3.83,
+   "t1": 5.72,
+   "beat": "hook",
+   "say": "in this engraving was never a hero?"
+  },
+  {
+   "t0": 6.37,
+   "t1": 7.34,
+   "beat": "ident",
+   "say": "This is Knight,"
+  },
+  {
+   "t0": 7.56,
+   "t1": 8.93,
+   "beat": "ident",
+   "say": "Death and the Devil,"
+  },
+  {
+   "t0": 9.15,
+   "t1": 12.48,
+   "beat": "ident",
+   "say": "engraved by Albrecht Dürer in 1513."
+  },
+  {
+   "t0": 13.08,
+   "t1": 14.04,
+   "beat": "usual",
+   "say": "For centuries,"
+  },
+  {
+   "t0": 14.26,
+   "t1": 15.95,
+   "beat": "usual",
+   "say": "the rider has been read"
+  },
+  {
+   "t0": 15.95,
+   "t1": 17.21,
+   "beat": "usual",
+   "say": "as a Christian soldier protected"
+  },
+  {
+   "t0": 17.21,
+   "t1": 19.08,
+   "beat": "usual",
+   "say": "by the armour of his faith."
+  },
+  {
+   "t0": 19.68,
+   "t1": 21.74,
+   "beat": "usual",
+   "say": "Nietzsche even gave a print to Wagner"
+  },
+  {
+   "t0": 21.74,
+   "t1": 23.95,
+   "beat": "usual",
+   "say": "as a symbol of a brave future."
+  },
+  {
+   "t0": 24.55,
+   "t1": 26.3,
+   "beat": "seems",
+   "say": "And the picture seems to agree."
+  },
+  {
+   "t0": 26.9,
+   "t1": 28.56,
+   "beat": "seems",
+   "say": "The knight stares ahead while Death"
+  },
+  {
+   "t0": 28.56,
+   "t1": 30.84,
+   "beat": "seems",
+   "say": "and the Devil crowd beside his horse."
+  },
+  {
+   "t0": 31.44,
+   "t1": 32.75,
+   "beat": "turn",
+   "say": "But look at his lance."
+  },
+  {
+   "t0": 33.35,
+   "t1": 35.36,
+   "beat": "detail",
+   "say": "A fox tail hangs from its tip."
+  },
+  {
+   "t0": 35.96,
+   "t1": 39.16,
+   "beat": "fact",
+   "say": "According to the writers Sten Karling and Ursula Meyer,"
+  },
+  {
+   "t0": 39.38,
+   "t1": 41.78,
+   "beat": "fact",
+   "say": "the work did not seek to glorify the knight."
+  },
+  {
+   "t0": 42.38,
+   "t1": 44.23,
+   "beat": "fact",
+   "say": "In early Christian symbolism,"
+  },
+  {
+   "t0": 44.45,
+   "t1": 46.08,
+   "beat": "fact",
+   "say": "the fox stood for greed,"
+  },
+  {
+   "t0": 46.3,
+   "t1": 47.74,
+   "beat": "fact",
+   "say": "cunning and treachery."
+  },
+  {
+   "t0": 48.34,
+   "t1": 50.16,
+   "beat": "fact",
+   "say": "And Dorothy Getlein saw his face"
+  },
+  {
+   "t0": 50.16,
+   "t1": 52.04,
+   "beat": "fact",
+   "say": "as resigned and downcast."
+  },
+  {
+   "t0": 52.64,
+   "t1": 54.17,
+   "beat": "flip",
+   "say": "He isn't a hero of faith."
+  },
+  {
+   "t0": 54.77,
+   "t1": 57.77,
+   "beat": "flip",
+   "say": "He's a resigned rider with Death as his companion."
+  },
+  {
+   "t0": 58.57,
+   "t1": 60.28,
+   "beat": "question",
+   "say": "So is he a saint in armour,"
+  },
+  {
+   "t0": 60.5,
+   "t1": 62.35,
+   "beat": "question",
+   "say": "or a man who already gave up?"
+  }
+ ]
+}
