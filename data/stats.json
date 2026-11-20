@@ -1434,7 +1434,7 @@
     }
    },
    "hook": "This painting may hide something that sits in total darkness, completely awake.",
-   "views": 1239,
+   "views": 1240,
    "likes": 39,
    "comments": 3,
    "score": 12.85,
@@ -2358,7 +2358,7 @@
     }
    },
    "hook": "There's something colder than anger about the way this old man looks back at you.",
-   "views": 695,
+   "views": 696,
    "likes": 34,
    "comments": 4,
    "score": 13.43,
@@ -2820,7 +2820,7 @@
     }
    },
    "hook": "What if this young queen has to find her own death completely blind?",
-   "views": 332,
+   "views": 327,
    "likes": 12,
    "comments": 1,
    "score": 8.97,
@@ -3282,7 +3282,7 @@
     }
    },
    "hook": "What if this is not a monster's scream at all, but the purest terror you have ever seen?",
-   "views": 170,
+   "views": 184,
    "likes": 11,
    "comments": 2,
    "score": 13.84,
@@ -3322,10 +3322,10 @@
     }
    },
    "hook": "Why does one of these terrifying night creatures act almost like a friend?",
-   "views": 149,
+   "views": 155,
    "likes": 3,
    "comments": 2,
-   "score": 5.28
+   "score": 5.32
   },
   "mpGWU2a7HuY": {
    "story": "job-mocked-by-his-wife-tour",
@@ -3354,10 +3354,10 @@
     }
    },
    "hook": "This woman is famous for cruelty, and the Bible may say the exact opposite.",
-   "views": 303,
-   "likes": 8,
+   "views": 322,
+   "likes": 9,
    "comments": 2,
-   "score": 6.15
+   "score": 6.21
   },
   "Ynxuh3gEyXI": {
    "story": "the-demon-seated-vrubel",
@@ -3387,12 +3387,45 @@
     }
    },
    "hook": "This painting may hide the loneliest feeling ever given to a creature built like a god.",
-   "views": 88,
+   "views": 104,
    "likes": 4,
    "comments": 1,
-   "score": 4.71
+   "score": 4.87
+  },
+  "HIkm5eVLy8o": {
+   "story": "saint-serapion-zurbarn",
+   "slot": "E2026-11-20#2",
+   "title": "This saint is not asleep",
+   "publish_at": "2026-11-20T02:00:00Z",
+   "seconds": 59.3,
+   "f": {
+    "kind": "artwork",
+    "form": "twist",
+    "hook_frame": "this_x",
+    "punch": "DEATH",
+    "closer": "either_or",
+    "title_pattern": "other",
+    "theme": "false calm",
+    "century": "17th",
+    "length": "under 60 s",
+    "writer": "claude",
+    "judge": 8,
+    "judge_scores": {
+     "G": 0,
+     "D": 2,
+     "F": 2,
+     "T": 2,
+     "Y": 1,
+     "S": 1
+    }
+   },
+   "hook": "This saint looks peacefully asleep, but his white robes are hiding a death.",
+   "views": 5,
+   "likes": 1,
+   "comments": 0,
+   "score": 1.83
   }
  },
- "read_at": "2026-11-19T21:21:00Z",
+ "read_at": "2026-11-20T02:14:43Z",
  "_about": "written by stats_now.py (v1.09): one entry per public video; learn.py reads it. Do not edit by hand."
 }
