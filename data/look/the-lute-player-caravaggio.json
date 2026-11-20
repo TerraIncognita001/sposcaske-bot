@@ -1,0 +1,120 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "room"
+   ]
+  },
+  {
+   "name": "singer",
+   "box": [
+    0.29,
+    0.09,
+    0.81,
+    0.75
+   ],
+   "words": [
+    "boy",
+    "singer",
+    "model"
+   ]
+  },
+  {
+   "name": "face",
+   "box": [
+    0.51,
+    0.11,
+    0.65,
+    0.31
+   ],
+   "words": [
+    "face",
+    "lips"
+   ]
+  },
+  {
+   "name": "hands",
+   "box": [
+    0.355,
+    0.47,
+    0.575,
+    0.7
+   ],
+   "words": [
+    "fingers",
+    "strings"
+   ]
+  },
+  {
+   "name": "lute",
+   "box": [
+    0.33,
+    0.44,
+    0.7,
+    0.74
+   ],
+   "words": [
+    "lute"
+   ]
+  },
+  {
+   "name": "cage",
+   "box": [
+    0.02,
+    0.01,
+    0.19,
+    0.18
+   ],
+   "words": [
+    "cage",
+    "songbird",
+    "bird"
+   ]
+  },
+  {
+   "name": "songbook",
+   "box": [
+    0.26,
+    0.71,
+    0.61,
+    0.86
+   ],
+   "words": [
+    "songbook",
+    "music"
+   ]
+  },
+  {
+   "name": "spinetta",
+   "box": [
+    0.03,
+    0.69,
+    0.26,
+    0.9
+   ],
+   "words": [
+    "keyboard"
+   ]
+  },
+  {
+   "name": "violin",
+   "box": [
+    0.52,
+    0.71,
+    0.83,
+    0.92
+   ],
+   "words": [
+    "violin"
+   ]
+  }
+ ],
+ "summary": "A young singer with soft features plays a lute behind a table with an open songbook, a violin, a small keyboard and a recorder. A songbird sits in a cage hanging in the upper left corner."
+}

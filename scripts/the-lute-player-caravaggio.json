@@ -1,0 +1,353 @@
+{
+ "id": "the-lute-player-caravaggio",
+ "kind": "artwork",
+ "form": "twist",
+ "hook_frame": "There's a ___ detail in this painting most people ___.",
+ "closer": "either_or",
+ "detail": "cage",
+ "home": null,
+ "subject": {
+  "title": "The Lute Player",
+  "creator": "Caravaggio",
+  "year": null,
+  "wikidata": "Q2370247"
+ },
+ "lead": {
+  "commons": "The_Lute_Player-Caravaggio_(Metropolitan_Museum_of_Art).jpg",
+  "width_px": 3840,
+  "aspect": 1.2851,
+  "px": 7183,
+  "license": "Public domain",
+  "credit": "The Lute Player-Caravaggio (Metropolitan Museum of Art) — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Caravaggio",
+  "credit": "Portrait of Caravaggio — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "room"
+   ]
+  },
+  {
+   "name": "singer",
+   "box": [
+    0.29,
+    0.09,
+    0.81,
+    0.75
+   ],
+   "words": [
+    "boy",
+    "singer",
+    "model"
+   ]
+  },
+  {
+   "name": "face",
+   "box": [
+    0.51,
+    0.11,
+    0.65,
+    0.31
+   ],
+   "words": [
+    "face",
+    "lips"
+   ]
+  },
+  {
+   "name": "hands",
+   "box": [
+    0.355,
+    0.47,
+    0.575,
+    0.7
+   ],
+   "words": [
+    "fingers",
+    "strings"
+   ]
+  },
+  {
+   "name": "lute",
+   "box": [
+    0.33,
+    0.44,
+    0.7,
+    0.74
+   ],
+   "words": [
+    "lute"
+   ]
+  },
+  {
+   "name": "cage",
+   "box": [
+    0.02,
+    0.01,
+    0.19,
+    0.18
+   ],
+   "words": [
+    "cage",
+    "songbird",
+    "bird"
+   ]
+  },
+  {
+   "name": "songbook",
+   "box": [
+    0.26,
+    0.71,
+    0.61,
+    0.86
+   ],
+   "words": [
+    "songbook",
+    "music"
+   ]
+  },
+  {
+   "name": "spinetta",
+   "box": [
+    0.03,
+    0.69,
+    0.26,
+    0.9
+   ],
+   "words": [
+    "keyboard"
+   ]
+  },
+  {
+   "name": "violin",
+   "box": [
+    0.52,
+    0.71,
+    0.83,
+    0.92
+   ],
+   "words": [
+    "violin"
+   ]
+  }
+ ],
+ "punch": "NOTICE",
+ "sentences": [
+  {
+   "slot": "T1",
+   "text": "There's a cruel detail behind this sweet love song that most people never notice.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "song",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "T2",
+   "text": "This is The Lute Player, painted by the Italian master Caravaggio.",
+   "kind": "FACT",
+   "source": 1
+  },
+  {
+   "slot": "T3",
+   "text": "Most people see a soft-faced boy singing a madrigal about love.",
+   "kind": "FACT",
+   "source": 7,
+   "show": [
+    {
+     "on": "boy",
+     "to": "singer"
+    }
+   ]
+  },
+  {
+   "slot": "T3",
+   "text": "The open songbook holds love songs set to verses by Petrarch.",
+   "kind": "FACT",
+   "source": 13,
+   "show": [
+    {
+     "on": "songbook",
+     "to": "songbook"
+    }
+   ]
+  },
+  {
+   "slot": "T4",
+   "text": "And the picture seems to agree.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "T4",
+   "text": "His lips part and his fingers rest gently on the strings.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "lips",
+     "to": "face"
+    },
+    {
+     "on": "fingers",
+     "to": "hands"
+    }
+   ]
+  },
+  {
+   "slot": "T5",
+   "text": "But look at the cage.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "cage",
+     "to": "cage"
+    }
+   ]
+  },
+  {
+   "slot": "T6",
+   "text": "A small songbird sits locked inside it.",
+   "kind": "FACT",
+   "source": 10,
+   "show": [
+    {
+     "on": "songbird",
+     "to": "cage"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "According to the story of Cardinal del Monte's household, a castrato named Pedro Montoya lived there and sang in the Sistine Chapel.",
+   "kind": "FACT",
+   "source": 17
+  },
+  {
+   "slot": "T7",
+   "text": "This rather androgynous model could be him.",
+   "kind": "FACT",
+   "source": 17,
+   "show": [
+    {
+     "on": "model",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "Castrati were highly prized at the time.",
+   "kind": "FACT",
+   "source": 17
+  },
+  {
+   "slot": "T8",
+   "text": "He isn't a boy singing to a lover.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "boy",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "T8",
+   "text": "He's a caged songbird himself.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "songbird",
+     "to": "cage"
+    }
+   ]
+  },
+  {
+   "slot": "T9",
+   "text": "So is he singing about love, or about the cage he lives in?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "cage",
+     "to": "cage"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Caravaggio": "Kara-vah-jo",
+  "Petrarch": "Pet-rark",
+  "del Monte": "del Mon-teh",
+  "Montoya": "Mon-toy-a"
+ },
+ "meta": {
+  "title": "He Sang Sweet Love Songs... But His Voice Had a Terrible PRICE #history #art",
+  "description": "The Lute Player by Caravaggio shows a young singer with a songbook of love songs and a caged songbird. The androgynous model could be Pedro Montoya, a castrato of Cardinal del Monte's household who sang in the Sistine Chapel.",
+  "tags": [
+   "art history",
+   "caravaggio",
+   "the lute player",
+   "baroque",
+   "music"
+  ],
+  "question": "Is he singing about love, or about his cage?"
+ },
+ "sources": [
+  {
+   "claim": "The Lute Player is a composition by the Italian Baroque master Caravaggio.",
+   "url": "https://en.wikipedia.org/wiki/The_Lute_Player_(Caravaggio)",
+   "note": "sentence T2"
+  },
+  {
+   "claim": "All show a boy with soft facial features and thick brown hair, accompanying himself on the lute as he sings a madrigal about love.",
+   "url": "https://en.wikipedia.org/wiki/The_Lute_Player_(Caravaggio)",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "The Wildenstein version shows songs by a native Florentine (Francesco de Layolle) on a text by Petrarch: Laisse le voile ('Let go the veil') and Pourquoi ne vous donnez-vous pas? ('Why do you not give",
+   "url": "https://en.wikipedia.org/wiki/The_Lute_Player_(Caravaggio)",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "In the Wildenstein version the table is covered with a carpet and extended forwards to hold a tenor recorder, while the still life is replaced by a spinetta (a small keyboard instrument) and a caged s",
+   "url": "https://en.wikipedia.org/wiki/The_Lute_Player_(Caravaggio)",
+   "note": "sentence T6"
+  },
+  {
+   "claim": "The rather androgynous model could be Pedro Montoya, a castrato known to have been a member of the del Monte household and a singer at the Sistine Chapel at about this time – castrati were highly priz",
+   "url": "https://en.wikipedia.org/wiki/The_Lute_Player_(Caravaggio)",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "The rather androgynous model could be Pedro Montoya, a castrato known to have been a member of the del Monte household and a singer at the Sistine Chapel at about this time – castrati were highly priz",
+   "url": "https://en.wikipedia.org/wiki/The_Lute_Player_(Caravaggio)",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "The rather androgynous model could be Pedro Montoya, a castrato known to have been a member of the del Monte household and a singer at the Sistine Chapel at about this time – castrati were highly priz",
+   "url": "https://en.wikipedia.org/wiki/The_Lute_Player_(Caravaggio)",
+   "note": "sentence T7"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-20"
+}
