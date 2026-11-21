@@ -1,46 +1,47 @@
 # Lessons from our own videos
 
-Written by `learn.py` on 2026-11-20T02:14Z from `data/stats.json`. Do not edit by hand.
+Written by `learn.py` on 2026-11-20T21:21Z from `data/stats.json`. Do not edit by hand.
 
-Learning is **OFF**: 7 videos counted (on at 8 videos public for 3 days; a value needs 3 videos).
+Learning is **ON**: 8 videos counted (on at 8 videos public for 3 days; a value needs 3 videos).
 
 ## Videos
 
 | public (UTC) | views | stayed | avg % viewed | score | hook | where viewers left |
 |---|---|---|---|---|---|---|
 | 2026-11-14 02:00 | 271 | — | 80.45 | 6.31 | This man is about to be eaten alive, and somehow he is completely calm. | — |
-| 2026-11-14 15:00 | 38 | 0.359 | 24.68 | 7.18 | What if the most beautiful angel ever painted is looking at you with pure hatred? | 4.0 s −35.7 %; 10.7 s −21.4 %; 12.7 s −7.2 % |
-| 2026-11-15 02:00 | 113 | 0.527 | 76.07 | 11.31 | There's a terrifying detail on this violin, and it explains why the painter stopped to lis | 5.5 s −27.2 % [hook: and it explains why the painter stopped to listen.]; 12.1 s −18.2 % [ident: painted by Arnold Böcklin in 1872.]; 34.6 s −9.1 % [backstory: her husband Gustav wrote his Fourth Symphony] |
+| 2026-11-14 15:00 | 38 | 0.368 | 24.68 | 7.32 | What if the most beautiful angel ever painted is looking at you with pure hatred? | 4.0 s −35.7 %; 10.7 s −21.4 %; 12.7 s −7.2 % |
+| 2026-11-15 02:00 | 114 | 0.527 | 76.07 | 11.31 | There's a terrifying detail on this violin, and it explains why the painter stopped to lis | 5.5 s −27.2 % [hook: and it explains why the painter stopped to listen.]; 12.1 s −18.2 % [ident: painted by Arnold Böcklin in 1872.]; 34.6 s −9.1 % [backstory: her husband Gustav wrote his Fourth Symphony] |
 | 2026-11-15 15:00 | 50 | 0.46 | 84.46 | 10.0 | Something about this peaceful sleeping woman feels completely wrong, filled with hidden dr | 6.0 s −18.1 % [hook: Something about this peaceful sleeping woman feels completely wrong,]; 9.7 s −13.6 % [ident: This is The Nightmare,]; 11.5 s −13.6 % [ident: painted by Henry Fuseli in 1781.] |
-| 2026-11-16 02:00 | 1240 | 0.559 | 50.41 | 12.85 | This painting may hide something that sits in total darkness, completely awake. | 4.2 s −35.7 % [hook: that sits in total darkness,]; 9.0 s −3.2 % [ident: This is Lucifer,]; 10.3 s −7.7 % [ident: painted by Franz Stuck in 1890.] |
-| 2026-11-16 15:00 | 134 | 0.344 | 66.44 | 9.05 | There's a disturbing detail in this diplomatic room most people miss. | 3.4 s −20.0 % [hook: There's a disturbing detail]; 6.3 s −17.8 % [hook: in this diplomatic room most people miss.]; 9.7 s −13.3 % [ident: painted by Hans Holbein the Younger in 1533.] |
-| 2026-11-17 02:00 | 696 | 0.581 | 76.52 | 13.43 | There's something colder than anger about the way this old man looks back at you. | 4.6 s −24.2 % [hook: the way this old man looks back at you.]; 10.4 s −19.6 % [ident: painted by Diego Velázquez in 1650.]; 35.8 s −3.2 % [look: There's suspicion there.] |
-| 2026-11-17 15:00 | 327 | 0.362 | 46.54 | 8.97 | What if this young queen has to find her own death completely blind? | 3.4 s −3.0 % [hook: What if this young queen]; 4.6 s −53.7 % [hook: has to find her own death completely blind?]; 10.3 s −16.4 % [ident: painted by Paul Delaroche in 1833.] |
-| 2026-11-18 02:00 | 184 | 0.733 | 41.18 | 13.84 | What if this is not a monster's scream at all, but the purest terror you have ever seen? | — |
-| 2026-11-18 15:00 | 155 | — | — | 5.32 | Why does one of these terrifying night creatures act almost like a friend? | — |
-| 2026-11-19 02:00 | 322 | — | — | 6.21 | This woman is famous for cruelty, and the Bible may say the exact opposite. | — |
-| 2026-11-19 15:00 | 104 | — | — | 4.87 | This painting may hide the loneliest feeling ever given to a creature built like a god. | — |
-| 2026-11-20 02:00 | 5 | — | — | 1.83 | This saint looks peacefully asleep, but his white robes are hiding a death. | — |
+| 2026-11-16 02:00 | 1242 | 0.56 | 50.38 | 12.86 | This painting may hide something that sits in total darkness, completely awake. | 4.2 s −36.1 % [hook: that sits in total darkness,]; 9.0 s −3.1 % [ident: This is Lucifer,]; 10.3 s −7.5 % [ident: painted by Franz Stuck in 1890.] |
+| 2026-11-16 15:00 | 136 | 0.343 | 66.61 | 9.06 | There's a disturbing detail in this diplomatic room most people miss. | 3.4 s −19.6 % [hook: There's a disturbing detail]; 6.3 s −17.4 % [hook: in this diplomatic room most people miss.]; 9.7 s −13.0 % [ident: painted by Hans Holbein the Younger in 1533.] |
+| 2026-11-17 02:00 | 697 | 0.578 | 74.36 | 13.42 | There's something colder than anger about the way this old man looks back at you. | 4.6 s −24.0 % [hook: the way this old man looks back at you.]; 10.4 s −15.8 % [ident: painted by Diego Velázquez in 1650.]; 35.8 s −3.0 % [look: There's suspicion there.] |
+| 2026-11-17 15:00 | 327 | 0.372 | 47.29 | 9.15 | What if this young queen has to find her own death completely blind? | 17.2 s −1.8 % [setup: an old lieutenant at her side]; 18.9 s −3.5 % [setup: and the executioner waiting.]; 27.5 s −2.6 % [triad: Jane can't touch it. Jane just keeps searching.] |
+| 2026-11-18 02:00 | 186 | 0.699 | 79.92 | 14.26 | What if this is not a monster's scream at all, but the purest terror you have ever seen? | 3.4 s −14.6 % [hook: What if this is not]; 8.0 s −12.2 % [ident: This is Medusa,]; 12.5 s −12.2 % [ident: painted by Michelangelo Merisi da Caravaggio in 1597.] |
+| 2026-11-18 15:00 | 181 | 0.438 | 44.24 | 9.35 | Why does one of these terrifying night creatures act almost like a friend? | 4.6 s −49.1 % [hook: Why does one of these terrifying night creatures act]; 11.5 s −9.4 % [ident: engraved by Francisco Goya in 1799.]; 31.5 s −7.5 % [backstory: According to Goya's own caption,] |
+| 2026-11-19 02:00 | 361 | 0.489 | 47.57 | 10.92 | This woman is famous for cruelty, and the Bible may say the exact opposite. | — |
+| 2026-11-19 15:00 | 180 | — | — | 5.52 | This painting may hide the loneliest feeling ever given to a creature built like a god. | — |
+| 2026-11-20 02:00 | 179 | — | — | 5.83 | This saint looks peacefully asleep, but his white robes are hiding a death. | — |
+| 2026-11-20 15:00 | 201 | — | — | 5.42 | Something about this girl sleeping on the dark water feels completely wrong. | — |
 
 ## What worked (mean score of the videos with this value; multiplier 1.0 = too few videos to say)
 
-**form**: emotion ×1.0 (n=1, mean 13.43); riddle ×0.94 (n=6, mean 9.45)
+**form**: emotion ×1.0 (n=1, mean 13.42); riddle ×0.95 (n=7, mean 9.43)
 
-**hook_frame**: may_hide ×1.0 (n=1, mean 12.85); something_about ×1.0 (n=2, mean 11.71); detail_most_miss ×1.0 (n=2, mean 10.18); what_if ×1.0 (n=1, mean 7.18); about_to ×1.0 (n=1, mean 6.31)
+**hook_frame**: may_hide ×1.0 (n=1, mean 12.86); something_about ×1.0 (n=2, mean 11.71); detail_most_miss ×1.0 (n=2, mean 10.19); what_if ×1.0 (n=2, mean 8.23); about_to ×1.0 (n=1, mean 6.31)
 
-**closer**: open ×1.0 (n=2, mean 11.43); either_or ×1.02 (n=4, mean 10.24)
+**closer**: open ×1.07 (n=3, mean 10.67); either_or ×1.04 (n=4, mean 10.28)
 
-**kind**: artwork ×1.06 (n=6, mean 10.64)
+**kind**: artwork ×1.05 (n=7, mean 10.45)
 
-**theme**: watcher ×1.19 (n=4, mean 11.9); false calm ×1.0 (n=1, mean 9.05); fallen ×1.0 (n=1, mean 7.18)
+**theme**: watcher ×1.2 (n=4, mean 11.9); innocence in danger ×1.0 (n=1, mean 9.15); false calm ×1.0 (n=1, mean 9.06); fallen ×1.0 (n=1, mean 7.32)
 
-**century**: 17th ×1.0 (n=1, mean 13.43); 18th ×1.0 (n=1, mean 10.0); 19th ×0.94 (n=4, mean 9.41); 16th ×1.0 (n=1, mean 9.05)
+**century**: 17th ×1.0 (n=1, mean 13.42); 18th ×1.0 (n=1, mean 10.0); 19th ×0.95 (n=5, mean 9.39); 16th ×1.0 (n=1, mean 9.06)
 
-**length**: over 75 s ×1.0 (n=1, mean 13.43); 60-75 s ×1.03 (n=4, mean 10.34); under 60 s ×1.0 (n=2, mean 7.68)
+**length**: over 75 s ×1.0 (n=1, mean 13.42); 60-75 s ×1.04 (n=4, mean 10.37); under 60 s ×0.82 (n=3, mean 8.17)
 
-**writer**: claude ×1.12 (n=4, mean 11.19); gemini ×1.0 (n=2, mean 9.53); hand ×1.0 (n=1, mean 6.31)
+**writer**: claude ×1.09 (n=5, mean 10.81); gemini ×1.0 (n=2, mean 9.53); hand ×1.0 (n=1, mean 6.31)
 
-**title_pattern**: who ×1.11 (n=3, mean 11.15); other ×1.01 (n=3, mean 10.12)
+**title_pattern**: who ×1.13 (n=3, mean 11.2); other ×1.0 (n=4, mean 9.88)
 
 ## The judge's scale on our numbers
 
