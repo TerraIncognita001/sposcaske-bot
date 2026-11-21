@@ -118,7 +118,7 @@ def check_form(sents, title, punch, form):
     return out, words, n
 
 
-TITLE_WANT = {"twist": ("action",), "riddle": ("why",), "investigation": ("why",), "emotion": ("who",), "scene": ("who",), "legend": ("action", "who")}
+TITLE_WANT = {"hold": ("who", "action"), "twist": ("action",), "riddle": ("why",), "investigation": ("why",), "emotion": ("who",), "scene": ("who",), "legend": ("action", "who")}
 
 
 def title_pattern(title):
@@ -216,7 +216,35 @@ def check_lean(sents, title, punch, form, facts=None):
     return out, words, n
 
 
+def check_hold(sents, title, punch, facts=None):
+    """v1.19 (Nov 21, Andrii: 'проаналізуй які прийоми для утримання аудиторії можна використати та застосуй'): THE
+    RETENTION FORM. Measured on our own 14 videos: viewers leave in the hook (3.4-6 s, 15-49 %) and on the ident line
+    'painted by X in YEAR' (10-13 s, 7-27 %, in every video). So: a hook of at most 12 words with the punch word last,
+    no title / painter / year in the first three sentences, the painter later as a fact, a re-hook in the middle, a
+    flip, a last question; short and dense."""
+    wc = [len(s.split()) for s in sents]
+    words, n, out = sum(wc), len(sents), []
+
+    def rule(name, ok, detail="", hard=True):
+        out.append((bool(ok), hard, name, detail))
+    rule("length 80-130 words (hold)", 80 <= words <= 130, f"{words} words")
+    rule("10-22 sentences", 10 <= n <= 22, f"{n} sentences")
+    rule("mean sentence <= 10 words", words / n <= 10, f"{words / n:.1f}")
+    rule("the hook is 5-12 words", 5 <= wc[0] <= 12, f"{wc[0]}")
+    if punch:
+        rule("the hook ends on the punch word", re.sub(r"\W", "", sents[0].split()[-1]).lower() == punch.lower(), sents[0].split()[-1])
+    rule("no ident in the first three sentences ('This is ...', 'painted by ...', a year)",
+         not any(re.search(r"^This is\b|\bpainted by\b|\b1[0-9]{3}\b", x) for x in sents[:3]), " | ".join(sents[:3]))
+    rule("a re-hook in the middle (a question or 'But' / 'The answer')", any(re.search(r"\?$|^(But|The answer)\b", x) for x in sents[3:-2]))
+    rule("the last sentence is a question", sents[-1].endswith("?"))
+    if facts is not None:
+        rule("at least 3 FACT sentences with a source", facts >= 3, f"{facts}")
+    return out, words, n
+
+
 def check(sents, title="", punch=None, form="riddle", facts=None):
+    if form == "hold":                                              # v1.19
+        return check_hold(sents, title, punch, facts)
     if form in ("investigation", "twist"):
         return check_lean(sents, title, punch, form, facts)          # v1.15
     if form in ("emotion", "scene", "legend"):

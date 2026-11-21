@@ -33,6 +33,8 @@ The channel this genre comes from does not tell every picture the same way. The 
   legend   KIND story: a named person and what he claimed happened. The video tells the story.
   investigation (v1.15) the picture holds a question, and the facts can ANSWER it: three clues, then the answer.
   twist         (v1.15) everyone reads the picture one way, and one fact turns that reading over.
+  hold          (v1.19) the retention form: the hook in under 3 seconds, no ident at the start, a new thing on
+                screen every few seconds, a second question in the middle, facts that answer it, a loop back.
 When the task gives FORM, use it. When it says "choose", choose by the rule above: a detail in a face or in the
 eyes -> emotion; a second figure or thing that changes the scene -> scene; KIND story -> legend; otherwise riddle.
 Write EXACTLY the slots of that form, in that order. The slot codes go into "slot".
@@ -215,6 +217,33 @@ T8  FLIP. Two short sentences: "<She | He | It | This> isn't <the usual reading>
 T9  QUESTION. One sentence, 6-16 words, beginning "So" and ending "?": which reading the viewer now believes.
 Mean sentence length at most 12 words.
 
+### 3h. FORM hold (v1.19, Andrii, Nov 21: 'так, викочуй hold в main'; 80-130 words, about 40-55 seconds)
+Built on where OUR viewers left (14 videos): in the hook at 3-6 seconds (15-49 % of them) and on the ident line
+"painted by X in YEAR" at 10-13 seconds (7-27 %, in every video). So this form has NO ident at the start, a hook of
+at most 12 words, a new thing on screen every two or three seconds, a second question in the middle, and a last line
+that brings the eye back to the frame the video opened on. Give "home": the LOOK name of the FACE (the video opens
+on it) and "detail": the LOOK name of the one small thing. The camera stays on them through the whole hook.
+H1  HOOK. One sentence, 5-12 words, spoken in under three seconds: a concrete claim about the detail or the figure,
+    with a number, a time span or "you" when the facts allow (shape, do not reuse: "For <span>, <he> has <never ___>.").
+    Do not name the picture, the artist or the figure. The LAST WORD is the punch word (3-8 letters): it is shown in
+    giant red letters over the face.
+H2  LOOP. One sentence, 6-10 words: what everyone sees or believes in this picture. The end will turn it over.
+H3  TOUR. Two or three sentences of 5-8 words, each naming ONE new thing of LOOK (the camera cuts to each); the last
+    one is the detail.
+H4  WHO. One sentence, 8-14 words, a FACT: "<Artist> painted <him | her | it> in <year> ..." as part of the story
+    (the painter's portrait appears on his name). Never "This is <Title>, painted by".
+H5  STAKES. One or two sentences: a FACT that raises the stakes (who bought it, who feared it, what it cost), then a
+    second question ending "?" ("Why would ___?").
+H6  RE-HOOK. One sentence, 4-8 words, beginning "But" or "The answer": the answer comes now.
+H7  FACTS. Two to four sentences, each a FACT with its number, that answer H2 and H5. No guessing.
+H8  FLIP. Two sentences of 2-6 words: "<He | She | It> isn't <the reading of H2>." then "<He's | She's | It's> <what the
+    facts show>."
+H9  QUESTION. One sentence, 8-14 words, ending "?": the two readings as a choice ("Is he ___, or ___?"). Send its last
+    word to the detail with "show": the video ends on the frame it opened on, so it loops.
+NO WATER (3x) holds here too: at least three FACT sentences with "source", at most one guess. Mean sentence length
+at most 10 words. No triads, no "Imagine". Name things of LOOK with their own words; use "show" for a word that
+does not name its thing.
+
 ### 4. How it must feel
 The viewer should feel, in this order: "I know this picture" -> "wait, what is that?" -> a chill -> "I never saw it
 this way" -> the wish to answer. Calm voice, no shouting words, no exclamation marks.
@@ -241,11 +270,11 @@ source's author, another artist's picture of the same scene. Only things that ca
 images. For each: a key, a search query for Wikimedia Commons, and the words of your script that name it.
 
 ### 7. Output (JSON only)
-{"form": "riddle | emotion | scene | legend | investigation | twist", "detail": "<name from LOOK>", "home": "<LOOK name of the face the
- video holds: emotion and scene only>", "hook_frame": "<frame used>", "punch": "<the punch word, upper case>",
+{"form": "riddle | emotion | scene | legend | investigation | twist | hold", "detail": "<name from LOOK>", "home": "<LOOK name of the face the
+ video holds: emotion, scene and hold only>", "hook_frame": "<frame used>", "punch": "<the punch word, upper case>",
  "closer": "open | either_or", "portrait_of": "<Full Name as in the ident>",
  "evidence": [{"key": "score", "query": "<Commons search>", "words": ["sonata", "note"]}],
- "sentences": [{"slot": "<slot code of the form: S1, E1, C1, L1, I1, T1 ...>", "text": "...", "kind": "HOOK|FACT|LOOK|READING", "source": <FACTS number or null>,
+ "sentences": [{"slot": "<slot code of the form: S1, E1, C1, L1, I1, T1, H1 ...>", "text": "...", "kind": "HOOK|FACT|LOOK|READING", "source": <FACTS number or null>,
                 "show": [{"on": "<a word of this sentence>", "to": "<LOOK name, or key:full for an evidence picture>"}]}],
  "pronounce": {"<hard name>": "<plain English respelling>"},
  "meta": {"title": "<under 70 characters, no clickbait lie>", "description": "<2-3 factual sentences>",
@@ -257,7 +286,7 @@ The title follows the form:
   twist                      ACTION AND TURN: "<Subject> <did X>... and <found / became Y>"  ("They Opened the Painting...
                              and Found a DRAGON"). The "..." is required.
   riddle, investigation      WHY: "Why <the odd detail>?"  ("Why They Put a Crown on a Bare Skull")
-  legend                     ACTION AND TURN (above) or WHO (below)
+  legend, hold               ACTION AND TURN (above) or WHO (below)
   emotion, scene             WHO: "The <noun> Who / That <did the extraordinary thing>"  ("The Artist Who Lived Inside a
                              Rock for a Week"): the figure's ACTION, never a description ("that hands Goya his pen" held
                              51 views, "who called his own portrait too true" 683).
@@ -271,4 +300,6 @@ Title Case, ONE key word in CAPITALS, at most 70 characters, then " #history #ar
     the hook's question is answered; I1 / T1 ends on the punch word
 [ ] emotion: "home" is the face and "detail" the small thing; after E4 nothing outside the face is named
 [ ] emotion: E4 and E9 are three beats with commas; E13 is "Imagine ..." and three questions; E17 is two "Maybe"
+[ ] hold: H1 is 5-12 words and ends on the punch word; no ident in the first three sentences; the painter comes
+    in H4 as a fact; a question in the middle; the last sentence a question whose last word goes to the detail
 [ ] the word count fits the form, no digit except one year, and not one sentence is taken from another video

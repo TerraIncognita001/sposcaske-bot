@@ -117,13 +117,13 @@ def brief(topic, title, facts, look=None):
             + "\n\nAVOID\n" + ("\n".join("- " + r for r in recent()) or "- nothing yet") + learn.notes())
 
 
-FORMS = ("riddle", "emotion", "scene", "legend", "investigation", "twist")
+FORMS = ("riddle", "emotion", "scene", "legend", "investigation", "twist", "hold")    # v1.19: "hold" = the retention form
 ORIGINAL = ("riddle", "emotion", "scene")    # v1.16 (Andrii, Nov 17: 'друге дно мені сподобалось найбільше, чергуй його з оригінальним форматом раз через раз')
 
 
 def form_class(form):
     """v1.16: "twist", "original" (riddle, emotion, scene: the judge's form) or None (legend, investigation: not in the alternation)."""
-    return "twist" if form == "twist" else "original" if form in ORIGINAL else None
+    return "twist" if form == "twist" else "original" if form in ORIGINAL + ("hold",) else None    # v1.19: hold takes the place of the original form
 
 
 def script_form(story_id):
@@ -187,7 +187,7 @@ def form_of(topic, day=None):
     alternation. v1.12: the form the judge gave the topic.)"""
     if topic.get("kind") == "story":
         return "legend"
-    return "twist" if write_class() == "twist" else judge_form(topic)
+    return "twist" if write_class() == "twist" else "hold"    # v1.19 (Andrii, Nov 21: 'так, викочуй hold в main'): twist and HOLD alternate; riddle, emotion, scene stay valid
 
 
 def fact_count(sentences):
@@ -221,7 +221,7 @@ def camera_faults(script):
     thing of LOOK, and the run stopped there). Checked while the script is written, so the model gets it back."""
     names, keys = {l["name"] for l in script["look"]}, {e["key"] for e in script.get("evidence", [])}
     out = []
-    if script.get("form") == "emotion":                                 # v1.12: the face the video holds, and the small thing in it
+    if script.get("form") in ("emotion", "hold"):                       # v1.12: the face the video holds, and the small thing in it (v1.19: hold opens on the face)
         for k in ("home", "detail"):
             if script.get(k) not in names:
                 out.append(f"\"{k}\" is '{script.get(k)}', which is not a name of LOOK ({', '.join(sorted(names))}): the emotion form needs the face as \"home\" and the small thing as \"detail\"")
@@ -240,7 +240,8 @@ def camera_faults(script):
 
 def assemble(topic, facts, lead, look, w, title):
     """The writer's answer + the facts + the pictures = scripts/<id>.json (what director.py reads)."""
-    year = next((int(m) for m in re.findall(r"\b(1[0-9]{3})\b", " ".join(s["text"] for s in w["sentences"][:2]))), None)
+    year = next((int(m) for m in re.findall(r"\b(1[0-9]{3})\b", " ".join(s["text"] for s in w["sentences"][:2]))), None) \
+        or next((int(m) for m in re.findall(r"\b(1[0-9]{3})\b", " ".join(s["text"] for s in w["sentences"]))), None)    # v1.19: hold names the year later
     creator = topic.get("person") or w.get("portrait_of") or "unknown"
     form = w.get("form") if w.get("form") in FORMS else form_of(topic) or "riddle"
     return {"id": topic["id"], "kind": topic["kind"], "form": form, "hook_frame": w.get("hook_frame"), "closer": w.get("closer"),

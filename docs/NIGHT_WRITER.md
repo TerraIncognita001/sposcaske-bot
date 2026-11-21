@@ -50,6 +50,9 @@ Read every `FAILED EARLIER` line: it says which check refused an earlier script 
      first thing to the second, about 120 s), legend (a named man's story). The brief says FORM, or "choose": then
      choose by the picture. A face with a tear, a gaze or a wrong smile is an emotion, never a riddle. Write every
      slot of that form, in order, with its code (E1 ... E19). `"form"` goes into the answer.
+   - **hold (v1.19)** is the form of the "original" turn now: `prompts/writer.txt` 3h. No ident at the start, the
+     hook 5-12 words on the face, the painter later as a fact (his name brings the portrait), a question in the
+     middle, the last word of the last question sent to the detail with "show". It needs `"home"` (the face) too.
    - **emotion and scene need `"home"`**: the LOOK name of the FACE (hair to chin, with what the face rests on),
      and `"detail"`: the LOOK name of the small thing in it. Draw both boxes with care and look at their crops:
      in the emotion form the camera lives on these two boxes for the whole video. The face box carries every word

@@ -137,11 +137,11 @@ def save(tid, answer_path, look_path):
             if not ok and not hard:
                 print("warn", name, "|", det)
         last = re.sub(r"[^\w']", "", sents[0]["text"].split()[-1]).upper()
-        if form in ("riddle", "legend", "investigation", "twist") and w["punch"].upper() != last:    # v1.15: the lean forms end the hook on it too
+        if form in ("riddle", "legend", "investigation", "twist", "hold") and w["punch"].upper() != last:    # v1.15: the lean forms end the hook on it too
             bad.append(f"punch is {w['punch']!r} but the hook ends on {last!r}")
         if re.sub(r"\W", "_", str(w.get("detail", "")).lower()) not in names:
             bad.append(f"detail {w.get('detail')!r} is not a name of look.json ({', '.join(sorted(names))})")
-        if form in ("emotion", "scene") and re.sub(r"\W", "_", str(w.get("home", "")).lower()) not in names:
+        if form in ("emotion", "scene", "hold") and re.sub(r"\W", "_", str(w.get("home", "")).lower()) not in names:
             bad.append(f"home {w.get('home')!r} is not a name of look.json: the {form} form needs the face the video opens on")
         for s in sents:
             if s.get("kind") == "FACT" and not (isinstance(s.get("source"), int) and 0 < s["source"] <= len(fx["facts"])):

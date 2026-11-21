@@ -5,6 +5,21 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.19 = THE HOLD FORM (RETENTION), Andrii, Nov 21 2026 ('перебудуй сценарій. проаналізуй які прийоми для утримання
+  аудиторії можна використати та застосуй це', then on the demo: 'так, викочуй hold в main'). Why, from our own 14
+  videos (data/lessons.md): viewers leave in the hook at 3-6 s (15-49 %: long hooks of 12-18 words, vague 'may hide
+  something', the camera gliding out to the whole dark picture: Lucifer -36 % at 4.2 s) and on the ident line
+  'painted by X in YEAR' at 10-13 s (7-27 %, in EVERY video). A new form `hold` (`prompts/writer.txt` 3h,
+  `script_check.check_hold`, slots H1-H9): a hook of 5-12 words ending on the punch word, NO ident in the first three
+  sentences (the painter comes later as a fact, his portrait on his name: `director.build`), a camera tour of new
+  things every 2-3 s, a second question in the middle and a re-hook ('The answer is ...'), 3+ facts, a flip, a last
+  question that ends on the detail (the frame the video opened on: it loops). The video opens on the face
+  ("home"), the hook stays on the face (no glide out), the red word lands on the face. 80-130 words, 40-55 s.
+  THE ALTERNATION is now twist <-> hold (`writer.form_of`, `form_class`): hold takes the place of the original forms
+  (riddle, emotion, scene stay valid for the ready scripts and can be given by hand). Demo (branch demo-lucifer-v2,
+  dry run 44844945108): Lucifer in hold, 51.5 s, 12 of 12 checks, 19 of 19 named things in frame. `writer.assemble`
+  finds the year anywhere when the first two sentences have none.
+
 - v1.18 = THE TITLE FOLLOWS THE FORM, Andrii, Nov 18 2026 (the title patterns of 100 videos of the niche, 11.7M views;
   'так, роби'). Our own numbers agree: the two best titles are 'The <noun> who / that <did something>' (Lucifer 1235
   views, Innocent X 683), but a description in that shape held nothing ('The owl that hands Goya his pen' 51). Now
