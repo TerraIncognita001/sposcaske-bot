@@ -394,7 +394,7 @@ def build(script):
                 if first and slot == "S13" and cur != ("main", "full") and not tight:
                     go("main:full")                                    # the question pulls back to the whole picture (unless it names a detail)
                 wide_for = None
-                if slot == "S1" and last_line and len(toks) >= 3:      # the hook's last named thing arrives with the glide out
+                if slot == "S1" and last_line and len(toks) >= 3 and script.get("form") != "hold":      # the hook's last named thing arrives with the glide out (demo: the hold form stays on the eyes: Lucifer lost 36 % at 4.2 s as the camera went wide)
                     j = next((k for k in range(len(toks) - 1, max(len(toks) - 3, -1), -1) if toks[k] in names or toks[k].split("'")[0] in names), None)
                     if j is not None:
                         al = names.get(toks[j]) or names.get(toks[j].split("'")[0])
@@ -425,7 +425,7 @@ def build(script):
                         cur = ("main", target)
                         continue
                     go(target if ":" in target else "main:" + target, on=t, how="cut" if slot in ("S1", "S11") else None)
-                if slot == "S1" and last_line and len(toks) >= 3:      # glide out: the red word lands on the wide picture
+                if slot == "S1" and last_line and len(toks) >= 3 and script.get("form") != "hold":      # glide out: the red word lands on the wide picture
                     wide = wide_for[1] if wide_for and wide_for[1] else "full"
                     if wide != cur[1] or cur[0] != "main":
                         cues.append({"to": wide, "on": toks[-2]})
