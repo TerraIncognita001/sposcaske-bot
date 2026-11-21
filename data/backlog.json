@@ -146,6 +146,104 @@
    "disqualified": null
   },
   {
+   "id": "two-old-ones-eating-soup-goya",
+   "kind": "artwork",
+   "wikipedia": "Two Old Ones Eating Soup",
+   "person": "Francisco Goya",
+   "why": "Two figures emerge from pitch darkness to eat, but the companion turning toward the viewer has the bare skull face of Death.",
+   "wikidata": "Q3291664",
+   "picture": "Viejos_comiendo_sopa.jpg",
+   "picture_px": 3051,
+   "score": 10,
+   "scores": {
+    "G": 2,
+    "D": 2,
+    "F": 2,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The animated left figure is closely watched and hovered over by the skull-faced figure on the right.",
+    "D": "Two stark, high-contrast figures emerge directly from pitch darkness, perfectly clear on small mobile screens.",
+    "F": "What looks like a simple second old person sharing soup turns out to be a living skull with hollow eye sockets.",
+    "T": "Pure uncanny menace of mortality and decay looming over old age with zero blood or active violence.",
+    "Y": "The video can directly ask the viewer who or what is really sitting beside the old man at his final meal.",
+    "S": "Goya painted this haunting vision directly onto his dining area wall while deaf and isolated at the Quinta del Sordo."
+   },
+   "character": {
+    "figure": "an old man and death",
+    "threat": "mortality creeping up during a quiet meal",
+    "feeling": "uncanny dread",
+    "theme": "watcher"
+   },
+   "angle": {
+    "first_impression": "Two old companions sharing a humble bowl of warm soup",
+    "detail": "the skull face of the second figure",
+    "readings": [
+     "an old person eating a simple meal alone",
+     "Death standing right beside him waiting to take him"
+    ],
+    "question": "So is that a neighbor sharing his soup, or Death coming for him?",
+    "punch": [
+     "DEATH",
+     "SKULL",
+     "SILENT"
+    ],
+    "form": "scene"
+   },
+   "disqualified": null
+  },
+  {
+   "id": "circe-offering-the-cup-to-ulysses-waterhouse",
+   "kind": "artwork",
+   "wikipedia": "Circe Offering the Cup to Ulysses",
+   "person": "John William Waterhouse",
+   "why": "Circe smiles warmly while extending a wine cup to the viewer, but the mirror behind her reveals her victim trapped at her feet.",
+   "wikidata": "Q39537",
+   "picture": "Circe_Offering_the_Cup_to_Odysseus_(2457_x_4023px_ed.).jpg",
+   "picture_px": 2457,
+   "score": 10,
+   "scores": {
+    "G": 2,
+    "D": 2,
+    "F": 2,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Circe looks directly down at the viewer from her throne with commanding eye contact.",
+    "D": "A single dominant central figure framed by a dark stone palace, readable instantly on a phone screen.",
+    "F": "The mirror behind her head reveals Ulysses approaching with his sword drawn, turning the hunter into the hunted.",
+    "T": "A deadly potion is offered with serene dominance, while pigs at her feet show the quiet horror of past victims without any gore.",
+    "Y": "The viewer occupies the exact position of Ulysses, looking up at the cup being handed directly to them.",
+    "S": "The story comes from Homer's Odyssey, featuring named figures and the recorded legend of Hermes' divine antidote."
+   },
+   "character": {
+    "figure": "Circe on her throne",
+    "threat": "poison that turns men into beasts",
+    "feeling": "chilling tension",
+    "theme": "false calm"
+   },
+   "angle": {
+    "first_impression": "A beautiful goddess offering you a drink from her throne",
+    "detail": "the reflection of Ulysses in the mirror behind her head",
+    "readings": [
+     "a sorceress effortlessly claiming another victim",
+     "a confident predator who does not realize her trap has failed"
+    ],
+    "question": "So when she offers you the cup, who is actually caught in the trap?",
+    "punch": [
+     "TRAP",
+     "MIRROR",
+     "SPELL"
+    ],
+    "form": "scene"
+   },
+   "disqualified": null
+  },
+  {
    "id": "lucifer-von-stuck",
    "kind": "artwork",
    "wikipedia": "Lucifer (Stuck)",
@@ -431,6 +529,55 @@
      "blasphemy",
      "arrogance",
      "divine"
+    ],
+    "form": "emotion"
+   },
+   "disqualified": null
+  },
+  {
+   "id": "boy-bitten-by-a-lizard-caravaggio",
+   "kind": "artwork",
+   "wikipedia": "Boy Bitten by a Lizard",
+   "person": "Caravaggio",
+   "why": "A handsome boy with a flower behind his ear recoils and screams at the viewer as a hidden lizard clamps down on his finger.",
+   "wikidata": "Q585437",
+   "picture": "Boy_Bitten_by_a_Lizard_by_Caravaggio_(Florence).jpg",
+   "picture_px": 2480,
+   "score": 9,
+   "scores": {
+    "G": 2,
+    "D": 2,
+    "F": 1,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The boy stares wide-eyed directly out at the viewer in sudden shock.",
+    "D": "A single figure closely cropped against a dark, shadowy background, instantly readable on a phone screen.",
+    "F": "The lizard clamped onto his finger is hidden in the dark leaves and cherries, requiring explanation before it is spotted.",
+    "T": "A sudden moment of threat and unexpected pain occurs without showing any blood, gore, or brutal violence.",
+    "Y": "His direct gaze out of the scene allows the voiceover to ask what hidden danger would make you flinch.",
+    "S": "Supported by named historical sources, including Caravaggio's inspiration from Sofonisba Anguissola and the Apollo Sauroktonos myth."
+   },
+   "character": {
+    "figure": "a startled youth",
+    "threat": "a hidden bite in sweet fruit",
+    "feeling": "sudden shock",
+    "theme": "false calm"
+   },
+   "angle": {
+    "first_impression": "a delicate young man recoiling in dramatic horror",
+    "detail": "the tiny lizard biting his finger",
+    "readings": [
+     "a sudden shock breaking a moment of pleasure",
+     "a warning about hidden traps in temptation"
+    ],
+    "question": "So would you have seen the trap before reaching for the fruit?",
+    "punch": [
+     "BITTEN",
+     "TRAP",
+     "STUNG"
     ],
     "form": "emotion"
    },
@@ -928,6 +1075,104 @@
    "disqualified": null
   },
   {
+   "id": "saint-francis-in-meditation-zurbarn",
+   "kind": "artwork",
+   "wikipedia": "Saint Francis of Assisi in His Tomb",
+   "person": "Francisco de Zurbarán",
+   "why": "A monk shrouded in dark brown robes gazes into a skull; his completely shadowed face makes it impossible to tell if he is holy or monstrous.",
+   "wikidata": "Q87068900",
+   "picture": "Francisco_de_Zurbarán_-_Saint_Francis_of_Assisi_in_His_Tomb,_1630-34.jpg",
+   "picture_px": 1962,
+   "score": 8,
+   "scores": {
+    "G": 1,
+    "D": 2,
+    "F": 1,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The face is hidden deep in shadow under the cowl, looking down toward the skull rather than out at the viewer.",
+    "D": "A single hooded figure starkly illuminated against a dark background, perfectly visible and clear at phone scale.",
+    "F": "He appears to be a living monk praying, but he is actually a preserved corpse standing in a sealed tomb, which requires explanation.",
+    "T": "Eerie, uncanny tension of standing face-to-face with an uncorrupted dead man in the dark without any gore shown.",
+    "Y": "The scene directly prompts the question of what you would see if you stepped into the dark tomb with him.",
+    "S": "Supported by the 1449 legend of Pope Nicholas V entering the tomb in Assisi and finding the saint standing upright."
+   },
+   "character": {
+    "figure": "Saint Francis of Assisi",
+    "threat": "a corpse standing upright in darkness",
+    "feeling": "uncanny awe",
+    "theme": "holy or feared"
+   },
+   "angle": {
+    "first_impression": "a quiet monk in a hood praying over a human skull",
+    "detail": "the shadowed face beneath the pointed hood",
+    "readings": [
+     "a living monk in silent devotion",
+     "a preserved corpse standing in a dark tomb"
+    ],
+    "question": "So would you step into the darkness to see if he is still breathing?",
+    "punch": [
+     "ALIVE",
+     "CORPSE",
+     "STILL"
+    ],
+    "form": "legend"
+   },
+   "disqualified": null
+  },
+  {
+   "id": "insane-woman-gricault",
+   "kind": "artwork",
+   "wikipedia": "Monomaniac of Envy",
+   "person": "Théodore Géricault",
+   "why": "An old woman's head emerges from a pitch-black background, her bloodshot eyes staring past the viewer in quiet, chilling obsession.",
+   "wikidata": "Q3210764",
+   "picture": "La_Monomane_de_l'envie.jpg",
+   "picture_px": 31646,
+   "score": 8,
+   "scores": {
+    "G": 1,
+    "D": 2,
+    "F": 1,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Her bloodshot eyes look intensely to the side, not straight at the viewer.",
+    "D": "A single figure sharply lit against a pitch-black background, perfect for a phone screen.",
+    "F": "The red-rimmed eyes and tight mouth hint at obsession, but the psychiatric diagnosis requires context to be fully understood.",
+    "T": "An eerie, disturbing sense of quiet madness and malice is present without any gore or violence.",
+    "Y": "A question can easily put the viewer into the frame ('What do you see when she looks away?').",
+    "S": "Géricault's series of portraits of asylum patients commissioned by Dr. Georget provides a rich, named historical source."
+   },
+   "character": {
+    "figure": "a bonneted old woman",
+    "threat": "the silent grip of madness",
+    "feeling": "unease",
+    "theme": "false calm"
+   },
+   "angle": {
+    "first_impression": "An elderly woman resting quietly in dark shadow",
+    "detail": "her bloodshot eyes staring sideways",
+    "readings": [
+     "a harmless elderly grandmother",
+     "a mind consumed by obsessive insanity"
+    ],
+    "question": "So do you see a frail old woman, or a mind consumed by quiet rage?",
+    "punch": [
+     "MADNESS",
+     "ENVY",
+     "CRAZED"
+    ],
+    "form": "emotion"
+   },
+   "disqualified": null
+  },
+  {
    "id": "stanczyk-matejko",
    "kind": "artwork",
    "wikipedia": "Stańczyk (painting)",
@@ -1068,6 +1313,104 @@
      "EMPIRE"
     ],
     "form": "scene"
+   },
+   "disqualified": null
+  },
+  {
+   "id": "love-and-pain-munch",
+   "kind": "artwork",
+   "wikipedia": "Love and Pain (Munch)",
+   "person": "Edvard Munch",
+   "why": "A man is locked in a dark, tender embrace with a red-haired woman, but her mouth on his neck flips love into a vampire feeding.",
+   "wikidata": "Q1683743",
+   "picture": "Edvard_Munch_-_Vampire_(1895)_-_Google_Art_Project.jpg",
+   "picture_px": 5446,
+   "score": 7,
+   "scores": {
+    "G": 0,
+    "D": 2,
+    "F": 1,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Neither figure makes eye contact with the viewer; both faces are turned downward in shadow.",
+    "D": "Two figures locked in an embrace against a dark, featureless ground, instantly readable on a phone screen.",
+    "F": "The red hair flowing like blood over his neck suggests a bite, but the pose requires explanation to decide if it is love or murder.",
+    "T": "Sinister aura of a vampire attack, but no blood, bite marks, or actual violence are visible.",
+    "Y": "The viewer is forced to choose whether they are witnessing a moment of deep comfort or fatal predation.",
+    "S": "Munch's own documented statement contrasts directly with critic Stanisław Przybyszewski's famous claim."
+   },
+   "character": {
+    "figure": "a woman embracing a shadowed man",
+    "threat": "being consumed by a predator in darkness",
+    "feeling": "haunting ambiguity",
+    "theme": "false calm"
+   },
+   "angle": {
+    "first_impression": "a woman with red hair tenderly kissing a man's neck",
+    "detail": "the lips pressed to his neck",
+    "readings": [
+     "a woman comforting a broken man in dark sorrow",
+     "a monster silently consuming her submissive prey"
+    ],
+    "question": "So when you look into the darkness, do you see love or a bite?",
+    "punch": [
+     "LOVE",
+     "BITE",
+     "PAIN"
+    ],
+    "form": "riddle"
+   },
+   "disqualified": null
+  },
+  {
+   "id": "david-with-the-head-of-goliath-caravaggio",
+   "kind": "artwork",
+   "wikipedia": "David with the Head of Goliath (Caravaggio, Rome)",
+   "person": "Caravaggio",
+   "why": "David emerges from blackness holding a severed head, but his face shows profound grief and pity rather than triumphant pride.",
+   "wikidata": "Q2627056",
+   "picture": "David_with_the_Head_of_Goliath-Caravaggio_(1610).jpg",
+   "picture_px": 5922,
+   "score": 7,
+   "scores": {
+    "G": 1,
+    "D": 2,
+    "F": 2,
+    "T": 0,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "David gazes mournfully down at the head rather than at the viewer, but the look is central to the picture.",
+    "D": "David and the severed head emerge dramatically from pitch blackness, striking even at phone scale.",
+    "F": "The victor shows no triumph or pride, looking down at his slain enemy with unexpected sadness and pity.",
+    "T": "The aftermath of graphic violence is fully visible in the severed head dripping blood.",
+    "Y": "A direct question easily draws the viewer into interpreting the boy's strange look of remorse.",
+    "S": "Caravaggio painted his own face as Goliath while fleeing a murder charge, offering the portrait as a plea for pardon."
+   },
+   "character": {
+    "figure": "David holding Goliath's head",
+    "threat": "a murderer facing his own execution",
+    "feeling": "haunting regret",
+    "theme": "fallen"
+   },
+   "angle": {
+    "first_impression": "A young hero proudly holding the severed head of a monster.",
+    "detail": "the look of sorrow on the boy's face",
+    "readings": [
+     "a hero mourning the monster he killed",
+     "a fleeing murderer painting his own execution"
+    ],
+    "question": "So why did a wanted murderer paint his own face on the severed head?",
+    "punch": [
+     "pity",
+     "mercy",
+     "pardon"
+    ],
+    "form": "emotion"
    },
    "disqualified": null
   },
@@ -1435,6 +1778,41 @@
     "figure": "six blind men in procession",
     "threat": "unavoidable collective fall",
     "feeling": "inevitable doom",
+    "theme": "false calm"
+   },
+   "angle": null,
+   "disqualified": null
+  },
+  {
+   "id": "l-absinthe-degas",
+   "kind": "artwork",
+   "wikipedia": "L'Absinthe",
+   "person": "Edgar Degas",
+   "why": "A woman in a quiet cafe stares blankly past the viewer, her hollow expression turning a simple drink into total psychological despair.",
+   "wikidata": "Q1239950",
+   "picture": "Edgar_Degas_-_In_a_Café_-_Google_Art_Project_2.jpg",
+   "picture_px": 3936,
+   "score": 4,
+   "scores": {
+    "G": 1,
+    "D": 1,
+    "F": 0,
+    "T": 1,
+    "Y": 0,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The woman stares vacantly downward and the man looks off-canvas, establishing emotional disconnect without eye contact.",
+    "D": "Two main figures seated at cafe tables, easily readable at phone size in daylight interior framing.",
+    "F": "There is no visual surprise or sudden contradiction; the first impression of dull, hopeless isolation remains unchanged.",
+    "T": "Captures psychological numbness and the lingering aftermath of addiction, but lacks immediate danger or tension.",
+    "Y": "The steep table perspective and distant figures position the viewer as a detached outside onlooker.",
+    "S": "Backed by named real-life models and recorded historical scandal during its 1893 London exhibition."
+   },
+   "character": {
+    "figure": "a lonely woman with absinthe",
+    "threat": "numbness, social isolation, and addiction",
+    "feeling": "melancholy",
     "theme": "false calm"
    },
    "angle": null,
