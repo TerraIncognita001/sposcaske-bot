@@ -1,0 +1,111 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "room",
+    "palace"
+   ]
+  },
+  {
+   "name": "alexei",
+   "box": [
+    0.18,
+    0.13,
+    0.37,
+    0.91
+   ],
+   "words": [
+    "son",
+    "alexei",
+    "tsarevich"
+   ]
+  },
+  {
+   "name": "alexei_face",
+   "box": [
+    0.255,
+    0.16,
+    0.31,
+    0.255
+   ],
+   "words": [
+    "head"
+   ]
+  },
+  {
+   "name": "peter",
+   "box": [
+    0.58,
+    0.29,
+    0.83,
+    0.92
+   ],
+   "words": [
+    "peter",
+    "tsar",
+    "emperor",
+    "father"
+   ]
+  },
+  {
+   "name": "peter_face",
+   "box": [
+    0.645,
+    0.29,
+    0.725,
+    0.39
+   ],
+   "words": [
+    "face",
+    "eyes"
+   ]
+  },
+  {
+   "name": "papers_floor",
+   "box": [
+    0.475,
+    0.81,
+    0.58,
+    0.89
+   ],
+   "words": [
+    "paper",
+    "papers",
+    "letter"
+   ]
+  },
+  {
+   "name": "table",
+   "box": [
+    0.31,
+    0.46,
+    0.58,
+    0.88
+   ],
+   "words": [
+    "table"
+   ]
+  },
+  {
+   "name": "table_papers",
+   "box": [
+    0.35,
+    0.47,
+    0.5,
+    0.535
+   ],
+   "words": [
+    "documents",
+    "pen"
+   ]
+  }
+ ],
+ "summary": "Peter the Great sits in an armchair in a palace room and stares at his son Alexei, who stands with his head bowed by a table with papers and a pen. One paper lies on the chequered floor."
+}

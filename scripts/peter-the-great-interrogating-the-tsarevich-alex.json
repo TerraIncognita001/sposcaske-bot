@@ -1,0 +1,345 @@
+{
+ "id": "peter-the-great-interrogating-the-tsarevich-alex",
+ "kind": "artwork",
+ "form": "twist",
+ "hook_frame": "This ___ is ___",
+ "closer": "either_or",
+ "detail": "papers_floor",
+ "home": null,
+ "subject": {
+  "title": "Peter the Great Interrogating the Tsarevich Alexei Petrovich at Peterhof",
+  "creator": "Nikolai Ge",
+  "year": 1871,
+  "wikidata": "Q21041551"
+ },
+ "lead": {
+  "commons": "Peter_the_Great_Interrogating_the_Tsarevich_Alexei_Petrovich.jpg",
+  "width_px": 3840,
+  "aspect": 1.2895,
+  "px": 2048,
+  "license": "Public domain",
+  "credit": "Peter the Great Interrogating the Tsarevich Alexei Petrovich — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Nikolai Ge",
+  "credit": "Portrait of Nikolai Ge — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "room",
+    "palace"
+   ]
+  },
+  {
+   "name": "alexei",
+   "box": [
+    0.18,
+    0.13,
+    0.37,
+    0.91
+   ],
+   "words": [
+    "son",
+    "alexei",
+    "tsarevich"
+   ]
+  },
+  {
+   "name": "alexei_face",
+   "box": [
+    0.255,
+    0.16,
+    0.31,
+    0.255
+   ],
+   "words": [
+    "head"
+   ]
+  },
+  {
+   "name": "peter",
+   "box": [
+    0.58,
+    0.29,
+    0.83,
+    0.92
+   ],
+   "words": [
+    "peter",
+    "tsar",
+    "emperor",
+    "father"
+   ]
+  },
+  {
+   "name": "peter_face",
+   "box": [
+    0.645,
+    0.29,
+    0.725,
+    0.39
+   ],
+   "words": [
+    "face",
+    "eyes"
+   ]
+  },
+  {
+   "name": "papers_floor",
+   "box": [
+    0.475,
+    0.81,
+    0.58,
+    0.89
+   ],
+   "words": [
+    "paper",
+    "papers",
+    "letter"
+   ]
+  },
+  {
+   "name": "table",
+   "box": [
+    0.31,
+    0.46,
+    0.58,
+    0.88
+   ],
+   "words": [
+    "table"
+   ]
+  },
+  {
+   "name": "table_papers",
+   "box": [
+    0.35,
+    0.47,
+    0.5,
+    0.535
+   ],
+   "words": [
+    "documents",
+    "pen"
+   ]
+  }
+ ],
+ "punch": "MERCY",
+ "sentences": [
+  {
+   "slot": "T1",
+   "text": "This man is looking at his own son, and searching for mercy.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "man",
+     "to": "peter_face"
+    },
+    {
+     "on": "son",
+     "to": "alexei"
+    },
+    {
+     "on": "mercy",
+     "to": "peter_face"
+    }
+   ]
+  },
+  {
+   "slot": "T2",
+   "text": "This is Peter the Great Interrogating the Tsarevich Alexei, painted by Nikolai Ge in 1871.",
+   "kind": "FACT",
+   "source": 1
+  },
+  {
+   "slot": "T3",
+   "text": "Most people see an emperor questioning his son, accused of plotting to seize power.",
+   "kind": "FACT",
+   "source": 5,
+   "show": [
+    {
+     "on": "emperor",
+     "to": "peter"
+    },
+    {
+     "on": "son",
+     "to": "alexei"
+    }
+   ]
+  },
+  {
+   "slot": "T3",
+   "text": "Before the sentence, Peter searches his son's eyes for remorse.",
+   "kind": "FACT",
+   "source": 6,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "peter_face"
+    }
+   ]
+  },
+  {
+   "slot": "T4",
+   "text": "And the picture seems to agree.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "T4",
+   "text": "The tsar sits still, and the son lowers his head.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "tsar",
+     "to": "peter"
+    },
+    {
+     "on": "head",
+     "to": "alexei_face"
+    }
+   ]
+  },
+  {
+   "slot": "T5",
+   "text": "But look at the floor.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "floor",
+     "to": "papers_floor"
+    }
+   ]
+  },
+  {
+   "slot": "T6",
+   "text": "A paper lies dropped beside the table.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "paper",
+     "to": "papers_floor"
+    },
+    {
+     "on": "table",
+     "to": "table"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "According to documents published by Alexander Herzen, Alexei was strangled by order of Peter the Great.",
+   "kind": "FACT",
+   "source": 29,
+   "show": [
+    {
+     "on": "Peter",
+     "to": "peter_face"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "Ge himself wrote that after studying the documents, there could be no sympathy for Peter.",
+   "kind": "FACT",
+   "source": 27
+  },
+  {
+   "slot": "T8",
+   "text": "This isn't a father hoping for remorse.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "father",
+     "to": "peter_face"
+    }
+   ]
+  },
+  {
+   "slot": "T8",
+   "text": "It's a judge who has already decided.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "judge",
+     "to": "peter_face"
+    }
+   ]
+  },
+  {
+   "slot": "T9",
+   "text": "So was Peter looking for remorse, or only waiting to sign?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "sign",
+     "to": "papers_floor"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Alexei": "Ah-lek-say",
+  "Tsarevich": "Tsar-eh-vich",
+  "Nikolai Ge": "Nee-ko-lie Geh",
+  "Herzen": "Hair-tsen",
+  "Peterhof": "Peter-hoff"
+ },
+ "meta": {
+  "title": "He Seemed to Want MERCY... Then the Documents Said Strangled #history #art",
+  "description": "Peter the Great Interrogating the Tsarevich Alexei was painted by Nikolai Ge in 1871 and hangs in the Tretyakov Gallery. Documents published by Alexander Herzen said Alexei was strangled by order of Peter; Ge wrote that after the documents there could be no sympathy for Peter.",
+  "tags": [
+   "art history",
+   "nikolai ge",
+   "peter the great",
+   "tsarevich alexei",
+   "russian history"
+  ],
+  "question": "Looking for remorse, or only waiting to sign?"
+ },
+ "sources": [
+  {
+   "claim": "The painting Peter the Great Interrogating the Tsarevich Alexei Petrovich at Peterhof was created by the Russian artist Nikolai Ge (1831–1894) and completed in 1871.",
+   "url": "https://en.wikipedia.org/wiki/Peter_the_Great_Interrogating_the_Tsarevich_Alexei_Petrovich_at_Peterhof",
+   "note": "sentence T2"
+  },
+  {
+   "claim": "The painting depicts Peter I and his son Alexei Petrovich, who has been accused of preparing to seize power, in the interior of the Monplaisir Palace in Peterhof.",
+   "url": "https://en.wikipedia.org/wiki/Peter_the_Great_Interrogating_the_Tsarevich_Alexei_Petrovich_at_Peterhof",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "Before pronouncing sentence, Peter I gazes into his son's eyes, still hoping to discern signs of remorse.",
+   "url": "https://en.wikipedia.org/wiki/Peter_the_Great_Interrogating_the_Tsarevich_Alexei_Petrovich_at_Peterhof",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "In particular, the publication included documents that contradicted the official version of Tsarevich Alexei's death, which stated that he died in the Peter and Paul Fortress \"out of grief.\" The docum",
+   "url": "https://en.wikipedia.org/wiki/Peter_the_Great_Interrogating_the_Tsarevich_Alexei_Petrovich_at_Peterhof",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "The artist described this situation this way: \"At the time of writing the painting Peter I and the Tsarevich Alexei, I had sympathy for Peter, but then, having studied many documents, I saw that there",
+   "url": "https://en.wikipedia.org/wiki/Peter_the_Great_Interrogating_the_Tsarevich_Alexei_Petrovich_at_Peterhof",
+   "note": "sentence T7"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-21"
+}
