@@ -54,7 +54,7 @@
     }
    },
    "hook": "What if the most beautiful angel ever painted is looking at you with pure hatred?",
-   "views": 38,
+   "views": 39,
    "likes": 1,
    "comments": 1,
    "score": 7.32,
@@ -510,7 +510,7 @@
     }
    },
    "hook": "There's a terrifying detail on this violin, and it explains why the painter stopped to listen.",
-   "views": 114,
+   "views": 115,
    "likes": 10,
    "comments": 1,
    "score": 11.31,
@@ -2358,7 +2358,7 @@
     }
    },
    "hook": "There's something colder than anger about the way this old man looks back at you.",
-   "views": 697,
+   "views": 699,
    "likes": 34,
    "comments": 4,
    "score": 13.42,
@@ -4205,7 +4205,7 @@
     }
    },
    "hook": "This woman is famous for cruelty, and the Bible may say the exact opposite.",
-   "views": 361,
+   "views": 367,
    "likes": 9,
    "comments": 2,
    "score": 10.92,
@@ -4245,10 +4245,10 @@
     }
    },
    "hook": "This painting may hide the loneliest feeling ever given to a creature built like a god.",
-   "views": 180,
-   "likes": 7,
+   "views": 188,
+   "likes": 8,
    "comments": 1,
-   "score": 5.52
+   "score": 5.59
   },
   "HIkm5eVLy8o": {
    "story": "saint-serapion-zurbarn",
@@ -4278,10 +4278,10 @@
     }
    },
    "hook": "This saint looks peacefully asleep, but his white robes are hiding a death.",
-   "views": 179,
+   "views": 218,
    "likes": 14,
    "comments": 2,
-   "score": 5.83
+   "score": 6.02
   },
   "e6z-1qwtMmQ": {
    "story": "the-young-martyr-delaroche",
@@ -4311,12 +4311,12 @@
     }
    },
    "hook": "Something about this girl sleeping on the dark water feels completely wrong.",
-   "views": 201,
+   "views": 202,
    "likes": 1,
    "comments": 1,
-   "score": 5.42
+   "score": 5.43
   }
  },
- "read_at": "2026-11-20T21:21:24Z",
+ "read_at": "2026-11-21T01:24:11Z",
  "_about": "written by stats_now.py (v1.09): one entry per public video; learn.py reads it. Do not edit by hand."
 }
