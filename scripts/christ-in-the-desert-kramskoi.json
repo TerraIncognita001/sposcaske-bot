@@ -1,0 +1,345 @@
+{
+ "id": "christ-in-the-desert-kramskoi",
+ "kind": "artwork",
+ "form": "hold",
+ "hook_frame": "This ___ ...",
+ "closer": "either_or",
+ "detail": "hands",
+ "home": "face",
+ "subject": {
+  "title": "Christ in the Desert",
+  "creator": "Ivan Kramskoi",
+  "year": 1872,
+  "wikidata": "Q2354080"
+ },
+ "lead": {
+  "commons": "Christ_in_the_Wilderness_-_Ivan_Kramskoy_-_Google_Cultural_Institute.jpg",
+  "width_px": 3840,
+  "aspect": 1.1408,
+  "px": 4000,
+  "license": "Public domain",
+  "credit": "Christ in the Wilderness - Ivan Kramskoy - Google Cultural Institute — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Ivan Kramskoi",
+  "credit": "Portrait of Ivan Kramskoi — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "desert",
+    "wilderness"
+   ]
+  },
+  {
+   "name": "christ",
+   "box": [
+    0.38,
+    0.19,
+    0.72,
+    0.86
+   ],
+   "words": [
+    "christ",
+    "figure",
+    "man"
+   ]
+  },
+  {
+   "name": "face",
+   "box": [
+    0.48,
+    0.19,
+    0.6,
+    0.33
+   ],
+   "words": [
+    "face",
+    "eyes"
+   ]
+  },
+  {
+   "name": "hands",
+   "box": [
+    0.47,
+    0.45,
+    0.565,
+    0.56
+   ],
+   "words": [
+    "hands",
+    "fingers"
+   ]
+  },
+  {
+   "name": "feet",
+   "box": [
+    0.4,
+    0.75,
+    0.57,
+    0.84
+   ],
+   "words": [
+    "feet"
+   ]
+  },
+  {
+   "name": "rocks",
+   "box": [
+    0.0,
+    0.5,
+    1.0,
+    0.95
+   ],
+   "words": [
+    "rocks",
+    "stones"
+   ]
+  },
+  {
+   "name": "dawn",
+   "box": [
+    0.0,
+    0.38,
+    0.42,
+    0.55
+   ],
+   "words": [
+    "dawn",
+    "horizon"
+   ]
+  }
+ ],
+ "punch": "FIGHT",
+ "sentences": [
+  {
+   "slot": "H1",
+   "text": "This lonely man is not praying, he is getting ready to fight.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "man",
+     "to": "face"
+    },
+    {
+     "on": "fight",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "H2",
+   "text": "Everyone sees a tired man, broken by the desert.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "man",
+     "to": "christ"
+    },
+    {
+     "on": "desert",
+     "to": "main_action"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "His bare feet rest on cold stone.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "feet",
+     "to": "feet"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "The dawn is grey behind him.",
+   "kind": "LOOK",
+   "source": 12,
+   "show": [
+    {
+     "on": "dawn",
+     "to": "dawn"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "And his hands are locked together.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "hands",
+     "to": "hands"
+    }
+   ]
+  },
+  {
+   "slot": "H4",
+   "text": "Ivan Kramskoi painted him in 1872, at the hour of his temptation.",
+   "kind": "FACT",
+   "source": 1
+  },
+  {
+   "slot": "H5",
+   "text": "Pavel Tretyakov bought it that same year for six thousand rubles.",
+   "kind": "FACT",
+   "source": 16
+  },
+  {
+   "slot": "H5",
+   "text": "Why would a collector pay so much for a defeated man?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "man",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "H6",
+   "text": "The answer is in those hands.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "hands",
+     "to": "hands"
+    }
+   ]
+  },
+  {
+   "slot": "H7",
+   "text": "The writer Vsevolod Garshin saw complete resolve to fight evil.",
+   "kind": "FACT",
+   "source": 21,
+   "show": [
+    {
+     "on": "evil",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "H7",
+   "text": "Ivan Goncharov wrote that nothing here was heroic or victorious.",
+   "kind": "FACT",
+   "source": 24
+  },
+  {
+   "slot": "H7",
+   "text": "Yet the whole fate of the world was hidden in this small figure.",
+   "kind": "FACT",
+   "source": 24,
+   "show": [
+    {
+     "on": "figure",
+     "to": "christ"
+    }
+   ]
+  },
+  {
+   "slot": "H8",
+   "text": "He isn't broken.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "H8",
+   "text": "He's deciding.",
+   "kind": "READING",
+   "source": 21,
+   "show": [
+    {
+     "on": "deciding",
+     "to": "hands"
+    }
+   ]
+  },
+  {
+   "slot": "H9",
+   "text": "So is he giving up, or gathering the strength to stand?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "stand",
+     "to": "hands"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Kramskoi": "Kram-skoy",
+  "Tretyakov": "Tret-ya-koff",
+  "Garshin": "Gar-shin",
+  "Goncharov": "Gon-cha-roff"
+ },
+ "meta": {
+  "title": "The Man Who Sat in the Desert Deciding the FATE of the World #history #art",
+  "description": "Christ in the Desert was painted by Ivan Kramskoi in 1872 and bought by Pavel Tretyakov the same year for 6,000 rubles. Vsevolod Garshin saw in it complete resoluteness to fight evil.",
+  "tags": [
+   "art history",
+   "kramskoi",
+   "christ in the desert",
+   "tretyakov gallery",
+   "russian art"
+  ],
+  "question": "Giving up, or gathering strength?"
+ },
+ "sources": [
+  {
+   "claim": "Kramskoi used primarily cold colours to reflect the chill dawn in the background.",
+   "url": "https://en.wikipedia.org/wiki/Christ_in_the_Desert",
+   "note": "sentence H3"
+  },
+  {
+   "claim": "Christ in the Desert or Christ in the Wilderness (Russian: Христос в пустыне, romanized: Khristos v pustyne) is an 1872 painting by Russian artist Ivan Kramskoi, reflecting the temptation of Christ.",
+   "url": "https://en.wikipedia.org/wiki/Christ_in_the_Desert",
+   "note": "sentence H4"
+  },
+  {
+   "claim": "Ivan Kramskoi sold his work to Tretyakov for 6,000 rubles.",
+   "url": "https://en.wikipedia.org/wiki/Christ_in_the_Desert",
+   "note": "sentence H5"
+  },
+  {
+   "claim": "Vsevolod Garshin outlined the \"expression of immense moral force, hatred against evil and complete resoluteness to fight it\".",
+   "url": "https://en.wikipedia.org/wiki/Christ_in_the_Desert",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "He also emphasized that \"there is nothing festive, heroic, victorious — the future fate of the world and of all livings is concealed in that miserable, small being, in pauper appearance, under the rag",
+   "url": "https://en.wikipedia.org/wiki/Christ_in_the_Desert",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "He also emphasized that \"there is nothing festive, heroic, victorious — the future fate of the world and of all livings is concealed in that miserable, small being, in pauper appearance, under the rag",
+   "url": "https://en.wikipedia.org/wiki/Christ_in_the_Desert",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "Vsevolod Garshin outlined the \"expression of immense moral force, hatred against evil and complete resoluteness to fight it\".",
+   "url": "https://en.wikipedia.org/wiki/Christ_in_the_Desert",
+   "note": "sentence H8"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-21"
+}

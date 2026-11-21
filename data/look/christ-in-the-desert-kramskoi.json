@@ -1,0 +1,96 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "desert",
+    "wilderness"
+   ]
+  },
+  {
+   "name": "christ",
+   "box": [
+    0.38,
+    0.19,
+    0.72,
+    0.86
+   ],
+   "words": [
+    "christ",
+    "figure",
+    "man"
+   ]
+  },
+  {
+   "name": "face",
+   "box": [
+    0.48,
+    0.19,
+    0.6,
+    0.33
+   ],
+   "words": [
+    "face",
+    "eyes"
+   ]
+  },
+  {
+   "name": "hands",
+   "box": [
+    0.47,
+    0.45,
+    0.565,
+    0.56
+   ],
+   "words": [
+    "hands",
+    "fingers"
+   ]
+  },
+  {
+   "name": "feet",
+   "box": [
+    0.4,
+    0.75,
+    0.57,
+    0.84
+   ],
+   "words": [
+    "feet"
+   ]
+  },
+  {
+   "name": "rocks",
+   "box": [
+    0.0,
+    0.5,
+    1.0,
+    0.95
+   ],
+   "words": [
+    "rocks",
+    "stones"
+   ]
+  },
+  {
+   "name": "dawn",
+   "box": [
+    0.0,
+    0.38,
+    0.42,
+    0.55
+   ],
+   "words": [
+    "dawn",
+    "horizon"
+   ]
+  }
+ ],
+ "summary": "Christ sits alone on a rock in a stony desert at dawn, wrapped in a dark cloak over a red tunic, his head bowed and his hands clasped hard in his lap. His feet are bare."
+}
