@@ -1,26 +1,26 @@
 {
  "_about": "written by learn.py (v1.09) from data/stats.json. on = false: the bot ignores this file.",
- "updated": "2026-11-21T01:24Z",
+ "updated": "2026-11-21T19:08Z",
  "on": true,
- "videos_counted": 8,
+ "videos_counted": 10,
  "rule": "on at 8 videos public for 3 days; a value needs 3 videos",
  "mult": {
   "form": {
    "emotion": {
-    "n": 1,
-    "mean": 13.42,
+    "n": 2,
+    "mean": 13.84,
     "m": 1.0
    },
    "riddle": {
-    "n": 7,
-    "mean": 9.43,
-    "m": 0.95
+    "n": 8,
+    "mean": 9.42,
+    "m": 0.91
    }
   },
   "hook_frame": {
    "may_hide": {
     "n": 1,
-    "mean": 12.86,
+    "mean": 12.87,
     "m": 1.0
    },
    "something_about": {
@@ -28,14 +28,19 @@
     "mean": 11.71,
     "m": 1.0
    },
+   "what_if": {
+    "n": 3,
+    "mean": 10.24,
+    "m": 0.99
+   },
    "detail_most_miss": {
     "n": 2,
     "mean": 10.19,
     "m": 1.0
    },
-   "what_if": {
-    "n": 2,
-    "mean": 8.23,
+   "why": {
+    "n": 1,
+    "mean": 9.35,
     "m": 1.0
    },
    "about_to": {
@@ -45,38 +50,38 @@
    }
   },
   "closer": {
-   "open": {
-    "n": 3,
-    "mean": 10.67,
+   "either_or": {
+    "n": 5,
+    "mean": 11.07,
     "m": 1.07
    },
-   "either_or": {
+   "open": {
     "n": 4,
-    "mean": 10.28,
-    "m": 1.04
+    "mean": 10.34,
+    "m": 1.0
    }
   },
   "kind": {
    "artwork": {
-    "n": 7,
-    "mean": 10.45,
-    "m": 1.05
+    "n": 9,
+    "mean": 10.75,
+    "m": 1.04
    }
   },
   "theme": {
    "watcher": {
-    "n": 4,
-    "mean": 11.9,
+    "n": 5,
+    "mean": 12.37,
     "m": 1.2
+   },
+   "false calm": {
+    "n": 2,
+    "mean": 9.21,
+    "m": 1.0
    },
    "innocence in danger": {
     "n": 1,
     "mean": 9.15,
-    "m": 1.0
-   },
-   "false calm": {
-    "n": 1,
-    "mean": 9.06,
     "m": 1.0
    },
    "fallen": {
@@ -91,44 +96,44 @@
     "mean": 13.42,
     "m": 1.0
    },
+   "16th": {
+    "n": 2,
+    "mean": 11.66,
+    "m": 1.0
+   },
    "18th": {
-    "n": 1,
-    "mean": 10.0,
+    "n": 2,
+    "mean": 9.68,
     "m": 1.0
    },
    "19th": {
     "n": 5,
     "mean": 9.39,
-    "m": 0.95
-   },
-   "16th": {
-    "n": 1,
-    "mean": 9.06,
-    "m": 1.0
+    "m": 0.91
    }
   },
   "length": {
    "over 75 s": {
-    "n": 1,
-    "mean": 13.42,
+    "n": 2,
+    "mean": 13.84,
     "m": 1.0
    },
    "60-75 s": {
     "n": 4,
-    "mean": 10.37,
-    "m": 1.04
+    "mean": 10.38,
+    "m": 1.01
    },
    "under 60 s": {
-    "n": 3,
-    "mean": 8.17,
+    "n": 4,
+    "mean": 8.47,
     "m": 0.82
    }
   },
   "writer": {
    "claude": {
-    "n": 5,
-    "mean": 10.81,
-    "m": 1.09
+    "n": 7,
+    "mean": 11.1,
+    "m": 1.08
    },
    "gemini": {
     "n": 2,
@@ -142,26 +147,26 @@
    }
   },
   "title_pattern": {
-   "who": {
-    "n": 3,
-    "mean": 11.2,
-    "m": 1.13
-   },
    "other": {
+    "n": 5,
+    "mean": 10.76,
+    "m": 1.04
+   },
+   "who": {
     "n": 4,
-    "mean": 9.88,
-    "m": 1.0
+    "mean": 10.74,
+    "m": 1.04
    }
   }
  },
  "judge_weights": {
   "G": 1.0,
-  "D": 1.0,
-  "F": 1.0,
-  "T": 1.0,
+  "D": 1.43,
+  "F": 0.66,
+  "T": 0.5,
   "Y": 1.0,
   "S": 1.0
  },
- "judge_fit": null,
- "mean_score": 9.93
+ "judge_fit": -0.42,
+ "mean_score": 10.3
 }

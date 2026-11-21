@@ -1,0 +1,149 @@
+{
+ "total": 57.39641723356009,
+ "lines": [
+  {
+   "t0": 1.65,
+   "t1": 3.36,
+   "beat": "hook",
+   "say": "There's something heavy about the way"
+  },
+  {
+   "t0": 3.36,
+   "t1": 5.81,
+   "beat": "hook",
+   "say": "this jester sits through the party in silence."
+  },
+  {
+   "t0": 6.46,
+   "t1": 7.82,
+   "beat": "ident",
+   "say": "This is Stańczyk,"
+  },
+  {
+   "t0": 8.04,
+   "t1": 11.26,
+   "beat": "ident",
+   "say": "painted by Jan Matejko in 1862."
+  },
+  {
+   "t0": 11.86,
+   "t1": 14.27,
+   "beat": "setup",
+   "say": "A jester sits alone in a dark room"
+  },
+  {
+   "t0": 14.27,
+   "t1": 15.83,
+   "beat": "setup",
+   "say": "while a royal ball goes on."
+  },
+  {
+   "t0": 16.43,
+   "t1": 17.79,
+   "beat": "turn",
+   "say": "But look at the table."
+  },
+  {
+   "t0": 18.39,
+   "t1": 20.21,
+   "beat": "detail",
+   "say": "A letter lies opened there."
+  },
+  {
+   "t0": 20.81,
+   "t1": 24.62,
+   "beat": "triad",
+   "say": "The jester doesn't dance. The jester doesn't joke."
+  },
+  {
+   "t0": 25.22,
+   "t1": 26.75,
+   "beat": "triad",
+   "say": "The jester just stares."
+  },
+  {
+   "t0": 27.35,
+   "t1": 29.16,
+   "beat": "backstory",
+   "say": "According to its full title,"
+  },
+  {
+   "t0": 29.38,
+   "t1": 31.13,
+   "beat": "backstory",
+   "say": "Stańczyk sat at a ball facing"
+  },
+  {
+   "t0": 31.13,
+   "t1": 32.64,
+   "beat": "backstory",
+   "say": "the loss of Smolensk."
+  },
+  {
+   "t0": 33.24,
+   "t1": 35.43,
+   "beat": "backstory",
+   "say": "A jester should be making the court laugh."
+  },
+  {
+   "t0": 36.03,
+   "t1": 38.59,
+   "beat": "backstory",
+   "say": "But Smolensk had just been lost to Moscow."
+  },
+  {
+   "t0": 39.59,
+   "t1": 41.33,
+   "beat": "reveal",
+   "say": "And here's the disturbing part."
+  },
+  {
+   "t0": 41.93,
+   "t1": 43.85,
+   "beat": "reveal",
+   "say": "The whole court is celebrating,"
+  },
+  {
+   "t0": 44.07,
+   "t1": 46.64,
+   "beat": "reveal",
+   "say": "yet only the fool understands the news."
+  },
+  {
+   "t0": 47.24,
+   "t1": 47.94,
+   "beat": "reveal",
+   "say": "Almost as if"
+  },
+  {
+   "t0": 47.94,
+   "t1": 50.26,
+   "beat": "reveal",
+   "say": "the wisest man there wears the bells."
+  },
+  {
+   "t0": 50.86,
+   "t1": 53.43,
+   "beat": "reveal",
+   "say": "Maybe that is why Matejko gave him"
+  },
+  {
+   "t0": 53.43,
+   "t1": 53.98,
+   "beat": "reveal",
+   "say": "his own face."
+  },
+  {
+   "t0": 54.78,
+   "t1": 55.81,
+   "beat": "question",
+   "say": "So what would you do"
+  },
+  {
+   "t0": 55.81,
+   "t1": 57.05,
+   "beat": "question",
+   "say": "if only you had read it?"
+  }
+ ]
+}
