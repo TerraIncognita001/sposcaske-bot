@@ -117,7 +117,7 @@ def brief(topic, title, facts, look=None):
             + "\n\nAVOID\n" + ("\n".join("- " + r for r in recent()) or "- nothing yet") + learn.notes())
 
 
-FORMS = ("riddle", "emotion", "scene", "legend", "investigation", "twist")
+FORMS = ("riddle", "emotion", "scene", "legend", "investigation", "twist", "hold")    # demo: "hold" = the retention form
 ORIGINAL = ("riddle", "emotion", "scene")    # v1.16 (Andrii, Nov 17: 'друге дно мені сподобалось найбільше, чергуй його з оригінальним форматом раз через раз')
 
 
