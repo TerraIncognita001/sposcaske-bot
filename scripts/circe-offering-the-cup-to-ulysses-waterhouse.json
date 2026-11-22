@@ -1,0 +1,347 @@
+{
+ "id": "circe-offering-the-cup-to-ulysses-waterhouse",
+ "kind": "artwork",
+ "form": "twist",
+ "hook_frame": "This ___ is about to ___, and ___.",
+ "closer": "either_or",
+ "detail": "ulysses",
+ "home": null,
+ "subject": {
+  "title": "Circe Offering the Cup to Ulysses",
+  "creator": "John William Waterhouse",
+  "year": 1891,
+  "wikidata": "Q39537"
+ },
+ "lead": {
+  "commons": "Circe_Offering_the_Cup_to_Odysseus_(2457_x_4023px_ed.).jpg",
+  "width_px": 3840,
+  "aspect": 0.6107,
+  "px": 2457,
+  "license": "Public domain",
+  "credit": "Circe Offering the Cup to Odysseus (2457 x 4023px ed.) — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "John William Waterhouse",
+  "credit": "Portrait of John William Waterhouse — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "palace"
+   ]
+  },
+  {
+   "name": "circe",
+   "box": [
+    0.13,
+    0.09,
+    0.98,
+    0.765
+   ],
+   "words": [
+    "circe",
+    "sorceress"
+   ]
+  },
+  {
+   "name": "circe_face",
+   "box": [
+    0.38,
+    0.16,
+    0.505,
+    0.26
+   ],
+   "words": [
+    "face",
+    "lips"
+   ]
+  },
+  {
+   "name": "cup",
+   "box": [
+    0.2,
+    0.205,
+    0.335,
+    0.255
+   ],
+   "words": [
+    "cup",
+    "potion"
+   ]
+  },
+  {
+   "name": "wand",
+   "box": [
+    0.4,
+    0.08,
+    0.97,
+    0.17
+   ],
+   "words": [
+    "wand"
+   ]
+  },
+  {
+   "name": "mirror",
+   "box": [
+    0.105,
+    0.075,
+    0.83,
+    0.44
+   ],
+   "words": [
+    "mirror"
+   ]
+  },
+  {
+   "name": "ulysses",
+   "box": [
+    0.6,
+    0.29,
+    0.73,
+    0.41
+   ],
+   "words": [
+    "ulysses",
+    "reflection",
+    "hero"
+   ]
+  },
+  {
+   "name": "pig_right",
+   "box": [
+    0.72,
+    0.63,
+    0.93,
+    0.78
+   ],
+   "words": [
+    "pig",
+    "pigs",
+    "crew"
+   ]
+  }
+ ],
+ "punch": "WRONG",
+ "sentences": [
+  {
+   "slot": "T1",
+   "text": "This woman is about to win, and she has it completely wrong.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "woman",
+     "to": "circe_face"
+    }
+   ]
+  },
+  {
+   "slot": "T2",
+   "text": "This is Circe Offering the Cup to Ulysses, painted by John William Waterhouse in 1891.",
+   "kind": "FACT",
+   "source": 1
+  },
+  {
+   "slot": "T3",
+   "text": "Everyone sees Circe, the witch of the Odyssey, trapping another man.",
+   "kind": "FACT",
+   "source": 4,
+   "show": [
+    {
+     "on": "Circe",
+     "to": "circe"
+    }
+   ]
+  },
+  {
+   "slot": "T3",
+   "text": "She has already turned his crew into pigs.",
+   "kind": "FACT",
+   "source": 6,
+   "show": [
+    {
+     "on": "pigs",
+     "to": "pig_right"
+    }
+   ]
+  },
+  {
+   "slot": "T4",
+   "text": "And the picture seems to agree.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "T4",
+   "text": "She raises her wand and holds out the cup like a queen.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "wand",
+     "to": "wand"
+    },
+    {
+     "on": "cup",
+     "to": "cup"
+    }
+   ]
+  },
+  {
+   "slot": "T5",
+   "text": "But look at the mirror.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "mirror",
+     "to": "mirror"
+    }
+   ]
+  },
+  {
+   "slot": "T6",
+   "text": "Ulysses is standing behind her.",
+   "kind": "FACT",
+   "source": 7,
+   "show": [
+    {
+     "on": "Ulysses",
+     "to": "ulysses"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "According to the Odyssey, Hermes warned him and showed him a plant that made him immune to her potion.",
+   "kind": "FACT",
+   "source": 9
+  },
+  {
+   "slot": "T7",
+   "text": "She touches him with the wand, sure the potion has worked.",
+   "kind": "FACT",
+   "source": 10,
+   "show": [
+    {
+     "on": "wand",
+     "to": "wand"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "Then he draws his sword, and she must give his sailors back.",
+   "kind": "FACT",
+   "source": 12,
+   "show": [
+    {
+     "on": "sailors",
+     "to": "pig_right"
+    }
+   ]
+  },
+  {
+   "slot": "T8",
+   "text": "She isn't the hunter here.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "hunter",
+     "to": "circe_face"
+    }
+   ]
+  },
+  {
+   "slot": "T8",
+   "text": "She's the one walking into a trap.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "trap",
+     "to": "ulysses"
+    }
+   ]
+  },
+  {
+   "slot": "T9",
+   "text": "So who is really caught, the hero, or the woman with the cup?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "cup",
+     "to": "cup"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Circe": "Sir-see",
+  "Ulysses": "You-liss-eez",
+  "Waterhouse": "Water-house",
+  "Hermes": "Her-meez"
+ },
+ "meta": {
+  "title": "She Offered Him the Cup... But He Was Already IMMUNE #history #art",
+  "description": "Circe Offering the Cup to Ulysses was painted by John William Waterhouse in 1891 and hangs in Gallery Oldham. Ulysses is visible in the mirror behind her; in the Odyssey, Hermes had already given him a plant that made him immune to her potion.",
+  "tags": [
+   "art history",
+   "waterhouse",
+   "circe",
+   "odyssey",
+   "pre-raphaelite"
+  ],
+  "question": "Who is really caught?"
+ },
+ "sources": [
+  {
+   "claim": "Circe Offering the Cup to Ulysses is an oil painting in the Pre-Raphaelite style by John William Waterhouse that was created in 1891.",
+   "url": "https://en.wikipedia.org/wiki/Circe_Offering_the_Cup_to_Ulysses",
+   "note": "sentence T2"
+  },
+  {
+   "claim": "Circe, a sorceress, offers a cup to Odysseus (commonly Ulysses in English).",
+   "url": "https://en.wikipedia.org/wiki/Circe_Offering_the_Cup_to_Ulysses",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "Two of Ulysses' crewmen have been transformed into pigs; one can be seen beside Circe's feet on the right, while the other is peering out from behind her throne on the left.",
+   "url": "https://en.wikipedia.org/wiki/Circe_Offering_the_Cup_to_Ulysses",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "Ulysses' reflection can be seen in the mirror behind Circe's throne, in addition to the columns of her palace and Ulysses' ship.",
+   "url": "https://en.wikipedia.org/wiki/Circe_Offering_the_Cup_to_Ulysses",
+   "note": "sentence T6"
+  },
+  {
+   "claim": "He advises Ulysses to find a special plant that makes him immune to the effects of Circe's potion, which he proceeds to do.",
+   "url": "https://en.wikipedia.org/wiki/Circe_Offering_the_Cup_to_Ulysses",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "Under the impression that the effects of the potion have taken hold, Circe touches Ulysses with her wand to complete the transformation process.",
+   "url": "https://en.wikipedia.org/wiki/Circe_Offering_the_Cup_to_Ulysses",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "He reluctantly agrees, and, after the arrangement is consummated, she returns his sailors to their human form.",
+   "url": "https://en.wikipedia.org/wiki/Circe_Offering_the_Cup_to_Ulysses",
+   "note": "sentence T7"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-22"
+}

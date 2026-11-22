@@ -1,0 +1,108 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "palace"
+   ]
+  },
+  {
+   "name": "circe",
+   "box": [
+    0.13,
+    0.09,
+    0.98,
+    0.765
+   ],
+   "words": [
+    "circe",
+    "sorceress"
+   ]
+  },
+  {
+   "name": "circe_face",
+   "box": [
+    0.38,
+    0.16,
+    0.505,
+    0.26
+   ],
+   "words": [
+    "face",
+    "lips"
+   ]
+  },
+  {
+   "name": "cup",
+   "box": [
+    0.2,
+    0.205,
+    0.335,
+    0.255
+   ],
+   "words": [
+    "cup",
+    "potion"
+   ]
+  },
+  {
+   "name": "wand",
+   "box": [
+    0.4,
+    0.08,
+    0.97,
+    0.17
+   ],
+   "words": [
+    "wand"
+   ]
+  },
+  {
+   "name": "mirror",
+   "box": [
+    0.105,
+    0.075,
+    0.83,
+    0.44
+   ],
+   "words": [
+    "mirror"
+   ]
+  },
+  {
+   "name": "ulysses",
+   "box": [
+    0.6,
+    0.29,
+    0.73,
+    0.41
+   ],
+   "words": [
+    "ulysses",
+    "reflection",
+    "hero"
+   ]
+  },
+  {
+   "name": "pig_right",
+   "box": [
+    0.72,
+    0.63,
+    0.93,
+    0.78
+   ],
+   "words": [
+    "pig",
+    "pigs",
+    "crew"
+   ]
+  }
+ ],
+ "summary": "The sorceress Circe sits on a lion throne holding out a cup and raising a wand, a pig at her feet. In the round mirror behind her, Ulysses stands reflected with his hand at his side."
+}
