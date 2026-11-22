@@ -21,7 +21,7 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "tools"))
 import sources, script_check, learn, director
 
-MODELS = [os.environ.get("GEMINI_MODEL", "gemini-3.5-flash"), "gemini-flash-latest", "gemini-3.1-flash-lite", "gemini-2.5-flash"]
+MODELS = [os.environ.get("GEMINI_MODEL", "gemini-3.5-flash"), "gemini-flash-latest", "gemini-3.1-flash-lite"]    # v1.21: gemini-2.5-flash removed (404 'no longer available to new users', the Sunday scout of Nov 22)
 COOL, DEAD = {}, set()
 
 

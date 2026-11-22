@@ -5,6 +5,11 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.21 = A RETIRED GEMINI MODEL OUT OF THE LIST, Andrii, Nov 22 2026 ('так, прибери закриту модель'). Why: the Sunday
+  scout of Nov 22 (run 45026457282) used up the day's quota of the three live models (a manual scout ran the evening
+  before) and the last fallback, `gemini-2.5-flash`, answered 404 'This model ... is no longer available to new
+  users'. `writer.MODELS` = gemini-3.5-flash, gemini-flash-latest, gemini-3.1-flash-lite.
+
 - v1.20 = THE NAMES ARE SAID RIGHT, Andrii, Nov 22 2026 ('так, виправ вимову'). Why: the voice samples of Nov 21
   (work/voices, faster-whisper) heard the painter of Lucifer as 'ess-aitch-took': the script's respelling 'Shtook' is
   read by Kokoro's espeak letter by letter. The phonemes of EVERY respelling in scripts/ were then checked (Nov 22):
