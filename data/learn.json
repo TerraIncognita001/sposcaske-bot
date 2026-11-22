@@ -1,8 +1,8 @@
 {
  "_about": "written by learn.py (v1.09) from data/stats.json. on = false: the bot ignores this file.",
- "updated": "2026-11-22T00:16Z",
+ "updated": "2026-11-22T13:24Z",
  "on": true,
- "videos_counted": 10,
+ "videos_counted": 11,
  "rule": "on at 8 videos public for 3 days; a value needs 3 videos",
  "mult": {
   "form": {
@@ -11,10 +11,15 @@
     "mean": 13.78,
     "m": 1.0
    },
+   "twist": {
+    "n": 1,
+    "mean": 11.65,
+    "m": 1.0
+   },
    "riddle": {
     "n": 8,
     "mean": 9.46,
-    "m": 0.92
+    "m": 0.91
    }
   },
   "hook_frame": {
@@ -28,10 +33,15 @@
     "mean": 11.68,
     "m": 1.0
    },
+   "this_x": {
+    "n": 1,
+    "mean": 11.65,
+    "m": 1.0
+   },
    "what_if": {
     "n": 3,
-    "mean": 10.28,
-    "m": 1.0
+    "mean": 10.3,
+    "m": 0.99
    },
    "detail_most_miss": {
     "n": 2,
@@ -51,20 +61,20 @@
   },
   "closer": {
    "either_or": {
-    "n": 5,
-    "mean": 11.03,
+    "n": 6,
+    "mean": 11.14,
     "m": 1.07
    },
    "open": {
     "n": 4,
-    "mean": 10.44,
-    "m": 1.01
+    "mean": 10.45,
+    "m": 1.0
    }
   },
   "kind": {
    "artwork": {
-    "n": 9,
-    "mean": 10.77,
+    "n": 10,
+    "mean": 10.86,
     "m": 1.04
    }
   },
@@ -72,11 +82,16 @@
    "watcher": {
     "n": 5,
     "mean": 12.35,
-    "m": 1.2
+    "m": 1.18
+   },
+   "pact": {
+    "n": 1,
+    "mean": 11.65,
+    "m": 1.0
    },
    "innocence in danger": {
     "n": 1,
-    "mean": 9.34,
+    "mean": 9.38,
     "m": 1.0
    },
    "false calm": {
@@ -108,8 +123,8 @@
    },
    "19th": {
     "n": 5,
-    "mean": 9.43,
-    "m": 0.91
+    "mean": 9.44,
+    "m": 0.9
    }
   },
   "length": {
@@ -121,19 +136,19 @@
    "60-75 s": {
     "n": 4,
     "mean": 10.38,
-    "m": 1.01
+    "m": 0.99
    },
    "under 60 s": {
-    "n": 4,
-    "mean": 8.54,
-    "m": 0.83
+    "n": 5,
+    "mean": 9.17,
+    "m": 0.88
    }
   },
   "writer": {
    "claude": {
-    "n": 7,
-    "mean": 11.13,
-    "m": 1.08
+    "n": 8,
+    "mean": 11.2,
+    "m": 1.07
    },
    "gemini": {
     "n": 2,
@@ -147,26 +162,26 @@
    }
   },
   "title_pattern": {
+   "other": {
+    "n": 6,
+    "mean": 10.92,
+    "m": 1.05
+   },
    "who": {
     "n": 4,
     "mean": 10.78,
-    "m": 1.04
-   },
-   "other": {
-    "n": 5,
-    "mean": 10.76,
-    "m": 1.04
+    "m": 1.03
    }
   }
  },
  "judge_weights": {
   "G": 1.0,
-  "D": 1.43,
-  "F": 0.64,
+  "D": 1.44,
+  "F": 0.62,
   "T": 0.5,
   "Y": 1.0,
   "S": 1.0
  },
  "judge_fit": -0.43,
- "mean_score": 10.32
+ "mean_score": 10.45
 }

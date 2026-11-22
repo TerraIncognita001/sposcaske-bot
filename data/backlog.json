@@ -2156,6 +2156,41 @@
    },
    "angle": null,
    "disqualified": "The image is a studio photograph of a person."
+  },
+  {
+   "id": "head-of-medusa-rubens",
+   "kind": "artwork",
+   "wikipedia": "Medusa (Rubens)",
+   "person": "Peter Paul Rubens",
+   "why": "The gaze of the severed head is caught in a moment of eternal surprise, turning from a victim into an aggressive, sentient threat.",
+   "wikidata": "Q647202",
+   "picture": "Rubens_Medusa.jpeg",
+   "picture_px": 3815,
+   "score": 0,
+   "scores": {
+    "G": 0,
+    "D": 0,
+    "F": 0,
+    "T": 0,
+    "Y": 0,
+    "S": 0
+   },
+   "reasons": {
+    "G": "The subject is a severed, dying head; it lacks a direct, conscious engagement with the viewer.",
+    "D": "While the head is the focus, the scene is cluttered with dozens of snakes and creatures.",
+    "F": "There is no subtle 'flip' or contradiction; it is a graphic depiction of a decapitation.",
+    "T": "The painting depicts extreme gore, which is explicitly disqualified by the provided instructions.",
+    "Y": "The level of explicit violence makes the viewer an observer of carnage rather than a participant in a question.",
+    "S": "The gore disqualifies the entry regardless of the historical background provided."
+   },
+   "character": {
+    "figure": "the severed head",
+    "threat": "violent decapitation",
+    "feeling": "horror",
+    "theme": "other"
+   },
+   "angle": null,
+   "disqualified": "This picture shows graphic gore (a severed, bleeding head), which is explicitly excluded based on the instructions."
   }
  ]
 }
