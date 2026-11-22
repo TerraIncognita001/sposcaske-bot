@@ -80,6 +80,10 @@ Nov 13 with 'usage limit reached'): if it does not run, Gemini writes as before 
 - NO 10-day `draft` branch here (Andrii, Nov 14: 'не треба'): a bot change goes to `main` at once, as a version.
   Do not propose it again unless he asks.
 
+LOCAL COPY (Nov 22 2026): a clone on Andrii's PC at `D:\ytb_bots\botsfolder\sposcaske-bot` with a `.venv` on Python 3.13
+(the same as the runner; numpy 2.5.4 needs 3.12+, the PC's default 3.11 cannot install it). Nothing runs from it: the
+bot, its schedule and both Claude tasks live in the cloud. It is updated by `git pull`.
+
 THE REPOSITORY IS PUBLIC since Nov 15 2026 (Andrii made it so: GitHub Actions minutes are then free and unlimited;
 ww2-bot stays private). Everything committed here, on any branch (`main`, `preview`, `logs`), is read by anyone:
 never commit a secret, a token, an e-mail, a private note about Andrii, or anything he would not post in public.
