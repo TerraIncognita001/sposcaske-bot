@@ -1,0 +1,131 @@
+{
+ "total": 49.30285714285716,
+ "lines": [
+  {
+   "t0": 1.65,
+   "t1": 3.28,
+   "beat": "hook",
+   "say": "Every time he came home,"
+  },
+  {
+   "t0": 3.5,
+   "t1": 5.68,
+   "beat": "hook",
+   "say": "this face was waiting above his door."
+  },
+  {
+   "t0": 6.33,
+   "t1": 9.11,
+   "beat": "loop",
+   "say": "Everyone sees two old people sharing their soup."
+  },
+  {
+   "t0": 9.71,
+   "t1": 11.74,
+   "beat": "tour",
+   "say": "One grins with an empty mouth."
+  },
+  {
+   "t0": 12.34,
+   "t1": 14.36,
+   "beat": "tour",
+   "say": "One hand still holds a spoon."
+  },
+  {
+   "t0": 14.96,
+   "t1": 16.89,
+   "beat": "tour",
+   "say": "And the other has no eyes at all."
+  },
+  {
+   "t0": 17.49,
+   "t1": 20.15,
+   "beat": "who",
+   "say": "Francisco Goya painted them in his seventies,"
+  },
+  {
+   "t0": 20.37,
+   "t1": 21.69,
+   "beat": "who",
+   "say": "on his own walls."
+  },
+  {
+   "t0": 22.29,
+   "t1": 24.0,
+   "beat": "stakes",
+   "say": "They were never meant to be seen"
+  },
+  {
+   "t0": 24.0,
+   "t1": 24.78,
+   "beat": "stakes",
+   "say": "by anyone else."
+  },
+  {
+   "t0": 25.38,
+   "t1": 27.48,
+   "beat": "stakes",
+   "say": "So why would a man eat under this?"
+  },
+  {
+   "t0": 28.48,
+   "t1": 30.1,
+   "beat": "rehook",
+   "say": "The answer is where it hung."
+  },
+  {
+   "t0": 30.7,
+   "t1": 31.54,
+   "beat": "fact",
+   "say": "It likely sat above"
+  },
+  {
+   "t0": 31.54,
+   "t1": 33.39,
+   "beat": "fact",
+   "say": "the main door of the house."
+  },
+  {
+   "t0": 33.99,
+   "t1": 35.5,
+   "beat": "fact",
+   "say": "That house was known"
+  },
+  {
+   "t0": 35.5,
+   "t1": 36.92,
+   "beat": "fact",
+   "say": "as the House of the Deaf Man."
+  },
+  {
+   "t0": 37.52,
+   "t1": 40.11,
+   "beat": "fact",
+   "say": "And the second face has black hollows for eyes."
+  },
+  {
+   "t0": 40.71,
+   "t1": 42.06,
+   "beat": "flip",
+   "say": "It isn't a neighbour."
+  },
+  {
+   "t0": 42.66,
+   "t1": 44.37,
+   "beat": "flip",
+   "say": "It's Death, sitting down to eat."
+  },
+  {
+   "t0": 45.17,
+   "t1": 46.72,
+   "beat": "question",
+   "say": "So is that his neighbour,"
+  },
+  {
+   "t0": 46.94,
+   "t1": 48.95,
+   "beat": "question",
+   "say": "or the guest who comes for everyone?"
+  }
+ ]
+}
