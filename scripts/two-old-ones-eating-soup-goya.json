@@ -1,0 +1,335 @@
+{
+ "id": "two-old-ones-eating-soup-goya",
+ "kind": "artwork",
+ "form": "hold",
+ "hook_frame": "Every ___",
+ "closer": "either_or",
+ "detail": "skull_eyes",
+ "home": "skull_face",
+ "subject": {
+  "title": "Two Old Ones Eating Soup",
+  "creator": "Francisco Goya",
+  "year": null,
+  "wikidata": "Q3291664"
+ },
+ "lead": {
+  "commons": "Viejos_comiendo_sopa.jpg",
+  "width_px": 3840,
+  "aspect": 1.6887,
+  "px": 3051,
+  "license": "Public domain",
+  "credit": "Viejos comiendo sopa — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Francisco Goya",
+  "credit": "Portrait of Francisco Goya — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "darkness"
+   ]
+  },
+  {
+   "name": "left_figure",
+   "box": [
+    0.08,
+    0.15,
+    0.63,
+    1.0
+   ],
+   "words": [
+    "people",
+    "diners"
+   ]
+  },
+  {
+   "name": "left_face",
+   "box": [
+    0.3,
+    0.25,
+    0.41,
+    0.49
+   ],
+   "words": [
+    "grin",
+    "mouth"
+   ]
+  },
+  {
+   "name": "skull_figure",
+   "box": [
+    0.655,
+    0.46,
+    0.99,
+    0.97
+   ],
+   "words": [
+    "guest"
+   ]
+  },
+  {
+   "name": "skull_face",
+   "box": [
+    0.645,
+    0.46,
+    0.81,
+    0.73
+   ],
+   "words": [
+    "skull",
+    "face"
+   ]
+  },
+  {
+   "name": "skull_eyes",
+   "box": [
+    0.655,
+    0.5,
+    0.76,
+    0.64
+   ],
+   "words": [
+    "eyes",
+    "hollows"
+   ]
+  },
+  {
+   "name": "spoon",
+   "box": [
+    0.245,
+    0.6,
+    0.295,
+    0.91
+   ],
+   "words": [
+    "spoon"
+   ]
+  },
+  {
+   "name": "hands",
+   "box": [
+    0.165,
+    0.69,
+    0.5,
+    0.86
+   ],
+   "words": [
+    "hands"
+   ]
+  }
+ ],
+ "punch": "DOOR",
+ "sentences": [
+  {
+   "slot": "H1",
+   "text": "Every time he came home, this face was waiting above his door.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "face",
+     "to": "skull_face"
+    }
+   ]
+  },
+  {
+   "slot": "H2",
+   "text": "Everyone sees two old people sharing their soup.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "people",
+     "to": "left_figure"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "One grins with an empty mouth.",
+   "kind": "FACT",
+   "source": 9,
+   "show": [
+    {
+     "on": "grins",
+     "to": "left_face"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "One hand still holds a spoon.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "spoon",
+     "to": "spoon"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "And the other has no eyes at all.",
+   "kind": "FACT",
+   "source": 11,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "skull_eyes"
+    }
+   ]
+  },
+  {
+   "slot": "H4",
+   "text": "Francisco Goya painted them in his seventies, on his own walls.",
+   "kind": "FACT",
+   "source": 2
+  },
+  {
+   "slot": "H5",
+   "text": "They were never meant to be seen by anyone else.",
+   "kind": "FACT",
+   "source": 4
+  },
+  {
+   "slot": "H5",
+   "text": "So why would a man eat under this?",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "H6",
+   "text": "The answer is where it hung.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "H7",
+   "text": "It likely sat above the main door of the house.",
+   "kind": "FACT",
+   "source": 5
+  },
+  {
+   "slot": "H7",
+   "text": "That house was known as the House of the Deaf Man.",
+   "kind": "FACT",
+   "source": 3
+  },
+  {
+   "slot": "H7",
+   "text": "And the second face has black hollows for eyes.",
+   "kind": "FACT",
+   "source": 11,
+   "show": [
+    {
+     "on": "hollows",
+     "to": "skull_eyes"
+    },
+    {
+     "on": "skull",
+     "to": "skull_face"
+    }
+   ]
+  },
+  {
+   "slot": "H8",
+   "text": "It isn't a neighbour.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "neighbour",
+     "to": "skull_face"
+    }
+   ]
+  },
+  {
+   "slot": "H8",
+   "text": "It's Death, sitting down to eat.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "Death",
+     "to": "skull_face"
+    }
+   ]
+  },
+  {
+   "slot": "H9",
+   "text": "So is that his neighbour, or the guest who comes for everyone?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "everyone",
+     "to": "skull_eyes"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Goya": "Goy-a"
+ },
+ "meta": {
+  "title": "The Old Man Who Ate His Soup Next to DEATH #history #art",
+  "description": "Two Old Ones Eating Soup is one of the fourteen Black Paintings Francisco Goya painted on the walls of his house, the Quinta del Sordo, between 1819 and 1823. The second figure's face bears the aspect of a skull; the painting is now in the Prado.",
+  "tags": [
+   "art history",
+   "goya",
+   "black paintings",
+   "prado",
+   "memento mori"
+  ],
+  "question": "A neighbour, or the guest who comes for everyone?"
+ },
+ "sources": [
+  {
+   "claim": "The mouth of the left figure is drawn into a grimace, possibly from lack of teeth.",
+   "url": "https://en.wikipedia.org/wiki/Two_Old_Ones_Eating_Soup",
+   "note": "sentence H3"
+  },
+  {
+   "claim": "Its eyes are black hollows and the head in general bears the aspect of a skull.",
+   "url": "https://en.wikipedia.org/wiki/Two_Old_Ones_Eating_Soup",
+   "note": "sentence H3"
+  },
+  {
+   "claim": "By this time, Goya was in his mid-70s and deeply disillusioned.",
+   "url": "https://en.wikipedia.org/wiki/Two_Old_Ones_Eating_Soup",
+   "note": "sentence H4"
+  },
+  {
+   "claim": "They were not intended for public display.",
+   "url": "https://en.wikipedia.org/wiki/Two_Old_Ones_Eating_Soup",
+   "note": "sentence H5"
+  },
+  {
+   "claim": "Two Old Ones Eating Soup likely occupied a position above the main door to the house, between La Leocadia and Two Old Men.",
+   "url": "https://en.wikipedia.org/wiki/Two_Old_Ones_Eating_Soup",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "He painted the works on the interior walls of the house known as the Quinta del Sordo (\"House of the Deaf Man\").",
+   "url": "https://en.wikipedia.org/wiki/Two_Old_Ones_Eating_Soup",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "Its eyes are black hollows and the head in general bears the aspect of a skull.",
+   "url": "https://en.wikipedia.org/wiki/Two_Old_Ones_Eating_Soup",
+   "note": "sentence H7"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-22"
+}

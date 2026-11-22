@@ -1,0 +1,105 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "darkness"
+   ]
+  },
+  {
+   "name": "left_figure",
+   "box": [
+    0.08,
+    0.15,
+    0.63,
+    1.0
+   ],
+   "words": [
+    "people",
+    "diners"
+   ]
+  },
+  {
+   "name": "left_face",
+   "box": [
+    0.3,
+    0.25,
+    0.41,
+    0.49
+   ],
+   "words": [
+    "grin",
+    "mouth"
+   ]
+  },
+  {
+   "name": "skull_figure",
+   "box": [
+    0.655,
+    0.46,
+    0.99,
+    0.97
+   ],
+   "words": [
+    "guest"
+   ]
+  },
+  {
+   "name": "skull_face",
+   "box": [
+    0.645,
+    0.46,
+    0.81,
+    0.73
+   ],
+   "words": [
+    "skull",
+    "face"
+   ]
+  },
+  {
+   "name": "skull_eyes",
+   "box": [
+    0.655,
+    0.5,
+    0.76,
+    0.64
+   ],
+   "words": [
+    "eyes",
+    "hollows"
+   ]
+  },
+  {
+   "name": "spoon",
+   "box": [
+    0.245,
+    0.6,
+    0.295,
+    0.91
+   ],
+   "words": [
+    "spoon"
+   ]
+  },
+  {
+   "name": "hands",
+   "box": [
+    0.165,
+    0.69,
+    0.5,
+    0.86
+   ],
+   "words": [
+    "hands"
+   ]
+  }
+ ],
+ "summary": "Two old figures loom out of a black background over a meal: the one on the left grins and holds a spoon, the one on the right has a skull-like face with black hollows for eyes."
+}
