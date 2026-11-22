@@ -99,6 +99,18 @@ def split_at_words(y, says):
     return [y[i:j] for i, j in zip([0] + cuts, cuts + [len(y)])]
 
 
+def speakable(spell):
+    """v1.20 (Andrii, Nov 22: 'так, виправ вимову'): a writer's respelling made safe for Kokoro's espeak, measured on
+    the phonemes of every respelling in scripts/ (Nov 22): 'Shtook' was spoken 'ess-aitch-took' (Lucifer), 'FEW-zeh-lee'
+    'eff-ee-double-you zeh lee' (Fuseli), 'DAN-teh-veel' 'dee-ay-en ...', 'Dyoo-rer' 'die-oo-rer' (Durer), 'Geh' 'jay'.
+    Capital stress syllables -> lower case; 'Sh' before a consonant -> 'Sch'; 'yoo' / 'yu' after a consonant -> 'ew';
+    a 'g' before e / i / y at the start of a syllable -> 'gh' (a respelling means a hard g; a soft one is written 'j')."""
+    spell = re.sub(r"\b[A-Z]{2,}\b", lambda m: m.group(0).lower(), spell)
+    spell = re.sub(r"\b([Ss])h(?=[bcdfgjklmnpqrstvwxz])", lambda m: m.group(1) + "ch", spell)
+    spell = re.sub(r"(?<=[bcdfgjklmnpqrstvwxzBCDFGJKLMNPQRSTVWXZ])y(?:oo|u)", "ew", spell)
+    return re.sub(r"(?<![\w'])([Gg])(?=[eiy])", r"\1h", spell)
+
+
 def speak_lines(story):
     """One synthesis call per PHRASE (v1.16; before: per caption line, which put a 0.22 s pause and a falling tone in
     the middle of a phrase): the phrase is cut back into its caption lines between words, so the timings stay per line."""
@@ -114,7 +126,7 @@ def speak_lines(story):
         pieces = []
         for text in re.split(r"(?<=[.!?])\s+", " ".join(lines[i]["say"].strip() for i in g)):       # every sentence ends in a real pause
             for a, b in story.get("pronounce", {}).items():
-                text = text.replace(a, b)
+                text = text.replace(a, speakable(b))                   # v1.20: the respelling made safe for espeak
             text = year_words(text)                                    # the caption keeps the digits, the voice says the halves
             y, sr = k.create(text, voice=voice, speed=kv["speed"], lang=kv["lang"])
             loud = np.nonzero(np.abs(y) > 0.02)[0]

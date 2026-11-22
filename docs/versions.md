@@ -5,6 +5,16 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.20 = THE NAMES ARE SAID RIGHT, Andrii, Nov 22 2026 ('так, виправ вимову'). Why: the voice samples of Nov 21
+  (work/voices, faster-whisper) heard the painter of Lucifer as 'ess-aitch-took': the script's respelling 'Shtook' is
+  read by Kokoro's espeak letter by letter. The phonemes of EVERY respelling in scripts/ were then checked (Nov 22):
+  also 'FEW-zeh-lee' (Fuseli, published) -> 'eff-ee-double-you ...', 'DAN-teh-veel' (Ambassadors) -> 'dee-ay-en ...',
+  'Dyoo-rer' (Durer, two videos) and 'Meh-dyoo-sa' -> 'die-oo', 'Geh' (Nikolai Ge) -> 'jay'. Now `render.speakable`
+  fixes a respelling before the voice: capital stress -> lower case, 'Sh' + consonant -> 'Sch', 'yoo' / 'yu' after a
+  consonant -> 'ew', a 'g' before e / i / y at a syllable start -> 'gh'. Checked: all 58 respellings now give the
+  intended phonemes (only 'sway-nyo' of a demo stays 'nai-oh'). `prompts/writer.txt` section 7 tells the writers the
+  same. The captions do not change (they show the real name).
+
 - v1.19 = THE HOLD FORM (RETENTION), Andrii, Nov 21 2026 ('перебудуй сценарій. проаналізуй які прийоми для утримання
   аудиторії можна використати та застосуй це', then on the demo: 'так, викочуй hold в main'). Why, from our own 14
   videos (data/lessons.md): viewers leave in the hook at 3-6 s (15-49 %: long hooks of 12-18 words, vague 'may hide

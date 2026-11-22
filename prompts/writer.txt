@@ -276,7 +276,9 @@ images. For each: a key, a search query for Wikimedia Commons, and the words of 
  "evidence": [{"key": "score", "query": "<Commons search>", "words": ["sonata", "note"]}],
  "sentences": [{"slot": "<slot code of the form: S1, E1, C1, L1, I1, T1, H1 ...>", "text": "...", "kind": "HOOK|FACT|LOOK|READING", "source": <FACTS number or null>,
                 "show": [{"on": "<a word of this sentence>", "to": "<LOOK name, or key:full for an evidence picture>"}]}],
- "pronounce": {"<hard name>": "<plain English respelling>"},
+ "pronounce": {"<hard name>": "<plain English respelling: lower-case syllables joined by '-', no CAPITAL stress
+   (it is spelled out letter by letter), 'sch' not 'sh' before a consonant ('Schtook'), 'ew' not 'yoo' after a
+   consonant ('Dew-rer'), 'j' for a soft g>"},
  "meta": {"title": "<under 70 characters, no clickbait lie>", "description": "<2-3 factual sentences>",
           "tags": ["art history", "..."], "question": "<the S13 question, short>"}}
 "show" is optional: use it when a sentence should go to a particular thing on a word that does not name it.
