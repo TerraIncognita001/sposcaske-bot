@@ -1,6 +1,6 @@
 # Lessons from our own videos
 
-Written by `learn.py` on 2026-11-23T21:21Z from `data/stats.json`. Do not edit by hand.
+Written by `learn.py` on 2026-11-23T23:47Z from `data/stats.json`. Do not edit by hand.
 
 Learning is **ON**: 14 videos counted (on at 8 videos public for 3 days; a value needs 3 videos).
 
@@ -24,10 +24,10 @@ Learning is **ON**: 14 videos counted (on at 8 videos public for 3 days; a value
 | 2026-11-20 15:00 | 259 | 0.401 | 54.08 | 9.28 | Something about this girl sleeping on the dark water feels completely wrong. | 3.8 s −43.4 % [hook: Something about this girl sleeping on]; 9.7 s −22.3 % [ident: painted by Paul Delaroche in 1855.]; 16.2 s −2.0 % [setup: while two figures watch from the shore.] |
 | 2026-11-21 02:00 | 270 | 0.543 | 51.35999999999999 | 11.8 | There's a reason this young painter dared to look like Christ. | 5.1 s −25.0 % [hook: this young painter dared to look like Christ.]; 7.4 s −17.9 % [ident: This is the Self-Portrait at Twenty-Eight,]; 11.3 s −7.2 % [ident: painted by Albrecht Dürer in 1500.] |
 | 2026-11-21 15:00 | 127 | 0.5 | 53.33 | 10.37 | This painting may hide the quietest pain ever given to a saint. | 10.0 s −15.6 % [ident: painted by Caravaggio around 1595.]; 34.3 s −11.1 % [look: There's remorse there.]; 39.9 s −6.6 % [feeling: As if she can no longer bear] |
-| 2026-11-22 02:00 | 258 | 0.509 | 64.59 | 11.49 | What if the famous knight of faith in this engraving was never a hero? | — |
-| 2026-11-22 15:00 | 254 | — | — | 5.76 | There's something heavy about the way this jester sits through the party in silence. | — |
-| 2026-11-23 02:00 | 58 | — | — | 4.26 | There's a cruel detail behind this sweet love song that most people never notice. | — |
-| 2026-11-23 15:00 | 143 | — | — | 5.1 | Every time he came home, this face was waiting above his door. | — |
+| 2026-11-22 02:00 | 271 | 0.509 | 64.59 | 11.49 | What if the famous knight of faith in this engraving was never a hero? | — |
+| 2026-11-22 15:00 | 263 | — | — | 5.79 | There's something heavy about the way this jester sits through the party in silence. | — |
+| 2026-11-23 02:00 | 71 | — | — | 4.49 | There's a cruel detail behind this sweet love song that most people never notice. | — |
+| 2026-11-23 15:00 | 156 | — | — | 5.31 | Every time he came home, this face was waiting above his door. | — |
 
 ## What worked (mean score of the videos with this value; multiplier 1.0 = too few videos to say)
 
