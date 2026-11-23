@@ -1,0 +1,143 @@
+{
+ "total": 58.044603174603175,
+ "lines": [
+  {
+   "t0": 1.65,
+   "t1": 3.52,
+   "beat": "hook",
+   "say": "This man looks deep in prayer,"
+  },
+  {
+   "t0": 3.74,
+   "t1": 5.2,
+   "beat": "hook",
+   "say": "but he may not be alive."
+  },
+  {
+   "t0": 5.85,
+   "t1": 8.49,
+   "beat": "ident",
+   "say": "This is Saint Francis of Assisi in His Tomb,"
+  },
+  {
+   "t0": 8.71,
+   "t1": 11.39,
+   "beat": "ident",
+   "say": "painted by Francisco de Zurbarán."
+  },
+  {
+   "t0": 11.99,
+   "t1": 13.55,
+   "beat": "usual",
+   "say": "Most people see a friar praying"
+  },
+  {
+   "t0": 13.55,
+   "t1": 14.97,
+   "beat": "usual",
+   "say": "over a human skull."
+  },
+  {
+   "t0": 15.57,
+   "t1": 18.6,
+   "beat": "usual",
+   "say": "The painting belongs to the Milwaukee Art Museum."
+  },
+  {
+   "t0": 19.2,
+   "t1": 20.94,
+   "beat": "seems",
+   "say": "And the picture seems to agree."
+  },
+  {
+   "t0": 21.54,
+   "t1": 23.18,
+   "beat": "seems",
+   "say": "His hands hold the skull,"
+  },
+  {
+   "t0": 23.4,
+   "t1": 25.33,
+   "beat": "seems",
+   "say": "and one bare foot steps forward."
+  },
+  {
+   "t0": 25.93,
+   "t1": 27.12,
+   "beat": "turn",
+   "say": "But look at the hood."
+  },
+  {
+   "t0": 27.72,
+   "t1": 30.22,
+   "beat": "detail",
+   "say": "His face has almost vanished into shadow."
+  },
+  {
+   "t0": 30.82,
+   "t1": 34.28,
+   "beat": "fact",
+   "say": "According to a tradition popular in the seventeenth century,"
+  },
+  {
+   "t0": 34.5,
+   "t1": 37.1,
+   "beat": "fact",
+   "say": "a pope opened Francis's tomb at Assisi."
+  },
+  {
+   "t0": 37.7,
+   "t1": 40.33,
+   "beat": "fact",
+   "say": "He found the body miraculously preserved,"
+  },
+  {
+   "t0": 40.55,
+   "t1": 42.41,
+   "beat": "fact",
+   "say": "standing upright in the tomb."
+  },
+  {
+   "t0": 43.01,
+   "t1": 45.1,
+   "beat": "fact",
+   "say": "Zurbarán painted that vision"
+  },
+  {
+   "t0": 45.1,
+   "t1": 47.13,
+   "beat": "fact",
+   "say": "for the Count Duke of Olivares."
+  },
+  {
+   "t0": 47.73,
+   "t1": 49.29,
+   "beat": "flip",
+   "say": "He isn't a monk at prayer."
+  },
+  {
+   "t0": 49.89,
+   "t1": 51.11,
+   "beat": "flip",
+   "say": "He's a dead saint,"
+  },
+  {
+   "t0": 51.33,
+   "t1": 53.09,
+   "beat": "flip",
+   "say": "still standing in his grave."
+  },
+  {
+   "t0": 53.89,
+   "t1": 55.29,
+   "beat": "question",
+   "say": "So is he praying,"
+  },
+  {
+   "t0": 55.51,
+   "t1": 57.69,
+   "beat": "question",
+   "say": "or has he been standing there for centuries?"
+  }
+ ]
+}
