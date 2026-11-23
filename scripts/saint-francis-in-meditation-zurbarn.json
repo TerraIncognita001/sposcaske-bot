@@ -48,9 +48,7 @@
     0.995
    ],
    "words": [
-    "monk",
-    "friar",
-    "body"
+    "figure"
    ]
   },
   {
@@ -113,6 +111,20 @@
    "words": [
     "foot"
    ]
+  },
+  {
+   "name": "monk_top",
+   "box": [
+    0.3,
+    0.01,
+    0.76,
+    0.5
+   ],
+   "words": [
+    "friar",
+    "body",
+    "monk"
+   ]
   }
  ],
  "punch": "ALIVE",
@@ -147,7 +159,7 @@
    "show": [
     {
      "on": "friar",
-     "to": "monk"
+     "to": "monk_top"
     },
     {
      "on": "skull",
@@ -221,7 +233,7 @@
    "show": [
     {
      "on": "body",
-     "to": "monk"
+     "to": "monk_top"
     }
    ]
   },
