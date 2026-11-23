@@ -1,6 +1,6 @@
 {
  "_about": "written by learn.py (v1.09) from data/stats.json. on = false: the bot ignores this file.",
- "updated": "2026-11-22T20:22Z",
+ "updated": "2026-11-23T00:46Z",
  "on": true,
  "videos_counted": 12,
  "rule": "on at 8 videos public for 3 days; a value needs 3 videos",
