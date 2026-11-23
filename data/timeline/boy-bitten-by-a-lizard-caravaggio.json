@@ -1,0 +1,131 @@
+{
+ "total": 52.5997732426304,
+ "lines": [
+  {
+   "t0": 1.65,
+   "t1": 3.28,
+   "beat": "hook",
+   "say": "One tiny bite just turned"
+  },
+  {
+   "t0": 3.28,
+   "t1": 4.87,
+   "beat": "hook",
+   "say": "this boy's face to pure shock."
+  },
+  {
+   "t0": 5.52,
+   "t1": 8.48,
+   "beat": "loop",
+   "say": "Everyone sees a pretty boy startled at the table."
+  },
+  {
+   "t0": 9.08,
+   "t1": 10.72,
+   "beat": "tour",
+   "say": "A rose sits in his hair."
+  },
+  {
+   "t0": 11.32,
+   "t1": 13.05,
+   "beat": "tour",
+   "say": "His other palm flies up."
+  },
+  {
+   "t0": 13.65,
+   "t1": 15.73,
+   "beat": "tour",
+   "say": "And a lizard hangs from his finger."
+  },
+  {
+   "t0": 16.33,
+   "t1": 19.7,
+   "beat": "who",
+   "say": "Caravaggio painted him around 1595."
+  },
+  {
+   "t0": 20.3,
+   "t1": 21.95,
+   "beat": "stakes",
+   "say": "Critics later said he could"
+  },
+  {
+   "t0": 21.95,
+   "t1": 23.55,
+   "beat": "stakes",
+   "say": "only paint still scenes from life."
+  },
+  {
+   "t0": 24.15,
+   "t1": 25.03,
+   "beat": "stakes",
+   "say": "So why paint a boy"
+  },
+  {
+   "t0": 25.03,
+   "t1": 26.6,
+   "beat": "stakes",
+   "say": "in the middle of a scream?"
+  },
+  {
+   "t0": 27.6,
+   "t1": 29.44,
+   "beat": "rehook",
+   "say": "The answer may be in his hands."
+  },
+  {
+   "t0": 30.04,
+   "t1": 32.65,
+   "beat": "fact",
+   "say": "Michael Fried saw a hidden self-portrait here."
+  },
+  {
+   "t0": 33.25,
+   "t1": 35.4,
+   "beat": "fact",
+   "say": "One hand reaches out, one lifts,"
+  },
+  {
+   "t0": 35.62,
+   "t1": 37.38,
+   "beat": "fact",
+   "say": "like a painter with a palette."
+  },
+  {
+   "t0": 37.98,
+   "t1": 39.74,
+   "beat": "fact",
+   "say": "Roberto Longhi traced"
+  },
+  {
+   "t0": 39.74,
+   "t1": 42.53,
+   "beat": "fact",
+   "say": "the bite to a drawing by Sofonisba Anguissola."
+  },
+  {
+   "t0": 43.13,
+   "t1": 44.62,
+   "beat": "flip",
+   "say": "It isn't just a boy."
+  },
+  {
+   "t0": 45.22,
+   "t1": 47.03,
+   "beat": "flip",
+   "say": "It may be the painter himself."
+  },
+  {
+   "t0": 47.83,
+   "t1": 49.62,
+   "beat": "question",
+   "say": "So is this a frightened boy,"
+  },
+  {
+   "t0": 49.84,
+   "t1": 52.25,
+   "beat": "question",
+   "say": "or a painter bitten by his own lizard?"
+  }
+ ]
+}

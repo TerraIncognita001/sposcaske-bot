@@ -146,8 +146,7 @@
    "story": "the-lute-player-caravaggio",
    "title": "He Sang Sweet Love Songs... But His Voice Had a Terrible PRICE #history #art",
    "publish_at": "2026-11-23T02:00:00Z",
-   "seconds": 58.3,
-   "comment_pending": "Is he singing about love, or about his cage? 👇"
+   "seconds": 58.3
   },
   "E2026-11-23#1": {
    "tries": 1,
@@ -166,6 +165,15 @@
    "publish_at": "2026-11-24T02:00:00Z",
    "seconds": 56.2,
    "comment_pending": "Who is really caught? 👇"
+  },
+  "E2026-11-24#1": {
+   "tries": 1,
+   "video": "IG1SP8fFLdk",
+   "story": "boy-bitten-by-a-lizard-caravaggio",
+   "title": "He Reached for the Fruit... and a LIZARD Gave Him Away #history #art",
+   "publish_at": "2026-11-24T15:00:00Z",
+   "seconds": 52.6,
+   "comment_pending": "A frightened boy, or the painter himself? 👇"
   }
  }
 }
