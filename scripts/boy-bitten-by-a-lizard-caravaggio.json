@@ -1,0 +1,376 @@
+{
+ "id": "boy-bitten-by-a-lizard-caravaggio",
+ "kind": "artwork",
+ "form": "hold",
+ "hook_frame": "One ___",
+ "closer": "either_or",
+ "detail": "lizard",
+ "home": "face",
+ "subject": {
+  "title": "Boy Bitten by a Lizard",
+  "creator": "Caravaggio",
+  "year": 1595,
+  "wikidata": "Q585437"
+ },
+ "lead": {
+  "commons": "Boy_Bitten_by_a_Lizard_by_Caravaggio_(Florence).jpg",
+  "width_px": 3840,
+  "aspect": 0.772,
+  "px": 2480,
+  "license": "Public domain",
+  "credit": "Boy Bitten by a Lizard by Caravaggio (Florence) — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Caravaggio",
+  "credit": "Portrait of Caravaggio — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "table"
+   ]
+  },
+  {
+   "name": "boy",
+   "box": [
+    0.0,
+    0.07,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "boy"
+   ]
+  },
+  {
+   "name": "face",
+   "box": [
+    0.33,
+    0.13,
+    0.63,
+    0.4
+   ],
+   "words": [
+    "face",
+    "scream"
+   ]
+  },
+  {
+   "name": "eyes",
+   "box": [
+    0.43,
+    0.22,
+    0.62,
+    0.29
+   ],
+   "words": [
+    "eyes"
+   ]
+  },
+  {
+   "name": "bitten_hand",
+   "box": [
+    0.3,
+    0.6,
+    0.6,
+    0.76
+   ],
+   "words": [
+    "finger",
+    "fingers"
+   ]
+  },
+  {
+   "name": "lizard",
+   "box": [
+    0.46,
+    0.7,
+    0.6,
+    0.84
+   ],
+   "words": [
+    "lizard"
+   ]
+  },
+  {
+   "name": "raised_hand",
+   "box": [
+    0.82,
+    0.37,
+    0.98,
+    0.56
+   ],
+   "words": [
+    "palm"
+   ]
+  },
+  {
+   "name": "rose",
+   "box": [
+    0.29,
+    0.2,
+    0.37,
+    0.265
+   ],
+   "words": [
+    "rose"
+   ]
+  },
+  {
+   "name": "vase",
+   "box": [
+    0.64,
+    0.72,
+    0.91,
+    0.95
+   ],
+   "words": [
+    "vase",
+    "glass"
+   ]
+  },
+  {
+   "name": "cherries",
+   "box": [
+    0.56,
+    0.9,
+    0.68,
+    0.99
+   ],
+   "words": [
+    "cherries",
+    "fruit"
+   ]
+  }
+ ],
+ "punch": "SHOCK",
+ "sentences": [
+  {
+   "slot": "H1",
+   "text": "One tiny bite just turned this boy's face to pure shock.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "face",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "H2",
+   "text": "Everyone sees a pretty boy startled at the table.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "boy",
+     "to": "boy"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "A rose sits in his hair.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "rose",
+     "to": "rose"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "His other palm flies up.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "palm",
+     "to": "raised_hand"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "And a lizard hangs from his finger.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "lizard",
+     "to": "lizard"
+    }
+   ]
+  },
+  {
+   "slot": "H4",
+   "text": "Caravaggio painted him around 1595.",
+   "kind": "FACT",
+   "source": 3
+  },
+  {
+   "slot": "H5",
+   "text": "Critics later said he could only paint still scenes from life.",
+   "kind": "FACT",
+   "source": 11
+  },
+  {
+   "slot": "H5",
+   "text": "So why paint a boy in the middle of a scream?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "scream",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "H6",
+   "text": "The answer may be in his hands.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "hands",
+     "to": "bitten_hand"
+    }
+   ]
+  },
+  {
+   "slot": "H7",
+   "text": "Michael Fried saw a hidden self-portrait here.",
+   "kind": "FACT",
+   "source": 7,
+   "show": [
+    {
+     "on": "self",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "H7",
+   "text": "One hand reaches out, one lifts, like a painter with a palette.",
+   "kind": "FACT",
+   "source": 8,
+   "show": [
+    {
+     "on": "lifts",
+     "to": "raised_hand"
+    }
+   ]
+  },
+  {
+   "slot": "H7",
+   "text": "Roberto Longhi traced the bite to a drawing by Sofonisba Anguissola.",
+   "kind": "FACT",
+   "source": 14,
+   "show": [
+    {
+     "on": "bite",
+     "to": "lizard"
+    }
+   ]
+  },
+  {
+   "slot": "H8",
+   "text": "It isn't just a boy.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "boy",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "H8",
+   "text": "It may be the painter himself.",
+   "kind": "FACT",
+   "source": 7,
+   "show": [
+    {
+     "on": "painter",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "H9",
+   "text": "So is this a frightened boy, or a painter bitten by his own lizard?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "lizard",
+     "to": "lizard"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Caravaggio": "kara-vah-jo",
+  "Longhi": "long-ghee",
+  "Sofonisba Anguissola": "so-fo-neez-ba an-gwee-so-la"
+ },
+ "meta": {
+  "title": "He Reached for the Fruit... and a LIZARD Gave Him Away #history #art",
+  "description": "Boy Bitten by a Lizard was painted by Caravaggio around 1594 to 1596; one version hangs in the National Gallery, London. The historian Michael Fried proposed it is a disguised self-portrait.",
+  "tags": [
+   "art history",
+   "caravaggio",
+   "boy bitten by a lizard",
+   "baroque",
+   "national gallery"
+  ],
+  "question": "A frightened boy, or the painter himself?"
+ },
+ "sources": [
+  {
+   "claim": "Date Both versions are thought to date from the period 1594–1596.",
+   "url": "https://en.wikipedia.org/wiki/Boy_Bitten_by_a_Lizard",
+   "note": "sentence H4"
+  },
+  {
+   "claim": "Critics of Caravaggio's insistence on painting only from life would later point out this limitation of his method: it lent itself to marvelously realistic (if theatrical) static compositions, but not ",
+   "url": "https://en.wikipedia.org/wiki/Boy_Bitten_by_a_Lizard",
+   "note": "sentence H5"
+  },
+  {
+   "claim": "Michael Fried has proposed instead that the painting is a disguised self-portrait of Caravaggio.",
+   "url": "https://en.wikipedia.org/wiki/Boy_Bitten_by_a_Lizard",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "Fried argues that the subject's hands – one stretched out, the other raised up – are in a similar position to those of a painter holding a palette while painting.",
+   "url": "https://en.wikipedia.org/wiki/Boy_Bitten_by_a_Lizard",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "Influences As was first suggested by Roberto Longhi, Caravaggio has probably borrowed the motif of biting a finger from a Boy Bitten by a Crab, a drawing by prominent Renaissance artist Sofonisba Angu",
+   "url": "https://en.wikipedia.org/wiki/Boy_Bitten_by_a_Lizard",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "Michael Fried has proposed instead that the painting is a disguised self-portrait of Caravaggio.",
+   "url": "https://en.wikipedia.org/wiki/Boy_Bitten_by_a_Lizard",
+   "note": "sentence H8"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-23"
+}
