@@ -1,0 +1,92 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "darkness"
+   ]
+  },
+  {
+   "name": "monk",
+   "box": [
+    0.24,
+    0.015,
+    0.81,
+    0.995
+   ],
+   "words": [
+    "monk",
+    "friar",
+    "body"
+   ]
+  },
+  {
+   "name": "hood",
+   "box": [
+    0.4,
+    0.01,
+    0.62,
+    0.24
+   ],
+   "words": [
+    "hood"
+   ]
+  },
+  {
+   "name": "face",
+   "box": [
+    0.46,
+    0.18,
+    0.58,
+    0.245
+   ],
+   "words": [
+    "face",
+    "beard"
+   ]
+  },
+  {
+   "name": "skull",
+   "box": [
+    0.44,
+    0.325,
+    0.63,
+    0.44
+   ],
+   "words": [
+    "skull"
+   ]
+  },
+  {
+   "name": "hands",
+   "box": [
+    0.41,
+    0.39,
+    0.64,
+    0.47
+   ],
+   "words": [
+    "hands"
+   ]
+  },
+  {
+   "name": "foot",
+   "box": [
+    0.62,
+    0.91,
+    0.75,
+    0.99
+   ],
+   "words": [
+    "foot"
+   ]
+  }
+ ],
+ "summary": "A Franciscan friar in a coarse brown habit and a tall pointed hood stands in the dark, holding a skull in both hands. His face is almost hidden in shadow and one bare foot shows below the robe."
+}
