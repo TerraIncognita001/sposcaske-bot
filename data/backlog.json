@@ -1173,6 +1173,153 @@
    "disqualified": null
   },
   {
+   "id": "circe-invidiosa-waterhouse",
+   "kind": "artwork",
+   "wikipedia": "Circe Invidiosa",
+   "person": "John William Waterhouse",
+   "why": "Circe looks directly at the viewer with cold hatred as she pours glowing green venom into the water beneath her.",
+   "wikidata": "Q5121363",
+   "picture": "J._W._Waterhouse_-_Circe_Invidiosa_-_Google_Art_Project.jpg",
+   "picture_px": 2350,
+   "score": 8,
+   "scores": {
+    "G": 1,
+    "D": 2,
+    "F": 1,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Circe's eyes look downward toward the glowing liquid rather than straight out at the viewer.",
+    "D": "A single tall figure stands against dark trees and water, extremely readable on a phone screen instantly.",
+    "F": "The glowing green stream looks like magic, but the actual act—poisoning water to mutate a romantic rival—requires context to fully grasp.",
+    "T": "The moment of poisoning is depicted with impending doom and quiet menace, but no blood or graphic violence is shown.",
+    "Y": "The viewer can be asked directly whether they see a merciless monster or a heartbroken woman.",
+    "S": "Based directly on Ovid's Metamorphoses, detailing the named legend of Circe, Glaucus, and Scylla."
+   },
+   "character": {
+    "figure": "the enchantress Circe",
+    "threat": "poisoning a rival out of romantic envy",
+    "feeling": "haunting malice",
+    "theme": "holy or feared"
+   },
+   "angle": {
+    "first_impression": "a calm sorceress pouring glowing green potion into clear water",
+    "detail": "the cold dark glare in her eyes",
+    "readings": [
+     "a cruel monster acting out of pure spite",
+     "a heartbroken woman trapped by her own dark power"
+    ],
+    "question": "So would you see a heartless monster, or a heartbroken woman trapped by jealousy?",
+    "punch": [
+     "ENVY",
+     "POISON",
+     "MONSTER"
+    ],
+    "form": "emotion"
+   },
+   "disqualified": null
+  },
+  {
+   "id": "witches-flight-goya",
+   "kind": "artwork",
+   "wikipedia": "Witches' Flight",
+   "person": "Francisco Goya",
+   "why": "Three floating figures devour a victim in pitch blackness while a traveler on the ground hides his face in horror.",
+   "wikidata": "Q15728649",
+   "picture": "Francisco_de_Goya_-_Vuelo_de_brujas_(1798).jpg",
+   "picture_px": 2068,
+   "score": 8,
+   "scores": {
+    "G": 1,
+    "D": 1,
+    "F": 2,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The witches focus intently on their floating victim while mortals below cover their eyes, so gaze matters but does not meet the viewer.",
+    "D": "A tight cluster of flying figures stands out clearly against pitch-black space on a phone screen.",
+    "F": "The flying monsters wear tall pointy coroza caps—the very outfits forced onto victims by the Spanish Inquisition.",
+    "T": "The scene creates pure uncanny horror through levitation and psychological fear with zero blood shown.",
+    "Y": "The bystanders force the viewer to ask how they react when evil strikes overhead.",
+    "S": "Documented 1798 Goya commission for the Duchess of Osuna targeting religious tribunals and public superstition."
+   },
+   "character": {
+    "figure": "three floating witches and victim",
+    "threat": "being devoured by airborne evil",
+    "feeling": "uncanny dread",
+    "theme": "holy or feared"
+   },
+   "angle": {
+    "first_impression": "Three terrifying witches levitate in the night sky devouring a man",
+    "detail": "the Inquisition coroza caps on the witches",
+    "readings": [
+     "demonic monsters hunting villagers in the night",
+     "the Inquisition consuming society through systemic terror"
+    ],
+    "question": "So would you hide under a sheet or pretend nothing is happening?",
+    "punch": [
+     "DEVOUR",
+     "CAPS",
+     "GUILTY"
+    ],
+    "form": "scene"
+   },
+   "disqualified": null
+  },
+  {
+   "id": "the-annunciation-tanner",
+   "kind": "artwork",
+   "wikipedia": "The Annunciation (Tanner)",
+   "person": "Henry Ossawa Tanner",
+   "why": "A young Mary sits huddled in a dark bedroom staring wide-eyed at an unsettling column of supernatural light.",
+   "wikidata": "Q20180562",
+   "picture": "The_Annunciation,_Philadelphia_Museum_of_Art,_W1899-1-1-pma,_by_Henry_Ossawa_Tanner.jpg",
+   "picture_px": 4096,
+   "score": 8,
+   "scores": {
+    "G": 1,
+    "D": 1,
+    "F": 2,
+    "T": 2,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Mary gazes intently at the light, but her eyes do not meet the viewer.",
+    "D": "The scene is intimate and readable, featuring Mary and the light as an 'invisible' presence.",
+    "F": "The flip is the total absence of the angel's physical body, replaced by a pillar of harsh, blinding light.",
+    "T": "The encounter feels heavy and overwhelming rather than peaceful, creating a sense of being confronted by something immense.",
+    "Y": "A direct question about her expression draws the viewer into the intensity of the moment.",
+    "S": "The biblical narrative of the Annunciation is well-known and provides a clear source for the scene."
+   },
+   "character": {
+    "figure": "Mary, an unseen angel",
+    "threat": "divine visitation",
+    "feeling": "humbled, overwhelmed",
+    "theme": "holy or feared"
+   },
+   "angle": {
+    "first_impression": "A young woman sits in a room bathed in warm light.",
+    "detail": "the pillar of blinding light",
+    "readings": [
+     "a peaceful divine blessing",
+     "the terrifying weight of a divine command"
+    ],
+    "question": "So, is she looking at a miracle, or is she witnessing something far more frightening?",
+    "punch": [
+     "UNSEEN",
+     "WEIGHT",
+     "CHOSEN"
+    ],
+    "form": "emotion"
+   },
+   "disqualified": null
+  },
+  {
    "id": "stanczyk-matejko",
    "kind": "artwork",
    "wikipedia": "Stańczyk (painting)",
@@ -1415,6 +1562,153 @@
    "disqualified": null
   },
   {
+   "id": "duel-after-a-masquerade-grme",
+   "kind": "artwork",
+   "wikipedia": "The Duel After the Masquerade",
+   "person": "Jean-Léon Gérôme",
+   "why": "A dying pierrot collapses in dark snow while the unmasked victor walks away unnoticed into the background mist.",
+   "wikidata": "Q3503317",
+   "picture": "Suites_d'un_bal_masqué_-_Gérôme_-_Musée_Condé.jpg",
+   "picture_px": 5744,
+   "score": 7,
+   "scores": {
+    "G": 1,
+    "D": 1,
+    "F": 2,
+    "T": 1,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "Harlequin looks back at the scene, but no figure makes direct eye contact with the viewer.",
+    "D": "Six figures set against a pale, open winter snowscape visible on a small screen.",
+    "F": "A pristine white Pierrot clown costume stained red by a mortal wound.",
+    "T": "Captures the silent aftermath of violence as life slips away, rather than the duel itself.",
+    "Y": "Prompts the viewer to question if a trivial carnival insult was worth a life.",
+    "S": "Rooted in 1850s Parisian societal scandals surrounding masquerade duels in the Bois de Boulogne."
+   },
+   "character": {
+    "figure": "a dying clown in the snow",
+    "threat": "a party quarrel ending in death",
+    "feeling": "tragic absurdity",
+    "theme": "last moment"
+   },
+   "angle": {
+    "first_impression": "a colorful group of carnival revelers gathered in snowy woods",
+    "detail": "the blood on Pierrot's white clown suit",
+    "readings": [
+     "a festive disguise hiding a tragic death",
+     "the cold aftermath of foolish honor"
+    ],
+    "question": "So would you have let a party quarrel end a life in the snow?",
+    "punch": [
+     "PIERROT",
+     "FATAL",
+     "DUEL"
+    ],
+    "form": "scene"
+   },
+   "disqualified": null
+  },
+  {
+   "id": "the-conjurer-bosch",
+   "kind": "artwork",
+   "wikipedia": "The Conjurer (painting)",
+   "person": "Hieronymus Bosch",
+   "why": "A spellbound mark leans toward a smiling magician while a thief behind him robs his purse unnoticed.",
+   "wikidata": "Q2155289",
+   "picture": "Hieronymus_Bosch_051.jpg",
+   "picture_px": 4498,
+   "score": 7,
+   "scores": {
+    "G": 2,
+    "D": 0,
+    "F": 2,
+    "T": 1,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The conjurer fixates on his victim, and the little owl in his waist basket gazes directly outward.",
+    "D": "The scene contains a large group of nearly ten detailed figures around a central table.",
+    "F": "While the victim leans in mesmerized by the magic trick, a thief behind him stealthily lifts his purse.",
+    "T": "The threat is non-violent deception, theft, and loss of reason rather than bloodshed.",
+    "Y": "The viewer is instantly pulled in by asking if they would fall for the magician's misdirection.",
+    "S": "Supported by Bosch's documented secular satire on human gullibility and misdirection."
+   },
+   "character": {
+    "figure": "a mesmerized foolish spectator",
+    "threat": "losing everything to silent misdirection",
+    "feeling": "uncanny realization",
+    "theme": "false calm"
+   },
+   "angle": {
+    "first_impression": "a crowd gathered to watch a simple street magic trick",
+    "detail": "the hand stealing the purse from behind",
+    "readings": [
+     "a spectator spellbound by a harmless illusion",
+     "a fool robbed blind while looking the wrong way"
+    ],
+    "question": "So are you watching the magician's trick, or protecting what is yours?",
+    "punch": [
+     "TRICKED",
+     "STOLEN",
+     "BLIND"
+    ],
+    "form": "scene"
+   },
+   "disqualified": null
+  },
+  {
+   "id": "pierrot-watteau",
+   "kind": "artwork",
+   "wikipedia": "Pierrot (Watteau)",
+   "person": "Antoine Watteau",
+   "why": "A clown in bright white stands isolated, gazing sorrowfully forward while dark figures whisper behind him.",
+   "wikidata": "Q3387944",
+   "picture": "Pierrot_-_Antoine_Watteau_-_Musée_du_Louvre_Peintures_MI_1121_-_après_restauration_2024.jpg",
+   "picture_px": 7404,
+   "score": 7,
+   "scores": {
+    "G": 2,
+    "D": 1,
+    "F": 1,
+    "T": 1,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The central figure stares directly and vacantly at the viewer, commanding immediate focus.",
+    "D": "Multiple figures are present in a landscape, making it less punchy than a singular dark background portrait.",
+    "F": "The rigid, 'frozen' posture and expression require explanation to move beyond the first impression of a costume portrait.",
+    "T": "The painting carries an eerie sense of social alienation and detachment, leaving the viewer wondering why he is excluded.",
+    "Y": "A prompt like 'Why are they looking away from him?' easily pulls the viewer into the scene.",
+    "S": "The history of the painting's origin as a possible shop sign for a named actor provides a grounded narrative hook."
+   },
+   "character": {
+    "figure": "A isolated actor in white",
+    "threat": "The cruelty of public exclusion",
+    "feeling": "Profound, eerie alienation",
+    "theme": "false calm"
+   },
+   "angle": {
+    "first_impression": "A tall, awkward clown posing for a theatrical portrait.",
+    "detail": "the detached, vacant expression of the central figure",
+    "readings": [
+     "a man frozen in a state of eternal social rejection",
+     "a simple performer trapped in the wrong role forever"
+    ],
+    "question": "So, is he the star of the show, or the only one missing the joke?",
+    "punch": [
+     "ISOLATED",
+     "EXCLUDED",
+     "DETACHED"
+    ],
+    "form": "scene"
+   },
+   "disqualified": null
+  },
+  {
    "id": "the-raising-of-lazarus-rembrandt",
    "kind": "artwork",
    "wikipedia": "The Raising of Lazarus (Rembrandt)",
@@ -1506,6 +1800,104 @@
      "JUDGE",
      "WATCH",
      "POWER"
+    ],
+    "form": "emotion"
+   },
+   "disqualified": null
+  },
+  {
+   "id": "they-did-not-expect-him-repin",
+   "kind": "artwork",
+   "wikipedia": "They Did Not Expect Him",
+   "person": "Ilya Repin",
+   "why": "An exiled man steps from dark shadows into a room, his hollow eyes fixing on a family frozen in shock.",
+   "wikidata": "Q11791202",
+   "picture": "Ilya_Repin_Unexpected_visitors.jpg",
+   "picture_px": 2740,
+   "score": 6,
+   "scores": {
+    "G": 2,
+    "D": 0,
+    "F": 1,
+    "T": 1,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The main figure of the returning exile is intensely watched by every person in the room.",
+    "D": "A bright daylight room crowded with seven figures and detailed interior furniture.",
+    "F": "The mysterious intruder is an exiled revolutionary, but this requires narrative context to realize.",
+    "T": "Shows the tense, uncomfortable aftermath of political exile and secret return without explicit violence.",
+    "Y": "The viewer is placed right inside the room, asked to decide how to react to the intruder.",
+    "S": "Rooted in the documented history of Russian Narodniki revolutionaries and exile under the Tsarist regime."
+   },
+   "character": {
+    "figure": "a returned political exile",
+    "threat": "the tension of an unexpected return",
+    "feeling": "unease",
+    "theme": "false calm"
+   },
+   "angle": {
+    "first_impression": "A shabby stranger enters a cozy, sunlit family living room",
+    "detail": "his uncertain, haunted gaze",
+    "readings": [
+     "a long-lost loved one returning home",
+     "a dangerous stranger threatening a peaceful family"
+    ],
+    "question": "So would you welcome back a ghost who brings danger to your home?",
+    "punch": [
+     "RETURN",
+     "EXILE",
+     "GHOST"
+    ],
+    "form": "scene"
+   },
+   "disqualified": null
+  },
+  {
+   "id": "the-man-with-the-golden-helmet-rembrandt",
+   "kind": "artwork",
+   "wikipedia": "The Man with the Golden Helmet",
+   "person": "Rembrandt",
+   "why": "An aging soldier gazes down out of total darkness, his gleaming helmet casting a deep grim shadow over his face.",
+   "wikidata": "Q1195610",
+   "picture": "Rembrandt_(circle)_-_The_Man_with_the_Golden_Helmet_-_Google_Art_Project.jpg",
+   "picture_px": 4000,
+   "score": 6,
+   "scores": {
+    "G": 1,
+    "D": 2,
+    "F": 1,
+    "T": 1,
+    "Y": 0,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The elderly man looks downward into shadow; his eyes set the somber mood but do not meet the viewer.",
+    "D": "A single figure set against a pitch-black background, perfectly readable at phone size in one second.",
+    "F": "The dazzling golden helmet draws the eye, obscuring the weary, sorrowful face beneath it.",
+    "T": "No active threat or violence is shown, only the heavy atmosphere of age, grief, and weariness.",
+    "Y": "The painting keeps the viewer as a passive observer looking at a solitary portrait.",
+    "S": "The documented 1985 de-attribution mystery involving Jan Kelch provides a named historical story."
+   },
+   "character": {
+    "figure": "an aging man in gold",
+    "threat": "weariness hidden behind golden glory",
+    "feeling": "somber weariness",
+    "theme": "false calm"
+   },
+   "angle": {
+    "first_impression": "a brilliant golden helmet celebrating a proud military figure",
+    "detail": "the downcast face in shadow",
+    "readings": [
+     "a grand portrait of imperial splendor",
+     "a broken old man weighed down by glory"
+    ],
+    "question": "So was this golden helmet painted to glorify a hero or to conceal his sorrow?",
+    "punch": [
+     "GLORY",
+     "SHADOW",
+     "WEARY"
     ],
     "form": "emotion"
    },
@@ -1604,6 +1996,55 @@
      "DANGER",
      "DECEIT",
      "SURVIVAL"
+    ],
+    "form": "scene"
+   },
+   "disqualified": null
+  },
+  {
+   "id": "witches-sabbath-goya",
+   "kind": "artwork",
+   "wikipedia": "Witches' Sabbath (Goya, 1798)",
+   "person": "Francisco Goya",
+   "why": "A seated goat-demon surrounded by terrified women stares intently as an infant offering is held out to him.",
+   "wikidata": "Q2736334",
+   "picture": "Francisco_de_Goya_y_Lucientes_-_Witches_Sabbath_-_Google_Art_Project.jpg",
+   "picture_px": 2801,
+   "score": 5,
+   "scores": {
+    "G": 2,
+    "D": 0,
+    "F": 1,
+    "T": 0,
+    "Y": 1,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The goat's eyes lock directly with the viewer in a fixed, eerie stare.",
+    "D": "There are too many figures and scattered details to be readable in one second on a phone.",
+    "F": "The flip is the realization that this isn't a satanic ritual, but Goya's mockery of superstitious state fear.",
+    "T": "The painting contains explicit, gruesome depictions of infants, which fails the requirement of 'threat without violence'.",
+    "Y": "The direct address is possible by asking if the viewer recognizes the goat's human-like expression.",
+    "S": "The painting is well-documented as a socio-political critique by Goya against the Inquisition."
+   },
+   "character": {
+    "figure": "A demonic goat-priest",
+    "threat": "ritual sacrifice and superstition",
+    "feeling": "sinister mockery",
+    "theme": "holy or feared"
+   },
+   "angle": {
+    "first_impression": "A nightmarish coven gathering around a horned demonic goat figure.",
+    "detail": "the goat's unsettlingly human eyes",
+    "readings": [
+     "the devil officiating a dark ritual of child sacrifice",
+     "a political satire mocking the absurd fears of the Inquisition"
+    ],
+    "question": "So, is this a portrait of hell, or a reflection of human ignorance?",
+    "punch": [
+     "Ritual",
+     "Mockery",
+     "Darkness"
     ],
     "form": "scene"
    },
@@ -1814,6 +2255,41 @@
     "threat": "numbness, social isolation, and addiction",
     "feeling": "melancholy",
     "theme": "false calm"
+   },
+   "angle": null,
+   "disqualified": null
+  },
+  {
+   "id": "the-execution-of-marshal-ney-grme",
+   "kind": "artwork",
+   "wikipedia": "The Execution of Marshal Ney",
+   "person": "Jean-Léon Gérôme",
+   "why": "The fallen marshal lies alone face-down on muddy ground while the firing squad vanishes into morning darkness.",
+   "wikidata": "Q24965698",
+   "picture": "Gérôme--Execution_of_Marshall_Ney--1868--Sheffield.jpg",
+   "picture_px": 2047,
+   "score": 3,
+   "scores": {
+    "G": 0,
+    "D": 1,
+    "F": 1,
+    "T": 0,
+    "Y": 0,
+    "S": 1
+   },
+   "reasons": {
+    "G": "The soldiers turn their backs to the viewer as they march away, while Marshal Ney lies face down on the cobblestones.",
+    "D": "The composition is a wide street scene with a corpse in the foreground and a group of soldiers marching off in the distance.",
+    "F": "The crossed-out political graffiti on the wall near the bullet holes holds the meaning but requires explanation to be understood.",
+    "T": "A corpse is shown lying dead on the street immediately following a violent execution by firing squad.",
+    "Y": "The viewer remains a distant, outside observer watching soldiers walk away from a body.",
+    "S": "The painting documents the historical execution of Napoleon's Marshal Michel Ney in 1815 for treason."
+   },
+   "character": {
+    "figure": "Marshal Michel Ney",
+    "threat": "execution for treason after shifting allegiances",
+    "feeling": "grim emptiness",
+    "theme": "last moment"
    },
    "angle": null,
    "disqualified": null
