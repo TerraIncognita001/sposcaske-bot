@@ -5,6 +5,23 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.22 = THE NEW LOOK: CAPTIONS UNDER THE PICTURE, THE DETAIL ON FRAME 0, PLAIN TITLES, Andrii, Nov 24 2026 ('так,
+  викочуй v1.22 в main, відтепер всі відео мають так виглядати'). From his three tips ('Приберіть хештеги з назв ...
+  Поверніть стиль ранніх назв (коротке речення без великих літер) ... На 1-й секунді показуйте деталь ... субтитри
+  зробіть у 2 рази більшими'), then on demo 1 ('зроби субтитри ще трішечки більшими і постав зразу під фото').
+  (1) CAPTIONS x2.3 (`format.json captions.boxed.scale`), on the black right under the picture (`place:
+  under_stage`, gap 0.02 of the stage), wrapped by width (90 % of the frame): before x1 at 0.863 of the picture.
+  Demo 1 (x2 at 0.40 of the picture) covered the faces in the close-ups. (2) NO FADE from black (`timing.fade_in_s`
+  0.5 -> 0): the first frame is the detail. (3) TITLES: one short sentence in sentence case, at most 45 characters,
+  no word in capitals, no '...', no hashtags (`script_check.title_faults`, `prompts/writer.txt` 7a); `#history #art`
+  go to the end of the description; `bot.clean_title` turns a ready v1.18 title into sentence case (names keep
+  their capital). Why: our best titles were plain sentences ('The eyes of Lucifer that never close' 1247 views, 'The
+  pope who called his own portrait too true' 704); the v1.18 titles (CAPS word, '...', #history) held 127-271.
+  (4) HOLD 30-45 s: 70-115 words for a new script (a ready one of v1.19-v1.21 keeps up to 130); H9 may loop back
+  into the hook instead of asking. (5) The painter's line in hold is shown by his portrait. Demo (branch
+  demo-v1.22, dry runs 45464008667, 45467358871): David with the Head of Goliath, 47.3 s, 12 of 12, 25 of 25 in
+  frame; its script goes to the ready ones (the night writer's own David failed the camera audit twice on Nov 24).
+
 - v1.21 = A RETIRED GEMINI MODEL OUT OF THE LIST, Andrii, Nov 22 2026 ('так, прибери закриту модель'). Why: the Sunday
   scout of Nov 22 (run 45026457282) used up the day's quota of the three live models (a manual scout ran the evening
   before) and the last fallback, `gemini-2.5-flash`, answered 404 'This model ... is no longer available to new

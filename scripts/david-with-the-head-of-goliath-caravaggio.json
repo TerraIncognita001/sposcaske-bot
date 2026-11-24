@@ -1,0 +1,369 @@
+{
+ "id": "david-with-the-head-of-goliath-caravaggio",
+ "kind": "artwork",
+ "form": "hold",
+ "hook_frame": "other",
+ "closer": "open",
+ "detail": "goliath_face",
+ "home": "goliath_face",
+ "subject": {
+  "title": "David with the Head of Goliath",
+  "creator": "Caravaggio",
+  "year": 1606,
+  "wikidata": "Q2627056"
+ },
+ "lead": {
+  "commons": "David_with_the_Head_of_Goliath-Caravaggio_(1610).jpg",
+  "width_px": 3840,
+  "aspect": 0.8081,
+  "px": 5922,
+  "license": "Public domain",
+  "credit": "David with the Head of Goliath-Caravaggio (1610) — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Caravaggio",
+  "credit": "Portrait of Caravaggio — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.15,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "dark",
+    "darkness"
+   ]
+  },
+  {
+   "name": "david",
+   "box": [
+    0.02,
+    0.17,
+    0.88,
+    1.0
+   ],
+   "words": [
+    "hero",
+    "trophy"
+   ]
+  },
+  {
+   "name": "david_face",
+   "box": [
+    0.37,
+    0.17,
+    0.56,
+    0.37
+   ],
+   "words": [
+    "boy",
+    "david"
+   ]
+  },
+  {
+   "name": "david_eyes",
+   "box": [
+    0.405,
+    0.245,
+    0.505,
+    0.292
+   ],
+   "words": [
+    "pity"
+   ]
+  },
+  {
+   "name": "hand_hair",
+   "box": [
+    0.73,
+    0.42,
+    0.88,
+    0.535
+   ],
+   "words": [
+    "hand",
+    "fist"
+   ]
+  },
+  {
+   "name": "goliath_face",
+   "box": [
+    0.715,
+    0.63,
+    0.9,
+    0.855
+   ],
+   "words": [
+    "face",
+    "head",
+    "goliath",
+    "giant"
+   ]
+  },
+  {
+   "name": "goliath_eyes",
+   "box": [
+    0.735,
+    0.685,
+    0.885,
+    0.74
+   ],
+   "words": [
+    "eyes"
+   ]
+  },
+  {
+   "name": "goliath_mouth",
+   "box": [
+    0.79,
+    0.785,
+    0.865,
+    0.85
+   ],
+   "words": [
+    "mouth"
+   ]
+  },
+  {
+   "name": "sword",
+   "box": [
+    0.03,
+    0.77,
+    0.4,
+    1.0
+   ],
+   "words": [
+    "sword",
+    "letters"
+   ]
+  }
+ ],
+ "punch": "FACE",
+ "sentences": [
+  {
+   "slot": "H1",
+   "text": "The severed head in this boy's hand wears the painter's face.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "head",
+     "to": "goliath_face"
+    },
+    {
+     "on": "hand",
+     "to": "goliath_face"
+    },
+    {
+     "on": "face",
+     "to": "goliath_eyes"
+    }
+   ]
+  },
+  {
+   "slot": "H2",
+   "text": "Everyone sees a hero with his trophy.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "hero",
+     "to": "david"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "The giant's mouth hangs open.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "mouth",
+     "to": "goliath_mouth"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "Tiny letters on the sword mean humility kills pride.",
+   "kind": "FACT",
+   "source": 6,
+   "show": [
+    {
+     "on": "letters",
+     "to": "sword"
+    }
+   ]
+  },
+  {
+   "slot": "H4",
+   "text": "Caravaggio painted his own face on Goliath.",
+   "kind": "FACT",
+   "source": 9,
+   "show": [
+    {
+     "on": "goliath",
+     "to": "goliath_face"
+    }
+   ]
+  },
+  {
+   "slot": "H5",
+   "text": "In 1606, he had killed a man and fled a death sentence.",
+   "kind": "FACT",
+   "source": 27,
+   "show": [
+    {
+     "on": "sentence",
+     "to": "goliath_eyes"
+    }
+   ]
+  },
+  {
+   "slot": "H5",
+   "text": "Why would a wanted killer paint himself beheaded?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "beheaded",
+     "to": "goliath_face"
+    }
+   ]
+  },
+  {
+   "slot": "H6",
+   "text": "The answer is in the boy's eyes.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "david_eyes"
+    }
+   ]
+  },
+  {
+   "slot": "H7",
+   "text": "David looks down at him with sadness, almost pity.",
+   "kind": "FACT",
+   "source": 7,
+   "show": [
+    {
+     "on": "pity",
+     "to": "david_face"
+    }
+   ]
+  },
+  {
+   "slot": "H7",
+   "text": "He may have sent it to the Pope's nephew, who could grant pardons.",
+   "kind": "FACT",
+   "source": 30,
+   "show": [
+    {
+     "on": "pardons",
+     "to": "goliath_eyes"
+    }
+   ]
+  },
+  {
+   "slot": "H8",
+   "text": "It isn't a trophy.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "trophy",
+     "to": "goliath_face"
+    }
+   ]
+  },
+  {
+   "slot": "H8",
+   "text": "It's a plea for mercy.",
+   "kind": "FACT",
+   "source": 19,
+   "show": [
+    {
+     "on": "mercy",
+     "to": "goliath_eyes"
+    }
+   ]
+  },
+  {
+   "slot": "H9",
+   "text": "He died on his way to that pardon, and his face is still in this boy's hand.",
+   "kind": "FACT",
+   "source": 32,
+   "show": [
+    {
+     "on": "hand",
+     "to": "goliath_face"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Caravaggio": "Kara-vah-jo",
+  "Goliath": "Go-lie-ath"
+ },
+ "meta": {
+  "title": "The painter who handed us his own head",
+  "description": "David with the Head of Goliath by Caravaggio (Galleria Borghese, Rome). The severed head is the painter's self-portrait; the picture may have been sent to Cardinal Scipione Borghese, who could grant him a pardon for murder.",
+  "tags": [
+   "art history",
+   "caravaggio",
+   "david and goliath",
+   "baroque",
+   "dark art",
+   "painting"
+  ],
+  "question": "A trophy, or a plea for mercy?"
+ },
+ "sources": [
+  {
+   "claim": "The sword in David's hand carries an abbreviated inscription H-AS OS; this has been interpreted as an abbreviation of the Latin phrase humilitas occidit superbiam (\"humility kills pride\").",
+   "url": "https://en.wikipedia.org/wiki/David_with_the_Head_of_Goliath_(Caravaggio,_Rome)",
+   "note": "sentence H3"
+  },
+  {
+   "claim": "This bond is further complicated by the fact that Caravaggio has depicted himself as Goliath, while the model for David is il suo Caravaggino (\"his own little Caravaggio\").",
+   "url": "https://en.wikipedia.org/wiki/David_with_the_Head_of_Goliath_(Caravaggio,_Rome)",
+   "note": "sentence H4"
+  },
+  {
+   "claim": "On 29 May 1606, Caravaggio killed a young man, possibly unintentionally, resulting in him fleeing Rome with a death sentence hanging over him.",
+   "url": "https://en.wikipedia.org/wiki/Caravaggio",
+   "note": "sentence H5"
+  },
+  {
+   "claim": "David is perturbed, \"his expression mingling sadness and compassion\".",
+   "url": "https://en.wikipedia.org/wiki/David_with_the_Head_of_Goliath_(Caravaggio,_Rome)",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "This painting he may have sent to his patron, the unscrupulous art-loving Cardinal Scipione Borghese, nephew of the pope, who had the power to grant or withhold pardons.",
+   "url": "https://en.wikipedia.org/wiki/Caravaggio",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "If the painting was a gift to Cardinal Borghese, the papal official with the power to grant Caravaggio a pardon for murder, it can also be interpreted as a personal plea for mercy.",
+   "url": "https://en.wikipedia.org/wiki/David_with_the_Head_of_Goliath_(Caravaggio,_Rome)",
+   "note": "sentence H8"
+  },
+  {
+   "claim": "News from Rome encouraged Caravaggio, and in the summer of 1610, he took a boat northwards to receive the pardon, which seemed imminent thanks to his powerful Roman friends.",
+   "url": "https://en.wikipedia.org/wiki/Caravaggio",
+   "note": "sentence H9"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-24"
+}

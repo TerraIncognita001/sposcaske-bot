@@ -57,12 +57,34 @@ def conform(mp4, story, work):
     return rows, {"seconds": round(dur, 1), "lufs": lufs, "peak_dbfs": peak, "mb": round(size / 1e6, 1)}
 
 
+def clean_title(title, story):
+    """v1.22 (Andrii, Nov 24: 'Приберіть хештеги з назв ... коротке речення без великих літер'): a title written under
+    v1.18 ('The Old Man Who Ate His Soup Next to DEATH #history #art') -> one sentence in sentence case, no hashtags,
+    no '...'. A word keeps its capital when it is a name: capitalised inside the script's sentences, or in the
+    painter's or the portrait's name."""
+    t = re.sub(r"\s*#\w+", "", title or "").replace("...", ",").replace("…", ",").strip(" ,")
+    text = " ".join(x if isinstance(x, str) else x.get("text", "") for x in story.get("sentences", [])) + " " + " ".join(str(x) for x in (
+        (story.get("artwork") or {}).get("artist"), (story.get("portrait") or {}).get("of")))
+    names = {w for w in re.findall(r"(?<![.!?]\s)(?<!^)\b([A-Z][a-z'’]+)", text)}
+    words = t.split()
+    out = [words[0][:1].upper() + words[0][1:].lower() if words and words[0].isupper() and len(words[0]) > 1 else (words[0] if words else "")]
+    for w in words[1:]:
+        core = re.sub(r"[^\w'’]", "", w)
+        if re.fullmatch(r"[IVXLCDM]+", core) or core.capitalize() in names or core in names:
+            out.append(w if not w.isupper() else w.capitalize())
+        else:
+            out.append(w.lower())
+    return " ".join(out)
+
+
 def metadata(story, report):
     m, art = story["meta"], story["artwork"]
     credits = [f"- {v.get('credit') or k}" for k, v in story["images"].items()]
     desc = m["description"].strip() + "\n\nPictures (public domain, Wikimedia Commons):\n" + "\n".join(credits) + "\n\nSources:\n" + "\n".join(
         f"- {s['url']}" for s in story.get("sources", [])) + "\n\nThe narration is a synthetic voice."
-    return {"title": m["title"][:100], "description": desc, "tags": m.get("tags", []), "pinned_question": m.get("question"), "categoryId": "27",
+    title = clean_title(m["title"], story)
+    desc += "\n\n#history #art"
+    return {"title": title[:100], "description": desc, "tags": m.get("tags", []), "pinned_question": m.get("question"), "categoryId": "27",
             "story": story["id"], "artwork": f"{art['title']} ({art['artist']}, {art['year']})", "pictures": report}
 
 

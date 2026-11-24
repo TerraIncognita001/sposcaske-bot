@@ -433,15 +433,26 @@ def caption_text(story, say):
 
 def caption_sprite(text, sw, sh):
     B = F["captions"]["boxed"]
-    font = ImageFont.truetype(str(FONTS / B["font"]), max(10, round(B["size_frac_hs"] * sh * CAP_SCALE)))
+    k = CAP_SCALE * B.get("scale", 1.0)                                # v1.22: the caption twice as big (format.json captions.boxed.scale)
+    font = ImageFont.truetype(str(FONTS / B["font"]), max(10, round(B["size_frac_hs"] * sh * k)))
     lines = [text]
     if len(text) > B["max_chars_per_line"]:
         sp = [m.start() for m in re.finditer(" ", text)]
         cut = min(sp, key=lambda i: abs(i - len(text) / 2))
         lines = [text[:cut], text[cut + 1:]]
-    pitch = B["line_pitch_frac_hs"] * sh * CAP_SCALE
-    bw = int(max(font.getlength(s) for s in lines) + 2 * B["pad_x_frac_ws"] * sw * CAP_SCALE)
-    bh = int(0.021 * sh * CAP_SCALE + len(lines) * pitch * 0.945)
+    room = B.get("max_width_frac_ws", 1.0) * sw - 2 * B["pad_x_frac_ws"] * sw * k
+    if max(font.getlength(s) for s in lines) > room:                   # v1.22: a bigger caption wraps by its width, word by word
+        lines, cur = [], ""
+        for w in text.split():
+            if cur and font.getlength(cur + " " + w) > room:
+                lines.append(cur)
+                cur = w
+            else:
+                cur = (cur + " " + w).strip()
+        lines.append(cur)
+    pitch = B["line_pitch_frac_hs"] * sh * k
+    bw = int(max(font.getlength(s) for s in lines) + 2 * B["pad_x_frac_ws"] * sw * k)
+    bh = int(0.021 * sh * k + len(lines) * pitch * 0.945)
     im = Image.new("RGBA", (bw, bh), (0, 0, 0, round(255 * B["box_opacity"])))
     d = ImageDraw.Draw(im)
     for j, s in enumerate(lines):
@@ -787,10 +798,11 @@ def render(story_path, out_path):
             st[y:y + th, x:x + tw] = (st[y:y + th, x:x + tw] * (1 - al) + rgb * al).astype(np.uint8)
         if i >= n - T["end_black_frames"]:
             st[:] = 0                                                  # the last frames: black, the caption stays
-        for c0, c1, (rgb, al) in caps:
+        under = F["captions"]["boxed"].get("place") == "under_stage"   # v1.22 (Andrii, Nov 24: 'постав зразу під фото'): the caption sits on the black below the picture
+        for c0, c1, (rgb, al) in caps if not under else []:
             if c0 <= t < c1:
                 bh, bw = rgb.shape[:2]
-                x, y = (sw - bw) // 2, int(F["captions"]["boxed"]["center_y_frac_hs"] * sh - bh / 2)
+                x, y = (sw - bw) // 2, int(min(F["captions"]["boxed"]["center_y_frac_hs"] * sh - bh / 2, sh - bh))
                 st[y:y + bh, x:x + bw] = (st[y:y + bh, x:x + bw] * (1 - al) + rgb * al).astype(np.uint8)
                 break
         u = (t - ev["burn"]) / TR["burn"]["dur_s"]
@@ -802,6 +814,14 @@ def render(story_path, out_path):
                 k_ = 1.0 if d < 1.5 / FPS else (1 - d / TR["white_flash"]["decay_s"]) ** 1.2      # one full-white frame, then it clears
                 st = (st + (255 - st) * k_).astype(np.uint8)
         canvas[y_off:y_off + sh] = st
+        if under:
+            canvas[y_off + sh:] = 0
+            for c0, c1, (rgb, al) in caps:
+                if c0 <= t < c1:
+                    bh, bw = rgb.shape[:2]
+                    x, y = (CW - bw) // 2, min(CH - bh, y_off + sh + int(F["captions"]["boxed"].get("gap_frac_hs", 0.02) * sh))
+                    canvas[y:y + bh, x:x + bw] = (canvas[y:y + bh, x:x + bw] * (1 - al) + rgb * al).astype(np.uint8)
+                    break
         ff.stdin.write(canvas.tobytes())
     ff.stdin.close()
     ff.wait()

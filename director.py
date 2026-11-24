@@ -381,7 +381,7 @@ def build(script):
                     cues.append({"to": "full", "how": "cut"})
                 hit = next(t for t in toks if t in person)
                 cues.append({"image": "portrait", "on": hit})
-                ln["names"] = {t: ["portrait"] for t in toks if t in person}
+                ln["names"] = {t: ["portrait"] for t in toks if t in person or t.split("'")[0] in words}    # v1.22: the painter's line is shown by his portrait ('his own face on Goliath')
                 cur = ("portrait", "")
             else:
                 if cur[0] == "portrait" or (first and slot in ("S3", "S7", "S10")) or (first and cur[0] != "main" and not any(t in shows or t in words for t in toks)):

@@ -135,20 +135,27 @@ def title_pattern(title):
     return "other"
 
 
+ROMAN = re.compile(r"^[IVXLCDM]+$")
+
+
 def title_faults(title, form):
-    """v1.18: what is wrong with a title for this form ([] = good)."""
-    body, out = re.sub(r"\s*#\w+", "", title or "").strip(), []
-    want = TITLE_WANT.get(form)
-    say = {"why": "a 'Why ...?' question about the odd detail", "action": "an action and its turn: '<Subject> <did X>... and <found / was Y>' (with '...')",
-           "who": "'The <noun> who / that <did an extraordinary thing>'"}
-    if want and title_pattern(title) not in want:
-        out.append(f"the title of the {form} form is " + " or ".join(say[w] for w in want) + f" (got: {title!r})")
-    if not re.search(r"\b[A-Z]{3,}\b", body):
-        out.append("the title needs ONE key word in capitals (3+ letters), as 'DRAGON' or 'GLASS' in the niche's best titles")
-    if len(body) > 70:
-        out.append(f"the title without hashtags is {len(body)} characters, at most 70")
-    if not re.search(r"#history\b", title or "") or len(title) > 100:
-        out.append("the title ends with '#history' (and may add '#art'), 100 characters in all at most")
+    """v1.22 (Andrii, Nov 24: 'Приберіть хештеги з назв ... Поверніть стиль ранніх назв (коротке речення без великих
+    літер)'; our best two: 'The eyes of Lucifer that never close' 1247 views, 'The pope who called his own portrait too
+    true' 704; the v1.18 titles with a CAPS word and #history held 127-271): one short sentence in sentence case, at
+    most 45 characters, no word in capitals, no '...', no hashtags. [] = good. (v1.18 wanted a form pattern, one CAPS
+    word and '#history'.)"""
+    t, out = (title or "").strip(), []
+    if "#" in t:
+        out.append("no hashtags in the title (they go to the description)")
+    if re.search(r"(\.\.\.|…)", t):
+        out.append("no '...' in the title")
+    caps = [w for w in re.findall(r"\b[A-Z][A-Z']+\b", t) if not ROMAN.match(w)]
+    if caps:
+        out.append("no word in capitals in the title (got: " + ", ".join(caps) + ")")
+    if len(t) > 45:
+        out.append(f"the title is {len(t)} characters, at most 45")
+    if len(t.split()) < 4:
+        out.append("the title is a short sentence of 4+ words")
     return out
 
 
@@ -227,7 +234,8 @@ def check_hold(sents, title, punch, facts=None):
 
     def rule(name, ok, detail="", hard=True):
         out.append((bool(ok), hard, name, detail))
-    rule("length 80-130 words (hold)", 80 <= words <= 130, f"{words} words")
+    top = 115 if facts is not None else 130                            # v1.22: a new script (a writer counts its facts) 70-115 words; a ready one of v1.19-v1.21 may keep its 130
+    rule(f"length 70-{top} words (hold, 30-50 s; v1.22)", 70 <= words <= top, f"{words} words")
     rule("10-22 sentences", 10 <= n <= 22, f"{n} sentences")
     rule("mean sentence <= 10 words", words / n <= 10, f"{words / n:.1f}")
     rule("the hook is 5-12 words", 5 <= wc[0] <= 12, f"{wc[0]}")
@@ -236,7 +244,8 @@ def check_hold(sents, title, punch, facts=None):
     rule("no ident in the first three sentences ('This is ...', 'painted by ...', a year)",
          not any(re.search(r"^This is\b|\bpainted by\b|\b1[0-9]{3}\b", x) for x in sents[:3]), " | ".join(sents[:3]))
     rule("a re-hook in the middle (a question or 'But' / 'The answer')", any(re.search(r"\?$|^(But|The answer)\b", x) for x in sents[3:-2]))
-    rule("the last sentence is a question", sents[-1].endswith("?"))
+    loop = len({w for w in re.findall(r"[a-z']{4,}", sents[-1].lower())} & {w for w in re.findall(r"[a-z']{4,}", sents[0].lower())}) >= 2
+    rule("the last sentence is a question, or loops back into the hook (v1.22)", sents[-1].endswith("?") or loop)
     if facts is not None:
         rule("at least 3 FACT sentences with a source", facts >= 3, f"{facts}")
     return out, words, n

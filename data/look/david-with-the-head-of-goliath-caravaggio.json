@@ -4,91 +4,117 @@
    "name": "main_action",
    "box": [
     0.0,
-    0.0,
+    0.15,
     1.0,
     1.0
    ],
    "words": [
+    "dark",
     "darkness"
    ]
   },
   {
    "name": "david",
    "box": [
-    0.0,
+    0.02,
     0.17,
-    0.86,
+    0.88,
     1.0
    ],
    "words": [
-    "youth",
-    "victor"
+    "hero",
+    "trophy"
    ]
   },
   {
    "name": "david_face",
    "box": [
-    0.36,
-    0.18,
-    0.53,
-    0.42
+    0.37,
+    0.17,
+    0.56,
+    0.37
    ],
    "words": [
-    "face",
-    "sadness"
+    "boy",
+    "david"
    ]
   },
   {
-   "name": "head",
+   "name": "david_eyes",
    "box": [
-    0.71,
-    0.55,
-    0.89,
-    0.86
+    0.405,
+    0.245,
+    0.505,
+    0.292
    ],
    "words": [
+    "pity"
+   ]
+  },
+  {
+   "name": "hand_hair",
+   "box": [
+    0.73,
+    0.42,
+    0.88,
+    0.535
+   ],
+   "words": [
+    "hand",
+    "fist"
+   ]
+  },
+  {
+   "name": "goliath_face",
+   "box": [
+    0.715,
+    0.63,
+    0.9,
+    0.855
+   ],
+   "words": [
+    "face",
+    "head",
+    "goliath",
     "giant"
    ]
   },
   {
-   "name": "head_face",
+   "name": "goliath_eyes",
    "box": [
-    0.72,
-    0.62,
-    0.88,
-    0.84
+    0.735,
+    0.685,
+    0.885,
+    0.74
    ],
    "words": [
-    "eyes",
+    "eyes"
+   ]
+  },
+  {
+   "name": "goliath_mouth",
+   "box": [
+    0.79,
+    0.785,
+    0.865,
+    0.85
+   ],
+   "words": [
     "mouth"
    ]
   },
   {
    "name": "sword",
    "box": [
-    0.0,
-    0.73,
-    0.42,
+    0.03,
+    0.77,
+    0.4,
     1.0
    ],
    "words": [
     "sword",
-    "blade"
-   ]
-  },
-  {
-   "name": "hand_hair",
-   "box": [
-    0.74,
-    0.43,
-    0.87,
-    0.56
-   ],
-   "words": [
-    "hand",
-    "grip"
+    "letters"
    ]
   }
- ],
- "summary": "A young man, lit from the left, holds a sword in one hand and in the other the severed, bleeding head of a bearded man by its hair. He looks down at the head with a troubled face."
+ ]
 }
