@@ -1,0 +1,131 @@
+{
+ "total": 58.391224489795924,
+ "lines": [
+  {
+   "t0": 1.65,
+   "t1": 3.79,
+   "beat": "hook",
+   "say": "This man is looking at his own son,"
+  },
+  {
+   "t0": 4.01,
+   "t1": 5.57,
+   "beat": "hook",
+   "say": "and searching for mercy."
+  },
+  {
+   "t0": 6.22,
+   "t1": 9.94,
+   "beat": "ident",
+   "say": "This is Peter the Great Interrogating the Tsarevich Alexei,"
+  },
+  {
+   "t0": 10.16,
+   "t1": 13.37,
+   "beat": "ident",
+   "say": "painted by Nikolai Ge in 1871."
+  },
+  {
+   "t0": 13.97,
+   "t1": 16.67,
+   "beat": "usual",
+   "say": "Most people see an emperor questioning his son,"
+  },
+  {
+   "t0": 16.89,
+   "t1": 19.11,
+   "beat": "usual",
+   "say": "accused of plotting to seize power."
+  },
+  {
+   "t0": 19.71,
+   "t1": 20.98,
+   "beat": "usual",
+   "say": "Before the sentence,"
+  },
+  {
+   "t0": 21.2,
+   "t1": 23.59,
+   "beat": "usual",
+   "say": "Peter searches his son's eyes for remorse."
+  },
+  {
+   "t0": 24.19,
+   "t1": 25.94,
+   "beat": "seems",
+   "say": "And the picture seems to agree."
+  },
+  {
+   "t0": 26.54,
+   "t1": 28.0,
+   "beat": "seems",
+   "say": "The tsar sits still,"
+  },
+  {
+   "t0": 28.22,
+   "t1": 29.88,
+   "beat": "seems",
+   "say": "and the son lowers his head."
+  },
+  {
+   "t0": 30.48,
+   "t1": 31.81,
+   "beat": "turn",
+   "say": "But look at the floor."
+  },
+  {
+   "t0": 32.41,
+   "t1": 34.78,
+   "beat": "detail",
+   "say": "A paper lies dropped beside the table."
+  },
+  {
+   "t0": 35.38,
+   "t1": 38.53,
+   "beat": "fact",
+   "say": "According to documents published by Alexander Herzen,"
+  },
+  {
+   "t0": 38.75,
+   "t1": 41.68,
+   "beat": "fact",
+   "say": "Alexei was strangled by order of Peter the Great."
+  },
+  {
+   "t0": 42.28,
+   "t1": 45.34,
+   "beat": "fact",
+   "say": "Ge himself wrote that after studying the documents,"
+  },
+  {
+   "t0": 45.56,
+   "t1": 47.57,
+   "beat": "fact",
+   "say": "there could be no sympathy for Peter."
+  },
+  {
+   "t0": 48.17,
+   "t1": 50.47,
+   "beat": "flip",
+   "say": "This isn't a father hoping for remorse."
+  },
+  {
+   "t0": 51.07,
+   "t1": 53.36,
+   "beat": "flip",
+   "say": "It's a judge who has already decided."
+  },
+  {
+   "t0": 54.16,
+   "t1": 56.09,
+   "beat": "question",
+   "say": "So was Peter looking for remorse,"
+  },
+  {
+   "t0": 56.31,
+   "t1": 58.04,
+   "beat": "question",
+   "say": "or only waiting to sign?"
+  }
+ ]
+}
