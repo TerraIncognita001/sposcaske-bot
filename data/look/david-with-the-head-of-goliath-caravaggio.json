@@ -1,0 +1,95 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "darkness"
+   ]
+  },
+  {
+   "name": "david",
+   "box": [
+    0.0,
+    0.17,
+    0.86,
+    1.0
+   ],
+   "words": [
+    "youth",
+    "victor"
+   ]
+  },
+  {
+   "name": "david_face",
+   "box": [
+    0.36,
+    0.18,
+    0.53,
+    0.42
+   ],
+   "words": [
+    "face",
+    "sadness"
+   ]
+  },
+  {
+   "name": "head",
+   "box": [
+    0.71,
+    0.55,
+    0.89,
+    0.86
+   ],
+   "words": [
+    "head",
+    "giant"
+   ]
+  },
+  {
+   "name": "head_face",
+   "box": [
+    0.72,
+    0.62,
+    0.88,
+    0.84
+   ],
+   "words": [
+    "eyes",
+    "mouth"
+   ]
+  },
+  {
+   "name": "sword",
+   "box": [
+    0.0,
+    0.73,
+    0.42,
+    1.0
+   ],
+   "words": [
+    "sword",
+    "blade"
+   ]
+  },
+  {
+   "name": "hand_hair",
+   "box": [
+    0.74,
+    0.43,
+    0.87,
+    0.56
+   ],
+   "words": [
+    "hand",
+    "grip"
+   ]
+  }
+ ],
+ "summary": "A young man, lit from the left, holds a sword in one hand and in the other the severed, bleeding head of a bearded man by its hair. He looks down at the head with a troubled face."
+}
