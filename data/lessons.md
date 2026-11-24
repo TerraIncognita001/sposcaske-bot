@@ -1,6 +1,6 @@
 # Lessons from our own videos
 
-Written by `learn.py` on 2026-11-24T21:23Z from `data/stats.json`. Do not edit by hand.
+Written by `learn.py` on 2026-11-24T22:19Z from `data/stats.json`. Do not edit by hand.
 
 Learning is **ON**: 16 videos counted (on at 8 videos public for 3 days; a value needs 3 videos).
 
@@ -26,10 +26,10 @@ Learning is **ON**: 16 videos counted (on at 8 videos public for 3 days; a value
 | 2026-11-21 15:00 | 127 | 0.504 | 48.48 | 10.51 | This painting may hide the quietest pain ever given to a saint. | 34.3 s −7.9 % [look: There's remorse there.]; 39.9 s −4.8 % [feeling: As if she can no longer bear]; 67.6 s −4.8 % [empathy: at the lowest moment of your life.] |
 | 2026-11-22 02:00 | 272 | 0.512 | 62.08 | 11.53 | What if the famous knight of faith in this engraving was never a hero? | 3.8 s −14.9 % [hook: What if the famous knight of faith]; 6.3 s −6.4 % [hook: in this engraving was never a hero?]; 9.4 s −27.7 % [ident: Death and the Devil,] |
 | 2026-11-22 15:00 | 270 | 0.413 | 56.66 | 10.72 | There's something heavy about the way this jester sits through the party in silence. | 14.3 s −3.0 % [setup: A jester sits alone in a dark room]; 22.4 s −4.0 % [triad: The jester doesn't dance. The jester doesn't joke.]; 27.0 s −2.0 % [triad: The jester just stares.] |
-| 2026-11-23 02:00 | 95 | 0.585 | 50.81 | 11.3 | There's a cruel detail behind this sweet love song that most people never notice. | — |
-| 2026-11-23 15:00 | 309 | — | — | 5.98 | Every time he came home, this face was waiting above his door. | — |
-| 2026-11-24 02:00 | 60 | — | — | 4.29 | This woman is about to win, and she has it completely wrong. | — |
-| 2026-11-24 15:00 | 158 | — | — | 5.22 | One tiny bite just turned this boy's face to pure shock. | — |
+| 2026-11-23 02:00 | 96 | 0.585 | 50.81 | 11.3 | There's a cruel detail behind this sweet love song that most people never notice. | — |
+| 2026-11-23 15:00 | 314 | — | — | 5.99 | Every time he came home, this face was waiting above his door. | — |
+| 2026-11-24 02:00 | 69 | — | — | 4.43 | This woman is about to win, and she has it completely wrong. | — |
+| 2026-11-24 15:00 | 168 | — | — | 5.28 | One tiny bite just turned this boy's face to pure shock. | — |
 
 ## What worked (mean score of the videos with this value; multiplier 1.0 = too few videos to say)
 
