@@ -1,0 +1,336 @@
+{
+ "id": "insane-woman-gricault",
+ "kind": "artwork",
+ "form": "hold",
+ "hook_frame": "Her ___",
+ "closer": "either_or",
+ "detail": "eyes",
+ "home": "face",
+ "subject": {
+  "title": "Monomaniac of Envy",
+  "creator": "Théodore Géricault",
+  "year": null,
+  "wikidata": "Q3210764"
+ },
+ "lead": {
+  "commons": "La_Monomane_de_l'envie.jpg",
+  "width_px": 3840,
+  "aspect": 0.8276,
+  "px": 31646,
+  "license": "Public domain",
+  "credit": "La Monomane de l'envie — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Théodore Géricault",
+  "credit": "Portrait of Théodore Géricault — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "darkness"
+   ]
+  },
+  {
+   "name": "woman",
+   "box": [
+    0.06,
+    0.04,
+    0.9,
+    1.0
+   ],
+   "words": [
+    "woman",
+    "patient"
+   ]
+  },
+  {
+   "name": "bonnet",
+   "box": [
+    0.2,
+    0.04,
+    0.7,
+    0.48
+   ],
+   "words": [
+    "bonnet"
+   ]
+  },
+  {
+   "name": "face",
+   "box": [
+    0.31,
+    0.21,
+    0.6,
+    0.47
+   ],
+   "words": [
+    "face",
+    "grandmother"
+   ]
+  },
+  {
+   "name": "eyes",
+   "box": [
+    0.33,
+    0.3,
+    0.52,
+    0.355
+   ],
+   "words": [
+    "eyes",
+    "lids"
+   ]
+  },
+  {
+   "name": "mouth",
+   "box": [
+    0.36,
+    0.41,
+    0.49,
+    0.47
+   ],
+   "words": [
+    "mouth",
+    "grin"
+   ]
+  },
+  {
+   "name": "shawl",
+   "box": [
+    0.06,
+    0.45,
+    0.9,
+    1.0
+   ],
+   "words": [
+    "shawl"
+   ]
+  }
+ ],
+ "punch": "WATCHING",
+ "sentences": [
+  {
+   "slot": "H1",
+   "text": "Her eyes are rimmed with red, and they never stop watching.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "H2",
+   "text": "Everyone sees a harmless old woman in a bonnet.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "woman",
+     "to": "face"
+    },
+    {
+     "on": "bonnet",
+     "to": "bonnet"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "Her shawl is pulled tight.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "shawl",
+     "to": "shawl"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "Her mouth twists into a sly grin.",
+   "kind": "FACT",
+   "source": 26,
+   "show": [
+    {
+     "on": "grin",
+     "to": "mouth"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "And her red eyes slide to the side.",
+   "kind": "FACT",
+   "source": 26,
+   "show": [
+    {
+     "on": "eyes",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "H4",
+   "text": "Théodore Géricault painted her as one of ten portraits of the insane.",
+   "kind": "FACT",
+   "source": 2
+  },
+  {
+   "slot": "H5",
+   "text": "Only five of them survive today.",
+   "kind": "FACT",
+   "source": 2
+  },
+  {
+   "slot": "H5",
+   "text": "So why would a famous painter sit with madness?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "madness",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "H6",
+   "text": "The answer is in her nickname.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "H7",
+   "text": "She is also called the Hyena of the Salpêtrière.",
+   "kind": "FACT",
+   "source": 1,
+   "show": [
+    {
+     "on": "hyena",
+     "to": "mouth"
+    }
+   ]
+  },
+  {
+   "slot": "H7",
+   "text": "Géricault painted patients of that Paris asylum.",
+   "kind": "FACT",
+   "source": 7
+  },
+  {
+   "slot": "H7",
+   "text": "He also studied the heads of guillotine victims.",
+   "kind": "FACT",
+   "source": 6
+  },
+  {
+   "slot": "H8",
+   "text": "She isn't a sweet grandmother.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "grandmother",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "H8",
+   "text": "She's envy, painted from life.",
+   "kind": "FACT",
+   "source": 1,
+   "show": [
+    {
+     "on": "envy",
+     "to": "eyes"
+    }
+   ]
+  },
+  {
+   "slot": "H9",
+   "text": "So is she just old and tired, or still watching you with envy?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "envy",
+     "to": "eyes"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Géricault": "zheh-ree-koh",
+  "Salpêtrière": "sal-peh-tree-air",
+  "Théodore": "tay-o-dor"
+ },
+ "meta": {
+  "title": "The Old Woman Who Was Called the HYENA #history #art",
+  "description": "Monomaniac of Envy is one of ten portraits of the insane that Théodore Géricault painted of patients of Paris hospitals; only five survive. It is also known as the Hyena of the Salpêtrière and hangs in the Museum of Fine Arts of Lyon.",
+  "tags": [
+   "art history",
+   "gericault",
+   "monomaniac of envy",
+   "salpetriere",
+   "romanticism"
+  ],
+  "question": "Old and tired, or still watching you with envy?"
+ },
+ "sources": [
+  {
+   "claim": "It focuses on the woman's detailed facial features, including her \"sly grin\" and \"red-rimmed lids.\" Gallery The four other surviving works in the Portraits of the Insane series are pictured below.",
+   "url": "https://en.wikipedia.org/wiki/Monomaniac_of_Envy",
+   "note": "sentence H3"
+  },
+  {
+   "claim": "It focuses on the woman's detailed facial features, including her \"sly grin\" and \"red-rimmed lids.\" Gallery The four other surviving works in the Portraits of the Insane series are pictured below.",
+   "url": "https://en.wikipedia.org/wiki/Monomaniac_of_Envy",
+   "note": "sentence H3"
+  },
+  {
+   "claim": "Painted as part of his series of ten portraits on the mentally ill, it is one of only five known to survive today.",
+   "url": "https://en.wikipedia.org/wiki/Monomaniac_of_Envy",
+   "note": "sentence H4"
+  },
+  {
+   "claim": "Painted as part of his series of ten portraits on the mentally ill, it is one of only five known to survive today.",
+   "url": "https://en.wikipedia.org/wiki/Monomaniac_of_Envy",
+   "note": "sentence H5"
+  },
+  {
+   "claim": "Monomaniac of Envy (Monomane de l’envie), also known by the name of Hyena of Salpêtrière, Portrait of a Woman Suffering from Obsessive Envy, and Manic Envy, is an oil-on-canvas painting by the French ",
+   "url": "https://en.wikipedia.org/wiki/Monomaniac_of_Envy",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "Description The Portraits of the Insane depict patients from the Paris mental hospitals La Salpêtrière and Bicêtre.",
+   "url": "https://en.wikipedia.org/wiki/Monomaniac_of_Envy",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "In addition to analyzing faces of patients in hospitals and institutions for the criminally insane, he also studied the heads of guillotine victims.",
+   "url": "https://en.wikipedia.org/wiki/Monomaniac_of_Envy",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "Monomaniac of Envy (Monomane de l’envie), also known by the name of Hyena of Salpêtrière, Portrait of a Woman Suffering from Obsessive Envy, and Manic Envy, is an oil-on-canvas painting by the French ",
+   "url": "https://en.wikipedia.org/wiki/Monomaniac_of_Envy",
+   "note": "sentence H8"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-24"
+}

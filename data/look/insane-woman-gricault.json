@@ -1,0 +1,93 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "darkness"
+   ]
+  },
+  {
+   "name": "woman",
+   "box": [
+    0.06,
+    0.04,
+    0.9,
+    1.0
+   ],
+   "words": [
+    "woman",
+    "patient"
+   ]
+  },
+  {
+   "name": "bonnet",
+   "box": [
+    0.2,
+    0.04,
+    0.7,
+    0.48
+   ],
+   "words": [
+    "bonnet"
+   ]
+  },
+  {
+   "name": "face",
+   "box": [
+    0.31,
+    0.21,
+    0.6,
+    0.47
+   ],
+   "words": [
+    "face",
+    "grandmother"
+   ]
+  },
+  {
+   "name": "eyes",
+   "box": [
+    0.33,
+    0.3,
+    0.52,
+    0.355
+   ],
+   "words": [
+    "eyes",
+    "lids"
+   ]
+  },
+  {
+   "name": "mouth",
+   "box": [
+    0.36,
+    0.41,
+    0.49,
+    0.47
+   ],
+   "words": [
+    "mouth",
+    "grin"
+   ]
+  },
+  {
+   "name": "shawl",
+   "box": [
+    0.06,
+    0.45,
+    0.9,
+    1.0
+   ],
+   "words": [
+    "shawl"
+   ]
+  }
+ ],
+ "summary": "An old woman in a crumpled white bonnet and a dark shawl over a red scarf looks sideways out of the dark, with red-rimmed eyes and a twisted, tight-lipped smile."
+}
