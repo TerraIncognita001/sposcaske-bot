@@ -62,7 +62,10 @@ def metadata(story, report):
     credits = [f"- {v.get('credit') or k}" for k, v in story["images"].items()]
     desc = m["description"].strip() + "\n\nPictures (public domain, Wikimedia Commons):\n" + "\n".join(credits) + "\n\nSources:\n" + "\n".join(
         f"- {s['url']}" for s in story.get("sources", [])) + "\n\nThe narration is a synthetic voice."
-    return {"title": m["title"][:100], "description": desc, "tags": m.get("tags", []), "pinned_question": m.get("question"), "categoryId": "27",
+    title = re.sub(r"\s*#\w+", "", m["title"]).replace("...", ",").replace("…", ",").strip()    # v1.22: no hashtags or '...' in the title (Andrii, Nov 24)
+    title = re.sub(r"\b[A-Z]{2,}\b", lambda w: w.group(0) if re.match(r"^[IVXLCDM]+$", w.group(0)) else w.group(0).lower(), title)    # a CAPS word of a v1.18 script -> plain
+    desc += "\n\n#history #art"
+    return {"title": title[:100], "description": desc, "tags": m.get("tags", []), "pinned_question": m.get("question"), "categoryId": "27",
             "story": story["id"], "artwork": f"{art['title']} ({art['artist']}, {art['year']})", "pictures": report}
 
 

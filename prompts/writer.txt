@@ -217,7 +217,7 @@ T8  FLIP. Two short sentences: "<She | He | It | This> isn't <the usual reading>
 T9  QUESTION. One sentence, 6-16 words, beginning "So" and ending "?": which reading the viewer now believes.
 Mean sentence length at most 12 words.
 
-### 3h. FORM hold (v1.19, Andrii, Nov 21: 'так, викочуй hold в main'; 80-130 words, about 40-55 seconds)
+### 3h. FORM hold (v1.19, Andrii, Nov 21: 'так, викочуй hold в main'; v1.22: 70-115 words, about 30-45 seconds)
 Built on where OUR viewers left (14 videos): in the hook at 3-6 seconds (15-49 % of them) and on the ident line
 "painted by X in YEAR" at 10-13 seconds (7-27 %, in every video). So this form has NO ident at the start, a hook of
 at most 12 words, a new thing on screen every two or three seconds, a second question in the middle, and a last line
@@ -238,8 +238,10 @@ H6  RE-HOOK. One sentence, 4-8 words, beginning "But" or "The answer": the answe
 H7  FACTS. Two to four sentences, each a FACT with its number, that answer H2 and H5. No guessing.
 H8  FLIP. Two sentences of 2-6 words: "<He | She | It> isn't <the reading of H2>." then "<He's | She's | It's> <what the
     facts show>."
-H9  QUESTION. One sentence, 8-14 words, ending "?": the two readings as a choice ("Is he ___, or ___?"). Send its last
-    word to the detail with "show": the video ends on the frame it opened on, so it loops.
+H9  LOOP. One sentence, 8-18 words: either a question with the two readings as a choice ("Is he ___, or ___?"), or
+    (v1.22) a line whose end flows straight into the hook's first words, so the video loops ("... and his face is
+    still in this boy's hand." -> "The severed head in this boy's hand ..."). Send its last word to the detail with
+    "show": the video ends on the frame it opened on.
 NO WATER (3x) holds here too: at least three FACT sentences with "source", at most one guess. Mean sentence length
 at most 10 words. No triads, no "Imagine". Name things of LOOK with their own words; use "show" for a word that
 does not name its thing.
@@ -283,16 +285,11 @@ images. For each: a key, a search query for Wikimedia Commons, and the words of 
           "tags": ["art history", "..."], "question": "<the S13 question, short>"}}
 "show" is optional: use it when a sentence should go to a particular thing on a word that does not name it.
 
-### 7a. THE TITLE (v1.18, measured on 100 videos of the niche, 11.7M views; our own best two are the first pattern)
-The title follows the form:
-  twist                      ACTION AND TURN: "<Subject> <did X>... and <found / became Y>"  ("They Opened the Painting...
-                             and Found a DRAGON"). The "..." is required.
-  riddle, investigation      WHY: "Why <the odd detail>?"  ("Why They Put a Crown on a Bare Skull")
-  legend, hold               ACTION AND TURN (above) or WHO (below)
-  emotion, scene             WHO: "The <noun> Who / That <did the extraordinary thing>"  ("The Artist Who Lived Inside a
-                             Rock for a Week"): the figure's ACTION, never a description ("that hands Goya his pen" held
-                             51 views, "who called his own portrait too true" 683).
-Title Case, ONE key word in CAPITALS, at most 70 characters, then " #history #art". No lie: the video answers it.
+### 7a. THE TITLE (v1.22, Andrii, Nov 24: 'Поверніть стиль ранніх назв'; our best: "The eyes of Lucifer that never
+close" 1247 views, "The pope who called his own portrait too true" 704)
+One short intriguing sentence about the detail or the figure, in sentence case: at most 45 characters, 4+ words,
+NO word in capitals, NO '...', NO hashtags (the bot puts #history #art into the description). No lie: the video
+answers it.
 
 ### 8. Before you answer, check
 [ ] the form fits the picture, and every slot of that form is there, in order, with its own code
