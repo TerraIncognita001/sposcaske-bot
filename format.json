@@ -374,7 +374,7 @@
    "pad_x_frac_ws": 0.041,
    "pad_y_frac_hs": 0.012,
    "line_pitch_frac_hs": 0.036,
-   "center_y_frac_hs": 0.4,
+   "center_y_frac_hs": 0.863,
    "max_chars_per_line": 44,
    "max_lines": 2,
    "max_words": 9,
@@ -382,10 +382,11 @@
    "lowercase": true,
    "strip_punctuation": true,
    "keep_proper_nouns": true,
-   "_v1.22": "Andrii, Nov 24: 'субтитри зробіть у 2 рази більшими й розташуйте трохи вище центру, щоб їх не перекривав інтерфейс YouTube'. Before: scale 1, center 0.863 of the stage.",
-   "scale": 2.0,
+   "_v1.22": "Andrii, Nov 24: 'субтитри зробіть у 2 рази більшими' (demo 1: x2, above the middle: it covered the faces), then 'зроби субтитри ще трішечки більшими і постав зразу під фото': x2.3, on the black right under the picture. Before: x1 at 0.863 of the stage.",
+   "scale": 2.3,
    "max_width_frac_ws": 0.9,
-   "under_title_y_frac_hs": 0.87
+   "place": "under_stage",
+   "gap_frac_hs": 0.02
   },
   "bare": {
    "font": "Poppins-SemiBold.ttf",

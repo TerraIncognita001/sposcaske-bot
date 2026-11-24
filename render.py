@@ -798,13 +798,11 @@ def render(story_path, out_path):
             st[y:y + th, x:x + tw] = (st[y:y + th, x:x + tw] * (1 - al) + rgb * al).astype(np.uint8)
         if i >= n - T["end_black_frames"]:
             st[:] = 0                                                  # the last frames: black, the caption stays
-        for c0, c1, (rgb, al) in caps:
+        under = F["captions"]["boxed"].get("place") == "under_stage"   # v1.22 (Andrii, Nov 24: 'постав зразу під фото'): the caption sits on the black below the picture
+        for c0, c1, (rgb, al) in caps if not under else []:
             if c0 <= t < c1:
                 bh, bw = rgb.shape[:2]
-                cy = F["captions"]["boxed"]["center_y_frac_hs"]
-                if title is not None and ev["title_on"] <= t < ev["title_off"]:
-                    cy = F["captions"]["boxed"].get("under_title_y_frac_hs", cy)    # v1.22: under the red word, not across it
-                x, y = (sw - bw) // 2, int(min(cy * sh - bh / 2, sh - bh))
+                x, y = (sw - bw) // 2, int(min(F["captions"]["boxed"]["center_y_frac_hs"] * sh - bh / 2, sh - bh))
                 st[y:y + bh, x:x + bw] = (st[y:y + bh, x:x + bw] * (1 - al) + rgb * al).astype(np.uint8)
                 break
         u = (t - ev["burn"]) / TR["burn"]["dur_s"]
@@ -816,6 +814,14 @@ def render(story_path, out_path):
                 k_ = 1.0 if d < 1.5 / FPS else (1 - d / TR["white_flash"]["decay_s"]) ** 1.2      # one full-white frame, then it clears
                 st = (st + (255 - st) * k_).astype(np.uint8)
         canvas[y_off:y_off + sh] = st
+        if under:
+            canvas[y_off + sh:] = 0
+            for c0, c1, (rgb, al) in caps:
+                if c0 <= t < c1:
+                    bh, bw = rgb.shape[:2]
+                    x, y = (CW - bw) // 2, min(CH - bh, y_off + sh + int(F["captions"]["boxed"].get("gap_frac_hs", 0.02) * sh))
+                    canvas[y:y + bh, x:x + bw] = (canvas[y:y + bh, x:x + bw] * (1 - al) + rgb * al).astype(np.uint8)
+                    break
         ff.stdin.write(canvas.tobytes())
     ff.stdin.close()
     ff.wait()
