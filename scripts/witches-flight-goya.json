@@ -1,0 +1,327 @@
+{
+ "id": "witches-flight-goya",
+ "kind": "artwork",
+ "form": "twist",
+ "hook_frame": "What if ___?",
+ "closer": "either_or",
+ "detail": "caps",
+ "home": null,
+ "subject": {
+  "title": "Witches' Flight",
+  "creator": "Francisco Goya",
+  "year": 1798,
+  "wikidata": "Q15728649"
+ },
+ "lead": {
+  "commons": "Francisco_de_Goya_-_Vuelo_de_brujas_(1798).jpg",
+  "width_px": 3840,
+  "aspect": 0.7005,
+  "px": 2068,
+  "license": "Public domain",
+  "credit": "Francisco de Goya - Vuelo de brujas (1798) — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Francisco Goya",
+  "credit": "Portrait of Francisco Goya — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "night"
+   ]
+  },
+  {
+   "name": "witches",
+   "box": [
+    0.09,
+    0.05,
+    0.8,
+    0.6
+   ],
+   "words": [
+    "witches",
+    "three"
+   ]
+  },
+  {
+   "name": "caps",
+   "box": [
+    0.33,
+    0.05,
+    0.62,
+    0.34
+   ],
+   "words": [
+    "caps",
+    "hats"
+   ]
+  },
+  {
+   "name": "victim",
+   "box": [
+    0.44,
+    0.33,
+    0.8,
+    0.52
+   ],
+   "words": [
+    "victim",
+    "figure"
+   ]
+  },
+  {
+   "name": "blanket_man",
+   "box": [
+    0.17,
+    0.63,
+    0.6,
+    0.99
+   ],
+   "words": [
+    "blanket",
+    "sheet"
+   ]
+  },
+  {
+   "name": "ground_man",
+   "box": [
+    0.07,
+    0.75,
+    0.32,
+    0.85
+   ],
+   "words": [
+    "ears",
+    "ground"
+   ]
+  },
+  {
+   "name": "donkey",
+   "box": [
+    0.78,
+    0.75,
+    1.0,
+    0.9
+   ],
+   "words": [
+    "donkey"
+   ]
+  }
+ ],
+ "punch": "CHURCH",
+ "sentences": [
+  {
+   "slot": "T1",
+   "text": "What if these flying witches are really dressed by the church?",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "witches",
+     "to": "witches"
+    },
+    {
+     "on": "church",
+     "to": "caps"
+    }
+   ]
+  },
+  {
+   "slot": "T2",
+   "text": "This is Witches' Flight, painted by Francisco Goya in 1798.",
+   "kind": "FACT",
+   "source": 1
+  },
+  {
+   "slot": "T3",
+   "text": "Most people see three witches carrying off a victim into the night.",
+   "kind": "FACT",
+   "source": 3,
+   "show": [
+    {
+     "on": "victim",
+     "to": "victim"
+    }
+   ]
+  },
+  {
+   "slot": "T3",
+   "text": "It was one of six witchcraft paintings bought by the Duke and Duchess of Osuna.",
+   "kind": "FACT",
+   "source": 2
+  },
+  {
+   "slot": "T4",
+   "text": "And the picture seems to agree.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "T4",
+   "text": "One man hides under a blanket, and another covers his ears.",
+   "kind": "FACT",
+   "source": 4,
+   "show": [
+    {
+     "on": "blanket",
+     "to": "blanket_man"
+    },
+    {
+     "on": "ears",
+     "to": "ground_man"
+    }
+   ]
+  },
+  {
+   "slot": "T5",
+   "text": "But look at their hats.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "hats",
+     "to": "caps"
+    }
+   ]
+  },
+  {
+   "slot": "T6",
+   "text": "They wear the pointed caps of penitents.",
+   "kind": "FACT",
+   "source": 3,
+   "show": [
+    {
+     "on": "caps",
+     "to": "caps"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "According to one reading, Goya turned the religious tribunals' accusations back on themselves.",
+   "kind": "FACT",
+   "source": 6
+  },
+  {
+   "slot": "T7",
+   "text": "Their own actions become the superstition and ritual sacrifice.",
+   "kind": "FACT",
+   "source": 6
+  },
+  {
+   "slot": "T7",
+   "text": "And the donkey beside them is a symbol of ignorance.",
+   "kind": "FACT",
+   "source": 8,
+   "show": [
+    {
+     "on": "donkey",
+     "to": "donkey"
+    }
+   ]
+  },
+  {
+   "slot": "T8",
+   "text": "It isn't a picture of witches.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "T8",
+   "text": "It's a picture of the people who hunted them.",
+   "kind": "FACT",
+   "source": 6,
+   "show": [
+    {
+     "on": "people",
+     "to": "caps"
+    }
+   ]
+  },
+  {
+   "slot": "T9",
+   "text": "So who is really doing the devouring, the witches or the judges?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "judges",
+     "to": "caps"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Goya": "goy-a",
+  "Osuna": "o-soo-na"
+ },
+ "meta": {
+  "title": "The witches who wore the church's hats",
+  "description": "Witches' Flight was painted by Francisco Goya in 1798 for the Duke and Duchess of Osuna and is now in the Prado. The witches wear penitential coroza caps, and one reading sees the accusations of religious tribunals turned back on the accusers.",
+  "tags": [
+   "art history",
+   "goya",
+   "witches flight",
+   "prado",
+   "inquisition"
+  ],
+  "question": "The witches, or the judges?"
+ },
+ "sources": [
+  {
+   "claim": "Witches' Flight (Spanish: Vuelo de Brujas, also known as Witches in Flight or Witches in the Air) is an oil-on-canvas painting completed in 1798 by the Spanish painter Francisco Goya.",
+   "url": "https://en.wikipedia.org/wiki/Witches'_Flight",
+   "note": "sentence T2"
+  },
+  {
+   "claim": "It has been described as \"the most beautiful and powerful of Goya's Osuna witch paintings.\" Description At center point are three semi-nude witches wearing either penitential coroza or dunce caps.} be",
+   "url": "https://en.wikipedia.org/wiki/Witches'_Flight",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "The work was part of a series of six paintings related to witchcraft acquired by the Duke and Duchess of Osuna in 1798.",
+   "url": "https://en.wikipedia.org/wiki/Witches'_Flight",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "Below, two figures in peasants' garb recoil from the spectacle: one has thrown himself to the ground covering his ears, the other attempts to escape by covering himself with a blanket, making the  fig",
+   "url": "https://en.wikipedia.org/wiki/Witches'_Flight",
+   "note": "sentence T4"
+  },
+  {
+   "claim": "It has been described as \"the most beautiful and powerful of Goya's Osuna witch paintings.\" Description At center point are three semi-nude witches wearing either penitential coroza or dunce caps.} be",
+   "url": "https://en.wikipedia.org/wiki/Witches'_Flight",
+   "note": "sentence T6"
+  },
+  {
+   "claim": "The accusations of religious tribunals are thus reflected back on themselves, whose actions are implicitly equated with superstition and ritual sacrifice.",
+   "url": "https://en.wikipedia.org/wiki/Witches'_Flight",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "The accusations of religious tribunals are thus reflected back on themselves, whose actions are implicitly equated with superstition and ritual sacrifice.",
+   "url": "https://en.wikipedia.org/wiki/Witches'_Flight",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "The donkey is a traditional symbol of ignorance.",
+   "url": "https://en.wikipedia.org/wiki/Witches'_Flight",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "The accusations of religious tribunals are thus reflected back on themselves, whose actions are implicitly equated with superstition and ritual sacrifice.",
+   "url": "https://en.wikipedia.org/wiki/Witches'_Flight",
+   "note": "sentence T8"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-25"
+}

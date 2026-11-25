@@ -1,0 +1,94 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "night"
+   ]
+  },
+  {
+   "name": "witches",
+   "box": [
+    0.09,
+    0.05,
+    0.8,
+    0.6
+   ],
+   "words": [
+    "witches",
+    "three"
+   ]
+  },
+  {
+   "name": "caps",
+   "box": [
+    0.33,
+    0.05,
+    0.62,
+    0.34
+   ],
+   "words": [
+    "caps",
+    "hats"
+   ]
+  },
+  {
+   "name": "victim",
+   "box": [
+    0.44,
+    0.33,
+    0.8,
+    0.52
+   ],
+   "words": [
+    "victim",
+    "figure"
+   ]
+  },
+  {
+   "name": "blanket_man",
+   "box": [
+    0.17,
+    0.63,
+    0.6,
+    0.99
+   ],
+   "words": [
+    "blanket",
+    "sheet"
+   ]
+  },
+  {
+   "name": "ground_man",
+   "box": [
+    0.07,
+    0.75,
+    0.32,
+    0.85
+   ],
+   "words": [
+    "ears",
+    "ground"
+   ]
+  },
+  {
+   "name": "donkey",
+   "box": [
+    0.78,
+    0.75,
+    1.0,
+    0.9
+   ],
+   "words": [
+    "donkey"
+   ]
+  }
+ ],
+ "summary": "Three half-naked witches in tall pointed caps fly in the night sky carrying a writhing naked figure. Below, one peasant lies on the ground covering his ears, another hides under a white blanket, and a donkey stands on the right."
+}
