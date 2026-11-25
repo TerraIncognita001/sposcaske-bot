@@ -21,7 +21,7 @@
     0.88
    ],
    "words": [
-    "woman"
+    "robe"
    ]
   },
   {
@@ -59,8 +59,7 @@
     0.94
    ],
    "words": [
-    "stream",
-    "poison"
+    "stream"
    ]
   },
   {
@@ -100,6 +99,20 @@
    ],
    "words": [
     "feet"
+   ]
+  },
+  {
+   "name": "upper",
+   "box": [
+    0.24,
+    0.14,
+    0.8,
+    0.45
+   ],
+   "words": [
+    "figure",
+    "woman",
+    "poison"
    ]
   }
  ],
