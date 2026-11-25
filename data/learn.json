@@ -1,61 +1,61 @@
 {
  "_about": "written by learn.py (v1.09) from data/stats.json. on = false: the bot ignores this file.",
- "updated": "2026-11-25T05:23Z",
+ "updated": "2026-11-25T21:21Z",
  "on": true,
- "videos_counted": 17,
+ "videos_counted": 18,
  "rule": "on at 8 videos public for 3 days; a value needs 3 videos",
  "mult": {
   "form": {
    "emotion": {
     "n": 4,
-    "mean": 12.57,
-    "m": 1.17
+    "mean": 12.52,
+    "m": 1.16
    },
    "twist": {
     "n": 4,
-    "mean": 11.8,
-    "m": 1.1
+    "mean": 11.83,
+    "m": 1.09
    },
    "riddle": {
-    "n": 9,
-    "mean": 9.47,
-    "m": 0.88
+    "n": 10,
+    "mean": 9.71,
+    "m": 0.9
    }
   },
   "hook_frame": {
    "reason": {
     "n": 1,
-    "mean": 12.21,
+    "mean": 12.2,
     "m": 1.0
    },
    "may_hide": {
     "n": 3,
-    "mean": 11.91,
-    "m": 1.11
+    "mean": 11.88,
+    "m": 1.1
    },
    "this_x": {
     "n": 2,
-    "mean": 11.73,
+    "mean": 11.74,
     "m": 1.0
    },
    "something_about": {
-    "n": 3,
-    "mean": 10.84,
-    "m": 1.01
+    "n": 4,
+    "mean": 11.07,
+    "m": 1.02
    },
    "what_if": {
     "n": 4,
-    "mean": 10.66,
+    "mean": 10.7,
     "m": 0.99
    },
    "detail_most_miss": {
     "n": 2,
-    "mean": 10.13,
+    "mean": 10.1,
     "m": 1.0
    },
    "why": {
     "n": 1,
-    "mean": 9.56,
+    "mean": 9.57,
     "m": 1.0
    },
    "about_to": {
@@ -71,27 +71,27 @@
     "m": 1.06
    },
    "open": {
-    "n": 5,
-    "mean": 10.18,
-    "m": 0.95
+    "n": 6,
+    "mean": 10.44,
+    "m": 0.97
    }
   },
   "kind": {
    "artwork": {
-    "n": 16,
-    "mean": 11.03,
-    "m": 1.03
+    "n": 17,
+    "mean": 11.07,
+    "m": 1.02
    }
   },
   "theme": {
    "watcher": {
     "n": 5,
-    "mean": 12.28,
-    "m": 1.14
+    "mean": 12.22,
+    "m": 1.13
    },
    " holy or feared": {
     "n": 1,
-    "mean": 12.21,
+    "mean": 12.2,
     "m": 1.0
    },
    "pact": {
@@ -100,69 +100,69 @@
     "m": 1.0
    },
    "false calm": {
-    "n": 5,
-    "mean": 10.42,
-    "m": 0.97
+    "n": 6,
+    "mean": 10.6,
+    "m": 0.98
    },
    "fallen": {
     "n": 2,
-    "mean": 10.04,
+    "mean": 10.11,
     "m": 1.0
    },
    "innocence in danger": {
     "n": 2,
-    "mean": 9.32,
+    "mean": 9.54,
     "m": 1.0
    }
   },
   "century": {
    "17th": {
     "n": 2,
-    "mean": 12.41,
+    "mean": 12.43,
     "m": 1.0
    },
    "16th": {
     "n": 5,
-    "mean": 11.46,
-    "m": 1.07
+    "mean": 11.45,
+    "m": 1.06
    },
    "19th": {
-    "n": 7,
-    "mean": 9.88,
-    "m": 0.92
+    "n": 8,
+    "mean": 10.13,
+    "m": 0.94
    },
    "18th": {
     "n": 2,
-    "mean": 9.71,
+    "mean": 9.65,
     "m": 1.0
    }
   },
   "length": {
    "over 75 s": {
     "n": 4,
-    "mean": 12.57,
-    "m": 1.17
+    "mean": 12.52,
+    "m": 1.16
    },
    "60-75 s": {
     "n": 5,
-    "mean": 10.65,
+    "mean": 10.67,
     "m": 0.99
    },
    "under 60 s": {
-    "n": 8,
-    "mean": 9.9,
-    "m": 0.92
+    "n": 9,
+    "mean": 10.11,
+    "m": 0.94
    }
   },
   "writer": {
    "claude": {
-    "n": 14,
-    "mean": 11.25,
+    "n": 15,
+    "mean": 11.3,
     "m": 1.05
    },
    "gemini": {
     "n": 2,
-    "mean": 9.43,
+    "mean": 9.36,
     "m": 1.0
    },
    "hand": {
@@ -174,34 +174,34 @@
   "title_pattern": {
    "action": {
     "n": 2,
-    "mean": 11.87,
+    "mean": 11.91,
     "m": 1.0
    },
    "who": {
     "n": 6,
-    "mean": 11.06,
+    "mean": 11.08,
     "m": 1.03
    },
    "other": {
     "n": 7,
-    "mean": 11.0,
-    "m": 1.02
+    "mean": 10.95,
+    "m": 1.01
    },
    "why": {
-    "n": 1,
-    "mean": 9.31,
+    "n": 2,
+    "mean": 10.59,
     "m": 1.0
    }
   }
  },
  "judge_weights": {
-  "G": 1.02,
-  "D": 1.37,
+  "G": 0.99,
+  "D": 1.4,
   "F": 0.61,
-  "T": 0.64,
+  "T": 0.62,
   "Y": 1.0,
   "S": 1.0
  },
  "judge_fit": -0.29,
- "mean_score": 10.75
+ "mean_score": 10.8
 }

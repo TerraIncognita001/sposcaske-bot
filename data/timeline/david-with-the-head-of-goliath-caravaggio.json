@@ -1,0 +1,113 @@
+{
+ "total": 47.29430839002268,
+ "lines": [
+  {
+   "t0": 1.65,
+   "t1": 2.66,
+   "beat": "hook",
+   "say": "The severed head"
+  },
+  {
+   "t0": 2.66,
+   "t1": 5.02,
+   "beat": "hook",
+   "say": "in this boy's hand wears the painter's face."
+  },
+  {
+   "t0": 5.67,
+   "t1": 8.06,
+   "beat": "loop",
+   "say": "Everyone sees a hero with his trophy."
+  },
+  {
+   "t0": 8.66,
+   "t1": 10.53,
+   "beat": "tour",
+   "say": "The giant's mouth hangs open."
+  },
+  {
+   "t0": 11.13,
+   "t1": 14.45,
+   "beat": "tour",
+   "say": "Tiny letters on the sword mean humility kills pride."
+  },
+  {
+   "t0": 15.05,
+   "t1": 18.22,
+   "beat": "who",
+   "say": "Caravaggio painted his own face on Goliath."
+  },
+  {
+   "t0": 18.82,
+   "t1": 20.3,
+   "beat": "stakes",
+   "say": "In 1606,"
+  },
+  {
+   "t0": 20.52,
+   "t1": 21.71,
+   "beat": "stakes",
+   "say": "he had killed a man"
+  },
+  {
+   "t0": 21.71,
+   "t1": 23.07,
+   "beat": "stakes",
+   "say": "and fled a death sentence."
+  },
+  {
+   "t0": 23.67,
+   "t1": 26.32,
+   "beat": "stakes",
+   "say": "Why would a wanted killer paint himself beheaded?"
+  },
+  {
+   "t0": 27.32,
+   "t1": 29.32,
+   "beat": "rehook",
+   "say": "The answer is in the boy's eyes."
+  },
+  {
+   "t0": 29.92,
+   "t1": 32.91,
+   "beat": "fact",
+   "say": "David looks down at him with sadness, almost pity."
+  },
+  {
+   "t0": 33.51,
+   "t1": 35.6,
+   "beat": "fact",
+   "say": "He may have sent it to the Pope's nephew,"
+  },
+  {
+   "t0": 35.82,
+   "t1": 37.33,
+   "beat": "fact",
+   "say": "who could grant pardons."
+  },
+  {
+   "t0": 37.93,
+   "t1": 39.37,
+   "beat": "flip",
+   "say": "It isn't a trophy."
+  },
+  {
+   "t0": 39.97,
+   "t1": 41.51,
+   "beat": "flip",
+   "say": "It's a plea for mercy."
+  },
+  {
+   "t0": 42.31,
+   "t1": 44.38,
+   "beat": "question",
+   "say": "He died on his way to that pardon,"
+  },
+  {
+   "t0": 44.6,
+   "t1": 46.94,
+   "beat": "question",
+   "say": "and his face is still in this boy's hand."
+  }
+ ]
+}
