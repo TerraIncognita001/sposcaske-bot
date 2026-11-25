@@ -1,6 +1,6 @@
 # Lessons from our own videos
 
-Written by `learn.py` on 2026-11-25T21:24Z from `data/stats.json`. Do not edit by hand.
+Written by `learn.py` on 2026-11-25T21:35Z from `data/stats.json`. Do not edit by hand.
 
 Learning is **ON**: 18 videos counted (on at 8 videos public for 3 days; a value needs 3 videos).
 
@@ -28,10 +28,10 @@ Learning is **ON**: 18 videos counted (on at 8 videos public for 3 days; a value
 | 2026-11-22 15:00 | 270 | 0.43 | 85.17 | 11.38 | There's something heavy about the way this jester sits through the party in silence. | 14.3 s −2.5 % [setup: A jester sits alone in a dark room]; 16.6 s −3.4 % [turn: But look at the table.]; 22.4 s −3.5 % [triad: The jester doesn't dance. The jester doesn't joke.] |
 | 2026-11-23 02:00 | 105 | 0.443 | 62.61 | 10.56 | There's a cruel detail behind this sweet love song that most people never notice. | 4.7 s −9.1 % [hook: There's a cruel detail behind this sweet love song]; 8.2 s −18.2 % [ident: This is The Lute Player,]; 10.5 s −18.2 % [ident: painted by the Italian master Caravaggio.] |
 | 2026-11-23 15:00 | 349 | 0.467 | 192.82 | 12.87 | Every time he came home, this face was waiting above his door. | 4.4 s −41.3 % [hook: this face was waiting above his door.]; 11.8 s −2.4 % [tour: One grins with an empty mouth.]; 48.3 s −133.3 % [question: or the guest who comes for everyone?] |
-| 2026-11-24 02:00 | 160 | 0.571 | 36.47 | 10.74 | This woman is about to win, and she has it completely wrong. | — |
-| 2026-11-24 15:00 | 278 | — | — | 5.81 | One tiny bite just turned this boy's face to pure shock. | — |
+| 2026-11-24 02:00 | 151 | 0.571 | 36.47 | 10.74 | This woman is about to win, and she has it completely wrong. | — |
+| 2026-11-24 15:00 | 277 | — | — | 5.81 | One tiny bite just turned this boy's face to pure shock. | — |
 | 2026-11-25 02:00 | 124 | — | — | 5.24 | This man looks deep in prayer, but he may not be alive. | — |
-| 2026-11-25 15:00 | 122 | — | — | 5.13 | Her eyes are rimmed with red, and they never stop watching. | — |
+| 2026-11-25 15:00 | 126 | — | — | 5.16 | Her eyes are rimmed with red, and they never stop watching. | — |
 
 ## What worked (mean score of the videos with this value; multiplier 1.0 = too few videos to say)
 
