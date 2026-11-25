@@ -1,0 +1,107 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "cove"
+   ]
+  },
+  {
+   "name": "sorceress",
+   "box": [
+    0.24,
+    0.14,
+    0.73,
+    0.88
+   ],
+   "words": [
+    "woman"
+   ]
+  },
+  {
+   "name": "face",
+   "box": [
+    0.36,
+    0.15,
+    0.55,
+    0.23
+   ],
+   "words": [
+    "face",
+    "eyes",
+    "glare"
+   ]
+  },
+  {
+   "name": "bowl",
+   "box": [
+    0.41,
+    0.21,
+    0.77,
+    0.26
+   ],
+   "words": [
+    "bowl"
+   ]
+  },
+  {
+   "name": "stream",
+   "box": [
+    0.5,
+    0.24,
+    0.69,
+    0.94
+   ],
+   "words": [
+    "stream",
+    "poison"
+   ]
+  },
+  {
+   "name": "water",
+   "box": [
+    0.0,
+    0.85,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "pool",
+    "depths"
+   ]
+  },
+  {
+   "name": "monster",
+   "box": [
+    0.0,
+    0.79,
+    1.0,
+    0.96
+   ],
+   "words": [
+    "monster",
+    "shapes",
+    "fins"
+   ]
+  },
+  {
+   "name": "feet",
+   "box": [
+    0.42,
+    0.85,
+    0.57,
+    0.9
+   ],
+   "words": [
+    "feet"
+   ]
+  }
+ ],
+ "summary": "A dark-haired woman in a green-black robe stands on the water of a cove, pouring bright green poison from a bowl. Under her bare feet dark fins and shapes swirl in the green depths."
+}

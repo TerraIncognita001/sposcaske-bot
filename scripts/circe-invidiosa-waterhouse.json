@@ -1,0 +1,356 @@
+{
+ "id": "circe-invidiosa-waterhouse",
+ "kind": "artwork",
+ "form": "twist",
+ "hook_frame": "What if ___?",
+ "closer": "either_or",
+ "detail": "face",
+ "home": null,
+ "subject": {
+  "title": "Circe Invidiosa",
+  "creator": "John William Waterhouse",
+  "year": 1892,
+  "wikidata": "Q5121363"
+ },
+ "lead": {
+  "commons": "J._W._Waterhouse_-_Circe_Invidiosa_-_Google_Art_Project.jpg",
+  "width_px": 3840,
+  "aspect": 0.4699,
+  "px": 2350,
+  "license": "Public domain",
+  "credit": "J. W. Waterhouse - Circe Invidiosa - Google Art Project — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "John William Waterhouse",
+  "credit": "Portrait of John William Waterhouse — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "cove"
+   ]
+  },
+  {
+   "name": "sorceress",
+   "box": [
+    0.24,
+    0.14,
+    0.73,
+    0.88
+   ],
+   "words": [
+    "woman"
+   ]
+  },
+  {
+   "name": "face",
+   "box": [
+    0.36,
+    0.15,
+    0.55,
+    0.23
+   ],
+   "words": [
+    "face",
+    "eyes",
+    "glare"
+   ]
+  },
+  {
+   "name": "bowl",
+   "box": [
+    0.41,
+    0.21,
+    0.77,
+    0.26
+   ],
+   "words": [
+    "bowl"
+   ]
+  },
+  {
+   "name": "stream",
+   "box": [
+    0.5,
+    0.24,
+    0.69,
+    0.94
+   ],
+   "words": [
+    "stream",
+    "poison"
+   ]
+  },
+  {
+   "name": "water",
+   "box": [
+    0.0,
+    0.85,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "pool",
+    "depths"
+   ]
+  },
+  {
+   "name": "monster",
+   "box": [
+    0.0,
+    0.79,
+    1.0,
+    0.96
+   ],
+   "words": [
+    "monster",
+    "shapes",
+    "fins"
+   ]
+  },
+  {
+   "name": "feet",
+   "box": [
+    0.42,
+    0.85,
+    0.57,
+    0.9
+   ],
+   "words": [
+    "feet"
+   ]
+  }
+ ],
+ "punch": "SORRY",
+ "sentences": [
+  {
+   "slot": "T1",
+   "text": "What if the witch pouring this poison is secretly sorry?",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "witch",
+     "to": "face"
+    },
+    {
+     "on": "poison",
+     "to": "stream"
+    }
+   ]
+  },
+  {
+   "slot": "T2",
+   "text": "This is Circe Invidiosa, painted by John William Waterhouse in 1892.",
+   "kind": "FACT",
+   "source": 1
+  },
+  {
+   "slot": "T3",
+   "text": "Everyone knows Circe from Ovid as the jealous witch who made a monster.",
+   "kind": "FACT",
+   "source": 3,
+   "show": [
+    {
+     "on": "monster",
+     "to": "monster"
+    }
+   ]
+  },
+  {
+   "slot": "T3",
+   "text": "Glaucus loved Scylla instead of her, so she poisoned Scylla's pool.",
+   "kind": "FACT",
+   "source": 3,
+   "show": [
+    {
+     "on": "pool",
+     "to": "water"
+    }
+   ]
+  },
+  {
+   "slot": "T4",
+   "text": "And the picture seems to agree.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "T4",
+   "text": "Green poison pours from her bowl, and dark shapes already swirl below.",
+   "kind": "FACT",
+   "source": 8,
+   "show": [
+    {
+     "on": "bowl",
+     "to": "bowl"
+    },
+    {
+     "on": "shapes",
+     "to": "monster"
+    }
+   ]
+  },
+  {
+   "slot": "T5",
+   "text": "But look at her face.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "face",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "T6",
+   "text": "It is grave, not gleeful.",
+   "kind": "FACT",
+   "source": 10,
+   "show": [
+    {
+     "on": "grave",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "According to the critic Chris Woods, Waterhouse did not paint his Circe as wholly evil.",
+   "kind": "FACT",
+   "source": 15
+  },
+  {
+   "slot": "T7",
+   "text": "Here she becomes a tragic figure who cannot help what she is doing.",
+   "kind": "FACT",
+   "source": 16,
+   "show": [
+    {
+     "on": "figure",
+     "to": "sorceress"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "And she rather regrets it.",
+   "kind": "FACT",
+   "source": 16,
+   "show": [
+    {
+     "on": "regrets",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "T8",
+   "text": "She isn't a gloating monster.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "monster",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "T8",
+   "text": "She's a woman watching her own jealousy work.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "woman",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "T9",
+   "text": "So is she a cruel witch, or a woman who cannot stop herself?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "herself",
+     "to": "face"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Circe": "sir-see",
+  "Invidiosa": "in-vid-ee-oh-sa",
+  "Glaucus": "glaw-kus",
+  "Scylla": "sil-la",
+  "Ovid": "oh-vid"
+ },
+ "meta": {
+  "title": "The witch who poured her poison with regret",
+  "description": "Circe Invidiosa was painted by John William Waterhouse in 1892 and is in the Art Gallery of South Australia. Following Ovid, Circe poisons Scylla's pool out of jealousy; the critic Chris Woods sees her here as a tragic figure who regrets what she is doing.",
+  "tags": [
+   "art history",
+   "waterhouse",
+   "circe",
+   "ovid",
+   "pre-raphaelite"
+  ],
+  "question": "A cruel witch, or a woman who cannot stop herself?"
+ },
+ "sources": [
+  {
+   "claim": "Circe Invidiosa is a painting by John William Waterhouse completed in 1892.",
+   "url": "https://en.wikipedia.org/wiki/Circe_Invidiosa",
+   "note": "sentence T2"
+  },
+  {
+   "claim": "This mythological portrayal is based on  Ovid's tale in Metamorphoses, wherein Circe turns Scylla into a sea monster, solely because Glaucus scorned the enchantress' romantic advances in hopes of atta",
+   "url": "https://en.wikipedia.org/wiki/Circe_Invidiosa",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "This mythological portrayal is based on  Ovid's tale in Metamorphoses, wherein Circe turns Scylla into a sea monster, solely because Glaucus scorned the enchantress' romantic advances in hopes of atta",
+   "url": "https://en.wikipedia.org/wiki/Circe_Invidiosa",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "Under her feet, Scylla's \"barking shapes\" already swirl in the bubbling depths below; the transformation is well underway.",
+   "url": "https://en.wikipedia.org/wiki/Circe_Invidiosa",
+   "note": "sentence T4"
+  },
+  {
+   "claim": "Rather, the power of Circe's grave face and tangible jealousy rules this scene, as the vivid colors swirl all around her figure.",
+   "url": "https://en.wikipedia.org/wiki/Circe_Invidiosa",
+   "note": "sentence T6"
+  },
+  {
+   "claim": "However, Chris Woods argues Waterhouse's portrayals of Circe are not wholly evil, destructive, or monstrous, much like one sees in paintings of female mythological figures by Gustave Moreau or other E",
+   "url": "https://en.wikipedia.org/wiki/Circe_Invidiosa",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "In this painting, Circe becomes a tragic figure: she \"cannot help what [she is] doing, and rather regret[s] it.\" See also Circe in the arts List of paintings by John William Waterhouse References",
+   "url": "https://en.wikipedia.org/wiki/Circe_Invidiosa",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "In this painting, Circe becomes a tragic figure: she \"cannot help what [she is] doing, and rather regret[s] it.\" See also Circe in the arts List of paintings by John William Waterhouse References",
+   "url": "https://en.wikipedia.org/wiki/Circe_Invidiosa",
+   "note": "sentence T7"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-25"
+}
