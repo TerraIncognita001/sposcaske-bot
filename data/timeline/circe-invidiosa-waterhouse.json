@@ -1,0 +1,137 @@
+{
+ "total": 56.297868480725626,
+ "lines": [
+  {
+   "t0": 1.65,
+   "t1": 2.96,
+   "beat": "hook",
+   "say": "What if the witch pouring"
+  },
+  {
+   "t0": 2.96,
+   "t1": 4.74,
+   "beat": "hook",
+   "say": "this poison is secretly sorry?"
+  },
+  {
+   "t0": 5.39,
+   "t1": 7.53,
+   "beat": "ident",
+   "say": "This is Circe Invidiosa,"
+  },
+  {
+   "t0": 7.75,
+   "t1": 11.19,
+   "beat": "ident",
+   "say": "painted by John William Waterhouse in 1892."
+  },
+  {
+   "t0": 11.79,
+   "t1": 14.08,
+   "beat": "usual",
+   "say": "Everyone knows Circe from Ovid"
+  },
+  {
+   "t0": 14.08,
+   "t1": 16.4,
+   "beat": "usual",
+   "say": "as the jealous witch who made a monster."
+  },
+  {
+   "t0": 17.0,
+   "t1": 19.22,
+   "beat": "usual",
+   "say": "Glaucus loved Scylla instead of her,"
+  },
+  {
+   "t0": 19.44,
+   "t1": 21.43,
+   "beat": "usual",
+   "say": "so she poisoned Scylla's pool."
+  },
+  {
+   "t0": 22.03,
+   "t1": 23.78,
+   "beat": "seems",
+   "say": "And the picture seems to agree."
+  },
+  {
+   "t0": 24.38,
+   "t1": 26.4,
+   "beat": "seems",
+   "say": "Green poison pours from her bowl,"
+  },
+  {
+   "t0": 26.62,
+   "t1": 28.91,
+   "beat": "seems",
+   "say": "and dark shapes already swirl below."
+  },
+  {
+   "t0": 29.51,
+   "t1": 30.79,
+   "beat": "turn",
+   "say": "But look at her face."
+  },
+  {
+   "t0": 31.39,
+   "t1": 33.2,
+   "beat": "detail",
+   "say": "It is grave, not gleeful."
+  },
+  {
+   "t0": 33.8,
+   "t1": 35.83,
+   "beat": "fact",
+   "say": "According to the critic Chris Woods,"
+  },
+  {
+   "t0": 36.05,
+   "t1": 39.24,
+   "beat": "fact",
+   "say": "Waterhouse did not paint his Circe as wholly evil."
+  },
+  {
+   "t0": 39.84,
+   "t1": 41.69,
+   "beat": "fact",
+   "say": "Here she becomes a tragic figure"
+  },
+  {
+   "t0": 41.69,
+   "t1": 43.66,
+   "beat": "fact",
+   "say": "who cannot help what she is doing."
+  },
+  {
+   "t0": 44.26,
+   "t1": 45.65,
+   "beat": "fact",
+   "say": "And she rather regrets it."
+  },
+  {
+   "t0": 46.25,
+   "t1": 47.95,
+   "beat": "flip",
+   "say": "She isn't a gloating monster."
+  },
+  {
+   "t0": 48.55,
+   "t1": 51.26,
+   "beat": "flip",
+   "say": "She's a woman watching her own jealousy work."
+  },
+  {
+   "t0": 52.06,
+   "t1": 53.66,
+   "beat": "question",
+   "say": "So is she a cruel witch,"
+  },
+  {
+   "t0": 53.88,
+   "t1": 55.95,
+   "beat": "question",
+   "say": "or a woman who cannot stop herself?"
+  }
+ ]
+}

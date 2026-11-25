@@ -8823,7 +8823,7 @@
     }
    },
    "hook": "This woman is about to win, and she has it completely wrong.",
-   "views": 151,
+   "views": 160,
    "likes": 5,
    "comments": 1,
    "score": 10.74,
@@ -8895,10 +8895,10 @@
     }
    },
    "hook": "This man looks deep in prayer, but he may not be alive.",
-   "views": 118,
+   "views": 124,
    "likes": 5,
-   "comments": 1,
-   "score": 5.03
+   "comments": 3,
+   "score": 5.24
   },
   "FtXQVQTUoG4": {
    "story": "insane-woman-gricault",
@@ -8927,12 +8927,12 @@
     }
    },
    "hook": "Her eyes are rimmed with red, and they never stop watching.",
-   "views": 121,
+   "views": 122,
    "likes": 7,
    "comments": 1,
-   "score": 5.12
+   "score": 5.13
   }
  },
- "read_at": "2026-11-25T21:21:37Z",
+ "read_at": "2026-11-25T21:23:59Z",
  "_about": "written by stats_now.py (v1.09): one entry per public video; learn.py reads it. Do not edit by hand."
 }
