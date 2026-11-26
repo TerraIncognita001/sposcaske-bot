@@ -1,6 +1,6 @@
 # Lessons from our own videos
 
-Written by `learn.py` on 2026-11-26T21:21Z from `data/stats.json`. Do not edit by hand.
+Written by `learn.py` on 2026-11-26T21:24Z from `data/stats.json`. Do not edit by hand.
 
 Learning is **ON**: 20 videos counted (on at 8 videos public for 3 days; a value needs 3 videos).
 
@@ -14,7 +14,7 @@ Learning is **ON**: 20 videos counted (on at 8 videos public for 3 days; a value
 | 2026-11-15 15:00 | 56 | 0.434 | 84.46 | 9.61 | Something about this peaceful sleeping woman feels completely wrong, filled with hidden dr | 6.0 s −18.1 % [hook: Something about this peaceful sleeping woman feels completely wrong,]; 9.7 s −13.6 % [ident: This is The Nightmare,]; 11.5 s −13.6 % [ident: painted by Henry Fuseli in 1781.] |
 | 2026-11-16 02:00 | 1249 | 0.557 | 50.57000000000001 | 12.86 | This painting may hide something that sits in total darkness, completely awake. | 4.2 s −35.5 % [hook: that sits in total darkness,]; 9.0 s −3.0 % [ident: This is Lucifer,]; 10.3 s −7.3 % [ident: painted by Franz Stuck in 1890.] |
 | 2026-11-16 15:00 | 138 | 0.338 | 66.61 | 8.99 | There's a disturbing detail in this diplomatic room most people miss. | 3.4 s −19.6 % [hook: There's a disturbing detail]; 6.3 s −17.4 % [hook: in this diplomatic room most people miss.]; 9.7 s −13.0 % [ident: painted by Hans Holbein the Younger in 1533.] |
-| 2026-11-17 02:00 | 709 | 0.574 | 73.63 | 13.35 | There's something colder than anger about the way this old man looks back at you. | 4.6 s −24.2 % [hook: the way this old man looks back at you.]; 10.4 s −16.7 % [ident: painted by Diego Velázquez in 1650.]; 35.8 s −2.8 % [look: There's suspicion there.] |
+| 2026-11-17 02:00 | 708 | 0.574 | 73.63 | 13.35 | There's something colder than anger about the way this old man looks back at you. | 4.6 s −24.2 % [hook: the way this old man looks back at you.]; 10.4 s −16.7 % [ident: painted by Diego Velázquez in 1650.]; 35.8 s −2.8 % [look: There's suspicion there.] |
 | 2026-11-17 15:00 | 338 | 0.383 | 44.55 | 9.27 | What if this young queen has to find her own death completely blind? | 18.9 s −4.0 % [setup: and the executioner waiting.]; 27.5 s −2.4 % [triad: Jane can't touch it. Jane just keeps searching.]; 43.0 s −2.3 % [backstory: But Queen Mary had her beheaded anyway.] |
 | 2026-11-18 02:00 | 194 | 0.672 | 76.76 | 13.88 | What if this is not a monster's scream at all, but the purest terror you have ever seen? | 26.2 s −8.1 % [turn: But look at his eyes.]; 77.5 s −9.7 % [empathy: Or would you become the monster yourself?]; 82.1 s −6.5 % [marker: That's what makes this painting] |
 | 2026-11-18 15:00 | 189 | 0.439 | 44.13 | 9.57 | Why does one of these terrifying night creatures act almost like a friend? | 10.9 s −8.7 % [ident: engraved by Francisco Goya in 1799.]; 31.5 s −5.0 % [backstory: According to Goya's own caption,]; 40.7 s −6.2 % [backstory: But united with reason,] |
@@ -31,8 +31,8 @@ Learning is **ON**: 20 videos counted (on at 8 videos public for 3 days; a value
 | 2026-11-24 02:00 | 192 | 0.444 | 44.86 | 9.32 | This woman is about to win, and she has it completely wrong. | 4.5 s −15.0 % [hook: and she has it completely wrong.]; 6.7 s −40.0 % [ident: This is Circe Offering the Cup to Ulysses,]; 9.6 s −10.0 % [ident: painted by John William Waterhouse in 1891.] |
 | 2026-11-24 15:00 | 361 | 0.457 | 55.42 | 10.21 | One tiny bite just turned this boy's face to pure shock. | 5.8 s −7.1 % [loop: Everyone sees a pretty boy startled at the table.]; 6.8 s −4.5 % [loop: Everyone sees a pretty boy startled at the table.]; 7.9 s −8.0 % [loop: Everyone sees a pretty boy startled at the table.] |
 | 2026-11-25 02:00 | 176 | 0.489 | 74.85 | 10.59 | This man looks deep in prayer, but he may not be alive. | — |
-| 2026-11-25 15:00 | 418 | — | — | 6.48 | Her eyes are rimmed with red, and they never stop watching. | — |
-| 2026-11-26 02:00 | 24 | — | — | 3.34 | This man is looking at his own son, and searching for mercy. | — |
+| 2026-11-25 15:00 | 417 | — | — | 6.48 | Her eyes are rimmed with red, and they never stop watching. | — |
+| 2026-11-26 02:00 | 33 | — | — | 3.64 | This man is looking at his own son, and searching for mercy. | — |
 | 2026-11-26 15:00 | 32 | — | — | 3.58 | The severed head in this boy's hand wears the painter's face. | — |
 
 ## What worked (mean score of the videos with this value; multiplier 1.0 = too few videos to say)

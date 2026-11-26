@@ -1,0 +1,143 @@
+{
+ "total": 56.89337868480727,
+ "lines": [
+  {
+   "t0": 1.65,
+   "t1": 2.86,
+   "beat": "hook",
+   "say": "What if these flying witches"
+  },
+  {
+   "t0": 2.86,
+   "t1": 4.88,
+   "beat": "hook",
+   "say": "are really dressed by the church?"
+  },
+  {
+   "t0": 5.53,
+   "t1": 7.02,
+   "beat": "ident",
+   "say": "This is Witches' Flight,"
+  },
+  {
+   "t0": 7.24,
+   "t1": 10.66,
+   "beat": "ident",
+   "say": "painted by Francisco Goya in 1798."
+  },
+  {
+   "t0": 11.26,
+   "t1": 13.65,
+   "beat": "usual",
+   "say": "Most people see three witches carrying off"
+  },
+  {
+   "t0": 13.65,
+   "t1": 14.78,
+   "beat": "usual",
+   "say": "a victim into the night."
+  },
+  {
+   "t0": 15.38,
+   "t1": 16.05,
+   "beat": "usual",
+   "say": "It was one"
+  },
+  {
+   "t0": 16.05,
+   "t1": 18.71,
+   "beat": "usual",
+   "say": "of six witchcraft paintings bought by the Duke"
+  },
+  {
+   "t0": 18.71,
+   "t1": 19.99,
+   "beat": "usual",
+   "say": "and Duchess of Osuna."
+  },
+  {
+   "t0": 20.59,
+   "t1": 22.34,
+   "beat": "seems",
+   "say": "And the picture seems to agree."
+  },
+  {
+   "t0": 22.94,
+   "t1": 24.8,
+   "beat": "seems",
+   "say": "One man hides under a blanket,"
+  },
+  {
+   "t0": 25.02,
+   "t1": 26.76,
+   "beat": "seems",
+   "say": "and another covers his ears."
+  },
+  {
+   "t0": 27.36,
+   "t1": 28.62,
+   "beat": "turn",
+   "say": "But look at their hats."
+  },
+  {
+   "t0": 29.22,
+   "t1": 31.59,
+   "beat": "detail",
+   "say": "They wear the pointed caps of penitents."
+  },
+  {
+   "t0": 32.19,
+   "t1": 33.78,
+   "beat": "fact",
+   "say": "According to one reading,"
+  },
+  {
+   "t0": 34.0,
+   "t1": 37.92,
+   "beat": "fact",
+   "say": "Goya turned the religious tribunals' accusations back on themselves."
+  },
+  {
+   "t0": 38.52,
+   "t1": 42.31,
+   "beat": "fact",
+   "say": "Their own actions become the superstition and ritual sacrifice."
+  },
+  {
+   "t0": 42.91,
+   "t1": 44.32,
+   "beat": "fact",
+   "say": "And the donkey beside them"
+  },
+  {
+   "t0": 44.32,
+   "t1": 46.08,
+   "beat": "fact",
+   "say": "is a symbol of ignorance."
+  },
+  {
+   "t0": 46.68,
+   "t1": 48.55,
+   "beat": "flip",
+   "say": "It isn't a picture of witches."
+  },
+  {
+   "t0": 49.15,
+   "t1": 51.39,
+   "beat": "flip",
+   "say": "It's a picture of the people who hunted them."
+  },
+  {
+   "t0": 52.19,
+   "t1": 54.48,
+   "beat": "question",
+   "say": "So who is really doing the devouring,"
+  },
+  {
+   "t0": 54.7,
+   "t1": 56.54,
+   "beat": "question",
+   "say": "the witches or the judges?"
+  }
+ ]
+}

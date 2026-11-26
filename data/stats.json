@@ -2358,7 +2358,7 @@
     }
    },
    "hook": "There's something colder than anger about the way this old man looks back at you.",
-   "views": 709,
+   "views": 708,
    "likes": 34,
    "comments": 4,
    "score": 13.35,
@@ -9785,7 +9785,7 @@
     }
    },
    "hook": "Her eyes are rimmed with red, and they never stop watching.",
-   "views": 418,
+   "views": 417,
    "likes": 16,
    "comments": 1,
    "score": 6.48
@@ -9818,10 +9818,10 @@
     }
    },
    "hook": "This man is looking at his own son, and searching for mercy.",
-   "views": 24,
+   "views": 33,
    "likes": 1,
    "comments": 1,
-   "score": 3.34
+   "score": 3.64
   },
   "YLBRY5M_q30": {
    "story": "david-with-the-head-of-goliath-caravaggio",
@@ -9857,6 +9857,6 @@
    "score": 3.58
   }
  },
- "read_at": "2026-11-26T21:21:55Z",
+ "read_at": "2026-11-26T21:24:41Z",
  "_about": "written by stats_now.py (v1.09): one entry per public video; learn.py reads it. Do not edit by hand."
 }
