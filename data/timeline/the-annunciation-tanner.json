@@ -1,0 +1,113 @@
+{
+ "total": 46.4436507936508,
+ "lines": [
+  {
+   "t0": 1.65,
+   "t1": 3.95,
+   "beat": "hook",
+   "say": "The angel in this room has no face,"
+  },
+  {
+   "t0": 4.17,
+   "t1": 5.12,
+   "beat": "hook",
+   "say": "only light."
+  },
+  {
+   "t0": 5.77,
+   "t1": 8.19,
+   "beat": "loop",
+   "say": "Everyone sees a gentle holy scene."
+  },
+  {
+   "t0": 8.79,
+   "t1": 10.81,
+   "beat": "tour",
+   "say": "A girl sits on an unmade bed."
+  },
+  {
+   "t0": 11.41,
+   "t1": 13.17,
+   "beat": "tour",
+   "say": "Her hands are clenched together."
+  },
+  {
+   "t0": 13.77,
+   "t1": 15.96,
+   "beat": "tour",
+   "say": "And a pillar of light stands before her."
+  },
+  {
+   "t0": 16.56,
+   "t1": 19.99,
+   "beat": "who",
+   "say": "Henry Ossawa Tanner painted her in 1898,"
+  },
+  {
+   "t0": 20.21,
+   "t1": 22.36,
+   "beat": "who",
+   "say": "in peasant clothes with no halo."
+  },
+  {
+   "t0": 22.96,
+   "t1": 25.71,
+   "beat": "stakes",
+   "say": "Why paint the Virgin Mary like a frightened girl?"
+  },
+  {
+   "t0": 26.71,
+   "t1": 28.21,
+   "beat": "rehook",
+   "say": "The answer is in the light."
+  },
+  {
+   "t0": 28.81,
+   "t1": 31.5,
+   "beat": "fact",
+   "say": "That column is the archangel Gabriel."
+  },
+  {
+   "t0": 32.1,
+   "t1": 33.22,
+   "beat": "fact",
+   "say": "He has come to tell"
+  },
+  {
+   "t0": 33.22,
+   "t1": 34.46,
+   "beat": "fact",
+   "say": "her she will bear a son."
+  },
+  {
+   "t0": 35.06,
+   "t1": 38.13,
+   "beat": "fact",
+   "say": "It was the largest canvas of Tanner's whole career."
+  },
+  {
+   "t0": 38.73,
+   "t1": 40.12,
+   "beat": "flip",
+   "say": "It isn't a blessing."
+  },
+  {
+   "t0": 40.72,
+   "t1": 41.76,
+   "beat": "flip",
+   "say": "It's a burden."
+  },
+  {
+   "t0": 42.56,
+   "t1": 44.24,
+   "beat": "question",
+   "say": "So is she seeing a blessing,"
+  },
+  {
+   "t0": 44.46,
+   "t1": 46.09,
+   "beat": "question",
+   "say": "or a burden made of light?"
+  }
+ ]
+}
