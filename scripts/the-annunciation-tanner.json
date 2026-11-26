@@ -232,6 +232,12 @@
    "source": 5
   },
   {
+   "slot": "H7",
+   "text": "It was the largest canvas of Tanner's whole career.",
+   "kind": "FACT",
+   "source": 19
+  },
+  {
    "slot": "H8",
    "text": "It isn't a blessing.",
    "kind": "READING",
@@ -301,6 +307,11 @@
   },
   {
    "claim": "The event is narrated in Luke 1:26–38, in which Gabriel tells Mary that she will bear Jesus, the Son of God.",
+   "url": "https://en.wikipedia.org/wiki/The_Annunciation_(Tanner)",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "As such, Tanner chose the largest canvas size of his career for The Annunciation.",
    "url": "https://en.wikipedia.org/wiki/The_Annunciation_(Tanner)",
    "note": "sentence H7"
   }
