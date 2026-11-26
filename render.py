@@ -669,6 +669,7 @@ def build_audio(story, clips, marks, total, ev, work):
         m = np.resize(np.frombuffer(raw, np.float32), n).copy()
     else:
         m = humming_bed(n / SR, sum(map(ord, story["id"])))[:n]
+    m = np.pad(m, (0, max(0, n - len(m))))[:n]                         # v1.23: int(n / SR * SR) can be n - 1 (Nov 26, The Annunciation: 2090105 vs 2090104, the render fell)
     m *= vr / rms(m) * 10 ** (-A["music"]["under_voice_db"] / 20)
     k, fi = int(t_music * SR), int(A["music"]["fade_in_s"] * SR)
     m[:k] = 0                                                          # no music under the hook: effects only

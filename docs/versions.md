@@ -5,6 +5,13 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.23 = THE MUSIC BED IS AS LONG AS THE VOICE, Andrii, Nov 26 2026 ('так, виправ збій звуку'). Why: the render of
+  The Annunciation (run 45897205675) fell in `render.build_audio`: 'operands could not be broadcast ... (2090105,)
+  (2090104,)'. There is no music library (`assets/music` is empty), so the bed is `humming_bed(n / SR)`, and
+  int(n / SR * SR) is n - 1 for some lengths (2090105 -> 2090104: reproduced). The same script passed on the next
+  run (a slightly different length). Now the bed is padded to the voice's length. A failure cost one of the slot's
+  four tries.
+
 - v1.22 = THE NEW LOOK: CAPTIONS UNDER THE PICTURE, THE DETAIL ON FRAME 0, PLAIN TITLES, Andrii, Nov 24 2026 ('так,
   викочуй v1.22 в main, відтепер всі відео мають так виглядати'). From his three tips ('Приберіть хештеги з назв ...
   Поверніть стиль ранніх назв (коротке речення без великих літер) ... На 1-й секунді показуйте деталь ... субтитри
