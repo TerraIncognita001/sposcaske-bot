@@ -1,8 +1,8 @@
 {
  "_about": "written by learn.py (v1.09) from data/stats.json. on = false: the bot ignores this file.",
- "updated": "2026-11-25T21:35Z",
+ "updated": "2026-11-26T04:06Z",
  "on": true,
- "videos_counted": 18,
+ "videos_counted": 19,
  "rule": "on at 8 videos public for 3 days; a value needs 3 videos",
  "mult": {
   "form": {
@@ -12,9 +12,9 @@
     "m": 1.16
    },
    "twist": {
-    "n": 4,
-    "mean": 11.83,
-    "m": 1.09
+    "n": 5,
+    "mean": 11.58,
+    "m": 1.07
    },
    "riddle": {
     "n": 10,
@@ -41,17 +41,17 @@
    "something_about": {
     "n": 4,
     "mean": 11.07,
-    "m": 1.02
+    "m": 1.03
    },
    "what_if": {
     "n": 4,
-    "mean": 10.7,
+    "mean": 10.71,
     "m": 0.99
    },
    "detail_most_miss": {
-    "n": 2,
-    "mean": 10.1,
-    "m": 1.0
+    "n": 3,
+    "mean": 10.25,
+    "m": 0.95
    },
    "why": {
     "n": 1,
@@ -66,9 +66,9 @@
   },
   "closer": {
    "either_or": {
-    "n": 11,
-    "mean": 11.41,
-    "m": 1.06
+    "n": 12,
+    "mean": 11.34,
+    "m": 1.05
    },
    "open": {
     "n": 6,
@@ -78,8 +78,8 @@
   },
   "kind": {
    "artwork": {
-    "n": 17,
-    "mean": 11.07,
+    "n": 18,
+    "mean": 11.04,
     "m": 1.02
    }
   },
@@ -100,8 +100,8 @@
     "m": 1.0
    },
    "false calm": {
-    "n": 6,
-    "mean": 10.6,
+    "n": 7,
+    "mean": 10.59,
     "m": 0.98
    },
    "fallen": {
@@ -123,7 +123,7 @@
    },
    "16th": {
     "n": 5,
-    "mean": 11.45,
+    "mean": 11.46,
     "m": 1.06
    },
    "19th": {
@@ -145,20 +145,20 @@
    },
    "60-75 s": {
     "n": 5,
-    "mean": 10.67,
+    "mean": 10.68,
     "m": 0.99
    },
    "under 60 s": {
-    "n": 9,
-    "mean": 10.11,
+    "n": 10,
+    "mean": 10.16,
     "m": 0.94
    }
   },
   "writer": {
    "claude": {
-    "n": 15,
-    "mean": 11.3,
-    "m": 1.05
+    "n": 16,
+    "mean": 11.25,
+    "m": 1.04
    },
    "gemini": {
     "n": 2,
@@ -173,9 +173,9 @@
   },
   "title_pattern": {
    "action": {
-    "n": 2,
-    "mean": 11.91,
-    "m": 1.0
+    "n": 3,
+    "mean": 11.47,
+    "m": 1.06
    },
    "who": {
     "n": 6,
@@ -195,13 +195,13 @@
   }
  },
  "judge_weights": {
-  "G": 0.99,
-  "D": 1.4,
-  "F": 0.61,
-  "T": 0.62,
+  "G": 0.98,
+  "D": 1.38,
+  "F": 0.64,
+  "T": 0.67,
   "Y": 1.0,
   "S": 1.0
  },
- "judge_fit": -0.29,
- "mean_score": 10.8
+ "judge_fit": -0.27,
+ "mean_score": 10.79
 }
