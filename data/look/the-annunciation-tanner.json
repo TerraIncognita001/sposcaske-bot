@@ -1,0 +1,94 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "room"
+   ]
+  },
+  {
+   "name": "mary",
+   "box": [
+    0.55,
+    0.26,
+    0.8,
+    0.82
+   ],
+   "words": [
+    "girl",
+    "mary"
+   ]
+  },
+  {
+   "name": "face",
+   "box": [
+    0.63,
+    0.27,
+    0.73,
+    0.39
+   ],
+   "words": [
+    "face",
+    "eyes"
+   ]
+  },
+  {
+   "name": "hands",
+   "box": [
+    0.64,
+    0.46,
+    0.73,
+    0.56
+   ],
+   "words": [
+    "hands"
+   ]
+  },
+  {
+   "name": "light",
+   "box": [
+    0.02,
+    0.02,
+    0.19,
+    0.73
+   ],
+   "words": [
+    "light",
+    "angel",
+    "pillar"
+   ]
+  },
+  {
+   "name": "bed",
+   "box": [
+    0.23,
+    0.18,
+    0.84,
+    0.78
+   ],
+   "words": [
+    "bed"
+   ]
+  },
+  {
+   "name": "rug",
+   "box": [
+    0.16,
+    0.74,
+    0.75,
+    1.0
+   ],
+   "words": [
+    "rug",
+    "floor"
+   ]
+  }
+ ],
+ "summary": "A young girl in a striped peasant robe sits on the edge of a rumpled bed, hands clasped, looking toward a tall column of golden light standing in the left of a plain stone room."
+}

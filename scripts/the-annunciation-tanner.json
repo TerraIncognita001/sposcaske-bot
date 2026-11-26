@@ -1,0 +1,309 @@
+{
+ "id": "the-annunciation-tanner",
+ "kind": "artwork",
+ "form": "hold",
+ "hook_frame": "The ___",
+ "closer": "either_or",
+ "detail": "light",
+ "home": "face",
+ "subject": {
+  "title": "The Annunciation",
+  "creator": "Henry Ossawa Tanner",
+  "year": 1898,
+  "wikidata": "Q20180562"
+ },
+ "lead": {
+  "commons": "The_Annunciation,_Philadelphia_Museum_of_Art,_W1899-1-1-pma,_by_Henry_Ossawa_Tanner.jpg",
+  "width_px": 3840,
+  "aspect": 1.2468,
+  "px": 4096,
+  "license": "Public domain",
+  "credit": "The Annunciation, Philadelphia Museum of Art, W1899-1-1-pma, by Henry Ossawa Tanner — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Henry Ossawa Tanner",
+  "credit": "Portrait of Henry Ossawa Tanner — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "room"
+   ]
+  },
+  {
+   "name": "mary",
+   "box": [
+    0.55,
+    0.26,
+    0.8,
+    0.82
+   ],
+   "words": [
+    "girl",
+    "mary"
+   ]
+  },
+  {
+   "name": "face",
+   "box": [
+    0.63,
+    0.27,
+    0.73,
+    0.39
+   ],
+   "words": [
+    "face",
+    "eyes"
+   ]
+  },
+  {
+   "name": "hands",
+   "box": [
+    0.64,
+    0.46,
+    0.73,
+    0.56
+   ],
+   "words": [
+    "hands"
+   ]
+  },
+  {
+   "name": "light",
+   "box": [
+    0.02,
+    0.02,
+    0.19,
+    0.73
+   ],
+   "words": [
+    "light",
+    "angel",
+    "pillar"
+   ]
+  },
+  {
+   "name": "bed",
+   "box": [
+    0.23,
+    0.18,
+    0.84,
+    0.78
+   ],
+   "words": [
+    "bed"
+   ]
+  },
+  {
+   "name": "rug",
+   "box": [
+    0.16,
+    0.74,
+    0.75,
+    1.0
+   ],
+   "words": [
+    "rug",
+    "floor"
+   ]
+  }
+ ],
+ "punch": "LIGHT",
+ "sentences": [
+  {
+   "slot": "H1",
+   "text": "The angel in this room has no face, only light.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "angel",
+     "to": "face"
+    },
+    {
+     "on": "light",
+     "to": "light"
+    }
+   ]
+  },
+  {
+   "slot": "H2",
+   "text": "Everyone sees a gentle holy scene.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "scene",
+     "to": "main_action"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "A girl sits on an unmade bed.",
+   "kind": "LOOK",
+   "source": 6,
+   "show": [
+    {
+     "on": "bed",
+     "to": "bed"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "Her hands are clenched together.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "hands",
+     "to": "hands"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "And a pillar of light stands before her.",
+   "kind": "FACT",
+   "source": 6,
+   "show": [
+    {
+     "on": "light",
+     "to": "light"
+    }
+   ]
+  },
+  {
+   "slot": "H4",
+   "text": "Henry Ossawa Tanner painted her in 1898, in peasant clothes with no halo.",
+   "kind": "FACT",
+   "source": 6
+  },
+  {
+   "slot": "H5",
+   "text": "Why paint the Virgin Mary like a frightened girl?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "girl",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "H6",
+   "text": "The answer is in the light.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "light",
+     "to": "light"
+    }
+   ]
+  },
+  {
+   "slot": "H7",
+   "text": "That column is the archangel Gabriel.",
+   "kind": "FACT",
+   "source": 6,
+   "show": [
+    {
+     "on": "column",
+     "to": "light"
+    }
+   ]
+  },
+  {
+   "slot": "H7",
+   "text": "He has come to tell her she will bear a son.",
+   "kind": "FACT",
+   "source": 5
+  },
+  {
+   "slot": "H8",
+   "text": "It isn't a blessing.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "H8",
+   "text": "It's a burden.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "burden",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "H9",
+   "text": "So is she seeing a blessing, or a burden made of light?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "light",
+     "to": "light"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Tanner": "tan-ner",
+  "Ossawa": "oh-sah-wa",
+  "Gabriel": "gay-bree-el"
+ },
+ "meta": {
+  "title": "The angel who came as a pillar of light",
+  "description": "The Annunciation was painted by Henry Ossawa Tanner in 1898 and is held by the Philadelphia Museum of Art. Tanner shows Mary in peasant clothing with no halo, and the archangel Gabriel as a column of light.",
+  "tags": [
+   "art history",
+   "henry ossawa tanner",
+   "the annunciation",
+   "philadelphia museum of art"
+  ],
+  "question": "A blessing, or a burden?"
+ },
+ "sources": [
+  {
+   "claim": "Tanner uses a column of light to depict Gabriel and paints Mary in peasant clothing with no halo or other discernible holy attributes.",
+   "url": "https://en.wikipedia.org/wiki/The_Annunciation_(Tanner)",
+   "note": "sentence H3"
+  },
+  {
+   "claim": "Tanner uses a column of light to depict Gabriel and paints Mary in peasant clothing with no halo or other discernible holy attributes.",
+   "url": "https://en.wikipedia.org/wiki/The_Annunciation_(Tanner)",
+   "note": "sentence H3"
+  },
+  {
+   "claim": "Tanner uses a column of light to depict Gabriel and paints Mary in peasant clothing with no halo or other discernible holy attributes.",
+   "url": "https://en.wikipedia.org/wiki/The_Annunciation_(Tanner)",
+   "note": "sentence H4"
+  },
+  {
+   "claim": "Tanner uses a column of light to depict Gabriel and paints Mary in peasant clothing with no halo or other discernible holy attributes.",
+   "url": "https://en.wikipedia.org/wiki/The_Annunciation_(Tanner)",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "The event is narrated in Luke 1:26–38, in which Gabriel tells Mary that she will bear Jesus, the Son of God.",
+   "url": "https://en.wikipedia.org/wiki/The_Annunciation_(Tanner)",
+   "note": "sentence H7"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-26"
+}
