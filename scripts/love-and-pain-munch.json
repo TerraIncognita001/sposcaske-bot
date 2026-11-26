@@ -1,0 +1,317 @@
+{
+ "id": "love-and-pain-munch",
+ "kind": "artwork",
+ "form": "twist",
+ "hook_frame": "What if ___?",
+ "closer": "either_or",
+ "detail": "woman_face",
+ "home": null,
+ "subject": {
+  "title": "Love and Pain",
+  "creator": "Edvard Munch",
+  "year": 1895,
+  "wikidata": "Q1683743"
+ },
+ "lead": {
+  "commons": "Edvard_Munch_-_Vampire_(1895)_-_Google_Art_Project.jpg",
+  "width_px": 3840,
+  "aspect": 1.2214,
+  "px": 5446,
+  "license": "Public domain",
+  "credit": "Edvard Munch - Vampire (1895) - Google Art Project — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Edvard Munch",
+  "credit": "Portrait of Edvard Munch — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "darkness"
+   ]
+  },
+  {
+   "name": "couple",
+   "box": [
+    0.22,
+    0.15,
+    0.96,
+    0.86
+   ],
+   "words": [
+    "couple",
+    "embrace"
+   ]
+  },
+  {
+   "name": "woman_face",
+   "box": [
+    0.5,
+    0.29,
+    0.63,
+    0.44
+   ],
+   "words": [
+    "lips",
+    "kiss"
+   ]
+  },
+  {
+   "name": "hair",
+   "box": [
+    0.27,
+    0.15,
+    0.75,
+    0.5
+   ],
+   "words": [
+    "hair"
+   ]
+  },
+  {
+   "name": "man",
+   "box": [
+    0.34,
+    0.25,
+    0.78,
+    0.6
+   ],
+   "words": [
+    "man",
+    "neck"
+   ]
+  },
+  {
+   "name": "arms",
+   "box": [
+    0.24,
+    0.48,
+    0.69,
+    0.76
+   ],
+   "words": [
+    "arms",
+    "arm"
+   ]
+  }
+ ],
+ "punch": "KISS",
+ "sentences": [
+  {
+   "slot": "T1",
+   "text": "What if this famous vampire is really just a kiss?",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "vampire",
+     "to": "woman_face"
+    },
+    {
+     "on": "kiss",
+     "to": "woman_face"
+    }
+   ]
+  },
+  {
+   "slot": "T2",
+   "text": "This is Love and Pain, painted by Edvard Munch in 1895.",
+   "kind": "FACT",
+   "source": 1
+  },
+  {
+   "slot": "T3",
+   "text": "Everyone knows it by another name, Vampire.",
+   "kind": "FACT",
+   "source": 1
+  },
+  {
+   "slot": "T3",
+   "text": "The critic Stanisław Przybyszewski saw a submissive man with a biting vampire's face on his neck.",
+   "kind": "FACT",
+   "source": 9,
+   "show": [
+    {
+     "on": "neck",
+     "to": "man"
+    }
+   ]
+  },
+  {
+   "slot": "T4",
+   "text": "And the picture seems to agree.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "T4",
+   "text": "Her red hair pours over him, and her arms hold him tight.",
+   "kind": "FACT",
+   "source": 6,
+   "show": [
+    {
+     "on": "hair",
+     "to": "hair"
+    },
+    {
+     "on": "arms",
+     "to": "arms"
+    }
+   ]
+  },
+  {
+   "slot": "T5",
+   "text": "But look at her lips.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "lips",
+     "to": "woman_face"
+    }
+   ]
+  },
+  {
+   "slot": "T6",
+   "text": "There are no teeth, no blood.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "teeth",
+     "to": "woman_face"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "According to Munch himself, it showed nothing more than a woman kissing a man on the neck.",
+   "kind": "FACT",
+   "source": 7,
+   "show": [
+    {
+     "on": "man",
+     "to": "man"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "The name Vampire came from his friend, never from Munch.",
+   "kind": "FACT",
+   "source": 8
+  },
+  {
+   "slot": "T7",
+   "text": "He still painted the embrace six times in three years.",
+   "kind": "FACT",
+   "source": 3,
+   "show": [
+    {
+     "on": "embrace",
+     "to": "couple"
+    }
+   ]
+  },
+  {
+   "slot": "T8",
+   "text": "It isn't a monster feeding.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "T8",
+   "text": "It's love, and the pain that comes with it.",
+   "kind": "FACT",
+   "source": 1,
+   "show": [
+    {
+     "on": "love",
+     "to": "couple"
+    }
+   ]
+  },
+  {
+   "slot": "T9",
+   "text": "So is she biting him, or holding on to him?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "him",
+     "to": "woman_face"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Munch": "moonk",
+  "Przybyszewski": "pshi-bi-shef-ski",
+  "Stanisław": "sta-nee-swaf",
+  "Edvard": "ed-vard"
+ },
+ "meta": {
+  "title": "Munch said his vampire was only a kiss",
+  "description": "Love and Pain was painted by Edvard Munch in 1895 and is better known as Vampire, a name given by the critic Stanisław Przybyszewski. Munch always said it showed nothing more than a woman kissing a man on the neck.",
+  "tags": [
+   "art history",
+   "edvard munch",
+   "vampire",
+   "love and pain",
+   "symbolism"
+  ],
+  "question": "Biting him, or holding on to him?"
+ },
+ "sources": [
+  {
+   "claim": "Love and Pain is an 1895 painting by Edvard Munch; it has also been called Vampire, though not by Munch.",
+   "url": "https://en.wikipedia.org/wiki/Love_and_Pain_(Munch)",
+   "note": "sentence T2"
+  },
+  {
+   "claim": "Love and Pain is an 1895 painting by Edvard Munch; it has also been called Vampire, though not by Munch.",
+   "url": "https://en.wikipedia.org/wiki/Love_and_Pain_(Munch)",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "Przybyszewski saw the painting on exhibition and described it as \"a man who has become submissive, and on his neck a biting vampire's face.\" Versions A version of the painting was stolen from the Munc",
+   "url": "https://en.wikipedia.org/wiki/Love_and_Pain_(Munch)",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "Description The painting shows a woman with long flame-red hair kissing a man on the neck, as the couple embrace.",
+   "url": "https://en.wikipedia.org/wiki/Love_and_Pain_(Munch)",
+   "note": "sentence T4"
+  },
+  {
+   "claim": "Although others have seen in it \"a man locked in a vampire's tortured embrace – her molten-red hair running along his soft bare skin\", Munch himself always claimed it showed nothing more than \"just a ",
+   "url": "https://en.wikipedia.org/wiki/Love_and_Pain_(Munch)",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "The painting was first called Vampire by Munch's friend, the critic Stanisław Przybyszewski.",
+   "url": "https://en.wikipedia.org/wiki/Love_and_Pain_(Munch)",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "Munch painted six different versions of the same subject between 1893 and 1895.",
+   "url": "https://en.wikipedia.org/wiki/Love_and_Pain_(Munch)",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "Love and Pain is an 1895 painting by Edvard Munch; it has also been called Vampire, though not by Munch.",
+   "url": "https://en.wikipedia.org/wiki/Love_and_Pain_(Munch)",
+   "note": "sentence T8"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-26"
+}

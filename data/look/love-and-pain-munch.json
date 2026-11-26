@@ -1,0 +1,81 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "darkness"
+   ]
+  },
+  {
+   "name": "couple",
+   "box": [
+    0.22,
+    0.15,
+    0.96,
+    0.86
+   ],
+   "words": [
+    "couple",
+    "embrace"
+   ]
+  },
+  {
+   "name": "woman_face",
+   "box": [
+    0.5,
+    0.29,
+    0.63,
+    0.44
+   ],
+   "words": [
+    "lips",
+    "kiss"
+   ]
+  },
+  {
+   "name": "hair",
+   "box": [
+    0.27,
+    0.15,
+    0.75,
+    0.5
+   ],
+   "words": [
+    "hair"
+   ]
+  },
+  {
+   "name": "man",
+   "box": [
+    0.34,
+    0.25,
+    0.78,
+    0.6
+   ],
+   "words": [
+    "man",
+    "neck"
+   ]
+  },
+  {
+   "name": "arms",
+   "box": [
+    0.24,
+    0.48,
+    0.69,
+    0.76
+   ],
+   "words": [
+    "arms",
+    "arm"
+   ]
+  }
+ ],
+ "summary": "A woman with long flame-red hair holds a man in a dark embrace, her face bent down to the back of his neck, her pale arms wrapped around him."
+}
