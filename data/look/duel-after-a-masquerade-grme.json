@@ -1,0 +1,137 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "words": [
+    "snow",
+    "woods",
+    "carnival",
+    "morning"
+   ]
+  },
+  {
+   "name": "pierrot",
+   "box": [
+    0.18,
+    0.42,
+    0.5,
+    0.92
+   ],
+   "words": [
+    "clown",
+    "suit",
+    "wounded"
+   ]
+  },
+  {
+   "name": "pierrot_face",
+   "box": [
+    0.235,
+    0.49,
+    0.31,
+    0.6
+   ],
+   "words": [
+    "face",
+    "eyes"
+   ]
+  },
+  {
+   "name": "blood",
+   "box": [
+    0.2,
+    0.53,
+    0.32,
+    0.7
+   ],
+   "words": [
+    "blood",
+    "wound",
+    "bleeding"
+   ]
+  },
+  {
+   "name": "guise",
+   "box": [
+    0.12,
+    0.4,
+    0.3,
+    0.9
+   ],
+   "words": [
+    "arms",
+    "friend"
+   ]
+  },
+  {
+   "name": "surgeon",
+   "box": [
+    0.29,
+    0.5,
+    0.53,
+    0.88
+   ],
+   "words": [
+    "surgeon",
+    "doge"
+   ]
+  },
+  {
+   "name": "winner",
+   "box": [
+    0.7,
+    0.32,
+    0.93,
+    0.68
+   ],
+   "words": [
+    "winner",
+    "survivor"
+   ]
+  },
+  {
+   "name": "harlequin",
+   "box": [
+    0.7,
+    0.33,
+    0.82,
+    0.67
+   ],
+   "words": [
+    "harlequin"
+   ]
+  },
+  {
+   "name": "carriage",
+   "box": [
+    0.43,
+    0.56,
+    0.57,
+    0.66
+   ],
+   "words": [
+    "carriage"
+   ]
+  },
+  {
+   "name": "sword",
+   "box": [
+    0.64,
+    0.8,
+    0.82,
+    0.94
+   ],
+   "words": [
+    "sword",
+    "weapon"
+   ]
+  }
+ ],
+ "summary": "Snowy woods at a grey dawn. At left a man in a white clown suit, blood on his chest, collapses into the arms of a man in black with a ruff; a man in a red robe and another clutching his head lean over him. At right a harlequin and a man in a fringed buckskin coat walk away toward a carriage; a sword and feathers lie in the snow."
+}

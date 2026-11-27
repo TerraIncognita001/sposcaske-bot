@@ -1,0 +1,376 @@
+{
+ "id": "duel-after-a-masquerade-grme",
+ "kind": "artwork",
+ "form": "twist",
+ "hook_frame": "Why ___?",
+ "closer": "either_or",
+ "detail": "blood",
+ "home": "pierrot_face",
+ "subject": {
+  "title": "The Duel After the Masquerade",
+  "creator": "Jean-Léon Gérôme",
+  "year": 1857,
+  "wikidata": "Q3503317"
+ },
+ "lead": {
+  "commons": "Suites_d'un_bal_masqué_-_Gérôme_-_Musée_Condé.jpg",
+  "width_px": 3840,
+  "aspect": 1.4623,
+  "px": 5744,
+  "license": "Public domain",
+  "credit": "Suites d'un bal masqué - Gérôme - Musée Condé — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Jean-Léon Gérôme",
+  "credit": "Portrait of Jean-Léon Gérôme — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "snow",
+    "woods",
+    "carnival",
+    "morning"
+   ]
+  },
+  {
+   "name": "pierrot",
+   "box": [
+    0.18,
+    0.42,
+    0.5,
+    0.92
+   ],
+   "words": [
+    "clown",
+    "suit",
+    "wounded"
+   ]
+  },
+  {
+   "name": "pierrot_face",
+   "box": [
+    0.235,
+    0.49,
+    0.31,
+    0.6
+   ],
+   "words": [
+    "face",
+    "eyes"
+   ]
+  },
+  {
+   "name": "blood",
+   "box": [
+    0.2,
+    0.53,
+    0.32,
+    0.7
+   ],
+   "words": [
+    "blood",
+    "wound",
+    "bleeding"
+   ]
+  },
+  {
+   "name": "guise",
+   "box": [
+    0.12,
+    0.4,
+    0.3,
+    0.9
+   ],
+   "words": [
+    "arms",
+    "friend"
+   ]
+  },
+  {
+   "name": "surgeon",
+   "box": [
+    0.29,
+    0.5,
+    0.53,
+    0.88
+   ],
+   "words": [
+    "surgeon",
+    "doge"
+   ]
+  },
+  {
+   "name": "winner",
+   "box": [
+    0.7,
+    0.32,
+    0.93,
+    0.68
+   ],
+   "words": [
+    "winner",
+    "survivor"
+   ]
+  },
+  {
+   "name": "harlequin",
+   "box": [
+    0.7,
+    0.33,
+    0.82,
+    0.67
+   ],
+   "words": [
+    "harlequin"
+   ]
+  },
+  {
+   "name": "carriage",
+   "box": [
+    0.43,
+    0.56,
+    0.57,
+    0.66
+   ],
+   "words": [
+    "carriage"
+   ]
+  },
+  {
+   "name": "sword",
+   "box": [
+    0.64,
+    0.8,
+    0.82,
+    0.94
+   ],
+   "words": [
+    "sword",
+    "weapon"
+   ]
+  }
+ ],
+ "punch": "BLOOD",
+ "sentences": [
+  {
+   "slot": "T1",
+   "text": "Why does this clown's party end in blood?",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "clown's",
+     "to": "pierrot_face"
+    },
+    {
+     "on": "blood",
+     "to": "blood"
+    }
+   ]
+  },
+  {
+   "slot": "T2",
+   "text": "This is The Duel After the Masquerade, painted by Jean-Léon Gérôme in 1857.",
+   "kind": "FACT",
+   "source": 2
+  },
+  {
+   "slot": "T3",
+   "text": "Most people see a carnival that went on too long.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "carnival",
+     "to": "main_action"
+    }
+   ]
+  },
+  {
+   "slot": "T3",
+   "text": "A grey winter morning, bare trees, snow on the ground.",
+   "kind": "FACT",
+   "source": 13,
+   "show": [
+    {
+     "on": "snow",
+     "to": "main_action"
+    }
+   ]
+  },
+  {
+   "slot": "T4",
+   "text": "And the picture seems to agree.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "T4",
+   "text": "A harlequin, a doge, a clown in white.",
+   "kind": "FACT",
+   "source": 15,
+   "show": [
+    {
+     "on": "harlequin",
+     "to": "harlequin"
+    },
+    {
+     "on": "doge",
+     "to": "surgeon"
+    },
+    {
+     "on": "clown",
+     "to": "pierrot"
+    }
+   ]
+  },
+  {
+   "slot": "T5",
+   "text": "But look at his white suit.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "suit",
+     "to": "pierrot"
+    }
+   ]
+  },
+  {
+   "slot": "T6",
+   "text": "There is blood on it.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "blood",
+     "to": "blood"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "According to art historians, Gérôme painted the aftermath, never the fight itself.",
+   "kind": "FACT",
+   "source": 17
+  },
+  {
+   "slot": "T7",
+   "text": "The clown has been mortally wounded in a duel.",
+   "kind": "FACT",
+   "source": 14,
+   "show": [
+    {
+     "on": "wounded",
+     "to": "pierrot_face"
+    }
+   ]
+  },
+  {
+   "slot": "T7",
+   "text": "The winner walks away to his carriage and leaves his sword in the snow.",
+   "kind": "FACT",
+   "source": 16,
+   "show": [
+    {
+     "on": "winner",
+     "to": "winner"
+    },
+    {
+     "on": "sword",
+     "to": "sword"
+    }
+   ]
+  },
+  {
+   "slot": "T8",
+   "text": "It isn't a party.",
+   "kind": "READING",
+   "source": null
+  },
+  {
+   "slot": "T8",
+   "text": "It's the morning after, and someone is dying.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "dying",
+     "to": "pierrot_face"
+    }
+   ]
+  },
+  {
+   "slot": "T9",
+   "text": "So was it honour, or a costume quarrel that cost a life?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "life",
+     "to": "pierrot_face"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Gérôme": "zhay-rohm"
+ },
+ "meta": {
+  "title": "A party in the snow that ended in blood",
+  "description": "The Duel After the Masquerade was painted by Jean-Léon Gérôme in 1857. Carnival costumes, a winter dawn in the woods, and a clown dying in the snow. #history #art",
+  "tags": [
+   "Gerome",
+   "duel",
+   "masquerade",
+   "Pierrot",
+   "19th century painting",
+   "art history",
+   "academic art"
+  ],
+  "question": "Honour, or a costume quarrel that cost a life?"
+ },
+ "sources": [
+  {
+   "claim": "The original, Suite d'un bal masqué, first shown in 1857, is in the Musée Condé in Chantilly, France.",
+   "url": "https://en.wikipedia.org/wiki/The_Duel_After_the_Masquerade",
+   "note": "sentence T2"
+  },
+  {
+   "claim": "Composition The scene is set on a gray winter morning in the Bois de Boulogne, trees bare and snow covering the ground.",
+   "url": "https://en.wikipedia.org/wiki/The_Duel_After_the_Masquerade",
+   "note": "sentence T3"
+  },
+  {
+   "claim": "A surgeon, dressed as a doge of Venice, tries to stop the flow of blood, while a Domino clutches his own head.",
+   "url": "https://en.wikipedia.org/wiki/The_Duel_After_the_Masquerade",
+   "note": "sentence T4"
+  },
+  {
+   "claim": "It was characteristic of Gérôme to depict not a violent event itself, but the aftermath of such violence; see The Death of Caesar, The Execution of Marshal Ney, and Jerusalem.",
+   "url": "https://en.wikipedia.org/wiki/The_Duel_After_the_Masquerade",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "A man dressed as a Pierrot has been mortally wounded in a duel and has collapsed into the arms of a Duc de Guise.",
+   "url": "https://en.wikipedia.org/wiki/The_Duel_After_the_Masquerade",
+   "note": "sentence T7"
+  },
+  {
+   "claim": "The survivor of the duel, dressed as an American Indian, walks away with his second, Harlequin, leaving behind his weapon and some feathers of his headdress, towards his carriage, shown waiting in the",
+   "url": "https://en.wikipedia.org/wiki/The_Duel_After_the_Masquerade",
+   "note": "sentence T7"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-27"
+}
