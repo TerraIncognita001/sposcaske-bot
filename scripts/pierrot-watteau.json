@@ -1,0 +1,395 @@
+{
+ "id": "pierrot-watteau",
+ "kind": "artwork",
+ "form": "hold",
+ "hook_frame": "This ___ ...",
+ "closer": "either_or",
+ "detail": "face",
+ "home": "face",
+ "subject": {
+  "title": "Pierrot",
+  "creator": "Antoine Watteau",
+  "year": 1718,
+  "wikidata": "Q3387944"
+ },
+ "lead": {
+  "commons": "Pierrot_-_Antoine_Watteau_-_Musée_du_Louvre_Peintures_MI_1121_-_après_restauration_2024.jpg",
+  "width_px": 3840,
+  "aspect": 0.8406,
+  "px": 7404,
+  "license": "Public domain",
+  "credit": "Pierrot - Antoine Watteau - Musée du Louvre Peintures MI 1121 - après restauration 2024 — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Antoine Watteau",
+  "credit": "Portrait of Antoine Watteau — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "painting",
+    "park"
+   ]
+  },
+  {
+   "name": "clown",
+   "box": [
+    0.26,
+    0.07,
+    0.64,
+    0.94
+   ],
+   "words": [
+    "clown",
+    "costume"
+   ]
+  },
+  {
+   "name": "upper",
+   "box": [
+    0.26,
+    0.07,
+    0.64,
+    0.5
+   ],
+   "words": [
+    "man",
+    "sleeves"
+   ]
+  },
+  {
+   "name": "face",
+   "box": [
+    0.39,
+    0.1,
+    0.52,
+    0.2
+   ],
+   "words": [
+    "face",
+    "eyes"
+   ]
+  },
+  {
+   "name": "hands",
+   "box": [
+    0.29,
+    0.5,
+    0.6,
+    0.61
+   ],
+   "words": [
+    "hands"
+   ]
+  },
+  {
+   "name": "pants",
+   "box": [
+    0.31,
+    0.6,
+    0.59,
+    0.86
+   ],
+   "words": [
+    "trousers"
+   ]
+  },
+  {
+   "name": "doctor",
+   "box": [
+    0.02,
+    0.57,
+    0.19,
+    0.73
+   ],
+   "words": [
+    "doctor"
+   ]
+  },
+  {
+   "name": "donkey",
+   "box": [
+    0.21,
+    0.68,
+    0.34,
+    0.83
+   ],
+   "words": [
+    "donkey"
+   ]
+  },
+  {
+   "name": "actors",
+   "box": [
+    0.56,
+    0.65,
+    0.91,
+    0.88
+   ],
+   "words": [
+    "actors",
+    "companions"
+   ]
+  },
+  {
+   "name": "red",
+   "box": [
+    0.63,
+    0.64,
+    0.91,
+    0.9
+   ],
+   "words": [
+    "red",
+    "suit"
+   ]
+  },
+  {
+   "name": "shoes",
+   "box": [
+    0.3,
+    0.86,
+    0.55,
+    1.0
+   ],
+   "words": [
+    "shoes"
+   ]
+  }
+ ],
+ "punch": "ALONE",
+ "sentences": [
+  {
+   "slot": "H1",
+   "text": "This man stands in front of everyone, and he is alone.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "man",
+     "to": "face"
+    },
+    {
+     "on": "alone",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "H2",
+   "text": "He looks like a clown posing for a portrait.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "clown",
+     "to": "clown"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "His sleeves are too long.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "sleeves",
+     "to": "upper"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "His trousers are too short.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "trousers",
+     "to": "pants"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "His hands just hang.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "hands",
+     "to": "hands"
+    }
+   ]
+  },
+  {
+   "slot": "H4",
+   "text": "Watteau painted him around 1718, his only life-size figure.",
+   "kind": "FACT",
+   "source": 2
+  },
+  {
+   "slot": "H5",
+   "text": "Below him, the other actors talk and ignore him.",
+   "kind": "FACT",
+   "source": 23,
+   "show": [
+    {
+     "on": "actors",
+     "to": "actors"
+    }
+   ]
+  },
+  {
+   "slot": "H5",
+   "text": "The man in red wears a suit that fits.",
+   "kind": "FACT",
+   "source": 27,
+   "show": [
+    {
+     "on": "red",
+     "to": "red"
+    }
+   ]
+  },
+  {
+   "slot": "H6",
+   "text": "So why is the clown the biggest thing here?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "clown",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "H7",
+   "text": "It may have begun as a shop sign for an actor.",
+   "kind": "FACT",
+   "source": 8,
+   "show": [
+    {
+     "on": "actor",
+     "to": "clown"
+    }
+   ]
+  },
+  {
+   "slot": "H7",
+   "text": "Erwin Panofsky saw Watteau himself in that face.",
+   "kind": "FACT",
+   "source": 19,
+   "show": [
+    {
+     "on": "face",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "H7",
+   "text": "Others saw plain stupidity.",
+   "kind": "FACT",
+   "source": 18,
+   "show": [
+    {
+     "on": "stupidity",
+     "to": "face"
+    }
+   ]
+  },
+  {
+   "slot": "H7",
+   "text": "A dealer once chalked a plea under him to win buyers.",
+   "kind": "FACT",
+   "source": 28,
+   "show": [
+    {
+     "on": "plea",
+     "to": "shoes"
+    }
+   ]
+  },
+  {
+   "slot": "H9",
+   "text": "Is he the star, or the only one missing the joke?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "joke",
+     "to": "face"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Watteau": "wa-toh",
+  "Panofsky": "pa-nof-skee"
+ },
+ "meta": {
+  "title": "Nobody in this painting looks at the clown",
+  "description": "Watteau's life-size clown stands in front of everyone, yet his fellow actors ignore him. Sad, foolish, or a portrait of the painter himself? Sources: Wikipedia, Louvre. #history #art",
+  "tags": [
+   "Watteau",
+   "Pierrot",
+   "Gilles",
+   "Louvre",
+   "rococo",
+   "art history",
+   "painting",
+   "commedia dell'arte"
+  ],
+  "question": "Sad clown or simple fool: what do you see in his face?"
+ },
+ "sources": [
+  {
+   "claim": "Noted for its scale, the piece measures 184.5 x 149.5 cm and is the only life-size figure Watteau has represented.",
+   "url": "https://en.wikipedia.org/wiki/Pierrot_(Watteau)",
+   "note": "sentence H4"
+  },
+  {
+   "claim": "Separated from Pierrot below the mound, the actor's calm engagement with one another while ignoring Pierrot's presence serves to isolate Pierrot not only spatially, but also emotionally, highlighting ",
+   "url": "https://en.wikipedia.org/wiki/Pierrot_(Watteau)",
+   "note": "sentence H5"
+  },
+  {
+   "claim": "The man in red wears a bright, well-fitting suit that stands in sharp contrast to Pierrot's, signaling the clown's incompetence compared to the rest of the actors.",
+   "url": "https://en.wikipedia.org/wiki/Pierrot_(Watteau)",
+   "note": "sentence H5"
+  },
+  {
+   "claim": "Some scholars speculate that the painting originated as a shop sign, possibly one of two signs commissioned by the retired actor Belloni, an actor known for performing as Pierrot.",
+   "url": "https://en.wikipedia.org/wiki/Pierrot_(Watteau)",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "Many art historians, such as Erwin Panofsky, see Pierrot as a melancholic reflection of Watteau himself.",
+   "url": "https://en.wikipedia.org/wiki/Pierrot_(Watteau)",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "Some scholars read it as stupidity, while others see melancholy, poignancy, or even revery.",
+   "url": "https://en.wikipedia.org/wiki/Pierrot_(Watteau)",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "Provenance and legacy In the early nineteenth century, a picture dealer struggling to sell the painting sought to entice buyers by writing the following words at the bottom of the painting in chalk: \"",
+   "url": "https://en.wikipedia.org/wiki/Pierrot_(Watteau)",
+   "note": "sentence H7"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-27"
+}
