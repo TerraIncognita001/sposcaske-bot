@@ -1,11 +1,11 @@
 {
  "id": "ambassadors-holbein",
  "kind": "artwork",
- "form": "riddle",
- "hook_frame": "There's a ___ detail in this painting most people ___.",
+ "form": "hold",
+ "hook_frame": "There's ___",
  "closer": "either_or",
- "detail": "shape",
- "home": null,
+ "detail": "skull",
+ "home": "skull",
  "subject": {
   "title": "The Ambassadors",
   "creator": "Hans Holbein the Younger",
@@ -25,17 +25,7 @@
   "credit": "Portrait of Hans Holbein the Younger — Wikimedia Commons",
   "license": "Public domain"
  },
- "evidence": [
-  {
-   "key": "holbein_port",
-   "query": "Hans Holbein the Younger self portrait",
-   "words": [
-    "hans holbein the younger"
-   ],
-   "license": "Public domain",
-   "credit": "Hans Holbein the Younger self portrait — Wikimedia Commons"
-  }
- ],
+ "evidence": [],
  "look": [
   {
    "name": "main_action",
@@ -216,136 +206,211 @@
    ]
   }
  ],
- "punch": "MISS",
+ "punch": "SKULL",
  "sentences": [
   {
-   "slot": "S1",
-   "text": "There's a disturbing detail in this diplomatic room most people miss.",
+   "slot": "H1",
+   "text": "There's a grey shape on this floor, and it's a skull.",
    "kind": "HOOK",
-   "source": null
+   "source": null,
+   "show": [
+    {
+     "on": "shape",
+     "to": "skull"
+    },
+    {
+     "on": "skull",
+     "to": "skull"
+    }
+   ]
   },
   {
-   "slot": "S2",
-   "text": "This is The Ambassadors, painted by Hans Holbein the Younger in 1533.",
+   "slot": "H2",
+   "text": "Most people see two rich men and their expensive toys.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "men",
+     "to": "main_action"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "A globe of the stars.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "globe",
+     "to": "globe_upper"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "A lute.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "lute",
+     "to": "lute"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "A book of hymns.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "hymns",
+     "to": "book"
+    }
+   ]
+  },
+  {
+   "slot": "H4",
+   "text": "Hans Holbein painted them in 1533.",
    "kind": "FACT",
    "source": 1
   },
   {
-   "slot": "S3",
-   "text": "Two rich ambassadors stand beside a table stacked with instruments, showing off their knowledge.",
-   "kind": "LOOK",
-   "source": 6
-  },
-  {
-   "slot": "S4",
-   "text": "But look closer.",
-   "kind": "READING",
-   "source": null
-  },
-  {
-   "slot": "S5",
-   "text": "A strange grey shape floats across the floor.",
-   "kind": "LOOK",
-   "source": 30
-  },
-  {
-   "slot": "S6",
-   "text": "It doesn't fit.",
-   "kind": "READING",
-   "source": null
-  },
-  {
-   "slot": "S6",
-   "text": "It doesn't belong.",
-   "kind": "READING",
-   "source": null
-  },
-  {
-   "slot": "S6",
-   "text": "It simply floats.",
-   "kind": "READING",
-   "source": null
-  },
-  {
-   "slot": "S7",
-   "text": "According to the National Gallery, Holbein painted a human skull skewed in extreme perspective.",
+   "slot": "H5",
+   "text": "The lute has a broken string, a symbol of discord.",
    "kind": "FACT",
-   "source": 31
+   "source": 8,
+   "show": [
+    {
+     "on": "lute",
+     "to": "lute"
+    }
+   ]
   },
   {
-   "slot": "S8",
-   "text": "Viewers should see a normal diplomatic meeting.",
-   "kind": "READING",
-   "source": null
+   "slot": "H6",
+   "text": "Look from the side, and the grey smear becomes a skull.",
+   "kind": "FACT",
+   "source": 31,
+   "show": [
+    {
+     "on": "skull",
+     "to": "skull"
+    }
+   ]
   },
   {
-   "slot": "S9",
-   "text": "But a sinister shadow of death corrupts the room.",
+   "slot": "H6",
+   "text": "So why hide death at their feet?",
    "kind": "READING",
-   "source": null
+   "source": null,
+   "show": [
+    {
+     "on": "death",
+     "to": "skull"
+    }
+   ]
   },
   {
-   "slot": "S10",
-   "text": "And here's the disturbing part.",
-   "kind": "READING",
-   "source": null
+   "slot": "H7",
+   "text": "One answer: remember death was Dinteville's own motto.",
+   "kind": "FACT",
+   "source": 33,
+   "show": [
+    {
+     "on": "Dinteville's",
+     "to": "dinteville_face"
+    }
+   ]
   },
   {
-   "slot": "S11",
-   "text": "They display worldly wealth, yet death haunts their feet.",
-   "kind": "READING",
-   "source": null
+   "slot": "H7",
+   "text": "He wears a tiny skull on his hat, too.",
+   "kind": "FACT",
+   "source": 35,
+   "show": [
+    {
+     "on": "hat",
+     "to": "dinteville_face"
+    },
+    {
+     "on": "skull",
+     "to": "dinteville_face"
+    }
+   ]
   },
   {
-   "slot": "S12",
-   "text": "Almost as if all their knowledge cannot save them.",
+   "slot": "H8",
+   "text": "All that knowledge, and death still lies on the floor.",
    "kind": "READING",
-   "source": null
+   "source": null,
+   "show": [
+    {
+     "on": "floor",
+     "to": "skull"
+    }
+   ]
   },
   {
-   "slot": "S13",
-   "text": "So do you see a showcase of power, or the skull waiting below?",
+   "slot": "H9",
+   "text": "So what do you see first, their power, or the skull?",
    "kind": "READING",
-   "source": null
+   "source": null,
+   "show": [
+    {
+     "on": "skull",
+     "to": "skull"
+    }
+   ]
   }
  ],
  "pronounce": {
-  "Holbein": "WHOLE-byne",
-  "Dinteville": "DAN-teh-veel",
-  "Selve": "SELL-vuh"
+  "Holbein": "hol-bine",
+  "Dinteville": "dant-veel"
  },
  "meta": {
-  "title": "The Hidden Skull in Holbein's The Ambassadors",
-  "description": "Hans Holbein painted two wealthy diplomats in 1533 surrounded by scientific symbols. Hidden at their feet is an anamorphic skull representing mortality.",
+  "title": "A skull hidden at the feet of two rich men",
+  "description": "Hans Holbein the Younger painted The Ambassadors in 1533. Between the globes, the lute and the hymn book lies a grey smear that turns into a skull when you look from the side. #history #art",
   "tags": [
-   "art history",
+   "Holbein",
    "The Ambassadors",
-   "Hans Holbein",
    "anamorphosis",
-   "memento mori"
+   "memento mori",
+   "National Gallery",
+   "art history",
+   "renaissance"
   ],
-  "question": "So do you see a showcase of power, or the skull waiting below?"
+  "question": "Power first, or the skull first?"
  },
  "sources": [
   {
    "claim": "The Ambassadors is a 1533 painting by Hans Holbein the Younger.",
    "url": "https://en.wikipedia.org/wiki/The_Ambassadors_(Holbein)",
-   "note": "sentence S2"
+   "note": "sentence H4"
   },
   {
-   "claim": "An array of expensive scientific objects, related to knowing the time and the cosmos are prominently displayed.",
+   "claim": "A second shelf of objects shows a lute with a broken string, a symbol of discord, next to a hymnal composed by Martin Luther.",
    "url": "https://en.wikipedia.org/wiki/The_Ambassadors_(Holbein)",
-   "note": "sentence S3"
-  },
-  {
-   "claim": "The work has been described as \"one of the most staggeringly impressive portraits in Renaissance art.\" Anamorphic skull The most notable and famous of Holbein's symbols in the work is the distorted sk",
-   "url": "https://en.wikipedia.org/wiki/The_Ambassadors_(Holbein)",
-   "note": "sentence S5"
+   "note": "sentence H5"
   },
   {
    "claim": "The skull, rendered in anamorphic perspective, another invention of the Early Renaissance, is meant to be a visual puzzle as the viewer must approach the painting from high on the right side, or low o",
    "url": "https://en.wikipedia.org/wiki/The_Ambassadors_(Holbein)",
-   "note": "sentence S7"
+   "note": "sentence H6"
+  },
+  {
+   "claim": "A simple explanation is that \"memento mori\" was de Dinteville's motto, while another possibility is that this painting represents three levels: the heavens as portrayed by the astrolabe and other obje",
+   "url": "https://en.wikipedia.org/wiki/The_Ambassadors_(Holbein)",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "Holbein may have intended the skulls (one as a gray slash and the other as a medallion on Jean de Dinteville's hat) and the crucifix in the upper left corner to encourage contemplation of one's impend",
+   "url": "https://en.wikipedia.org/wiki/The_Ambassadors_(Holbein)",
+   "note": "sentence H7"
   }
- ]
+ ],
+ "written_by": "Claude (night writer), 2026-11-27"
 }
