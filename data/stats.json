@@ -2358,7 +2358,7 @@
     }
    },
    "hook": "There's something colder than anger about the way this old man looks back at you.",
-   "views": 708,
+   "views": 711,
    "likes": 34,
    "comments": 4,
    "score": 13.35,
@@ -3282,7 +3282,7 @@
     }
    },
    "hook": "What if this is not a monster's scream at all, but the purest terror you have ever seen?",
-   "views": 194,
+   "views": 195,
    "likes": 11,
    "comments": 2,
    "score": 13.88,
@@ -6056,9 +6056,9 @@
    "views": 272,
    "likes": 8,
    "comments": 1,
-   "score": 12.2,
-   "a_views": 272,
-   "a_engagedViews": 149,
+   "score": 12.21,
+   "a_views": 270,
+   "a_engagedViews": 148,
    "a_averageViewPercentage": 52.73,
    "a_averageViewDuration": 30,
    "a_shares": 0,
@@ -6980,14 +6980,14 @@
    "views": 273,
    "likes": 5,
    "comments": 2,
-   "score": 11.66,
-   "a_views": 275,
-   "a_engagedViews": 143,
+   "score": 11.64,
+   "a_views": 272,
+   "a_engagedViews": 141,
    "a_averageViewPercentage": 61.51,
    "a_averageViewDuration": 38,
    "a_shares": 0,
    "a_subscribersGained": 1,
-   "stay": 0.52,
+   "stay": 0.518,
    "curve": [
     [
      0.01,
@@ -7442,9 +7442,9 @@
    "views": 272,
    "likes": 4,
    "comments": 1,
-   "score": 11.36,
-   "a_views": 273,
-   "a_engagedViews": 117,
+   "score": 11.33,
+   "a_views": 270,
+   "a_engagedViews": 115,
    "a_averageViewPercentage": 85.17,
    "a_averageViewDuration": 49,
    "a_shares": 0,
@@ -7851,7 +7851,7 @@
      0.652
     ]
    ],
-   "stay": 0.429,
+   "stay": 0.426,
    "drops": [
     {
      "t": 14.3,
@@ -8361,7 +8361,7 @@
     }
    },
    "hook": "Every time he came home, this face was waiting above his door.",
-   "views": 350,
+   "views": 349,
    "likes": 5,
    "comments": 1,
    "score": 12.5,
@@ -9746,7 +9746,7 @@
     }
    },
    "hook": "This man looks deep in prayer, but he may not be alive.",
-   "views": 176,
+   "views": 191,
    "likes": 5,
    "comments": 3,
    "score": 10.59,
@@ -9785,10 +9785,10 @@
     }
    },
    "hook": "Her eyes are rimmed with red, and they never stop watching.",
-   "views": 417,
-   "likes": 16,
+   "views": 457,
+   "likes": 17,
    "comments": 1,
-   "score": 6.48
+   "score": 6.55
   },
   "8xk_1WwoYsg": {
    "story": "peter-the-great-interrogating-the-tsarevich-alex",
@@ -9818,10 +9818,10 @@
     }
    },
    "hook": "This man is looking at his own son, and searching for mercy.",
-   "views": 33,
-   "likes": 1,
+   "views": 40,
+   "likes": 2,
    "comments": 1,
-   "score": 3.64
+   "score": 3.86
   },
   "YLBRY5M_q30": {
    "story": "david-with-the-head-of-goliath-caravaggio",
@@ -9851,12 +9851,45 @@
     }
    },
    "hook": "The severed head in this boy's hand wears the painter's face.",
-   "views": 32,
+   "views": 36,
    "likes": 0,
    "comments": 1,
-   "score": 3.58
+   "score": 3.69
+  },
+  "9sL61VYBRXg": {
+   "story": "circe-invidiosa-waterhouse",
+   "slot": "E2026-11-27#2",
+   "title": "The witch who poured her poison with regret",
+   "publish_at": "2026-11-27T02:00:00Z",
+   "seconds": 56.3,
+   "f": {
+    "kind": "artwork",
+    "form": "twist",
+    "hook_frame": "what_if",
+    "punch": "SORRY",
+    "closer": "either_or",
+    "title_pattern": "who",
+    "theme": "holy or feared",
+    "century": "19th",
+    "length": "under 60 s",
+    "writer": "claude",
+    "judge": 8,
+    "judge_scores": {
+     "G": 1,
+     "D": 2,
+     "F": 1,
+     "T": 2,
+     "Y": 1,
+     "S": 1
+    }
+   },
+   "hook": "What if the witch pouring this poison is secretly sorry?",
+   "views": 16,
+   "likes": 1,
+   "comments": 1,
+   "score": 2.95
   }
  },
- "read_at": "2026-11-26T21:24:41Z",
+ "read_at": "2026-11-27T04:08:06Z",
  "_about": "written by stats_now.py (v1.09): one entry per public video; learn.py reads it. Do not edit by hand."
 }
