@@ -218,8 +218,7 @@
    "story": "the-annunciation-tanner",
    "title": "The angel who came as a pillar of light",
    "publish_at": "2026-11-27T15:00:00Z",
-   "seconds": 46.4,
-   "comment_pending": "A blessing, or a burden? 👇"
+   "seconds": 46.4
   },
   "E2026-11-28#2": {
    "tries": 1,
@@ -229,6 +228,15 @@
    "publish_at": "2026-11-28T02:00:00Z",
    "seconds": 56.9,
    "comment_pending": "The witches, or the judges? 👇"
+  },
+  "E2026-11-28#1": {
+   "tries": 1,
+   "video": "dYoTId7kYdQ",
+   "story": "christ-in-the-desert-kramskoi",
+   "title": "The man who sat in the desert deciding the fate of the world",
+   "publish_at": "2026-11-28T15:00:00Z",
+   "seconds": 56.6,
+   "comment_pending": "Giving up, or gathering strength? 👇"
   }
  }
 }
