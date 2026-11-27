@@ -42,9 +42,10 @@ def conform(mp4, story, work):
     intro = float(min(np.corrcoef(head[:k, c], ref[:k, c])[0, 1] for c in (0, 1))) if k > 40000 else 0.0
     dur, size = float(pr["format"]["duration"]), int(pr["format"]["size"])
     audit = tl["focus_audit"]
+    lo = min([F["length"]["seconds_min"]] + F["length"]["forms"].get(story.get("form"), {}).get("seconds", [])[:1])    # v1.24: the hold form may be 30 s (Andrii, Nov 27: 'Так')
     rows = [("frame 1080x1920", v["width"] == F["canvas"]["w"] and v["height"] == F["canvas"]["h"], f"{v['width']}x{v['height']}"),
             ("30 frames a second", v["r_frame_rate"] == f"{F['canvas']['fps']}/1", v["r_frame_rate"]),
-            (f"length {F['length']['seconds_min']}-{F['length']['seconds_max']} s", F["length"]["seconds_min"] <= dur <= F["length"]["seconds_max"], f"{dur:.1f} s"),
+            (f"length {lo}-{F['length']['seconds_max']} s", lo <= dur <= F["length"]["seconds_max"], f"{dur:.1f} s"),
             (f"loudness {F['audio']['mix']['lufs']} LUFS +-1", abs(lufs - F["audio"]["mix"]["lufs"]) <= 1.0, f"{lufs:.1f} LUFS"),
             ("true peak under 0 dBFS", peak <= 0.0, f"{peak:.1f} dBFS"),
             ("stereo sound (the opening sound is wide)", a["channels"] == 2, f"{a['channels']} ch"),

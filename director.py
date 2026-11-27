@@ -184,6 +184,7 @@ def build_lock(script):
     figure = {w.lower() for l in look if inside(focus[home], l["box"]) > 0.9 for w in l.get("words", [])}   # the face stands for the figure
     names = {w: allowed_for(t, focus) + ([x for x in family if x not in t] if w in figure else []) for w, t in words.items()}
     person = [norm(x) for x in re.split(r"[\s-]+", script["portrait"]["of"]) if x[:1].isupper()]
+    title_words = {norm(x) for x in re.split(r"[\s-]+", (script.get("subject") or {}).get("title", "")) if x}    # v1.24
     on_screen = lambda here, key: here in names[key] if geo is None else any(geo.sees(here, b) for b in names[key] if b in focus)
 
     lines, cur, sents, shown_portrait = [], "_mid", script["sentences"], False
@@ -221,6 +222,9 @@ def build_lock(script):
                     cues.append({"image": "portrait", "on": hit})
                     ln["names"] = {t: ["portrait"] for t in toks if t in person}
                     shown_portrait, cur = True, "portrait"
+                for t in toks:                                         # v1.24: the title's words in the ident are shown by the whole picture and the card
+                    if t in title_words and (t in words or t.split("'")[0] in words) and t not in ln.get("names", {}):
+                        ln.setdefault("names", {})[t] = ["full", "card"]
             else:
                 if cur in ("portrait", "card", "full"):                # back from the card: straight to the face, never to the whole picture
                     cues.append({"scene": "main", "to": home})
@@ -332,6 +336,7 @@ def build(script):
 
     names = {w: allowed(t) for w, t in words.items()}
     person = [norm(x) for x in re.split(r"[\s-]+", script["portrait"]["of"]) if x[:1].isupper()]
+    title_words = {norm(x) for x in re.split(r"[\s-]+", (script.get("subject") or {}).get("title", "")) if x}    # v1.24
     geo = geo_of(script, focus)                                        # v1.12: None for a script without the picture's aspect (before v1.12)
     really = lambda here, key: geo is None or here == "card" or (here != "full" and here not in focus) or any(geo.sees(here, b) for b in names.get(key, []) if b in focus)
 
@@ -375,6 +380,9 @@ def build(script):
                     cur = ("portrait", "")
                 elif cur[0] == "portrait":                             # the sentence goes on after the portrait
                     go("main:full", how="cut", push=True)
+                for t in toks:                                         # v1.24: the title's words in the ident are shown by the whole picture and the card (Andrii, Nov 27: 'Так')
+                    if t in title_words and (t in words or t.split("'")[0] in words) and t not in ln.get("names", {}):
+                        ln.setdefault("names", {})[t] = ["full", "card"]
             elif script.get("form") == "hold" and not any("image" in c for l_ in lines for c in (l_.get("cam") if isinstance(l_.get("cam"), list) else [l_.get("cam") or {}])) \
                     and any(t in person for t in toks):                # v1.19, the hold form: no ident; the painter's card comes with his first name, later
                 if cur[0] != "main" or cur[1] != "full":

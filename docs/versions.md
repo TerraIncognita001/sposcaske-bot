@@ -5,6 +5,15 @@ The system is taken from the warehouse `ww2-bot` (Andrii, 2026-11-13: 'візь�
 Andrii, date ('his words'): what changed, the numbers, why`. Search here before changing a behaviour: it may have been
 tried and rolled back.
 
+- v1.24 = HOLD FROM 30 S, THE TITLE IN THE IDENT, A FREE PORTRAIT, Andrii, Nov 27 2026 ('1. Так 2. Так 5. Роби'):
+  (1) `bot.py` length check takes the form's own minimum when lower: `format.json` length.forms.hold = 70-115 words,
+  30-50 s (v1.22 set the hold at 30-45 s, but the check stayed 45 s for every form: Tanner failed at 42.8 s). Other
+  forms keep 45 s. (2) `director.py` (build and build_lock): a word of the painting's title spoken in the ident line
+  ('This is Lucifer, ...') is shown by the whole picture or the card, so a LOOK word that is also a title word no
+  longer fails 'every named thing is in the frame' (Vrubel, Magdalene, Knight, Circe, David lost runs to it).
+  (3) `sources.free_portrait`: when the Wikidata photo of the painter is not public domain / CC0 (Watteau: CC BY-SA 4.0,
+  run 45960789922 fell), a public-domain portrait OF him is taken from Commons ('Rosalba Carriera Portrait Antoine
+  Watteau'); a picture BY him or of a namesake is refused.
 - v1.23 = THE MUSIC BED IS AS LONG AS THE VOICE, Andrii, Nov 26 2026 ('так, виправ збій звуку'). Why: the render of
   The Annunciation (run 45897205675) fell in `render.build_audio`: 'operands could not be broadcast ... (2090105,)
   (2090104,)'. There is no music library (`assets/music` is empty), so the bed is `humming_bed(n / SR)`, and

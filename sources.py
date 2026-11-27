@@ -99,6 +99,22 @@ def find_commons(query, min_width=1100, limit=12):
     return out
 
 
+def free_portrait(name):
+    """v1.24: a public-domain / CC0 portrait OF the person on Commons, or None. Every part of the name must be in the
+    file name, after 'portrait' or before 'self' ('Rosalba Carriera Portrait Antoine Watteau', 'Kramskoi Self Portrait'),
+    never after 'by' ('Anne of Cleves by Hans Holbein'), never another Goya ('Portrait de Mariano Goya')."""
+    parts = [t.lower() for t in re.split(r"[\s-]+", name) if t.lower() not in ("the", "younger", "elder", "de", "van", "von", "der")]
+    sur, gap = re.escape(parts[-1]), r"(?:(?! - |,|\(|\bby\b).){0,40}"
+    for q in (f"portrait of {name}", f"{name} self-portrait", f"{name} portrait"):
+        for fn, w, lic in find_commons(q, min_width=600):
+            low = fn.lower()
+            if not all(p in low for p in parts) or re.search(r"signature|tomb|grave|house|statue", low):
+                continue
+            if re.search(rf"portrait{gap}{sur}|{sur}{gap}self", low):
+                return fn
+    return None
+
+
 def wikipedia(title):
     """(numbered fact sentences, Commons file of the page's lead picture, Wikidata id) for an English Wikipedia page."""
     d = api("en.wikipedia.org", action="query", titles=title.lstrip("="), redirects=1, prop="extracts|pageimages|pageprops", explaintext=1, exsectionformat="plain",
@@ -178,6 +194,11 @@ def resolve(story_path, work):
         if f.get("portrait_of"):
             v["commons"], qid = find_portrait(f["portrait_of"], f.get("work"))    # v1.11: the painting's creator wins
             found.append(f"{key}: portrait of {f['portrait_of']} -> {v['commons']} ({qid})")
+            got = licence([v["commons"]]).get(v["commons"].replace("_", " ")) if v.get("commons") else None
+            if got and not FREE.match(got[0]):                         # v1.24: Wikidata's photo is CC BY-SA -> a public-domain portrait from Commons (Watteau, Nov 27; Andrii: 'Роби')
+                alt = free_portrait(f["portrait_of"])
+                found.append(f"{key}: '{v['commons']}' is {got[0]} -> {alt or 'no free portrait found'}")
+                v["commons"] = alt or v["commons"]
         if not v.get("commons") and f.get("query"):
             hits = find_commons(f["query"])
             v["commons"] = hits[0][0] if hits else None

@@ -62,6 +62,17 @@
      95,
      115
     ]
+   },
+   "hold": {
+    "words": [
+     70,
+     115
+    ],
+    "seconds": [
+     30,
+     50
+    ],
+    "why": "v1.24: the hold form is 30-50 s (v1.22, Andrii, Nov 26-27: 'Так'); bot.py took 45 s for every form"
    }
   }
  },
