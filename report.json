@@ -1,0 +1,72 @@
+{
+ "story": "the-conjurer-bosch",
+ "numbers": {
+  "seconds": 48.4,
+  "lufs": -16.0,
+  "peak_dbfs": -1.2,
+  "mb": 34.4
+ },
+ "checks": [
+  {
+   "check": "frame 1080x1920",
+   "ok": true,
+   "got": "1080x1920"
+  },
+  {
+   "check": "30 frames a second",
+   "ok": true,
+   "got": "30/1"
+  },
+  {
+   "check": "length 30-150 s",
+   "ok": true,
+   "got": "48.4 s"
+  },
+  {
+   "check": "loudness -16 LUFS +-1",
+   "ok": true,
+   "got": "-16.0 LUFS"
+  },
+  {
+   "check": "true peak under 0 dBFS",
+   "ok": true,
+   "got": "-1.2 dBFS"
+  },
+  {
+   "check": "stereo sound (the opening sound is wide)",
+   "ok": true,
+   "got": "2 ch"
+  },
+  {
+   "check": "voice starts after the opening sound",
+   "ok": true,
+   "got": "1.65 s"
+  },
+  {
+   "check": "opens with the owner's sound, in stereo, untouched",
+   "ok": true,
+   "got": "correlation 0.998"
+  },
+  {
+   "check": "the red punch word is on screen after the hook",
+   "ok": true,
+   "got": "STOLEN"
+  },
+  {
+   "check": "the portrait card of the person named in the ident",
+   "ok": true,
+   "got": "1 shot"
+  },
+  {
+   "check": "every named thing is in the frame",
+   "ok": true,
+   "got": "28 of 28"
+  },
+  {
+   "check": "file under 95 MB (the preview branch takes 100)",
+   "ok": true,
+   "got": "34.4 MB"
+  }
+ ],
+ "bot_seconds": 100
+}

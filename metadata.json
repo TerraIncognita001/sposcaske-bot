@@ -1,0 +1,38 @@
+{
+ "title": "While he watches the trick, his purse is gone",
+ "description": "The Conjurer, by Hieronymus Bosch or his workshop, around 1502. A man leans in to watch a pearl and a game of cups and balls, while the man behind him looks at the sky and lifts his purse. #history #art\n\nPictures (public domain, Wikimedia Commons):\n- Hieronymus Bosch 051 — Wikimedia Commons\n- Portrait of Hieronymus Bosch — Wikimedia Commons\n\nSources:\n- https://en.wikipedia.org/wiki/The_Conjurer_(painting)\n- https://en.wikipedia.org/wiki/The_Conjurer_(painting)\n- https://en.wikipedia.org/wiki/The_Conjurer_(painting)\n- https://en.wikipedia.org/wiki/The_Conjurer_(painting)\n- https://en.wikipedia.org/wiki/The_Conjurer_(painting)\n\nThe narration is a synthetic voice.\n\n#history #art",
+ "tags": [
+  "Bosch",
+  "The Conjurer",
+  "Hieronymus Bosch",
+  "pickpocket",
+  "Early Netherlandish",
+  "art history",
+  "painting"
+ ],
+ "pinned_question": "Watching the trick, or guarding your purse?",
+ "categoryId": "27",
+ "story": "the-conjurer-bosch",
+ "artwork": "The Conjurer (Hieronymus Bosch, 1502)",
+ "pictures": [
+  {
+   "key": "main",
+   "commons": "Hieronymus_Bosch_051.jpg",
+   "licence_in_story": "Public domain",
+   "licence_on_commons": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Hieronymus_Bosch_051.jpg",
+   "from": "download (200)",
+   "sha1": "0bde589d16945b5cacc13b4227b5ffabc05c0db2"
+  },
+  {
+   "key": "portrait",
+   "commons": "Jheronimus Bosch (cropped).jpg",
+   "licence_in_story": "Public domain",
+   "licence_on_commons": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Jheronimus_Bosch_(cropped).jpg",
+   "from": "download (200)",
+   "sha1": "8635c4354b582a9e81d1216928e4dcc896352d4f",
+   "crop": "whole picture (no face found)"
+  }
+ ]
+}

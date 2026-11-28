@@ -1,0 +1,28 @@
+{
+ "story": "the-conjurer-bosch",
+ "found": [
+  "portrait: portrait of Hieronymus Bosch -> Jheronimus Bosch (cropped).jpg (Q130531)"
+ ],
+ "pictures": [
+  {
+   "key": "main",
+   "commons": "Hieronymus_Bosch_051.jpg",
+   "licence_in_story": "Public domain",
+   "licence_on_commons": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Hieronymus_Bosch_051.jpg",
+   "from": "download (200)",
+   "sha1": "0bde589d16945b5cacc13b4227b5ffabc05c0db2"
+  },
+  {
+   "key": "portrait",
+   "commons": "Jheronimus Bosch (cropped).jpg",
+   "licence_in_story": "Public domain",
+   "licence_on_commons": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Jheronimus_Bosch_(cropped).jpg",
+   "from": "download (200)",
+   "sha1": "8635c4354b582a9e81d1216928e4dcc896352d4f",
+   "crop": "whole picture (no face found)"
+  }
+ ],
+ "problems": []
+}

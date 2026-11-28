@@ -1,0 +1,352 @@
+{
+ "total": 48.39215419501135,
+ "stage": [
+  1080,
+  864
+ ],
+ "y_off": 528,
+ "events": {
+  "voice_start": 1.65,
+  "hook_end": 5.195102040816327,
+  "ident_start": 5.795102040816326,
+  "title_on": 5.095102040816327,
+  "title_off": 5.9951020408163265,
+  "burn": 5.985102040816327,
+  "image_shots": [
+   [
+    16.725986394557825,
+    21.434897959183672,
+    "portrait"
+   ]
+  ],
+  "white": [
+   21.434897959183672
+  ]
+ },
+ "focus_audit": [
+  {
+   "t": 2.04,
+   "word": "watching",
+   "line": "He is watching a trick,",
+   "ok": true,
+   "shown": "victim_face:100% in, 9% of frame"
+  },
+  {
+   "t": 3.82,
+   "word": "purse",
+   "line": "and his purse is being stolen.",
+   "ok": true,
+   "shown": "purse:100% in, 9% of frame"
+  },
+  {
+   "t": 4.77,
+   "word": "stolen",
+   "line": "and his purse is being stolen.",
+   "ok": true,
+   "shown": "victim_face:100% in, 9% of frame"
+  },
+  {
+   "t": 6.03,
+   "word": "street",
+   "line": "A street show:",
+   "ok": true,
+   "shown": "main_action:96% in, 100% of frame"
+  },
+  {
+   "t": 6.59,
+   "word": "show",
+   "line": "A street show:",
+   "ok": true,
+   "shown": "main_action:94% in, 100% of frame"
+  },
+  {
+   "t": 7.38,
+   "word": "crowd",
+   "line": "a crowd around a magician.",
+   "ok": true,
+   "shown": "crowd:100% in, 35% of frame"
+  },
+  {
+   "t": 8.44,
+   "word": "magician",
+   "line": "a crowd around a magician.",
+   "ok": true,
+   "shown": "conjurer:75% in, 19% of frame"
+  },
+  {
+   "t": 9.65,
+   "word": "cups",
+   "line": "Cups and balls on the table.",
+   "ok": true,
+   "shown": "table:100% in, 12% of frame"
+  },
+  {
+   "t": 10.27,
+   "word": "balls",
+   "line": "Cups and balls on the table.",
+   "ok": true,
+   "shown": "table:100% in, 24% of frame"
+  },
+  {
+   "t": 11.17,
+   "word": "table",
+   "line": "Cups and balls on the table.",
+   "ok": true,
+   "shown": "table:100% in, 37% of frame"
+  },
+  {
+   "t": 12.32,
+   "word": "pearl",
+   "line": "A pearl in his fingers.",
+   "ok": true,
+   "shown": "pearl:100% in, 6% of frame"
+  },
+  {
+   "t": 13.18,
+   "word": "fingers",
+   "line": "A pearl in his fingers.",
+   "ok": true,
+   "shown": "pearl:100% in, 7% of frame"
+  },
+  {
+   "t": 14.48,
+   "word": "owl",
+   "line": "An owl peeking from his basket.",
+   "ok": true,
+   "shown": "owl:81% in, 14% of frame"
+  },
+  {
+   "t": 15.78,
+   "word": "basket",
+   "line": "An owl peeking from his basket.",
+   "ok": true,
+   "shown": "owl:100% in, 17% of frame"
+  },
+  {
+   "t": 16.81,
+   "word": "hieronymus",
+   "line": "Hieronymus Bosch or his workshop painted it around 1502.",
+   "ok": true,
+   "shown": "portrait"
+  },
+  {
+   "t": 17.58,
+   "word": "bosch",
+   "line": "Hieronymus Bosch or his workshop painted it around 1502.",
+   "ok": true,
+   "shown": "portrait"
+  },
+  {
+   "t": 21.85,
+   "word": "man",
+   "line": "This man leans in,",
+   "ok": true,
+   "shown": "victim_face:100% in, 9% of frame"
+  },
+  {
+   "t": 23.97,
+   "word": "pearl",
+   "line": "fixed on the pearl.",
+   "ok": true,
+   "shown": "pearl:100% in, 7% of frame"
+  },
+  {
+   "t": 26.4,
+   "word": "performing",
+   "line": "So who is really performing here?",
+   "ok": true,
+   "shown": "crowd:100% in, 35% of frame"
+  },
+  {
+   "t": 29.74,
+   "word": "glasses",
+   "line": "a man in glasses looks up at the sky",
+   "ok": true,
+   "shown": "thief_face:100% in, 6% of frame"
+  },
+  {
+   "t": 31.3,
+   "word": "sky",
+   "line": "a man in glasses looks up at the sky",
+   "ok": true,
+   "shown": "thief_face:100% in, 6% of frame"
+  },
+  {
+   "t": 32.23,
+   "word": "purse",
+   "line": "and takes his purse.",
+   "ok": true,
+   "shown": "purse:100% in, 9% of frame"
+  },
+  {
+   "t": 34.17,
+   "word": "conjurer",
+   "line": "Bosch painted the conjurer as a common criminal,",
+   "ok": true,
+   "shown": "conjurer:100% in, 25% of frame"
+  },
+  {
+   "t": 35.42,
+   "word": "criminal",
+   "line": "Bosch painted the conjurer as a common criminal,",
+   "ok": true,
+   "shown": "conjurer:100% in, 26% of frame"
+  },
+  {
+   "t": 38.84,
+   "word": "owl",
+   "line": "Even the owl",
+   "ok": true,
+   "shown": "owl:100% in, 17% of frame"
+  },
+  {
+   "t": 39.52,
+   "word": "basket",
+   "line": "in his basket stands for his cunning.",
+   "ok": true,
+   "shown": "owl:100% in, 18% of frame"
+  },
+  {
+   "t": 43.43,
+   "word": "table",
+   "line": "The real trick is not on the table.",
+   "ok": true,
+   "shown": "purse:100% in, 9% of frame"
+  },
+  {
+   "t": 47.66,
+   "word": "purse",
+   "line": "or guarding your purse?",
+   "ok": true,
+   "shown": "purse:100% in, 9% of frame"
+  }
+ ],
+ "lines": [
+  {
+   "t0": 1.65,
+   "t1": 3.08,
+   "beat": "hook",
+   "say": "He is watching a trick,"
+  },
+  {
+   "t0": 3.3,
+   "t1": 5.2,
+   "beat": "hook",
+   "say": "and his purse is being stolen."
+  },
+  {
+   "t0": 5.85,
+   "t1": 7.0,
+   "beat": "loop",
+   "say": "A street show:"
+  },
+  {
+   "t0": 7.22,
+   "t1": 9.05,
+   "beat": "loop",
+   "say": "a crowd around a magician."
+  },
+  {
+   "t0": 9.65,
+   "t1": 11.57,
+   "beat": "tour",
+   "say": "Cups and balls on the table."
+  },
+  {
+   "t0": 12.17,
+   "t1": 13.68,
+   "beat": "tour",
+   "say": "A pearl in his fingers."
+  },
+  {
+   "t0": 14.28,
+   "t1": 16.21,
+   "beat": "tour",
+   "say": "An owl peeking from his basket."
+  },
+  {
+   "t0": 16.81,
+   "t1": 20.86,
+   "beat": "who",
+   "say": "Hieronymus Bosch or his workshop painted it around 1502."
+  },
+  {
+   "t0": 21.46,
+   "t1": 22.88,
+   "beat": "stakes",
+   "say": "This man leans in,"
+  },
+  {
+   "t0": 23.1,
+   "t1": 24.36,
+   "beat": "stakes",
+   "say": "fixed on the pearl."
+  },
+  {
+   "t0": 25.36,
+   "t1": 27.33,
+   "beat": "rehook",
+   "say": "So who is really performing here?"
+  },
+  {
+   "t0": 27.93,
+   "t1": 28.91,
+   "beat": "fact",
+   "say": "Behind him,"
+  },
+  {
+   "t0": 29.13,
+   "t1": 31.56,
+   "beat": "fact",
+   "say": "a man in glasses looks up at the sky"
+  },
+  {
+   "t0": 31.56,
+   "t1": 32.51,
+   "beat": "fact",
+   "say": "and takes his purse."
+  },
+  {
+   "t0": 33.11,
+   "t1": 35.94,
+   "beat": "fact",
+   "say": "Bosch painted the conjurer as a common criminal,"
+  },
+  {
+   "t0": 36.16,
+   "t1": 37.52,
+   "beat": "fact",
+   "say": "luring in his prey."
+  },
+  {
+   "t0": 38.12,
+   "t1": 39.17,
+   "beat": "fact",
+   "say": "Even the owl"
+  },
+  {
+   "t0": 39.17,
+   "t1": 40.96,
+   "beat": "fact",
+   "say": "in his basket stands for his cunning."
+  },
+  {
+   "t0": 41.56,
+   "t1": 43.8,
+   "beat": "flip",
+   "say": "The real trick is not on the table."
+  },
+  {
+   "t0": 44.6,
+   "t1": 46.34,
+   "beat": "question",
+   "say": "So are you watching the trick,"
+  },
+  {
+   "t0": 46.56,
+   "t1": 48.04,
+   "beat": "question",
+   "say": "or guarding your purse?"
+  }
+ ]
+}
