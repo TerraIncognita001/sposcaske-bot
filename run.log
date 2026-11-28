@@ -1,0 +1,22 @@
+== script by Claude (night writer), 2026-11-28
+== directed: 21 caption lines, 18 with camera cues
+== story the-conjurer-bosch: The Conjurer (Hieronymus Bosch, 1502)
+== script gate: 114 words, 13 sentences, 0 hard failures
+found    portrait: portrait of Hieronymus Bosch -> Jheronimus Bosch (cropped).jpg (Q130531)
+picture main       download (200)         licence: Public domain
+picture portrait   download (200)         licence: Public domain
+[0;93m2026-11-28 07:45:45.985708544 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+/home/runner/work/sposcaske-bot/sposcaske-bot/work/final.mp4: 48.4 s, 114 words, 147 wpm, stage 1080x864, voice from 1.65 s, title 5.10-6.00, ident 5.80, portrait [(16.73, 21.43)], focus audit 28/28 named things in frame
+OK   frame 1080x1920: 1080x1920
+OK   30 frames a second: 30/1
+OK   length 30-150 s: 48.4 s
+OK   loudness -16 LUFS +-1: -16.0 LUFS
+OK   true peak under 0 dBFS: -1.2 dBFS
+OK   stereo sound (the opening sound is wide): 2 ch
+OK   voice starts after the opening sound: 1.65 s
+OK   opens with the owner's sound, in stereo, untouched: correlation 0.998
+OK   the red punch word is on screen after the hook: STOLEN
+OK   the portrait card of the person named in the ident: 1 shot
+OK   every named thing is in the frame: 28 of 28
+OK   file under 95 MB (the preview branch takes 100): 34.4 MB
+== done in 100 s: work/final.mp4, {'seconds': 48.4, 'lufs': -16.0, 'peak_dbfs': -1.2, 'mb': 34.4}
