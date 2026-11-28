@@ -1,0 +1,406 @@
+{
+ "id": "the-conjurer-bosch",
+ "kind": "artwork",
+ "form": "hold",
+ "hook_frame": "He ___",
+ "closer": "either_or",
+ "detail": "purse",
+ "home": "victim_face",
+ "subject": {
+  "title": "The Conjurer",
+  "creator": "Hieronymus Bosch",
+  "year": 1502,
+  "wikidata": "Q2155289"
+ },
+ "lead": {
+  "commons": "Hieronymus_Bosch_051.jpg",
+  "width_px": 3840,
+  "aspect": 1.203,
+  "px": 4498,
+  "license": "Public domain",
+  "credit": "Hieronymus Bosch 051 — Wikimedia Commons"
+ },
+ "portrait": {
+  "of": "Hieronymus Bosch",
+  "credit": "Portrait of Hieronymus Bosch — Wikimedia Commons",
+  "license": "Public domain"
+ },
+ "evidence": [],
+ "look": [
+  {
+   "name": "main_action",
+   "box": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "words": [
+    "show",
+    "street"
+   ]
+  },
+  {
+   "name": "crowd",
+   "box": [
+    0.07,
+    0.18,
+    0.53,
+    0.84
+   ],
+   "words": [
+    "crowd"
+   ]
+  },
+  {
+   "name": "victim",
+   "box": [
+    0.12,
+    0.35,
+    0.42,
+    0.84
+   ],
+   "words": [
+    "spectator",
+    "victim"
+   ]
+  },
+  {
+   "name": "victim_face",
+   "box": [
+    0.345,
+    0.355,
+    0.42,
+    0.445
+   ],
+   "words": [
+    "mouth"
+   ]
+  },
+  {
+   "name": "thief",
+   "box": [
+    0.07,
+    0.2,
+    0.18,
+    0.8
+   ],
+   "words": [
+    "thief",
+    "glasses"
+   ]
+  },
+  {
+   "name": "thief_face",
+   "box": [
+    0.11,
+    0.2,
+    0.165,
+    0.28
+   ],
+   "words": [
+    "sky"
+   ]
+  },
+  {
+   "name": "purse",
+   "box": [
+    0.085,
+    0.47,
+    0.155,
+    0.57
+   ],
+   "words": [
+    "purse"
+   ]
+  },
+  {
+   "name": "conjurer",
+   "box": [
+    0.69,
+    0.2,
+    0.96,
+    0.89
+   ],
+   "words": [
+    "conjurer",
+    "magician",
+    "criminal"
+   ]
+  },
+  {
+   "name": "pearl",
+   "box": [
+    0.69,
+    0.37,
+    0.75,
+    0.46
+   ],
+   "words": [
+    "pearl",
+    "fingers"
+   ]
+  },
+  {
+   "name": "owl",
+   "box": [
+    0.77,
+    0.57,
+    0.86,
+    0.71
+   ],
+   "words": [
+    "owl",
+    "basket"
+   ]
+  },
+  {
+   "name": "table",
+   "box": [
+    0.32,
+    0.5,
+    0.67,
+    0.69
+   ],
+   "words": [
+    "table",
+    "cups",
+    "balls"
+   ]
+  },
+  {
+   "name": "boy",
+   "box": [
+    0.25,
+    0.52,
+    0.34,
+    0.74
+   ],
+   "words": [
+    "boy"
+   ]
+  },
+  {
+   "name": "dog",
+   "box": [
+    0.64,
+    0.72,
+    0.74,
+    0.86
+   ],
+   "words": [
+    "dog"
+   ]
+  }
+ ],
+ "punch": "STOLEN",
+ "sentences": [
+  {
+   "slot": "H1",
+   "text": "He is watching a trick, and his purse is being stolen.",
+   "kind": "HOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "watching",
+     "to": "victim_face"
+    },
+    {
+     "on": "stolen",
+     "to": "victim_face"
+    }
+   ]
+  },
+  {
+   "slot": "H2",
+   "text": "A street show: a crowd around a magician.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "crowd",
+     "to": "crowd"
+    },
+    {
+     "on": "magician",
+     "to": "conjurer"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "Cups and balls on the table.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "cups",
+     "to": "table"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "A pearl in his fingers.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "pearl",
+     "to": "pearl"
+    }
+   ]
+  },
+  {
+   "slot": "H3",
+   "text": "An owl peeking from his basket.",
+   "kind": "LOOK",
+   "source": null,
+   "show": [
+    {
+     "on": "owl",
+     "to": "owl"
+    }
+   ]
+  },
+  {
+   "slot": "H4",
+   "text": "Hieronymus Bosch or his workshop painted it around 1502.",
+   "kind": "FACT",
+   "source": 1
+  },
+  {
+   "slot": "H5",
+   "text": "This man leans in, fixed on the pearl.",
+   "kind": "FACT",
+   "source": 8,
+   "show": [
+    {
+     "on": "man",
+     "to": "victim_face"
+    }
+   ]
+  },
+  {
+   "slot": "H6",
+   "text": "So who is really performing here?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "performing",
+     "to": "crowd"
+    }
+   ]
+  },
+  {
+   "slot": "H7",
+   "text": "Behind him, a man in glasses looks up at the sky and takes his purse.",
+   "kind": "FACT",
+   "source": 15,
+   "show": [
+    {
+     "on": "glasses",
+     "to": "thief_face"
+    },
+    {
+     "on": "purse",
+     "to": "purse"
+    }
+   ]
+  },
+  {
+   "slot": "H7",
+   "text": "Bosch painted the conjurer as a common criminal, luring in his prey.",
+   "kind": "FACT",
+   "source": 9,
+   "show": [
+    {
+     "on": "conjurer",
+     "to": "conjurer"
+    }
+   ]
+  },
+  {
+   "slot": "H7",
+   "text": "Even the owl in his basket stands for his cunning.",
+   "kind": "FACT",
+   "source": 11,
+   "show": [
+    {
+     "on": "owl",
+     "to": "owl"
+    }
+   ]
+  },
+  {
+   "slot": "H8",
+   "text": "The real trick is not on the table.",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "table",
+     "to": "purse"
+    }
+   ]
+  },
+  {
+   "slot": "H9",
+   "text": "So are you watching the trick, or guarding your purse?",
+   "kind": "READING",
+   "source": null,
+   "show": [
+    {
+     "on": "purse",
+     "to": "purse"
+    }
+   ]
+  }
+ ],
+ "pronounce": {
+  "Hieronymus": "hee-ro-nee-mus"
+ },
+ "meta": {
+  "title": "While he watches the trick, his purse is gone",
+  "description": "The Conjurer, by Hieronymus Bosch or his workshop, around 1502. A man leans in to watch a pearl and a game of cups and balls, while the man behind him looks at the sky and lifts his purse. #history #art",
+  "tags": [
+   "Bosch",
+   "The Conjurer",
+   "Hieronymus Bosch",
+   "pickpocket",
+   "Early Netherlandish",
+   "art history",
+   "painting"
+  ],
+  "question": "Watching the trick, or guarding your purse?"
+ },
+ "sources": [
+  {
+   "claim": "The Conjurer is a painting by Early Netherlandish painter Hieronymus Bosch or his workshop, executed around 1502.",
+   "url": "https://en.wikipedia.org/wiki/The_Conjurer_(painting)",
+   "note": "sentence H4"
+  },
+  {
+   "claim": "The central character and true focus of the image is the man of rank in the forefront who leans in and is fixed on the pearl in the conjurer's hand while unaware of being relieved of his money purse.",
+   "url": "https://en.wikipedia.org/wiki/The_Conjurer_(painting)",
+   "note": "sentence H5"
+  },
+  {
+   "claim": "Meanwhile there's someone standing behind this spectator, who's stealing his wallet.",
+   "url": "https://en.wikipedia.org/wiki/The_Conjurer_(painting)",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "Bosch depicts the conjurer as a common criminal, luring in the prey.",
+   "url": "https://en.wikipedia.org/wiki/The_Conjurer_(painting)",
+   "note": "sentence H7"
+  },
+  {
+   "claim": "The little owl from the basket at the conjurer's waist signifies his intelligence.",
+   "url": "https://en.wikipedia.org/wiki/The_Conjurer_(painting)",
+   "note": "sentence H7"
+  }
+ ],
+ "written_by": "Claude (night writer), 2026-11-28"
+}

@@ -1,0 +1,170 @@
+{
+ "things": [
+  {
+   "name": "main_action",
+   "box": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "words": [
+    "show",
+    "street"
+   ]
+  },
+  {
+   "name": "crowd",
+   "box": [
+    0.07,
+    0.18,
+    0.53,
+    0.84
+   ],
+   "words": [
+    "crowd"
+   ]
+  },
+  {
+   "name": "victim",
+   "box": [
+    0.12,
+    0.35,
+    0.42,
+    0.84
+   ],
+   "words": [
+    "spectator",
+    "victim"
+   ]
+  },
+  {
+   "name": "victim_face",
+   "box": [
+    0.345,
+    0.355,
+    0.42,
+    0.445
+   ],
+   "words": [
+    "mouth"
+   ]
+  },
+  {
+   "name": "thief",
+   "box": [
+    0.07,
+    0.2,
+    0.18,
+    0.8
+   ],
+   "words": [
+    "thief",
+    "glasses"
+   ]
+  },
+  {
+   "name": "thief_face",
+   "box": [
+    0.11,
+    0.2,
+    0.165,
+    0.28
+   ],
+   "words": [
+    "sky"
+   ]
+  },
+  {
+   "name": "purse",
+   "box": [
+    0.085,
+    0.47,
+    0.155,
+    0.57
+   ],
+   "words": [
+    "purse"
+   ]
+  },
+  {
+   "name": "conjurer",
+   "box": [
+    0.69,
+    0.2,
+    0.96,
+    0.89
+   ],
+   "words": [
+    "conjurer",
+    "magician",
+    "criminal"
+   ]
+  },
+  {
+   "name": "pearl",
+   "box": [
+    0.69,
+    0.37,
+    0.75,
+    0.46
+   ],
+   "words": [
+    "pearl",
+    "fingers"
+   ]
+  },
+  {
+   "name": "owl",
+   "box": [
+    0.77,
+    0.57,
+    0.86,
+    0.71
+   ],
+   "words": [
+    "owl",
+    "basket"
+   ]
+  },
+  {
+   "name": "table",
+   "box": [
+    0.32,
+    0.5,
+    0.67,
+    0.69
+   ],
+   "words": [
+    "table",
+    "cups",
+    "balls"
+   ]
+  },
+  {
+   "name": "boy",
+   "box": [
+    0.25,
+    0.52,
+    0.34,
+    0.74
+   ],
+   "words": [
+    "boy"
+   ]
+  },
+  {
+   "name": "dog",
+   "box": [
+    0.64,
+    0.72,
+    0.74,
+    0.86
+   ],
+   "words": [
+    "dog"
+   ]
+  }
+ ],
+ "summary": "A conjurer in red with a tall black hat holds up a pearl beside a table of cups and balls; an owl peeks from the basket at his waist. Opposite, a man in orange leans far over the table, mouth open, while behind him a man in spectacles gazes at the sky and lifts the purse from his belt. A crowd, a boy and a small dressed-up dog look on."
+}
